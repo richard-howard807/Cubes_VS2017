@@ -1,0 +1,1788 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>odim_dimension_main</ID>
+  <Name>fact_dimension_main</Name>
+  <CreatedTimestamp>2017-09-08T13:03:14.333333Z</CreatedTimestamp>
+  <LastSchemaUpdate>2017-09-08T15:11:55.003333Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>2018-12-16T08:29:39.14Z</LastProcessed>
+  <State>Processed</State>
+  <Source xsi:type="DataSourceViewBinding">
+    <DataSourceViewID>red_dw</DataSourceViewID>
+  </Source>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Language>2057</Language>
+  <Collation>Latin1_General_CI_AS</Collation>
+  <UnknownMemberName>Unknown</UnknownMemberName>
+  <Attributes>
+    <Attribute>
+      <ID>master_fact_key</ID>
+      <Name>master_fact_key</Name>
+      <Description>Key for fact_dimension_main</Description>
+      <Usage>Key</Usage>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>master_fact_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>master_fact_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship>
+          <AttributeID>source_system_id</AttributeID>
+          <Name>source system id</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>matter_number</AttributeID>
+          <Name>Matter Number</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>client_code</AttributeID>
+          <Name>client code</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_matter_header_curr_key</AttributeID>
+          <Name>dim matter header curr key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_client_key</AttributeID>
+          <Name>dim client key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_agents_involvement_key</AttributeID>
+          <Name>dim agents involvement key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_claimant_thirdpart_key</AttributeID>
+          <Name>dim claimant thirdpart key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_client_involvement_key</AttributeID>
+          <Name>dim client involvement key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_court_involvement_key</AttributeID>
+          <Name>dim court involvement key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_defendant_involvem_key</AttributeID>
+          <Name>dim defendant involvem key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_experts_involvemen_key</AttributeID>
+          <Name>dim experts involvemen key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_insurance_involvem_key</AttributeID>
+          <Name>dim insurance involvem key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_involvement_full_bridge_key</AttributeID>
+          <Name>dim involvement full bridge key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_witness_involvemen_key</AttributeID>
+          <Name>dim witness involvemen key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dss_update_time</AttributeID>
+          <Name>dss update time</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dss_create_time</AttributeID>
+          <Name>dss create time</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_detail_audit_key</AttributeID>
+          <Name>dim detail audit key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_detail_claim_key</AttributeID>
+          <Name>dim detail claim key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_detail_client_key</AttributeID>
+          <Name>dim detail client key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_detail_core_detail_key</AttributeID>
+          <Name>dim detail core detail key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_detail_court_key</AttributeID>
+          <Name>dim detail court key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_detail_critical_mi_key</AttributeID>
+          <Name>dim detail critical mi key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_detail_flight_dela_key</AttributeID>
+          <Name>dim detail flight dela key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_detail_fraud_key</AttributeID>
+          <Name>dim detail fraud key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_detail_future_care_key</AttributeID>
+          <Name>dim detail future care key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_detail_health_key</AttributeID>
+          <Name>dim detail health key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_detail_hire_detail_key</AttributeID>
+          <Name>dim detail hire detail key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_detail_litigation_key</AttributeID>
+          <Name>dim detail litigation key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_detail_outcome_key</AttributeID>
+          <Name>dim detail outcome key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_detail_plot_detail_key</AttributeID>
+          <Name>dim detail plot detail key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_detail_practice_ar_key</AttributeID>
+          <Name>dim detail practice ar key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_detail_property_key</AttributeID>
+          <Name>dim detail property key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_detail_incident_key</AttributeID>
+          <Name>dim detail incident key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_detail_advice_key</AttributeID>
+          <Name>dim detail advice key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_open_practice_management_date_key</AttributeID>
+          <Name>dim open practice management date key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_closed_practice_management_date_key</AttributeID>
+          <Name>dim closed practice management date key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_detail_rsu_key</AttributeID>
+          <Name>dim detail rsu key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_detail_previous_details_key</AttributeID>
+          <Name>dim detail previous details key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_detail_compliance_key</AttributeID>
+          <Name>dim detail compliance key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_detail_finance_key</AttributeID>
+          <Name>dim detail finance key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_fed_hierarchy_history_key</AttributeID>
+          <Name>dim fed hierarchy history new key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_open_case_management_date_key</AttributeID>
+          <Name>dim open case management date key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>master_client_code</AttributeID>
+          <Name>master_client_code</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_file_notes_key</AttributeID>
+          <Name>dim file notes key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_branch_key</AttributeID>
+          <Name>dim branch key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>dim_closed_case_management_date_key</AttributeID>
+          <Name>dim closed case management date key</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>master_fact_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>source_system_id</ID>
+      <Name>source system id</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>source_system_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>source_system_id</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>source_system_id</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>matter_number</ID>
+      <Name>Matter Number</Name>
+      <Description>Unique matter number with client code</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>matter_number</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>matter_number</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>matter_number</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>client_code</ID>
+      <Name>client code</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>client_code</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>client_code</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>client_code</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_matter_header_curr_key</ID>
+      <Name>dim matter header curr key</Name>
+      <Description>stage_fact_dimension_10_dims.client_code=dim_matter_header_current.client_code
+stage_fact_dimension_10_dims.matter_number=dim_matter_header_current.matter_number</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_matter_header_curr_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_matter_header_curr_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_matter_header_curr_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_client_key</ID>
+      <Name>dim client key</Name>
+      <Description>stage_fact_dimension_10_dims.client_code=dim_client.client_code</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_client_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_client_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_client_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_agents_involvement_key</ID>
+      <Name>dim agents involvement key</Name>
+      <Description>stage_fact_dimension_10_dims.client_code=dim_agents_involvement.client_code
+stage_fact_dimension_10_dims.matter_number=dim_agents_involvement.matter_number</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_agents_involvement_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_agents_involvement_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_agents_involvement_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_claimant_thirdpart_key</ID>
+      <Name>dim claimant thirdpart key</Name>
+      <Description>stage_fact_dimension_10_dims.client_code=dim_claimant_thirdparty_involvement.client_code
+stage_fact_dimension_10_dims.matter_number=dim_claimant_thirdparty_involvement.matter_number</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_claimant_thirdpart_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_claimant_thirdpart_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_claimant_thirdpart_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_client_involvement_key</ID>
+      <Name>dim client involvement key</Name>
+      <Description>stage_fact_dimension_10_dims.client_code=dim_client_involvement.client_code
+stage_fact_dimension_10_dims.matter_number=dim_client_involvement.matter_number</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_client_involvement_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_client_involvement_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_client_involvement_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_court_involvement_key</ID>
+      <Name>dim court involvement key</Name>
+      <Description>stage_fact_dimension_10_dims.client_code=dim_court_involvement.client_code
+stage_fact_dimension_10_dims.matter_number=dim_court_involvement.matter_number</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_court_involvement_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_court_involvement_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_court_involvement_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_defendant_involvem_key</ID>
+      <Name>dim defendant involvem key</Name>
+      <Description>stage_fact_dimension_10_dims.client_code=dim_defendant_involvement.client_code
+stage_fact_dimension_10_dims.matter_number=dim_defendant_involvement.matter_number</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_defendant_involvem_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_defendant_involvem_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_defendant_involvem_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_experts_involvemen_key</ID>
+      <Name>dim experts involvemen key</Name>
+      <Description>stage_fact_dimension_10_dims.client_code=dim_experts_involvement.client_code
+stage_fact_dimension_10_dims.matter_number=dim_experts_involvement.matter_number</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_experts_involvemen_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_experts_involvemen_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_experts_involvemen_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_insurance_involvem_key</ID>
+      <Name>dim insurance involvem key</Name>
+      <Description>stage_fact_dimension_10_dims.client_code=dim_insurance_involvement.client_code
+stage_fact_dimension_10_dims.matter_number=dim_insurance_involvement.matter_number</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_insurance_involvem_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_insurance_involvem_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_insurance_involvem_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_involvement_full_bridge_key</ID>
+      <Name>dim involvement full bridge key</Name>
+      <Description>stage_fact_dimension_10_dims.client_code=dim_involvement_full_bridge.client_code
+stage_fact_dimension_10_dims.matter_number=dim_involvement_full_bridge.matter_number</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_involvement_full_bridge_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_involvement_full_bridge_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_involvement_full_bridge_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_witness_involvemen_key</ID>
+      <Name>dim witness involvemen key</Name>
+      <Description>stage_fact_dimension_10_dims.client_code=dim_witness_involvement.client_code
+stage_fact_dimension_10_dims.matter_number=dim_witness_involvement.matter_number</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_witness_involvemen_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_witness_involvemen_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_witness_involvemen_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dss_update_time</ID>
+      <Name>dss update time</Name>
+      <Description>Date and time the row was updated in the data warehouse.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dss_update_time</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dss_update_time</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Date</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dss_update_time</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dss_create_time</ID>
+      <Name>dss create time</Name>
+      <Description>Date and time the row was created in the data warehouse.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dss_create_time</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dss_create_time</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Date</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dss_create_time</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_detail_audit_key</ID>
+      <Name>dim detail audit key</Name>
+      <Description>stage_fact_dimension_10_dims.client_code=dim_detail_audit.client_code
+stage_fact_dimension_10_dims.matter_number=dim_detail_audit.matter_number</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_detail_audit_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_audit_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_audit_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_detail_claim_key</ID>
+      <Name>dim detail claim key</Name>
+      <Description>stage_fact_dimension_10_dims.client_code=dim_detail_claim.client_code
+stage_fact_dimension_10_dims.matter_number=dim_detail_claim.matter_number</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_detail_claim_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_claim_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_claim_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_detail_client_key</ID>
+      <Name>dim detail client key</Name>
+      <Description>stage_fact_dimension_10_dims.client_code=dim_detail_client.client_code
+stage_fact_dimension_10_dims.matter_number=dim_detail_client.matter_number</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_detail_client_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_client_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_client_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_detail_core_detail_key</ID>
+      <Name>dim detail core detail key</Name>
+      <Description>stage_fact_dimension_10_dims.client_code=dim_detail_core_details.client_code
+stage_fact_dimension_10_dims.matter_number=dim_detail_core_details.matter_number</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_detail_core_detail_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_core_detail_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_core_detail_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_detail_court_key</ID>
+      <Name>dim detail court key</Name>
+      <Description>stage_fact_dimension_10_dims.client_code=dim_detail_court.client_code
+stage_fact_dimension_10_dims.matter_number=dim_detail_court.matter_number</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_detail_court_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_court_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_court_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_detail_critical_mi_key</ID>
+      <Name>dim detail critical mi key</Name>
+      <Description>stage_fact_dimension_10_dims.client_code=dim_detail_critical_mi.client_code
+stage_fact_dimension_10_dims.matter_number=dim_detail_critical_mi.matter_number</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_detail_critical_mi_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_critical_mi_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_critical_mi_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_detail_flight_dela_key</ID>
+      <Name>dim detail flight dela key</Name>
+      <Description>stage_fact_dimension_10_dims.client_code=dim_detail_flight_delay.client_code
+stage_fact_dimension_10_dims.matter_number=dim_detail_flight_delay.matter_number</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_detail_flight_dela_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_flight_dela_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_flight_dela_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_detail_fraud_key</ID>
+      <Name>dim detail fraud key</Name>
+      <Description>stage_fact_dimension_10_dims.client_code=dim_detail_fraud.client_code
+stage_fact_dimension_10_dims.matter_number=dim_detail_fraud.matter_number</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_detail_fraud_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_fraud_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_fraud_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_detail_future_care_key</ID>
+      <Name>dim detail future care key</Name>
+      <Description>stage_fact_dimension_10_dims.client_code=dim_detail_future_care.client_code
+stage_fact_dimension_10_dims.matter_number=dim_detail_future_care.matter_number</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_detail_future_care_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_future_care_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_future_care_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_detail_health_key</ID>
+      <Name>dim detail health key</Name>
+      <Description>stage_fact_dimension_10_dims.client_code=dim_detail_health.client_code
+stage_fact_dimension_10_dims.matter_number=dim_detail_health.matter_number</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_detail_health_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_health_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_health_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_detail_hire_detail_key</ID>
+      <Name>dim detail hire detail key</Name>
+      <Description>stage_fact_dimension_10_dims.client_code=dim_detail_hire_details.client_code
+stage_fact_dimension_10_dims.matter_number=dim_detail_hire_details.matter_number</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_detail_hire_detail_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_hire_detail_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_hire_detail_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_detail_litigation_key</ID>
+      <Name>dim detail litigation key</Name>
+      <Description>stage_fact_dimension_10_dims.client_code=dim_detail_litigation.client_code
+stage_fact_dimension_10_dims.matter_number=dim_detail_litigation.matter_number</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_detail_litigation_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_litigation_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_litigation_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_detail_outcome_key</ID>
+      <Name>dim detail outcome key</Name>
+      <Description>stage_fact_dimension_10_dims.client_code=dim_detail_outcome.client_code
+stage_fact_dimension_10_dims.matter_number=dim_detail_outcome.matter_number</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_detail_outcome_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_outcome_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_outcome_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_detail_plot_detail_key</ID>
+      <Name>dim detail plot detail key</Name>
+      <Description>stage_fact_dimension_10_dims.client_code=dim_detail_plot_details.client_code
+stage_fact_dimension_10_dims.matter_number=dim_detail_plot_details.matter_number</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_detail_plot_detail_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_plot_detail_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_plot_detail_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_detail_practice_ar_key</ID>
+      <Name>dim detail practice ar key</Name>
+      <Description>stage_fact_dimension_10_dims.client_code=dim_detail_practice_area.client_code
+stage_fact_dimension_10_dims.matter_number=dim_detail_practice_area.matter_number</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_detail_practice_ar_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_practice_ar_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_practice_ar_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_detail_property_key</ID>
+      <Name>dim detail property key</Name>
+      <Description>stage_fact_dimension_10_dims.client_code=dim_detail_property.client_code
+stage_fact_dimension_10_dims.matter_number=dim_detail_property.matter_number</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_detail_property_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_property_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_property_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_detail_incident_key</ID>
+      <Name>dim detail incident key</Name>
+      <Description>stage_fact_dimension_10_dims.client_code=dim_detail_incident.client_code
+stage_fact_dimension_10_dims.matter_number=dim_detail_incident.matter_number</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_detail_incident_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_incident_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_incident_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_detail_advice_key</ID>
+      <Name>dim detail advice key</Name>
+      <Description>stage_fact_dimension_10_dims.client_code=dim_detail_advice.client_code
+stage_fact_dimension_10_dims.matter_number=dim_detail_advice.matter_number</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_detail_advice_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_advice_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_advice_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_open_practice_management_date_key</ID>
+      <Name>dim open practice management date key</Name>
+      <Description>dim_date.calendar_date=dim_date.calendar_date</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_open_practice_management_date_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_open_practice_management_date_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_open_practice_management_date_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_closed_practice_management_date_key</ID>
+      <Name>dim closed practice management date key</Name>
+      <Description>dim_date.calendar_date=dim_date.calendar_date</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_closed_practice_management_date_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_closed_practice_management_date_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_closed_practice_management_date_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_detail_rsu_key</ID>
+      <Name>dim detail rsu key</Name>
+      <Description>stage_fact_dimension_10_dims.client_code=dim_detail_rsu.client_code
+stage_fact_dimension_10_dims.matter_number=dim_detail_rsu.matter_number</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_detail_rsu_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_rsu_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_rsu_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_detail_previous_details_key</ID>
+      <Name>dim detail previous details key</Name>
+      <Description>stage_fact_dimension_10_dims.client_code=dim_detail_previous_details.client_code
+stage_fact_dimension_10_dims.matter_number=dim_detail_previous_details.matter_number</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_detail_previous_details_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_previous_details_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_previous_details_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_detail_compliance_key</ID>
+      <Name>dim detail compliance key</Name>
+      <Description>stage_fact_dimension_10_dims.client_code=dim_detail_compliance.client_code
+stage_fact_dimension_10_dims.matter_number=dim_detail_compliance.matter_number</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_detail_compliance_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_compliance_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_compliance_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_detail_finance_key</ID>
+      <Name>dim detail finance key</Name>
+      <Description>stage_fact_dimension_10_dims.client_code=dim_detail_finance.client_code
+stage_fact_dimension_10_dims.matter_number=dim_detail_finance.matter_number</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_detail_finance_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_finance_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_detail_finance_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_fed_hierarchy_history_key</ID>
+      <Name>dim fed hierarchy history new key</Name>
+      <Description>dim_fed_hierarchy.source_system_id=dim_fed_hierarchy.source_system_id
+dim_fed_hierarchy.fed_hierarchy_business_key=dim_fed_hierarchy.fed_hierarchy_business_key
+dim_fed_hierarchy.fed_code_effective_start_date=dim_fed_hierarchy.fed_code_effective_start_date</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_fed_hierarchy_history_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_fed_hierarchy_history_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_fed_hierarchy_history_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_open_case_management_date_key</ID>
+      <Name>dim open case management date key</Name>
+      <Description>stage_fact_dimension_10_dims.date_opened_case_management=dim_open_case_management_date.calendar_date</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_open_case_management_date_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_open_case_management_date_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_open_case_management_date_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>master_client_code</ID>
+      <Name>master_client_code</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>master_client_code</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>master_client_code</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>master_client_code</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_file_notes_key</ID>
+      <Name>dim file notes key</Name>
+      <Description>stage_fact_dimension_10_dims.source_system_id=dim_file_notes.source_system_id
+stage_fact_dimension_10_dims.client_code=dim_file_notes.client_code
+stage_fact_dimension_10_dims.matter_number=dim_file_notes.matter_number</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_file_notes_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_file_notes_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_file_notes_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_branch_key</ID>
+      <Name>dim branch key</Name>
+      <Description>stage_fact_dimension_10_dims.client_code=dim_branch.client_code
+stage_fact_dimension_10_dims.matter_number=dim_branch.matter_number</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_branch_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_branch_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_branch_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>dim_closed_case_management_date_key</ID>
+      <Name>dim closed case management date key</Name>
+      <Description>stage_fact_dimension_10_dims.date_closed_case_management=dim_closed_case_management_date.calendar_date</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>fact_dimension_main</TableID>
+            <ColumnID>dim_closed_case_management_date_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_closed_case_management_date_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>fact_dimension_main</TableID>
+          <ColumnID>dim_closed_case_management_date_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <AttributeAllMemberName>All dimension_main</AttributeAllMemberName>
+  <ProactiveCaching>
+    <SilenceInterval>-PT1S</SilenceInterval>
+    <Latency>-PT1S</Latency>
+    <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+    <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+    <Source xsi:type="ProactiveCachingInheritedBinding" />
+  </ProactiveCaching>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

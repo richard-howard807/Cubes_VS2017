@@ -1,0 +1,2341 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>olap_mfs_hourly_remaining</ID>
+  <Name>fact_mfs_hourly_remaining</Name>
+  <CreatedTimestamp>2017-09-08T13:03:15.71Z</CreatedTimestamp>
+  <LastSchemaUpdate>2017-09-08T15:11:55.363333Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="12" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-3381" scrolltop="3334" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="84" x="23707" y="12488" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="fact_mfs_hourly_remaining" left="10040" top="7400" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="6694" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000a0000261a000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="fact_mfs_hourly_remaining" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="dim_matter_header_current" left="14534" top="14800" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="5821" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000a0000bd16000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dim_matter_header_current" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="dim_client" left="6419" top="14800" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="5715" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000a00005316000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dim_client" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="fact_dimension_main" left="9948" top="0" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="6879" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000a0000df1a000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="fact_dimension_main" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="dim_open_practice_management_date" left="20" top="7400" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="7620" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000a0000c41d000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dim_open_practice_management_date" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="dim_matter_owner" left="19134" top="7400" logicalid="6" controlid="6" masterid="0" hint1="0" hint2="0" width="4763" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000a00009b12000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dim_matter_owner" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="12988" top="4501" logicalid="7" controlid="7" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_fact_mfs_hourly_remaining_fact_dimension_main]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="1" sourceattachpoint="13" destattachpoint="10" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="13387" y="5000" />
+              <point x="13387" y="7400" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="7340" top="9501" logicalid="8" controlid="8" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_fact_mfs_hourly_remaining_dim_open_practice_management_date]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="1" sourceattachpoint="35" destattachpoint="30" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="7640" y="9900" />
+              <point x="10040" y="9900" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="13637" top="12100" logicalid="9" controlid="9" masterid="0" hint1="0" hint2="0" width="4207" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_fact_mfs_hourly_remaining_dim_matter_header_current]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="1" sourceattachpoint="10" destattachpoint="13" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="17444" y="14800" />
+              <point x="17444" y="13600" />
+              <point x="13937" y="13600" />
+              <point x="13937" y="12400" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="8877" top="12100" logicalid="10" controlid="10" masterid="0" hint1="0" hint2="0" width="3710" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_fact_mfs_hourly_remaining_dim_client]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="1" sourceattachpoint="10" destattachpoint="7" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="9276" y="14800" />
+              <point x="9276" y="13600" />
+              <point x="12287" y="13600" />
+              <point x="12287" y="12400" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="16434" top="9501" logicalid="11" controlid="11" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_fact_mfs_hourly_remaining_dim_matter_owner]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="1" sourceattachpoint="26" destattachpoint="31" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="19134" y="9900" />
+              <point x="16734" y="9900" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-3381</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>3334</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>84</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>2018-12-16T08:29:40.31Z</LastProcessed>
+  <State>Processed</State>
+  <Language>2057</Language>
+  <Collation>Latin1_General_CI_AS</Collation>
+  <Dimensions>
+    <Dimension>
+      <ID>odim_matter_owner</ID>
+      <Name>dim_matter_owner</Name>
+      <DimensionID>odim_matter_owner</DimensionID>
+      <Attributes>
+        <Attribute>
+          <AttributeID>dim_matter_owner_key</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Fed Code</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Jobtitle</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Linemanagername</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Reportingbcmname</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Worksforname</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Display Name</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Name</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Hierarchylevel1</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Hierarchylevel2</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Hierarchylevel3</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Hierarchylevel4</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Hierarchylevel5</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Windowsusername</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy>
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension>
+      <ID>odim_client</ID>
+      <Name>dim_client</Name>
+      <DimensionID>odim_client</DimensionID>
+      <Attributes>
+        <Attribute>
+          <AttributeID>dim_client_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>client_code</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>client_name</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>client_group_name</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>client_partner_code</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>client_partner_name</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>sector</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>client_group_code</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension>
+      <ID>odim_matter_header_current</ID>
+      <Name>dim_matter_header_current</Name>
+      <DimensionID>odim_matter_header_current</DimensionID>
+      <Attributes>
+        <Attribute>
+          <AttributeID>dim_matter_header_curr_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>matter_description</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>matter_owner_full_name</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>fixed_fee_amount</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>present_position</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Client Code</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Matter Number</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Date Opened Practice Management</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Fee Earner Code</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension>
+      <ID>odim_open_practice_management_date</ID>
+      <Name>dim_open_practice_management_date</Name>
+      <DimensionID>odim_open_practice_management_date</DimensionID>
+      <Attributes>
+        <Attribute>
+          <AttributeID>dim_open_practice_management_date_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_cal_day_in_week</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_cal_day_in_week_no</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_cal_day_in_month</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_cal_day_in_year</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_cal_week_in_year</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_cal_month</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_cal_month_name</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_financial_date</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_fin_day_in_week</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_fin_day_in_week_no</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_fin_day_in_month</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_fin_day_in_year</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_fin_week_in_month</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_fin_week_in_year</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_fin_month_no</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_fin_month</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_fin_month_display</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_fin_month_name</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_fin_period</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_fin_quarter_no</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_fin_quarter</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_fin_year</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_current_cal_day</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_current_cal_week</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_current_cal_month</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_current_cal_year</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_current_cal_mtd</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_current_cal_ytd</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_moving_cal_year</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_current_fin_day</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_current_fin_week</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_current_fin_month</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_current_fin_quarter</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_current_fin_year</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_current_fin_mtd</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_current_fin_ytd</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_moving_fin_quarter</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_moving_fin_year</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_week_day_flag</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_week_end_flag</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_holiday_flag</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_holiday_desc</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_trading_day_flag</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_trading_days_in_mth</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>open_practice_management_trading_days_so_far</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension>
+      <ID>odim_dimension_main</ID>
+      <Name>fact_dimension_main</Name>
+      <DimensionID>odim_dimension_main</DimensionID>
+      <Attributes>
+        <Attribute>
+          <AttributeID>master_fact_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>source_system_id</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>matter_number</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>client_code</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_matter_header_curr_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_client_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_agents_involvement_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_claimant_thirdpart_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_client_involvement_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_court_involvement_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_defendant_involvem_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_experts_involvemen_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_insurance_involvem_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_involvement_full_bridge_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_witness_involvemen_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dss_update_time</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dss_create_time</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_detail_audit_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_detail_claim_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_detail_client_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_detail_core_detail_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_detail_court_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_detail_critical_mi_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_detail_flight_dela_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_detail_fraud_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_detail_future_care_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_detail_health_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_detail_hire_detail_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_detail_litigation_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_detail_outcome_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_detail_plot_detail_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_detail_practice_ar_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_detail_property_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_detail_incident_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_detail_advice_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_open_practice_management_date_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_closed_practice_management_date_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_detail_rsu_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_detail_previous_details_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_detail_compliance_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_detail_finance_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_fed_hierarchy_history_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_open_case_management_date_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>master_client_code</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_file_notes_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_branch_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_closed_case_management_date_key</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension>
+      <ID>fact_mfs_hourly_remaining</ID>
+      <Name>fact_mfs_hourly_remaining</Name>
+      <DimensionID>Fact Mfs Hourly Remaining</DimensionID>
+      <Attributes>
+        <Attribute>
+          <AttributeID>Fact Hourly Key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Hourly Charge Rate</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>mfs_hourly_remaining</ID>
+      <Name>mfs_hourly_remaining</Name>
+      <CreatedTimestamp>2017-09-08T13:03:15.756667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2017-09-08T15:11:55.426667Z</LastSchemaUpdate>
+      <LastProcessed>2018-12-16T08:29:40.31Z</LastProcessed>
+      <State>Processed</State>
+      <Measures>
+        <Measure>
+          <ID>Time Charge Value</ID>
+          <Name>Time Charge Value</Name>
+          <Description>Time Charge Value</Description>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_hourly_remaining</TableID>
+              <ColumnID>time_charge_value</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Number of Matters</ID>
+          <Name>Number of Matters</Name>
+          <Description>Number of Matters</Description>
+          <DataType>Integer</DataType>
+          <Source>
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_hourly_remaining</TableID>
+              <ColumnID>number_of_matters</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Minutes Recorded</ID>
+          <Name>Minutes Recorded</Name>
+          <Description>Minutes Recorded</Description>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_hourly_remaining</TableID>
+              <ColumnID>minutes_recorded</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <EstimatedSize>7482991</EstimatedSize>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension">
+          <CubeDimensionID>odim_client</CubeDimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>dim_client_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_mfs_hourly_remaining</TableID>
+                    <ColumnID>dim_client_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute>
+              <AttributeID>client_code</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_client</TableID>
+                    <ColumnID>dim_client_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>client_name</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_client</TableID>
+                    <ColumnID>client_name</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>client_group_name</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_client</TableID>
+                    <ColumnID>client_group_name</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>client_partner_code</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_client</TableID>
+                    <ColumnID>client_partner_code</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>client_partner_name</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_client</TableID>
+                    <ColumnID>client_partner_name</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>sector</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_client</TableID>
+                    <ColumnID>sector</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>client_group_code</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_client</TableID>
+                    <ColumnID>client_group_code</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension">
+          <CubeDimensionID>odim_matter_owner</CubeDimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>dim_matter_owner_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_mfs_hourly_remaining</TableID>
+                    <ColumnID>dim_matter_owner_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Fed Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_matter_owner</TableID>
+                    <ColumnID>fed_code</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Jobtitle</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_matter_owner</TableID>
+                    <ColumnID>jobtitle</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Linemanagername</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_matter_owner</TableID>
+                    <ColumnID>linemanagername</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Reportingbcmname</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_matter_owner</TableID>
+                    <ColumnID>reportingbcmname</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Worksforname</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_matter_owner</TableID>
+                    <ColumnID>worksforname</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Display Name</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_matter_owner</TableID>
+                    <ColumnID>display_name</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Name</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_matter_owner</TableID>
+                    <ColumnID>name</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Hierarchylevel1</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_matter_owner</TableID>
+                    <ColumnID>hierarchylevel1</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Hierarchylevel2</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_matter_owner</TableID>
+                    <ColumnID>hierarchylevel2</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Hierarchylevel3</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_matter_owner</TableID>
+                    <ColumnID>hierarchylevel3</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Hierarchylevel4</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_matter_owner</TableID>
+                    <ColumnID>hierarchylevel4</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Hierarchylevel5</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_matter_owner</TableID>
+                    <ColumnID>hierarchylevel5</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Windowsusername</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_matter_owner</TableID>
+                    <ColumnID>windowsusername</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension">
+          <CubeDimensionID>odim_matter_header_current</CubeDimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>dim_matter_header_curr_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_mfs_hourly_remaining</TableID>
+                    <ColumnID>dim_matter_header_curr_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute>
+              <AttributeID>matter_description</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_matter_header_current</TableID>
+                    <ColumnID>matter_description</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>matter_owner_full_name</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_matter_header_current</TableID>
+                    <ColumnID>matter_owner_full_name</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>fixed_fee_amount</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Double</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_matter_header_current</TableID>
+                    <ColumnID>fixed_fee_amount</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>present_position</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_matter_header_current</TableID>
+                    <ColumnID>present_position</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Client Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_matter_header_current</TableID>
+                    <ColumnID>client_code</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Matter Number</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_matter_header_current</TableID>
+                    <ColumnID>matter_number</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Date Opened Practice Management</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_matter_header_current</TableID>
+                    <ColumnID>date_opened_practice_management</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Fee Earner Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_matter_header_current</TableID>
+                    <ColumnID>fee_earner_code</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension">
+          <CubeDimensionID>odim_open_practice_management_date</CubeDimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>dim_open_practice_management_date_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_mfs_hourly_remaining</TableID>
+                    <ColumnID>dim_open_practice_management_date_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_cal_day_in_week</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_cal_day_in_week</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_cal_day_in_week_no</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_cal_day_in_week_no</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_cal_day_in_month</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_cal_day_in_month</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_cal_day_in_year</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_cal_day_in_year</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_cal_week_in_year</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_cal_week_in_year</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_cal_month</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_cal_month</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_cal_month_name</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_cal_month_name</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_financial_date</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_financial_date</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_fin_day_in_week</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_fin_day_in_week</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_fin_day_in_week_no</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_fin_day_in_week_no</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_fin_day_in_month</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_fin_day_in_month</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_fin_day_in_year</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_fin_day_in_year</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_fin_week_in_month</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_fin_week_in_month</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_fin_week_in_year</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_fin_week_in_year</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_fin_month_no</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_fin_month_no</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_fin_month</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_fin_month</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_fin_month_display</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_fin_month_display</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_fin_month_name</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_fin_month_name</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_fin_period</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_fin_period</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_fin_quarter_no</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_fin_quarter_no</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_fin_quarter</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_fin_quarter</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_fin_year</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_fin_year</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_current_cal_day</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_current_cal_day</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_current_cal_week</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_current_cal_week</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_current_cal_month</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_current_cal_month</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_current_cal_year</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_current_cal_year</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_current_cal_mtd</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_current_cal_mtd</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_current_cal_ytd</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_current_cal_ytd</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_moving_cal_year</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_moving_cal_year</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_current_fin_day</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_current_fin_day</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_current_fin_week</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_current_fin_week</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_current_fin_month</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_current_fin_month</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_current_fin_quarter</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_current_fin_quarter</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_current_fin_year</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_current_fin_year</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_current_fin_mtd</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_current_fin_mtd</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_current_fin_ytd</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_current_fin_ytd</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_moving_fin_quarter</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_moving_fin_quarter</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_moving_fin_year</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_moving_fin_year</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_week_day_flag</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_week_day_flag</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_week_end_flag</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_week_end_flag</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_holiday_flag</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_holiday_flag</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_holiday_desc</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_holiday_desc</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_trading_day_flag</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_trading_day_flag</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_trading_days_in_mth</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_trading_days_in_mth</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>open_practice_management_trading_days_so_far</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_open_practice_management_date</TableID>
+                    <ColumnID>open_practice_management_trading_days_so_far</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension">
+          <CubeDimensionID>odim_dimension_main</CubeDimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>master_fact_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_mfs_hourly_remaining</TableID>
+                    <ColumnID>master_fact_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute>
+              <AttributeID>source_system_id</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>source_system_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>matter_number</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>matter_number</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>client_code</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>client_code</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_matter_header_curr_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_matter_header_curr_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_client_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_client_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_agents_involvement_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_agents_involvement_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_claimant_thirdpart_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_claimant_thirdpart_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_client_involvement_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_client_involvement_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_court_involvement_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_court_involvement_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_defendant_involvem_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_defendant_involvem_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_experts_involvemen_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_experts_involvemen_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_insurance_involvem_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_insurance_involvem_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_involvement_full_bridge_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_involvement_full_bridge_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_witness_involvemen_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_witness_involvemen_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dss_update_time</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dss_update_time</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dss_create_time</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dss_create_time</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_detail_audit_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_detail_audit_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_detail_claim_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_detail_claim_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_detail_client_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_detail_client_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_detail_core_detail_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_detail_core_detail_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_detail_court_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_detail_court_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_detail_critical_mi_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_detail_critical_mi_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_detail_flight_dela_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_detail_flight_dela_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_detail_fraud_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_detail_fraud_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_detail_future_care_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_detail_future_care_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_detail_health_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_detail_health_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_detail_hire_detail_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_detail_hire_detail_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_detail_litigation_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_detail_litigation_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_detail_outcome_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_detail_outcome_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_detail_plot_detail_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_detail_plot_detail_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_detail_practice_ar_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_detail_practice_ar_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_detail_property_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_detail_property_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_detail_incident_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_detail_incident_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_detail_advice_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_detail_advice_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_open_practice_management_date_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_open_practice_management_date_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_closed_practice_management_date_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_closed_practice_management_date_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_detail_rsu_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_detail_rsu_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_detail_previous_details_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_detail_previous_details_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_detail_compliance_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_detail_compliance_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_detail_finance_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_detail_finance_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_fed_hierarchy_history_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_fed_hierarchy_history_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_open_case_management_date_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_open_case_management_date_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>master_client_code</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>master_client_code</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_file_notes_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_file_notes_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_branch_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_branch_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_closed_case_management_date_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_dimension_main</TableID>
+                    <ColumnID>dim_closed_case_management_date_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension">
+          <CubeDimensionID>fact_mfs_hourly_remaining</CubeDimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>Fact Hourly Key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>47</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_mfs_hourly_remaining</TableID>
+                    <ColumnID>fact_hourly_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Hourly Charge Rate</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>15</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_mfs_hourly_remaining</TableID>
+                    <ColumnID>hourly_charge_rate</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions>
+        <Partition>
+          <ID>Fact Mfs Hourly Remaining</ID>
+          <Name>Fact Mfs Hourly Remaining</Name>
+          <CreatedTimestamp>2017-09-08T14:52:45.756667Z</CreatedTimestamp>
+          <LastSchemaUpdate>2017-09-08T15:11:55.456667Z</LastSchemaUpdate>
+          <LastProcessed>2018-12-16T08:29:40.31Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="QueryBinding">
+            <DataSourceID>red_dw</DataSourceID>
+            <QueryDefinition>/****** Script for SelectTopNRows command from SSMS  ******/
+SELECT        CAST(ISNULL(hourly_charge_rate, 0) AS NVARCHAR(15)) + '-' + CAST(ISNULL(dim_matter_owner_key, 0) AS NVARCHAR(15)) + '-' + CAST(ISNULL(dim_matter_header_curr_key, 0) AS NVARCHAR(15)) 
+                         AS fact_hourly_key, dim_matter_owner_key, dim_client_key, dim_matter_header_curr_key, dim_open_practice_management_date_key, client_code, matter_number, fee_earner_code, 
+                         date_opened_practice_management, time_charge_value, number_of_matters, minutes_recorded, CAST(ISNULL(hourly_charge_rate, 0) AS NVARCHAR(15)) AS hourly_charge_rate, master_fact_key, 
+                         dss_create_time, dss_update_time
+FROM            fact_mfs_hourly_remaining</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching>
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" />
+          </ProactiveCaching>
+          <EstimatedSize>7482991</EstimatedSize>
+        </Partition>
+      </Partitions>
+      <ProactiveCaching>
+        <SilenceInterval>-PT1S</SilenceInterval>
+        <Latency>-PT1S</Latency>
+        <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+        <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+        <Source xsi:type="ProactiveCachingInheritedBinding" />
+      </ProactiveCaching>
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source>
+    <DataSourceViewID>red_dw</DataSourceViewID>
+  </Source>
+  <MdxScripts>
+    <MdxScript>
+      <ID>olap_mfs_hourly_remaining</ID>
+      <Name>olap_mfs_hourly_remaining</Name>
+      <CreatedTimestamp>2017-09-08T13:03:15.803333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2017-09-08T15:11:55.55Z</LastSchemaUpdate>
+      <Commands>
+        <Command>
+          <Text>CALCULATE;</Text>
+        </Command>
+      </Commands>
+    </MdxScript>
+  </MdxScripts>
+  <Actions>
+    <Action xsi:type="DrillThroughAction">
+      <ID>mfs_hourly_remaining Drillthrough Action</ID>
+      <Name>mfs_hourly_remaining Drillthrough Action</Name>
+      <Description>Drill through action</Description>
+      <TargetType>Cells</TargetType>
+      <Target>MeasureGroupMeasures("mfs_hourly_remaining")</Target>
+      <Type>DrillThrough</Type>
+      <Default>true</Default>
+      <Columns>
+        <Column xsi:type="MeasureBinding">
+          <MeasureID>Time Charge Value</MeasureID>
+        </Column>
+        <Column xsi:type="MeasureBinding">
+          <MeasureID>Number of Matters</MeasureID>
+        </Column>
+        <Column xsi:type="MeasureBinding">
+          <MeasureID>Minutes Recorded</MeasureID>
+        </Column>
+      </Columns>
+    </Action>
+  </Actions>
+  <ProactiveCaching>
+    <SilenceInterval>-PT1S</SilenceInterval>
+    <Latency>-PT1S</Latency>
+    <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+    <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+    <Source xsi:type="ProactiveCachingInheritedBinding" />
+  </ProactiveCaching>
+</Cube>
