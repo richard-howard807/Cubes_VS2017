@@ -1,0 +1,462 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>WIP Daily</ID>
+  <Name>WIP_Daily</Name>
+  <CreatedTimestamp>2016-05-17T09:51:41.47Z</CreatedTimestamp>
+  <LastSchemaUpdate>2018-08-01T10:44:39.323333Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:NameMatchingCriteria</Name>
+      <Value>1</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout>
+              <dds>
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="13" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-159" scrolltop="-2415" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="18865" y="22913" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                  <font>
+                    <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+                  </font>
+                  <mouseicon>
+                    <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                  </mouseicon>
+                </diagram>
+                <layoutmanager>
+                  <ddsxmlobj />
+                </layoutmanager>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="WIP Daily" left="6918" top="5972" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="5054" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000c0000be13000043110000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_fact_wip_daily" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="Date" left="7937" top="0" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3016" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000c0000c80b0000f40d0000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_dim_date" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="WIP Age" left="11108" top="12791" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="4075" height="1879" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000c0000eb0f000057070000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_dim_days_banding" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="Employee" left="3707" top="12791" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="5001" height="4842" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000c000089130000ea120000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_dim_fed_hierarchy_history" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="Matter History" left="20" top="6184" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="4498" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000c0000921100009b0f0000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_dim_matter_header_history" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="Client" left="14372" top="6607" logicalid="6" controlid="6" masterid="0" hint1="0" hint2="0" width="3704" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000c0000780e00004d0c0000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_dim_client" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="9046" top="3073" logicalid="7" controlid="7" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[WIP Daily-Dim Date]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="1" sourceattachpoint="5" destattachpoint="8" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="9445" y="3572" />
+                    <point x="9445" y="5972" />
+                  </connector>
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="4218" top="7782" logicalid="8" controlid="8" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[WIP Daily-Matter History]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="1" sourceattachpoint="21" destattachpoint="24" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="4518" y="8181" />
+                    <point x="6918" y="8181" />
+                  </connector>
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="6358" top="10091" logicalid="9" controlid="9" masterid="0" hint1="0" hint2="0" width="3387" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[WIP Daily-Employee]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="1" sourceattachpoint="10" destattachpoint="9" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="6757" y="12791" />
+                    <point x="6757" y="11591" />
+                    <point x="9445" y="11591" />
+                    <point x="9445" y="10391" />
+                  </connector>
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="10795" top="10091" logicalid="10" controlid="10" masterid="0" hint1="0" hint2="0" width="2750" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[WIP Daily-WIP Age]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="1" sourceattachpoint="6" destattachpoint="15" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="13145" y="12791" />
+                    <point x="13145" y="11591" />
+                    <point x="11095" y="11591" />
+                    <point x="11095" y="10391" />
+                  </connector>
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="4708" top="10091" logicalid="11" controlid="11" masterid="0" hint1="0" hint2="0" width="3387" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[WIP Daily-Employee1]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="1" sourceattachpoint="4" destattachpoint="3" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="5107" y="12791" />
+                    <point x="5107" y="11591" />
+                    <point x="7795" y="11591" />
+                    <point x="7795" y="10391" />
+                  </connector>
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="11672" top="7782" logicalid="12" controlid="12" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[WIP Daily-Client]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="1" sourceattachpoint="18" destattachpoint="25" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="14372" y="8181" />
+                    <point x="11972" y="8181" />
+                  </connector>
+                </ddscontrol>
+              </dds>
+            </DiagramLayout>
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>-159</DiagramViewPortLeft>
+            <DiagramViewPortTop>-2415</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Red Dw</DataSourceID>
+  <Schema>
+    <xs:schema id="WIP_x0020_Daily" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="WIP_x0020_Daily" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_fact_wip_daily" msprop:IsLogical="True" msprop:FriendlyName="WIP Daily" msprop:DbTableName="WIP Daily" msprop:TableType="View" msprop:QueryDefinition="SELECT        dim_transaction_date_key AS 'Dim Transaction Date Key', dim_matter_header_history_key AS 'Dim Matter Header History Key', dim_fed_hierarchy_history_key AS 'Dim Fed Hierarchy History Key', &#xD;&#xA;                         dim_days_banding_key AS 'Dim Days Banding Key', dim_fed_matter_owner_key AS 'Dim Fed Matter Owner Key', wip_minutes AS 'WIP Minutes', wip_value AS 'WIP Value', &#xD;&#xA;                         dim_client_key AS 'Dim Client Key'&#xD;&#xA;FROM            fact_wip_daily&#xD;&#xA;WHERE        (dim_transaction_date_key &gt;= 20170401)" msprop:QueryBuilder="SpecificQueryBuilder">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Dim_x0020_Transaction_x0020_Date_x0020_Key" msprop:DbColumnName="Dim Transaction Date Key" type="xs:int" minOccurs="0" />
+                  <xs:element name="Dim_x0020_Matter_x0020_Header_x0020_History_x0020_Key" msprop:DbColumnName="Dim Matter Header History Key" type="xs:int" minOccurs="0" />
+                  <xs:element name="Dim_x0020_Fed_x0020_Hierarchy_x0020_History_x0020_Key" msprop:DbColumnName="Dim Fed Hierarchy History Key" type="xs:int" minOccurs="0" />
+                  <xs:element name="Dim_x0020_Days_x0020_Banding_x0020_Key" msprop:DbColumnName="Dim Days Banding Key" type="xs:int" minOccurs="0" />
+                  <xs:element name="WIP_x0020_Minutes" msprop:DbColumnName="WIP Minutes" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="WIP_x0020_Value" msprop:DbColumnName="WIP Value" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Dim_x0020_Client_x0020_Key" msprop:DbColumnName="Dim Client Key" type="xs:int" minOccurs="0" />
+                  <xs:element name="Dim_x0020_Fed_x0020_Matter_x0020_Owner_x0020_Key" msprop:DbColumnName="Dim Fed Matter Owner Key" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_dim_date" msprop:IsLogical="True" msprop:FriendlyName="Date" msprop:DbTableName="Date" msprop:TableType="View" msprop:QueryDefinition="SELECT        calendar_date AS 'Calendar Date', dim_date_key AS 'Dim Date Key', fin_month AS 'Fin Month', fin_period AS 'Fin Period', fin_quarter AS 'Fin Quarter', fin_year AS 'Fin Year'&#xD;&#xA;FROM            dim_date" msprop:QueryBuilder="SpecificQueryBuilder">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Calendar_x0020_Date" msprop:DbColumnName="Calendar Date" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="Dim_x0020_Date_x0020_Key" msprop:DbColumnName="Dim Date Key" type="xs:int" />
+                  <xs:element name="Fin_x0020_Month" msprop:DbColumnName="Fin Month" type="xs:int" minOccurs="0" />
+                  <xs:element name="Fin_x0020_Period" msprop:DbColumnName="Fin Period" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Fin_x0020_Quarter" msprop:DbColumnName="Fin Quarter" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="7" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Fin_x0020_Year" msprop:DbColumnName="Fin Year" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_dim_days_banding" msprop:IsLogical="True" msprop:FriendlyName="WIP Age" msprop:DbTableName="WIP Age" msprop:TableType="View" msprop:QueryDefinition="SELECT        dim_days_banding_key AS 'Dim Days Banding Key', daysbanding AS 'Days Banding'&#xD;&#xA;FROM            dim_days_banding" msprop:QueryBuilder="SpecificQueryBuilder">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Dim_x0020_Days_x0020_Banding_x0020_Key" msprop:DbColumnName="Dim Days Banding Key" type="xs:int" />
+                  <xs:element name="Days_x0020_Banding" msprop:DbColumnName="Days Banding" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="21" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_dim_fed_hierarchy_history" msprop:IsLogical="True" msprop:FriendlyName="Employee" msprop:DbTableName="Employee" msprop:TableType="View" msprop:QueryDefinition="SELECT        hierarchylevel1hist AS 'Organisation', hierarchylevel2hist AS 'Business Line', hierarchylevel3hist AS 'Practice Area', hierarchylevel4hist AS 'Team', hierarchylevel5hist AS 'Subteam', &#xD;&#xA;                         display_name AS 'Display Name', dim_fed_hierarchy_history_key AS 'Dim Fed Hierarchy History Key', fed_hierarchy_business_key AS 'Fed Hierarchy Business Key', fed_code AS 'Fee Earner Code'&#xD;&#xA;FROM            dim_fed_hierarchy_history AS Employee" msprop:QueryBuilder="SpecificQueryBuilder">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Organisation" msprop:DbColumnName="Organisation" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Business_x0020_Line" msprop:DbColumnName="Business Line" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Practice_x0020_Area" msprop:DbColumnName="Practice Area" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Team" msprop:DbColumnName="Team" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Subteam" msprop:DbColumnName="Subteam" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Display_x0020_Name" msprop:DbColumnName="Display Name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Dim_x0020_Fed_x0020_Hierarchy_x0020_History_x0020_Key" msprop:DbColumnName="Dim Fed Hierarchy History Key" type="xs:int" />
+                  <xs:element name="Fed_x0020_Hierarchy_x0020_Business_x0020_Key" msprop:DbColumnName="Fed Hierarchy Business Key" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1000" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Fee_x0020_Earner_x0020_Code" msprop:DbColumnName="Fee Earner Code" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_dim_matter_header_history" msprop:IsLogical="True" msprop:FriendlyName="Matter History" msprop:DbTableName="Matter History" msprop:TableType="View" msprop:QueryDefinition="SELECT        CASE WHEN datepart(year, date_closed_practice_management) &lt;= 1990 THEN NULL ELSE date_closed_practice_management END AS 'Date Closed', date_opened_practice_management AS 'Date Opened', &#xD;&#xA;                         dim_mat_head_history_key AS 'Dim Mat Head History Key', fixed_fee AS 'Fixed Fee', dim_instruction_type_key AS 'Dim Instruction Type Key', matter_description AS 'Matter Description', &#xD;&#xA;                         matter_number AS 'Matter Number'&#xD;&#xA;FROM            dim_matter_header_history&#xD;&#xA;WHERE        (dim_mat_head_history_key IN&#xD;&#xA;                             (SELECT        dim_matter_header_history_key&#xD;&#xA;                               FROM            fact_wip_daily&#xD;&#xA;                               WHERE        (dim_transaction_date_key &gt;= 20160401)))" msprop:QueryBuilder="SpecificQueryBuilder">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Date_x0020_Closed" msprop:DbColumnName="Date Closed" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="Date_x0020_Opened" msprop:DbColumnName="Date Opened" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="Dim_x0020_Mat_x0020_Head_x0020_History_x0020_Key" msprop:DbColumnName="Dim Mat Head History Key" type="xs:int" />
+                  <xs:element name="Fixed_x0020_Fee" msprop:DbColumnName="Fixed Fee" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="60" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Matter_x0020_Description" msprop:DbColumnName="Matter Description" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="200" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Matter_x0020_Number" msprop:DbColumnName="Matter Number" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Dim_x0020_Instruction_x0020_Type_x0020_Key" msprop:DbColumnName="Dim Instruction Type Key" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_dim_client" msprop:IsLogical="True" msprop:FriendlyName="Client" msprop:DbTableName="Client" msprop:TableType="View" msprop:QueryDefinition="SELECT        client_code AS 'Client Code', client_group_name AS 'Client Group Name', client_name AS 'Client Name', client_partner_name AS 'Client Partner Name', dim_client_key AS 'Dim Client Key'&#xD;&#xA;FROM            dim_client AS Client" msprop:QueryBuilder="SpecificQueryBuilder">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Client_x0020_Code" msprop:DbColumnName="Client Code" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Client_x0020_Group_x0020_Name" msprop:DbColumnName="Client Group Name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="40" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Client_x0020_Name" msprop:DbColumnName="Client Name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="60" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Client_x0020_Partner_x0020_Name" msprop:DbColumnName="Client Partner Name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Dim_x0020_Client_x0020_Key" msprop:DbColumnName="Dim Client Key" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_dim_date" />
+          <xs:field xpath="Dim_x0020_Date_x0020_Key" />
+        </xs:unique>
+        <xs:unique name="dbo_dim_days_banding_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_dim_days_banding" />
+          <xs:field xpath="Dim_x0020_Days_x0020_Banding_x0020_Key" />
+        </xs:unique>
+        <xs:unique name="dbo_dim_fed_hierarchy_history_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_dim_fed_hierarchy_history" />
+          <xs:field xpath="Dim_x0020_Fed_x0020_Hierarchy_x0020_History_x0020_Key" />
+        </xs:unique>
+        <xs:unique name="dbo_dim_matter_header_history_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_dim_matter_header_history" />
+          <xs:field xpath="Dim_x0020_Mat_x0020_Head_x0020_History_x0020_Key" />
+        </xs:unique>
+        <xs:unique name="dbo_dim_client_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_dim_client" />
+          <xs:field xpath="Dim_x0020_Client_x0020_Key" />
+        </xs:unique>
+      </xs:element>
+      <xs:annotation>
+        <xs:appinfo>
+          <msdata:Relationship name="WIP_x0020_Daily-Dim_x0020_Date" msdata:parent="dbo_dim_date" msdata:child="dbo_fact_wip_daily" msdata:parentkey="Dim_x0020_Date_x0020_Key" msdata:childkey="Dim_x0020_Transaction_x0020_Date_x0020_Key" msprop:IsLogical="True" msprop:Description="" />
+          <msdata:Relationship name="WIP_x0020_Daily-Matter_x0020_History" msdata:parent="dbo_dim_matter_header_history" msdata:child="dbo_fact_wip_daily" msdata:parentkey="Dim_x0020_Mat_x0020_Head_x0020_History_x0020_Key" msdata:childkey="Dim_x0020_Matter_x0020_Header_x0020_History_x0020_Key" msprop:IsLogical="True" msprop:Description="" />
+          <msdata:Relationship name="WIP_x0020_Daily-Employee" msdata:parent="dbo_dim_fed_hierarchy_history" msdata:child="dbo_fact_wip_daily" msdata:parentkey="Dim_x0020_Fed_x0020_Hierarchy_x0020_History_x0020_Key" msdata:childkey="Dim_x0020_Fed_x0020_Hierarchy_x0020_History_x0020_Key" msprop:IsLogical="True" msprop:Description="" />
+          <msdata:Relationship name="WIP_x0020_Daily-WIP_x0020_Age" msdata:parent="dbo_dim_days_banding" msdata:child="dbo_fact_wip_daily" msdata:parentkey="Dim_x0020_Days_x0020_Banding_x0020_Key" msdata:childkey="Dim_x0020_Days_x0020_Banding_x0020_Key" msprop:IsLogical="True" msprop:Description="" />
+          <msdata:Relationship name="WIP_x0020_Daily-Employee1" msdata:parent="dbo_dim_fed_hierarchy_history" msdata:child="dbo_fact_wip_daily" msdata:parentkey="Dim_x0020_Fed_x0020_Hierarchy_x0020_History_x0020_Key" msdata:childkey="Dim_x0020_Fed_x0020_Matter_x0020_Owner_x0020_Key" msprop:IsLogical="True" msprop:Description="" />
+          <msdata:Relationship name="WIP_x0020_Daily-Client" msdata:parent="dbo_dim_client" msdata:child="dbo_fact_wip_daily" msdata:parentkey="Dim_x0020_Client_x0020_Key" msdata:childkey="Dim_x0020_Client_x0020_Key" msprop:IsLogical="True" msprop:Description="" />
+        </xs:appinfo>
+      </xs:annotation>
+    </xs:schema>
+    <WIP_x0020_Daily xmlns="" />
+  </Schema>
+</DataSourceView>
