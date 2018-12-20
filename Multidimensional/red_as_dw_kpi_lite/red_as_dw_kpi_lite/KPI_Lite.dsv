@@ -1,0 +1,795 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Red Dw</ID>
+  <Name>KPI_Lite</Name>
+  <CreatedTimestamp>2018-01-31T18:40:57.696667Z</CreatedTimestamp>
+  <LastSchemaUpdate>2018-09-11T10:34:11.816667Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:NameMatchingCriteria</Name>
+      <Value>1</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout>
+              <dds>
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="16" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-5000" scrolltop="2942" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="29554" y="10980" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                  <font>
+                    <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+                  </font>
+                  <mouseicon>
+                    <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                  </mouseicon>
+                </diagram>
+                <layoutmanager>
+                  <ddsxmlobj />
+                </layoutmanager>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="agg_kpi_monthly_rollup" left="0" top="7400" logicalid="8" controlid="1" masterid="0" hint1="0" hint2="0" width="5556" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000c0000b415000088130000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_agg_kpi_monthly_rollup" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="dim_fed_hierarchy_history" left="7956" top="7400" logicalid="9" controlid="2" masterid="0" hint1="0" hint2="0" width="5212" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000c00005c14000088130000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_dim_fed_hierarchy_history" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="dim_bill_date" left="595" top="0" logicalid="10" controlid="3" masterid="0" hint1="0" hint2="0" width="4366" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000c00000e11000088130000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_dim_bill_date" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="5256" top="9501" logicalid="11" controlid="4" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[agg_kpi_monthly_rollup-dim_fed_hierarchy_history]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="1" sourceattachpoint="26" destattachpoint="27" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="7956" y="9900" />
+                    <point x="5556" y="9900" />
+                  </connector>
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="dim_employee" left="14389" top="5000" logicalid="12" controlid="5" masterid="0" hint1="0" hint2="0" width="3651" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000c0000430e000088130000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_dim_employee" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="12868" top="7101" logicalid="13" controlid="6" masterid="0" hint1="0" hint2="0" width="1821" height="899" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[dim_fed_hierarchy_history-dim_employee]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="2" sourceattachpoint="22" destattachpoint="19" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="14389" y="7500" />
+                    <point x="13779" y="7500" />
+                    <point x="13779" y="7700" />
+                    <point x="13168" y="7700" />
+                  </connector>
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="729" top="4501" logicalid="14" controlid="7" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[agg_kpi_monthly_rollup-dim_bill_date]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="1" sourceattachpoint="1" destattachpoint="2" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="1128" y="5000" />
+                    <point x="1128" y="7400" />
+                  </connector>
+                </ddscontrol>
+              </dds>
+            </DiagramLayout>
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>-5000</DiagramViewPortLeft>
+            <DiagramViewPortTop>2942</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Red_dw</DataSourceID>
+  <Schema>
+    <xs:schema id="Red_x0020_Dw" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Red_x0020_Dw" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_agg_kpi_monthly_rollup" msprop:IsLogical="True" msprop:FriendlyName="agg_kpi_monthly_rollup" msprop:DbTableName="agg_kpi_monthly_rollup" msprop:TableType="View" msprop:QueryDefinition="SELECT        r.dim_fed_hierarchy_history_key, r.bill_amount AS ProfitCosts, &#xD;&#xA;                         CASE WHEN fed.display_name = 'Budget Balance' THEN team_level_budget_value_balance ELSE fed_level_budget_value END AS 'Target Profit Costs (Budget Balanced)', &#xD;&#xA;                         r.fed_level_minute_value AS 'TargetHours', r.fed_level_tb_budget_value AS 'TimeBilledBudgetValue', r.team_level_budget_value, r.practice_area_level_budget_value, r.business_line_level_budget_value, &#xD;&#xA;                         r.firm_level_budget_value, r.chargeable_minutes_recorded, r.time_charge_value, r.actual_time_recorded_value, r.durationholidaydays, r.durationdays, r.days_year_to_date, r.baseentitlementdays, &#xD;&#xA;                         r.newstarterdays, r.manualadjustmentdays, r.carrydays, r.totalentitlementdays, r.ptproratadays, r.bhproratadays, r.carrylostdays, r.billed_minutes_recorded, &#xD;&#xA;                         r.billed_minutes_recorded / 60 AS 'Billed Hours Recorded', r.non_chargeable_minutes, r.non_chargeable_minutes / 60 AS 'Non Chargeable Hours', r.wip_minutes, r.wip_value, r.dss_update_time, &#xD;&#xA;                         r.zero_rate_minutes_recorded, r.zero_rate_minutes_recorded / 60 AS 'Zero Rate Hours Recorded', r.disbursement_balance, r.open_practice_management, r.closed_practice_management, r.billed_time, &#xD;&#xA;                         r.fed_level_budget_value, r.springboard_minutes_recorded, r.springboard_minutes_recorded / 60 AS 'SpringboardHoursRecorded', r.operational_minutes_recorded, &#xD;&#xA;                         r.operational_minutes_recorded / 60 AS 'OperationalHoursRecorded', r.total_operational_minutes_recorded, r.open_practice_management_month, r.closed_practice_management_month, &#xD;&#xA;                         r.open_practice_management_fin_ytd, r.closed_practice_management_fin_ytd, r.business_line_costs_ytd, r.business_line_budget_costs, r.practice_area_costs_ytd, r.practice_area_budget_costs, &#xD;&#xA;                         r.team_costs_ytd, r.team_budget_costs, r.non_billable_minutes, r.non_billable_minutes / 60 AS 'Non Billable Hours', r.remaining_working_days, r.remaining_fte_working_days, r.billable_minutes_recorded, &#xD;&#xA;                         r.zero_rate_billable_minutes_recorded, r.billable_time_charge_value, r.actual_billable_time_recorded_value, r.billable_minutes_recorded / 60 AS 'billable_hours_recorded', &#xD;&#xA;                         r.zero_rate_billable_minutes_recorded / 60 AS 'zero_rate_billable_hours_recorded', r.wip_over_90_days, r.cr_amount * - 1 AS cr_amount, r.work_amt_woff, r.bill_amt_woff, r.unpaid_bill_balance, &#xD;&#xA;                         r.credit_note_count, r.bill_count, r.write_off_hrs, r.bill_hrs_woff, r.remaining_fte_working_days_year, r.dim_gl_date_key, r.wip_value_matter_owner, r.wip_over_90_days_matter_owner&#xD;&#xA;FROM            fact_agg_kpi_monthly_rollup AS r LEFT OUTER JOIN&#xD;&#xA;                         dim_fed_hierarchy_history AS fed ON fed.dim_fed_hierarchy_history_key = r.dim_fed_hierarchy_history_key" msprop:QueryBuilder="SpecificQueryBuilder">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="dim_fed_hierarchy_history_key" msprop:DbColumnName="dim_fed_hierarchy_history_key" msprop:FriendlyName="dim_fed_hierarchy_history_key" type="xs:int" minOccurs="0" />
+                  <xs:element name="team_level_budget_value" msprop:DbColumnName="team_level_budget_value" msprop:FriendlyName="team_level_budget_value" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="practice_area_level_budget_value" msprop:DbColumnName="practice_area_level_budget_value" msprop:FriendlyName="practice_area_level_budget_value" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="business_line_level_budget_value" msprop:DbColumnName="business_line_level_budget_value" msprop:FriendlyName="business_line_level_budget_value" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="firm_level_budget_value" msprop:DbColumnName="firm_level_budget_value" msprop:FriendlyName="firm_level_budget_value" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="chargeable_minutes_recorded" msprop:DbColumnName="chargeable_minutes_recorded" msprop:FriendlyName="chargeable_minutes_recorded" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="time_charge_value" msprop:DbColumnName="time_charge_value" msprop:FriendlyName="time_charge_value" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="actual_time_recorded_value" msprop:DbColumnName="actual_time_recorded_value" msprop:FriendlyName="actual_time_recorded_value" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="durationholidaydays" msprop:DbColumnName="durationholidaydays" msprop:FriendlyName="durationholidaydays" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="durationdays" msprop:DbColumnName="durationdays" msprop:FriendlyName="durationdays" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="days_year_to_date" msprop:DbColumnName="days_year_to_date" msprop:FriendlyName="days_year_to_date" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="baseentitlementdays" msprop:DbColumnName="baseentitlementdays" msprop:FriendlyName="baseentitlementdays" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="newstarterdays" msprop:DbColumnName="newstarterdays" msprop:FriendlyName="newstarterdays" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="manualadjustmentdays" msprop:DbColumnName="manualadjustmentdays" msprop:FriendlyName="manualadjustmentdays" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="carrydays" msprop:DbColumnName="carrydays" msprop:FriendlyName="carrydays" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="totalentitlementdays" msprop:DbColumnName="totalentitlementdays" msprop:FriendlyName="totalentitlementdays" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="ptproratadays" msprop:DbColumnName="ptproratadays" msprop:FriendlyName="ptproratadays" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="bhproratadays" msprop:DbColumnName="bhproratadays" msprop:FriendlyName="bhproratadays" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="carrylostdays" msprop:DbColumnName="carrylostdays" msprop:FriendlyName="carrylostdays" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="non_chargeable_minutes" msprop:DbColumnName="non_chargeable_minutes" msprop:FriendlyName="non_chargeable_minutes" type="xs:int" minOccurs="0" />
+                  <xs:element name="wip_value" msprop:DbColumnName="wip_value" msprop:FriendlyName="wip_value" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="dss_update_time" msprop:DbColumnName="dss_update_time" msprop:FriendlyName="dss_update_time" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="billed_minutes_recorded" msprop:DbColumnName="billed_minutes_recorded" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="wip_minutes" msprop:DbColumnName="wip_minutes" type="xs:int" minOccurs="0" />
+                  <xs:element name="zero_rate_minutes_recorded" msprop:DbColumnName="zero_rate_minutes_recorded" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="disbursement_balance" msprop:DbColumnName="disbursement_balance" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="open_practice_management" msprop:DbColumnName="open_practice_management" type="xs:int" minOccurs="0" />
+                  <xs:element name="ProfitCosts" msprop:DbColumnName="ProfitCosts" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="TargetHours" msprop:DbColumnName="TargetHours" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="TimeBilledBudgetValue" msprop:DbColumnName="TimeBilledBudgetValue" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Zero_x0020_Rate_x0020_Hours_x0020_Recorded" msprop:DbColumnName="Zero Rate Hours Recorded" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Billed_x0020_Hours_x0020_Recorded" msprop:DbColumnName="Billed Hours Recorded" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="billed_time" msprop:DbColumnName="billed_time" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="fed_level_budget_value" msprop:DbColumnName="fed_level_budget_value" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Non_x0020_Chargeable_x0020_Hours" msprop:DbColumnName="Non Chargeable Hours" type="xs:int" minOccurs="0" />
+                  <xs:element name="closed_practice_management" msprop:DbColumnName="closed_practice_management" type="xs:int" minOccurs="0" />
+                  <xs:element name="springboard_minutes_recorded" msprop:DbColumnName="springboard_minutes_recorded" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="operational_minutes_recorded" msprop:DbColumnName="operational_minutes_recorded" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="total_operational_minutes_recorded" msprop:DbColumnName="total_operational_minutes_recorded" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="SpringboardHoursRecorded" msprop:DbColumnName="SpringboardHoursRecorded" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="OperationalHoursRecorded" msprop:DbColumnName="OperationalHoursRecorded" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="open_practice_management_month" msprop:DbColumnName="open_practice_management_month" type="xs:int" minOccurs="0" />
+                  <xs:element name="closed_practice_management_month" msprop:DbColumnName="closed_practice_management_month" type="xs:int" minOccurs="0" />
+                  <xs:element name="open_practice_management_fin_ytd" msprop:DbColumnName="open_practice_management_fin_ytd" type="xs:int" minOccurs="0" />
+                  <xs:element name="closed_practice_management_fin_ytd" msprop:DbColumnName="closed_practice_management_fin_ytd" type="xs:int" minOccurs="0" />
+                  <xs:element name="business_line_costs_ytd" msprop:DbColumnName="business_line_costs_ytd" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="business_line_budget_costs" msprop:DbColumnName="business_line_budget_costs" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="practice_area_costs_ytd" msprop:DbColumnName="practice_area_costs_ytd" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="practice_area_budget_costs" msprop:DbColumnName="practice_area_budget_costs" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="team_costs_ytd" msprop:DbColumnName="team_costs_ytd" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="team_budget_costs" msprop:DbColumnName="team_budget_costs" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="non_billable_minutes" msprop:DbColumnName="non_billable_minutes" type="xs:int" minOccurs="0" />
+                  <xs:element name="Non_x0020_Billable_x0020_Hours" msprop:DbColumnName="Non Billable Hours" type="xs:int" minOccurs="0" />
+                  <xs:element name="remaining_working_days" msprop:DbColumnName="remaining_working_days" type="xs:int" minOccurs="0" />
+                  <xs:element name="remaining_fte_working_days" msprop:DbColumnName="remaining_fte_working_days" type="xs:int" minOccurs="0" />
+                  <xs:element name="billable_minutes_recorded" msprop:DbColumnName="billable_minutes_recorded" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="zero_rate_billable_minutes_recorded" msprop:DbColumnName="zero_rate_billable_minutes_recorded" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="billable_time_charge_value" msprop:DbColumnName="billable_time_charge_value" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="actual_billable_time_recorded_value" msprop:DbColumnName="actual_billable_time_recorded_value" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="billable_hours_recorded" msprop:DbColumnName="billable_hours_recorded" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="zero_rate_billable_hours_recorded" msprop:DbColumnName="zero_rate_billable_hours_recorded" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="wip_over_90_days" msprop:DbColumnName="wip_over_90_days" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="cr_amount" msprop:DbColumnName="cr_amount" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="work_amt_woff" msprop:DbColumnName="work_amt_woff" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="bill_amt_woff" msprop:DbColumnName="bill_amt_woff" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="unpaid_bill_balance" msprop:DbColumnName="unpaid_bill_balance" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="credit_note_count" msprop:DbColumnName="credit_note_count" type="xs:int" minOccurs="0" />
+                  <xs:element name="bill_count" msprop:DbColumnName="bill_count" type="xs:int" minOccurs="0" />
+                  <xs:element name="write_off_hrs" msprop:DbColumnName="write_off_hrs" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="bill_hrs_woff" msprop:DbColumnName="bill_hrs_woff" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="remaining_fte_working_days_year" msprop:DbColumnName="remaining_fte_working_days_year" type="xs:int" minOccurs="0" />
+                  <xs:element name="dim_gl_date_key" msprop:DbColumnName="dim_gl_date_key" type="xs:int" minOccurs="0" />
+                  <xs:element name="wip_value_matter_owner" msprop:DbColumnName="wip_value_matter_owner" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="wip_over_90_days_matter_owner" msprop:DbColumnName="wip_over_90_days_matter_owner" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Target_x0020_Profit_x0020_Costs_x0020__x0028_Budget_x0020_Balanced_x0029_" msprop:DbColumnName="Target Profit Costs (Budget Balanced)" type="xs:decimal" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_dim_fed_hierarchy_history" msprop:IsLogical="True" msprop:FriendlyName="dim_fed_hierarchy_history" msprop:DbTableName="dim_fed_hierarchy_history" msprop:TableType="View" msprop:QueryDefinition="SELECT        dim_fed_hierarchy_history_key, source_system_id, fed_hierarchy_business_key, fed_code, employeeid, activeud, fed_code_effective_start_date, jobtitle, linemanageridud, linemanagername, reportingbcmidud, &#xD;&#xA;                         ISNULL(reportingbcmname, '') AS reportingbcmname, worksforemployeeid, worksforname, display_name, name, hierarchynodehist, hierarchylevel1hist, hierarchylevel2hist, hierarchylevel3hist, &#xD;&#xA;                         hierarchylevel4hist, hierarchylevel5hist, hierarchylevel6hist, hierarchynode, hierarchylevel1, hierarchylevel2, hierarchylevel3, hierarchylevel4, hierarchylevel5, hierarchylevel6, [level], securitylevel, &#xD;&#xA;                         effective_start_date, warning_flag, dss_update_time, dss_start_date, dss_end_date, dss_current_flag, dss_version, hierarchynodehistnorm, hierarchylevel1histnorm, hierarchylevel2histnorm, &#xD;&#xA;                         hierarchylevel3histnorm, hierarchylevel4histnorm, hierarchylevel5histnorm, hierarchylevel6histnorm, ISNULL(fte, 0) AS 'fte', dim_employee_key, hierarchylevel1hist_pre_francis, hierarchylevel2hist_pre_francis, &#xD;&#xA;                         hierarchylevel3hist_pre_francis, hierarchylevel4hist_pre_francis, hierarchylevel5hist_pre_francis, hierarchylevel6hist_pre_francis, windowsusername, latest_hierarchy_flag, leaver&#xD;&#xA;FROM            dim_fed_hierarchy_history" msprop:QueryBuilder="SpecificQueryBuilder">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="dim_fed_hierarchy_history_key" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:DbColumnName="dim_fed_hierarchy_history_key" msprop:FriendlyName="dim_fed_hierarchy_history_key" type="xs:int" />
+                  <xs:element name="source_system_id" msprop:DbColumnName="source_system_id" msprop:FriendlyName="source_system_id" type="xs:int" minOccurs="0" />
+                  <xs:element name="fed_hierarchy_business_key" msprop:DbColumnName="fed_hierarchy_business_key" msprop:FriendlyName="fed_hierarchy_business_key" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1000" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="fed_code" msprop:DbColumnName="fed_code" msprop:FriendlyName="fed_code" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="employeeid" msprop:DbColumnName="employeeid" msprop:FriendlyName="employeeid" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="36" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="activeud" msprop:DbColumnName="activeud" msprop:FriendlyName="activeud" type="xs:boolean" minOccurs="0" />
+                  <xs:element name="fed_code_effective_start_date" msprop:DbColumnName="fed_code_effective_start_date" msprop:FriendlyName="fed_code_effective_start_date" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="jobtitle" msprop:DbColumnName="jobtitle" msprop:FriendlyName="jobtitle" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="linemanageridud" msprop:DbColumnName="linemanageridud" msprop:FriendlyName="linemanageridud" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="linemanagername" msprop:DbColumnName="linemanagername" msprop:FriendlyName="linemanagername" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="reportingbcmidud" msprop:DbColumnName="reportingbcmidud" msprop:FriendlyName="reportingbcmidud" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="reportingbcmname" msprop:DbColumnName="reportingbcmname" msprop:FriendlyName="reportingbcmname" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="worksforemployeeid" msprop:DbColumnName="worksforemployeeid" msprop:FriendlyName="worksforemployeeid" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="36" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="worksforname" msprop:DbColumnName="worksforname" msprop:FriendlyName="worksforname" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="display_name" msprop:DbColumnName="display_name" msprop:FriendlyName="display_name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="name" msprop:DbColumnName="name" msprop:FriendlyName="name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchynodehist" msprop:DbColumnName="hierarchynodehist" msprop:FriendlyName="hierarchynodehist" type="xs:long" minOccurs="0" />
+                  <xs:element name="hierarchylevel1hist" msprop:DbColumnName="hierarchylevel1hist" msprop:FriendlyName="hierarchylevel1hist" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchylevel2hist" msprop:DbColumnName="hierarchylevel2hist" msprop:FriendlyName="hierarchylevel2hist" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchylevel3hist" msprop:DbColumnName="hierarchylevel3hist" msprop:FriendlyName="hierarchylevel3hist" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchylevel4hist" msprop:DbColumnName="hierarchylevel4hist" msprop:FriendlyName="hierarchylevel4hist" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchylevel5hist" msprop:DbColumnName="hierarchylevel5hist" msprop:FriendlyName="hierarchylevel5hist" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchylevel6hist" msprop:DbColumnName="hierarchylevel6hist" msprop:FriendlyName="hierarchylevel6hist" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchynode" msprop:DbColumnName="hierarchynode" msprop:FriendlyName="hierarchynode" type="xs:long" minOccurs="0" />
+                  <xs:element name="hierarchylevel1" msprop:DbColumnName="hierarchylevel1" msprop:FriendlyName="hierarchylevel1" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchylevel2" msprop:DbColumnName="hierarchylevel2" msprop:FriendlyName="hierarchylevel2" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchylevel3" msprop:DbColumnName="hierarchylevel3" msprop:FriendlyName="hierarchylevel3" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchylevel4" msprop:DbColumnName="hierarchylevel4" msprop:FriendlyName="hierarchylevel4" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchylevel5" msprop:DbColumnName="hierarchylevel5" msprop:FriendlyName="hierarchylevel5" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchylevel6" msprop:DbColumnName="hierarchylevel6" msprop:FriendlyName="hierarchylevel6" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="level" msprop:DbColumnName="level" msprop:FriendlyName="level" type="xs:int" minOccurs="0" />
+                  <xs:element name="securitylevel" msprop:DbColumnName="securitylevel" msprop:FriendlyName="securitylevel" type="xs:int" minOccurs="0" />
+                  <xs:element name="effective_start_date" msprop:DbColumnName="effective_start_date" msprop:FriendlyName="effective_start_date" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="warning_flag" msprop:DbColumnName="warning_flag" msprop:FriendlyName="warning_flag" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="dss_update_time" msprop:DbColumnName="dss_update_time" msprop:FriendlyName="dss_update_time" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="dss_start_date" msprop:DbColumnName="dss_start_date" msprop:FriendlyName="dss_start_date" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="dss_end_date" msprop:DbColumnName="dss_end_date" msprop:FriendlyName="dss_end_date" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="dss_current_flag" msprop:DbColumnName="dss_current_flag" msprop:FriendlyName="dss_current_flag" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="dss_version" msprop:DbColumnName="dss_version" msprop:FriendlyName="dss_version" type="xs:int" minOccurs="0" />
+                  <xs:element name="hierarchynodehistnorm" msprop:DbColumnName="hierarchynodehistnorm" type="xs:long" minOccurs="0" />
+                  <xs:element name="hierarchylevel1histnorm" msprop:DbColumnName="hierarchylevel1histnorm" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchylevel2histnorm" msprop:DbColumnName="hierarchylevel2histnorm" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchylevel3histnorm" msprop:DbColumnName="hierarchylevel3histnorm" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchylevel4histnorm" msprop:DbColumnName="hierarchylevel4histnorm" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchylevel5histnorm" msprop:DbColumnName="hierarchylevel5histnorm" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchylevel6histnorm" msprop:DbColumnName="hierarchylevel6histnorm" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="fte" msprop:DbColumnName="fte" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="dim_employee_key" msprop:DbColumnName="dim_employee_key" type="xs:int" minOccurs="0" />
+                  <xs:element name="hierarchylevel1hist_pre_francis" msprop:DbColumnName="hierarchylevel1hist_pre_francis" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchylevel2hist_pre_francis" msprop:DbColumnName="hierarchylevel2hist_pre_francis" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchylevel3hist_pre_francis" msprop:DbColumnName="hierarchylevel3hist_pre_francis" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchylevel4hist_pre_francis" msprop:DbColumnName="hierarchylevel4hist_pre_francis" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchylevel5hist_pre_francis" msprop:DbColumnName="hierarchylevel5hist_pre_francis" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchylevel6hist_pre_francis" msprop:DbColumnName="hierarchylevel6hist_pre_francis" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="windowsusername" msprop:DbColumnName="windowsusername" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="latest_hierarchy_flag" msprop:DbColumnName="latest_hierarchy_flag" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="leaver" msprop:DbColumnName="leaver" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_dim_bill_date" msprop:IsLogical="True" msprop:FriendlyName="dim_bill_date" msprop:DbTableName="dim_bill_date" msprop:TableType="View" msprop:QueryDefinition="SELECT        dim_date_key AS 'dim_bill_date_key', cal_month AS 'bill_cal_month', cal_quarter AS 'bill_cal_quarter', cal_year AS 'bill_cal_year', fin_period AS 'bill_fin_period', fin_quarter AS 'bill_fin_quarter', &#xD;&#xA;                         fin_year AS 'bill_fin_year', sum(CASE WHEN holiday_flag = 'N' AND week_end_flag = 'N' THEN 1 ELSE 0 END) OVER (partition BY year(dateadd(month, 8, financial_date))&#xD;&#xA;ORDER BY dateadd(month, 8, financial_date) DESC ROWS UNBOUNDED PRECEDING) AS 'remaining_working_days', current_fin_month&#xD;&#xA;FROM            dim_date&#xD;&#xA;where current_fin_month is not null" msprop:QueryBuilder="SpecificQueryBuilder">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="dim_bill_date_key" msprop:DbColumnName="dim_bill_date_key" msprop:FriendlyName="dim_bill_date_key" type="xs:int" />
+                  <xs:element name="bill_cal_month" msprop:DbColumnName="bill_cal_month" msprop:FriendlyName="bill_cal_month" type="xs:int" minOccurs="0" />
+                  <xs:element name="bill_cal_quarter" msprop:DbColumnName="bill_cal_quarter" msprop:FriendlyName="bill_cal_quarter" type="xs:int" minOccurs="0" />
+                  <xs:element name="bill_cal_year" msprop:DbColumnName="bill_cal_year" msprop:FriendlyName="bill_cal_year" type="xs:int" minOccurs="0" />
+                  <xs:element name="bill_fin_period" msprop:DbColumnName="bill_fin_period" msprop:FriendlyName="bill_fin_period" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="bill_fin_quarter" msprop:DbColumnName="bill_fin_quarter" msprop:FriendlyName="bill_fin_quarter" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="7" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="bill_fin_year" msprop:DbColumnName="bill_fin_year" msprop:FriendlyName="bill_fin_year" type="xs:int" minOccurs="0" />
+                  <xs:element name="remaining_working_days" msprop:DbColumnName="remaining_working_days" type="xs:int" minOccurs="0" />
+                  <xs:element name="current_fin_month" msprop:DbColumnName="current_fin_month" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_dim_employee" msprop:DbTableName="dim_employee" msprop:FriendlyName="dim_employee" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="dim_employee_key" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:DbColumnName="dim_employee_key" msprop:FriendlyName="dim_employee_key" type="xs:int" />
+                  <xs:element name="payrollid" msprop:DbColumnName="payrollid" msprop:FriendlyName="payrollid" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="displayemployeeid" msprop:DbColumnName="displayemployeeid" msprop:FriendlyName="displayemployeeid" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="employeeid" msprop:DbColumnName="employeeid" msprop:FriendlyName="employeeid" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="36" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="sequence" msprop:DbColumnName="sequence" msprop:FriendlyName="sequence" type="xs:long" minOccurs="0" />
+                  <xs:element name="forename" msprop:DbColumnName="forename" msprop:FriendlyName="forename" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="surname" msprop:DbColumnName="surname" msprop:FriendlyName="surname" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="othername" msprop:DbColumnName="othername" msprop:FriendlyName="othername" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="initials" msprop:DbColumnName="initials" msprop:FriendlyName="initials" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="knownas" msprop:DbColumnName="knownas" msprop:FriendlyName="knownas" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="title" msprop:DbColumnName="title" msprop:FriendlyName="title" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="workemail" msprop:DbColumnName="workemail" msprop:FriendlyName="workemail" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="320" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="worksforemail" msprop:DbColumnName="worksforemail" msprop:FriendlyName="worksforemail" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="320" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="locationidud" msprop:DbColumnName="locationidud" msprop:FriendlyName="locationidud" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="workphone" msprop:DbColumnName="workphone" msprop:FriendlyName="workphone" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="windowsusername" msprop:DbColumnName="windowsusername" msprop:FriendlyName="windowsusername" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="fed_login" msprop:DbColumnName="fed_login" msprop:FriendlyName="fed_login" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="nt_login" msprop:DbColumnName="nt_login" msprop:FriendlyName="nt_login" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="levelidud" msprop:DbColumnName="levelidud" msprop:FriendlyName="levelidud" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="leaverlastworkdate" msprop:DbColumnName="leaverlastworkdate" msprop:FriendlyName="leaverlastworkdate" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="dss_create_time" msprop:DbColumnName="dss_create_time" msprop:FriendlyName="dss_create_time" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="dss_update_time" msprop:DbColumnName="dss_update_time" msprop:FriendlyName="dss_update_time" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="admissiondateud" msprop:DbColumnName="admissiondateud" msprop:FriendlyName="admissiondateud" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="admissiontypeud" msprop:DbColumnName="admissiontypeud" msprop:FriendlyName="admissiontypeud" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="postid" msprop:DbColumnName="postid" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="200" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="photofilename" msprop:DbColumnName="photofilename" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="500" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="secretaryud" msprop:DbColumnName="secretaryud" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="contracttype" msprop:DbColumnName="contracttype" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="jobtitle" msprop:DbColumnName="jobtitle" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="classification" msprop:DbColumnName="classification" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="rolematrixlevelud" msprop:DbColumnName="rolematrixlevelud" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="fte" msprop:DbColumnName="fte" type="xs:decimal" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint2" msprop:IsLogical="True" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_dim_fed_hierarchy_history" />
+          <xs:field xpath="dim_fed_hierarchy_history_key" />
+        </xs:unique>
+        <xs:unique name="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_dim_bill_date" />
+          <xs:field xpath="dim_bill_date_key" />
+        </xs:unique>
+        <xs:unique name="dbo_dim_employee_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_dim_employee" />
+          <xs:field xpath="dim_employee_key" />
+        </xs:unique>
+      </xs:element>
+      <xs:annotation>
+        <xs:appinfo>
+          <msdata:Relationship name="agg_kpi_monthly_rollup-dim_fed_hierarchy_history" msdata:parent="dbo_dim_fed_hierarchy_history" msdata:child="dbo_agg_kpi_monthly_rollup" msdata:parentkey="dim_fed_hierarchy_history_key" msdata:childkey="dim_fed_hierarchy_history_key" msprop:IsLogical="True" msprop:Description="" />
+          <msdata:Relationship name="dim_fed_hierarchy_history-dim_employee" msdata:parent="dbo_dim_employee" msdata:child="dbo_dim_fed_hierarchy_history" msdata:parentkey="dim_employee_key" msdata:childkey="dim_employee_key" msprop:IsLogical="True" msprop:Description="" />
+          <msdata:Relationship name="agg_kpi_monthly_rollup-dim_bill_date" msdata:parent="dbo_dim_bill_date" msdata:child="dbo_agg_kpi_monthly_rollup" msdata:parentkey="dim_bill_date_key" msdata:childkey="dim_gl_date_key" msprop:IsLogical="True" msprop:Description="" />
+        </xs:appinfo>
+      </xs:annotation>
+    </xs:schema>
+    <Red_x0020_Dw xmlns="" />
+  </Schema>
+</DataSourceView>

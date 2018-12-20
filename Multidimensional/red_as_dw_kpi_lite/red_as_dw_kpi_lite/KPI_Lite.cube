@@ -1,0 +1,3711 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>KPI_Lite</ID>
+  <Name>KPI_Lite</Name>
+  <CreatedTimestamp>2018-01-31T18:40:57.76Z</CreatedTimestamp>
+  <LastSchemaUpdate>2018-09-11T10:40:01.926667Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="12" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-7191" scrolltop="-4130" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="76" x="26696" y="9657" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="agg_kpi_monthly_rollup" left="0" top="0" logicalid="6" controlid="1" masterid="0" hint1="0" hint2="0" width="6128" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c0000f017000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_agg_kpi_monthly_rollup" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="dim_fed_hierarchy_history" left="174" top="7400" logicalid="7" controlid="2" masterid="0" hint1="0" hint2="0" width="5779" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c00009316000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_fed_hierarchy_history" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="dim_bill_date" left="8528" top="0" logicalid="8" controlid="3" masterid="0" hint1="0" hint2="0" width="4839" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c0000e712000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_bill_date" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="2664" top="4700" logicalid="9" controlid="4" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[agg_kpi_monthly_rollup-dim_fed_hierarchy_history]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="1" sourceattachpoint="10" destattachpoint="11" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="3063" y="7400" />
+              <point x="3063" y="6200" />
+              <point x="3064" y="6200" />
+              <point x="3064" y="5000" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="5828" top="-99" logicalid="10" controlid="5" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[agg_kpi_monthly_rollup-dim_bill_date]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="1" sourceattachpoint="18" destattachpoint="23" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="8528" y="300" />
+              <point x="6128" y="300" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-7191</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-4130</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>76</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>2018-12-17T02:25:47.753333Z</LastProcessed>
+  <State>Processed</State>
+  <Language>2057</Language>
+  <Collation>Latin1_General_CI_AS</Collation>
+  <Dimensions>
+    <Dimension>
+      <ID>Dim Bill Date</ID>
+      <Name>Dim Bill Date</Name>
+      <DimensionID>Dim Bill Date</DimensionID>
+      <Attributes>
+        <Attribute>
+          <AttributeID>Dim Bill Date Key</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Bill Cal Month</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Bill Cal Quarter</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Bill Cal Year</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Bill Fin Period</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Bill Fin Year</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Bill Fin Quarter</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Remaining Working Days</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Current Fin Month</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy>
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+        <Hierarchy>
+          <HierarchyID>Hierarchy 1</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension>
+      <ID>Dim Fed Hierarchy History</ID>
+      <Name>Dim Fed Hierarchy History</Name>
+      <DimensionID>Dim Fed Hierarchy History</DimensionID>
+      <Attributes>
+        <Attribute>
+          <AttributeID>Dim Fed Hierarchy History Key</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Fed Code</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Display Name</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Hierarchylevel1hist</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Hierarchylevel2hist</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Hierarchylevel3hist</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Hierarchylevel4hist</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Hierarchylevel5hist</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Hierarchylevel6hist</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Fed Hierarchy Business Key</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Jobtitle</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Dim Employee Key</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Levelidud</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Reportingbcmname</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Hierarchylevel2hist Pre Francis</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Hierarchylevel3hist Pre Francis</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Hierarchylevel4hist Pre Francis</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Hierarchylevel5hist Pre Francis</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Hierarchylevel6hist Pre Francis</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Display Name 1</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Windowsusername</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Fte</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Latest Hierarchy Flag</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy>
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+        <Hierarchy>
+          <HierarchyID>Hierarchy 1</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+  </Dimensions>
+  <CubePermissions>
+    <CubePermission>
+      <ID>CubePermission</ID>
+      <Name>CubePermission</Name>
+      <CreatedTimestamp>2018-01-31T18:40:58.073333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2018-09-11T10:40:01.99Z</LastSchemaUpdate>
+      <RoleID>Role</RoleID>
+      <Read>Allowed</Read>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+  </CubePermissions>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Agg Kpi Monthly Rollup</ID>
+      <Name>Agg Kpi Monthly Rollup</Name>
+      <CreatedTimestamp>2018-01-31T18:40:57.9Z</CreatedTimestamp>
+      <LastSchemaUpdate>2018-09-11T10:40:01.96Z</LastSchemaUpdate>
+      <LastProcessed>2018-12-17T02:25:47.753333Z</LastProcessed>
+      <State>Processed</State>
+      <Measures>
+        <Measure>
+          <ID>Fed Level Tb Budget Value</ID>
+          <Name>Target Billed Hours</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>TimeBilledBudgetValue</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Monthly</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Team Level Budget Value</ID>
+          <Name>Annual Target Profit Costs - Team Level</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>team_level_budget_value</ColumnID>
+            </Source>
+          </Source>
+          <Visible>false</Visible>
+          <DisplayFolder>Annual</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Business Line Level Budget Value</ID>
+          <Name>Annual Business Line Level Budget Value</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>business_line_level_budget_value</ColumnID>
+            </Source>
+          </Source>
+          <Visible>false</Visible>
+          <DisplayFolder>Annual</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Chargeable Minutes Recorded</ID>
+          <Name>Chargeable Minutes Recorded</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <NullProcessing>Preserve</NullProcessing>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>chargeable_minutes_recorded</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Monthly</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Totalentitlementdays</ID>
+          <Name>Annual Holiday Entitlement</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>totalentitlementdays</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Cascade</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Non Chargeable Minutes</ID>
+          <Name>Non Chargeable Minutes</Name>
+          <DataType>Integer</DataType>
+          <Source>
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>non_chargeable_minutes</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Monthly</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Zero Rate Minutes Recorded</ID>
+          <Name>Zero Rate Minutes Recorded</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>zero_rate_minutes_recorded</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Monthly</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Disbursement Balance</ID>
+          <Name>Disbursement Balance</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>disbursement_balance</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Monthly</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Open Practice Management</ID>
+          <Name>Matters Outstanding</Name>
+          <DataType>Integer</DataType>
+          <Source>
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>open_practice_management</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Monthly</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Profit Costs</ID>
+          <Name>Profit Costs</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <NullProcessing>ZeroOrBlank</NullProcessing>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>ProfitCosts</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Monthly</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Target Profit Costs</ID>
+          <Name>Target Profit Costs</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>Target_x0020_Profit_x0020_Costs_x0020__x0028_Budget_x0020_Balanced_x0029_</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Monthly</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Target Hours</ID>
+          <Name>Target Chargeable Hours</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>TargetHours</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Monthly</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Zero Rate Hours Recorded</ID>
+          <Name>Zero Rate Hours Recorded</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>Zero_x0020_Rate_x0020_Hours_x0020_Recorded</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Monthly</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Billed Minutes Recorded</ID>
+          <Name>Billed Minutes Recorded</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>billed_minutes_recorded</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Monthly</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Billed Hours Recorded</ID>
+          <Name>Billed Hours Recorded</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>Billed_x0020_Hours_x0020_Recorded</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Monthly</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Durationdays</ID>
+          <Name>Holidays Taken</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>durationdays</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Cascade</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Non Chargeable Hours</ID>
+          <Name>Non Chargeable Hours</Name>
+          <DataType>Integer</DataType>
+          <Source>
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>Non_x0020_Chargeable_x0020_Hours</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Monthly</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Closed Practice Management</ID>
+          <Name>Matters Settled</Name>
+          <DataType>Integer</DataType>
+          <Source>
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>closed_practice_management</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Monthly</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Springboard Minutes Recorded</ID>
+          <Name>Springboard Minutes Recorded</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>springboard_minutes_recorded</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Monthly</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Operational Minutes Recorded</ID>
+          <Name>Operational Minutes Recorded</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>operational_minutes_recorded</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Monthly</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Springboard Hours Recorded</ID>
+          <Name>Springboard Hours Recorded</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>SpringboardHoursRecorded</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Monthly</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Operational Hours Recorded</ID>
+          <Name>Operational Hours Recorded</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>OperationalHoursRecorded</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Monthly</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Open Practice Management Month</ID>
+          <Name>Matters Opened</Name>
+          <DataType>Integer</DataType>
+          <Source>
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>open_practice_management_month</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Monthly</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Closed Practice Management Month</ID>
+          <Name>Matters Closed</Name>
+          <DataType>Integer</DataType>
+          <Source>
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>closed_practice_management_month</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Monthly</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Open Practice Management Fin Ytd</ID>
+          <Name>YTD Matters Opened</Name>
+          <DataType>Integer</DataType>
+          <Source>
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>open_practice_management_fin_ytd</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>YTD</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Closed Practice Management Fin Ytd</ID>
+          <Name>YTD Matters Closed</Name>
+          <DataType>Integer</DataType>
+          <Source>
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>closed_practice_management_fin_ytd</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>YTD</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Wip Value</ID>
+          <Name>Wip Value</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>wip_value</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Monthly</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Business Line Costs Ytd</ID>
+          <Name>Business Line Costs Ytd</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>business_line_costs_ytd</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>YTD</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Business Line Budget Costs</ID>
+          <Name>Business Line Budget Costs</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>business_line_budget_costs</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>YTD</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Practice Area Costs Ytd</ID>
+          <Name>Practice Area Costs Ytd</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>practice_area_costs_ytd</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>YTD</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Practice Area Budget Costs</ID>
+          <Name>Practice Area Budget Costs</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>practice_area_budget_costs</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>YTD</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Team Costs Ytd</ID>
+          <Name>Team Costs Ytd</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>team_costs_ytd</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>YTD</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Team Budget Costs</ID>
+          <Name>Team Budget Costs</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>team_budget_costs</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>YTD</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Non Billable Minutes</ID>
+          <Name>Non Billable Minutes</Name>
+          <DataType>Integer</DataType>
+          <Source>
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>non_billable_minutes</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Monthly</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Non Billable Hours</ID>
+          <Name>Non Billable Hours</Name>
+          <DataType>Integer</DataType>
+          <Source>
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>Non_x0020_Billable_x0020_Hours</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Monthly</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Remaining Working Days</ID>
+          <Name>Remaining Working Days</Name>
+          <DataType>Integer</DataType>
+          <Source>
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>remaining_working_days</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Cascade</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Remaining Fte Working Days</ID>
+          <Name>Remaining Fte Working Days</Name>
+          <DataType>Integer</DataType>
+          <Source>
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>remaining_fte_working_days</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Cascade</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Billable Minutes Recorded</ID>
+          <Name>Billable Minutes Recorded</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <NullProcessing>Preserve</NullProcessing>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>billable_minutes_recorded</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Monthly</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Zero Rate Billable Minutes Recorded</ID>
+          <Name>Zero Rate Billable Minutes Recorded</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>zero_rate_billable_minutes_recorded</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Monthly</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Billable Hours Recorded</ID>
+          <Name>Billable Hours Recorded</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>billable_hours_recorded</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Monthly</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Zero Rate Billable Hours Recorded</ID>
+          <Name>Zero Rate Billable Hours Recorded</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>zero_rate_billable_hours_recorded</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Monthly</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Fed Level Budget Value</ID>
+          <Name>Fed Level Budget Value</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>fed_level_budget_value</ColumnID>
+            </Source>
+          </Source>
+          <Visible>false</Visible>
+          <DisplayFolder>Monthly</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Wip Over 90 Days</ID>
+          <Name>Wip Over 90 Days</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>wip_over_90_days</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Monthly</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Cr Amount</ID>
+          <Name>Credit Note Amount</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>cr_amount</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Monthly</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Work Amt Woff</ID>
+          <Name>WIP Write Off Value</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>work_amt_woff</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Monthly</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Bill Amt Woff</ID>
+          <Name>Bill Write Off Value</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>bill_amt_woff</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Monthly</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Unpaid Bill Balance</ID>
+          <Name>Unpaid Bill Balance</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>unpaid_bill_balance</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Monthly</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Credit Note Count</ID>
+          <Name>Credit Note Count</Name>
+          <DataType>Integer</DataType>
+          <Source>
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>credit_note_count</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure>
+          <ID>Bill Count</ID>
+          <Name>Bill Count</Name>
+          <DataType>Integer</DataType>
+          <Source>
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>bill_count</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure>
+          <ID>Write Off Hrs</ID>
+          <Name>WIP Write Off Hrs</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>write_off_hrs</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure>
+          <ID>Bill Hrs Woff</ID>
+          <Name>Bill Write Off Hrs</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>bill_hrs_woff</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure>
+          <ID>Days Year To Date</ID>
+          <Name>YTD Holidays Taken</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>days_year_to_date</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Cascade</DisplayFolder>
+        </Measure>
+        <Measure>
+          <ID>Remaining Fte Working Days Year</ID>
+          <Name>Remaining Fte Working Days Year</Name>
+          <DataType>Integer</DataType>
+          <Source>
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>remaining_fte_working_days_year</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure>
+          <ID>Wip Value Matter Owner</ID>
+          <Name>Wip Value Matter Owner</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>wip_value_matter_owner</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure>
+          <ID>Wip Over 90 Days Matter Owner</ID>
+          <Name>Wip Over 90 Days Matter Owner</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>wip_over_90_days_matter_owner</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure>
+          <ID>Target Profit Costs  Budget Balanced</ID>
+          <Name>TPCBB</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+              <ColumnID>Target_x0020_Profit_x0020_Costs_x0020__x0028_Budget_x0020_Balanced_x0029_</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <EstimatedRows>162863</EstimatedRows>
+      <EstimatedSize>66026531</EstimatedSize>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension">
+          <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>Dim Fed Hierarchy History Key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+                    <ColumnID>dim_fed_hierarchy_history_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Fed Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Collation>Latin1_General_CS_AS</Collation>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>fed_code</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Display Name</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>100</DataSize>
+                  <Collation>Latin1_General_CS_AS</Collation>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>display_name</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel6hist</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel5hist</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel4hist</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel3hist</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel2hist</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel1hist</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Hierarchylevel1hist</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel1hist</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Hierarchylevel2hist</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel2hist</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel1hist</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Hierarchylevel3hist</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel3hist</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel2hist</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel1hist</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Hierarchylevel4hist</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel4hist</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel3hist</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel2hist</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel1hist</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Hierarchylevel5hist</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel5hist</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel4hist</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel3hist</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel2hist</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel1hist</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Hierarchylevel6hist</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel6hist</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel5hist</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel4hist</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel3hist</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel2hist</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel1hist</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Fed Hierarchy Business Key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>1000</DataSize>
+                  <Collation>Latin1_General_CS_AS</Collation>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>fed_hierarchy_business_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Jobtitle</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>100</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>jobtitle</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Dim Employee Key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>dim_employee_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Levelidud</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_employee</TableID>
+                    <ColumnID>levelidud</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Reportingbcmname</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>100</DataSize>
+                  <Collation>Latin1_General_CS_AS</Collation>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>reportingbcmname</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel1hist_pre_francis</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Hierarchylevel2hist Pre Francis</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel2hist_pre_francis</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel1hist_pre_francis</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Hierarchylevel3hist Pre Francis</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel3hist_pre_francis</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel2hist_pre_francis</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel1hist_pre_francis</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Hierarchylevel4hist Pre Francis</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel4hist_pre_francis</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel3hist_pre_francis</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel2hist_pre_francis</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel1hist_pre_francis</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Hierarchylevel5hist Pre Francis</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel5hist_pre_francis</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel4hist_pre_francis</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel3hist_pre_francis</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel2hist_pre_francis</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel1hist_pre_francis</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Hierarchylevel6hist Pre Francis</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel6hist_pre_francis</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel5hist_pre_francis</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel4hist_pre_francis</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel3hist_pre_francis</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel2hist_pre_francis</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel1hist_pre_francis</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Display Name 1</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>100</DataSize>
+                  <Collation>Latin1_General_CS_AS_WS</Collation>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>display_name</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel6hist_pre_francis</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel5hist_pre_francis</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel4hist_pre_francis</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel3hist_pre_francis</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel2hist_pre_francis</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel1hist_pre_francis</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Windowsusername</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Collation>Latin1_General_CS_AS</Collation>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>windowsusername</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Fte</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Double</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_employee</TableID>
+                    <ColumnID>fte</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Latest Hierarchy Flag</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>1</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_fed_hierarchy_history</TableID>
+                    <ColumnID>latest_hierarchy_flag</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension">
+          <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>Dim Bill Date Key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+                    <ColumnID>dim_gl_date_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Bill Cal Month</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_bill_date</TableID>
+                    <ColumnID>bill_cal_month</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Bill Cal Quarter</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_bill_date</TableID>
+                    <ColumnID>bill_cal_quarter</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Bill Cal Year</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_bill_date</TableID>
+                    <ColumnID>bill_cal_year</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Bill Fin Period</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>20</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_bill_date</TableID>
+                    <ColumnID>bill_fin_period</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Bill Fin Year</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_bill_date</TableID>
+                    <ColumnID>bill_fin_year</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Bill Fin Quarter</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>7</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_bill_date</TableID>
+                    <ColumnID>bill_fin_quarter</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Remaining Working Days</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_bill_date</TableID>
+                    <ColumnID>remaining_working_days</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Current Fin Month</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>8</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_dim_bill_date</TableID>
+                    <ColumnID>current_fin_month</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions>
+        <Partition>
+          <ID>Agg Kpi Monthly Rollup</ID>
+          <Name>Agg Kpi Monthly Rollup</Name>
+          <CreatedTimestamp>2018-01-31T18:40:58.01Z</CreatedTimestamp>
+          <LastSchemaUpdate>2018-09-11T10:40:01.976667Z</LastSchemaUpdate>
+          <LastProcessed>2018-12-17T02:25:47.753333Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="DsvTableBinding">
+            <DataSourceViewID>Red Dw</DataSourceViewID>
+            <TableID>dbo_agg_kpi_monthly_rollup</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching>
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <AggregationStorage>MolapOnly</AggregationStorage>
+            <Source xsi:type="ProactiveCachingInheritedBinding">
+              <NotificationTechnique>Server</NotificationTechnique>
+            </Source>
+          </ProactiveCaching>
+          <EstimatedSize>66026531</EstimatedSize>
+          <EstimatedRows>162863</EstimatedRows>
+        </Partition>
+      </Partitions>
+      <AggregationDesigns>
+        <AggregationDesign>
+          <ID>AggregationDesign</ID>
+          <Name>AggregationDesign</Name>
+          <CreatedTimestamp>2018-01-31T18:40:57.946667Z</CreatedTimestamp>
+          <LastSchemaUpdate>2018-09-11T10:40:01.96Z</LastSchemaUpdate>
+          <EstimatedRows>162863</EstimatedRows>
+          <Dimensions>
+            <Dimension>
+              <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Dim Fed Hierarchy History Key</AttributeID>
+                  <EstimatedCount>25716</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Fed Code</AttributeID>
+                  <EstimatedCount>3679</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Display Name</AttributeID>
+                  <EstimatedCount>6720</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Hierarchylevel1hist</AttributeID>
+                  <EstimatedCount>2</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Hierarchylevel2hist</AttributeID>
+                  <EstimatedCount>10</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Hierarchylevel3hist</AttributeID>
+                  <EstimatedCount>90</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Hierarchylevel4hist</AttributeID>
+                  <EstimatedCount>508</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Hierarchylevel5hist</AttributeID>
+                  <EstimatedCount>660</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Hierarchylevel6hist</AttributeID>
+                  <EstimatedCount>660</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Fed Hierarchy Business Key</AttributeID>
+                  <EstimatedCount>4282</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Jobtitle</AttributeID>
+                  <EstimatedCount>316</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Dim Employee Key</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Levelidud</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Reportingbcmname</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Hierarchylevel2hist Pre Francis</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Hierarchylevel3hist Pre Francis</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Hierarchylevel4hist Pre Francis</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Hierarchylevel5hist Pre Francis</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Hierarchylevel6hist Pre Francis</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Display Name 1</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Windowsusername</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Fte</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Latest Hierarchy Flag</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Dim Bill Date Key</AttributeID>
+                  <EstimatedCount>21632</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Bill Cal Month</AttributeID>
+                  <EstimatedCount>713</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Bill Cal Quarter</AttributeID>
+                  <EstimatedCount>238</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Bill Cal Year</AttributeID>
+                  <EstimatedCount>61</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Bill Fin Period</AttributeID>
+                  <EstimatedCount>711</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Bill Fin Year</AttributeID>
+                  <EstimatedCount>61</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Bill Fin Quarter</AttributeID>
+                  <EstimatedCount>239</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Remaining Working Days</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Current Fin Month</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+          </Dimensions>
+          <Aggregations>
+            <Aggregation>
+              <ID>Aggregation 0</ID>
+              <Name>Aggregation 0</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel2hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Fin Period</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1</ID>
+              <Name>Aggregation 1</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel2hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Cal Month</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 2</ID>
+              <Name>Aggregation 2</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel5hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 3</ID>
+              <Name>Aggregation 3</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel2hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 4</ID>
+              <Name>Aggregation 4</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel3hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Cal Quarter</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 5</ID>
+              <Name>Aggregation 5</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel3hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Fin Quarter</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 6</ID>
+              <Name>Aggregation 6</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Fed Hierarchy History Key</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 7</ID>
+              <Name>Aggregation 7</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel3hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 8</ID>
+              <Name>Aggregation 8</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Fin Year</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Bill Cal Quarter</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 9</ID>
+              <Name>Aggregation 9</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Fin Quarter</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Bill Cal Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation a</ID>
+              <Name>Aggregation a</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation b</ID>
+              <Name>Aggregation b</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Fin Period</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation c</ID>
+              <Name>Aggregation c</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Cal Month</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation d</ID>
+              <Name>Aggregation d</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel2hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Fin Year</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Bill Cal Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation e</ID>
+              <Name>Aggregation e</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel5hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Cal Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation f</ID>
+              <Name>Aggregation f</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel5hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Fin Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 10</ID>
+              <Name>Aggregation 10</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel2hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Fin Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 11</ID>
+              <Name>Aggregation 11</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Fin Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 12</ID>
+              <Name>Aggregation 12</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel3hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Fin Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 13</ID>
+              <Name>Aggregation 13</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel2hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Cal Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 14</ID>
+              <Name>Aggregation 14</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Cal Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 15</ID>
+              <Name>Aggregation 15</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel3hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Cal Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 16</ID>
+              <Name>Aggregation 16</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Fin Year</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Bill Cal Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 17</ID>
+              <Name>Aggregation 17</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Fin Period</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Bill Cal Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 18</ID>
+              <Name>Aggregation 18</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Fin Year</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Bill Cal Month</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 19</ID>
+              <Name>Aggregation 19</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Display Name</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1a</ID>
+              <Name>Aggregation 1a</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Fin Quarter</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Bill Cal Quarter</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1b</ID>
+              <Name>Aggregation 1b</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Cal Quarter</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1c</ID>
+              <Name>Aggregation 1c</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel2hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Cal Quarter</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1d</ID>
+              <Name>Aggregation 1d</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Fin Quarter</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1e</ID>
+              <Name>Aggregation 1e</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel2hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Fin Quarter</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1f</ID>
+              <Name>Aggregation 1f</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Cal Quarter</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 20</ID>
+              <Name>Aggregation 20</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Fin Quarter</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 21</ID>
+              <Name>Aggregation 21</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Fin Period</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 22</ID>
+              <Name>Aggregation 22</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Cal Month</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 23</ID>
+              <Name>Aggregation 23</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 24</ID>
+              <Name>Aggregation 24</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Fin Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 25</ID>
+              <Name>Aggregation 25</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Cal Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 26</ID>
+              <Name>Aggregation 26</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Fin Year</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Bill Cal Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 27</ID>
+              <Name>Aggregation 27</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Fin Year</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Bill Cal Quarter</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 28</ID>
+              <Name>Aggregation 28</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Fin Quarter</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Bill Cal Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 29</ID>
+              <Name>Aggregation 29</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel4hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 2a</ID>
+              <Name>Aggregation 2a</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel4hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Fin Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 2b</ID>
+              <Name>Aggregation 2b</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel4hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Bill Cal Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+          </Aggregations>
+        </AggregationDesign>
+      </AggregationDesigns>
+      <ProactiveCaching>
+        <SilenceInterval>-PT1S</SilenceInterval>
+        <Latency>-PT1S</Latency>
+        <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+        <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+        <Source xsi:type="ProactiveCachingInheritedBinding" />
+      </ProactiveCaching>
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source>
+    <DataSourceViewID>Red Dw</DataSourceViewID>
+  </Source>
+  <MdxScripts>
+    <MdxScript>
+      <ID>MdxScript</ID>
+      <Name>MdxScript</Name>
+      <CreatedTimestamp>2018-01-31T18:40:58.043333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2018-09-11T10:40:01.99Z</LastSchemaUpdate>
+      <Commands>
+        <Command>
+          <Text>/*
+                The CALCULATE command controls the aggregation of leaf cells in the cube.
+                If the CALCULATE command is deleted or modified, the data within the cube is affected.
+                You should edit this command only if you manually specify how the cube is aggregated.
+                */
+                CALCULATE;                  
+CREATE MEMBER CURRENTCUBE.[Measures].[Billable Chargeable Minutes Recorded Difference]
+ AS [Measures].[Billable Minutes Recorded] - [Measures].[Chargeable Minutes Recorded], 
+VISIBLE = 1;                                                                           
+                CREATE MEMBER CURRENTCUBE.[Measures].[YTD Target Billed Hours]
+ AS sum(
+                YTD([Dim Bill Date].[Hierarchy].CurrentMember),
+                Measures.[Target Billed Hours]
+                ), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';        
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD WIP Write Off Value]
+ AS sum(
+                YTD([Dim Bill Date].[Hierarchy].CurrentMember),
+                Measures.[WIP Write Off Value]
+                ), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';        
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Bill Write Off Value]
+ AS sum(
+                YTD([Dim Bill Date].[Hierarchy].CurrentMember),
+                Measures.[Bill Write Off Value]
+                ),
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';        
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD WIP Write Off Hrs]
+ AS sum(
+                YTD([Dim Bill Date].[Hierarchy].CurrentMember),
+                Measures.[WIP Write Off Hrs]
+                ), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';        
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Bill Write Off Hrs]
+ AS sum(
+                YTD([Dim Bill Date].[Hierarchy].CurrentMember),
+                Measures.[Bill Write Off Hrs]
+                ),  
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';        
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Credit Note Amount]
+ AS sum(
+                YTD([Dim Bill Date].[Hierarchy].CurrentMember),
+                Measures.[Credit Note Amount]
+                ), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                           
+
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[YTD Profit Costs]
+ AS sum(
+                YTD([Dim Bill Date].[Hierarchy].CurrentMember),
+                Measures.[Profit Costs]
+                ), 
+NON_EMPTY_BEHAVIOR = [Profit Costs], 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                           
+
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[YTD Chargeable Minutes]
+                AS sum(
+                YTD([Dim Bill Date].[Hierarchy].CurrentMember),
+                Measures.[Chargeable Minutes Recorded]
+                ),
+                non_empty_behavior = [Chargeable Minutes Recorded],
+                VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                   
+
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[YTD Billable Minutes]
+                AS sum(
+                YTD([Dim Bill Date].[Hierarchy].CurrentMember),
+                Measures.[Billable Minutes Recorded]
+                ),
+                non_empty_behavior = [Billable Minutes Recorded],
+                VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                           
+
+
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Non Chargeable Hours]
+ AS sum(
+                YTD([Dim Bill Date].[Hierarchy].CurrentMember),
+                Measures.[Non Chargeable Hours]
+                ), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                        
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Non Billable Hours]
+ AS sum(
+                YTD([Dim Bill Date].[Hierarchy].CurrentMember),
+                Measures.[Non Billable Hours]
+                ), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                           
+
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[YTD Target Chargeable Hours]
+ AS sum(
+                YTD([Dim Bill Date].[Hierarchy].CurrentMember),
+                Measures.[Target Chargeable Hours]
+                ), 
+NON_EMPTY_BEHAVIOR = { [Target Chargeable Hours] }, 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                           
+                
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[YTD Non Chargeable Minutes]
+ AS sum(
+                ytd(
+                [Dim Bill Date].[Hierarchy].CurrentMember),
+                Measures.[Non Chargeable Minutes]
+                ), 
+NON_EMPTY_BEHAVIOR = [Non Chargeable Minutes], 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                        
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Non Billable Minutes]
+ AS sum(
+                ytd(
+                [Dim Bill Date].[Hierarchy].CurrentMember),
+                Measures.[Non Billable Minutes]
+                ), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                           
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[YTD Billed Minutes Recorded]
+ AS sum(
+                ytd(
+                [Dim Bill Date].[Hierarchy].CurrentMember),
+                Measures.[Billed Minutes Recorded]
+                ), 
+NON_EMPTY_BEHAVIOR = [Billed Minutes Recorded], 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                              
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[YTD Billed Hours Recorded]
+ AS sum(
+                ytd(
+                [Dim Bill Date].[Hierarchy].CurrentMember),
+                Measures.[Billed Hours Recorded]
+                ), 
+NON_EMPTY_BEHAVIOR = [Billed Hours Recorded], 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                           
+
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[YTD Target Recovery Rate]
+ AS iif([Measures].[YTD Target Billed Hours] = 0, null, [Measures].[YTD Target Profit Costs (Budget Balanced)] / [Measures].[YTD Target Billed Hours]), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                              
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[YTD Recovery Rate]
+ AS iif([Measures].[YTD Billed Hours Recorded] = 0, null, [Measures].[YTD Profit Costs] / [Measures].[YTD Billed Hours Recorded]), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                           
+                
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[YTD Target Profit Costs - Team Level]
+ AS sum(
+                ytd(
+                [Dim Bill Date].[Hierarchy].CurrentMember),
+                Measures.[Target Profit Costs - Team Level]
+                ), 
+VISIBLE = 0 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                           
+                
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[YTD Budget Balance (Calculation Measure)]
+ AS sum(
+                ytd(
+                [Dim Bill Date].[Hierarchy].CurrentMember),
+                Measures.[Budget Balance (Calculation Measure)]
+                ), 
+VISIBLE = 0 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                           
+                
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[YTD Target Profit Costs]
+ AS sum(
+                ytd(
+                [Dim Bill Date].[Hierarchy].CurrentMember),
+                Measures.[Target Profit Costs]
+                ), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                            
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Springboard Hours Recorded]
+ AS sum(
+                ytd(
+                [Dim Bill Date].[Hierarchy].CurrentMember),
+                Measures.[Springboard Hours Recorded]
+                ), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                           
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Springboard Minutes Recorded]
+ AS sum(
+                ytd(
+                [Dim Bill Date].[Hierarchy].CurrentMember),
+                Measures.[Springboard Minutes Recorded]
+                ), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                            
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Operational Hours Recorded]
+ AS sum(
+                ytd(
+                [Dim Bill Date].[Hierarchy].CurrentMember),
+                Measures.[Operational Hours Recorded]
+                ), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                           
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Operational Minutes Recorded]
+ AS sum(
+                ytd(
+                [Dim Bill Date].[Hierarchy].CurrentMember),
+                Measures.[Operational Minutes Recorded]
+                ), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                           
+
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[YTD Budget Balance]
+ AS sum(
+                YTD(
+                [Dim Bill Date].[Hierarchy].CurrentMember),
+                Measures.[Budget Balance]
+                ), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                
+
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Holiday Entitlement Remaining]
+ AS [Measures].[Annual Holiday Entitlement] - [Measures].[YTD Holidays Taken],
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Cascade' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                
+
+
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Business Line Level Budget Value]
+ AS sum(
+                YTD(
+                [Dim Bill Date].[Hierarchy].CurrentMember),
+                Measures.[Business Line Level Budget Value]
+                ), 
+VISIBLE = 0 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                 
+
+
+               CREATE MEMBER CURRENTCUBE.[Measures].[YTD Zero Rate Hours Recorded]
+ AS sum(     ytd(
+                              [Dim Bill Date].[Hierarchy].currentmember),
+                              [Measures].[Zero Rate Hours Recorded]
+                           ), 
+NON_EMPTY_BEHAVIOR = [Zero Rate Minutes Recorded], 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                     
+
+
+               CREATE MEMBER CURRENTCUBE.[Measures].[YTD Zero Rate Billable Hours Recorded]
+ AS sum(     ytd(
+                              [Dim Bill Date].[Hierarchy].currentmember),
+                              [Measures].[Zero Rate Billable Hours Recorded]
+                           ), 
+NON_EMPTY_BEHAVIOR = [Zero Rate Billable Minutes Recorded], 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                  
+
+
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[YTD Chargeable Hours]
+ AS [Measures].[YTD Chargeable Minutes] / 60, 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                           
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[YTD Billable Hours]
+ AS [Measures].[YTD Billable Minutes] / 60, 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                           
+
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[YTD Target Profit Costs (Budget Balanced)]
+ AS sum (
+                YTD (
+                [Dim Bill Date].[Hierarchy].CurrentMember),
+                Measures.[Target Profit Costs (Budget Balanced)]
+                ), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                 
+
+  
+                CREATE MEMBER CURRENTCUBE.[Measures].[YTD Percentage of YTD Chargeable Hours Target Achieved]
+ AS iif(([Measures].[YTD Chargeable Hours] = 0 and [Measures].[YTD Target Chargeable Hours] = 0) or [Measures].[YTD Target Chargeable Hours] = 0, null,
+                [Measures].[YTD Chargeable Hours] / [Measures].[YTD Target Chargeable Hours]
+                ), 
+FORMAT_STRING = "#,##0.00;-#,##0.00", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                   
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[YTD Percentage of YTD Billable Hours Target Achieved]
+ AS iif(([Measures].[YTD Billable Hours] = 0 and [Measures].[YTD Target Chargeable Hours] = 0) or [Measures].[YTD Target Chargeable Hours] = 0, null,
+                [Measures].[YTD Billable Hours] / [Measures].[YTD Target Chargeable Hours]
+                ), 
+FORMAT_STRING = "#,##0.00;-#,##0.00", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                   
+
+
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[YTD Percentage of Profit Costs Target Achieved]
+ AS iif(([Measures].[YTD Profit Costs] = 0 and [Measures].[YTD Target Profit Costs (Budget Balanced)] = 0) or [Measures].[YTD Target Profit Costs (Budget Balanced)] = 0, null,
+                [Measures].[YTD Profit Costs] / [Measures].[YTD Target Profit Costs (Budget Balanced)]
+                ), 
+FORMAT_STRING = "#,##0.00;-#,##0.00", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';        
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Billing Accuracy]
+ AS iif(([Measures].[YTD Credit Note Amount] = 0 and [Measures].[YTD Profit Costs] = 0) or [Measures].[YTD Profit Costs] = 0, null,
+                [Measures].[YTD Credit Note Amount] / [Measures].[YTD Profit Costs]
+                ), 
+FORMAT_STRING = "#,##0.00;-#,##0.00", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                     
+
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[YTD Percentage of Annual Profit Costs Target Achieved]
+ AS iif(([Measures].[YTD Profit Costs] = 0 and [Measures].[Annual Target Profit Costs (Budget Balanced)] = 0) or [Measures].[Annual Target Profit Costs (Budget Balanced)] = 0, null,
+                [Measures].[YTD Profit Costs] / [Measures].[Annual Target Profit Costs (Budget Balanced)]
+                ), 
+FORMAT_STRING = "#,##0.00;-#,##0.00", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                
+                   
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Percentage of Annual Chargeable Hours Target Achieved]
+ AS iif([Measures].[Annual Target Chargeable Hours] = 0, null,
+                [Measures].[YTD Chargeable Hours] / [Measures].[Annual Target Chargeable Hours]
+                ), 
+FORMAT_STRING = "#,##0.00;-#,##0.00", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                               
+
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Percentage of Annual Billable Hours Target Achieved]
+ AS iif([Measures].[Annual Target Chargeable Hours] = 0, null,
+                [Measures].[YTD Billable Hours] / [Measures].[Annual Target Chargeable Hours]
+                ), 
+FORMAT_STRING = "#,##0.00;-#,##0.00", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                               
+
+
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Chargeable Hours Remaining to Meet Annual Chargeable Hours Target]
+ AS
+                [Measures].[Annual Target Chargeable Hours] - [Measures].[YTD Chargeable Hours] 
+                ,
+FORMAT_STRING = "#,##0.00;-#,##0.00", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                               
+
+
+
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Billable Hours Remaining to Meet Annual Billable Hours Target]
+ AS
+                [Measures].[Annual Target Chargeable Hours] - [Measures].[YTD Billable Hours] 
+                ,
+FORMAT_STRING = "#,##0.00;-#,##0.00", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                               
+
+
+
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Chargeable Hours Per Day Remaining to Meet Annual Chargeable Hours Target]
+ AS iif([Measures].[Remaining Fte Working Days] = 0, null,
+                [Measures].[YTD Chargeable Hours Remaining to Meet Annual Chargeable Hours Target] / [Measures].[Remaining Fte Working Days] 
+                ), 
+FORMAT_STRING = "#,##0.00;-#,##0.00", 
+
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                               
+
+
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Billable Hours Per Day Remaining to Meet Annual Billable Hours Target]
+ AS iif([Measures].[Remaining Fte Working Days] = 0, null,
+                [Measures].[YTD Billable Hours Remaining to Meet Annual Billable Hours Target] / [Measures].[Remaining Fte Working Days] 
+                ), 
+FORMAT_STRING = "#,##0.00;-#,##0.00", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                               
+
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Chargeable Hours Per Day Remaining to Meet Annual Chargeable Hours Target (less Remaining Holiday Entitlement)]
+ AS iif([Measures].[Remaining Fte Working Days] = 0, null,
+                [Measures].[YTD Chargeable Hours Remaining to Meet Annual Chargeable Hours Target] / 
+                ([Measures].[Remaining Fte Working Days] - [Measures].[Annual Holidays Remaining])
+                ), 
+FORMAT_STRING = "#,##0.00;-#,##0.00", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Cascade' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';   
+
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Chargeable Hours Per Day Remaining to Meet Annual Chargeable Hours Target (less YTD Holiday Entitlement Remaining)]
+ AS iif([Measures].[Remaining Fte Working Days] = 0, null,
+    [Measures].[YTD Chargeable Hours Remaining to Meet Annual Chargeable Hours Target] / 
+        ([Measures].[Remaining Fte Working Days] - [Measures].[YTD Holiday Entitlement Remaining])
+        ), 
+        FORMAT_STRING = "#,##0.00;-#,##0.00", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Cascade' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                               
+
+
+
+
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Billable Hours Per Day Remaining to Meet Annual Billable Hours Target (less Remaining Holiday Entitlement)]
+ AS iif([Measures].[Remaining Fte Working Days] = 0, null,
+                [Measures].[YTD Billable Hours Remaining to Meet Annual Billable Hours Target] / ([Measures].[Remaining Fte Working Days] - [Measures].[Annual Holidays Remaining])
+                ), 
+FORMAT_STRING = "#,##0.00;-#,##0.00", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Cascade' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                               
+
+                 
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Percentage of Annual Billed Hours Target Achieved]
+ AS iif([Measures].[Annual Target Billed Hours] = 0, null,
+                [Measures].[YTD Billed Hours Recorded] / [Measures].[Annual Target Billed Hours]
+                ), 
+FORMAT_STRING = "#,##0.00;-#,##0.00", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                         
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Percentage of Billed Hours Target Achieved]
+ AS iif([Measures].[YTD Target Billed Hours] = 0, null, [Measures].[YTD Billed Hours Recorded] / [Measures].[YTD Target Billed Hours]), 
+FORMAT_STRING = "#,##0.00;-#,##0.00", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                                
+
+                
+                CREATE MEMBER CURRENTCUBE.[Measures].[Business Line Level Budget Value]
+ AS [Measures].[Annual Business Line Level Budget Value] / 12, 
+VISIBLE = 0 ,  DISPLAY_FOLDER = 'Monthly' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                       
+CREATE MEMBER CURRENTCUBE.[Measures].[Annual Holidays Taken]
+ AS sum(
+[Dim Bill Date].[Bill Fin Year].CurrentMember,
+[Measures].[Holidays Taken]
+), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Cascade' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                  
+CREATE MEMBER CURRENTCUBE.[Measures].[Annual Recovery Rate]
+ AS iif([Measures].[Annual Billed Hours Recorded] = 0, null, [Measures].[Annual Profit Costs] / [Measures].[Annual Billed Hours Recorded]), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                  
+CREATE MEMBER CURRENTCUBE.[Measures].[Annual Target Recovery Rate]
+ AS iif([Measures].[Annual Target Billed Hours] = 0, null, [Measures].[Annual Target Profit Costs (Budget Balanced)] / [Measures].[Annual Target Billed Hours]), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                   
+                
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[Annual Holidays Remaining]
+ AS iif([Measures].[Annual Holiday Entitlement] = null, null,
+ [Measures].[Annual Holiday Entitlement]  - [Measures].[Annual Holidays Taken]), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Cascade' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                           
+                
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[Annual Target Chargeable Hours]
+ AS sum(
+                ([Dim Bill Date].[Bill Fin Year].CurrentMember),
+                Measures.[Target Chargeable Hours]
+                ), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                         
+CREATE MEMBER CURRENTCUBE.[Measures].[Annual Target Billed Hours]
+ AS sum(
+                ([Dim Bill Date].[Bill Fin Year].CurrentMember),
+                Measures.[Target Billed Hours]
+                ), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                           
+
+                
+                CREATE MEMBER CURRENTCUBE.[Measures].[Annual Billed Minutes Recorded]
+ AS sum(
+                ([Dim Bill Date].[Bill Fin Year].CurrentMember),
+                Measures.[Billed Minutes Recorded]
+                ), 
+NON_EMPTY_BEHAVIOR = [Billed Minutes Recorded], 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                  
+
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Annual Percentage of Chargeable Hours Target Achieved]
+ AS iif([Measures].[Annual Target Chargeable Hours] = 0, null, [Measures].[Annual Chargeable Hours] / [Measures].[Annual Target Chargeable Hours]), 
+FORMAT_STRING = "#,##0.00;-#,##0.00", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                     
+
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Annual Percentage of Billable Hours Target Achieved]
+ AS iif([Measures].[Annual Target Chargeable Hours] = 0, null, [Measures].[Annual Billable Hours] / [Measures].[Annual Target Chargeable Hours]), 
+FORMAT_STRING = "#,##0.00;-#,##0.00", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                     
+
+
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[Annual Billed Hours Recorded]
+ AS sum(
+                ([Dim Bill Date].[Bill Fin Year].CurrentMember),
+                Measures.[Billed Hours Recorded]
+                ), 
+NON_EMPTY_BEHAVIOR = [Billed Hours Recorded], 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                           
+
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[Annual Target Profit Costs]
+ AS sum(
+                ([Dim Bill Date].[Bill Fin Year].CurrentMember),
+                Measures.[Target Profit Costs]
+                ), 
+NON_EMPTY_BEHAVIOR = [Target Profit Costs], 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                           
+
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[Annual Profit Costs]
+ AS sum(
+                ([Dim Bill Date].[Bill Fin Year].CurrentMember),
+                Measures.[Profit Costs]
+                ), 
+NON_EMPTY_BEHAVIOR = [Profit Costs], 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                            
+CREATE MEMBER CURRENTCUBE.[Measures].[Annual Operational Hours Recorded]
+ AS sum(
+                ([Dim Bill Date].[Bill Fin Year].CurrentMember),
+                Measures.[Operational Hours Recorded]
+                ), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                           
+CREATE MEMBER CURRENTCUBE.[Measures].[Annual Operational Minutes Recorded]
+ AS sum(
+                ([Dim Bill Date].[Bill Fin Year].CurrentMember),
+                Measures.[Operational Minutes Recorded]
+                ), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                            
+CREATE MEMBER CURRENTCUBE.[Measures].[Annual Springboard Hours Recorded]
+ AS sum(
+                ([Dim Bill Date].[Bill Fin Year].CurrentMember),
+                Measures.[Springboard Hours Recorded]
+                ), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                           
+CREATE MEMBER CURRENTCUBE.[Measures].[Annual Springboard Minutes Recorded]
+ AS sum(
+                ([Dim Bill Date].[Bill Fin Year].CurrentMember),
+                Measures.[Springboard Minutes Recorded]
+                ), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                 
+CREATE MEMBER CURRENTCUBE.[Measures].[Annual Non Chargeable Hours]
+ AS sum(
+                ([Dim Bill Date].[Bill Fin Year].CurrentMember),
+                Measures.[Non Chargeable Hours]
+                ), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                        
+CREATE MEMBER CURRENTCUBE.[Measures].[Annual Non Billable Hours]
+ AS sum(
+                ([Dim Bill Date].[Bill Fin Year].CurrentMember),
+                Measures.[Non Billable Hours]
+                ), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                     
+                
+                CREATE MEMBER CURRENTCUBE.[Measures].[Annual Chargeable Hours]
+ AS sum(
+                ([Dim Bill Date].[Bill Fin Year].CurrentMember),
+                Measures.[YTD Chargeable Hours]
+                ), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                     
+
+
+               CREATE MEMBER CURRENTCUBE.[Measures].[Annual Billable Hours]
+ AS sum(
+                ([Dim Bill Date].[Bill Fin Year].CurrentMember),
+                Measures.[YTD Billable Hours]
+                ), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                     
+
+
+
+
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[Annual Percentage of Profit Costs Target Achieved]
+ AS iif(([Measures].[Annual Profit Costs] = 0 and [Measures].[Annual Target Profit Costs (Budget Balanced)] = 0) or [Measures].[Annual Target Profit Costs (Budget Balanced)] = 0, null,
+                [Measures].[Annual Profit Costs] / [Measures].[Annual Target Profit Costs (Budget Balanced)]
+                ), 
+FORMAT_STRING = "#,##0.00;-#,##0.00", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                   
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[Annual Chargeable Minutes]
+ AS Measures.[Annual Chargeable Hours] / 60, 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                 
+
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[Annual Billable Minutes]
+ AS Measures.[Annual Billable Hours] / 60, 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                 
+
+
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Annual Average Billable Hours]
+ AS iif([Measures].[YTD Target Chargeable Hours] = 0, null, 
+    (avg([Measures].[YTD Billable Hours]) / avg([Measures].[YTD Target Chargeable Hours])) * 
+        avg([Measures].[Annual Target Chargeable Hours])
+        ), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                   
+
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Annual Average Chargeable Hours]
+ AS iif([Measures].[YTD Target Chargeable Hours] = 0, null, 
+    (avg([Measures].[YTD Chargeable Hours]) / avg([Measures].[YTD Target Chargeable Hours])) * 
+        avg([Measures].[Annual Target Chargeable Hours])
+        ), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                   
+
+
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[Annual Budget Balance (Calculation Measure)]
+ AS iif([Dim Fed Hierarchy History].[Hierarchy].CurrentMember.Level.Name = "Display Name"
+ or [Dim Fed Hierarchy History].[Fed Hierarchy Business Key].CurrentMember.Level.Name = "Fed Hierarchy Business Key"
+ or [Dim Fed Hierarchy History].[Fed Code].CurrentMember.Level.Name = "Fed Code",
+                        null,
+                  [Annual Target Profit Costs - Team Level] - [Annual Target Profit Costs]), 
+NON_EMPTY_BEHAVIOR = [Target Profit Costs], 
+VISIBLE = 0 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                           
+
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[Annual Budget Balance]
+ AS IIF(
+             EXISTS(
+                    {NULL :
+                     [Dim Bill Date].[Hierarchy].[Bill Fin Period].[2017-12 (Apr-2017)]},
+                     [Dim Bill Date].[Hierarchy].CurrentMember 
+                   ).Count = 1
+            , iif([Dim Fed Hierarchy History].[Hierarchy].CurrentMember.Level.Name = "Business Line",
+                [Measures].[Annual Business Line Level Budget Value],
+                [Measures].[Annual Budget Balance (Calculation Measure)]
+                )
+            , 
+case when [Dim Fed Hierarchy History].[Hierarchy].CurrentMember.Name = "Budget Balance" then 
+ sum(
+                ([Dim Bill Date].[Bill Fin Year].CurrentMember),
+                Measures.[Budget Balance]
+   )
+else 0
+end
+
+
+           ), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                           
+                
+                CREATE MEMBER CURRENTCUBE.[Measures].[Percentage of Chargeable Hours Target Achieved]
+ AS iif([Measures].[Target Chargeable Hours] = 0, null, [Measures].[Chargeable Hours Recorded] / [Measures].[Target Chargeable Hours]), 
+FORMAT_STRING = "#,##0.00;-#,##0.00", 
+NON_EMPTY_BEHAVIOR = { [Target Chargeable Hours] }, 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Monthly' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                 
+
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[Percentage of Billable Hours Target Achieved]
+ AS iif([Measures].[Target Chargeable Hours] = 0, null, [Measures].[Billable Hours Recorded] / [Measures].[Target Chargeable Hours]), 
+FORMAT_STRING = "#,##0.00;-#,##0.00", 
+NON_EMPTY_BEHAVIOR = { [Target Chargeable Hours] }, 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Monthly' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                 
+
+
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[Chargeable Hours Recorded]
+ AS sum(
+                [Measures].[Chargeable Minutes Recorded]
+                ) / 60, 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Monthly' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                  
+
+
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Annual Percentage of Billed Hours Target Achieved]
+ AS iif([Measures].[Annual Target Billed Hours] = 0, null, [Measures].[Annual Billed Hours Recorded] / [Measures].[Annual Target Billed Hours]), 
+FORMAT_STRING = "#,##0.00;-#,##0.00", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                 
+
+                
+                CREATE MEMBER CURRENTCUBE.[Measures].[YTD Percentage of Zero Rate Time vs YTD Chargeable Time]
+ AS iif([Measures].[YTD Chargeable Hours] = 0, null, 
+                        [Measures].[YTD Zero Rate Hours Recorded] / [Measures].[YTD Chargeable Hours]
+                   ), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                           
+
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[YTD Percentage of Zero Rate Time vs YTD Billable Time]
+ AS iif([Measures].[YTD Billable Hours] = 0, null, 
+                        [Measures].[YTD Zero Rate Billable Hours Recorded] / [Measures].[YTD Billable Hours]
+                   ), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                
+
+
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[Annual Target Profit Costs (Calculation Measure)]
+ AS (Measures.[Annual Target Profit Costs] + Measures.[Annual Budget Balance (Calculation Measure)]) + [Annual Business Line Level Budget Value], 
+VISIBLE = 0 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                         
+CREATE MEMBER CURRENTCUBE.[Measures].[Annual Target Profit Costs (Budget Balanced) pre 2018]
+ AS case 
+        when [Dim Bill Date].[Hierarchy].CurrentMember.Level.Name = "Bill Fin Quarter"
+        then ([Dim Bill Date].[Hierarchy].CurrentMember.LastChild, [Measures].[Annual Target Profit Costs (Calculation Measure)])
+        when [Dim Bill Date].[Hierarchy].CurrentMember.Level.Name = "Bill Fin Year"
+        then ([Dim Bill Date].[Hierarchy].CurrentMember.LastChild.LastChild, [Measures].[Annual Target Profit Costs (Calculation Measure)])
+        else Measures.[Annual Target Profit Costs (Calculation Measure)]
+        end, 
+VISIBLE = 0 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';              
+CREATE MEMBER CURRENTCUBE.[Measures].[Annual Target Profit Costs (Budget Balanced) post 2018]
+ AS sum(Measures.[Annual Target Profit Costs]) + sum(Measures.[Annual Budget Balance]), 
+VISIBLE = 0 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';              
+CREATE MEMBER CURRENTCUBE.[Measures].[Annual Target Profit Costs (Budget Balanced)]
+ AS IIF(
+             EXISTS(
+                    {NULL :
+                     [Dim Bill Date].[Hierarchy].[Bill Fin Period].[2017-12 (Apr-2017)]},
+                     [Dim Bill Date].[Hierarchy].CurrentMember 
+                   ).Count = 1
+            , [Measures].[Annual Target Profit Costs (Budget Balanced) pre 2018]
+            , [Measures].[Annual Target Profit Costs (Budget Balanced) post 2018]
+           ), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                           
+
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[Recovery Rate]
+ AS iif([Measures].[Billed Hours Recorded] = 0, null, [Measures].[Profit Costs] / [Measures].[Billed Hours Recorded]), 
+NON_EMPTY_BEHAVIOR = { [Billed Minutes Recorded] }, 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Monthly' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                  
+CREATE MEMBER CURRENTCUBE.[Measures].[Target Recovery Rate]
+ AS iif([Measures].[Target Billed Hours] = 0, null, [Measures].[Target Profit Costs (Budget Balanced)] / [Measures].[Target Billed Hours]), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Monthly' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                           
+
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[Percentage of Profit Costs Target Achieved]
+ AS iif([Measures].[Target Profit Costs (Budget Balanced)] = 0, null, [Measures].[Profit Costs] / [Measures].[Target Profit Costs (Budget Balanced)]), 
+FORMAT_STRING = "#,##0.00;-#,##0.00", 
+NON_EMPTY_BEHAVIOR = { [Target Profit Costs] }, 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Monthly' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                          
+CREATE MEMBER CURRENTCUBE.[Measures].[Percentage of Billed Hours Target Achieved]
+ AS iif([Measures].[Target Billed Hours] = 0, null, [Measures].[Billed Hours Recorded] / [Measures].[Target Billed Hours]), 
+FORMAT_STRING = "#,##0.00;-#,##0.00", 
+NON_EMPTY_BEHAVIOR = { [Target Billed Hours] }, 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Monthly' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                    
+
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[Target Profit Costs - Team Level]
+ AS sum([Measures].[Annual Target Profit Costs - Team Level]) / 12, 
+VISIBLE = 0 ,  DISPLAY_FOLDER = 'Monthly' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                           
+
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[Budget Balance (Calculation Measure)]
+ AS [Measures].[Annual Budget Balance (Calculation Measure)] / 12, 
+VISIBLE = 0 ,  DISPLAY_FOLDER = 'Monthly' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                           
+
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[Budget Balance]
+ AS IIF(
+             EXISTS(
+                    {NULL :
+                     [Dim Bill Date].[Hierarchy].[Bill Fin Period].[2017-12 (Apr-2017)]},
+                     [Dim Bill Date].[Hierarchy].CurrentMember 
+                   ).Count = 1
+            , [Measures].[Annual Budget Balance] / 12
+            , 
+case when [Dim Fed Hierarchy History].[Hierarchy].CurrentMember.Name = "Budget Balance" then [Measures].[Fed Level Budget Value]
+     
+else 0
+end
+
+
+           ), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Monthly' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                                                                           
+
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[Target Profit Costs (Budget Balanced) pre 2018]
+ AS case 
+when [Dim Bill Date].[Hierarchy].CurrentMember.Level.Name = "Bill Fin Quarter"
+then              sum(descendants([Dim Bill Date].[Hierarchy].CurrentMember))
+when      [Dim Bill Date].[Hierarchy].CurrentMember.Level.Name = "Bill Fin Year"
+then      ([Dim Bill Date].[Hierarchy].CurrentMember.LastChild.LastChild, 
+           [Measures].[Annual Target Profit Costs (Calculation Measure)])
+else            Measures.[Target Profit Costs (Calculation Measure)]
+end, 
+VISIBLE = 0 ,  DISPLAY_FOLDER = 'Monthly' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';               
+CREATE MEMBER CURRENTCUBE.[Measures].[Target Profit Costs (Budget Balanced) post 2018]
+ AS sum(Measures.[Target Profit Costs]) + sum(Measures.[Budget Balance]), 
+VISIBLE = 0 ,  DISPLAY_FOLDER = 'Monthly' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';               
+CREATE MEMBER CURRENTCUBE.[Measures].[Target Profit Costs (Budget Balanced)]
+ AS [Measures].[TPCBB], 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Monthly' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup'  ;                                                                           
+
+
+                CREATE MEMBER CURRENTCUBE.[Measures].[Target Profit Costs (Calculation Measure)]
+ AS case when 
+(sum([Measures].[Target Profit Costs]) + sum([Measures].[Budget Balance (Calculation Measure)]) + ([Annual Business Line Level Budget Value] / 12))
+= 0 then null else 
+(sum([Measures].[Target Profit Costs]) + sum([Measures].[Budget Balance (Calculation Measure)]) + ([Annual Business Line Level Budget Value] / 12))
+end, 
+VISIBLE = 0 ,  DISPLAY_FOLDER = 'Monthly' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                           
+CREATE MEMBER CURRENTCUBE.[Measures].[Staff Costs Ytd - inc Central]
+ AS [Measures].[Team Costs Ytd] + [Measures].[Business Line Costs Ytd] + [Measures].[Practice Area Costs Ytd], 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                           
+CREATE MEMBER CURRENTCUBE.[Measures].[Gross Profit - Actual YTD]
+ AS [Measures].[YTD Profit Costs] - [Measures].[Staff Costs YTD - inc Central], 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                           
+CREATE MEMBER CURRENTCUBE.[Measures].[Cost Multiple - Actual YTD]
+ AS iif([Measures].[Staff Costs Ytd - inc Central] = 0, null,
+[Measures].[YTD Profit Costs] / [Measures].[Staff Costs Ytd - inc Central]
+), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                           
+CREATE MEMBER CURRENTCUBE.[Measures].[Staff Costs Budget - inc Central]
+ AS [Measures].[Team Budget Costs] + [Measures].[Business Line Budget Costs] + [Measures].[Practice Area Budget Costs], 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                           
+CREATE MEMBER CURRENTCUBE.[Measures].[Gross Profit - Target YTD]
+ AS [Measures].[YTD Target Profit Costs (Budget Balanced)] - [Measures].[Staff Costs Budget - inc Central], 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup';                           
+CREATE MEMBER CURRENTCUBE.[Measures].[Cost Multiple - Target YTD]
+ AS iif([Measures].[Staff Costs Budget - inc Central] = 0, null,
+[Measures].[YTD Target Profit Costs] / [Measures].[Staff Costs Budget - inc Central]
+), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Kpi Monthly Rollup'; </Text>
+        </Command>
+      </Commands>
+    </MdxScript>
+  </MdxScripts>
+  <Kpis>
+    <Kpi>
+      <ID>KPI</ID>
+      <Name>Monthly Profit Costs</Name>
+      <AssociatedMeasureGroupID>Agg Kpi Monthly Rollup</AssociatedMeasureGroupID>
+      <Value>[Measures].[Profit Costs]</Value>
+      <Goal>[Measures].[Target Profit Costs (Budget Balanced)]</Goal>
+      <Status>case 
+    when [Measures].[Percentage of Profit Costs Target Achieved] &gt;= 1 then 1
+    when [Measures].[Percentage of Profit Costs Target Achieved] &gt;= 0.95
+     and [Measures].[Percentage of Profit Costs Target Achieved] &lt; 1 then 0
+    when [Measures].[Percentage of Profit Costs Target Achieved] = null then null
+else -1
+end</Status>
+      <Trend>case
+    when [Measures].[Percentage of Profit Costs Target Achieved] &gt; 
+        (ParallelPeriod([Dim Bill Date].[Hierarchy].[Bill Fin Year],
+         1, [Dim Bill Date].[Hierarchy]), [Measures].[Percentage of Profit Costs Target Achieved])
+then 1 
+     when [Measures].[Percentage of Profit Costs Target Achieved] = null then null
+     when [Measures].[Percentage of Profit Costs Target Achieved] &lt; 
+             (ParallelPeriod([Dim Bill Date].[Hierarchy].[Bill Fin Year],
+         1, [Dim Bill Date].[Hierarchy]), [Measures].[Percentage of Profit Costs Target Achieved])
+     then -1
+else 0 end</Trend>
+      <TrendGraphic>Status Arrow - Ascending</TrendGraphic>
+      <StatusGraphic>Shapes</StatusGraphic>
+    </Kpi>
+    <Kpi>
+      <ID>KPI 1</ID>
+      <Name>YTD Profit Costs</Name>
+      <AssociatedMeasureGroupID>Agg Kpi Monthly Rollup</AssociatedMeasureGroupID>
+      <Value>[Measures].[YTD Profit Costs]</Value>
+      <Goal>[Measures].[YTD Target Profit Costs (Budget Balanced)]</Goal>
+      <Status>case 
+    when [Measures].[YTD Percentage of Profit Costs Target Achieved] &gt;= 1 then 1
+    when [Measures].[YTD Percentage of Profit Costs Target Achieved] &gt;= 0.95
+     and [Measures].[YTD Percentage of Profit Costs Target Achieved] &lt; 1 then 0
+    when [Measures].[YTD Percentage of Profit Costs Target Achieved] = null then null
+else -1
+end</Status>
+      <Trend>case
+    when [Measures].[YTD Percentage of Profit Costs Target Achieved] &gt; 
+        (ParallelPeriod([Dim Bill Date].[Hierarchy].[Bill Fin Year],
+         1, [Dim Bill Date].[Hierarchy]), [Measures].[YTD Percentage of Profit Costs Target Achieved])
+then 1 
+     when [Measures].[YTD Percentage of Profit Costs Target Achieved] = null then null
+     when [Measures].[YTD Percentage of Profit Costs Target Achieved] &lt; 
+             (ParallelPeriod([Dim Bill Date].[Hierarchy].[Bill Fin Year],
+         1, [Dim Bill Date].[Hierarchy]), [Measures].[YTD Percentage of Profit Costs Target Achieved])
+     then -1
+else 0 end</Trend>
+      <TrendGraphic>Status Arrow - Ascending</TrendGraphic>
+      <StatusGraphic>Thermometer</StatusGraphic>
+    </Kpi>
+  </Kpis>
+  <ProactiveCaching>
+    <SilenceInterval>-PT1S</SilenceInterval>
+    <Latency>-PT1S</Latency>
+    <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+    <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+    <Source xsi:type="ProactiveCachingInheritedBinding" />
+  </ProactiveCaching>
+</Cube>
