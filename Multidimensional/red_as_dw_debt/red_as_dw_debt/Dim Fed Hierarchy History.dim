@@ -1,0 +1,1630 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Fed Hierarchy History</ID>
+  <Name>Dim Fed Hierarchy History</Name>
+  <CreatedTimestamp>2016-06-30T11:39:42.34Z</CreatedTimestamp>
+  <LastSchemaUpdate>2017-12-14T12:02:10.656667Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="66" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2123" scrolltop="-4379" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="14817" y="22093" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="dim_fed_hierarchy_history" left="-86" top="-3440" logicalid="33" controlid="1" masterid="0" hint1="0" hint2="0" width="5054" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c0000be13000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_fed_hierarchy_history" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="fact_debt_monthly" left="18036" top="34900" logicalid="34" controlid="2" masterid="0" hint1="0" hint2="0" width="4974" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c00006e13000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_fact_debt_monthly" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="dim_client" left="11800" top="9000" logicalid="35" controlid="3" masterid="0" hint1="0" hint2="0" width="3836" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c0000fc0e000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_client" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="dim_matter_header_history" left="0" top="23800" logicalid="36" controlid="4" masterid="0" hint1="0" hint2="0" width="5874" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c0000f216000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_matter_header_history" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="dim_bill" left="25410" top="9000" logicalid="37" controlid="5" masterid="0" hint1="0" hint2="0" width="5239" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c00007714000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_bill" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="dim_date" left="25410" top="34900" logicalid="38" controlid="6" masterid="0" hint1="0" hint2="0" width="3995" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c00009b0f000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_date" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="dim_days_banding" left="18433" top="42300" logicalid="39" controlid="7" masterid="0" hint1="0" hint2="0" width="4180" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c000054100000f40d0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_days_banding" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="fact_dimension_main" left="15688" top="20100" logicalid="40" controlid="8" masterid="0" hint1="0" hint2="0" width="6906" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c0000fa1a000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_fact_dimension_main" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="dim_detail_core_details" left="24994" top="20100" logicalid="41" controlid="9" masterid="0" hint1="0" hint2="0" width="8864" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c0000a022000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_detail_core_details" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="dim_client_involvement" left="16759" top="27500" logicalid="42" controlid="10" masterid="0" hint1="0" hint2="0" width="4763" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c00009b12000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_client_involvement" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="dim_matter_header_current" left="7414" top="16400" logicalid="43" controlid="11" masterid="0" hint1="0" hint2="0" width="5874" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c0000f216000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_matter_header_current" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="dim_bill_debt_narrative" left="36258" top="16400" logicalid="45" controlid="13" masterid="0" hint1="0" hint2="0" width="4789" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c0000b512000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_bill_debt_narrative" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="fact_bill" left="18036" top="9000" logicalid="46" controlid="14" masterid="0" hint1="0" hint2="0" width="4974" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c00006e13000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_fact_bill" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="dim_master_client" left="860" top="16400" logicalid="47" controlid="15" masterid="0" hint1="0" hint2="0" width="4154" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c00003a10000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dim_master_client" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="13319" top="13501" logicalid="48" controlid="16" masterid="0" hint1="0" hint2="0" width="7504" height="21699" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_debt_monthly-dim_client]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="2" sourceattachpoint="7" destattachpoint="8" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="13718" y="14000" />
+              <point x="13718" y="24450" />
+              <point x="20523" y="24450" />
+              <point x="20523" y="34900" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="2538" top="28301" logicalid="49" controlid="17" masterid="0" hint1="0" hint2="0" width="16635" height="6899" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_debt_monthly-dim_matter_header_history]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="2" sourceattachpoint="11" destattachpoint="2" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="2937" y="28800" />
+              <point x="2937" y="31850" />
+              <point x="18873" y="31850" />
+              <point x="18873" y="34900" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="21873" top="13501" logicalid="50" controlid="18" masterid="0" hint1="0" hint2="0" width="6556" height="21699" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_debt_monthly-dim_bill]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="2" sourceattachpoint="9" destattachpoint="14" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="28029" y="14000" />
+              <point x="28029" y="24450" />
+              <point x="22173" y="24450" />
+              <point x="22173" y="34900" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="20124" top="39600" logicalid="51" controlid="19" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_debt_monthly-dim_days_banding]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="7" destid="2" sourceattachpoint="6" destattachpoint="9" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="20523" y="42300" />
+              <point x="20523" y="39900" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="22710" top="37001" logicalid="52" controlid="20" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_debt_monthly-dim_date]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="2" sourceattachpoint="22" destattachpoint="27" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="25410" y="37400" />
+              <point x="23010" y="37400" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="4668" top="311" logicalid="53" controlid="21" masterid="0" hint1="0" hint2="0" width="13668" height="35739" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_debt_monthly-dim_fed_hierarchy_history]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="2" sourceattachpoint="33" destattachpoint="20" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="4968" y="710" />
+              <point x="11502" y="710" />
+              <point x="11502" y="35750" />
+              <point x="18036" y="35750" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="22294" top="22201" logicalid="54" controlid="22" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_dbo_dim_detail_core_details_dbo_fact_dimension_main]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="9" destid="8" sourceattachpoint="38" destattachpoint="35" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="24994" y="22600" />
+              <point x="22594" y="22600" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="18741" top="24800" logicalid="55" controlid="23" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_dbo_dim_client_involvement_dbo_fact_dimension_main]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="10" destid="8" sourceattachpoint="8" destattachpoint="13" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="19140" y="27500" />
+              <point x="19140" y="26300" />
+              <point x="19141" y="26300" />
+              <point x="19141" y="25100" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="12988" top="18501" logicalid="56" controlid="24" masterid="0" hint1="0" hint2="0" width="3000" height="4399" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_dbo_dim_matter_header_current_dbo_fact_dimension_main]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="11" destid="8" sourceattachpoint="31" destattachpoint="34" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="13288" y="18900" />
+              <point x="14488" y="18900" />
+              <point x="14488" y="22600" />
+              <point x="15688" y="22600" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="4668" top="-239" logicalid="57" controlid="25" masterid="0" hint1="0" hint2="0" width="11320" height="21489" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_dimension_main-dim_fed_hierarchy_history]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="8" sourceattachpoint="31" destattachpoint="28" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="4968" y="160" />
+              <point x="10328" y="160" />
+              <point x="10328" y="20950" />
+              <point x="15688" y="20950" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="9952" top="13700" logicalid="58" controlid="26" masterid="0" hint1="0" hint2="0" width="9221" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_dbo_dim_matter_header_current_dbo_fact_bill]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="11" destid="14" sourceattachpoint="10" destattachpoint="3" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="10351" y="16400" />
+              <point x="10351" y="15200" />
+              <point x="18873" y="15200" />
+              <point x="18873" y="14000" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="15336" top="11101" logicalid="59" controlid="27" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_dbo_dim_client_dbo_fact_bill]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="14" sourceattachpoint="23" destattachpoint="26" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="15636" y="11500" />
+              <point x="18036" y="11500" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="22710" top="11101" logicalid="60" controlid="28" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_dbo_dim_bill_dbo_fact_bill]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="14" sourceattachpoint="26" destattachpoint="27" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="25410" y="11500" />
+              <point x="23010" y="11500" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="18742" top="13700" logicalid="61" controlid="29" masterid="0" hint1="0" hint2="0" width="2081" height="6900" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_dbo_fact_dimension_main_dbo_fact_bill]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="8" destid="14" sourceattachpoint="12" destattachpoint="9" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="19141" y="20100" />
+              <point x="19141" y="17050" />
+              <point x="20523" y="17050" />
+              <point x="20523" y="14000" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="21873" top="13700" logicalid="62" controlid="30" masterid="0" hint1="0" hint2="0" width="17179" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_bill-dim_bill_debt_narrative]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="13" destid="14" sourceattachpoint="8" destattachpoint="15" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="38652" y="16400" />
+              <point x="38652" y="15200" />
+              <point x="22173" y="15200" />
+              <point x="22173" y="14000" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="4714" top="18501" logicalid="63" controlid="31" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[dim_matter_header_current-dim_master_client]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="15" destid="11" sourceattachpoint="23" destattachpoint="30" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="5014" y="18900" />
+              <point x="7414" y="18900" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="2538" top="20901" logicalid="64" controlid="32" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[dim_matter_header_history-dim_master_client]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="15" destid="4" sourceattachpoint="7" destattachpoint="10" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="2937" y="21400" />
+              <point x="2937" y="23800" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-2123</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-4379</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>-86</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>-3440</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="202" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="226">
+            <Shape Id="Dim Fed Hierarchy History Key" Expanded="true">
+              <Attributes>
+                <Attribute Id="Dim Fed Hierarchy History Key" />
+                <Attribute Id="Fed Code" />
+                <Attribute Id="Fed Hierarchy Business Key" />
+                <Attribute Id="Jobtitle" />
+              </Attributes>
+              <Position x="222" y="20" />
+            </Shape>
+            <Shape Id="Display Name 1" Expanded="false">
+              <Attributes>
+                <Attribute Id="Display Name 1" />
+              </Attributes>
+              <Position x="509" y="20" />
+            </Shape>
+            <Shape Id="Hierarchylevel5hist Pre Francis" Expanded="false">
+              <Attributes>
+                <Attribute Id="Hierarchylevel5hist Pre Francis" />
+              </Attributes>
+              <Position x="797" y="20" />
+            </Shape>
+            <Shape Id="Hierarchylevel4hist Pre Francis" Expanded="false">
+              <Attributes>
+                <Attribute Id="Hierarchylevel4hist Pre Francis" />
+              </Attributes>
+              <Position x="1084" y="20" />
+            </Shape>
+            <Shape Id="Hierarchylevel3hist Pre Francis" Expanded="false">
+              <Attributes>
+                <Attribute Id="Hierarchylevel3hist Pre Francis" />
+              </Attributes>
+              <Position x="1372" y="20" />
+            </Shape>
+            <Shape Id="Hierarchylevel2hist Pre Francis" Expanded="false">
+              <Attributes>
+                <Attribute Id="Hierarchylevel2hist Pre Francis" />
+              </Attributes>
+              <Position x="1659" y="20" />
+            </Shape>
+            <Shape Id="Hierarchylevel1hist Pre Francis" Expanded="false">
+              <Attributes>
+                <Attribute Id="Hierarchylevel1hist Pre Francis" />
+              </Attributes>
+              <Position x="1947" y="20" />
+            </Shape>
+            <Shape Id="Display Name" Expanded="false">
+              <Attributes>
+                <Attribute Id="Display Name" />
+              </Attributes>
+              <Position x="509" y="68" />
+            </Shape>
+            <Shape Id="Hierarchylevel6hist" Expanded="false">
+              <Attributes>
+                <Attribute Id="Hierarchylevel6hist" />
+              </Attributes>
+              <Position x="797" y="68" />
+            </Shape>
+            <Shape Id="Hierarchylevel5hist" Expanded="false">
+              <Attributes>
+                <Attribute Id="Hierarchylevel5hist" />
+              </Attributes>
+              <Position x="1084" y="68" />
+            </Shape>
+            <Shape Id="Hierarchylevel4hist" Expanded="false">
+              <Attributes>
+                <Attribute Id="Hierarchylevel4hist" />
+              </Attributes>
+              <Position x="1372" y="68" />
+            </Shape>
+            <Shape Id="Hierarchylevel3hist" Expanded="false">
+              <Attributes>
+                <Attribute Id="Hierarchylevel3hist" />
+              </Attributes>
+              <Position x="1659" y="68" />
+            </Shape>
+            <Shape Id="Hierarchylevel2hist" Expanded="false">
+              <Attributes>
+                <Attribute Id="Hierarchylevel2hist" />
+              </Attributes>
+              <Position x="1947" y="68" />
+            </Shape>
+            <Shape Id="Hierarchylevel1hist" Expanded="false">
+              <Attributes>
+                <Attribute Id="Hierarchylevel1hist" />
+              </Attributes>
+              <Position x="2234" y="68" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>2018-12-20T16:36:07.716667Z</LastProcessed>
+  <State>Processed</State>
+  <Source xsi:type="DataSourceViewBinding">
+    <DataSourceViewID>Debt Monthly</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration>
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <DimensionPermissions>
+    <DimensionPermission>
+      <ID>DimensionPermission</ID>
+      <Name>DimensionPermission</Name>
+      <CreatedTimestamp>2017-12-19T13:44:01.036667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2017-12-19T13:44:01.036667Z</LastSchemaUpdate>
+      <RoleID>Role</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+  </DimensionPermissions>
+  <Language>1033</Language>
+  <Collation>Latin1_General_CI_AS</Collation>
+  <UnknownMemberName>Unknown</UnknownMemberName>
+  <Attributes>
+    <Attribute>
+      <ID>Dim Fed Hierarchy History Key</ID>
+      <Name>Dim Fed Hierarchy History Key</Name>
+      <Usage>Key</Usage>
+      <EstimatedCount>25716</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>dim_fed_hierarchy_history_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <NullProcessing>ZeroOrBlank</NullProcessing>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dbo_dim_fed_hierarchy_history</TableID>
+          <ColumnID>dim_fed_hierarchy_history_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship>
+          <AttributeID>Fed Code</AttributeID>
+          <Name>Fed Code</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>Display Name</AttributeID>
+          <Name>Display Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>Fed Hierarchy Business Key</AttributeID>
+          <Name>Fed Hierarchy Business Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>Jobtitle</AttributeID>
+          <Name>Job Title</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>Display Name 1</AttributeID>
+          <Name>Display Name Pre-Francis</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>Name</AttributeID>
+          <Name>Name_</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>Windowsusername</AttributeID>
+          <Name>Windowsusername</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>Fed Code</ID>
+      <Name>Fed Code</Name>
+      <EstimatedCount>3679</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Collation>Latin1_General_CS_AS</Collation>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>fed_code</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Collation>Latin1_General_CS_AS</Collation>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dbo_dim_fed_hierarchy_history</TableID>
+          <ColumnID>fed_code</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>Display Name</ID>
+      <Name>Display Name</Name>
+      <EstimatedCount>6720</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Collation>Latin1_General_CS_AS</Collation>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>display_name</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel6hist</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel5hist</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel4hist</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel3hist</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel2hist</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel1hist</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <DataSize>100</DataSize>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dbo_dim_fed_hierarchy_history</TableID>
+          <ColumnID>display_name</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship>
+          <AttributeID>Hierarchylevel6hist</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Hierarchylevel6hist</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>Hierarchylevel1hist</ID>
+      <Name>Hierarchylevel1hist</Name>
+      <EstimatedCount>2</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel1hist</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dbo_dim_fed_hierarchy_history</TableID>
+          <ColumnID>hierarchylevel1hist</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>Hierarchylevel2hist</ID>
+      <Name>Hierarchylevel2hist</Name>
+      <EstimatedCount>10</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel2hist</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel1hist</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dbo_dim_fed_hierarchy_history</TableID>
+          <ColumnID>hierarchylevel2hist</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship>
+          <AttributeID>Hierarchylevel1hist</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Hierarchylevel1hist</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>Hierarchylevel3hist</ID>
+      <Name>Hierarchylevel3hist</Name>
+      <EstimatedCount>90</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel3hist</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel2hist</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel1hist</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dbo_dim_fed_hierarchy_history</TableID>
+          <ColumnID>hierarchylevel3hist</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship>
+          <AttributeID>Hierarchylevel2hist</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Hierarchylevel2hist</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>Hierarchylevel4hist</ID>
+      <Name>Hierarchylevel4hist</Name>
+      <EstimatedCount>508</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel4hist</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel3hist</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel2hist</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel1hist</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dbo_dim_fed_hierarchy_history</TableID>
+          <ColumnID>hierarchylevel4hist</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship>
+          <AttributeID>Hierarchylevel3hist</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Hierarchylevel3hist</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>Hierarchylevel5hist</ID>
+      <Name>Hierarchylevel5hist</Name>
+      <EstimatedCount>660</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel5hist</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel4hist</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel3hist</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel2hist</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel1hist</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dbo_dim_fed_hierarchy_history</TableID>
+          <ColumnID>hierarchylevel5hist</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship>
+          <AttributeID>Hierarchylevel4hist</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Hierarchylevel4hist</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>Hierarchylevel6hist</ID>
+      <Name>Hierarchylevel6hist</Name>
+      <EstimatedCount>660</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel6hist</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel5hist</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel4hist</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel3hist</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel2hist</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel1hist</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dbo_dim_fed_hierarchy_history</TableID>
+          <ColumnID>hierarchylevel6hist</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship>
+          <AttributeID>Hierarchylevel5hist</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Hierarchylevel5hist</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>Fed Hierarchy Business Key</ID>
+      <Name>Fed Hierarchy Business Key</Name>
+      <EstimatedCount>4282</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>1000</DataSize>
+          <Collation>Latin1_General_CS_AS</Collation>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>fed_hierarchy_business_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <DataSize>1000</DataSize>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dbo_dim_fed_hierarchy_history</TableID>
+          <ColumnID>fed_hierarchy_business_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>Jobtitle</ID>
+      <Name>Job Title</Name>
+      <EstimatedCount>316</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>jobtitle</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <DataSize>100</DataSize>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dbo_dim_fed_hierarchy_history</TableID>
+          <ColumnID>jobtitle</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>Hierarchylevel1hist Pre Francis</ID>
+      <Name>Hierarchylevel1hist Pre Francis</Name>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel1hist_pre_francis</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dbo_dim_fed_hierarchy_history</TableID>
+          <ColumnID>hierarchylevel1hist_pre_francis</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>Hierarchylevel2hist Pre Francis</ID>
+      <Name>Hierarchylevel2hist Pre Francis</Name>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel1hist_pre_francis</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel2hist_pre_francis</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dbo_dim_fed_hierarchy_history</TableID>
+          <ColumnID>hierarchylevel2hist_pre_francis</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship>
+          <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+          <Name>Hierarchylevel1hist Pre Francis</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>Hierarchylevel3hist Pre Francis</ID>
+      <Name>Hierarchylevel3hist Pre Francis</Name>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel1hist_pre_francis</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel2hist_pre_francis</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel3hist_pre_francis</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dbo_dim_fed_hierarchy_history</TableID>
+          <ColumnID>hierarchylevel3hist_pre_francis</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship>
+          <AttributeID>Hierarchylevel2hist Pre Francis</AttributeID>
+          <Name>Hierarchylevel2hist Pre Francis</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>Hierarchylevel4hist Pre Francis</ID>
+      <Name>Hierarchylevel4hist Pre Francis</Name>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel1hist_pre_francis</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel2hist_pre_francis</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel3hist_pre_francis</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel4hist_pre_francis</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dbo_dim_fed_hierarchy_history</TableID>
+          <ColumnID>hierarchylevel4hist_pre_francis</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship>
+          <AttributeID>Hierarchylevel3hist Pre Francis</AttributeID>
+          <Name>Hierarchylevel3hist Pre Francis</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>Hierarchylevel5hist Pre Francis</ID>
+      <Name>Hierarchylevel5hist Pre Francis</Name>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel1hist_pre_francis</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel2hist_pre_francis</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel3hist_pre_francis</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel4hist_pre_francis</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel5hist_pre_francis</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dbo_dim_fed_hierarchy_history</TableID>
+          <ColumnID>hierarchylevel5hist_pre_francis</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship>
+          <AttributeID>Hierarchylevel4hist Pre Francis</AttributeID>
+          <Name>Hierarchylevel4hist Pre Francis</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>Display Name 1</ID>
+      <Name>Display Name Pre-Francis</Name>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel1hist_pre_francis</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel2hist_pre_francis</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel3hist_pre_francis</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel4hist_pre_francis</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel5hist_pre_francis</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Collation>Latin1_General_CS_AS</Collation>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>display_name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <DataSize>100</DataSize>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dbo_dim_fed_hierarchy_history</TableID>
+          <ColumnID>display_name</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship>
+          <AttributeID>Hierarchylevel5hist Pre Francis</AttributeID>
+          <Name>Hierarchylevel5hist Pre Francis</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>Name</ID>
+      <Name>Name</Name>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Collation>Latin1_General_CS_AS</Collation>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <DataSize>100</DataSize>
+        <Collation>Latin1_General_CS_AS</Collation>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dbo_dim_fed_hierarchy_history</TableID>
+          <ColumnID>name</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>Windowsusername</ID>
+      <Name>Windowsusername</Name>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Collation>Latin1_General_CS_AS</Collation>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>windowsusername</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Collation>Latin1_General_CS_AS</Collation>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dbo_dim_fed_hierarchy_history</TableID>
+          <ColumnID>windowsusername</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy>
+      <ID>Hierarchy</ID>
+      <Name>Hierarchy</Name>
+      <Levels>
+        <Level>
+          <ID>Hierarchylevel1hist</ID>
+          <Name>Weightmans LLP</Name>
+          <SourceAttributeID>Hierarchylevel1hist</SourceAttributeID>
+        </Level>
+        <Level>
+          <ID>Hierarchylevel2hist</ID>
+          <Name>Business Line</Name>
+          <SourceAttributeID>Hierarchylevel2hist</SourceAttributeID>
+        </Level>
+        <Level>
+          <ID>Hierarchylevel3hist</ID>
+          <Name>Practice Area</Name>
+          <SourceAttributeID>Hierarchylevel3hist</SourceAttributeID>
+        </Level>
+        <Level>
+          <ID>Hierarchylevel4hist</ID>
+          <Name>Team</Name>
+          <SourceAttributeID>Hierarchylevel4hist</SourceAttributeID>
+        </Level>
+        <Level>
+          <ID>Hierarchylevel5hist</ID>
+          <Name>Subteam</Name>
+          <SourceAttributeID>Hierarchylevel5hist</SourceAttributeID>
+        </Level>
+        <Level>
+          <ID>Display Name</ID>
+          <Name>Display Name</Name>
+          <SourceAttributeID>Display Name</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy>
+      <ID>Hierarchy 1</ID>
+      <Name>Pre-Francis Hierarchy</Name>
+      <Levels>
+        <Level>
+          <ID>Hierarchylevel1hist Pre Francis</ID>
+          <Name>Weightmans LLP</Name>
+          <SourceAttributeID>Hierarchylevel1hist Pre Francis</SourceAttributeID>
+        </Level>
+        <Level>
+          <ID>Hierarchylevel2hist Pre Francis</ID>
+          <Name>Business Line</Name>
+          <SourceAttributeID>Hierarchylevel2hist Pre Francis</SourceAttributeID>
+        </Level>
+        <Level>
+          <ID>Hierarchylevel3hist Pre Francis</ID>
+          <Name>Practice Area</Name>
+          <SourceAttributeID>Hierarchylevel3hist Pre Francis</SourceAttributeID>
+        </Level>
+        <Level>
+          <ID>Hierarchylevel4hist Pre Francis</ID>
+          <Name>Team</Name>
+          <SourceAttributeID>Hierarchylevel4hist Pre Francis</SourceAttributeID>
+        </Level>
+        <Level>
+          <ID>Hierarchylevel5hist Pre Francis</ID>
+          <Name>Subteam</Name>
+          <SourceAttributeID>Hierarchylevel5hist Pre Francis</SourceAttributeID>
+        </Level>
+        <Level>
+          <ID>Pre-Francis Display Name</ID>
+          <Name>Display Name</Name>
+          <SourceAttributeID>Display Name 1</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ProactiveCaching>
+    <SilenceInterval>-PT1S</SilenceInterval>
+    <Latency>-PT1S</Latency>
+    <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+    <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+    <Source xsi:type="ProactiveCachingInheritedBinding" />
+  </ProactiveCaching>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
