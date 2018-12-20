@@ -1,0 +1,1392 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>olap_mfs_finance_rollup_monthly</ID>
+  <Name>fact_mfs_finance_rollup_monthly</Name>
+  <CreatedTimestamp>2017-04-18T13:38:55.666667Z</CreatedTimestamp>
+  <LastSchemaUpdate>2017-07-25T10:35:31.163333Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="12" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1043" scrolltop="-5000" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="20664" y="15558" backcolor="16185078" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="dim_transaction_date" left="12024" top="0" logicalid="6" controlid="1" masterid="0" hint1="0" hint2="0" width="5424" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c00003015000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dim_transaction_date" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="fact_mfs_finance_rollup_monthly" left="20" top="0" logicalid="7" controlid="2" masterid="0" hint1="0" hint2="0" width="9604" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c00008425000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="fact_mfs_finance_rollup_monthly" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="dim_employee_hierarchy_history" left="1898" top="7400" logicalid="8" controlid="3" masterid="0" hint1="0" hint2="0" width="5847" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c0000d716000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dim_employee_hierarchy_history" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="9324" top="2101" logicalid="9" controlid="4" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_mfs_finance_rollup_monthly-dim_transaction_date]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="2" sourceattachpoint="26" destattachpoint="43" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="12024" y="2500" />
+              <point x="9624" y="2500" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="4422" top="4700" logicalid="10" controlid="5" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_mfs_finance_rollup_monthly-dim_employee_hierarchy_history]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="2" sourceattachpoint="10" destattachpoint="17" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="4821" y="7400" />
+              <point x="4821" y="6200" />
+              <point x="4822" y="6200" />
+              <point x="4822" y="5000" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1043</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-5000</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>75</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>2018-12-16T08:25:39.06Z</LastProcessed>
+  <State>Processed</State>
+  <Language>2057</Language>
+  <Collation>Latin1_General_CI_AS</Collation>
+  <Dimensions>
+    <Dimension>
+      <ID>odim_transaction_date</ID>
+      <Name>dim_transaction_date</Name>
+      <DimensionID>odim_transaction_date</DimensionID>
+      <Attributes>
+        <Attribute>
+          <AttributeID>dim_transaction_date_key</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute>
+          <AttributeID>transaction_fin_year</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>transaction_fin_quarter</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Transaction Fin Month</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy>
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension>
+      <ID>odim_employee_hierarchy_history</ID>
+      <Name>dim_employee_hierarchy_history</Name>
+      <DimensionID>odim_employee_hierarchy_history</DimensionID>
+      <Attributes>
+        <Attribute>
+          <AttributeID>dim_employee_hierarchy_history_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>hierarchylevel1hist</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>hierarchylevel2hist</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>hierarchylevel3hist</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>hierarchylevel4hist</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>hierarchylevel5hist</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>display_name</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>dim_employee_key</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>employee_code</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>jobtitle</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>name</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>windowsusername</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>hierarchynodehist</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>hierarchylevel6hist</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>level</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy>
+          <HierarchyID>employee_hierarchy_history</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+  </Dimensions>
+  <CubePermissions>
+    <CubePermission>
+      <ID>CubePermission</ID>
+      <Name>CubePermission</Name>
+      <CreatedTimestamp>2017-12-19T13:42:01.676667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2017-12-19T13:42:01.833333Z</LastSchemaUpdate>
+      <RoleID>Role</RoleID>
+      <Read>Allowed</Read>
+      <ReadSourceData>None</ReadSourceData>
+      <CellPermissions>
+        <CellPermission>
+          <Access>Read</Access>
+        </CellPermission>
+      </CellPermissions>
+    </CubePermission>
+  </CubePermissions>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>mfs_finance_rollup_monthly</ID>
+      <Name>mfs_finance_rollup_monthly</Name>
+      <CreatedTimestamp>2017-04-18T13:38:55.696667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2017-07-25T10:35:31.193333Z</LastSchemaUpdate>
+      <LastProcessed>2018-12-16T08:25:39.06Z</LastProcessed>
+      <State>Processed</State>
+      <Measures>
+        <Measure>
+          <ID>Profit Costs Actual</ID>
+          <Name>Profit Costs Actual</Name>
+          <Description>Billed amount on fed code and bill number level</Description>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>profit_costs</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Profit Costs Target</ID>
+          <Name>Profit Costs Target</Name>
+          <Description>FED code level budget value, comming from Artion (where budget type is FE)</Description>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>profit_costs_budget</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Profit Costs Percentage</ID>
+          <Name>Profit Costs Percentage</Name>
+          <Description>Profit Costs as a Percentage of Target</Description>
+          <AggregateFunction>Min</AggregateFunction>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>profit_costs_percentage</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Billable Hours Actual</ID>
+          <Name>Billable Hours Actual</Name>
+          <Description>Hours Recorded</Description>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>billable_hours</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Billable Hours Target</ID>
+          <Name>Billable Hours Target</Name>
+          <Description>target hours for FED code, maitained in Artion (WHERE Budget type is TR)</Description>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>billable_hours_budget</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Profit Costs Year Target</ID>
+          <Name>Profit Costs Year Target</Name>
+          <Description>FED code level budget value, comming from Artion (where budget type is FE)</Description>
+          <AggregateFunction>Min</AggregateFunction>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>profit_costs_year_target</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Billable Hours Percentage</ID>
+          <Name>Billable Hours Percentage</Name>
+          <Description>target hours for FED code, maitained in Artion (WHERE Budget type is TR)</Description>
+          <AggregateFunction>Min</AggregateFunction>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>billable_hours_budget</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Billable Hours Year Target</ID>
+          <Name>Billable Hours Year Target</Name>
+          <Description>Target minutes for FED code, maintained in Artiion (WHERE Budget type is TR)</Description>
+          <AggregateFunction>Min</AggregateFunction>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>billable_hours_year_target</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Non Billable Hours Actual</ID>
+          <Name>Non Billable Hours Actual</Name>
+          <Description>number of non chargeable hours recorded</Description>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>non_billable_hours</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Billed Hours Actual</ID>
+          <Name>Billed Hours Actual</Name>
+          <Description>Billed Hours Recorded</Description>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>billed_hours</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Billed Hours Target</ID>
+          <Name>Billed Hours Target</Name>
+          <Description>Billed Hours Budget</Description>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>billed_hours_budget</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Recovery Rate Actual</ID>
+          <Name>Recovery Rate Actual</Name>
+          <Description>Recovery Rate</Description>
+          <AggregateFunction>Min</AggregateFunction>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>recovery_rate</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Recovery Rate Target</ID>
+          <Name>Recovery Rate Target</Name>
+          <Description>Recovery Rate Budget</Description>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>recovery_rate_budget</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Recovery Rate Percentage</ID>
+          <Name>Recovery Rate Percentage</Name>
+          <Description>Recovery Rate as a Percentage of Target</Description>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>recovery_rate_percentage</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Total Debt</ID>
+          <Name>Total Debt</Name>
+          <AggregateFunction>Min</AggregateFunction>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>total_debt_value</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Total Debt Over 90 Days</ID>
+          <Name>Total Debt Over 90 Days</Name>
+          <AggregateFunction>Min</AggregateFunction>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>total_debt_value_over_90_days</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Total Debt Over 90 Days Percentage</ID>
+          <Name>Total Debt Over 90 Days Percentage</Name>
+          <AggregateFunction>Min</AggregateFunction>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>total_debt_value_over_90_days_percentage</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Total Debt Over 90 Days Target To Hit</ID>
+          <Name>Total Debt Over 90 Days Target To Hit</Name>
+          <Description>Total Debt Value Over 90 Days Target To Hit</Description>
+          <AggregateFunction>Min</AggregateFunction>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>total_debt_value_over_90_days_target_to_hit</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Total Debt Value Over 90 Days Target</ID>
+          <Name>Total Debt Value Over 90 Days Target</Name>
+          <Description>Total Debt Value Over 90 Days Target</Description>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>total_debt_value_over_90_days_target</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Total Debt Value Over 90 Days Target Difference</ID>
+          <Name>Total Debt Value Over 90 Days Target Difference</Name>
+          <Description>Total Debt Value Over 90 Days Target Difference</Description>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>total_debt_value_over_90_days_target_difference</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Total WIP</ID>
+          <Name>Total WIP</Name>
+          <AggregateFunction>Min</AggregateFunction>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>total_wip_value</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Total WIP Over 90 Days</ID>
+          <Name>Total WIP Over 90 Days</Name>
+          <AggregateFunction>Min</AggregateFunction>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>total_wip_value_over_90_days</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Total WIP Over 90 Days Percentage</ID>
+          <Name>Total WIP Over 90 Days Percentage</Name>
+          <AggregateFunction>Min</AggregateFunction>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>total_wip_value_over_90_days_percentage</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Total WIP Over 90 Days Target To Hit</ID>
+          <Name>Total WIP Over 90 Days Target To Hit</Name>
+          <Description>Total WIP Value Over 90 Days Target To Hit</Description>
+          <AggregateFunction>Min</AggregateFunction>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>total_wip_value_over_90_days_target_to_hit</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Total Wip Over 90 Days Target</ID>
+          <Name>Total Wip Over 90 Days Target</Name>
+          <Description>Total Wip Over 90 Days Target</Description>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>total_wip_over_90_days_target</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Total Wip Over 90 Days Target Difference</ID>
+          <Name>Total Wip Over 90 Days Target Difference</Name>
+          <Description>Total Wip Over 90 Days Target Difference</Description>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>total_wip_over_90_days_target_difference</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Total Unbilled Disbursements</ID>
+          <Name>Total Unbilled Disbursements</Name>
+          <AggregateFunction>Min</AggregateFunction>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>total_unbilled_disbursement_value</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Total Unbilled Disbursements Over 90 Days</ID>
+          <Name>Total Unbilled Disbursements Over 90 Days</Name>
+          <AggregateFunction>Min</AggregateFunction>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>total_unbilled_disbursements_value_over_90_days</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Total Unbilled Disbursements Over 90 Days Percentage</ID>
+          <Name>Total Unbilled Disbursements Over 90 Days Percentage</Name>
+          <AggregateFunction>Min</AggregateFunction>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>total_unbilled_disbursements_value_over_90_days_percentage</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Total Unbilled Disbursements Over 90 Days Target To Hit</ID>
+          <Name>Total Unbilled Disbursements Over 90 Days Target To Hit</Name>
+          <Description>Total Unbilled Disbursements Value Over 90 Days Target To Hit</Description>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>total_unbilled_disbursements_value_over_90_days_target_to_hit</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Total Unbilled Disbursements Value Over 90 Days Target</ID>
+          <Name>Total Unbilled Disbursements Value Over 90 Days Target</Name>
+          <Description>Total Unbilled Disbursements Value Over 90 Days Target</Description>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>total_unbilled_disbursements_value_over_90_days_target</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Total Unbilled Disbursements Val Over 90 Days Target Difference</ID>
+          <Name>Total Unbilled Disbursements Val Over 90 Days Target Difference</Name>
+          <Description>Total Unbilled Disbursements Value Over 90 Days Target Differenc</Description>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>total_unbilled_disbursements_value_over_90_days_targ_difference</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>WIP Days Target</ID>
+          <Name>WIP Days Target</Name>
+          <Description>WIP Days Target</Description>
+          <AggregateFunction>Min</AggregateFunction>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>wip_days_target</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>WIP Days Target Difference</ID>
+          <Name>WIP Days Target Difference</Name>
+          <Description>WIP Days Target Difference</Description>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>wip_days_target_difference</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>WIP Days</ID>
+          <Name>WIP Days</Name>
+          <Description>wip_days</Description>
+          <AggregateFunction>Min</AggregateFunction>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>wip_days</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Debtor Days</ID>
+          <Name>Debtor Days</Name>
+          <Description>debtor_days</Description>
+          <AggregateFunction>Min</AggregateFunction>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>debtor_days</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Debtor Days Target</ID>
+          <Name>Debtor Days Target</Name>
+          <Description>Debtor Days Target</Description>
+          <AggregateFunction>Min</AggregateFunction>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>debtor_days_target</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Debtor Days Target Difference</ID>
+          <Name>Debtor Days Target Difference</Name>
+          <Description>Debtor Days Target Difference</Description>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>debtor_days_target_difference</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Disbursements Days</ID>
+          <Name>Disbursements Days</Name>
+          <Description>Disbursements Days</Description>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>disbursements_days</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Disbursements Days Target Difference</ID>
+          <Name>Disbursements Days Target Difference</Name>
+          <Description>Disbursements Days Target Difference</Description>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>disbursements_days_target_difference</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Disbursements Days Target</ID>
+          <Name>Disbursements Days Target</Name>
+          <Description>Disbursements Days Target</Description>
+          <AggregateFunction>Min</AggregateFunction>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>disbursements_days_target</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Write-Off Hours</ID>
+          <Name>Write-Off Hours</Name>
+          <Description>Billed Hours Write Down</Description>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>write_off_hrs</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Write-Off Amount</ID>
+          <Name>Write-Off Amount</Name>
+          <Description>Billed Amount Write Down</Description>
+          <AggregateFunction>Min</AggregateFunction>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>write_off_amt</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Billable Hours Amount</ID>
+          <Name>Billable Hours Amount</Name>
+          <Description>Actual Time Recorded Value</Description>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>billable_hours_value</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Billed Time Charge Value</ID>
+          <Name>Billed Time Charge Value</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>billed_time_charge_value</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure>
+          <ID>Write-Off Target</ID>
+          <Name>Write-Off Target</Name>
+          <Description>write_off_target</Description>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>write_off_target</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Fixed Fee Count</ID>
+          <Name>Fixed Fee Count</Name>
+          <DataType>Integer</DataType>
+          <Source>
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>fixed_fee_count</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Remaining Fte Working Days</ID>
+          <Name>Remaining Fte Working Days</Name>
+          <DataType>Integer</DataType>
+          <Source>
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>remaining_fte_working_days</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure>
+          <ID>Annual Holiday Entitlement</ID>
+          <Name>Annual Holiday Entitlement</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>annual_holiday_entitlement</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure>
+          <ID>Holidays Taken</ID>
+          <Name>Holidays Taken</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>fact_mfs_finance_rollup_monthly</TableID>
+              <ColumnID>holidays_taken</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <EstimatedSize>7673241</EstimatedSize>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension">
+          <CubeDimensionID>odim_transaction_date</CubeDimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>dim_transaction_date_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_mfs_finance_rollup_monthly</TableID>
+                    <ColumnID>dim_transaction_date_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute>
+              <AttributeID>transaction_fin_year</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_transaction_date</TableID>
+                    <ColumnID>transaction_fin_year</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>transaction_fin_quarter</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_transaction_date</TableID>
+                    <ColumnID>transaction_fin_quarter</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Transaction Fin Month</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_transaction_date</TableID>
+                    <ColumnID>transaction_fin_month</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension">
+          <CubeDimensionID>odim_employee_hierarchy_history</CubeDimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>dim_employee_hierarchy_history_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>fact_mfs_finance_rollup_monthly</TableID>
+                    <ColumnID>dim_employee_hierarchy_history_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute>
+              <AttributeID>hierarchylevel1hist</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_employee_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel1hist</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>hierarchylevel2hist</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_employee_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel2hist</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>hierarchylevel3hist</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_employee_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel3hist</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>hierarchylevel4hist</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_employee_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel4hist</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>hierarchylevel5hist</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_employee_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel5hist</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>display_name</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_employee_hierarchy_history</TableID>
+                    <ColumnID>display_name</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>dim_employee_key</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_employee_hierarchy_history</TableID>
+                    <ColumnID>dim_employee_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>employee_code</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_employee_hierarchy_history</TableID>
+                    <ColumnID>employee_code</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>jobtitle</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_employee_hierarchy_history</TableID>
+                    <ColumnID>jobtitle</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>name</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_employee_hierarchy_history</TableID>
+                    <ColumnID>name</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>windowsusername</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_employee_hierarchy_history</TableID>
+                    <ColumnID>windowsusername</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>hierarchynodehist</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_employee_hierarchy_history</TableID>
+                    <ColumnID>hierarchynodehist</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>hierarchylevel6hist</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_employee_hierarchy_history</TableID>
+                    <ColumnID>hierarchylevel6hist</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>level</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dim_employee_hierarchy_history</TableID>
+                    <ColumnID>level</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions>
+        <Partition>
+          <ID>fact_mfs_finance_rollup_monthly</ID>
+          <Name>fact_mfs_finance_rollup_monthly</Name>
+          <CreatedTimestamp>2017-04-18T13:38:55.726667Z</CreatedTimestamp>
+          <LastSchemaUpdate>2017-07-25T10:35:31.24Z</LastSchemaUpdate>
+          <LastProcessed>2018-12-16T08:25:39.043333Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="TableBinding">
+            <DataSourceID>red_dw</DataSourceID>
+            <DbSchemaName>dbo</DbSchemaName>
+            <DbTableName>fact_mfs_finance_rollup_monthly</DbTableName>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching>
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" />
+          </ProactiveCaching>
+          <EstimatedSize>7673241</EstimatedSize>
+        </Partition>
+      </Partitions>
+      <ProactiveCaching>
+        <SilenceInterval>-PT1S</SilenceInterval>
+        <Latency>-PT1S</Latency>
+        <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+        <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+        <Source xsi:type="ProactiveCachingInheritedBinding" />
+      </ProactiveCaching>
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source>
+    <DataSourceViewID>red_dw</DataSourceViewID>
+  </Source>
+  <MdxScripts>
+    <MdxScript>
+      <ID>olap_mfs_finance_rollup_monthly</ID>
+      <Name>olap_mfs_finance_rollup_monthly</Name>
+      <CreatedTimestamp>2017-04-18T13:38:55.756667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2017-07-25T10:35:31.273333Z</LastSchemaUpdate>
+      <Commands>
+        <Command>
+          <Text>CALCULATE;  
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Profit Costs Actual] AS 'AGGREGATE(YTD([dim_transaction_date].[financial_calendar]),[Measures].[Profit Costs Actual])' ,SOLVE_ORDER=10,FORMAT_STRING="Standard",NON_EMPTY_BEHAVIOR={[Profit Costs Actual]},ASSOCIATED_MEASURE_GROUP='mfs_finance_rollup_monthly',FONT_NAME="Microsoft Sans Serif",FONT_SIZE=8,VISIBLE=1;  
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Profit Costs Target] AS 'AGGREGATE(YTD([dim_transaction_date].[financial_calendar]),[Measures].[Profit Costs Target])' ,SOLVE_ORDER=20,FORMAT_STRING="Standard",NON_EMPTY_BEHAVIOR={[Profit Costs Target]},ASSOCIATED_MEASURE_GROUP='mfs_finance_rollup_monthly',FONT_NAME="Microsoft Sans Serif",FONT_SIZE=8,VISIBLE=1;  
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Billable Hours Actual] AS 'AGGREGATE(YTD([dim_transaction_date].[financial_calendar]),[Measures].[Billable Hours Actual])' ,SOLVE_ORDER=30,FORMAT_STRING="Standard",NON_EMPTY_BEHAVIOR={[Billable Hours Actual]},ASSOCIATED_MEASURE_GROUP='mfs_finance_rollup_monthly',FONT_NAME="Microsoft Sans Serif",FONT_SIZE=8,VISIBLE=1;  
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Billable Hours Target] AS 'AGGREGATE(YTD([dim_transaction_date].[financial_calendar]),[Measures].[Billable Hours Target])' ,SOLVE_ORDER=40,FORMAT_STRING="Standard",NON_EMPTY_BEHAVIOR={[Billable Hours Target]},ASSOCIATED_MEASURE_GROUP='mfs_finance_rollup_monthly',FONT_NAME="Microsoft Sans Serif",FONT_SIZE=8,VISIBLE=1;  
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Non Billable Hours Actual] AS 'AGGREGATE(YTD([dim_transaction_date].[financial_calendar]),[Measures].[Non Billable Hours Actual])' ,SOLVE_ORDER=50,FORMAT_STRING="Standard",NON_EMPTY_BEHAVIOR={[Non Billable Hours Actual]},ASSOCIATED_MEASURE_GROUP='mfs_finance_rollup_monthly',FONT_NAME="Microsoft Sans Serif",FONT_SIZE=8,VISIBLE=1;  
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Billed Hours Actual] AS 'AGGREGATE(YTD([dim_transaction_date].[financial_calendar]),[Measures].[Billed Hours Actual])' ,SOLVE_ORDER=60,FORMAT_STRING="Standard",NON_EMPTY_BEHAVIOR={[Billed Hours Actual]},ASSOCIATED_MEASURE_GROUP='mfs_finance_rollup_monthly',FONT_NAME="Microsoft Sans Serif",FONT_SIZE=8,VISIBLE=1;  
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Billed Hours Target] AS 'AGGREGATE(YTD([dim_transaction_date].[financial_calendar]),[Measures].[Billed Hours Target])' ,SOLVE_ORDER=70,FORMAT_STRING="Standard",NON_EMPTY_BEHAVIOR={[Billed Hours Target]},ASSOCIATED_MEASURE_GROUP='mfs_finance_rollup_monthly',FONT_NAME="Microsoft Sans Serif",FONT_SIZE=8,VISIBLE=1;  
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Write-Off Amount] AS 'AGGREGATE(YTD([dim_transaction_date].[financial_calendar]),[Measures].[Write-Off Amount])' ,SOLVE_ORDER=80,FORMAT_STRING="Standard",NON_EMPTY_BEHAVIOR={[Write-Off Amount]},ASSOCIATED_MEASURE_GROUP='mfs_finance_rollup_monthly',FONT_NAME="Microsoft Sans Serif",FONT_SIZE=8,VISIBLE=1;  
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Fixed Fee Count] AS 'AGGREGATE(YTD([dim_transaction_date].[financial_calendar]),[Measures].[Fixed Fee Count])' ,SOLVE_ORDER=90,FORMAT_STRING="Standard",NON_EMPTY_BEHAVIOR={[Fixed Fee Count]},ASSOCIATED_MEASURE_GROUP='mfs_finance_rollup_monthly',FONT_NAME="Microsoft Sans Serif",FONT_SIZE=8,VISIBLE=1;  
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Billable Hours Remaining to Meet Annual Billable Hours Target]
+ AS [Measures].[YTD Billable Hours Target] - [Measures].[YTD Billable Hours Actual], 
+FORMAT_STRING = "#,##0.00;-#,##0.00", 
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'mfs_finance_rollup_monthly';  
+CREATE MEMBER CURRENTCUBE.[Measures].[Annual Holidays Remaining]
+ AS iif([Measures].[Annual Holiday Entitlement] = null, null,
+ [Measures].[Annual Holiday Entitlement]  - [Measures].[Annual Holidays Taken]), 
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'mfs_finance_rollup_monthly';  
+CREATE MEMBER CURRENTCUBE.[Measures].[Annual Holidays Taken]
+ AS sum(
+                ytd(
+                [Dim Transaction Date].[Transaction Fin Year].CurrentMember),
+                Measures.[Holidays Taken]
+                ), 
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'mfs_finance_rollup_monthly';  
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Billable Hours Per Day Remaining to Meet Annual Billable Hours Target]
+ AS iif([Measures].[Remaining Fte Working Days] = 0, null,
+                [Measures].[YTD Billable Hours Remaining to Meet Annual Billable Hours Target] / [Measures].[Remaining Fte Working Days] 
+                ), 
+FORMAT_STRING = "#,##0.00;-#,##0.00", 
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'mfs_finance_rollup_monthly'  ;  
+CREATE MEMBER CURRENTCUBE.[Measures].[YTD Billable Hours Per Day Remaining to Meet Annual Billable Hours Target (less Remaining Holiday Entitlement)]
+ AS iif([Measures].[Remaining Fte Working Days] = 0, null,
+                [Measures].[YTD Billable Hours Remaining to Meet Annual Billable Hours Target] / [Measures].[Remaining Fte Working Days] 
+                ), 
+FORMAT_STRING = "#,##0.00;-#,##0.00", 
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'mfs_finance_rollup_monthly'  ; </Text>
+        </Command>
+      </Commands>
+    </MdxScript>
+  </MdxScripts>
+  <Actions>
+    <Action xsi:type="DrillThroughAction">
+      <ID>mfs_finance_rollup_monthly Drillthrough Action</ID>
+      <Name>mfs_finance_rollup_monthly Drillthrough Action</Name>
+      <Description>Drill through action</Description>
+      <TargetType>Cells</TargetType>
+      <Target>MeasureGroupMeasures("mfs_finance_rollup_monthly")</Target>
+      <Type>DrillThrough</Type>
+      <Default>true</Default>
+      <Columns>
+        <Column xsi:type="MeasureBinding">
+          <MeasureID>Debtor Days</MeasureID>
+        </Column>
+        <Column xsi:type="MeasureBinding">
+          <MeasureID>Write-Off Amount</MeasureID>
+        </Column>
+        <Column xsi:type="MeasureBinding">
+          <MeasureID>Profit Costs Actual</MeasureID>
+        </Column>
+        <Column xsi:type="MeasureBinding">
+          <MeasureID>Profit Costs Target</MeasureID>
+        </Column>
+        <Column xsi:type="MeasureBinding">
+          <MeasureID>Billable Hours Actual</MeasureID>
+        </Column>
+        <Column xsi:type="MeasureBinding">
+          <MeasureID>Billable Hours Target</MeasureID>
+        </Column>
+        <Column xsi:type="MeasureBinding">
+          <MeasureID>Non Billable Hours Actual</MeasureID>
+        </Column>
+        <Column xsi:type="MeasureBinding">
+          <MeasureID>Billed Hours Actual</MeasureID>
+        </Column>
+        <Column xsi:type="MeasureBinding">
+          <MeasureID>Billed Hours Target</MeasureID>
+        </Column>
+        <Column xsi:type="MeasureBinding">
+          <MeasureID>Profit Costs Year Target</MeasureID>
+        </Column>
+        <Column xsi:type="MeasureBinding">
+          <MeasureID>Write-Off Hours</MeasureID>
+        </Column>
+        <Column xsi:type="MeasureBinding">
+          <MeasureID>Billable Hours Amount</MeasureID>
+        </Column>
+        <Column xsi:type="MeasureBinding">
+          <MeasureID>Write-Off Target</MeasureID>
+        </Column>
+        <Column xsi:type="MeasureBinding">
+          <MeasureID>Billable Hours Year Target</MeasureID>
+        </Column>
+        <Column xsi:type="MeasureBinding">
+          <MeasureID>WIP Days</MeasureID>
+        </Column>
+        <Column xsi:type="MeasureBinding">
+          <MeasureID>Debtor Days Target</MeasureID>
+        </Column>
+        <Column xsi:type="MeasureBinding">
+          <MeasureID>WIP Days Target</MeasureID>
+        </Column>
+        <Column xsi:type="MeasureBinding">
+          <MeasureID>Disbursements Days Target</MeasureID>
+        </Column>
+        <Column xsi:type="MeasureBinding">
+          <MeasureID>Total Debt Over 90 Days Target To Hit</MeasureID>
+        </Column>
+        <Column xsi:type="MeasureBinding">
+          <MeasureID>Total WIP Over 90 Days Target To Hit</MeasureID>
+        </Column>
+        <Column xsi:type="MeasureBinding">
+          <MeasureID>Total Unbilled Disbursements Over 90 Days Target To Hit</MeasureID>
+        </Column>
+        <Column xsi:type="MeasureBinding">
+          <MeasureID>Total Wip Over 90 Days Target</MeasureID>
+        </Column>
+        <Column xsi:type="MeasureBinding">
+          <MeasureID>Total Unbilled Disbursements Value Over 90 Days Target</MeasureID>
+        </Column>
+        <Column xsi:type="MeasureBinding">
+          <MeasureID>Total Debt Value Over 90 Days Target</MeasureID>
+        </Column>
+        <Column xsi:type="MeasureBinding">
+          <MeasureID>Total Debt Value Over 90 Days Target Difference</MeasureID>
+        </Column>
+        <Column xsi:type="MeasureBinding">
+          <MeasureID>Total Wip Over 90 Days Target Difference</MeasureID>
+        </Column>
+        <Column xsi:type="MeasureBinding">
+          <MeasureID>Total Unbilled Disbursements Val Over 90 Days Target Difference</MeasureID>
+        </Column>
+        <Column xsi:type="MeasureBinding">
+          <MeasureID>WIP Days Target Difference</MeasureID>
+        </Column>
+        <Column xsi:type="MeasureBinding">
+          <MeasureID>Disbursements Days Target Difference</MeasureID>
+        </Column>
+        <Column xsi:type="MeasureBinding">
+          <MeasureID>Debtor Days Target Difference</MeasureID>
+        </Column>
+        <Column xsi:type="MeasureBinding">
+          <MeasureID>Disbursements Days</MeasureID>
+        </Column>
+      </Columns>
+    </Action>
+  </Actions>
+  <ProactiveCaching>
+    <SilenceInterval>-PT1S</SilenceInterval>
+    <Latency>-PT1S</Latency>
+    <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+    <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+    <Source xsi:type="ProactiveCachingInheritedBinding" />
+  </ProactiveCaching>
+</Cube>
