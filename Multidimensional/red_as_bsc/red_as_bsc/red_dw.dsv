@@ -1,0 +1,1132 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>red_dw</ID>
+  <Name>red_dw</Name>
+  <CreatedTimestamp>2015-08-14T07:55:29.153333Z</CreatedTimestamp>
+  <LastSchemaUpdate>2016-04-21T14:13:16.516667Z</LastSchemaUpdate>
+  <DataSourceID>red_dw</DataSourceID>
+  <Schema>
+    <xs:schema id="red_dw" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="red_dw" msdata:IsDataSet="true" msdata:Locale="en-GB">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dim_fed_hierarchy_history" msprop:DbTableName="dim_fed_hierarchy_history" msprop:FriendlyName="dim_fed_hierarchy_history" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="dim_fed_hierarchy_history_key" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                  <xs:element name="source_system_id" type="xs:int" minOccurs="0" />
+                  <xs:element name="fed_hierarchy_business_key">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1000" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="fed_code" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="employeeid">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="36" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="activeud" type="xs:boolean" minOccurs="0" />
+                  <xs:element name="fed_code_effective_start_date" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="jobtitle" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="linemanageridud" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="linemanagername" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="reportingbcmidud" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="reportingbcmname" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="worksforemployeeid" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="36" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="worksforname" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="display_name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchynodehist" type="xs:long" minOccurs="0" />
+                  <xs:element name="hierarchylevel1hist" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchylevel2hist" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchylevel3hist" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchylevel4hist" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchylevel5hist" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchylevel6hist" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchynode" type="xs:long" minOccurs="0" />
+                  <xs:element name="hierarchylevel1" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchylevel2" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchylevel3" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchylevel4" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchylevel5" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchylevel6" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="level" type="xs:int" minOccurs="0" />
+                  <xs:element name="securitylevel" type="xs:int" minOccurs="0" />
+                  <xs:element name="effective_start_date" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="warning_flag" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="dss_update_time" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="dss_start_date" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="dss_end_date" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="dss_current_flag" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="dss_version" type="xs:int" minOccurs="0" />
+                  <xs:element name="hierarchynodehistnorm" type="xs:long" minOccurs="0" />
+                  <xs:element name="hierarchylevel1histnorm" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchylevel2histnorm" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchylevel3histnorm" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchylevel4histnorm" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchylevel5histnorm" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hierarchylevel6histnorm" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="fte" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="windowsusername" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dim_snapshot_date" msprop:DbTableName="dim_snapshot_date" msprop:FriendlyName="dim_snapshot_date" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="dim_snapshot_date_key" type="xs:int" />
+                  <xs:element name="snapshot_date" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="snapshot_cal_day_in_week" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="3" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_cal_day_in_week_no" type="xs:int" minOccurs="0" />
+                  <xs:element name="snapshot_cal_day_in_month" type="xs:int" minOccurs="0" />
+                  <xs:element name="snapshot_cal_day_in_year" type="xs:int" minOccurs="0" />
+                  <xs:element name="snapshot_cal_week_in_year" type="xs:int" minOccurs="0" />
+                  <xs:element name="snapshot_cal_month_no" type="xs:int" minOccurs="0" />
+                  <xs:element name="snapshot_cal_month" type="xs:int" minOccurs="0" />
+                  <xs:element name="snapshot_cal_month_name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="7" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_cal_quarter_no" type="xs:int" minOccurs="0" />
+                  <xs:element name="snapshot_cal_quarter" type="xs:int" minOccurs="0" />
+                  <xs:element name="snapshot_cal_year" type="xs:int" minOccurs="0" />
+                  <xs:element name="snapshot_financial_date" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="snapshot_fin_day_in_week" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="3" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_fin_day_in_week_no" type="xs:int" minOccurs="0" />
+                  <xs:element name="snapshot_fin_day_in_month" type="xs:int" minOccurs="0" />
+                  <xs:element name="snapshot_fin_day_in_year" type="xs:int" minOccurs="0" />
+                  <xs:element name="snapshot_fin_week_in_month" type="xs:int" minOccurs="0" />
+                  <xs:element name="snapshot_fin_week_in_year" type="xs:int" minOccurs="0" />
+                  <xs:element name="snapshot_fin_month_no" type="xs:int" minOccurs="0" />
+                  <xs:element name="snapshot_fin_month" type="xs:int" minOccurs="0" />
+                  <xs:element name="snapshot_fin_month_display" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="7" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_fin_month_name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="7" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_fin_period" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_fin_quarter_no" type="xs:int" minOccurs="0" />
+                  <xs:element name="snapshot_fin_quarter" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="7" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_fin_year" type="xs:int" minOccurs="0" />
+                  <xs:element name="snapshot_current_cal_day" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_current_cal_week" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_current_cal_month" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_current_cal_year" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_current_cal_mtd" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_current_cal_ytd" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_moving_cal_year" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_current_fin_day" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_current_fin_week" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_current_fin_month" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_current_fin_quarter" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_current_fin_year" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_current_fin_mtd" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_current_fin_ytd" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_moving_fin_quarter" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_moving_fin_year" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_week_day_flag" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_week_end_flag" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_holiday_flag" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_holiday_desc" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="64" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_trading_day_flag" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_trading_days_in_mth" type="xs:int" minOccurs="0" />
+                  <xs:element name="snapshot_trading_days_so_far" type="xs:int" minOccurs="0" />
+                  <xs:element name="snapshot_audit_date" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="snapshot_aud_day_in_week" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="3" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_aud_day_in_week_no" type="xs:int" minOccurs="0" />
+                  <xs:element name="snapshot_aud_day_in_month" type="xs:int" minOccurs="0" />
+                  <xs:element name="snapshot_aud_day_in_year" type="xs:int" minOccurs="0" />
+                  <xs:element name="snapshot_aud_month_no" type="xs:int" minOccurs="0" />
+                  <xs:element name="snapshot_aud_month" type="xs:int" minOccurs="0" />
+                  <xs:element name="snapshot_aud_month_display" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="7" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_aud_week_in_year" type="xs:int" minOccurs="0" />
+                  <xs:element name="snapshot_aud_month_name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="7" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_aud_period" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_aud_quarter_no" type="xs:int" minOccurs="0" />
+                  <xs:element name="snapshot_aud_quarter" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="7" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_aud_year" type="xs:int" minOccurs="0" />
+                  <xs:element name="snapshot_current_aud_day" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_current_aud_week" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_current_aud_month" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_current_aud_quarter" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_current_aud_year" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_current_aud_mtd" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_current_aud_ytd" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_moving_aud_quarter" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="snapshot_moving_aud_year" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="dss_update_time" type="xs:dateTime" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="fact_bsc_client_rollup" msprop:DbTableName="fact_bsc_client_rollup" msprop:FriendlyName="fact_bsc_client_rollup" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="dim_snapshot_date_key" type="xs:int" />
+                  <xs:element name="dim_fed_hierarchy_history_key" type="xs:int" />
+                  <xs:element name="snapshot_date" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="source_system_id" type="xs:int" minOccurs="0" />
+                  <xs:element name="employee_id" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="36" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="windows_username" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="profile_score_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="product_score_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="sales_score_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="crm_score_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="employee_count_firm" type="xs:int" minOccurs="0" />
+                  <xs:element name="profile_score_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="product_score_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="sales_score_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="crm_score_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="employee_count_area" type="xs:int" minOccurs="0" />
+                  <xs:element name="profile_score_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="product_score_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="sales_score_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="crm_score_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="employee_count_ind" type="xs:int" minOccurs="0" />
+                  <xs:element name="dss_update_time" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="fed_code" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="client_profile_flag_firm" type="xs:int" minOccurs="0" />
+                  <xs:element name="client_product_flag_firm" type="xs:int" minOccurs="0" />
+                  <xs:element name="client_sales_flag_firm" type="xs:int" minOccurs="0" />
+                  <xs:element name="client_crm_flag_firm" type="xs:int" minOccurs="0" />
+                  <xs:element name="client_profile_flag_area" type="xs:int" minOccurs="0" />
+                  <xs:element name="client_product_flag_area" type="xs:int" minOccurs="0" />
+                  <xs:element name="client_sales_flag_area" type="xs:int" minOccurs="0" />
+                  <xs:element name="client_crm_flag_area" type="xs:int" minOccurs="0" />
+                  <xs:element name="client_profile_flag_ind" type="xs:int" minOccurs="0" />
+                  <xs:element name="client_product_flag_ind" type="xs:int" minOccurs="0" />
+                  <xs:element name="client_sales_flag_ind" type="xs:int" minOccurs="0" />
+                  <xs:element name="client_score_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="client_flag_firm" type="xs:int" minOccurs="0" />
+                  <xs:element name="client_score_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="client_flag_area" type="xs:int" minOccurs="0" />
+                  <xs:element name="client_score_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="client_crm_flag_ind" type="xs:int" minOccurs="0" />
+                  <xs:element name="client_flag_ind" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="fact_bsc_finance_rollup" msprop:DbTableName="fact_bsc_finance_rollup" msprop:FriendlyName="fact_bsc_finance_rollup" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="dim_snapshot_date_key" type="xs:int" />
+                  <xs:element name="dim_fed_hierarchy_history_key" type="xs:int" />
+                  <xs:element name="snapshot_date" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="employee_id" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="36" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="windows_username" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="fed_code" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="profit_costs_percentage_ytd_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="profit_costs_score_ytd_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="chargeable_hours_percentage_ytd_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="chargeable_hours_score_ytd_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="recovery_rate_percentage_ytd_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="recovery_rate_score_ytd_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="profit_cost_flag_firm" type="xs:int" minOccurs="0" />
+                  <xs:element name="chargeable_hours_flag_firm" type="xs:int" minOccurs="0" />
+                  <xs:element name="recovery_rate_flag_firm" type="xs:int" minOccurs="0" />
+                  <xs:element name="finance_flag_firm" type="xs:int" minOccurs="0" />
+                  <xs:element name="finance_score_ytd_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="employee_count_firm" type="xs:int" minOccurs="0" />
+                  <xs:element name="profit_costs_percentage_ytd_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="profit_costs_score_ytd_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="chargeable_hours_percentage_ytd_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="chargeable_hours_score_ytd_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="recovery_rate_percentage_ytd_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="recovery_rate_score_ytd_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="profit_cost_flag_area" type="xs:int" minOccurs="0" />
+                  <xs:element name="chargeable_hours_flag_area" type="xs:int" minOccurs="0" />
+                  <xs:element name="recovery_rate_flag_area" type="xs:int" minOccurs="0" />
+                  <xs:element name="finance_flag_area" type="xs:int" minOccurs="0" />
+                  <xs:element name="finance_score_ytd_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="employee_count_area" type="xs:int" minOccurs="0" />
+                  <xs:element name="profit_costs_percentage_ytd_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="profit_costs_score_ytd_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="chargeable_hours_percentage_ytd_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="chargeable_hours_score_ytd_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="recovery_rate_percentage_ytd_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="recovery_rate_score_ytd_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="profit_cost_flag_ind" type="xs:int" minOccurs="0" />
+                  <xs:element name="chargeable_hours_flag_ind" type="xs:int" minOccurs="0" />
+                  <xs:element name="recovery_rate_flag_ind" type="xs:int" minOccurs="0" />
+                  <xs:element name="finance_flag_ind" type="xs:int" minOccurs="0" />
+                  <xs:element name="finance_score_ytd_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="employee_count_ind" type="xs:int" minOccurs="0" />
+                  <xs:element name="dss_update_time" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="profit_costs_ytd_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="profit_costs_budget_ytd_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="chargeable_hours_ytd_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="chargeable_hours_budget_ytd_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="billed_hours_ytd_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="billed_hours_budget_ytd_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="recovery_rate_ytd_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="recovery_rate_budget_ytd_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="profit_costs_ytd_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="profit_costs_budget_ytd_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="chargeable_hours_ytd_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="chargeable_hours_budget_ytd_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="billed_hours_ytd_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="billed_hours_budget_ytd_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="recovery_rate_ytd_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="recovery_rate_budget_ytd_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="profit_costs_ytd_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="profit_costs_budget_ytd_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="chargeable_hours_ytd_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="chargeable_hours_budget_ytd_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="billed_hours_ytd_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="billed_hours_budget_ytd_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="recovery_rate_ytd_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="recovery_rate_budget_ytd_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="open_practice_management_fin_ytd_firm" type="xs:int" minOccurs="0" />
+                  <xs:element name="closed_practice_management_fin_ytd_firm" type="xs:int" minOccurs="0" />
+                  <xs:element name="open_practice_management_fin_ytd_area" type="xs:int" minOccurs="0" />
+                  <xs:element name="closed_practice_management_fin_ytd_area" type="xs:int" minOccurs="0" />
+                  <xs:element name="open_practice_management_fin_ytd_ind" type="xs:int" minOccurs="0" />
+                  <xs:element name="closed_practice_management_fin_ytd_ind" type="xs:int" minOccurs="0" />
+                  <xs:element name="profit_costs_mtd_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="profit_costs_budget_mtd_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="chargeable_hours_mtd_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="chargeable_hours_budget_mtd_ind" type="xs:decimal" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="fact_bsc_ibp_rollup" msprop:DbTableName="fact_bsc_ibp_rollup" msprop:FriendlyName="fact_bsc_ibp_rollup" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="dim_fed_hierarchy_history_key" type="xs:int" />
+                  <xs:element name="dim_snapshot_date_key" type="xs:int" />
+                  <xs:element name="snapshot_date" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="source_system_id" type="xs:int" minOccurs="0" />
+                  <xs:element name="employee_id" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="36" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="windows_username" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="fed_code" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="compliance_score_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="compliance_percentage_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="compliance_employee_count_firm" type="xs:int" minOccurs="0" />
+                  <xs:element name="compliance_score_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="compliance_percentage_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="compliance_employee_count_area" type="xs:int" minOccurs="0" />
+                  <xs:element name="compliance_score_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="compliance_percentage_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="compliance_employee_count_ind" type="xs:int" minOccurs="0" />
+                  <xs:element name="exceptions_percentage_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="critical_exceptions_percentage_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="exceptions_score_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="exceptions_employee_count_firm" type="xs:int" minOccurs="0" />
+                  <xs:element name="exceptions_percentage_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="critical_exceptions_percentage_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="exceptions_score_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="exceptions_employee_count_area" type="xs:int" minOccurs="0" />
+                  <xs:element name="exceptions_percentage_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="critical_exceptions_percentage_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="exceptions_score_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="exceptions_employee_count_ind" type="xs:int" minOccurs="0" />
+                  <xs:element name="formb_score_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="formb_percentage_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="formb_employee_count_firm" type="xs:int" minOccurs="0" />
+                  <xs:element name="formb_score_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="formb_percentage_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="formb_employee_count_area" type="xs:int" minOccurs="0" />
+                  <xs:element name="formb_score_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="formb_percentage_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="formb_employee_count_ind" type="xs:int" minOccurs="0" />
+                  <xs:element name="audit_score_average_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="audit_score_average_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="audit_score_average_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="dss_update_time" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="compliance_flag_firm" type="xs:int" minOccurs="0" />
+                  <xs:element name="compliance_flag_area" type="xs:int" minOccurs="0" />
+                  <xs:element name="compliance_flag_ind" type="xs:int" minOccurs="0" />
+                  <xs:element name="exceptions_flag_firm" type="xs:int" minOccurs="0" />
+                  <xs:element name="exceptions_flag_area" type="xs:int" minOccurs="0" />
+                  <xs:element name="exceptions_flag_ind" type="xs:int" minOccurs="0" />
+                  <xs:element name="formb_flag_firm" type="xs:int" minOccurs="0" />
+                  <xs:element name="formb_flag_area" type="xs:int" minOccurs="0" />
+                  <xs:element name="formb_flag_ind" type="xs:int" minOccurs="0" />
+                  <xs:element name="audit_rag_rollup_score_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="audit_valid_count_firm" type="xs:int" minOccurs="0" />
+                  <xs:element name="audit_rag_rollup_score_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="audit_valid_count_area" type="xs:int" minOccurs="0" />
+                  <xs:element name="audit_valid_count_ind" type="xs:int" minOccurs="0" />
+                  <xs:element name="ibp_score_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="ibp_score_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="ibp_score_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="ibp_flag_firm" type="xs:int" minOccurs="0" />
+                  <xs:element name="ibp_flag_area" type="xs:int" minOccurs="0" />
+                  <xs:element name="ibp_flag_ind" type="xs:int" minOccurs="0" />
+                  <xs:element name="audit_rag_score_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_no_activity_flag_firm" type="xs:int" minOccurs="0" />
+                  <xs:element name="activity_open_matter_count_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_no_future_activity_count_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_red_activity_flag_firm" type="xs:int" minOccurs="0" />
+                  <xs:element name="activity_red_matter_count_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_red_activity_count_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_rolling_open_matter_count_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_rolling_no_future_activity_count_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_rolling_no_future_activity_percentage_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_rolling_red_matter_count_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_rolling_red_activity_count_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_rolling_red_activity_per_matter_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_red_activity_score_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_no_future_activity_score_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_employee_count_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_no_activity_flag_area" type="xs:int" minOccurs="0" />
+                  <xs:element name="activity_open_matter_count_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_no_future_activity_count_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_red_activity_flag_area" type="xs:int" minOccurs="0" />
+                  <xs:element name="activity_red_matter_count_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_red_activity_count_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_rolling_open_matter_count_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_rolling_no_future_activity_count_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_rolling_no_future_activity_percentage_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_rolling_red_matter_count_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_rolling_red_activity_count_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_rolling_red_activity_per_matter_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_red_activity_score_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_no_future_activity_score_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_employee_count_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_no_activity_flag_ind" type="xs:int" minOccurs="0" />
+                  <xs:element name="activity_open_matter_count_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_no_future_activity_count_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_red_activity_flag_ind" type="xs:int" minOccurs="0" />
+                  <xs:element name="activity_red_matter_count_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_red_activity_count_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_rolling_open_matter_count_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_rolling_no_future_activity_count_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_rolling_no_future_activity_percentage_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_rolling_red_matter_count_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_rolling_red_activity_count_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_rolling_red_activity_per_matter_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_red_activity_score_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_no_future_activity_score_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="activity_employee_count_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="audit_flag_firm" type="xs:int" minOccurs="0" />
+                  <xs:element name="audit_flag_area" type="xs:int" minOccurs="0" />
+                  <xs:element name="audit_flag_ind" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="fact_bsc_ld_rollup" msprop:DbTableName="fact_bsc_ld_rollup" msprop:FriendlyName="fact_bsc_ld_rollup" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="dim_snapshot_date_key" type="xs:int" />
+                  <xs:element name="dim_fed_hierarchy_history_key" type="xs:int" />
+                  <xs:element name="source_system_id" type="xs:int" minOccurs="0" />
+                  <xs:element name="snapshot_date" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="employee_id" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="36" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="windows_username" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="appraisal_percentage_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="appraisal_score_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="cpd_percentage_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="cpd_score_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="team_meetings_percentage_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="team_meetings_score_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="client_meetings_percentage_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="client_meetings_score_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="employee_count_firm" type="xs:int" minOccurs="0" />
+                  <xs:element name="appraisal_percentage_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="appraisal_score_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="cpd_percentage_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="cpd_score_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="team_meetings_percentage_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="team_meetings_score_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="client_meetings_percentage_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="client_meetings_score_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="employee_count_area" type="xs:int" minOccurs="0" />
+                  <xs:element name="appraisal_percentage_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="appraisal_score_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="cpd_percentage_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="cpd_score_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="team_meetings_percentage_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="team_meetings_score_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="client_meetings_percentage_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="client_meetings_score_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="employee_count_ind" type="xs:int" minOccurs="0" />
+                  <xs:element name="dss_update_time" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="fed_code" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="learndev_score_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="appraisal_flag_firm" type="xs:int" minOccurs="0" />
+                  <xs:element name="cpd_flag_firm" type="xs:int" minOccurs="0" />
+                  <xs:element name="team_meetings_flag_firm" type="xs:int" minOccurs="0" />
+                  <xs:element name="client_meetings_flag_firm" type="xs:int" minOccurs="0" />
+                  <xs:element name="learndev_flag_firm" type="xs:int" minOccurs="0" />
+                  <xs:element name="learndev_score_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="appraisal_flag_area" type="xs:int" minOccurs="0" />
+                  <xs:element name="cpd_flag_area" type="xs:int" minOccurs="0" />
+                  <xs:element name="team_meetings_flag_area" type="xs:int" minOccurs="0" />
+                  <xs:element name="client_meetings_flag_area" type="xs:int" minOccurs="0" />
+                  <xs:element name="learndev_flag_area" type="xs:int" minOccurs="0" />
+                  <xs:element name="learndev_score_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="appraisal_flag_ind" type="xs:int" minOccurs="0" />
+                  <xs:element name="cpd_flag_ind" type="xs:int" minOccurs="0" />
+                  <xs:element name="client_meetings_flag_ind" type="xs:int" minOccurs="0" />
+                  <xs:element name="team_meetings_flag_ind" type="xs:int" minOccurs="0" />
+                  <xs:element name="learndev_flag_ind" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="fact_bsc_overall_rollup" msprop:DbTableName="fact_bsc_overall_rollup" msprop:FriendlyName="fact_bsc_overall_rollup" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="dim_fed_hierarchy_history_key" type="xs:int" />
+                  <xs:element name="dim_snapshot_date_key" type="xs:int" />
+                  <xs:element name="snapshot_date" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="source_system_id" type="xs:int" minOccurs="0" />
+                  <xs:element name="employee_id" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="36" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="windows_username" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="fed_code" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ibp_score_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="ibp_score_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="ibp_score_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="ibp_flag_firm" type="xs:int" minOccurs="0" />
+                  <xs:element name="ibp_flag_area" type="xs:int" minOccurs="0" />
+                  <xs:element name="ibp_flag_ind" type="xs:int" minOccurs="0" />
+                  <xs:element name="learndev_score_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="learndev_score_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="learndev_score_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="learndev_flag_firm" type="xs:int" minOccurs="0" />
+                  <xs:element name="learndev_flag_area" type="xs:int" minOccurs="0" />
+                  <xs:element name="learndev_flag_ind" type="xs:int" minOccurs="0" />
+                  <xs:element name="client_score_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="client_score_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="client_score_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="client_flag_firm" type="xs:int" minOccurs="0" />
+                  <xs:element name="client_flag_area" type="xs:int" minOccurs="0" />
+                  <xs:element name="client_flag_ind" type="xs:int" minOccurs="0" />
+                  <xs:element name="overall_score_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="overall_score_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="overall_score_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="dss_update_time" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="finance_score_ytd_firm" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="finance_score_ytd_area" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="finance_score_ytd_ind" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="finance_flag_firm" type="xs:int" minOccurs="0" />
+                  <xs:element name="finance_flag_area" type="xs:int" minOccurs="0" />
+                  <xs:element name="finance_flag_ind" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1">
+          <xs:selector xpath=".//dim_fed_hierarchy_history" />
+          <xs:field xpath="source_system_id" />
+          <xs:field xpath="fed_hierarchy_business_key" />
+          <xs:field xpath="employeeid" />
+          <xs:field xpath="dss_current_flag" />
+          <xs:field xpath="dss_version" />
+        </xs:unique>
+        <xs:unique name="Constraint2">
+          <xs:selector xpath=".//dim_fed_hierarchy_history" />
+          <xs:field xpath="dim_fed_hierarchy_history_key" />
+        </xs:unique>
+        <xs:unique name="Constraint3">
+          <xs:selector xpath=".//dim_fed_hierarchy_history" />
+          <xs:field xpath="fed_hierarchy_business_key" />
+          <xs:field xpath="employeeid" />
+          <xs:field xpath="dss_current_flag" />
+          <xs:field xpath="dss_version" />
+        </xs:unique>
+        <xs:unique name="dim_snapshot_date_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dim_snapshot_date" />
+          <xs:field xpath="dim_snapshot_date_key" />
+        </xs:unique>
+        <xs:unique name="fact_bsc_client_rollup_Constraint1" msdata:ConstraintName="Constraint1">
+          <xs:selector xpath=".//fact_bsc_client_rollup" />
+          <xs:field xpath="snapshot_date" />
+          <xs:field xpath="source_system_id" />
+          <xs:field xpath="employee_id" />
+        </xs:unique>
+        <xs:unique name="fact_bsc_finance_rollup_Constraint1" msdata:ConstraintName="Constraint1">
+          <xs:selector xpath=".//fact_bsc_finance_rollup" />
+          <xs:field xpath="snapshot_date" />
+          <xs:field xpath="employee_id" />
+          <xs:field xpath="fed_code" />
+        </xs:unique>
+        <xs:unique name="fact_bsc_ibp_rollup_Constraint1" msdata:ConstraintName="Constraint1">
+          <xs:selector xpath=".//fact_bsc_ibp_rollup" />
+          <xs:field xpath="snapshot_date" />
+          <xs:field xpath="source_system_id" />
+          <xs:field xpath="employee_id" />
+        </xs:unique>
+        <xs:unique name="fact_bsc_ld_rollup_Constraint1" msdata:ConstraintName="Constraint1">
+          <xs:selector xpath=".//fact_bsc_ld_rollup" />
+          <xs:field xpath="source_system_id" />
+          <xs:field xpath="snapshot_date" />
+          <xs:field xpath="employee_id" />
+        </xs:unique>
+        <xs:unique name="fact_bsc_overall_rollup_Constraint1" msdata:ConstraintName="Constraint1">
+          <xs:selector xpath=".//fact_bsc_overall_rollup" />
+          <xs:field xpath="snapshot_date" />
+          <xs:field xpath="employee_id" />
+          <xs:field xpath="fed_code" />
+        </xs:unique>
+        <xs:keyref name="FK_fact_bsc_overall_rollup_dim_fed_hierarchy_history" refer="Constraint2">
+          <xs:selector xpath=".//fact_bsc_overall_rollup" />
+          <xs:field xpath="dim_fed_hierarchy_history_key" />
+        </xs:keyref>
+        <xs:keyref name="FK_fact_bsc_overall_rollup_dim_snapshot_date" refer="dim_snapshot_date_Constraint1">
+          <xs:selector xpath=".//fact_bsc_overall_rollup" />
+          <xs:field xpath="dim_snapshot_date_key" />
+        </xs:keyref>
+        <xs:keyref name="FK_fact_bsc_ld_rollup_dim_fed_hierarchy_history" refer="Constraint2">
+          <xs:selector xpath=".//fact_bsc_ld_rollup" />
+          <xs:field xpath="dim_fed_hierarchy_history_key" />
+        </xs:keyref>
+        <xs:keyref name="FK_fact_bsc_ld_rollup_dim_snapshot_date" refer="dim_snapshot_date_Constraint1">
+          <xs:selector xpath=".//fact_bsc_ld_rollup" />
+          <xs:field xpath="dim_snapshot_date_key" />
+        </xs:keyref>
+        <xs:keyref name="FK_fact_bsc_ibp_rollup_dim_fed_hierarchy_history" refer="Constraint2">
+          <xs:selector xpath=".//fact_bsc_ibp_rollup" />
+          <xs:field xpath="dim_fed_hierarchy_history_key" />
+        </xs:keyref>
+        <xs:keyref name="FK_fact_bsc_ibp_rollup_dim_snapshot_date" refer="dim_snapshot_date_Constraint1">
+          <xs:selector xpath=".//fact_bsc_ibp_rollup" />
+          <xs:field xpath="dim_snapshot_date_key" />
+        </xs:keyref>
+        <xs:keyref name="FK_fact_bsc_finance_rollup_dim_fed_hierarchy_history" refer="Constraint2">
+          <xs:selector xpath=".//fact_bsc_finance_rollup" />
+          <xs:field xpath="dim_fed_hierarchy_history_key" />
+        </xs:keyref>
+        <xs:keyref name="FK_fact_bsc_finance_rollup_dim_snapshot_date" refer="dim_snapshot_date_Constraint1">
+          <xs:selector xpath=".//fact_bsc_finance_rollup" />
+          <xs:field xpath="dim_snapshot_date_key" />
+        </xs:keyref>
+        <xs:keyref name="FK_fact_bsc_client_rollup_dim_fed_hierarchy_history" refer="Constraint2">
+          <xs:selector xpath=".//fact_bsc_client_rollup" />
+          <xs:field xpath="dim_fed_hierarchy_history_key" />
+        </xs:keyref>
+        <xs:keyref name="FK_fact_bsc_client_rollup_dim_snapshot_date" refer="dim_snapshot_date_Constraint1">
+          <xs:selector xpath=".//fact_bsc_client_rollup" />
+          <xs:field xpath="dim_snapshot_date_key" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <red_dw xmlns="" />
+  </Schema>
+</DataSourceView>

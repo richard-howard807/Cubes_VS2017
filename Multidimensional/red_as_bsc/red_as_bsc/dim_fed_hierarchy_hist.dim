@@ -1,0 +1,1279 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>odim_fed_hierarchy_history</ID>
+  <Name>dim_fed_hierarchy_hist</Name>
+  <CreatedTimestamp>2015-08-14T07:55:29.793333Z</CreatedTimestamp>
+  <LastSchemaUpdate>2018-12-16T08:16:48.18Z</LastSchemaUpdate>
+  <LastProcessed>2018-12-16T08:16:47.29Z</LastProcessed>
+  <State>Processed</State>
+  <Source xsi:type="DataSourceViewBinding">
+    <DataSourceViewID>red_dw</DataSourceViewID>
+  </Source>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Language>2057</Language>
+  <Collation>Latin1_General_CI_AS</Collation>
+  <UnknownMemberName>Unknown</UnknownMemberName>
+  <Attributes>
+    <Attribute>
+      <ID>dim_fed_hierarchy_history_key</ID>
+      <Name>dim_fed_hierarchy_history_key</Name>
+      <Description>Key for dim_fed_hierarchy_history</Description>
+      <Usage>Key</Usage>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>dim_fed_hierarchy_history_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>dim_fed_hierarchy_history_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship>
+          <AttributeID>hierarchylevel1hist</AttributeID>
+          <Name>Firm</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>hierarchylevel2hist</AttributeID>
+          <Name>Business Line</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>hierarchylevel3hist</AttributeID>
+          <Name>Practice Area</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>hierarchylevel4hist</AttributeID>
+          <Name>Team</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>hierarchylevel5hist</AttributeID>
+          <Name>Sub Team</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>display_name</AttributeID>
+          <Name>FED Code And Full Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>source_system_id</AttributeID>
+          <Name>Source system DW id</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>fed_hierarchy_business_key</AttributeID>
+          <Name>fed hierarchy history business key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>fed_code</AttributeID>
+          <Name>FED Code</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>employeeid</AttributeID>
+          <Name>employeeid</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>activeud</AttributeID>
+          <Name>Active Flag</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>fed_code_effective_start_date</AttributeID>
+          <Name>Effective FED Code Start Date</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>jobtitle</AttributeID>
+          <Name>Job Title</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>linemanageridud</AttributeID>
+          <Name>Line Manager ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>linemanagername</AttributeID>
+          <Name>Line Manager Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>reportingbcmidud</AttributeID>
+          <Name>BCM ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>reportingbcmname</AttributeID>
+          <Name>BCM Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>worksforemployeeid</AttributeID>
+          <Name>Works For Employee ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>worksforname</AttributeID>
+          <Name>Works For Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>name</AttributeID>
+          <Name>Full Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>hierarchynode</AttributeID>
+          <Name>Current Hierarchynode</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>hierarchynodehist</AttributeID>
+          <Name>Hierarchynode</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>hierarchylevel6hist</AttributeID>
+          <Name>Hierarchylevel6</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>hierarchylevel1</AttributeID>
+          <Name>Current Firm</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>hierarchylevel2</AttributeID>
+          <Name>Current Business Line</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>hierarchylevel3</AttributeID>
+          <Name>Current Practice Area</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>hierarchylevel4</AttributeID>
+          <Name>Current Team</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>hierarchylevel5</AttributeID>
+          <Name>Current Sub Team</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>hierarchylevel6</AttributeID>
+          <Name>Current Hierarchylevel6</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>hierarchynodehistnorm</AttributeID>
+          <Name>Hierarchynodenorm</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>hierarchylevel1histnorm</AttributeID>
+          <Name>Firmnorm</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>hierarchylevel2histnorm</AttributeID>
+          <Name>Business Line norm</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>hierarchylevel3histnorm</AttributeID>
+          <Name>Practice Area norm</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>hierarchylevel4histnorm</AttributeID>
+          <Name>Team norm</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>hierarchylevel5histnorm</AttributeID>
+          <Name>Sub Team norm</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>hierarchylevel6histnorm</AttributeID>
+          <Name>Hierarchylevel6 norm</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>level</AttributeID>
+          <Name>Level</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>securitylevel</AttributeID>
+          <Name>Security Level</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>effective_start_date</AttributeID>
+          <Name>Effective Start Date</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>warning_flag</AttributeID>
+          <Name>Warning Flag</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>fte</AttributeID>
+          <Name>fte</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>windowsusername</AttributeID>
+          <Name>Windows Username</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>hierarchylevel1hist</ID>
+      <Name>Firm</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel1hist</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>hierarchylevel1hist</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>hierarchylevel2hist</ID>
+      <Name>Business Line</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel2hist</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>hierarchylevel2hist</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>hierarchylevel3hist</ID>
+      <Name>Practice Area</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel3hist</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>hierarchylevel3hist</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>hierarchylevel4hist</ID>
+      <Name>Team</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel4hist</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>hierarchylevel4hist</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>hierarchylevel5hist</ID>
+      <Name>Sub Team</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel5hist</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>hierarchylevel5hist</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>display_name</ID>
+      <Name>FED Code And Full Name</Name>
+      <Description>employee name: FED_CODE + forename + surename
+in case of hierarchy: Budget Balance</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>display_name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>display_name</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>source_system_id</ID>
+      <Name>Source system DW id</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>source_system_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>source_system_id</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>fed_hierarchy_business_key</ID>
+      <Name>fed hierarchy history business key</Name>
+      <Description>artifitialy created business key in DW:
+FED code if Employee have a fed code
+path in case of hierarchy levels</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>fed_hierarchy_business_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>fed_hierarchy_business_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>fed_code</ID>
+      <Name>FED Code</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>fed_code</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>fed_code</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>employeeid</ID>
+      <Name>employeeid</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>employeeid</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>employeeid</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>activeud</ID>
+      <Name>Active Flag</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>activeud</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>activeud</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>fed_code_effective_start_date</ID>
+      <Name>Effective FED Code Start Date</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>fed_code_effective_start_date</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>fed_code_effective_start_date</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>jobtitle</ID>
+      <Name>Job Title</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>jobtitle</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>jobtitle</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>linemanageridud</ID>
+      <Name>Line Manager ID</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>linemanageridud</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>linemanageridud</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>linemanagername</ID>
+      <Name>Line Manager Name</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>linemanagername</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>linemanagername</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>reportingbcmidud</ID>
+      <Name>BCM ID</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>reportingbcmidud</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>reportingbcmidud</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>reportingbcmname</ID>
+      <Name>BCM Name</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>reportingbcmname</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>reportingbcmname</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>worksforemployeeid</ID>
+      <Name>Works For Employee ID</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>worksforemployeeid</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>worksforemployeeid</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>worksforname</ID>
+      <Name>Works For Name</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>worksforname</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>worksforname</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>name</ID>
+      <Name>Full Name</Name>
+      <Description>employee name: forename + surename</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>name</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>hierarchynode</ID>
+      <Name>Current Hierarchynode</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>BigInt</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchynode</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>hierarchynode</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>hierarchynodehist</ID>
+      <Name>Hierarchynode</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>BigInt</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchynodehist</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>hierarchynodehist</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>hierarchylevel6hist</ID>
+      <Name>Hierarchylevel6</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel6hist</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>hierarchylevel6hist</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>hierarchylevel1</ID>
+      <Name>Current Firm</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel1</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>hierarchylevel1</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>hierarchylevel2</ID>
+      <Name>Current Business Line</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel2</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>hierarchylevel2</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>hierarchylevel3</ID>
+      <Name>Current Practice Area</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel3</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>hierarchylevel3</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>hierarchylevel4</ID>
+      <Name>Current Team</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel4</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>hierarchylevel4</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>hierarchylevel5</ID>
+      <Name>Current Sub Team</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel5</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>hierarchylevel5</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>hierarchylevel6</ID>
+      <Name>Current Hierarchylevel6</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel6</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>hierarchylevel6</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>hierarchynodehistnorm</ID>
+      <Name>Hierarchynodenorm</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>BigInt</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchynodehistnorm</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>hierarchynodehistnorm</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>hierarchylevel1histnorm</ID>
+      <Name>Firmnorm</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel1histnorm</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>hierarchylevel1histnorm</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>hierarchylevel2histnorm</ID>
+      <Name>Business Line norm</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel2histnorm</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>hierarchylevel2histnorm</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>hierarchylevel3histnorm</ID>
+      <Name>Practice Area norm</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel3histnorm</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>hierarchylevel3histnorm</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>hierarchylevel4histnorm</ID>
+      <Name>Team norm</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel4histnorm</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>hierarchylevel4histnorm</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>hierarchylevel5histnorm</ID>
+      <Name>Sub Team norm</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel5histnorm</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>hierarchylevel5histnorm</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>hierarchylevel6histnorm</ID>
+      <Name>Hierarchylevel6 norm</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>hierarchylevel6histnorm</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>hierarchylevel6histnorm</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>level</ID>
+      <Name>Level</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>level</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>level</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>securitylevel</ID>
+      <Name>Security Level</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>securitylevel</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>securitylevel</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>effective_start_date</ID>
+      <Name>Effective Start Date</Name>
+      <Description>Date and time the row was updated in the data warehouse.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>effective_start_date</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>effective_start_date</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>warning_flag</ID>
+      <Name>Warning Flag</Name>
+      <Description>Y or N. Shows if hierarchy node has changed on the FED code. managed by a custom procedure</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>warning_flag</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>warning_flag</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>fte</ID>
+      <Name>fte</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>fte</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>fte</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>windowsusername</ID>
+      <Name>Windows Username</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_fed_hierarchy_history</TableID>
+            <ColumnID>windowsusername</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_fed_hierarchy_history</TableID>
+          <ColumnID>windowsusername</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <AttributeAllMemberName>All fed_hierarchy_history</AttributeAllMemberName>
+  <Hierarchies>
+    <Hierarchy>
+      <ID>fed_hierarchy_historic</ID>
+      <Name>fed_hierarchy_historic</Name>
+      <Description>Added at dimension creation for cube support</Description>
+      <Levels>
+        <Level>
+          <ID>hierarchylevel1hist</ID>
+          <Name>Firm</Name>
+          <SourceAttributeID>hierarchylevel1hist</SourceAttributeID>
+        </Level>
+        <Level>
+          <ID>hierarchylevel2hist</ID>
+          <Name>Business Line</Name>
+          <SourceAttributeID>hierarchylevel2hist</SourceAttributeID>
+        </Level>
+        <Level>
+          <ID>hierarchylevel3hist</ID>
+          <Name>Practice Area</Name>
+          <SourceAttributeID>hierarchylevel3hist</SourceAttributeID>
+        </Level>
+        <Level>
+          <ID>hierarchylevel4hist</ID>
+          <Name>Team</Name>
+          <SourceAttributeID>hierarchylevel4hist</SourceAttributeID>
+        </Level>
+        <Level>
+          <ID>hierarchylevel5hist</ID>
+          <Name>Sub Team</Name>
+          <SourceAttributeID>hierarchylevel5hist</SourceAttributeID>
+        </Level>
+        <Level>
+          <ID>display_name</ID>
+          <Name>FED Code And Full Name</Name>
+          <Description>employee name: FED_CODE + forename + surename
+in case of hierarchy: Budget Balance</Description>
+          <SourceAttributeID>display_name</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ProactiveCaching>
+    <SilenceInterval>-PT1S</SilenceInterval>
+    <Latency>-PT1S</Latency>
+    <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+    <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+    <Source xsi:type="ProactiveCachingInheritedBinding" />
+  </ProactiveCaching>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

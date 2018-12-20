@@ -1,0 +1,2245 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>odim_snapshot_date</ID>
+  <Name>dim_snapshot_date</Name>
+  <CreatedTimestamp>2015-08-14T07:55:30.45Z</CreatedTimestamp>
+  <LastSchemaUpdate>2017-07-24T04:30:12.383333Z</LastSchemaUpdate>
+  <LastProcessed>2018-12-15T11:52:42.983333Z</LastProcessed>
+  <State>Processed</State>
+  <Source xsi:type="DataSourceViewBinding">
+    <DataSourceViewID>red_dw</DataSourceViewID>
+  </Source>
+  <Type>Time</Type>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Language>2057</Language>
+  <Collation>Latin1_General_CI_AS</Collation>
+  <UnknownMemberName>Unknown</UnknownMemberName>
+  <Attributes>
+    <Attribute>
+      <ID>dim_snapshot_date_key</ID>
+      <Name>dim_snapshot_date_key</Name>
+      <Description>Key for dim_snapshot_date</Description>
+      <Usage>Key</Usage>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>dim_snapshot_date_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>dim_snapshot_date_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship>
+          <AttributeID>snapshot_cal_year</AttributeID>
+          <Name>snapshot cal year</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_cal_month</AttributeID>
+          <Name>snapshot cal month</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_date</AttributeID>
+          <Name>snapshot date</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_fin_year</AttributeID>
+          <Name>snapshot fin year</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_fin_quarter</AttributeID>
+          <Name>snapshot fin quarter</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_fin_period</AttributeID>
+          <Name>snapshot fin period</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_financial_date</AttributeID>
+          <Name>snapshot financial date</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_cal_day_in_week</AttributeID>
+          <Name>snapshot cal day in week</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_cal_day_in_week_no</AttributeID>
+          <Name>snapshot cal day in week no</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_cal_day_in_month</AttributeID>
+          <Name>snapshot cal day in month</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_cal_day_in_year</AttributeID>
+          <Name>snapshot cal day in year</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_cal_week_in_year</AttributeID>
+          <Name>snapshot cal week in year</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_cal_month_no</AttributeID>
+          <Name>snapshot cal month no</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_cal_month_name</AttributeID>
+          <Name>snapshot cal month name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_cal_quarter_no</AttributeID>
+          <Name>snapshot cal quarter no</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_cal_quarter</AttributeID>
+          <Name>snapshot cal quarter</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_fin_day_in_week</AttributeID>
+          <Name>snapshot fin day in week</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_fin_day_in_week_no</AttributeID>
+          <Name>snapshot fin day in week no</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_fin_day_in_month</AttributeID>
+          <Name>snapshot fin day in month</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_fin_day_in_year</AttributeID>
+          <Name>snapshot fin day in year</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_fin_week_in_month</AttributeID>
+          <Name>snapshot fin week in month</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_fin_week_in_year</AttributeID>
+          <Name>snapshot fin week in year</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_fin_month_no</AttributeID>
+          <Name>snapshot fin month no</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_fin_month</AttributeID>
+          <Name>snapshot fin month</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_fin_month_display</AttributeID>
+          <Name>snapshot fin month display</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_fin_month_name</AttributeID>
+          <Name>snapshot fin month name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_fin_quarter_no</AttributeID>
+          <Name>snapshot fin quarter no</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_current_cal_day</AttributeID>
+          <Name>snapshot current cal day</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_current_fin_day</AttributeID>
+          <Name>snapshot current fin day</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_current_fin_quarter</AttributeID>
+          <Name>snapshot current fin quarter</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_week_day_flag</AttributeID>
+          <Name>snapshot week day flag</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_week_end_flag</AttributeID>
+          <Name>snapshot week end flag</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_holiday_flag</AttributeID>
+          <Name>snapshot holiday flag</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_holiday_desc</AttributeID>
+          <Name>snapshot holiday desc</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_trading_day_flag</AttributeID>
+          <Name>snapshot trading day flag</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_trading_days_in_mth</AttributeID>
+          <Name>snapshot trading days in cal month</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_trading_days_so_far</AttributeID>
+          <Name>snapshot trading days in month so far</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_audit_date</AttributeID>
+          <Name>snapshot audit date</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_aud_day_in_week</AttributeID>
+          <Name>snapshot aud day in week</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_aud_day_in_week_no</AttributeID>
+          <Name>snapshot aud day in week no</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_aud_day_in_month</AttributeID>
+          <Name>snapshot aud day in month</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_aud_day_in_year</AttributeID>
+          <Name>snapshot aud day in year</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_aud_month_no</AttributeID>
+          <Name>snapshot aud month no</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_aud_month</AttributeID>
+          <Name>snapshot aud month</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_aud_month_display</AttributeID>
+          <Name>snapshot aud month display</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_aud_week_in_year</AttributeID>
+          <Name>snapshot aud week in year</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_aud_month_name</AttributeID>
+          <Name>snapshot aud month name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_aud_period</AttributeID>
+          <Name>snapshot aud period</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_aud_quarter_no</AttributeID>
+          <Name>snapshot aud quarter no</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_aud_quarter</AttributeID>
+          <Name>snapshot aud quarter</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_aud_year</AttributeID>
+          <Name>snapshot aud year</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_current_aud_day</AttributeID>
+          <Name>snapshot current aud day</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_current_aud_week</AttributeID>
+          <Name>snapshot current aud week</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_current_aud_month</AttributeID>
+          <Name>snapshot current aud month</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_current_aud_quarter</AttributeID>
+          <Name>snapshot current aud quarter</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_current_aud_year</AttributeID>
+          <Name>snapshot current aud year</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_current_aud_mtd</AttributeID>
+          <Name>snapshot current aud mtd</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_current_aud_ytd</AttributeID>
+          <Name>snapshot current aud ytd</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_moving_aud_quarter</AttributeID>
+          <Name>snapshot moving aud quarter</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_moving_aud_year</AttributeID>
+          <Name>snapshot moving aud year</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_cal_year</ID>
+      <Name>snapshot cal year</Name>
+      <Description>The calendar year. Format YYYY</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_cal_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_cal_year</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship>
+          <AttributeID>snapshot_current_cal_year</AttributeID>
+          <Name>snapshot_current_cal_year</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_current_cal_ytd</AttributeID>
+          <Name>snapshot_current_cal_ytd</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_moving_cal_year</AttributeID>
+          <Name>snapshot_moving_cal_year</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_cal_month</ID>
+      <Name>snapshot cal month</Name>
+      <Description>The calendar month representation. Format YYYYMM. Example: 200206.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_cal_month</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_cal_month</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship>
+          <AttributeID>snapshot_current_cal_month</AttributeID>
+          <Name>snapshot_current_cal_month</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_current_cal_mtd</AttributeID>
+          <Name>snapshot_current_cal_mtd</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_date</ID>
+      <Name>snapshot date</Name>
+      <Description>The calendar date for this row.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>dim_snapshot_date_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_date</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <MemberNamesUnique>true</MemberNamesUnique>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_fin_year</ID>
+      <Name>snapshot fin year</Name>
+      <Description>Financial year. Format YYYY.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_fin_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_fin_year</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship>
+          <AttributeID>snapshot_current_fin_year</AttributeID>
+          <Name>snapshot_current_fin_year</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_current_fin_ytd</AttributeID>
+          <Name>snapshot_current_fin_ytd</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_moving_fin_year</AttributeID>
+          <Name>snapshot_moving_fin_year</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_fin_quarter</ID>
+      <Name>snapshot fin quarter</Name>
+      <Description>Financial quarter representation. Format YYYYQQ. Example: 1989-Q1.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_fin_quarter</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_fin_quarter</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship>
+          <AttributeID>snapshot_moving_fin_quarter</AttributeID>
+          <Name>snapshot_moving_fin_quarter</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_fin_period</ID>
+      <Name>snapshot fin period</Name>
+      <Description>Financial period. Format (YYYY-MM) MON-YYYY. Example: (2001-02) Feb-2002.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_fin_period</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_fin_period</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_financial_date</ID>
+      <Name>snapshot financial date</Name>
+      <Description>The financial date. Same as calendar date.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_financial_date</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_financial_date</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_cal_day_in_week</ID>
+      <Name>snapshot cal day in week</Name>
+      <Description>The day in the week. Format DDD. Example: mon, tue, wed.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_cal_day_in_week</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_cal_day_in_week</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_cal_day_in_week_no</ID>
+      <Name>snapshot cal day in week no</Name>
+      <Description>The day number in the week. 1-7 where Sunday is day 1.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_cal_day_in_week_no</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_cal_day_in_week_no</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_cal_day_in_month</ID>
+      <Name>snapshot cal day in month</Name>
+      <Description>The day in the month 1-31.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_cal_day_in_month</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_cal_day_in_month</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_cal_day_in_year</ID>
+      <Name>snapshot cal day in year</Name>
+      <Description>The day in the year 1-366.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_cal_day_in_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_cal_day_in_year</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_cal_week_in_year</ID>
+      <Name>snapshot cal week in year</Name>
+      <Description>The week in the year 0-53.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_cal_week_in_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_cal_week_in_year</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship>
+          <AttributeID>snapshot_current_cal_week</AttributeID>
+          <Name>snapshot_current_cal_week</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_cal_month_no</ID>
+      <Name>snapshot cal month no</Name>
+      <Description>The calendar month number 1-12.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_cal_month_no</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_cal_month_no</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_cal_month_name</ID>
+      <Name>snapshot cal month name</Name>
+      <Description>The calendar month name. Format MON. Examples: jan, feb, mar.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_cal_month_name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_cal_month_name</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_cal_quarter_no</ID>
+      <Name>snapshot cal quarter no</Name>
+      <Description>The calendar quarter number 1-4.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_cal_quarter_no</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_cal_quarter_no</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_cal_quarter</ID>
+      <Name>snapshot cal quarter</Name>
+      <Description>The calendar quarter representation. Format YYYYQQ. Example 200204.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_cal_quarter</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_cal_quarter</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_fin_day_in_week</ID>
+      <Name>snapshot fin day in week</Name>
+      <Description>The financial day in the week. Format DDD. Example: mon,tue,wed.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_fin_day_in_week</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_fin_day_in_week</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_fin_day_in_week_no</ID>
+      <Name>snapshot fin day in week no</Name>
+      <Description>Day number in the current financial week.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_fin_day_in_week_no</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_fin_day_in_week_no</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_fin_day_in_month</ID>
+      <Name>snapshot fin day in month</Name>
+      <Description>Financial day in the month. Normally the same as calendar day in the month, unless the financial period starts mid calendar month.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_fin_day_in_month</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_fin_day_in_month</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_fin_day_in_year</ID>
+      <Name>snapshot fin day in year</Name>
+      <Description>Financial day in the year. Number of days since the start of the financial year.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_fin_day_in_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_fin_day_in_year</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_fin_week_in_month</ID>
+      <Name>snapshot fin week in month</Name>
+      <Description>Financial week in the financial month. </Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_fin_week_in_month</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_fin_week_in_month</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_fin_week_in_year</ID>
+      <Name>snapshot fin week in year</Name>
+      <Description>Financial week in the financial year. Number of weeks since the start of the financial year</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_fin_week_in_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_fin_week_in_year</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship>
+          <AttributeID>snapshot_current_fin_week</AttributeID>
+          <Name>snapshot_current_fin_week</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_fin_month_no</ID>
+      <Name>snapshot fin month no</Name>
+      <Description>Financial month number. Format MM. Examples: 1,2,3.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_fin_month_no</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_fin_month_no</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_fin_month</ID>
+      <Name>snapshot fin month</Name>
+      <Description>Financial month representation. Fromat YYYYMM. Examples: 200101, 200102.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_fin_month</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_fin_month</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship>
+          <AttributeID>snapshot_current_fin_month</AttributeID>
+          <Name>snapshot_current_fin_month</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>snapshot_current_fin_mtd</AttributeID>
+          <Name>snapshot_current_fin_mtd</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_fin_month_display</ID>
+      <Name>snapshot fin month display</Name>
+      <Description>Financial month representation. Fromat YYYY-MM. Examples: 2001-01, 2001-02.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_fin_month_display</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_fin_month_display</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_fin_month_name</ID>
+      <Name>snapshot fin month name</Name>
+      <Description>Financial month. Format MON. Examples: jan, feb, mar.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_fin_month_name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_fin_month_name</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_fin_quarter_no</ID>
+      <Name>snapshot fin quarter no</Name>
+      <Description>Financial quarter number (1-4).</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_fin_quarter_no</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_fin_quarter_no</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_current_cal_day</ID>
+      <Name>snapshot current cal day</Name>
+      <Description>Flag to indicate the current day. Normally set to the last day information was updated in the data warehouse.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_current_cal_day</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_current_cal_day</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_current_cal_week</ID>
+      <Name>snapshot current cal week</Name>
+      <Description>Flag to indicate the current week. Set as per current_cal_day.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_current_cal_week</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_current_cal_week</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_current_cal_month</ID>
+      <Name>snapshot current cal month</Name>
+      <Description>Flag to indicate the current month. Set as per current_cal_day.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_current_cal_month</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_current_cal_month</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_current_cal_year</ID>
+      <Name>snapshot current cal year</Name>
+      <Description>Flag to indicate the current year. Set as per current_cal_day.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_current_cal_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_current_cal_year</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_current_cal_mtd</ID>
+      <Name>snapshot current cal mtd</Name>
+      <Description>Flag to indicate days in the current month to date. Set as per current_cal_day.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_current_cal_mtd</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_current_cal_mtd</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_current_cal_ytd</ID>
+      <Name>snapshot current cal ytd</Name>
+      <Description>Flag to indicate days in the current year to date. Set as per current_cal_day.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_current_cal_ytd</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_current_cal_ytd</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_moving_cal_year</ID>
+      <Name>snapshot moving cal year</Name>
+      <Description>Flag to indicate days that constitute a full year counting back from the current day. Set as per current_cal_day.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_moving_cal_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_moving_cal_year</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_current_fin_day</ID>
+      <Name>snapshot current fin day</Name>
+      <Description>Flag to indicate the current financial day. Normally set to the last financial day information was updated in the data warehouse.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_current_fin_day</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_current_fin_day</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_current_fin_week</ID>
+      <Name>snapshot current fin week</Name>
+      <Description>Flag to indicate the current financial week. Set as per current_fin_day.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_current_fin_week</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_current_fin_week</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_current_fin_month</ID>
+      <Name>snapshot current fin month</Name>
+      <Description>Flag to indicate the current financial month. Set as per current_fin_day.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_current_fin_month</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_current_fin_month</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_current_fin_quarter</ID>
+      <Name>snapshot current fin quarter</Name>
+      <Description>Flag to indicate the current financial quarter. Set as per current_fin_day.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_current_fin_quarter</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_current_fin_quarter</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_current_fin_year</ID>
+      <Name>snapshot current fin year</Name>
+      <Description>Flag to indicate the current financial year. Set as per current_fin_day.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_current_fin_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_current_fin_year</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_current_fin_mtd</ID>
+      <Name>snapshot current fin mtd</Name>
+      <Description>Flag to indicate days in the current financial month to date. Set as per current_fin_day.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_current_fin_mtd</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_current_fin_mtd</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_current_fin_ytd</ID>
+      <Name>snapshot current fin ytd</Name>
+      <Description>Flag to indicate days in the current financial year to date. Set as per current_fin_day.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_current_fin_ytd</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_current_fin_ytd</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_moving_fin_quarter</ID>
+      <Name>snapshot moving fin quarter</Name>
+      <Description>Flag to indicate days that constitute a quarter counting back from the current financial day. Set as per current_fin_day.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_moving_fin_quarter</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_moving_fin_quarter</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_moving_fin_year</ID>
+      <Name>snapshot moving fin year</Name>
+      <Description>Flag to indicate days that constitute a financial year counting back from the current financial day. Set as per current_fin_day.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_moving_fin_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_moving_fin_year</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_week_day_flag</ID>
+      <Name>snapshot week day flag</Name>
+      <Description>Flag to indicate if a week day Y=week day N=week end.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_week_day_flag</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_week_day_flag</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_week_end_flag</ID>
+      <Name>snapshot week end flag</Name>
+      <Description>Flag to indicate a week end day. Y=week end, N=week day.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_week_end_flag</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_week_end_flag</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_holiday_flag</ID>
+      <Name>snapshot holiday flag</Name>
+      <Description>Flag to indicate that the day in question is a holiday. Y=holiday, N=normal.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_holiday_flag</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_holiday_flag</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_holiday_desc</ID>
+      <Name>snapshot holiday desc</Name>
+      <Description>Description of the holiday when a holiday.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_holiday_desc</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_holiday_desc</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_trading_day_flag</ID>
+      <Name>snapshot trading day flag</Name>
+      <Description>Flag to indicate a trading day. Y=trading, N=non trading.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_trading_day_flag</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_trading_day_flag</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_trading_days_in_mth</ID>
+      <Name>snapshot trading days in cal month</Name>
+      <Description>Number of trading days in this calendar month.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_trading_days_in_mth</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_trading_days_in_mth</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_trading_days_so_far</ID>
+      <Name>snapshot trading days in month so far</Name>
+      <Description>Number of trading days in the month so far.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_trading_days_so_far</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_trading_days_so_far</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_audit_date</ID>
+      <Name>snapshot audit date</Name>
+      <Description>The audit date. Same as calendar date.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_audit_date</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_audit_date</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_aud_day_in_week</ID>
+      <Name>snapshot aud day in week</Name>
+      <Description>The audit day in the week. Format DDD. Example: mon,tue,wed.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_aud_day_in_week</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_aud_day_in_week</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_aud_day_in_week_no</ID>
+      <Name>snapshot aud day in week no</Name>
+      <Description>Day number in the current audit week.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_aud_day_in_week_no</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_aud_day_in_week_no</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_aud_day_in_month</ID>
+      <Name>snapshot aud day in month</Name>
+      <Description>Audit day in the month. Normally the same as calendar day in the month, unless the audit period starts mid calendar month.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_aud_day_in_month</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_aud_day_in_month</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_aud_day_in_year</ID>
+      <Name>snapshot aud day in year</Name>
+      <Description>Audit day in the year. Number of days since the start of the Audit year.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_aud_day_in_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_aud_day_in_year</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_aud_month_no</ID>
+      <Name>snapshot aud month no</Name>
+      <Description>Audit month number. Format MM. Examples: 1,2,3.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_aud_month_no</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_aud_month_no</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_aud_month</ID>
+      <Name>snapshot aud month</Name>
+      <Description>Audit month representation. Fromat YYYYMM. Examples: 200101, 200102.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_aud_month</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_aud_month</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_aud_month_display</ID>
+      <Name>snapshot aud month display</Name>
+      <Description>Audit month representation. Fromat YYYY-MM. Examples: 2001-01, 2001-02.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_aud_month_display</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_aud_month_display</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_aud_week_in_year</ID>
+      <Name>snapshot aud week in year</Name>
+      <Description>Audit week in the audit year. Number of weeks since the start of the audit year</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_aud_week_in_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_aud_week_in_year</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_aud_month_name</ID>
+      <Name>snapshot aud month name</Name>
+      <Description>Audit month. Format MON. Examples: jan, feb, mar.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_aud_month_name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_aud_month_name</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_aud_period</ID>
+      <Name>snapshot aud period</Name>
+      <Description>Audit period. Format (YYYY-MM) MON-YYYY. Example: (2001-02) Feb-2002.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_aud_period</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_aud_period</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_aud_quarter_no</ID>
+      <Name>snapshot aud quarter no</Name>
+      <Description>Audit quarter number (1-4).</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_aud_quarter_no</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_aud_quarter_no</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_aud_quarter</ID>
+      <Name>snapshot aud quarter</Name>
+      <Description>Audit quarter representation. Format YYYYQQ. Example: 1989-Q1.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_aud_quarter</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_aud_quarter</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_aud_year</ID>
+      <Name>snapshot aud year</Name>
+      <Description>Audit year. Format YYYY.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_aud_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_aud_year</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_current_aud_day</ID>
+      <Name>snapshot current aud day</Name>
+      <Description>Flag to indicate the current audit day. Normally set to the last audit day information was updated in the data warehouse.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_current_aud_day</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_current_aud_day</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_current_aud_week</ID>
+      <Name>snapshot current aud week</Name>
+      <Description>Flag to indicate the current audit week. Set as per current_aud_day.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_current_aud_week</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_current_aud_week</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_current_aud_month</ID>
+      <Name>snapshot current aud month</Name>
+      <Description>Flag to indicate the current audit month. Set as per current_aud_day.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_current_aud_month</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_current_aud_month</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_current_aud_quarter</ID>
+      <Name>snapshot current aud quarter</Name>
+      <Description>Flag to indicate the current audit quarter. Set as per current_aud_day.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_current_aud_quarter</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_current_aud_quarter</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_current_aud_year</ID>
+      <Name>snapshot current aud year</Name>
+      <Description>Flag to indicate the current audit year. Set as per current_aud_day.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_current_aud_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_current_aud_year</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_current_aud_mtd</ID>
+      <Name>snapshot current aud mtd</Name>
+      <Description>Flag to indicate days in the current audit month to date. Set as per current_aud_day.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_current_aud_mtd</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_current_aud_mtd</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_current_aud_ytd</ID>
+      <Name>snapshot current aud ytd</Name>
+      <Description>Flag to indicate days in the current audit year to date. Set as per current_aud_day.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_current_aud_ytd</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_current_aud_ytd</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_moving_aud_quarter</ID>
+      <Name>snapshot moving aud quarter</Name>
+      <Description>Flag to indicate days that constitute a quarter counting back from the current audit day. Set as per current_aud_day.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_moving_aud_quarter</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_moving_aud_quarter</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>snapshot_moving_aud_year</ID>
+      <Name>snapshot moving aud year</Name>
+      <Description>Flag to indicate days that constitute a audit year counting back from the current audit day. Set as per current_aud_day.</Description>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_snapshot_date</TableID>
+            <ColumnID>snapshot_moving_aud_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_snapshot_date</TableID>
+          <ColumnID>snapshot_moving_aud_year</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <AttributeAllMemberName>All snapshot_date</AttributeAllMemberName>
+  <Hierarchies>
+    <Hierarchy>
+      <ID>calendar</ID>
+      <Name>calendar</Name>
+      <Description>Default hierarchy used for cube generation. Remove if required</Description>
+      <Levels>
+        <Level>
+          <ID>snapshot_cal_year</ID>
+          <Name>snapshot cal year</Name>
+          <Description>The calendar year. Format YYYY</Description>
+          <SourceAttributeID>snapshot_cal_year</SourceAttributeID>
+        </Level>
+        <Level>
+          <ID>snapshot_cal_month</ID>
+          <Name>snapshot cal month</Name>
+          <Description>The calendar month representation. Format YYYYMM. Example: 200206.</Description>
+          <SourceAttributeID>snapshot_cal_month</SourceAttributeID>
+        </Level>
+        <Level>
+          <ID>snapshot_date</ID>
+          <Name>snapshot date</Name>
+          <Description>The calendar date for this row.</Description>
+          <SourceAttributeID>snapshot_date</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy>
+      <ID>financial calendar</ID>
+      <Name>financial calendar</Name>
+      <Description>Added at dimension creation for cube support</Description>
+      <Levels>
+        <Level>
+          <ID>snapshot_fin_year</ID>
+          <Name>snapshot fin year</Name>
+          <Description>Financial year. Format YYYY.</Description>
+          <SourceAttributeID>snapshot_fin_year</SourceAttributeID>
+        </Level>
+        <Level>
+          <ID>snapshot_fin_quarter</ID>
+          <Name>snapshot fin quarter</Name>
+          <Description>Financial quarter representation. Format YYYYQQ. Example: 1989-Q1.</Description>
+          <SourceAttributeID>snapshot_fin_quarter</SourceAttributeID>
+        </Level>
+        <Level>
+          <ID>snapshot_fin_period</ID>
+          <Name>snapshot fin period</Name>
+          <Description>Financial period. Format (YYYY-MM) MON-YYYY. Example: (2001-02) Feb-2002.</Description>
+          <SourceAttributeID>snapshot_fin_period</SourceAttributeID>
+        </Level>
+        <Level>
+          <ID>snapshot_financial_date</ID>
+          <Name>snapshot financial date</Name>
+          <Description>The financial date. Same as calendar date.</Description>
+          <SourceAttributeID>snapshot_financial_date</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ProactiveCaching>
+    <SilenceInterval>-PT1S</SilenceInterval>
+    <Latency>-PT1S</Latency>
+    <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+    <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+    <Source xsi:type="ProactiveCachingInheritedBinding" />
+  </ProactiveCaching>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
