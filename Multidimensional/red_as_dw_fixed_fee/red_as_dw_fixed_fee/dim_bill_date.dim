@@ -1,0 +1,483 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>odim_bill_date</ID>
+  <Name>dim_bill_date</Name>
+  <CreatedTimestamp>2017-04-18T13:41:05.936667Z</CreatedTimestamp>
+  <LastSchemaUpdate>2017-07-18T12:47:46.683333Z</LastSchemaUpdate>
+  <Description>Bill Date dimension.</Description>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>2018-12-16T08:27:13.983333Z</LastProcessed>
+  <State>Processed</State>
+  <Source xsi:type="DataSourceViewBinding">
+    <DataSourceViewID>red_dw</DataSourceViewID>
+  </Source>
+  <Type>Time</Type>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <DimensionPermissions>
+    <DimensionPermission>
+      <ID>DimensionPermission</ID>
+      <Name>DimensionPermission</Name>
+      <CreatedTimestamp>2017-12-19T13:45:51.47Z</CreatedTimestamp>
+      <LastSchemaUpdate>2017-12-19T13:45:51.47Z</LastSchemaUpdate>
+      <RoleID>Role</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+  </DimensionPermissions>
+  <Language>2057</Language>
+  <Collation>Latin1_General_CI_AS</Collation>
+  <UnknownMemberName>Unknown</UnknownMemberName>
+  <Attributes>
+    <Attribute>
+      <ID>dim_bill_date_key</ID>
+      <Name>dim_bill_date_key</Name>
+      <Description>Key for dim_bill_date</Description>
+      <Type>Days</Type>
+      <Usage>Key</Usage>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_bill_date</TableID>
+            <ColumnID>dim_bill_date_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_bill_date</TableID>
+          <ColumnID>dim_bill_date_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship>
+          <AttributeID>bill_financial_date</AttributeID>
+          <Name>Bill financial date</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>bill_fin_day_in_month</AttributeID>
+          <Name>Bill fin day in month</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>bill_fin_month_no</AttributeID>
+          <Name>Bill fin month no</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>bill_fin_month</AttributeID>
+          <Name>Bill fin month</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>bill_fin_month_name</AttributeID>
+          <Name>Bill fin month name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship>
+          <AttributeID>bill_fin_quarter_no</AttributeID>
+          <Name>Bill fin quarter no</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_bill_date</TableID>
+          <ColumnID>dim_bill_date_key</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>bill_fin_year</ID>
+      <Name>Bill fin year</Name>
+      <Description>Financial year. Format YYYY.</Description>
+      <Type>Years</Type>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_bill_date</TableID>
+            <ColumnID>bill_fin_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_bill_date</TableID>
+          <ColumnID>bill_fin_year</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_bill_date</TableID>
+          <ColumnID>bill_fin_year</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>bill_fin_quarter</ID>
+      <Name>Bill fin quarter</Name>
+      <Description>Financial quarter representation. Format YYYYQQ. Example: 198901.</Description>
+      <Type>Quarters</Type>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_bill_date</TableID>
+            <ColumnID>bill_fin_quarter</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_bill_date</TableID>
+          <ColumnID>bill_fin_quarter</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship>
+          <AttributeID>bill_fin_year</AttributeID>
+          <Name>bill_fin_year</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_bill_date</TableID>
+          <ColumnID>bill_fin_quarter</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>bill_fin_period</ID>
+      <Name>Bill fin period</Name>
+      <Description>Financial period. Format (YYYY-MM) MON-YYYY. Example: (2001-02) Feb-2002.</Description>
+      <Type>Months</Type>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_bill_date</TableID>
+            <ColumnID>bill_fin_period</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_bill_date</TableID>
+          <ColumnID>bill_fin_period</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship>
+          <AttributeID>bill_fin_quarter</AttributeID>
+          <Name>bill_fin_quarter</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_bill_date</TableID>
+          <ColumnID>bill_fin_period</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>bill_financial_date</ID>
+      <Name>Bill financial date</Name>
+      <Description>The financial date. Same as calendar date.</Description>
+      <Type>Date</Type>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_bill_date</TableID>
+            <ColumnID>bill_financial_date</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_bill_date</TableID>
+          <ColumnID>bill_financial_date</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship>
+          <AttributeID>bill_fin_period</AttributeID>
+          <Name>bill_fin_period</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Date</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_bill_date</TableID>
+          <ColumnID>bill_financial_date</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>bill_fin_day_in_month</ID>
+      <Name>Bill fin day in month</Name>
+      <Description>Financial day in the month. Normally the same as calendar day in the month, unless the financial period starts mid calendar month.</Description>
+      <Type>Days</Type>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_bill_date</TableID>
+            <ColumnID>bill_fin_day_in_month</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_bill_date</TableID>
+          <ColumnID>bill_fin_day_in_month</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_bill_date</TableID>
+          <ColumnID>bill_fin_day_in_month</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>bill_fin_month_no</ID>
+      <Name>Bill fin month no</Name>
+      <Description>Financial month number. Format MM. Examples: 1,2,3.</Description>
+      <Type>Months</Type>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_bill_date</TableID>
+            <ColumnID>bill_fin_month_no</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_bill_date</TableID>
+          <ColumnID>bill_fin_month_no</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_bill_date</TableID>
+          <ColumnID>bill_fin_month_no</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>bill_fin_month</ID>
+      <Name>Bill fin month</Name>
+      <Description>Financial month representation. Fromat YYYYMM. Examples: 200101, 200102.</Description>
+      <Type>Months</Type>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_bill_date</TableID>
+            <ColumnID>bill_fin_month</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_bill_date</TableID>
+          <ColumnID>bill_fin_month</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_bill_date</TableID>
+          <ColumnID>bill_fin_month</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>bill_fin_month_name</ID>
+      <Name>Bill fin month name</Name>
+      <Description>Financial month. Format MON. Examples: jan, feb, mar.</Description>
+      <Type>Months</Type>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_bill_date</TableID>
+            <ColumnID>bill_fin_month_name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_bill_date</TableID>
+          <ColumnID>bill_fin_month_name</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_bill_date</TableID>
+          <ColumnID>bill_fin_month_name</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>bill_fin_quarter_no</ID>
+      <Name>Bill fin quarter no</Name>
+      <Description>Financial quarter number (1-4).</Description>
+      <Type>Quarters</Type>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dim_bill_date</TableID>
+            <ColumnID>bill_fin_quarter_no</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_bill_date</TableID>
+          <ColumnID>bill_fin_quarter_no</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn>
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dim_bill_date</TableID>
+          <ColumnID>bill_fin_quarter_no</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <AttributeAllMemberName>All bill_date</AttributeAllMemberName>
+  <Hierarchies>
+    <Hierarchy>
+      <ID>financial calendar</ID>
+      <Name>financial calendar</Name>
+      <Description>Added at dimension creation for cube support</Description>
+      <Levels>
+        <Level>
+          <ID>bill_fin_year</ID>
+          <Name>Bill fin year</Name>
+          <Description>Financial year. Format YYYY.</Description>
+          <SourceAttributeID>bill_fin_year</SourceAttributeID>
+        </Level>
+        <Level>
+          <ID>bill_fin_quarter</ID>
+          <Name>Bill fin quarter</Name>
+          <Description>Financial quarter representation. Format YYYYQQ. Example: 198901.</Description>
+          <SourceAttributeID>bill_fin_quarter</SourceAttributeID>
+        </Level>
+        <Level>
+          <ID>bill_fin_period</ID>
+          <Name>Bill fin period</Name>
+          <Description>Financial period. Format (YYYY-MM) MON-YYYY. Example: (2001-02) Feb-2002.</Description>
+          <SourceAttributeID>bill_fin_period</SourceAttributeID>
+        </Level>
+        <Level>
+          <ID>bill_financial_date</ID>
+          <Name>Bill financial date</Name>
+          <Description>The financial date. Same as calendar date.</Description>
+          <SourceAttributeID>bill_financial_date</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ProactiveCaching>
+    <SilenceInterval>-PT1S</SilenceInterval>
+    <Latency>-PT1S</Latency>
+    <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+    <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+    <Source xsi:type="ProactiveCachingInheritedBinding" />
+  </ProactiveCaching>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
