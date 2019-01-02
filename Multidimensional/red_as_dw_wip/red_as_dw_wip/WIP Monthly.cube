@@ -1,4 +1,4 @@
-﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="e20dbf13-e625-4d65-9859-c09a07e0eabb" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>WIP Monthly</ID>
   <Name>WIP Monthly</Name>
   <CreatedTimestamp>2016-05-13T14:22:47.82Z</CreatedTimestamp>
@@ -364,231 +364,231 @@
   <Language>2057</Language>
   <Collation>Latin1_General_CI_AS</Collation>
   <Dimensions>
-    <Dimension>
+    <Dimension dwd:design-time-name="7b2be6a2-6268-4c4d-8f5e-d77c319f86ef">
       <ID>Dim Days Banding</ID>
       <Name>WIP Age</Name>
       <DimensionID>Dim Days Banding</DimensionID>
       <Attributes>
-        <Attribute>
+        <Attribute dwd:design-time-name="569eaf47-c0ea-4237-9c69-d51a33a796ec">
           <AttributeID>Dim Days Banding Key</AttributeID>
           <AttributeHierarchyOptimizedState>NotOptimized</AttributeHierarchyOptimizedState>
           <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="38922fe7-1238-40b5-97a4-b940c732fa26">
           <AttributeID>Daysbanding</AttributeID>
         </Attribute>
       </Attributes>
     </Dimension>
-    <Dimension>
+    <Dimension dwd:design-time-name="12cf0e90-597f-4f88-8ce5-1cf82b1d256f">
       <ID>Dim Fed Hierarchy History</ID>
       <Name>Employee - Time Owner</Name>
       <DimensionID>Dim Fed Hierarchy History</DimensionID>
       <Attributes>
-        <Attribute>
+        <Attribute dwd:design-time-name="667ab515-745c-49e2-a7f9-bcdb0fa016f7">
           <AttributeID>Dim Fed Hierarchy History Key</AttributeID>
           <AttributeHierarchyOptimizedState>NotOptimized</AttributeHierarchyOptimizedState>
           <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="d270a605-e0ee-4b03-b5be-9f3e6e98e13d">
           <AttributeID>Fed Code</AttributeID>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="1695a0c9-f2a5-45df-ad94-6c89d5ef0dcb">
           <AttributeID>Display Name</AttributeID>
           <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="9ba96c00-d24c-427d-a132-377163f9972d">
           <AttributeID>Hierarchylevel1hist</AttributeID>
           <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="93e9cb21-4ee0-4aa9-804c-c82944e68b14">
           <AttributeID>Hierarchylevel2hist</AttributeID>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="c8e6c89e-1e42-401d-8582-2f8f24ef02f8">
           <AttributeID>Hierarchylevel3hist</AttributeID>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="4b37178d-3831-45d5-bdae-d229547c2fed">
           <AttributeID>Hierarchylevel4hist</AttributeID>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="963a2e3f-8d89-41a1-862f-1b9de930d3eb">
           <AttributeID>Hierarchylevel5hist</AttributeID>
           <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="f42d8773-b0fe-4e43-85fe-82fca7400501">
           <AttributeID>Fed Hierarchy Business Key</AttributeID>
           <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="41c6e2ba-e50f-47b4-af94-67761e58089c">
           <AttributeID>Name</AttributeID>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="4dd7d441-df2f-4c35-b57c-ebcbb8655bcc">
           <AttributeID>Windowsusername</AttributeID>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="3e36f377-cb08-42ba-9caf-1c9e1af878fa">
           <AttributeID>Hierarchylevel6hist</AttributeID>
           <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
         </Attribute>
       </Attributes>
       <Hierarchies>
-        <Hierarchy>
+        <Hierarchy dwd:design-time-name="2beebd6c-63c7-4f48-8001-831b9eb69baf">
           <HierarchyID>Hierarchy</HierarchyID>
         </Hierarchy>
       </Hierarchies>
     </Dimension>
-    <Dimension>
+    <Dimension dwd:design-time-name="fe83e9a8-87eb-4669-aa4e-d9db28371509">
       <ID>Dim Matter Header History</ID>
       <Name>Matter</Name>
       <DimensionID>Dim Matter Header History</DimensionID>
       <Attributes>
-        <Attribute>
+        <Attribute dwd:design-time-name="ebf9c979-1a75-4695-8d06-6321fc7744a4">
           <AttributeID>Dim Mat Head History Key</AttributeID>
           <AttributeHierarchyOptimizedState>NotOptimized</AttributeHierarchyOptimizedState>
           <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="6b5d47fe-91a7-4e87-b5c1-aa582ca20ef5">
           <AttributeID>Matter Number</AttributeID>
           <AttributeHierarchyOptimizedState>NotOptimized</AttributeHierarchyOptimizedState>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="21a8c50b-6e0e-40ba-a689-fe41ca6f9a2a">
           <AttributeID>Matter Description</AttributeID>
           <AttributeHierarchyOptimizedState>NotOptimized</AttributeHierarchyOptimizedState>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="cb17158a-149d-4347-a5ff-59eb9f4c5eac">
           <AttributeID>Date Opened Practice Management</AttributeID>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="cd719ce6-b13e-4241-bd5e-bf6d9443ee5c">
           <AttributeID>Date Closed Practice Management</AttributeID>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="39960dfd-51b3-4e1b-81a7-73da34c92eec">
           <AttributeID>Fixed Fee</AttributeID>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="dbeb171c-4bd8-4889-97f6-5d22c93d4a98">
           <AttributeID>Instruction Type</AttributeID>
         </Attribute>
       </Attributes>
     </Dimension>
-    <Dimension>
+    <Dimension dwd:design-time-name="57debe8e-0049-4a43-bf86-f471fecf4400">
       <ID>Dim Client</ID>
       <Name>Client</Name>
       <DimensionID>Dim Client</DimensionID>
       <Attributes>
-        <Attribute>
+        <Attribute dwd:design-time-name="34272e45-6e4a-415a-a995-e6b9ed46a2d6">
           <AttributeID>Dim Client Key</AttributeID>
           <AttributeHierarchyOptimizedState>NotOptimized</AttributeHierarchyOptimizedState>
           <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="873cfa0e-354f-4318-8af4-6adc68966321">
           <AttributeID>Client Code</AttributeID>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="b8670858-bb38-40ad-a3bc-c3b0c393c833">
           <AttributeID>Client Name</AttributeID>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="7f92b2ed-c7ae-421b-8306-377361107711">
           <AttributeID>Client Group Name</AttributeID>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="96fae035-5177-4ea1-8f31-2d0c219037bf">
           <AttributeID>Client Partner Name</AttributeID>
         </Attribute>
       </Attributes>
       <Hierarchies>
-        <Hierarchy>
+        <Hierarchy dwd:design-time-name="df7e90c4-692c-4f12-927b-e2489d8e05e6">
           <HierarchyID>Hierarchy</HierarchyID>
         </Hierarchy>
       </Hierarchies>
     </Dimension>
-    <Dimension>
+    <Dimension dwd:design-time-name="b7597fa3-abce-4075-a3f9-835cf7f85c4d">
       <ID>Dim WIP Date</ID>
       <Name>WIP Date</Name>
       <DimensionID>Dim WIP Date</DimensionID>
       <Attributes>
-        <Attribute>
+        <Attribute dwd:design-time-name="c10b4567-3c83-4a95-80a5-1e20e0a095c7">
           <AttributeID>Dim Date Key</AttributeID>
           <AttributeHierarchyOptimizedState>NotOptimized</AttributeHierarchyOptimizedState>
           <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="b08c11c0-4125-4bb5-ac94-c7621262a861">
           <AttributeID>Calendar Date</AttributeID>
           <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="55e22c24-9d90-415e-9c20-189e2e9f3d51">
           <AttributeID>Fin Period</AttributeID>
           <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="d7553c9e-2dc3-495d-b81b-8b54279dd1c9">
           <AttributeID>Fin Quarter</AttributeID>
           <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="bed19f72-3736-406f-a214-ba565c4402aa">
           <AttributeID>Fin Year</AttributeID>
           <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="ecf53a9d-5be6-4384-ac77-862a96c2af7a">
           <AttributeID>Fin Month</AttributeID>
         </Attribute>
       </Attributes>
       <Hierarchies>
-        <Hierarchy>
+        <Hierarchy dwd:design-time-name="57a1b870-8da6-458c-87fe-f975b9b04f0b">
           <HierarchyID>Hierarchy</HierarchyID>
         </Hierarchy>
       </Hierarchies>
     </Dimension>
-    <Dimension>
+    <Dimension dwd:design-time-name="63ed7276-d977-4a6c-853d-0135c53404ae">
       <ID>Dim Fed Hierarchy History 1</ID>
       <Name>Employee - Matter Owner</Name>
       <DimensionID>Dim Fed Hierarchy History</DimensionID>
       <Attributes>
-        <Attribute>
+        <Attribute dwd:design-time-name="be0ea022-620f-4d73-8511-ff3d27f53f2c">
           <AttributeID>Dim Fed Hierarchy History Key</AttributeID>
           <AttributeHierarchyOptimizedState>NotOptimized</AttributeHierarchyOptimizedState>
           <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="fc358efb-e8b0-4d60-b6fd-b5fff26f3f2a">
           <AttributeID>Fed Code</AttributeID>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="105e2561-4c78-4087-8e43-09bddd29eeee">
           <AttributeID>Display Name</AttributeID>
           <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="9015b3c8-7c0e-4507-ac84-22ce58ac29e7">
           <AttributeID>Hierarchylevel1hist</AttributeID>
           <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="87753fba-f812-4d9b-a456-01311f7f0901">
           <AttributeID>Hierarchylevel2hist</AttributeID>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="498fc638-af60-42df-bab7-225701096a21">
           <AttributeID>Hierarchylevel3hist</AttributeID>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="ba5ba99f-11cb-4acb-9862-1ea07dbc2b26">
           <AttributeID>Hierarchylevel4hist</AttributeID>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="a34936df-a840-4f9a-85e9-586b0b2a04f8">
           <AttributeID>Hierarchylevel5hist</AttributeID>
           <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="033aee24-293f-45ea-b3da-e0d3faacd97e">
           <AttributeID>Fed Hierarchy Business Key</AttributeID>
           <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="c946463d-6b62-4c8a-a01e-094bf8c14a5d">
           <AttributeID>Name</AttributeID>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="91fb7b42-e45c-431b-9d41-4df27c47eb89">
           <AttributeID>Windowsusername</AttributeID>
         </Attribute>
-        <Attribute>
+        <Attribute dwd:design-time-name="2b4328f9-9444-4b26-ada4-d80ea33fecf7">
           <AttributeID>Hierarchylevel6hist</AttributeID>
           <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
         </Attribute>
       </Attributes>
       <Hierarchies>
-        <Hierarchy>
+        <Hierarchy dwd:design-time-name="dc3a28e5-9027-47ea-8f1a-db11c734465b">
           <HierarchyID>Hierarchy</HierarchyID>
         </Hierarchy>
       </Hierarchies>
     </Dimension>
   </Dimensions>
   <CubePermissions>
-    <CubePermission>
+    <CubePermission dwd:design-time-name="b88c72b9-5168-4394-b9de-c1636f23038d">
       <ID>CubePermission</ID>
       <Name>CubePermission</Name>
       <CreatedTimestamp>2017-12-19T13:43:08.176667Z</CreatedTimestamp>
@@ -599,7 +599,7 @@
     </CubePermission>
   </CubePermissions>
   <MeasureGroups>
-    <MeasureGroup>
+    <MeasureGroup dwd:design-time-name="628d09aa-f779-4c52-83c1-7b10181dfec3">
       <ID>Fact Wip Monthly</ID>
       <Name>Wip Monthly</Name>
       <CreatedTimestamp>2016-05-13T14:22:47.883333Z</CreatedTimestamp>
@@ -607,39 +607,39 @@
       <LastProcessed>2018-12-17T02:30:27.366667Z</LastProcessed>
       <State>Processed</State>
       <Measures>
-        <Measure>
+        <Measure dwd:design-time-name="a17d4586-a8c5-49f7-ad82-e7842244b811">
           <ID>Wip Minutes</ID>
           <Name>Wip Minutes</Name>
           <DataType>Integer</DataType>
-          <Source>
+          <Source dwd:design-time-name="9bf912dd-9c6b-4149-805d-7405443c77e0">
             <DataType>Integer</DataType>
-            <Source xsi:type="ColumnBinding">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="4e07c643-617a-4a9e-8201-c6ebce318198">
               <TableID>dbo_fact_wip_monthly</TableID>
               <ColumnID>WIP_x0020_Minutes</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure>
+        <Measure dwd:design-time-name="e720246b-d6c9-4adf-a05f-950edbdb3793">
           <ID>Wip Value</ID>
           <Name>Wip Value</Name>
           <DataType>Double</DataType>
-          <Source>
+          <Source dwd:design-time-name="eb558baa-bc2e-4ed3-9ada-43a0b0c73360">
             <DataType>Double</DataType>
             <Format>£#,##0.00;-£#,##0.00</Format>
-            <Source xsi:type="ColumnBinding">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="58fc4299-8892-4494-bd93-0f7df561905c">
               <TableID>dbo_fact_wip_monthly</TableID>
               <ColumnID>WIP_x0020_Value</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure>
+        <Measure dwd:design-time-name="8210f5da-3e5d-4ee0-8745-c5fcadb9d2ee">
           <ID>Wip Over 90 Days</ID>
           <Name>Amount of Wip Over 90 Days</Name>
           <DataType>Double</DataType>
-          <Source>
+          <Source dwd:design-time-name="3ac5c96a-61f2-4795-a798-cc44987ffa4a">
             <DataType>Double</DataType>
             <Format>Percent</Format>
-            <Source xsi:type="ColumnBinding">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="4dfec9d3-49d4-4164-b872-e336b6a27281">
               <TableID>dbo_fact_wip_monthly</TableID>
               <ColumnID>wip_over_90_days</ColumnID>
             </Source>
@@ -651,16 +651,16 @@
       <EstimatedSize>72555230</EstimatedSize>
       <ProcessingMode>Regular</ProcessingMode>
       <Dimensions>
-        <Dimension xsi:type="RegularMeasureGroupDimension">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d4b8ccbd-ac8b-4149-b19f-ae562a1fdbb5">
           <CubeDimensionID>Dim Days Banding</CubeDimensionID>
           <Attributes>
-            <Attribute>
+            <Attribute dwd:design-time-name="a8264423-1bf0-434a-98ef-2af4beb0e82c">
               <AttributeID>Dim Days Banding Key</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="c422ab1d-4d84-4a09-9d1f-7a062f096019">
                   <DataType>Integer</DataType>
                   <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="cec14279-cb7a-4bec-bbea-44d06386e5c6">
                     <TableID>dbo_fact_wip_monthly</TableID>
                     <ColumnID>Dim_x0020_Days_x0020_Banding_x0020_Key</ColumnID>
                   </Source>
@@ -668,12 +668,12 @@
               </KeyColumns>
               <Type>Granularity</Type>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="791c4239-22b8-49d2-a4e8-97622ffc0238">
               <AttributeID>Daysbanding</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="9b605f4e-8628-4bc9-a225-d509ee16aded">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2efad989-6132-4d4c-81e3-900f0f277709">
                     <TableID>dbo_dim_days_banding</TableID>
                     <ColumnID>Dim_x0020_Days_x0020_Banding_x0020_Key</ColumnID>
                   </Source>
@@ -682,16 +682,16 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="606fe256-9119-4359-9e96-8f8ef1aa1322">
           <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
           <Attributes>
-            <Attribute>
+            <Attribute dwd:design-time-name="007d6ccb-f85f-44a2-bfe5-e0efab7dfcd3">
               <AttributeID>Dim Fed Hierarchy History Key</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="47200b64-b983-46b5-8f86-11d8e05577cd">
                   <DataType>Integer</DataType>
                   <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9c1fceef-960b-4d8d-bc64-9996fbe97724">
                     <TableID>dbo_fact_wip_monthly</TableID>
                     <ColumnID>Dim_x0020_Fed_x0020_Hierarchy_x0020_History_x0020_Key</ColumnID>
                   </Source>
@@ -699,316 +699,316 @@
               </KeyColumns>
               <Type>Granularity</Type>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="cd80c00a-61bd-42dc-92e3-e5f28c6ca835">
               <AttributeID>Fed Code</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="18bc2e0d-2658-43cc-b33f-20736255b0e3">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
                   <Collation>Latin1_General_CS_AS</Collation>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b2660b9a-fb8a-44cf-bf84-e61551ab47ec">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Fee_x0020_Earner_x0020_Code</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="0ac31124-1203-44ca-ba12-8f63e00caad2">
               <AttributeID>Display Name</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="e5c80f84-9e43-44c5-bbf1-bfbd2b8ac4b7">
                   <DataType>WChar</DataType>
                   <DataSize>100</DataSize>
                   <Collation>Latin1_General_CS_AS</Collation>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="0cd2e7f9-ec45-42ec-9c98-4064c317b408">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Display_x0020_Name</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="5f2272bc-c89b-42c5-8d18-c6bafdba5a7e">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="8d0a7c4d-7b43-4d3d-9618-4b87c058f547">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>hierarchylevel6hist</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="bbdeb2f2-a99d-4b6d-bdaf-fd036823e294">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9dd2eb3a-9aab-47b0-a2aa-5749aea0b723">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Subteam</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="c03faf09-9626-43ba-aff4-25ce58267868">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="789eb799-c712-48b0-b402-09027a28f145">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Team</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="02816625-076a-4890-b904-5942764360fd">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b8396cc6-b21c-4b95-bce0-aac58bfa5951">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Practice_x0020_Area</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="ae0f445a-4dfa-436e-bf40-5a5147011863">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e3a177fb-4fc2-43a9-9da4-9a9467e7202a">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Business_x0020_Line</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="5193ca62-5f5d-41c3-ad0c-30c219755ae9">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e3f01e2b-3427-410c-be12-4f2c0f364b8c">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Organisation</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="c31cae6c-fac5-4b27-89c3-5cd515901378">
               <AttributeID>Hierarchylevel1hist</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="5e6feeb1-e667-4a05-ac40-0485a40d267e">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="8130d544-fca5-42a2-a94a-c11ec381e1f8">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Organisation</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="f80bf14e-bdfc-47cf-9c46-25dbe0f35033">
               <AttributeID>Hierarchylevel2hist</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="7f01f478-0298-41ff-a13e-7c9ef583d3fd">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="272f1353-8cdf-4d1c-835c-07231f51f209">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Business_x0020_Line</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="c2ee810e-feae-4241-85f3-41c672d615f0">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="45de8152-fcf9-40bd-9d68-debf857ce5c9">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Organisation</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="4579bd39-94c9-409b-8731-c91ee69c7e3b">
               <AttributeID>Hierarchylevel3hist</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="7bca76a0-1a85-4e15-8d1f-7527320ef2ee">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5ffc1dbf-fb52-4a96-baa2-37c7d79b3bfa">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Practice_x0020_Area</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="5032550d-931b-4a50-96e4-3111ee4a258f">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="56de7ac2-7bb4-45e4-8fb4-d10a7bd489d8">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Business_x0020_Line</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="f214fc49-592b-4777-9875-db19ca6d7caa">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3c38e572-0b13-411e-987f-a8b09fc8ede2">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Organisation</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="59c41db1-ec6c-4813-90a8-4d79e614e7a9">
               <AttributeID>Hierarchylevel4hist</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="39bd004a-c45e-453a-b019-43c953dc27af">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="17816986-23d8-4b10-997b-42ecd4ad8eb1">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Team</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="303c6b34-b5b8-4f35-90af-751e7812aaf0">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="afa70f51-9007-427c-ac4f-e5335ebbf99d">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Practice_x0020_Area</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="dcfe84d7-51b9-4953-ae6b-eae172ad034e">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="aa9388bd-05c9-48fc-b794-f3eaa8de8f39">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Business_x0020_Line</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="0387e56e-3ad6-4145-8792-2c905ee11f2e">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="829e467f-6980-4182-afbf-e462aabecff5">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Organisation</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="7b641791-5ba7-4493-b461-e902bae93b3c">
               <AttributeID>Hierarchylevel5hist</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="f9f17de9-9157-4f3c-ba0c-394af8e290b3">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="0f1c65bb-af5a-4b47-9998-34e4169b38b3">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Subteam</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="4939d991-bd01-4549-a553-5f7f0f165e86">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7c977b78-2d1e-44b5-b474-e2144ba923b2">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Team</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="1c1af4a0-ea9c-4e23-8a87-606e0b4460fb">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d76249ab-a4ab-4a7f-b269-d38ab0057005">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Practice_x0020_Area</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="58c115b0-f858-493f-ac9c-d29bea6ed3e8">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a93058e4-ce87-4a2e-8dd6-21c98cb3de19">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Business_x0020_Line</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="f437de08-d726-4764-94c1-586c92f177b6">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="fff4dde2-ff8b-4a05-bea8-195526a64617">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Organisation</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="a976551b-d16b-4112-95db-f634782e74d2">
               <AttributeID>Fed Hierarchy Business Key</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="18bd6f21-bd97-4e96-a5de-d1a32a806629">
                   <DataType>WChar</DataType>
                   <DataSize>1000</DataSize>
                   <Collation>Latin1_General_CS_AS</Collation>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="8c6e00cb-c63f-40f9-823a-e6bc2389848e">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Fed_x0020_Hierarchy_x0020_Business_x0020_Key</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="2ccfe299-6186-4bfd-890b-cc86013e1436">
               <AttributeID>Name</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="bec10a9a-c910-4e62-ae07-2066c6389a21">
                   <DataType>WChar</DataType>
                   <DataSize>100</DataSize>
                   <Collation>Latin1_General_CS_AS</Collation>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9e26d2f6-bbfa-4220-a4e3-4319b93bb133">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>name</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="17290260-42f2-47e2-b2a6-40d37bce1f59">
               <AttributeID>Windowsusername</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="436fe3fc-60c1-4e95-842f-53c1a8bd5cdf">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
                   <Collation>Latin1_General_CS_AS</Collation>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="8262cfe2-1856-44ac-9919-b32db190ac50">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>windowsusername</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="5f827b28-73ea-49f2-829d-dfa22880559d">
               <AttributeID>Hierarchylevel6hist</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="4b01641d-ab9f-46a3-b6fc-4ff8b64e7536">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3fb568e8-defe-49de-8a36-2137161a0b85">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>hierarchylevel6hist</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="8d491192-b09b-4e58-89b8-b0ebb24f6dfa">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="42ecc94d-a1aa-46ff-9510-17e60b7b7ffb">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Subteam</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="95e7aed7-2c40-43a7-8d7d-c9a983f7eec9">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e8cbfefc-7724-41d8-94d2-0fa9a8360f88">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Team</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="856ac2dd-8443-45bd-9eed-725e984ed429">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="86af6cdd-6ab5-4c89-8370-99ddeacc84ab">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Practice_x0020_Area</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="9fff722f-1bbf-47d0-bc31-f11be83efa7e">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="6f308ec9-f908-4716-9c46-3856b7ea1270">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Business_x0020_Line</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="f58cd7cb-8675-4938-8080-220b32d5a071">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5365842c-d6a0-4c38-b6e9-d83314c87221">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Organisation</ColumnID>
                   </Source>
@@ -1017,16 +1017,16 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="39ab275f-3ecb-4c56-8983-b9b26414b5ac">
           <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
           <Attributes>
-            <Attribute>
+            <Attribute dwd:design-time-name="24b34249-9c43-4318-92a3-73f01a9efa4c">
               <AttributeID>Dim Mat Head History Key</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="657ed6d0-b3a3-4e4b-9b21-5044709f5d55">
                   <DataType>Integer</DataType>
                   <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b3595e0a-f80f-4ac2-9687-7079274f9ce1">
                     <TableID>dbo_fact_wip_monthly</TableID>
                     <ColumnID>Dim_x0020_Matter_x0020_Header_x0020_History_x0020_Key</ColumnID>
                   </Source>
@@ -1034,76 +1034,76 @@
               </KeyColumns>
               <Type>Granularity</Type>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="7dcc4b42-a02b-42ed-9d2c-64ab08ce2b34">
               <AttributeID>Matter Number</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="7309e155-55e1-4897-8402-10eb8c399b04">
                   <DataType>WChar</DataType>
                   <DataSize>8</DataSize>
                   <Collation>Latin1_General_CS_AS_WS</Collation>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="54f978d7-72a2-426a-bddb-9af5ef9be487">
                     <TableID>dbo_dim_matter_header_history</TableID>
                     <ColumnID>Matter_x0020_Number</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="bf52c2d3-fd56-4f2e-814e-dff09d5ecbbd">
               <AttributeID>Matter Description</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="d6b72150-7f0a-4855-8839-7b65c9226b90">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="87b80d3c-9d61-4a35-8f09-e95d556f998d">
                     <TableID>dbo_dim_matter_header_history</TableID>
                     <ColumnID>Dim_x0020_Mat_x0020_Head_x0020_History_x0020_Key</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="8a16e0a4-e87d-4b13-a610-42f9f63fcd07">
               <AttributeID>Date Opened Practice Management</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="fd09a0e8-d0c4-4783-8cb8-2767a9c7d9ff">
                   <DataType>Date</DataType>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="561f139e-d293-4a93-96ec-740b7b20a6ff">
                     <TableID>dbo_dim_matter_header_history</TableID>
                     <ColumnID>Date_x0020_Opened</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="346f9d53-f905-422c-bbd0-a9f465876532">
               <AttributeID>Date Closed Practice Management</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="ee455d90-91fa-4b08-bf14-a726633a8fe6">
                   <DataType>Date</DataType>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="629952d9-a8ed-41f0-9b58-8f08da0f4003">
                     <TableID>dbo_dim_matter_header_history</TableID>
                     <ColumnID>Date_x0020_Closed</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="4245c966-e0f4-49cc-b365-34501e04a296">
               <AttributeID>Fixed Fee</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="c7097034-11d9-4233-a486-3735395588e7">
                   <DataType>WChar</DataType>
                   <DataSize>60</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="947e2c28-21b5-4c6f-8745-4713e8b0911d">
                     <TableID>dbo_dim_matter_header_history</TableID>
                     <ColumnID>Fixed_x0020_Fee</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="5e7d8114-2391-4bd9-a008-1c6f29bac87f">
               <AttributeID>Instruction Type</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="c5f75473-af52-49c7-9d7a-6245855e8a61">
                   <DataType>WChar</DataType>
                   <DataSize>60</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b81c57c2-57e1-4df4-a65a-47ac75bd5d73">
                     <TableID>dbo_dim_instruction_type</TableID>
                     <ColumnID>Instruction_x0020_Type</ColumnID>
                   </Source>
@@ -1112,16 +1112,16 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="38ba51ba-fbc8-498f-b9e4-c9efceaa32cd">
           <CubeDimensionID>Dim Client</CubeDimensionID>
           <Attributes>
-            <Attribute>
+            <Attribute dwd:design-time-name="3f382c12-09f6-4000-a4f5-4fd0cbfb045a">
               <AttributeID>Dim Client Key</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="e9df7fc9-401d-4f78-afe7-1fc5bd2ed769">
                   <DataType>Integer</DataType>
                   <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f1ed2ff4-a85b-4085-b912-9d56986a33b1">
                     <TableID>dbo_fact_wip_monthly</TableID>
                     <ColumnID>Dim_x0020_Client_x0020_Key</ColumnID>
                   </Source>
@@ -1129,50 +1129,50 @@
               </KeyColumns>
               <Type>Granularity</Type>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="f1e58093-90a4-4c24-aee3-3723415d925d">
               <AttributeID>Client Code</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="3bd3d2c7-8cd4-48ba-884a-5dcb8a56cea5">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="18f7e5f0-3227-413f-abb8-bedd777d9916">
                     <TableID>dbo_dim_client</TableID>
                     <ColumnID>Dim_x0020_Client_x0020_Key</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="fd822523-6d40-4833-ad91-a994a40e8efe">
               <AttributeID>Client Name</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="656d68c5-b79a-4eee-acf4-de17a87d04b9">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="cc03adeb-8fc3-4d86-9ec0-6ff8b90c6b8a">
                     <TableID>dbo_dim_client</TableID>
                     <ColumnID>Dim_x0020_Client_x0020_Key</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="ec9512cb-2e5f-402f-b69a-66a36dc80a73">
               <AttributeID>Client Group Name</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="4bf61b0f-c517-4180-a035-b554a5c63d40">
                   <DataType>WChar</DataType>
                   <DataSize>80</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="4bacfc47-8db7-4f95-9c7b-1aa65400dbb9">
                     <TableID>dbo_dim_client</TableID>
                     <ColumnID>Client_x0020_Group_x0020_Name</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="6641b185-b80b-4178-8d97-6f517b24115b">
               <AttributeID>Client Partner Name</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="768b8445-482b-44c9-ba21-950b8ab59e0c">
                   <DataType>WChar</DataType>
                   <DataSize>100</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="805e0899-f95c-4af5-8c64-02dbce76b9ce">
                     <TableID>dbo_dim_client</TableID>
                     <ColumnID>Client_x0020_Partner_x0020_Name</ColumnID>
                   </Source>
@@ -1181,15 +1181,15 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="dcdaf4c4-f923-4418-a469-a1717753c970">
           <CubeDimensionID>Dim WIP Date</CubeDimensionID>
           <Attributes>
-            <Attribute>
+            <Attribute dwd:design-time-name="9c7d5b0f-125d-47cb-a62f-ec2e7b9929ff">
               <AttributeID>Dim Date Key</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="841b2a75-d887-42db-98af-51606d6750d9">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="6c79132e-0427-4b7d-9765-be814660e222">
                     <TableID>dbo_fact_wip_monthly</TableID>
                     <ColumnID>Dim_x0020_Transaction_x0020_Date_x0020_Key</ColumnID>
                   </Source>
@@ -1197,62 +1197,62 @@
               </KeyColumns>
               <Type>Granularity</Type>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="461fa619-a65d-4083-9ea6-b4f752c7d417">
               <AttributeID>Calendar Date</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="94ef3ccf-3fcd-469b-b6f2-932a97477299">
                   <DataType>Date</DataType>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="dd2fc25c-9252-48e4-8cea-f246097d4a28">
                     <TableID>dbo_dim_date</TableID>
                     <ColumnID>Calendar_x0020_Date</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="3ba9942b-b5ef-4bda-a283-35305b0bad98">
               <AttributeID>Fin Period</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="fad908d2-4140-4ca8-9ced-b6bb08d1de6d">
                   <DataType>WChar</DataType>
                   <DataSize>20</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="38f0342a-65b5-4fef-8232-e49f96940772">
                     <TableID>dbo_dim_date</TableID>
                     <ColumnID>Fin_x0020_Period</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="a33f789f-58a5-46f8-bfdf-c306408a5705">
               <AttributeID>Fin Quarter</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="e228e068-dc24-4108-9121-727a6ce60db4">
                   <DataType>WChar</DataType>
                   <DataSize>7</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3c742156-0e7a-46d6-bdf6-c6c780daad1d">
                     <TableID>dbo_dim_date</TableID>
                     <ColumnID>Fin_x0020_Quarter</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="f3a83239-6d0c-4617-8286-5dd2d448222c">
               <AttributeID>Fin Year</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="3e153424-c8ee-40a1-b262-521f9bcbe82e">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="889b665a-3b95-4c9b-8c74-e1fa86fbec53">
                     <TableID>dbo_dim_date</TableID>
                     <ColumnID>Fin_x0020_Year</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="cd10734c-145e-4c70-ad1d-b7142c1d73a0">
               <AttributeID>Fin Month</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="a176a8b9-2a7a-436a-a6fc-b8729c31d0ff">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="472e2f85-ad36-45ac-88d5-0a80026df76f">
                     <TableID>dbo_dim_date</TableID>
                     <ColumnID>Fin_x0020_Month</ColumnID>
                   </Source>
@@ -1261,16 +1261,16 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="045bfb2b-3749-471f-a6b2-e16aaaa338af">
           <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
           <Attributes>
-            <Attribute>
+            <Attribute dwd:design-time-name="c50cf18d-551a-4bf9-8570-241be7f6b13d">
               <AttributeID>Dim Fed Hierarchy History Key</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="4b6f4656-b7ce-4bab-a0b5-1eaa4f1e0e23">
                   <DataType>Integer</DataType>
                   <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="0b0a6153-a5d0-49c1-8329-be58e87afd77">
                     <TableID>dbo_fact_wip_monthly</TableID>
                     <ColumnID>Dim_x0020_Fed_x0020_Matter_x0020_Owner_x0020_Key</ColumnID>
                   </Source>
@@ -1278,316 +1278,316 @@
               </KeyColumns>
               <Type>Granularity</Type>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="67dc34cd-fb4e-4975-95f5-d47bf755ea37">
               <AttributeID>Fed Code</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="176e59d9-6514-499a-98d2-23979628397e">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
                   <Collation>Latin1_General_CS_AS</Collation>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="fa7e121c-aa61-4f15-80ff-0ddddd9da629">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Fee_x0020_Earner_x0020_Code</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="8721d3db-0dda-41ee-9a1e-e87cd4125712">
               <AttributeID>Display Name</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="f9892e76-becc-4076-af04-d18325fb00b3">
                   <DataType>WChar</DataType>
                   <DataSize>100</DataSize>
                   <Collation>Latin1_General_CS_AS</Collation>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="0d181e9b-90ae-4822-ad06-d29d3ffaef03">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Display_x0020_Name</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="9ac441fa-d5d2-4780-8b27-e5dda18b36c6">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b23417de-ff48-4b4b-96ba-08e65d38259d">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>hierarchylevel6hist</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="de973cf2-d3a7-4088-9fc8-edcbd5707d84">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3da66ce9-73ef-46a3-a9ae-ea4bc7fcf136">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Subteam</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="e4a2e41b-198d-4e86-b90a-6fde1304947d">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ef480127-86c8-43c9-ab1a-95ea9d29f4bd">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Team</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="1c7b5bdb-f15f-43de-9044-8bd1eac2a803">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="69f91dbd-ed0a-41cb-b9ee-dc5bc43543af">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Practice_x0020_Area</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="a3c72c73-8b31-4f81-befb-ff2dc150aee6">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3a090f81-0474-429d-937c-b5c255585191">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Business_x0020_Line</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="278a2029-bb4e-4858-a5c2-379b7e4f5672">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="39df7fa1-e9f8-4466-b58e-bb6f875ef951">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Organisation</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="212a9b3d-e01f-4e86-acbd-708a4acda826">
               <AttributeID>Hierarchylevel1hist</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="aabc6d6d-e7bc-470d-b93b-a0f33a4d2003">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="30c14747-89a8-4020-913f-7e819c641992">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Organisation</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="fd0fefd8-7da4-4510-99a5-ce441542be70">
               <AttributeID>Hierarchylevel2hist</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="24770831-2842-4249-8788-992f9d2b5b0a">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7c5f3746-a19a-4917-93fe-fb23ae7ccc70">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Business_x0020_Line</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="3784e3eb-23d6-4d0e-956b-101c028dc623">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e1ee8a17-cbde-4bfc-a6e9-bdd8eefa971f">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Organisation</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="feaefbf0-fd64-466e-9fd8-0c9e3a50cf61">
               <AttributeID>Hierarchylevel3hist</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="a694ee19-9cce-4247-b4d0-1c9cb29a4734">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b834f85a-f5e5-43e1-bc7c-784b9aae7b7b">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Practice_x0020_Area</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="3981ef6e-ae6d-46d2-a2bd-993ce0d44c42">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9e30da61-2f75-4388-8777-0415dd21a095">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Business_x0020_Line</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="74ac8411-6e3c-4dff-89d9-7d4648fafa81">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2212ab2f-204b-4b2b-b8fe-f32e2b8c9698">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Organisation</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="332d853e-a8a4-4f39-a934-df29d99a6c57">
               <AttributeID>Hierarchylevel4hist</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="a2dd84af-6f23-4846-a8a4-3e62c7bd7195">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="dd284477-3bcb-4b9e-9c25-d0337bbb4eb5">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Team</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="2ecba224-c707-40b0-8101-774901daf245">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e1ff0baa-1ad6-48ff-b900-502222b9c8a0">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Practice_x0020_Area</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="9c0a64d5-fe4c-4102-a8ac-103720df2a32">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5de89ad3-2e4f-41ee-b542-bcf5bfd859a8">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Business_x0020_Line</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="6e99d1e0-e96b-4b07-89a7-303d111ef090">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="13ec4239-8af5-4c1e-a6d1-3bc738c008dc">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Organisation</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="52cd7535-a790-46c3-90e8-9059b7910502">
               <AttributeID>Hierarchylevel5hist</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="907ea359-4622-4a76-a104-ced8951f8336">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="820e7bc4-1128-4f3f-a48f-b18646d7df94">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Subteam</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="b63ad916-0c96-4ba7-a02b-182d285d5888">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="242bd839-82ee-48bc-b3a1-f21994184722">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Team</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="05dba71c-8ad2-46d0-b7d9-839f3a9a26a2">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="836108cf-cd64-42c2-80ce-4dcccb3f32e0">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Practice_x0020_Area</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="f8aa0cdd-74bb-4473-a8e6-27f17745fcb5">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c2b3c2ed-9df4-418a-b5a6-da074abe4a1f">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Business_x0020_Line</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="256975c7-7536-49d7-9f3b-f606db7c2887">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="52b641e8-0f6d-4c7b-b51f-d25038c0e651">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Organisation</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="51819279-56a6-408a-82c0-5bf5ecc344f0">
               <AttributeID>Fed Hierarchy Business Key</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="1b224d26-638c-4b2c-8422-fbc59d864bdd">
                   <DataType>WChar</DataType>
                   <DataSize>1000</DataSize>
                   <Collation>Latin1_General_CS_AS</Collation>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="95272581-6b3e-46fc-a0cc-a476b3752466">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Fed_x0020_Hierarchy_x0020_Business_x0020_Key</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="9d180656-250d-43bd-a55d-880818c78d28">
               <AttributeID>Name</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="fc6076d1-3317-4b2c-8d72-b2478e2c96a1">
                   <DataType>WChar</DataType>
                   <DataSize>100</DataSize>
                   <Collation>Latin1_General_CS_AS</Collation>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b0e29240-26a2-490b-bc8e-260792787943">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>name</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="cbf21dc5-780c-473c-b767-36191b68f8b3">
               <AttributeID>Windowsusername</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="06c1fb34-02b0-451c-a42c-eb04a41152c7">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
                   <Collation>Latin1_General_CS_AS</Collation>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e4370440-5215-4951-b2b4-f394eba15eda">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>windowsusername</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="48b5fd94-d7ef-4920-99fd-cdc5812007cd">
               <AttributeID>Hierarchylevel6hist</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="b5a610ac-d924-4d29-9b64-de44699456c4">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9eb0c90d-cd43-4b80-8699-b9c637ab0ec7">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>hierarchylevel6hist</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="00b145ae-f64a-4f25-bdf3-2c2991446477">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b283dd2d-f531-4c2a-becf-1a70d78b0fab">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Subteam</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="394b5148-342b-48ff-8f88-270420ae8912">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2b0968c3-3d52-4d4f-a022-775032f6038b">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Team</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="98548052-6ba1-4685-aa01-c5d5da288389">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3b4c724a-8cc2-4501-868d-e10cbd3a558e">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Practice_x0020_Area</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="2be14760-d68d-435d-86dd-f888549d2e5f">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="8286ba2b-71b8-4c98-9093-5d335a4f5383">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Business_x0020_Line</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="c7fbafe1-0ab4-4469-b251-43da0e7e7a66">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3d16c117-8b67-4cd2-b558-006c46398d0e">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Organisation</ColumnID>
                   </Source>
@@ -1597,1090 +1597,17 @@
           </Attributes>
         </Dimension>
       </Dimensions>
-      <Partitions>
-        <Partition>
-          <ID>Fact Wip Monthly</ID>
-          <Name>Fact Wip Monthly</Name>
-          <CreatedTimestamp>2016-05-13T14:22:47.913333Z</CreatedTimestamp>
-          <LastSchemaUpdate>2017-10-03T14:56:54.216667Z</LastSchemaUpdate>
-          <LastProcessed>2018-12-17T02:30:27.336667Z</LastProcessed>
-          <State>Processed</State>
-          <Source xsi:type="DsvTableBinding">
-            <DataSourceViewID>fact_wip_monthly</DataSourceViewID>
-            <TableID>dbo_fact_wip_monthly</TableID>
-          </Source>
-          <StorageMode>Molap</StorageMode>
-          <CurrentStorageMode>Molap</CurrentStorageMode>
-          <ProcessingMode>Regular</ProcessingMode>
-          <ProactiveCaching>
-            <SilenceInterval>-PT1S</SilenceInterval>
-            <Latency>-PT1S</Latency>
-            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
-            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
-            <Source xsi:type="ProactiveCachingInheritedBinding" />
-          </ProactiveCaching>
-          <EstimatedSize>72555230</EstimatedSize>
-          <EstimatedRows>2578890</EstimatedRows>
-          <AggregationDesignID>AggregationDesign</AggregationDesignID>
-        </Partition>
-      </Partitions>
-      <AggregationDesigns>
-        <AggregationDesign>
-          <ID>AggregationDesign</ID>
-          <Name>AggregationDesign</Name>
-          <CreatedTimestamp>2017-05-12T08:59:34.286667Z</CreatedTimestamp>
-          <LastSchemaUpdate>2017-10-03T14:56:54.2Z</LastSchemaUpdate>
-          <EstimatedRows>2578890</EstimatedRows>
-          <Dimensions>
-            <Dimension>
-              <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-              <Attributes>
-                <Attribute>
-                  <AttributeID>Dim Days Banding Key</AttributeID>
-                  <EstimatedCount>8</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Daysbanding</AttributeID>
-                  <EstimatedCount>8</EstimatedCount>
-                </Attribute>
-              </Attributes>
-            </Dimension>
-            <Dimension>
-              <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-              <Attributes>
-                <Attribute>
-                  <AttributeID>Dim Fed Hierarchy History Key</AttributeID>
-                  <EstimatedCount>34372</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Fed Code</AttributeID>
-                  <EstimatedCount>4166</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Display Name</AttributeID>
-                  <EstimatedCount>7791</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Hierarchylevel1hist</AttributeID>
-                  <EstimatedCount>2</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Hierarchylevel2hist</AttributeID>
-                  <EstimatedCount>10</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Hierarchylevel3hist</AttributeID>
-                  <EstimatedCount>94</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Hierarchylevel4hist</AttributeID>
-                  <EstimatedCount>526</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Hierarchylevel5hist</AttributeID>
-                  <EstimatedCount>692</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Fed Hierarchy Business Key</AttributeID>
-                  <EstimatedCount>4796</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Name</AttributeID>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Windowsusername</AttributeID>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Hierarchylevel6hist</AttributeID>
-                </Attribute>
-              </Attributes>
-            </Dimension>
-            <Dimension>
-              <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-              <Attributes>
-                <Attribute>
-                  <AttributeID>Dim Mat Head History Key</AttributeID>
-                  <EstimatedCount>3685975</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Matter Number</AttributeID>
-                  <EstimatedCount>3685975</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Matter Description</AttributeID>
-                  <EstimatedCount>3685975</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Date Opened Practice Management</AttributeID>
-                  <EstimatedCount>17277</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Date Closed Practice Management</AttributeID>
-                  <EstimatedCount>11215</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Fixed Fee</AttributeID>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Instruction Type</AttributeID>
-                </Attribute>
-              </Attributes>
-            </Dimension>
-            <Dimension>
-              <CubeDimensionID>Dim Client</CubeDimensionID>
-              <Attributes>
-                <Attribute>
-                  <AttributeID>Dim Client Key</AttributeID>
-                  <EstimatedCount>905193</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Client Code</AttributeID>
-                  <EstimatedCount>905193</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Client Name</AttributeID>
-                  <EstimatedCount>905193</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Client Group Name</AttributeID>
-                  <EstimatedCount>208</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Client Partner Name</AttributeID>
-                </Attribute>
-              </Attributes>
-            </Dimension>
-            <Dimension>
-              <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-              <Attributes>
-                <Attribute>
-                  <AttributeID>Dim Date Key</AttributeID>
-                  <EstimatedCount>21947</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Calendar Date</AttributeID>
-                  <EstimatedCount>21947</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Fin Period</AttributeID>
-                  <EstimatedCount>721</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Fin Quarter</AttributeID>
-                  <EstimatedCount>241</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Fin Year</AttributeID>
-                  <EstimatedCount>62</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Fin Month</AttributeID>
-                  <EstimatedCount>722</EstimatedCount>
-                </Attribute>
-              </Attributes>
-            </Dimension>
-            <Dimension>
-              <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-              <Attributes>
-                <Attribute>
-                  <AttributeID>Dim Fed Hierarchy History Key</AttributeID>
-                  <EstimatedCount>34372</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Fed Code</AttributeID>
-                  <EstimatedCount>4166</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Display Name</AttributeID>
-                  <EstimatedCount>7791</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Hierarchylevel1hist</AttributeID>
-                  <EstimatedCount>2</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Hierarchylevel2hist</AttributeID>
-                  <EstimatedCount>10</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Hierarchylevel3hist</AttributeID>
-                  <EstimatedCount>94</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Hierarchylevel4hist</AttributeID>
-                  <EstimatedCount>526</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Hierarchylevel5hist</AttributeID>
-                  <EstimatedCount>692</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Fed Hierarchy Business Key</AttributeID>
-                  <EstimatedCount>4796</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Name</AttributeID>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Windowsusername</AttributeID>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Hierarchylevel6hist</AttributeID>
-                </Attribute>
-              </Attributes>
-            </Dimension>
-          </Dimensions>
-          <Aggregations>
-            <Aggregation>
-              <ID>Aggregation 0</ID>
-              <Name>Aggregation 0</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel2hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Client</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Fin Period</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel1hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation 1</ID>
-              <Name>Aggregation 1</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Dim Days Banding Key</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel1hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Client</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel5hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation 2</ID>
-              <Name>Aggregation 2</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Dim Days Banding Key</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel5hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Client</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel1hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation 3</ID>
-              <Name>Aggregation 3</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel2hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Client</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel5hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation 4</ID>
-              <Name>Aggregation 4</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel5hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Client</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel2hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation 5</ID>
-              <Name>Aggregation 5</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Dim Days Banding Key</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel2hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Client</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Fin Year</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel1hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation 6</ID>
-              <Name>Aggregation 6</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Dim Days Banding Key</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel1hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Client</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel1hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation 7</ID>
-              <Name>Aggregation 7</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Dim Days Banding Key</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel1hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Client</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Fin Quarter</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel2hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation 8</ID>
-              <Name>Aggregation 8</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Dim Days Banding Key</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel1hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Client</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Fin Period</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation 9</ID>
-              <Name>Aggregation 9</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel2hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Client</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel1hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation a</ID>
-              <Name>Aggregation a</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel1hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Client</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel2hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation b</ID>
-              <Name>Aggregation b</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Dim Days Banding Key</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel2hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Client</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Client Group Name</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel1hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation c</ID>
-              <Name>Aggregation c</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Dim Days Banding Key</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel1hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Client</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Client Group Name</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel2hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation d</ID>
-              <Name>Aggregation d</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel3hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Client</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Fin Year</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel1hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation e</ID>
-              <Name>Aggregation e</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel2hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Client</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Fin Year</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel2hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation f</ID>
-              <Name>Aggregation f</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Dim Days Banding Key</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel2hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Client</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel3hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation 10</ID>
-              <Name>Aggregation 10</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Dim Days Banding Key</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel3hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Client</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel2hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation 11</ID>
-              <Name>Aggregation 11</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel1hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Client</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Display Name</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation 12</ID>
-              <Name>Aggregation 12</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Display Name</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Client</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel1hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation 13</ID>
-              <Name>Aggregation 13</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel3hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Client</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel3hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation 14</ID>
-              <Name>Aggregation 14</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel1hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Client</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Fin Quarter</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel3hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation 15</ID>
-              <Name>Aggregation 15</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Client</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Client Group Name</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Fin Year</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-          </Aggregations>
-        </AggregationDesign>
-      </AggregationDesigns>
-      <ProactiveCaching>
+      <Partitions />
+      <AggregationDesigns />
+      <ProactiveCaching dwd:design-time-name="4109d7d9-2ff2-469b-82c7-cd5a8562b0b3">
         <SilenceInterval>-PT1S</SilenceInterval>
         <Latency>-PT1S</Latency>
         <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
         <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
-        <Source xsi:type="ProactiveCachingInheritedBinding" />
+        <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="8ed8575b-e7f3-4f4b-8b9b-18f339396a7a" />
       </ProactiveCaching>
     </MeasureGroup>
-    <MeasureGroup>
+    <MeasureGroup dwd:design-time-name="308ccc6b-c021-4345-90f4-239f27632419">
       <ID>Fact Matter Summary</ID>
       <Name>Matter Balances</Name>
       <CreatedTimestamp>2016-11-02T11:06:06.22Z</CreatedTimestamp>
@@ -2688,39 +1615,39 @@
       <LastProcessed>2018-12-17T02:33:00.056667Z</LastProcessed>
       <State>Processed</State>
       <Measures>
-        <Measure>
+        <Measure dwd:design-time-name="d9969696-c297-4659-b732-72ed5c00cf74">
           <ID>Disbursement Balance</ID>
           <Name>Disbursement Balance</Name>
           <DataType>Double</DataType>
-          <Source>
+          <Source dwd:design-time-name="8bc9af7e-b8ea-4a42-95e4-4ca876f4a0e7">
             <DataType>Double</DataType>
             <NullProcessing>Preserve</NullProcessing>
-            <Source xsi:type="ColumnBinding">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="c88d7b22-c2e9-4d33-9702-623f61c53f85">
               <TableID>dbo_fact_matter_summary</TableID>
               <ColumnID>Disbursement_x0020_Balance</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure>
+        <Measure dwd:design-time-name="14cfe154-fabf-402a-810d-992d61481018">
           <ID>Fixed Fee Amount</ID>
           <Name>Fixed Fee Amount</Name>
           <DataType>Double</DataType>
-          <Source>
+          <Source dwd:design-time-name="6ca136df-91dc-46f0-8acf-8b249087266c">
             <DataType>Double</DataType>
             <NullProcessing>Preserve</NullProcessing>
-            <Source xsi:type="ColumnBinding">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="31a7cc47-cbd3-4bc4-aa91-c01300cd8fc1">
               <TableID>dbo_fact_matter_summary</TableID>
               <ColumnID>Fixed_x0020_Fee_x0020_Amount</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure>
+        <Measure dwd:design-time-name="4d0ae23a-ccee-4fc4-91ec-b7cbf0a1c451">
           <ID>Profit Costs</ID>
           <Name>Profit Costs</Name>
           <DataType>Double</DataType>
-          <Source>
+          <Source dwd:design-time-name="2cded8f1-c5d0-4e23-ad38-6df6f3c28f1d">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="80a68031-7e9c-43c8-a25a-90140f75f68c">
               <TableID>dbo_fact_matter_summary</TableID>
               <ColumnID>Profit_x0020_Costs</ColumnID>
             </Source>
@@ -2732,15 +1659,15 @@
       <EstimatedSize>1228309420</EstimatedSize>
       <ProcessingMode>Regular</ProcessingMode>
       <Dimensions>
-        <Dimension xsi:type="RegularMeasureGroupDimension">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="e1de3499-e0b6-4c1a-a177-867591f61925">
           <CubeDimensionID>Dim Client</CubeDimensionID>
           <Attributes>
-            <Attribute>
+            <Attribute dwd:design-time-name="cbfac6b8-a3ef-4c8f-8f1b-e402da0cbde1">
               <AttributeID>Dim Client Key</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="fda6e45a-e874-47e0-9655-8498822af3c6">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="416b2104-99c2-4b80-8ba8-f60ee330c5e2">
                     <TableID>dbo_fact_matter_summary</TableID>
                     <ColumnID>Dim_x0020_Client_x0020_Key</ColumnID>
                   </Source>
@@ -2748,50 +1675,50 @@
               </KeyColumns>
               <Type>Granularity</Type>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="f91b7315-3ef5-4b12-b433-afc39fef095d">
               <AttributeID>Client Code</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="037ecd61-6fb3-4570-a164-c9605458d6b0">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c9cccd1a-a4a1-4b2c-a9ed-d2d162b57085">
                     <TableID>dbo_dim_client</TableID>
                     <ColumnID>Dim_x0020_Client_x0020_Key</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="53a6fbfc-cb89-4e6e-b8b1-e9de0959acf6">
               <AttributeID>Client Name</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="fa122c1f-f25c-43d7-9109-6d5f1a8e01d9">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1239a38b-e64e-41a6-923e-152aac886555">
                     <TableID>dbo_dim_client</TableID>
                     <ColumnID>Dim_x0020_Client_x0020_Key</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="21a7c2e9-0f76-411a-8738-6ac45a60e0e7">
               <AttributeID>Client Group Name</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="ce8dff18-3aa8-4987-89a7-7724538b9c0d">
                   <DataType>WChar</DataType>
                   <DataSize>80</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="eac7d799-7e26-42b7-9833-0e26606f37a4">
                     <TableID>dbo_dim_client</TableID>
                     <ColumnID>Client_x0020_Group_x0020_Name</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="d4522d49-87c9-4a9a-bc54-aeb51f4e77a8">
               <AttributeID>Client Partner Name</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="06833adb-a216-46fa-851c-51567fda829b">
                   <DataType>WChar</DataType>
                   <DataSize>100</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a3939b42-6acc-40c6-b077-e6962c07dd5e">
                     <TableID>dbo_dim_client</TableID>
                     <ColumnID>Client_x0020_Partner_x0020_Name</ColumnID>
                   </Source>
@@ -2800,15 +1727,15 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="3a58c87e-d85a-480f-b3b1-b973ed5d5497">
           <CubeDimensionID>Dim WIP Date</CubeDimensionID>
           <Attributes>
-            <Attribute>
+            <Attribute dwd:design-time-name="7dc4b358-8314-46f2-8727-57e5f8a0b3a6">
               <AttributeID>Dim Date Key</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="93884698-96ef-44de-b44c-4f9c975ce3aa">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e440d170-c18d-42a1-b601-82f0b85dc398">
                     <TableID>dbo_fact_matter_summary</TableID>
                     <ColumnID>Dim_x0020_Date_x0020_Key</ColumnID>
                   </Source>
@@ -2816,62 +1743,62 @@
               </KeyColumns>
               <Type>Granularity</Type>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="62300763-f239-4860-a080-ac37cae9a35e">
               <AttributeID>Calendar Date</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="0b0115db-7f01-4ee9-b5ff-c1ac1c9c9825">
                   <DataType>Date</DataType>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d479290d-6e79-46eb-8b79-710e84aa73d2">
                     <TableID>dbo_dim_date</TableID>
                     <ColumnID>Calendar_x0020_Date</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="a2fbd1ca-8dad-4714-8a98-e64c8f93f5e2">
               <AttributeID>Fin Period</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="09934d99-3320-43db-935c-36feceeaeae8">
                   <DataType>WChar</DataType>
                   <DataSize>20</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="73861cad-53a4-42e6-a62e-af5aebce230c">
                     <TableID>dbo_dim_date</TableID>
                     <ColumnID>Fin_x0020_Period</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="aeb1c314-bc98-41c6-9638-845d160b423d">
               <AttributeID>Fin Quarter</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="197d9ee9-ec83-48a8-a877-9891940a3e54">
                   <DataType>WChar</DataType>
                   <DataSize>7</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e097e6cb-f6ac-4d2b-85f5-51a7cd9e81b4">
                     <TableID>dbo_dim_date</TableID>
                     <ColumnID>Fin_x0020_Quarter</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="fd285779-48ad-4b79-96be-9ff6c156ae39">
               <AttributeID>Fin Year</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="3a67ff32-5ced-403d-b836-72483966eebd">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="913f468e-9e2f-413a-addc-ef7ca44caa12">
                     <TableID>dbo_dim_date</TableID>
                     <ColumnID>Fin_x0020_Year</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="1aea1282-6dd5-4154-829f-b9bec7485589">
               <AttributeID>Fin Month</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="8e91d23e-22a0-4bd0-b49e-2727272ebdfe">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="909a54e7-66c3-4d3f-8f11-16e2781032fc">
                     <TableID>dbo_dim_date</TableID>
                     <ColumnID>Fin_x0020_Month</ColumnID>
                   </Source>
@@ -2880,16 +1807,16 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="be47c999-4a2e-47c6-ba54-742a12886a94">
           <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
           <Attributes>
-            <Attribute>
+            <Attribute dwd:design-time-name="50cfa0e8-00db-42d4-b88e-5fd489db6d7f">
               <AttributeID>Dim Fed Hierarchy History Key</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="c22eb9bb-9559-42a9-b785-2c1554e50203">
                   <DataType>Integer</DataType>
                   <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="10ec78f9-da72-4ba7-93dc-61f3e6b08317">
                     <TableID>dbo_fact_matter_summary</TableID>
                     <ColumnID>Dim_x0020_Fed_x0020_Hierarchy_x0020_History_x0020_Key</ColumnID>
                   </Source>
@@ -2897,316 +1824,316 @@
               </KeyColumns>
               <Type>Granularity</Type>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="0ef38e91-d192-4576-a78f-1b94cc4e8dc1">
               <AttributeID>Fed Code</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="4c888d97-fdd4-4376-860f-05ef02ffad4c">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
                   <Collation>Latin1_General_CS_AS</Collation>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="63e9d867-6e9f-4388-bdab-09bddd16fc23">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Fee_x0020_Earner_x0020_Code</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="5e9586dd-4145-4aab-bec9-a7ffb759efc3">
               <AttributeID>Display Name</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="3f39ddc7-83ed-4e53-ab94-f8f4ec111321">
                   <DataType>WChar</DataType>
                   <DataSize>100</DataSize>
                   <Collation>Latin1_General_CS_AS</Collation>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3071f76f-784a-4bc7-88a0-5fa391182a6d">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Display_x0020_Name</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="949d428d-db08-4031-861c-a79284a8ea83">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="09243a8f-b1f8-4b3e-9268-81599be6758e">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>hierarchylevel6hist</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="ef6f7c9e-f545-4c4c-a5c8-d4dd1cafd251">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="83e8b0bc-fdf5-4d62-b871-6f563c77fc32">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Subteam</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="cbf2211e-d2b3-4e0a-b3f2-58f94c70a7ac">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="970d582e-9466-49f1-9ee6-763e4a6b1e7d">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Team</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="852c4ef3-07e2-4682-964a-6d7f8e67353a">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="93ee982f-9848-4c30-b9b6-f2086b1ed60b">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Practice_x0020_Area</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="ea59dff9-7c5a-4149-a23b-b726f8c80a33">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="88240617-ea3f-4de9-8230-280659f35148">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Business_x0020_Line</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="669b9e91-6443-4737-938d-5cd957929f56">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="148b8d27-c22e-48ba-a27a-accf32c678c9">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Organisation</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="4342b118-8a1b-435b-8a02-5b5f4214e815">
               <AttributeID>Hierarchylevel1hist</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="157ef0fb-e37d-4e01-8bfb-ab21e795537d">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7b358176-7c84-42d2-9ab7-923fb237eeb1">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Organisation</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="9580c155-0b25-4d11-b315-cf64d804dee0">
               <AttributeID>Hierarchylevel2hist</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="3a5702e9-d726-49db-aeaf-f1bdd704d44a">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3b00f68b-a293-44b6-8956-fd20ab762eb1">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Business_x0020_Line</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="4f5c2722-3dfa-4bb8-96d0-56a4610fc77f">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="33010193-71f8-45ad-821b-e693f76c5801">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Organisation</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="d736f9d3-d89a-4e01-a00c-259c61e2dbc2">
               <AttributeID>Hierarchylevel3hist</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="947cfff4-0fa0-4d73-b52a-b55263eff77a">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b68bff88-cb74-43d4-8795-defca7ac795c">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Practice_x0020_Area</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="ae53ebb6-0d09-4b52-bf87-f1722fa20723">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="0a6d85a9-220e-4128-a435-c24acf7420e0">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Business_x0020_Line</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="85d152f4-264f-4500-9655-c3aac3764f18">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2119b1eb-babd-4790-a7fc-868a9671aff8">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Organisation</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="17cb943e-be7a-4c49-b461-fcb04c2da099">
               <AttributeID>Hierarchylevel4hist</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="6e565dab-b8f7-492e-8c9e-5966595ef0e6">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="4be15b0d-ab5d-4667-8fb3-828b3f5b8e6c">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Team</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="dc39ea12-572e-42cd-8368-f97f7f29a655">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="6c381b65-bc8b-4dec-95fe-eb375c0f3eab">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Practice_x0020_Area</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="6329c113-9995-42a7-ae4d-2dab5a1c3014">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c2fb2edf-62f6-40d6-82a1-d72dce46d27e">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Business_x0020_Line</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="5d3a20ed-cce4-45df-bc23-57dc9126c7a4">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="111113a3-f768-409a-8987-38137af2019f">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Organisation</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="c2edbbad-d799-4174-8d0b-03d89398c5f5">
               <AttributeID>Hierarchylevel5hist</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="bdc1b436-79eb-41eb-842a-865fd40f06ea">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="629a1daa-a5cc-4292-9675-12a613027fbf">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Subteam</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="7e46a569-5227-446c-83f8-5bd72e9a1418">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f342e266-236b-45e9-bc76-2de0846d6514">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Team</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="835d0b43-65ff-4b95-9185-e738c5a81bf4">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="64940aae-3b34-419b-a460-ad626119f6da">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Practice_x0020_Area</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="b135cb54-a919-4c63-aea1-7d4de173360e">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7fa922e9-c97f-40f6-acbb-8b9539e02d93">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Business_x0020_Line</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="4cbdb176-163a-41dc-b10c-1e8800473953">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d2e00ca6-49b0-40e1-906b-f5f82c60aa3b">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Organisation</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="d29770d0-645d-4292-9106-639b378a5119">
               <AttributeID>Fed Hierarchy Business Key</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="f33cc368-1a6f-4c41-b521-9f460fc8e1ad">
                   <DataType>WChar</DataType>
                   <DataSize>1000</DataSize>
                   <Collation>Latin1_General_CS_AS</Collation>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a0e3927e-eeb7-4ef7-8530-00f03bef8bab">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Fed_x0020_Hierarchy_x0020_Business_x0020_Key</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="267d710f-264b-4567-96a8-30383065ad0f">
               <AttributeID>Name</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="a895e378-f782-459e-b1af-1cd11e06bc4c">
                   <DataType>WChar</DataType>
                   <DataSize>100</DataSize>
                   <Collation>Latin1_General_CS_AS</Collation>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a3b003aa-5a9e-4d41-920a-a531f6d9f61e">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>name</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="585980b9-d58f-4da6-a5d0-eb6d43ee03f4">
               <AttributeID>Windowsusername</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="e46f46e2-5892-4bb1-8f5e-e30fe3e67ccf">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
                   <Collation>Latin1_General_CS_AS</Collation>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="624007dd-e2ee-4f8b-94f4-b30a36bc91d6">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>windowsusername</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="fa51efdc-e370-4b9a-88e3-3bf27871153f">
               <AttributeID>Hierarchylevel6hist</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="d8d9be55-878d-481e-9cfc-96f42dbff21c">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9d70d9e5-b860-4bda-9109-a9298e9dad5d">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>hierarchylevel6hist</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="53178b6a-055d-48bc-b55e-a8fb479c4162">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d5e45839-2976-4b29-a69d-a0c2052f1310">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Subteam</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="7995df0c-1fc6-41c4-b521-b56f36688205">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5e717ca6-1f10-45fb-99ed-2d56cb506fb5">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Team</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="255221b8-a05a-4a65-be53-aa1075c5e40d">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a1846368-f454-4d44-ae42-7158153f3a24">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Practice_x0020_Area</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="2bf11e25-c9a2-43fa-b65e-80a9a4022074">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="56c652ac-147a-45b8-9b0a-c21da755e00b">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Business_x0020_Line</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="528ffd68-068d-4701-8659-1e4b95d6c3e7">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9fb1b3c0-99f4-4923-aab4-82f51dade9d5">
                     <TableID>dbo_dim_fed_hierarchy_history</TableID>
                     <ColumnID>Organisation</ColumnID>
                   </Source>
@@ -3215,16 +2142,16 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="66489cbc-6361-4ee9-9208-4faff639d813">
           <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
           <Attributes>
-            <Attribute>
+            <Attribute dwd:design-time-name="f986c21e-55ed-427c-95c0-490db934de7e">
               <AttributeID>Dim Mat Head History Key</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="67b81bd5-34a1-453f-9a86-6df380de8d54">
                   <DataType>Integer</DataType>
                   <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5de92d7e-83e7-41e2-b1d3-d51ab5e0b8e5">
                     <TableID>dbo_fact_matter_summary</TableID>
                     <ColumnID>Dim_x0020_Matter_x0020_Header_x0020_History_x0020_Key</ColumnID>
                   </Source>
@@ -3232,76 +2159,76 @@
               </KeyColumns>
               <Type>Granularity</Type>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="31119318-db6e-4b1a-8472-687f6ec2cacb">
               <AttributeID>Matter Number</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="4a65ed4e-c0e3-4e1e-becc-815a18baa012">
                   <DataType>WChar</DataType>
                   <DataSize>8</DataSize>
                   <Collation>Latin1_General_CS_AS_WS</Collation>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c3099229-ccb6-48ea-b80f-e5e27150deb2">
                     <TableID>dbo_dim_matter_header_history</TableID>
                     <ColumnID>Matter_x0020_Number</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="3019b6be-e588-43bc-8e96-0a534d4c503c">
               <AttributeID>Matter Description</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="6232140e-0e3a-4bf9-988a-78a7852dec13">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="fa7c77c2-6444-476a-9a31-c4b42bc0f034">
                     <TableID>dbo_dim_matter_header_history</TableID>
                     <ColumnID>Dim_x0020_Mat_x0020_Head_x0020_History_x0020_Key</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="0b1fe52d-f279-4d52-b3ce-aae7920c729f">
               <AttributeID>Date Opened Practice Management</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="9d0b3c8c-0f02-4f91-890b-59d7b28a4af5">
                   <DataType>Date</DataType>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5912c1e0-3804-49f1-bcf6-e1665b78e59e">
                     <TableID>dbo_dim_matter_header_history</TableID>
                     <ColumnID>Date_x0020_Opened</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="9d2ab65b-951a-4ae7-a666-18c8b05b8141">
               <AttributeID>Date Closed Practice Management</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="a4f14923-4683-493c-b438-6c8627be28b3">
                   <DataType>Date</DataType>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="10d234b1-1207-4225-a127-ffa078720432">
                     <TableID>dbo_dim_matter_header_history</TableID>
                     <ColumnID>Date_x0020_Closed</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="d5f3e48b-7e6d-4396-b273-83a8596d3dbb">
               <AttributeID>Fixed Fee</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="4b68a91c-b5ae-40fb-ad9f-2094b857cf99">
                   <DataType>WChar</DataType>
                   <DataSize>60</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="456210db-bd04-4dda-b307-4f5f8a8b8119">
                     <TableID>dbo_dim_matter_header_history</TableID>
                     <ColumnID>Fixed_x0020_Fee</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute>
+            <Attribute dwd:design-time-name="de7b6db0-14bc-4bf2-99df-0aa1aba4122f">
               <AttributeID>Instruction Type</AttributeID>
               <KeyColumns>
-                <KeyColumn>
+                <KeyColumn dwd:design-time-name="dadeb29b-ec7a-4148-8023-417f66349255">
                   <DataType>WChar</DataType>
                   <DataSize>60</DataSize>
-                  <Source xsi:type="ColumnBinding">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="8e999df7-129c-4202-85d1-ea2552d95708">
                     <TableID>dbo_dim_instruction_type</TableID>
                     <ColumnID>Instruction_x0020_Type</ColumnID>
                   </Source>
@@ -3310,654 +2237,31 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="ManyToManyMeasureGroupDimension">
+        <Dimension xsi:type="ManyToManyMeasureGroupDimension" dwd:design-time-name="2a08446e-4ad2-4a1e-a78e-2a67f0eb8052">
           <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
           <MeasureGroupID>Fact Wip Monthly</MeasureGroupID>
         </Dimension>
-        <Dimension xsi:type="ManyToManyMeasureGroupDimension">
+        <Dimension xsi:type="ManyToManyMeasureGroupDimension" dwd:design-time-name="634ed4c4-ca11-4411-8bbb-0be6061575c2">
           <CubeDimensionID>Dim Days Banding</CubeDimensionID>
           <MeasureGroupID>Fact Wip Monthly</MeasureGroupID>
         </Dimension>
       </Dimensions>
-      <Partitions>
-        <Partition>
-          <ID>Fact Matter Summary</ID>
-          <Name>Fact Matter Summary</Name>
-          <CreatedTimestamp>2016-11-02T11:06:06.253333Z</CreatedTimestamp>
-          <LastSchemaUpdate>2017-10-03T14:56:54.343333Z</LastSchemaUpdate>
-          <LastProcessed>2018-12-17T02:33:00.04Z</LastProcessed>
-          <State>Processed</State>
-          <Source xsi:type="DsvTableBinding">
-            <DataSourceViewID>fact_wip_monthly</DataSourceViewID>
-            <TableID>dbo_fact_matter_summary</TableID>
-          </Source>
-          <StorageMode>Molap</StorageMode>
-          <CurrentStorageMode>Molap</CurrentStorageMode>
-          <ProcessingMode>Regular</ProcessingMode>
-          <ProactiveCaching>
-            <SilenceInterval>-PT1S</SilenceInterval>
-            <Latency>-PT1S</Latency>
-            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
-            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
-            <Source xsi:type="ProactiveCachingInheritedBinding" />
-          </ProactiveCaching>
-          <EstimatedSize>1228309420</EstimatedSize>
-          <EstimatedRows>803490</EstimatedRows>
-          <AggregationDesignID>AggregationDesign</AggregationDesignID>
-        </Partition>
-      </Partitions>
-      <AggregationDesigns>
-        <AggregationDesign>
-          <ID>AggregationDesign</ID>
-          <Name>AggregationDesign</Name>
-          <CreatedTimestamp>2017-05-12T08:59:34.38Z</CreatedTimestamp>
-          <LastSchemaUpdate>2017-10-03T14:56:54.31Z</LastSchemaUpdate>
-          <EstimatedRows>803490</EstimatedRows>
-          <Dimensions>
-            <Dimension>
-              <CubeDimensionID>Dim Client</CubeDimensionID>
-              <Attributes>
-                <Attribute>
-                  <AttributeID>Dim Client Key</AttributeID>
-                  <EstimatedCount>905193</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Client Code</AttributeID>
-                  <EstimatedCount>905193</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Client Name</AttributeID>
-                  <EstimatedCount>905193</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Client Group Name</AttributeID>
-                  <EstimatedCount>208</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Client Partner Name</AttributeID>
-                </Attribute>
-              </Attributes>
-            </Dimension>
-            <Dimension>
-              <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-              <Attributes>
-                <Attribute>
-                  <AttributeID>Dim Date Key</AttributeID>
-                  <EstimatedCount>21947</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Calendar Date</AttributeID>
-                  <EstimatedCount>21947</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Fin Period</AttributeID>
-                  <EstimatedCount>721</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Fin Quarter</AttributeID>
-                  <EstimatedCount>241</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Fin Year</AttributeID>
-                  <EstimatedCount>62</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Fin Month</AttributeID>
-                  <EstimatedCount>722</EstimatedCount>
-                </Attribute>
-              </Attributes>
-            </Dimension>
-            <Dimension>
-              <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-              <Attributes>
-                <Attribute>
-                  <AttributeID>Dim Fed Hierarchy History Key</AttributeID>
-                  <EstimatedCount>34372</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Fed Code</AttributeID>
-                  <EstimatedCount>4166</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Display Name</AttributeID>
-                  <EstimatedCount>7791</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Hierarchylevel1hist</AttributeID>
-                  <EstimatedCount>2</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Hierarchylevel2hist</AttributeID>
-                  <EstimatedCount>10</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Hierarchylevel3hist</AttributeID>
-                  <EstimatedCount>94</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Hierarchylevel4hist</AttributeID>
-                  <EstimatedCount>526</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Hierarchylevel5hist</AttributeID>
-                  <EstimatedCount>692</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Fed Hierarchy Business Key</AttributeID>
-                  <EstimatedCount>4796</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Name</AttributeID>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Windowsusername</AttributeID>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Hierarchylevel6hist</AttributeID>
-                </Attribute>
-              </Attributes>
-            </Dimension>
-            <Dimension>
-              <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-              <Attributes>
-                <Attribute>
-                  <AttributeID>Dim Mat Head History Key</AttributeID>
-                  <EstimatedCount>3685975</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Matter Number</AttributeID>
-                  <EstimatedCount>3685975</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Matter Description</AttributeID>
-                  <EstimatedCount>3685975</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Date Opened Practice Management</AttributeID>
-                  <EstimatedCount>17277</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Date Closed Practice Management</AttributeID>
-                  <EstimatedCount>11215</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Fixed Fee</AttributeID>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Instruction Type</AttributeID>
-                </Attribute>
-              </Attributes>
-            </Dimension>
-            <Dimension>
-              <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-              <Attributes>
-                <Attribute>
-                  <AttributeID>Dim Fed Hierarchy History Key</AttributeID>
-                  <EstimatedCount>34372</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Fed Code</AttributeID>
-                  <EstimatedCount>4166</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Display Name</AttributeID>
-                  <EstimatedCount>7791</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Hierarchylevel1hist</AttributeID>
-                  <EstimatedCount>2</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Hierarchylevel2hist</AttributeID>
-                  <EstimatedCount>10</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Hierarchylevel3hist</AttributeID>
-                  <EstimatedCount>94</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Hierarchylevel4hist</AttributeID>
-                  <EstimatedCount>526</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Hierarchylevel5hist</AttributeID>
-                  <EstimatedCount>692</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Fed Hierarchy Business Key</AttributeID>
-                  <EstimatedCount>4796</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Name</AttributeID>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Windowsusername</AttributeID>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Hierarchylevel6hist</AttributeID>
-                </Attribute>
-              </Attributes>
-            </Dimension>
-            <Dimension>
-              <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-              <Attributes>
-                <Attribute>
-                  <AttributeID>Dim Days Banding Key</AttributeID>
-                  <EstimatedCount>8</EstimatedCount>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Daysbanding</AttributeID>
-                  <EstimatedCount>8</EstimatedCount>
-                </Attribute>
-              </Attributes>
-            </Dimension>
-          </Dimensions>
-          <Aggregations>
-            <Aggregation>
-              <ID>Aggregation 0</ID>
-              <Name>Aggregation 0</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>Dim Client</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Fin Period</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel2hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation 1</ID>
-              <Name>Aggregation 1</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>Dim Client</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel3hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation 2</ID>
-              <Name>Aggregation 2</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>Dim Client</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Display Name</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation 3</ID>
-              <Name>Aggregation 3</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>Dim Client</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Client Group Name</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel1hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation 4</ID>
-              <Name>Aggregation 4</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>Dim Client</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel1hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation 5</ID>
-              <Name>Aggregation 5</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>Dim Client</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Client Group Name</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel3hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation 6</ID>
-              <Name>Aggregation 6</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>Dim Client</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Client Group Name</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Fin Year</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel1hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation 7</ID>
-              <Name>Aggregation 7</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>Dim Client</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Fin Year</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel1hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation 8</ID>
-              <Name>Aggregation 8</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>Dim Client</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Dim Date Key</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation 9</ID>
-              <Name>Aggregation 9</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>Dim Client</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Fin Year</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel5hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation a</ID>
-              <Name>Aggregation a</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>Dim Client</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Fin Quarter</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Hierarchylevel3hist</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation b</ID>
-              <Name>Aggregation b</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>Dim Client</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim WIP Date</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Fin Quarter</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Matter Header History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Dim Days Banding</CubeDimensionID>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-          </Aggregations>
-        </AggregationDesign>
-      </AggregationDesigns>
-      <ProactiveCaching>
+      <Partitions />
+      <AggregationDesigns />
+      <ProactiveCaching dwd:design-time-name="23f709e2-cd7a-4be0-8a16-ed2762d6e2ff">
         <SilenceInterval>-PT1S</SilenceInterval>
         <Latency>-PT1S</Latency>
         <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
         <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
-        <Source xsi:type="ProactiveCachingInheritedBinding" />
+        <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="2627b8ed-8856-4da2-aac3-eca2ca96d6ae" />
       </ProactiveCaching>
     </MeasureGroup>
   </MeasureGroups>
-  <Source>
+  <Source dwd:design-time-name="69d19a25-fd89-4340-8b5c-eb684aec7ffa">
     <DataSourceViewID>fact_wip_monthly</DataSourceViewID>
   </Source>
   <MdxScripts>
-    <MdxScript>
+    <MdxScript dwd:design-time-name="33fd4197-0b6c-4e2c-9f09-c7fdc3a9718b">
       <ID>MdxScript</ID>
       <Name>MdxScript</Name>
       <CreatedTimestamp>2016-06-23T09:59:33.196667Z</CreatedTimestamp>
@@ -4013,11 +2317,11 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Wip Monthly'  ; </Text>
       </Commands>
     </MdxScript>
   </MdxScripts>
-  <ProactiveCaching>
+  <ProactiveCaching dwd:design-time-name="c33064d4-b2d1-412f-bacc-46e848d84178">
     <SilenceInterval>-PT1S</SilenceInterval>
     <Latency>-PT1S</Latency>
     <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
     <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
-    <Source xsi:type="ProactiveCachingInheritedBinding" />
+    <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="3162603e-a5ce-4547-ab16-cbb0b8317eb6" />
   </ProactiveCaching>
 </Cube>
