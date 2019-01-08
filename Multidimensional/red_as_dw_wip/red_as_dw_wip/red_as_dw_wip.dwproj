@@ -94,6 +94,20 @@
     <Configuration>
       <Name>Development</Name>
       <Options>
+        <ConnectionMappings>
+          <ConfigurationSetting>
+            <Id>Red Dw</Id>
+            <Name>Red Dw</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=svr-liv-dw-01;Integrated Security=SSPI;Initial Catalog=red_dw</Value>
+          </ConfigurationSetting>
+        </ConnectionMappings>
+        <ConnectionSecurityMappings>
+          <ConfigurationSetting>
+            <Id>Red Dw</Id>
+            <Name>Red Dw</Name>
+            <Value xsi:type="xsd:int">0</Value>
+          </ConfigurationSetting>
+        </ConnectionSecurityMappings>
         <DeploymentServerEdition>EnterpriseCore</DeploymentServerEdition>
       </Options>
     </Configuration>

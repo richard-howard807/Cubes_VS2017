@@ -11,7 +11,7 @@
           <LastSchemaUpdate>2018-08-01T10:57:22.503333Z</LastSchemaUpdate>
           <LastProcessed>2018-12-17T02:30:14.82Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="7f0eaf2e-e2a3-4cec-9c18-8732377e8cea">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="4e4b1819-d804-404e-b39c-6e432d17e620">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT    dim_transaction_date_key as 'Dim Transaction Date Key',
 	dim_matter_header_history_key as 'Dim Matter Header History Key',
@@ -22,7 +22,7 @@
 	wip_value as 'WIP Value',
 	dim_client_key as 'Dim Client Key'
 FROM            fact_wip_daily 
-		WHERE dim_transaction_date_key = replace(cast(getdate() - 1 AS date), '-', '')  and wip_value &lt;&gt; 0 and master_fact_key &lt;&gt; 0</QueryDefinition>
+		WHERE dim_transaction_date_key = replace(cast(getdate() - 1 AS date), '-', '')  and wip_value &lt;&gt; 0</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
@@ -50,7 +50,7 @@ FROM            fact_wip_daily
           </Annotations>
           <LastProcessed>2018-12-17T02:31:26.32Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="c8e753d3-5bfa-4dc7-9820-e393d90c7ab0">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="f9500f1d-013f-40f3-bd55-7d132378977e">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   dim_transaction_date_key as 'Dim Transaction Date Key',
 	dim_matter_header_history_key as 'Dim Matter Header History Key',
@@ -62,7 +62,7 @@ FROM            fact_wip_daily
 	dim_client_key as 'Dim Client Key'
 FROM            fact_wip_daily 
 		where dim_transaction_date_key &gt;= cast(left(replace(cast(DATEADD(DAY,-1,GETDATE()) as date), '-', '') -1 , 6) as varchar(8)) + '01'
-and dim_transaction_date_key &lt; replace(cast(getdate() -1 as date), '-', '')  and wip_value &lt;&gt; 0 and master_fact_key &lt;&gt; 0</QueryDefinition>
+and dim_transaction_date_key &lt; replace(cast(getdate() -1 as date), '-', '')  and wip_value &lt;&gt; 0</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
@@ -90,7 +90,7 @@ and dim_transaction_date_key &lt; replace(cast(getdate() -1 as date), '-', '')  
           </Annotations>
           <LastProcessed>2018-12-17T02:33:07.04Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="af777f48-6a0b-4756-8260-991b32d9b42c">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="d7697a54-fb3e-471f-8859-e2f25a2b7cd5">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT    dim_transaction_date_key as 'Dim Transaction Date Key',
 	dim_matter_header_history_key as 'Dim Matter Header History Key',
@@ -126,7 +126,7 @@ FROM            fact_wip_daily
           <LastSchemaUpdate>2018-08-01T10:57:22.566667Z</LastSchemaUpdate>
           <LastProcessed>2018-12-17T02:32:32.32Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="715c2bef-a7d0-4348-bb5c-110066e42fc7">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="d4366877-1755-4beb-8fdb-7b9a45a727a2">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT    dim_transaction_date_key as 'Dim Transaction Date Key',
 	dim_matter_header_history_key as 'Dim Matter Header History Key',
@@ -139,7 +139,7 @@ FROM            fact_wip_daily
 FROM            fact_wip_daily
 		where 
 		dim_transaction_date_key &gt;= '20170501'
-		and dim_transaction_date_key &lt; cast(left(replace(cast(getdate() as date), '-', '') -1 , 6) as varchar(8)) + '01' and wip_value &lt;&gt; 0 and master_fact_key &lt;&gt; 0 and dim_transaction_date_key &lt; 20180501</QueryDefinition>
+		and dim_transaction_date_key &lt; cast(left(replace(cast(getdate() as date), '-', '') -1 , 6) as varchar(8)) + '01' and wip_value &lt;&gt; 0 and dim_transaction_date_key &lt; 20180501</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
@@ -163,7 +163,7 @@ FROM            fact_wip_daily
           <LastSchemaUpdate>2018-08-01T10:57:22.6Z</LastSchemaUpdate>
           <LastProcessed>2018-12-17T02:31:55.946667Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="85fc2afa-5e3f-46a1-9496-270ff103fe69">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="e040a1e2-8253-4adc-b3b9-294034c14fcd">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT    dim_transaction_date_key as 'Dim Transaction Date Key',
 	dim_matter_header_history_key as 'Dim Matter Header History Key',
@@ -176,7 +176,7 @@ FROM            fact_wip_daily
 FROM            fact_wip_daily
 		where 
 		dim_transaction_date_key &gt;= '20180501'
-		and dim_transaction_date_key &lt; cast(left(replace(cast(DATEADD(DAY,-1,GETDATE()) as date), '-', '') -1 , 6) as varchar(8)) + '01' and wip_value &lt;&gt; 0 and master_fact_key &lt;&gt; 0 and dim_transaction_date_key &lt; 20190501</QueryDefinition>
+		and dim_transaction_date_key &lt; cast(left(replace(cast(DATEADD(DAY,-1,GETDATE()) as date), '-', '') -1 , 6) as varchar(8)) + '01' and wip_value &lt;&gt; 0 and dim_transaction_date_key &lt; 20190501</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
@@ -199,7 +199,7 @@ FROM            fact_wip_daily
           <LastSchemaUpdate>2018-08-01T10:57:22.613333Z</LastSchemaUpdate>
           <LastProcessed>2018-12-17T02:30:13.163333Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="e92ebbb0-c9ee-4d2b-b983-935aa120fbc8">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="58546ba9-c2dd-4239-9ab8-954608013187">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT    dim_transaction_date_key as 'Dim Transaction Date Key',
 	dim_matter_header_history_key as 'Dim Matter Header History Key',
@@ -212,7 +212,7 @@ FROM            fact_wip_daily
 FROM            fact_wip_daily
 		where 
 		dim_transaction_date_key &gt;= '20190501'
-		and dim_transaction_date_key &lt; cast(left(replace(cast(getdate() as date), '-', '') -1 , 6) as varchar(8)) + '01' and wip_value &lt;&gt; 0 and master_fact_key &lt;&gt; 0 and dim_transaction_date_key &lt; 20200501</QueryDefinition>
+		and dim_transaction_date_key &lt; cast(left(replace(cast(getdate() as date), '-', '') -1 , 6) as varchar(8)) + '01' and wip_value &lt;&gt; 0 and dim_transaction_date_key &lt; 20200501</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
@@ -235,7 +235,7 @@ FROM            fact_wip_daily
           <LastSchemaUpdate>2018-08-01T10:57:22.63Z</LastSchemaUpdate>
           <LastProcessed>2018-12-17T02:30:13.116667Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="4f941c61-74f4-4126-8cd1-035de7f05f4a">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="5eff5ca8-c3e4-4f76-a9b6-47f2553059da">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT    dim_transaction_date_key as 'Dim Transaction Date Key',
 	dim_matter_header_history_key as 'Dim Matter Header History Key',
@@ -248,7 +248,7 @@ FROM            fact_wip_daily
 FROM            fact_wip_daily
 		where 
 		dim_transaction_date_key &gt;= '20200501'
-		and dim_transaction_date_key &lt; cast(left(replace(cast(getdate() as date), '-', '') -1 , 6) as varchar(8)) + '01' and wip_value &lt;&gt; 0 and master_fact_key &lt;&gt; 0 and dim_transaction_date_key &lt; 20210501</QueryDefinition>
+		and dim_transaction_date_key &lt; cast(left(replace(cast(getdate() as date), '-', '') -1 , 6) as varchar(8)) + '01' and wip_value &lt;&gt; 0 and dim_transaction_date_key &lt; 20210501</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
