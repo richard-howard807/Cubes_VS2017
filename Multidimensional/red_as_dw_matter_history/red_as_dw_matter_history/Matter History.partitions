@@ -474,11 +474,11 @@ where fin_month between 201907 and 201909</QueryDefinition>
           </Annotations>
           <LastProcessed>2018-12-16T07:41:23.973333Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="bb30096e-70e1-466d-ad34-227dde0faffe">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="247dfb88-d01c-4843-a479-e4ea696c9416">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT     *
 FROM            fact_matter_summary
-where fin_month between 201909 and 201912</QueryDefinition>
+where fin_month between 201910 and 201912</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
@@ -588,11 +588,11 @@ where fin_month between 202007 and 202009</QueryDefinition>
           <LastSchemaUpdate>2018-09-24T11:47:15.273333Z</LastSchemaUpdate>
           <LastProcessed>2018-12-16T07:41:24.02Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="6cb5120c-c863-4079-82a2-e15a23c2d17d">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="a541a157-2cda-4571-bc58-f31b59f649ce">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT     *
 FROM            fact_matter_summary
-where fin_month between 202009 and 202012</QueryDefinition>
+where fin_month between 202010 and 202012</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
