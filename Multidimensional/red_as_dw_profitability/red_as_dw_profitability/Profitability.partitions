@@ -1,3 +1,33 @@
 ﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="ba8bb762-707d-4fa9-bae7-24a43fc62be2" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Profitability</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Fact Profitability</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="eb3b5fbd-a898-4be6-a336-656bf7f6e8b4">
+          <ID>Fact Profitability</ID>
+          <Name>Fact Profitability</Name>
+          <CreatedTimestamp>2017-08-11T13:53:18.353333Z</CreatedTimestamp>
+          <LastSchemaUpdate>2018-08-06T14:28:38.456667Z</LastSchemaUpdate>
+          <LastProcessed>2018-12-20T16:44:29.346667Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="c25fa771-477d-4e58-8e19-30f106643560">
+            <DataSourceViewID>Profitability</DataSourceViewID>
+            <TableID>dbo_fact_profitability</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="3a4e2606-9a85-4894-87f5-cc99ec9712d2">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="9ba6bedc-0636-4d34-9329-f35eda016b2b" />
+          </ProactiveCaching>
+          <EstimatedSize>50304920</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
 </Cube>
