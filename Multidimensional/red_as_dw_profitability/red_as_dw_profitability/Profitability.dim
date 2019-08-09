@@ -187,41 +187,33 @@
       <ID>Display Name</ID>
       <Name>Fee Earner</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="6be0c91e-8774-446e-a17e-2f81ad70dd3d">
-          <DataType>WChar</DataType>
-          <DataSize>40</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="cd0c446b-c4fe-4e17-b8c0-0a6b1be94c04">
-            <TableID>dbo_fact_profitability</TableID>
-            <ColumnID>client_group_code</ColumnID>
-          </Source>
-        </KeyColumn>
-        <KeyColumn dwd:design-time-name="258df7e0-578e-4bf8-bff8-c478f5496cb7">
+        <KeyColumn dwd:design-time-name="284369a7-65d7-4be3-a957-7f1d7f525048">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="fd98da37-4473-4735-bcfb-ef70a55cee86">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2bdb8f1a-8a92-4e57-8ba8-195a7fad8814">
             <TableID>dbo_fact_profitability</TableID>
             <ColumnID>dim_client_key</ColumnID>
           </Source>
         </KeyColumn>
-        <KeyColumn dwd:design-time-name="504d28f8-9b8c-4333-93ef-ed7c5a9df844">
+        <KeyColumn dwd:design-time-name="b1a9044a-b70c-4bd4-b3af-c627e2db7c70">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="7f392f82-c393-4190-9995-d3b5164c23cb">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c0d2d5a0-3a40-47b1-8f48-c73b952a8369">
             <TableID>dbo_fact_profitability</TableID>
             <ColumnID>dim_matter_header_curr_key</ColumnID>
           </Source>
         </KeyColumn>
-        <KeyColumn dwd:design-time-name="c52fa51d-9249-4be5-8587-a2b3107eb096">
+        <KeyColumn dwd:design-time-name="f3171e8b-9077-4165-bc38-4c194edf60e0">
           <DataType>WChar</DataType>
           <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="2691bc2d-944d-4af6-bae0-e5c4991afdb0">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a85ede72-f37e-44c6-beaf-afd40548355d">
             <TableID>dbo_fact_profitability</TableID>
             <ColumnID>fed_code</ColumnID>
           </Source>
         </KeyColumn>
-        <KeyColumn dwd:design-time-name="36da4809-0fb1-4202-aed5-1f232f5a9f84">
+        <KeyColumn dwd:design-time-name="b4da6e05-472a-46b6-b670-3d2b5c9b40fd">
           <DataType>WChar</DataType>
           <DataSize>100</DataSize>
           <Collation>Latin1_General_CS_AS</Collation>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="6bff6ae8-e0a4-434e-9126-8f1f2409a960">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f680209f-7a04-418d-8a78-80e7829d6c76">
             <TableID>dbo_fact_profitability</TableID>
             <ColumnID>display_name</ColumnID>
           </Source>
