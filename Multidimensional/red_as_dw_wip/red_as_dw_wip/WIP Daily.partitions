@@ -16,7 +16,7 @@
           </Annotations>
           <LastProcessed>2018-12-17T02:31:26.32Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="425984db-135c-4429-bf38-c632534e4ae1">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="34d42e1b-e576-4455-9a1a-c1b29cc77a22">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   dim_transaction_date_key as 'Dim Transaction Date Key',
 	dim_matter_header_history_key as 'Dim Matter Header History Key',
@@ -33,7 +33,7 @@ where
 	and dim_transaction_date_key &lt; replace(cast(getdate() -1 as date), '-', '')  and wip_value &lt;&gt; 0
 */
 dim_transaction_date_key &gt;= cast(left(replace(dateadd(day, 1, eomonth(getdate(),-1)), '-',''), 6) as varchar(8)) + '01' 
-and dim_transaction_date_key &lt; replace(cast(getdate() -1 as date), '-', '')  and wip_value &lt;&gt; 0</QueryDefinition>
+ and wip_value &lt;&gt; 0</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
