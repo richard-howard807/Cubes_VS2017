@@ -50,7 +50,7 @@ FROM            fact_wip_daily
           </Annotations>
           <LastProcessed>2018-12-17T02:31:26.32Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="f9500f1d-013f-40f3-bd55-7d132378977e">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="c4ce5f59-db44-402b-ab41-ebd03aa290d5">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   dim_transaction_date_key as 'Dim Transaction Date Key',
 	dim_matter_header_history_key as 'Dim Matter Header History Key',
@@ -61,8 +61,15 @@ FROM            fact_wip_daily
 	wip_value as 'WIP Value',
 	dim_client_key as 'Dim Client Key'
 FROM            fact_wip_daily 
-		where dim_transaction_date_key &gt;= cast(left(replace(cast(DATEADD(DAY,-1,GETDATE()) as date), '-', '') -1 , 6) as varchar(8)) + '01'
-and dim_transaction_date_key &lt; replace(cast(getdate() -1 as date), '-', '')  and wip_value &lt;&gt; 0</QueryDefinition>
+where 
+/* 20190809 - RH | Altered date so it works on first day of month and removed yesterday dimension 
+	dim_transaction_date_key &gt;= cast(left(replace(cast(DATEADD(DAY,-1,GETDATE()) as date), '-', '') -1 , 6) as varchar(8)) + '01'
+	and dim_transaction_date_key &lt; replace(cast(getdate() -1 as date), '-', '')  and wip_value &lt;&gt; 0
+*/
+dim_transaction_date_key &gt;= cast(left(replace(dateadd(day, 1, eomonth(getdate(),-1)), '-',''), 6) as varchar(8)) + '01' 
+and dim_transaction_date_key &lt; replace(cast(getdate() -1 as date), '-', '')  and wip_value &lt;&gt; 0
+
+select dateadd(day, 1, eomonth(getdate(),-1) )</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
@@ -199,7 +206,7 @@ FROM            fact_wip_daily
           <LastSchemaUpdate>2018-08-01T10:57:22.613333Z</LastSchemaUpdate>
           <LastProcessed>2018-12-17T02:30:13.163333Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="58546ba9-c2dd-4239-9ab8-954608013187">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="75f5ef0d-772b-4ba6-bd7d-d229016a7d78">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT    dim_transaction_date_key as 'Dim Transaction Date Key',
 	dim_matter_header_history_key as 'Dim Matter Header History Key',
@@ -212,7 +219,14 @@ FROM            fact_wip_daily
 FROM            fact_wip_daily
 		where 
 		dim_transaction_date_key &gt;= '20190501'
-		and dim_transaction_date_key &lt; cast(left(replace(cast(getdate() as date), '-', '') -1 , 6) as varchar(8)) + '01' and wip_value &lt;&gt; 0 and dim_transaction_date_key &lt; 20200501</QueryDefinition>
+			
+		/* 20190809 - RH | Altered date so it works on first day of month	
+				and dim_transaction_date_key &lt; cast(left(replace(cast(getdate() as date), '-', '') -1 , 6) as varchar(8)) + '01' 
+		*/
+
+		and dim_transaction_date_key &lt; cast(left(replace(dateadd(day, 1, eomonth(getdate(),-1)), '-',''), 6) as varchar(8)) + '01' 
+		and wip_value &lt;&gt; 0 
+		and dim_transaction_date_key &lt; 20200501</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
@@ -235,7 +249,7 @@ FROM            fact_wip_daily
           <LastSchemaUpdate>2018-08-01T10:57:22.63Z</LastSchemaUpdate>
           <LastProcessed>2018-12-17T02:30:13.116667Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="5eff5ca8-c3e4-4f76-a9b6-47f2553059da">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="1f8111ab-760d-4f29-8b47-33d2ab1a3f8b">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT    dim_transaction_date_key as 'Dim Transaction Date Key',
 	dim_matter_header_history_key as 'Dim Matter Header History Key',
@@ -248,7 +262,14 @@ FROM            fact_wip_daily
 FROM            fact_wip_daily
 		where 
 		dim_transaction_date_key &gt;= '20200501'
-		and dim_transaction_date_key &lt; cast(left(replace(cast(getdate() as date), '-', '') -1 , 6) as varchar(8)) + '01' and wip_value &lt;&gt; 0 and dim_transaction_date_key &lt; 20210501</QueryDefinition>
+			
+		/* 20190809 - RH | Altered date so it works on first day of month	
+				and dim_transaction_date_key &lt; cast(left(replace(cast(getdate() as date), '-', '') -1 , 6) as varchar(8)) + '01' 
+		*/
+
+		and dim_transaction_date_key &lt; cast(left(replace(dateadd(day, 1, eomonth(getdate(),-1)), '-',''), 6) as varchar(8)) + '01' 
+		and wip_value &lt;&gt; 0 
+		and dim_transaction_date_key &lt; 20200501</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
