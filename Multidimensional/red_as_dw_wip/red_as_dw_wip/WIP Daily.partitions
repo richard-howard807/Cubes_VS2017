@@ -4,40 +4,6 @@
     <MeasureGroup>
       <ID>Fact Wip Daily</ID>
       <Partitions>
-        <Partition dwd:design-time-name="8188358d-77a0-4b4e-a583-36f6853c37fc">
-          <ID>Fact Wip Daily_yesterday</ID>
-          <Name>Fact Wip Daily_yesterday</Name>
-          <CreatedTimestamp>2016-05-24T09:50:22.093333Z</CreatedTimestamp>
-          <LastSchemaUpdate>2018-08-01T10:57:22.503333Z</LastSchemaUpdate>
-          <LastProcessed>2018-12-17T02:30:14.82Z</LastProcessed>
-          <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="4e4b1819-d804-404e-b39c-6e432d17e620">
-            <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT    dim_transaction_date_key as 'Dim Transaction Date Key',
-	dim_matter_header_history_key as 'Dim Matter Header History Key',
-	dim_fed_hierarchy_history_key as 'Dim Fed Hierarchy History Key',
-	dim_days_banding_key as 'Dim Days Banding Key',
-	dim_fed_matter_owner_key as 'Dim Fed Matter Owner Key',
-	wip_minutes as 'WIP Minutes',
-	wip_value as 'WIP Value',
-	dim_client_key as 'Dim Client Key'
-FROM            fact_wip_daily 
-		WHERE dim_transaction_date_key = replace(cast(getdate() - 1 AS date), '-', '')  and wip_value &lt;&gt; 0</QueryDefinition>
-          </Source>
-          <StorageMode>Molap</StorageMode>
-          <CurrentStorageMode>Molap</CurrentStorageMode>
-          <ProcessingMode>Regular</ProcessingMode>
-          <ProactiveCaching dwd:design-time-name="6e196887-e5f7-45c2-b201-8f928f37a4d2">
-            <SilenceInterval>-PT1S</SilenceInterval>
-            <Latency>-PT1S</Latency>
-            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
-            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
-            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="ef7b9501-79dc-4ed5-9d23-f8582f3f1951" />
-          </ProactiveCaching>
-          <EstimatedSize>1814238</EstimatedSize>
-          <EstimatedRows>60316</EstimatedRows>
-          <AggregationDesignID>AggregationDesign</AggregationDesignID>
-        </Partition>
         <Partition dwd:design-time-name="fe03d86e-5884-490e-82bb-43d71454951f">
           <ID>Fact Wip Daily_current_month</ID>
           <Name>Fact Wip Daily_current_month</Name>
@@ -206,7 +172,7 @@ FROM            fact_wip_daily
           <LastSchemaUpdate>2018-08-01T10:57:22.613333Z</LastSchemaUpdate>
           <LastProcessed>2018-12-17T02:30:13.163333Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="75f5ef0d-772b-4ba6-bd7d-d229016a7d78">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="d6cd80b0-6d9b-43de-be5d-13d98acdd277">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT    dim_transaction_date_key as 'Dim Transaction Date Key',
 	dim_matter_header_history_key as 'Dim Matter Header History Key',
