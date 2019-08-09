@@ -222,7 +222,7 @@
       <xs:element name="Profitability" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="4dd87150-feaf-4dff-a41b-ced4fe96a350">
         <xs:complexType>
           <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element name="dbo_fact_profitability" msprop:design-time-name="f01aadab-ed97-4bad-9f47-dba82454a35f" msprop:IsLogical="True" msprop:FriendlyName="fact_profitability" msprop:DbTableName="fact_profitability" msprop:TableType="View" msprop:QueryDefinition="SELECT        dim_matter_header_curr_key, dim_client_key, dim_fed_hierarchy_history_key, fin_year, display_name, profit_costs, chargeable_minutes, &#xD;&#xA;                         chargeable_minutes / 60 AS chargeable_hours, cost_per_minute_avg, cost_per_minute_act, cost_of_time_avg, cost_of_time_act, dss_create_time, &#xD;&#xA;                         dss_update_time, profitability_avg, profitability_act, profitability_gross, cost_of_time_gross&#xD;&#xA;FROM            fact_profitability" msprop:QueryBuilder="SpecificQueryBuilder">
+            <xs:element name="dbo_fact_profitability" msprop:design-time-name="f01aadab-ed97-4bad-9f47-dba82454a35f" msprop:IsLogical="True" msprop:FriendlyName="fact_profitability" msprop:DbTableName="fact_profitability" msprop:TableType="View" msprop:QueryDefinition="SELECT        dim_matter_header_curr_key, dim_client_key, dim_fed_hierarchy_history_key, fin_year, LTRIM(RTRIM(client_code)) AS client_code, LTRIM(RTRIM(client_name)) &#xD;&#xA;                         AS client_name, CASE WHEN client_group_name = 'Ageas' THEN '00000067' ELSE client_group_code END AS client_group_code, &#xD;&#xA;                         CASE WHEN client_group_name = 'Vita' THEN 'Select' ELSE client_group_name END AS client_group_name, matter_number, fed_code, case_description, &#xD;&#xA;                         display_name, profit_costs, chargeable_minutes, chargeable_minutes / 60 AS chargeable_hours, cost_per_minute_avg, cost_per_minute_act, cost_of_time_avg, &#xD;&#xA;                         cost_of_time_act, dss_create_time, dss_update_time, profitability_avg, profitability_act, profitability_gross, cost_of_time_gross&#xD;&#xA;FROM            fact_profitability" msprop:QueryBuilder="SpecificQueryBuilder">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="dim_client_key" msprop:design-time-name="e4c75e4a-13d2-4cf4-8de1-1e1c8620b873" msprop:DbColumnName="dim_client_key" msprop:FriendlyName="dim_client_key" type="xs:int" minOccurs="0" />
@@ -249,6 +249,49 @@
                   <xs:element name="chargeable_hours" msprop:design-time-name="0225f8b7-035e-4e21-8582-be7cce7bdf2b" msprop:DbColumnName="chargeable_hours" type="xs:decimal" minOccurs="0" />
                   <xs:element name="profitability_gross" msprop:design-time-name="1bd73b8f-ca41-43c5-b247-9398688ac620" msprop:DbColumnName="profitability_gross" type="xs:decimal" minOccurs="0" />
                   <xs:element name="cost_of_time_gross" msprop:design-time-name="4dae4c65-128a-40f1-b0a8-f51c488f64ed" msprop:DbColumnName="cost_of_time_gross" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="client_code" msprop:design-time-name="0b40d36f-8f67-48fd-897a-1f0a15110c97" msprop:DbColumnName="client_code" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="client_name" msprop:design-time-name="4e4a6fde-7f72-41fd-9c44-9a30b26f6d68" msprop:DbColumnName="client_name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="80" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="client_group_code" msprop:design-time-name="d0e04ee0-b40b-42b7-b63a-300c5fbc00a0" msprop:DbColumnName="client_group_code" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="client_group_name" msprop:design-time-name="7b432237-b78d-4382-8671-389ea9222050" msprop:DbColumnName="client_group_name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="40" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="matter_number" msprop:design-time-name="9e8c8f5a-ea86-421e-9d2f-05b72347c4bf" msprop:DbColumnName="matter_number" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="fed_code" msprop:design-time-name="a36176d1-6f2e-46f7-95ce-46896651a0c4" msprop:DbColumnName="fed_code" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="case_description" msprop:design-time-name="0707e242-39e4-4fd8-9f48-b56382c3cbbf" msprop:DbColumnName="case_description" type="xs:string" minOccurs="0" />
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
