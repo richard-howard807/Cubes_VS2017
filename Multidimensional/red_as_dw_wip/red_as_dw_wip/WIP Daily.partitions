@@ -16,7 +16,7 @@
           </Annotations>
           <LastProcessed>2018-12-17T02:31:26.32Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="915f6b44-525d-4c22-92c3-275e772c020d">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="498bbcb9-3640-448e-9f6f-85f89eba6207">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   dim_transaction_date_key as 'Dim Transaction Date Key',
 	dim_matter_header_history_key as 'Dim Matter Header History Key',
@@ -135,7 +135,7 @@ FROM            fact_wip_daily
           <LastSchemaUpdate>2018-08-01T10:57:22.6Z</LastSchemaUpdate>
           <LastProcessed>2018-12-17T02:31:55.946667Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="e040a1e2-8253-4adc-b3b9-294034c14fcd">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="e559eb85-1616-453e-9fd3-32898f897d67">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT    dim_transaction_date_key as 'Dim Transaction Date Key',
 	dim_matter_header_history_key as 'Dim Matter Header History Key',
@@ -171,7 +171,7 @@ FROM            fact_wip_daily
           <LastSchemaUpdate>2018-08-01T10:57:22.613333Z</LastSchemaUpdate>
           <LastProcessed>2018-12-17T02:30:13.163333Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="02002c16-1663-469b-bdc5-8646c85bb763">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="25046180-2954-4267-809e-2a1bb5649adc">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT    dim_transaction_date_key as 'Dim Transaction Date Key',
 	dim_matter_header_history_key as 'Dim Matter Header History Key',
@@ -188,11 +188,13 @@ FROM            fact_wip_daily
 		/* 20190809 - RH | Altered date so it works on first day of month	
 				and dim_transaction_date_key &lt; cast(left(replace(cast(getdate() as date), '-', '') -1 , 6) as varchar(8)) + '01' 
 		*/
+		
 		and dim_transaction_date_key &lt; iif (	
 				dateadd(day, 1, eomonth(getdate(),-1)) =
 				cast (getdate() as date),
-				getdate() - 2,
-				dateadd(day, 1, eomonth(getdate(),-1)))
+				cast(replace(cast (getdate() - 2 as date), '-', '') as varchar(8)) ,
+				cast(replace(cast (dateadd(day, 1, eomonth(getdate(),-1))  as date), '-', '') as varchar(8))
+				)
 		and wip_value &lt;&gt; 0 
 		and dim_transaction_date_key &lt; 20200501</QueryDefinition>
           </Source>
@@ -217,7 +219,7 @@ FROM            fact_wip_daily
           <LastSchemaUpdate>2018-08-01T10:57:22.63Z</LastSchemaUpdate>
           <LastProcessed>2018-12-17T02:30:13.116667Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="1f8111ab-760d-4f29-8b47-33d2ab1a3f8b">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="81e8d8cf-e266-465b-98b5-910e4130cc5c">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT    dim_transaction_date_key as 'Dim Transaction Date Key',
 	dim_matter_header_history_key as 'Dim Matter Header History Key',
@@ -235,7 +237,12 @@ FROM            fact_wip_daily
 				and dim_transaction_date_key &lt; cast(left(replace(cast(getdate() as date), '-', '') -1 , 6) as varchar(8)) + '01' 
 		*/
 
-		and dim_transaction_date_key &lt; cast(left(replace(dateadd(day, 1, eomonth(getdate(),-1)), '-',''), 6) as varchar(8)) + '01' 
+and dim_transaction_date_key &lt; iif (	
+				dateadd(day, 1, eomonth(getdate(),-1)) =
+				cast (getdate() as date),
+				cast(replace(cast (getdate() - 2 as date), '-', '') as varchar(8)) ,
+				cast(replace(cast (dateadd(day, 1, eomonth(getdate(),-1))  as date), '-', '') as varchar(8))
+				)
 		and wip_value &lt;&gt; 0 
 		and dim_transaction_date_key &lt; 20200501</QueryDefinition>
           </Source>
@@ -260,7 +267,6 @@ FROM            fact_wip_daily
           <Annotations>
             <Annotation>
               <Name>AggregationPercent</Name>
-              <Value></Value>
             </Annotation>
           </Annotations>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
