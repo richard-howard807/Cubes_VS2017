@@ -1,29 +1,29 @@
-﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="b7e70dbc-49da-44e3-8beb-ab07390a06fa" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="77bef285-22bd-4fa9-9aab-1b765a38cfff" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Profit Costs Drilldown</ID>
   <MeasureGroups>
     <MeasureGroup>
       <ID>Fact Bill Activity</ID>
       <Partitions>
-        <Partition dwd:design-time-name="705e4ef4-73bd-40a0-aa27-42a8b6b698f7">
+        <Partition dwd:design-time-name="86ba6604-2f09-4b56-bcf7-129022c7c8aa">
           <ID>Fact Bill Activity</ID>
           <Name>Fact Bill Activity</Name>
           <CreatedTimestamp>2015-11-26T15:00:04.846667Z</CreatedTimestamp>
           <LastSchemaUpdate>2018-09-17T13:02:45.03Z</LastSchemaUpdate>
           <LastProcessed>2018-12-20T16:32:05.433333Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="b561b380-620a-40f3-b79a-f0a946a79056">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="a58b3f74-293f-46e3-99e8-df4cb5e9ea5b">
             <DataSourceViewID>Chargeable_Hours</DataSourceViewID>
             <TableID>dbo_fact_bill_activity</TableID>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
-          <ProactiveCaching dwd:design-time-name="f3443474-39ff-47dd-9a70-9a0af4c45575">
+          <ProactiveCaching dwd:design-time-name="7642c43a-5c44-42c7-ba2f-78a7460720f1">
             <SilenceInterval>-PT1S</SilenceInterval>
             <Latency>-PT1S</Latency>
             <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
             <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
-            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="c1b00364-0c40-4342-a34c-ffda7a83a64d" />
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="ab791f9b-1091-4d17-a47c-f09dbe435019" />
           </ProactiveCaching>
           <EstimatedSize>543597882</EstimatedSize>
           <EstimatedRows>2120619</EstimatedRows>
@@ -1593,26 +1593,26 @@
     <MeasureGroup>
       <ID>Fact Bill</ID>
       <Partitions>
-        <Partition dwd:design-time-name="a12fd44f-f279-486a-8a85-1e179d009b66">
+        <Partition dwd:design-time-name="ecc9cb26-7fc5-47cf-8e28-89422085bac8">
           <ID>Fact Bill</ID>
           <Name>Fact Bill</Name>
           <CreatedTimestamp>2015-11-26T15:00:04.906667Z</CreatedTimestamp>
           <LastSchemaUpdate>2018-09-17T13:02:45.063333Z</LastSchemaUpdate>
           <LastProcessed>2018-12-20T16:31:09.636667Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="761ef9c8-d503-4a34-ad80-9a0c6286087c">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="5397beec-963c-49b4-8805-40e81a27a80d">
             <DataSourceViewID>Chargeable_Hours</DataSourceViewID>
             <TableID>dbo_fact_bill</TableID>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
-          <ProactiveCaching dwd:design-time-name="da286add-9985-454c-9565-095e86f26154">
+          <ProactiveCaching dwd:design-time-name="7b3316ae-7acc-4bc1-92e3-79ae6fce60c9">
             <SilenceInterval>-PT1S</SilenceInterval>
             <Latency>-PT1S</Latency>
             <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
             <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
-            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="f5307c65-fd50-4456-bceb-56b9b892a11c" />
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="121335e9-4610-4524-8471-da46cde89e8d" />
           </ProactiveCaching>
           <EstimatedSize>214266008</EstimatedSize>
           <EstimatedRows>1265826</EstimatedRows>
@@ -2116,14 +2116,14 @@
     <MeasureGroup>
       <ID>Fact Bill Billed Time Activity</ID>
       <Partitions>
-        <Partition dwd:design-time-name="8774ae40-6aab-44d2-aeea-43d57359ddb1">
+        <Partition dwd:design-time-name="b4a672d2-709c-4a26-b10e-b22039340340">
           <ID>Fact Bill Billed Time Activity</ID>
           <Name>Fact Bill Billed Time Activity Pre 2010 Inclusive</Name>
           <CreatedTimestamp>2016-09-01T11:23:10.326667Z</CreatedTimestamp>
           <LastSchemaUpdate>2018-09-17T13:02:45.11Z</LastSchemaUpdate>
           <LastProcessed>2018-12-20T16:31:40.526667Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="a5cb5cc4-3ace-4c1a-8046-6cfb462e0709">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="596c9d72-7dca-4baa-a0cd-3a71c764a9d3">
             <DataSourceID>Red_dw</DataSourceID>
             <QueryDefinition>SELECT [dbo].[fact_bill_billed_time_activity].[dim_bill_key],[dbo].[fact_bill_billed_time_activity].[dim_client_key],[dbo].[fact_bill_billed_time_activity].[dim_transaction_date_key],[dbo].[fact_bill_billed_time_activity].[dim_fed_hierarchy_history_key],[dbo].[fact_bill_billed_time_activity].[dim_matter_header_curr_key],[dbo].[fact_bill_billed_time_activity].[dim_all_time_activity_key],[dbo].[fact_bill_billed_time_activity].[dim_gl_date_key],[dbo].[fact_bill_billed_time_activity].[source_system_id],[dbo].[fact_bill_billed_time_activity].[transaction_sequence_number],[dbo].[fact_bill_billed_time_activity].[time_activity_code],[dbo].[fact_bill_billed_time_activity].[minutes_recorded],[dbo].[fact_bill_billed_time_activity].[hourly_charge_rate],[dbo].[fact_bill_billed_time_activity].[time_charge_value],[dbo].[fact_bill_billed_time_activity].[actual_time_recorded_value],[dbo].[fact_bill_billed_time_activity].[dss_update_time],[dbo].[fact_bill_billed_time_activity].[master_fact_key],minutes_recorded / 60 AS [billed_hours],[dbo].[fact_bill_billed_time_activity].[dim_bill_date_key]
 		FROM [dbo].[fact_bill_billed_time_activity]
@@ -2132,24 +2132,24 @@
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
-          <ProactiveCaching dwd:design-time-name="507c5211-5a7e-4ed5-a172-fcd7cbef0c3c">
+          <ProactiveCaching dwd:design-time-name="bb7c65c9-eb51-44df-ae5a-00b8a5065f88">
             <SilenceInterval>-PT1S</SilenceInterval>
             <Latency>-PT1S</Latency>
             <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
             <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
-            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="76df294d-59c3-45de-9287-88e4bc7adf5b" />
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="4529d841-ebb4-4312-8e7d-36af55bdee06" />
           </ProactiveCaching>
           <EstimatedSize>189073562</EstimatedSize>
           <EstimatedRows>20000000</EstimatedRows>
         </Partition>
-        <Partition dwd:design-time-name="9eb01784-63c2-4e7e-bd3e-40eb2803ecab">
+        <Partition dwd:design-time-name="90aeb437-5c4b-4dc1-b3d4-eebbd1e4bf80">
           <ID>Fact Bill Billed Time Activity Post 2010</ID>
           <Name>Fact Bill Billed Time Activity Post 2010</Name>
           <CreatedTimestamp>2017-01-06T10:38:18.82Z</CreatedTimestamp>
           <LastSchemaUpdate>2018-09-17T13:02:45.123333Z</LastSchemaUpdate>
           <LastProcessed>2018-12-20T16:32:20.293333Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="1f6b0ad9-80fb-4e2f-8bb2-d5ba9884a56a">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="efd1f0ce-72c0-4db5-a81a-001b94c23c2f">
             <DataSourceID>Red_dw</DataSourceID>
             <QueryDefinition>SELECT [dbo].[fact_bill_billed_time_activity].[dim_bill_key],[dbo].[fact_bill_billed_time_activity].[dim_client_key],[dbo].[fact_bill_billed_time_activity].[dim_transaction_date_key],[dbo].[fact_bill_billed_time_activity].[dim_fed_hierarchy_history_key],[dbo].[fact_bill_billed_time_activity].[dim_matter_header_curr_key],[dbo].[fact_bill_billed_time_activity].[dim_all_time_activity_key],[dbo].[fact_bill_billed_time_activity].[dim_gl_date_key],[dbo].[fact_bill_billed_time_activity].[source_system_id],[dbo].[fact_bill_billed_time_activity].[transaction_sequence_number],[dbo].[fact_bill_billed_time_activity].[time_activity_code],[dbo].[fact_bill_billed_time_activity].[minutes_recorded],[dbo].[fact_bill_billed_time_activity].[hourly_charge_rate],[dbo].[fact_bill_billed_time_activity].[time_charge_value],[dbo].[fact_bill_billed_time_activity].[actual_time_recorded_value],[dbo].[fact_bill_billed_time_activity].[dss_update_time],[dbo].[fact_bill_billed_time_activity].[master_fact_key],minutes_recorded / 60 AS [billed_hours],[dbo].[fact_bill_billed_time_activity].[dim_bill_date_key]
 		FROM [dbo].[fact_bill_billed_time_activity]
@@ -2158,12 +2158,12 @@
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
-          <ProactiveCaching dwd:design-time-name="0f317164-db57-48ef-aa2e-5d8b6d7f9075">
+          <ProactiveCaching dwd:design-time-name="cf0302a8-f4cb-407f-9916-d6d158bc6622">
             <SilenceInterval>-PT1S</SilenceInterval>
             <Latency>-PT1S</Latency>
             <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
             <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
-            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="2bd79248-99b1-4ac9-b177-b63524cc63f4" />
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="6fcda87d-bd8b-44b6-ade4-5ae4584624ad" />
           </ProactiveCaching>
           <EstimatedSize>496164458</EstimatedSize>
           <EstimatedRows>20000000</EstimatedRows>
