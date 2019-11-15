@@ -11,10 +11,26 @@
           <LastSchemaUpdate>2018-02-07T11:11:12.456667Z</LastSchemaUpdate>
           <LastProcessed>2018-12-20T16:31:48.386667Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="f59d28ee-c831-47cd-9899-c00a274501ca">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="adfe6bca-3c39-438e-9809-341030f5b866">
             <DataSourceID>Red_dw</DataSourceID>
-            <QueryDefinition>SELECT [dbo].[fact_chargeable_time_activity].[dim_bill_key],[dbo].[fact_chargeable_time_activity].[dim_transaction_date_key],[dbo].[fact_chargeable_time_activity].[dim_fed_hierarchy_history_key],[dbo].[fact_chargeable_time_activity].[dim_chargeable_time_activity_key],[dbo].[fact_chargeable_time_activity].[source_system_id],[dbo].[fact_chargeable_time_activity].[transaction_sequence_number],[dbo].[fact_chargeable_time_activity].[time_activity_code],[dbo].[fact_chargeable_time_activity].[minutes_recorded],[dbo].[fact_chargeable_time_activity].[hourly_charge_rate],[dbo].[fact_chargeable_time_activity].[time_charge_value],[dbo].[fact_chargeable_time_activity].[actual_time_recorded_value],[dbo].[fact_chargeable_time_activity].[dss_update_time],[dbo].[fact_chargeable_time_activity].[zero_rate_minutes_recorded],[dbo].[fact_chargeable_time_activity].[dim_matter_header_curr_key],[dbo].[fact_chargeable_time_activity].[dim_gl_date_key],[dbo].[fact_chargeable_time_activity].[dim_client_key],[minutes_recorded] / 60 AS [hours_recorded]
-		FROM [dbo].[fact_chargeable_time_activity]
+            <QueryDefinition>select fact_billable_time_activity.[dim_bill_key]
+     , fact_billable_time_activity.[dim_transaction_date_key]
+     , fact_billable_time_activity.[dim_fed_hierarchy_history_key]
+     , fact_billable_time_activity.dim_billable_time_activity_key
+     , fact_billable_time_activity.[source_system_id]
+     , fact_billable_time_activity.[transaction_sequence_number]
+     , fact_billable_time_activity.[time_activity_code]
+     , fact_billable_time_activity.[minutes_recorded]
+     , fact_billable_time_activity.[hourly_charge_rate]
+     , fact_billable_time_activity.[time_charge_value]
+     , fact_billable_time_activity.[actual_time_recorded_value]
+     , fact_billable_time_activity.[dss_update_time]
+     , fact_billable_time_activity.[zero_rate_minutes_recorded]
+     , fact_billable_time_activity.[dim_matter_header_curr_key]
+     , fact_billable_time_activity.[dim_gl_date_key]
+     , fact_billable_time_activity.[dim_client_key]
+     , [minutes_recorded] / 60 as [hours_recorded]
+from [dbo].fact_billable_time_activity
 where dim_transaction_date_key &lt; 20090501</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
@@ -38,10 +54,26 @@ where dim_transaction_date_key &lt; 20090501</QueryDefinition>
           <LastSchemaUpdate>2018-02-07T11:11:12.52Z</LastSchemaUpdate>
           <LastProcessed>2018-12-20T16:32:13.386667Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="2b8a8253-3ee4-4641-937a-5646ab9223f9">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="2ac00d85-c1b9-42ba-a45d-cc0bf7dadb88">
             <DataSourceID>Red_dw</DataSourceID>
-            <QueryDefinition>SELECT [dbo].[fact_chargeable_time_activity].[dim_bill_key],[dbo].[fact_chargeable_time_activity].[dim_transaction_date_key],[dbo].[fact_chargeable_time_activity].[dim_fed_hierarchy_history_key],[dbo].[fact_chargeable_time_activity].[dim_chargeable_time_activity_key],[dbo].[fact_chargeable_time_activity].[source_system_id],[dbo].[fact_chargeable_time_activity].[transaction_sequence_number],[dbo].[fact_chargeable_time_activity].[time_activity_code],[dbo].[fact_chargeable_time_activity].[minutes_recorded],[dbo].[fact_chargeable_time_activity].[hourly_charge_rate],[dbo].[fact_chargeable_time_activity].[time_charge_value],[dbo].[fact_chargeable_time_activity].[actual_time_recorded_value],[dbo].[fact_chargeable_time_activity].[dss_update_time],[dbo].[fact_chargeable_time_activity].[zero_rate_minutes_recorded],[dbo].[fact_chargeable_time_activity].[dim_matter_header_curr_key],[dbo].[fact_chargeable_time_activity].[dim_gl_date_key],[dbo].[fact_chargeable_time_activity].[dim_client_key],[minutes_recorded] / 60 AS [hours_recorded]
-		FROM [dbo].[fact_chargeable_time_activity]
+            <QueryDefinition>select fact_billable_time_activity.[dim_bill_key]
+     , fact_billable_time_activity.[dim_transaction_date_key]
+     , fact_billable_time_activity.[dim_fed_hierarchy_history_key]
+     , fact_billable_time_activity.dim_billable_time_activity_key
+     , fact_billable_time_activity.[source_system_id]
+     , fact_billable_time_activity.[transaction_sequence_number]
+     , fact_billable_time_activity.[time_activity_code]
+     , fact_billable_time_activity.[minutes_recorded]
+     , fact_billable_time_activity.[hourly_charge_rate]
+     , fact_billable_time_activity.[time_charge_value]
+     , fact_billable_time_activity.[actual_time_recorded_value]
+     , fact_billable_time_activity.[dss_update_time]
+     , fact_billable_time_activity.[zero_rate_minutes_recorded]
+     , fact_billable_time_activity.[dim_matter_header_curr_key]
+     , fact_billable_time_activity.[dim_gl_date_key]
+     , fact_billable_time_activity.[dim_client_key]
+     , [minutes_recorded] / 60 as [hours_recorded]
+from [dbo].fact_billable_time_activity
 		WHERE dim_transaction_date_key &gt;= 20090501</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
