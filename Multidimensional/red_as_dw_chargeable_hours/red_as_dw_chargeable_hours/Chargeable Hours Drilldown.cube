@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="22" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-10954" scrolltop="-3478" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="31618" y="16510" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="22" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-10954" scrolltop="-3478" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="22992" y="7673" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -748,67 +748,67 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="07fba771-887c-4a2d-acd8-234499c13554">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="2c494b2a-90b5-4b30-b516-bcebaf8d96c3">
           <CubeDimensionID>Dim Date</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="85ae56db-840a-4037-9c59-609d35b1385a">
+            <Attribute dwd:design-time-name="f4025f0b-ca97-42b1-8ba1-7932623ad900">
               <AttributeID>Dim Date Key</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="64c2042a-48e5-491b-891a-0bbd2654dce7">
+                <KeyColumn dwd:design-time-name="4c59d151-52a5-4238-a151-fd745e10a91f">
                   <DataType>Integer</DataType>
                   <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="64313b59-a531-4945-8383-444c01985753">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="0fbf0c2e-656e-4b2e-a797-7909b9d05bb1">
                     <TableID>dbo_fact_chargeable_time_activity</TableID>
-                    <ColumnID>dim_gl_date_key</ColumnID>
+                    <ColumnID>dim_orig_posting_date_key</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
               <Type>Granularity</Type>
             </Attribute>
-            <Attribute dwd:design-time-name="3383f3bc-2a69-476e-89e7-c89c2cce4f90">
+            <Attribute dwd:design-time-name="f72be092-9ed7-4240-8641-54a85816b87f">
               <AttributeID>Fin Period</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="3b8557f9-90dc-4547-a73e-6f81055da344">
+                <KeyColumn dwd:design-time-name="127319f8-0984-4ff3-845f-c795caaa001e">
                   <DataType>WChar</DataType>
                   <DataSize>20</DataSize>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="277cdfe8-3198-4d71-8f80-041864ba0ad2">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="477fc9af-e62a-48c4-a2f4-eb9701325ab5">
                     <TableID>dbo_dim_date</TableID>
                     <ColumnID>fin_period</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute dwd:design-time-name="f3815408-f0ab-4f8d-b10d-cf3e09a0eea9">
+            <Attribute dwd:design-time-name="65df3cae-8e0c-41ee-a940-cfe8edb26b29">
               <AttributeID>Fin Quarter</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="778dc8b7-87f7-437b-8a4e-9924612d31e4">
+                <KeyColumn dwd:design-time-name="102036bf-cac3-48f7-9171-6493e63a3cc5">
                   <DataType>WChar</DataType>
                   <DataSize>7</DataSize>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b126e95a-e4ba-4f40-8ca8-bcdead30ce38">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="31f4e15f-28c9-4357-a7c9-6a5e33e95e56">
                     <TableID>dbo_dim_date</TableID>
                     <ColumnID>fin_quarter</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute dwd:design-time-name="ab8f1ae6-fa68-4198-8312-e3a38ae2f91a">
+            <Attribute dwd:design-time-name="29908d4d-9944-46d6-98a2-34914435f473">
               <AttributeID>Fin Year</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="639be57d-3fd0-4b37-94ed-6d8ffb61bc94">
+                <KeyColumn dwd:design-time-name="ba59e215-0a8e-473b-9a0e-a1da08028045">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f5569b64-a5db-4835-9f49-138836b3d152">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="86d11253-4bc2-4c1a-ae24-186901f823c5">
                     <TableID>dbo_dim_date</TableID>
                     <ColumnID>fin_year</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
             </Attribute>
-            <Attribute dwd:design-time-name="1d3613f6-105f-4d2e-b4d9-618e8344a72a">
+            <Attribute dwd:design-time-name="ca918842-765e-4aa7-997f-721c2863c0ac">
               <AttributeID>Calendar Date</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="b374b959-77a0-41db-a9ca-c93c6b6e2c6a">
+                <KeyColumn dwd:design-time-name="81278f82-70e7-4088-912c-dee42926d4e9">
                   <DataType>Date</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="8507a98e-df63-4d42-afaf-05d657f69f6b">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e6a45d47-ea75-481d-88ee-69bcbed2731b">
                     <TableID>dbo_dim_date</TableID>
                     <ColumnID>calendar_date</ColumnID>
                   </Source>
