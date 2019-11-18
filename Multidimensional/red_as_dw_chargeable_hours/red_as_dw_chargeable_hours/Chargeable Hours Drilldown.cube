@@ -861,7 +861,7 @@ You should edit this command only if you manually specify how the cube is aggreg
 */
 CALCULATE;  
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Minutes Recorded]
- AS (PERIODSTODATE([Dim Transaction Date].[Hierarchy].[Fin Year], [Dim Transaction Date].[Hierarchy].CurrentMember) , [Measures].[Minutes Recorded]), 
+ AS Sum(PERIODSTODATE([Dim Transaction Date].[Hierarchy].[Fin Year], [Dim Transaction Date].[Hierarchy].CurrentMember) , [Measures].[Minutes Recorded]), 
 VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Fact Chargeable Time Activity'  ; </Text>
         </Command>
       </Commands>
