@@ -1452,31 +1452,7 @@
           </Attributes>
         </Dimension>
       </Dimensions>
-      <Partitions>
-        <Partition dwd:design-time-name="85c2e7cb-5e73-4a29-9029-5da51456a908">
-          <ID>Fact Debt</ID>
-          <Name>Fact Debt</Name>
-          <CreatedTimestamp>2017-12-14T12:02:12.843333Z</CreatedTimestamp>
-          <LastSchemaUpdate>2018-06-26T12:50:29.206667Z</LastSchemaUpdate>
-          <LastProcessed>2018-12-20T16:36:37.42Z</LastProcessed>
-          <State>Processed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="a2544d83-a732-4754-a252-2e76810d0e4f">
-            <DataSourceViewID>Debt Current</DataSourceViewID>
-            <TableID>dbo_fact_debt</TableID>
-          </Source>
-          <StorageMode>Molap</StorageMode>
-          <CurrentStorageMode>Molap</CurrentStorageMode>
-          <ProcessingMode>Regular</ProcessingMode>
-          <ProactiveCaching dwd:design-time-name="bc244a1f-3c39-4398-9095-bc853aeba4bc">
-            <SilenceInterval>-PT1S</SilenceInterval>
-            <Latency>-PT1S</Latency>
-            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
-            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
-            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="21cd53ba-ba8d-4678-9fad-a48125c5cd89" />
-          </ProactiveCaching>
-          <EstimatedSize>1182619</EstimatedSize>
-        </Partition>
-      </Partitions>
+      <Partitions />
       <ProactiveCaching dwd:design-time-name="c835efbf-732b-4c09-9238-3435893d2734">
         <SilenceInterval>-PT1S</SilenceInterval>
         <Latency>-PT1S</Latency>

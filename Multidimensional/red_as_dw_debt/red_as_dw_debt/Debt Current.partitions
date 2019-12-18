@@ -1,3 +1,33 @@
 ﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="677d86b8-78af-448b-977c-2938e799f74e" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Debt Current</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Fact Debt</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="2702dc36-8240-40cd-8573-790b45cb0c5e">
+          <ID>Fact Debt</ID>
+          <Name>Fact Debt</Name>
+          <CreatedTimestamp>2017-12-14T12:02:12.843333Z</CreatedTimestamp>
+          <LastSchemaUpdate>2018-06-26T12:50:29.206667Z</LastSchemaUpdate>
+          <LastProcessed>2018-12-20T16:36:37.42Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="a2544d83-a732-4754-a252-2e76810d0e4f">
+            <DataSourceViewID>Debt Current</DataSourceViewID>
+            <TableID>dbo_fact_debt</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="bc244a1f-3c39-4398-9095-bc853aeba4bc">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="21cd53ba-ba8d-4678-9fad-a48125c5cd89" />
+          </ProactiveCaching>
+          <EstimatedSize>1182619</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
 </Cube>
