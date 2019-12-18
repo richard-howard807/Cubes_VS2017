@@ -2912,7 +2912,7 @@ You should edit this command only if you manually specify how the cube is aggreg
 */
 CALCULATE; 
 CREATE MEMBER CURRENTCUBE.[Measures].[Previous Period Receipt Total]
- AS (PARALLELPERIOD( [Receipt Date].[Financial].[Fin Period], 1,[Receipt Date].[Financial].currentmember),[Measures].[Receipt Total]), 
+ AS (PARALLELPERIOD( [Receipt Date].[Financial].[Fin Year], 1,[Receipt Date].[Financial].currentmember),[Measures].[Receipt Total]), 
 FORMAT_STRING = "£#,##0.00;-£#,##0.00", 
 VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Bill Receipts'  ; </Text>
         </Command>
