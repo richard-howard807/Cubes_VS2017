@@ -1,0 +1,501 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="ae5ba59d-191e-4d19-8f7e-4fd1df5dcd87" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Bill Date</ID>
+  <Name>Bill Date</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1171" scrolltop="-3254" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6271" y="11509" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="dim_date" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3889" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c0000310f000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_date" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1171</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-3254</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="150">
+            <Shape Id="Dim Date Key" Expanded="true">
+              <Attributes>
+                <Attribute Id="Dim Date Key" />
+                <Attribute Id="Current Fin Month" />
+                <Attribute Id="Current Fin Quarter" />
+                <Attribute Id="Current Fin Year" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="Fin Month" Expanded="true">
+              <Attributes>
+                <Attribute Id="Fin Month" />
+                <Attribute Id="Fin Period" />
+              </Attributes>
+              <Position x="212" y="20" />
+            </Shape>
+            <Shape Id="Fin Quarter" Expanded="false">
+              <Attributes>
+                <Attribute Id="Fin Quarter" />
+              </Attributes>
+              <Position x="405" y="20" />
+            </Shape>
+            <Shape Id="Fin Year" Expanded="false">
+              <Attributes>
+                <Attribute Id="Fin Year" />
+              </Attributes>
+              <Position x="597" y="20" />
+            </Shape>
+            <Shape Id="Cal Month" Expanded="false">
+              <Attributes>
+                <Attribute Id="Cal Month" />
+              </Attributes>
+              <Position x="212" y="68" />
+            </Shape>
+            <Shape Id="Cal Quarter" Expanded="true">
+              <Attributes>
+                <Attribute Id="Cal Quarter" />
+                <Attribute Id="Cal Year" />
+              </Attributes>
+              <Position x="405" y="68" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="523f5d0a-fea6-4fd9-bea3-76ebf6191a75">
+    <DataSourceViewID>FinanceDataSource</DataSourceViewID>
+  </Source>
+  <Type>Time</Type>
+  <UnknownMember>Hidden</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="6458cc9d-1958-4f63-af88-c85667078104">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="a77be7a5-0e8e-4f37-8221-f6339a7c4201">
+      <ID>Dim Date Key</ID>
+      <Name>Date</Name>
+      <Type>Date</Type>
+      <Usage>Key</Usage>
+      <EstimatedCount>4018</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3c76c1be-15b5-4399-8b2a-c60141520951">
+          <NullProcessing>UnknownMember</NullProcessing>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="826768d6-7bdb-4b96-8494-58602330f757">
+            <TableID>dbo_dim_date</TableID>
+            <ColumnID>dim_date_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="090b66d9-407e-4330-8c4d-28ae3822cfc8">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="757127e5-2446-4dff-8180-a684f8673c61">
+          <TableID>dbo_dim_date</TableID>
+          <ColumnID>calendar_date</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="39fe32b3-942c-4ba6-9f58-64aa493034e6">
+          <AttributeID>Current Fin Month</AttributeID>
+          <Name>Current Fin Month</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="8c5d967c-d3e5-4293-8c2f-47178c355d68">
+          <AttributeID>Current Fin Quarter</AttributeID>
+          <Name>Current Fin Quarter</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3c4a44bb-71b2-4e08-bd98-84e72115c00e">
+          <AttributeID>Current Fin Year</AttributeID>
+          <Name>Current Fin Year</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f5436144-4914-4fbc-9611-fb564d3f037d">
+          <AttributeID>Cal Month</AttributeID>
+          <Name>Cal Month</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b0d20f44-4b84-4458-bfa1-24c2e3f7bdfd">
+          <AttributeID>Fin Month</AttributeID>
+          <Name>Fin Month</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn dwd:design-time-name="6b5f183e-f590-43e4-9f99-d30fba2cd569">
+        <DataType>Date</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="e3ce785e-a0ac-4b36-87fc-930fdb6b5059">
+          <TableID>dbo_dim_date</TableID>
+          <ColumnID>calendar_date</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="0106dd94-5dfc-4989-91f4-79a285f92d32">
+      <ID>Cal Month</ID>
+      <Name>Cal Month</Name>
+      <Type>Months</Type>
+      <EstimatedCount>132</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="244b3eba-360b-4940-bf48-66074ccbe426">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6a63adc7-43a8-4e15-af91-719f122b63a4">
+            <TableID>dbo_dim_date</TableID>
+            <ColumnID>cal_month</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="57b79861-7ad1-4f20-ae6f-4bbc74744e1d">
+          <AttributeID>Cal Quarter</AttributeID>
+          <Name>Cal Quarter</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn dwd:design-time-name="a77e077d-ca28-45f5-b3a5-992b800e93c8">
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="b206d0d0-8731-407d-ab26-415af4ccebaa">
+          <TableID>dbo_dim_date</TableID>
+          <ColumnID>cal_month</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ae34cd5a-f488-4444-8ce3-9cca1a44bf88">
+      <ID>Cal Quarter</ID>
+      <Name>Cal Quarter</Name>
+      <EstimatedCount>45</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="49c276b1-0e6f-4b88-9852-0abff7006837">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c8b27ff1-b086-4785-b368-eee2715560fe">
+            <TableID>dbo_dim_date</TableID>
+            <ColumnID>cal_quarter</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="bbd5f0d8-5619-425b-9967-2e108d73b43b">
+          <AttributeID>Cal Year</AttributeID>
+          <Name>Cal Year</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c819255e-ce72-4f78-aaee-e6fb48d43300">
+      <ID>Cal Year</ID>
+      <Name>Cal Year</Name>
+      <Type>Years</Type>
+      <EstimatedCount>12</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c44dda98-eb25-4c99-bc24-30b661c72e14">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b9fd5831-ca61-4cb3-8e88-afdecfede8e0">
+            <TableID>dbo_dim_date</TableID>
+            <ColumnID>cal_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn dwd:design-time-name="a3bfac7f-a126-4121-bbd6-ff88ab2e2cef">
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="fc36e343-783d-4ac2-8222-ce7760b79ef0">
+          <TableID>dbo_dim_date</TableID>
+          <ColumnID>cal_year</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="504c1dfe-529d-4294-b417-2330c4e460eb">
+      <ID>Fin Month</ID>
+      <Name>Fin Month</Name>
+      <Type>FiscalMonths</Type>
+      <EstimatedCount>132</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b304de67-ad94-4758-b813-0a42e4bd42b3">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="26dd38c4-589d-4b61-8937-248e58238967">
+            <TableID>dbo_dim_date</TableID>
+            <ColumnID>fin_month</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="ba781461-a8bc-41a1-85b1-990777c4ee92">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="3621f6e3-b3d2-4218-90bb-2a0391ccacc6">
+          <TableID>dbo_dim_date</TableID>
+          <ColumnID>fin_month</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="7810ee9d-190b-4e54-bb64-54a14299f5b9">
+          <AttributeID>Fin Quarter</AttributeID>
+          <Name>Fin Quarter</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="12800a72-8b39-40da-b52b-f850754213c5">
+          <AttributeID>Fin Period</AttributeID>
+          <Name>Fin Period</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn dwd:design-time-name="2af4487c-07d7-4cad-b2a8-b459e2cb4c72">
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="4a8161ef-b9f4-468a-9381-4daa778e5956">
+          <TableID>dbo_dim_date</TableID>
+          <ColumnID>fin_month</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c4cf3139-5b50-4b45-8a52-5a52b5bb8847">
+      <ID>Fin Period</ID>
+      <Name>Fin Period</Name>
+      <Type>FiscalMonths</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3c6b41d2-2551-4a7f-8462-326c9c552870">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6d2f9502-7aec-4064-8e28-a57d5bf3f6d5">
+            <TableID>dbo_dim_date</TableID>
+            <ColumnID>fin_period</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="4347ce16-7065-44b0-9352-a45f0fba9712">
+        <DataType>WChar</DataType>
+        <DataSize>20</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="5a8aaf3d-f39a-4e85-a813-234d51d803c5">
+          <TableID>dbo_dim_date</TableID>
+          <ColumnID>fin_period</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="51f3fc36-7ca2-4c46-8971-0136c3773856">
+      <ID>Fin Quarter</ID>
+      <Name>Fin Quarter</Name>
+      <Type>FiscalQuarters</Type>
+      <EstimatedCount>44</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="851fc4f3-002a-42f6-ab6c-74c55437c86c">
+          <DataType>WChar</DataType>
+          <DataSize>7</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e48974a8-0e29-4a71-95e5-10fd22cd2742">
+            <TableID>dbo_dim_date</TableID>
+            <ColumnID>fin_quarter</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="03f12274-aa45-4e3e-ba03-66276af784b4">
+        <DataType>WChar</DataType>
+        <DataSize>7</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="b34c79bb-cac0-455d-9e20-1c20f175a530">
+          <TableID>dbo_dim_date</TableID>
+          <ColumnID>fin_quarter</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="6109579b-ead9-45d1-bccf-d3cbcdce1340">
+          <AttributeID>Fin Year</AttributeID>
+          <Name>Fin Year</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="280470bb-bebe-4184-8a05-ec3c89ac96fe">
+      <ID>Fin Year</ID>
+      <Name>Fin Year</Name>
+      <Type>Years</Type>
+      <EstimatedCount>11</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0eb07ef4-1d61-451c-b6d1-237cc2544882">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="79098940-778c-450b-b1a2-e2c2c89610bf">
+            <TableID>dbo_dim_date</TableID>
+            <ColumnID>fin_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="45bcb3b8-e027-46ae-b8a1-dbede0feff7a">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="312bcea7-3ee3-4b67-8f5e-6b76185d25b5">
+          <TableID>dbo_dim_date</TableID>
+          <ColumnID>fin_year</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="34e51f77-f344-46e7-8a32-20429f99fd86">
+      <ID>Current Fin Month</ID>
+      <Name>Current Fin Month</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f46ae528-bb60-4ee8-adf2-ad3a8cccc67d">
+          <DataType>WChar</DataType>
+          <DataSize>8</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1a86cfc6-1851-4432-9e22-667bd22b72c8">
+            <TableID>dbo_dim_date</TableID>
+            <ColumnID>current_fin_month</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="64318ff3-4ac3-45c2-bbb8-2d608c0a3aca">
+      <ID>Current Fin Quarter</ID>
+      <Name>Current Fin Quarter</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="26fa6379-9f65-40ec-831c-34bdd54e2f0d">
+          <DataType>WChar</DataType>
+          <DataSize>8</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7d532796-e63f-4ea3-af20-ab369c1cd31e">
+            <TableID>dbo_dim_date</TableID>
+            <ColumnID>current_fin_quarter</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="615af27f-f781-4e7e-8cf6-153eb4128ae0">
+      <ID>Current Fin Year</ID>
+      <Name>Current Fin Year</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2f135a97-6415-4d1f-994c-895cf10c3f65">
+          <DataType>WChar</DataType>
+          <DataSize>8</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="137530f9-4a9b-46dc-b106-ec2ba7f50e12">
+            <TableID>dbo_dim_date</TableID>
+            <ColumnID>current_fin_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="21b5d2f0-7e4c-4211-ba51-de8a0a682593">
+      <ID>Hierarchy 1</ID>
+      <Name>Fiscal Date</Name>
+      <Levels>
+        <Level dwd:design-time-name="d0caee07-2e8f-4823-82d5-e47ebaeb6c53">
+          <ID>Fin Year</ID>
+          <Name>Fin Year</Name>
+          <SourceAttributeID>Fin Year</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="9fd1e19a-d9d0-4585-a5dc-ef9b73bd1d6b">
+          <ID>Fin Quarter</ID>
+          <Name>Fin Quarter</Name>
+          <SourceAttributeID>Fin Quarter</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="7f2acfff-9da5-4f07-8e62-da86a9f56d94">
+          <ID>Fin Month</ID>
+          <Name>Fin Month</Name>
+          <SourceAttributeID>Fin Month</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="1eec047a-63f4-42ee-a18d-0db33e8ac842">
+          <ID>Date</ID>
+          <Name>Date</Name>
+          <SourceAttributeID>Dim Date Key</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="95e20db7-a93a-401c-808b-2aa448bb58fd">
+      <ID>Hierarchy</ID>
+      <Name>Cal Date</Name>
+      <Levels>
+        <Level dwd:design-time-name="f6d06b9a-94e8-4978-ae55-d8c85999221a">
+          <ID>Cal Year</ID>
+          <Name>Cal Year</Name>
+          <SourceAttributeID>Cal Year</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="cf2a4d93-bfc6-47b3-b863-0916f8e4acc1">
+          <ID>Cal Quarter</ID>
+          <Name>Cal Quarter</Name>
+          <SourceAttributeID>Cal Quarter</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="6ad13a75-bbe2-4cfe-8759-a1d71bd5aa23">
+          <ID>Cal Month</ID>
+          <Name>Cal Month</Name>
+          <SourceAttributeID>Cal Month</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="94358eb6-a070-4e89-bd39-9bd34da73725">
+          <ID>Date</ID>
+          <Name>Date</Name>
+          <SourceAttributeID>Dim Date Key</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
