@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1171" scrolltop="-3254" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6271" y="11509" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1171" scrolltop="-3254" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="12039" y="21034" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -19,9 +19,9 @@
           <layoutmanager>
             <ddsxmlobj />
           </layoutmanager>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="dim_date" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3889" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="dim_date" left="20" top="-2646" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3889" height="16535" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
-              <ddsxmlobjectstreaminitwrapper binary="000c0000310f000088130000" />
+              <ddsxmlobjectstreaminitwrapper binary="000c0000310f000097400000" />
             </control>
             <layoutobject>
               <ddsxmlobj>
@@ -59,7 +59,7 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
-      <Value>0</Value>
+      <Value>-2646</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
@@ -138,8 +138,8 @@
       <EstimatedCount>4018</EstimatedCount>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="3c76c1be-15b5-4399-8b2a-c60141520951">
-          <NullProcessing>UnknownMember</NullProcessing>
           <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
           <Source xsi:type="ColumnBinding" dwd:design-time-name="826768d6-7bdb-4b96-8494-58602330f757">
             <TableID>dbo_dim_date</TableID>
             <ColumnID>dim_date_key</ColumnID>
@@ -173,6 +173,22 @@
         <AttributeRelationship dwd:design-time-name="b0d20f44-4b84-4458-bfa1-24c2e3f7bdfd">
           <AttributeID>Fin Month</AttributeID>
           <Name>Fin Month</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7350a8f7-e1cc-44d2-92c8-f95c2e35ae7f">
+          <AttributeID>Current Fin Week</AttributeID>
+          <Name>Current Fin Week</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4f00862e-06e9-47ff-a899-2e711dbc0d95">
+          <AttributeID>Current Cal Week</AttributeID>
+          <Name>Current Cal Week</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="498bbf5e-7f8a-43d5-ab4a-b714daf74608">
+          <AttributeID>Current Cal Month</AttributeID>
+          <Name>Current Cal Month</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6c9a77ba-e0d1-45f9-8fdf-5462ee3124e6">
+          <AttributeID>Current Cal Year</AttributeID>
+          <Name>Current Cal Year</Name>
         </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
@@ -405,6 +421,7 @@
         </KeyColumn>
       </KeyColumns>
       <OrderBy>Key</OrderBy>
+      <AttributeHierarchyDisplayFolder>Filters</AttributeHierarchyDisplayFolder>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -422,6 +439,7 @@
         </KeyColumn>
       </KeyColumns>
       <OrderBy>Key</OrderBy>
+      <AttributeHierarchyDisplayFolder>Filters</AttributeHierarchyDisplayFolder>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -439,6 +457,75 @@
         </KeyColumn>
       </KeyColumns>
       <OrderBy>Key</OrderBy>
+      <AttributeHierarchyDisplayFolder>Filters</AttributeHierarchyDisplayFolder>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="0bb1246b-d51f-4cef-997c-89f4eeb478bc">
+      <ID>Current Fin Week</ID>
+      <Name>Current Fin Week</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a2d3dbba-5b6a-461f-a117-ece7d6562a58">
+          <DataType>WChar</DataType>
+          <DataSize>8</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fb5b1e53-c2ec-4b0c-a410-764b7def97a0">
+            <TableID>dbo_dim_date</TableID>
+            <ColumnID>current_fin_week</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeHierarchyDisplayFolder>Filters</AttributeHierarchyDisplayFolder>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a1e87b93-f6ce-41aa-b03d-4f9c5c3190ce">
+      <ID>Current Cal Week</ID>
+      <Name>Current Cal Week</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="de01e687-3c44-4f5f-8018-28833b6d94fa">
+          <DataType>WChar</DataType>
+          <DataSize>8</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0d8a289a-7098-4cde-8949-f7e53803dc6d">
+            <TableID>dbo_dim_date</TableID>
+            <ColumnID>current_cal_week</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeHierarchyDisplayFolder>Filters</AttributeHierarchyDisplayFolder>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e24d2d61-57d7-4006-8ee0-f11fff673ff3">
+      <ID>Current Cal Month</ID>
+      <Name>Current Cal Month</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="461ac11f-c890-49d6-b26a-53cdfeee4530">
+          <DataType>WChar</DataType>
+          <DataSize>8</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="34434da1-870c-4ee1-b96c-65ba4338c6ff">
+            <TableID>dbo_dim_date</TableID>
+            <ColumnID>current_cal_month</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeHierarchyDisplayFolder>Filters</AttributeHierarchyDisplayFolder>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d4757069-c5ec-42ca-9d1c-0ce0394d1ccd">
+      <ID>Current Cal Year</ID>
+      <Name>Current Cal Year</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c32dd949-e60f-4f6d-8bac-62237708ba8f">
+          <DataType>WChar</DataType>
+          <DataSize>8</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5a2ef8be-a0d7-49b2-912d-e0ea98af52b2">
+            <TableID>dbo_dim_date</TableID>
+            <ColumnID>current_cal_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeHierarchyDisplayFolder>Filters</AttributeHierarchyDisplayFolder>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
