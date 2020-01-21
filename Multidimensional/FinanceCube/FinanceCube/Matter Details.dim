@@ -1,0 +1,404 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="f03ab268-366f-4126-8eba-ef5a856a38ad" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Matter Details</ID>
+  <Name>Matter Details</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="6" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="59" scrolltop="-4518" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="80" x="11536" y="16457" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="dim_matter_worktype" left="695" top="7400" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="4471" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c000077110000f40d0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_matter_worktype" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="dim_master_client" left="8241" top="0" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="5715" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c00005316000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="ext_dim_client" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="dim_matter_header_current" left="20" top="0" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="5821" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c0000bd16000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_matter_header_current" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="2531" top="4700" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[dim_matter_header_current-dim_matter_worktype]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="3" sourceattachpoint="6" destattachpoint="11" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="2930" y="7400" />
+              <point x="2930" y="5000" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="5541" top="2101" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[dim_master_client-dim_matter_header_current]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="3" sourceattachpoint="30" destattachpoint="31" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="8241" y="2500" />
+              <point x="5841" y="2500" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>59</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-4518</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>80</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="214">
+            <Shape Id="Dim Matter Header Curr Key" Expanded="true">
+              <Attributes>
+                <Attribute Id="Dim Matter Header Curr Key" />
+                <Attribute Id="Fee Arrangement" />
+                <Attribute Id="Fixed Fee" />
+                <Attribute Id="Matter Category" />
+                <Attribute Id="Matter Description" />
+                <Attribute Id="Matter Number" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="Dim Matter Worktype Key" Expanded="false">
+              <Attributes>
+                <Attribute Id="Dim Matter Worktype Key" />
+                <Attribute Id="Work Type Code" />
+                <Attribute Id="Work Type Group" />
+                <Attribute Id="Work Type Name" />
+              </Attributes>
+              <Position x="292" y="20" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="b02489cb-9207-4a58-b44c-a9ca275e5e66">
+    <DataSourceViewID>FinanceDataSource</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="d1e06ec4-7fbe-4a79-99c8-1b648b901905">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Collation>Latin1_General_CS_AS</Collation>
+  <Attributes>
+    <Attribute dwd:design-time-name="89343011-bec5-4ada-8ced-435dec9fa488">
+      <ID>Dim Matter Header Curr Key</ID>
+      <Name>Dim Matter Header Curr Key</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4023fdff-cd43-49c3-b263-5a646afb8e50">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9e3398dc-7ebd-4484-beb4-628517c7ff33">
+            <TableID>dbo_dim_matter_header_current</TableID>
+            <ColumnID>dim_matter_header_curr_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="bd0293cd-96db-41b4-bc2c-920687b2cab8">
+          <AttributeID>Fixed Fee</AttributeID>
+          <Name>Fixed Fee</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="8aa108f1-8bd7-4dc6-9155-bf6e2f023b5a">
+          <AttributeID>Fee Arrangement</AttributeID>
+          <Name>Fee Arrangement</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="239d987a-fe50-4330-bae0-28846d108365">
+          <AttributeID>Matter Category</AttributeID>
+          <Name>Matter Category</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d1e49cca-bb30-47bb-af9e-285551db8184">
+          <AttributeID>Dim Matter Worktype Key</AttributeID>
+          <Name>Dim Matter Worktype Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="cec19fc0-0f62-4c71-ad3d-6713d7e5f1a6">
+          <AttributeID>Matter Number</AttributeID>
+          <Name>Matter Number</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="60b08f25-11c0-4080-af9a-1d65c26ecaf7">
+          <AttributeID>Matter Description</AttributeID>
+          <Name>Matter Description</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="82a190bb-f2da-4647-aeae-069899a3f685">
+          <AttributeID>Reporting Exclusions</AttributeID>
+          <Name>Reporting Exclusion</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7610c21b-9b3c-4150-a898-1fdd0e4011b0">
+      <ID>Matter Number</ID>
+      <Name>Matter Number</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="11a4c953-2bac-4601-9258-92024451fa89">
+          <DataType>WChar</DataType>
+          <DataSize>8</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="25c0e518-efaa-4dd7-8fac-3243809b4a88">
+            <TableID>dbo_dim_matter_header_current</TableID>
+            <ColumnID>matter_number</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="51000eff-391a-4e53-a43e-e447e4fb1275">
+      <ID>Matter Description</ID>
+      <Name>Matter Description</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="eb074712-38d9-487a-91bf-555c819a6220">
+          <DataType>WChar</DataType>
+          <DataSize>8000</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6ade5527-06f7-4029-aeb5-347aa981fd12">
+            <TableID>dbo_dim_matter_header_current</TableID>
+            <ColumnID>matter_description</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a3ce630a-c9a0-4524-a628-36c32d248f34">
+      <ID>Fixed Fee</ID>
+      <Name>Fixed Fee</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c8abf4cd-be93-4eac-9882-7fe4d5853b52">
+          <DataType>WChar</DataType>
+          <DataSize>60</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="edbc551a-09c4-4737-ac05-eb0e8539c5cd">
+            <TableID>dbo_dim_matter_header_current</TableID>
+            <ColumnID>fixed_fee</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3bcd92a6-0f8c-416e-b2a6-dfa76e26c112">
+      <ID>Fee Arrangement</ID>
+      <Name>Fee Arrangement</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8a219981-95b9-4aae-b3c4-fb61d6713afc">
+          <DataType>WChar</DataType>
+          <DataSize>60</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="31414217-518e-45d6-8b7f-f234a529a179">
+            <TableID>dbo_dim_matter_header_current</TableID>
+            <ColumnID>fee_arrangement</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="31da9633-876b-4d30-bf57-44550217ab29">
+      <ID>Matter Category</ID>
+      <Name>Matter Category</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3e2fb358-96ef-4520-9b18-da548f9006c9">
+          <DataType>WChar</DataType>
+          <DataSize>1000</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="78832154-062a-4a55-ac74-96005d6544d4">
+            <TableID>dbo_dim_matter_header_current</TableID>
+            <ColumnID>matter_category</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="87452421-e2ca-42bb-bd68-dd421e1b8184">
+      <ID>Dim Matter Worktype Key</ID>
+      <Name>Dim Matter Worktype Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2bd755ea-12bc-42c0-84d0-f30743414258">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="42129e58-7c32-4278-b278-6e8a3e26de9c">
+            <TableID>dbo_dim_matter_worktype</TableID>
+            <ColumnID>dim_matter_worktype_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="c7d6104b-a473-4dfd-acea-15273890d420">
+          <AttributeID>Work Type Code</AttributeID>
+          <Name>Work Type Code</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b2939bc7-65a6-4fa1-9199-b6bb82f51cd7">
+          <AttributeID>Work Type Name</AttributeID>
+          <Name>Work Type Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9470888b-4fcd-4dce-9378-84c859776d1b">
+          <AttributeID>Work Type Group</AttributeID>
+          <Name>Work Type Group</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="51ad351c-66ba-438c-8d09-75b1c3b4cdcb">
+      <ID>Work Type Code</ID>
+      <Name>Work Type Code</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4b349270-9389-44d5-bedf-5f47d50ebce2">
+          <DataType>WChar</DataType>
+          <DataSize>8</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="aed38757-b175-42a6-959e-88a615896e8d">
+            <TableID>dbo_dim_matter_worktype</TableID>
+            <ColumnID>work_type_code</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b61d8556-e8ed-42ae-be77-04ba269af51b">
+      <ID>Work Type Name</ID>
+      <Name>Work Type Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8334950f-11a3-43d7-bbbe-10839186aec9">
+          <DataType>WChar</DataType>
+          <DataSize>40</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b543f14d-1c7b-42a5-bce0-fc40efb20879">
+            <TableID>dbo_dim_matter_worktype</TableID>
+            <ColumnID>work_type_name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="59460a2a-1c6b-4658-bfaa-b11638d741d8">
+      <ID>Work Type Group</ID>
+      <Name>Work Type Group</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1e09f9e8-6891-4393-bae8-2cf4aaca1124">
+          <DataType>WChar</DataType>
+          <DataSize>40</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a79d90de-7526-4638-9386-2605885c1763">
+            <TableID>dbo_dim_matter_worktype</TableID>
+            <ColumnID>work_type_group</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ad9a7fa4-7150-4edc-9000-f77a8fc1bd8d">
+      <ID>Reporting Exclusions</ID>
+      <Name>Reporting Exclusion</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ad9de9b7-3b65-4ca8-935d-8e669757bd56">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fb7f5f13-cf49-4aeb-b021-357e32770243">
+            <TableID>dbo_dim_matter_header_current</TableID>
+            <ColumnID>reporting_exclusions</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

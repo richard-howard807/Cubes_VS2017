@@ -1,6 +1,6 @@
 ﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="71a0d499-5c74-403e-b8c2-839c96c6ecd9" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Dim Fed Hierarchy History</ID>
-  <Name>Dim Fed Hierarchy History</Name>
+  <Name>Employees</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
   <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
   <Annotations>
@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="4" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2996" scrolltop="-2407" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="11536" y="16457" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="6" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2996" scrolltop="-6326" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="11536" y="16457" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -19,7 +19,7 @@
           <layoutmanager>
             <ddsxmlobj />
           </layoutmanager>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="dim_employee" left="695" top="7400" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3704" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="dim_employee" left="721" top="7347" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3704" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobjectstreaminitwrapper binary="000c0000780e000088130000" />
             </control>
@@ -30,9 +30,9 @@
             </layoutobject>
             <shape groupshapeid="0" groupnode="0" />
           </ddscontrol>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="dim_fed_hierarchy_history" left="-6" top="-26" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="5054" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="dim_fed_hierarchy_history" left="-6" top="-26" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="7171" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
-              <ddsxmlobjectstreaminitwrapper binary="000c0000be13000088130000" />
+              <ddsxmlobjectstreaminitwrapper binary="000c0000031c000088130000" />
             </control>
             <layoutobject>
               <ddsxmlobj>
@@ -41,7 +41,7 @@
             </layoutobject>
             <shape groupshapeid="0" groupnode="0" />
           </ddscontrol>
-          <ddscontrol controlprogid="MSDDS.Polyline" left="498" top="4674" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="799" height="3226" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="MSDDS.Polyline" left="524" top="4674" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="799" height="3173" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobj>
                 <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -55,10 +55,10 @@
               </ddsxmlobj>
             </layoutobject>
             <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="2" sourceattachpoint="0" destattachpoint="3" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-              <point x="897" y="7400" />
-              <point x="897" y="6187" />
-              <point x="871" y="6187" />
-              <point x="871" y="4974" />
+              <point x="923" y="7347" />
+              <point x="923" y="6187" />
+              <point x="829" y="6187" />
+              <point x="829" y="4974" />
             </connector>
           </ddscontrol>
         </dds>
@@ -82,7 +82,7 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>-2407</Value>
+      <Value>-6326</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
@@ -101,10 +101,9 @@
       <Value>
         <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
           <Shapes NodeWidth="226">
-            <Shape Id="Dim Fed Hierarchy History Key" Expanded="false">
+            <Shape Id="Dim Fed Hierarchy History Key" Expanded="true">
               <Attributes>
                 <Attribute Id="Dim Fed Hierarchy History Key" />
-                <Attribute Id="Fed Code" />
                 <Attribute Id="Jobtitle" />
                 <Attribute Id="Name" />
                 <Attribute Id="Locationidud" />
@@ -117,15 +116,15 @@
               </Attributes>
               <Position x="307" y="20" />
             </Shape>
-            <Shape Id="Team" Expanded="false">
+            <Shape Id="Hierarchylevel4hist" Expanded="false">
               <Attributes>
-                <Attribute Id="Team" />
+                <Attribute Id="Hierarchylevel4hist" />
               </Attributes>
               <Position x="595" y="20" />
             </Shape>
-            <Shape Id="Department" Expanded="false">
+            <Shape Id="Hierarchylevel3histnorm" Expanded="false">
               <Attributes>
-                <Attribute Id="Department" />
+                <Attribute Id="Hierarchylevel3histnorm" />
               </Attributes>
               <Position x="882" y="20" />
             </Shape>
@@ -152,6 +151,7 @@
     <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
   </ErrorConfiguration>
   <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Collation>Latin1_General_CS_AS</Collation>
   <Attributes>
     <Attribute dwd:design-time-name="47e991a7-5a28-414e-a8f7-8a768c6259ab">
       <ID>Dim Fed Hierarchy History Key</ID>
@@ -168,25 +168,37 @@
         </KeyColumn>
       </KeyColumns>
       <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="02e474a5-ce61-4db3-ba59-51255c90167b">
-          <AttributeID>Fed Code</AttributeID>
-          <Name>Fed Code</Name>
+        <AttributeRelationship dwd:design-time-name="401b1d58-dfd6-4179-8259-97038859d9f0">
+          <AttributeID>Display Name</AttributeID>
+          <Name>Display Name</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="de0731c2-3582-4771-a262-d62cb3e6db93">
-          <AttributeID>Jobtitle</AttributeID>
-          <Name>Job Title</Name>
+        <AttributeRelationship dwd:design-time-name="a2c61876-38ea-4aca-b2a0-4f1348498556">
+          <AttributeID>Hierarchylevel2hist</AttributeID>
+          <Name>Division</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="83c40102-ab9b-40fb-a185-57c5bb73c754">
-          <AttributeID>Name</AttributeID>
-          <Name>Name_</Name>
+        <AttributeRelationship dwd:design-time-name="dc1de70f-da3a-4d2d-ac10-d24e606d5dcb">
+          <AttributeID>Hierarchylevel3hist</AttributeID>
+          <Name>Department</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="93477f8e-1cef-4685-98e9-1425e4e9243e">
+        <AttributeRelationship dwd:design-time-name="1cf0390a-0267-4a35-9715-2cdce40a1ba6">
+          <AttributeID>Hierarchylevel4hist</AttributeID>
+          <Name>Team</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0fc4faaf-8f54-47ea-b410-6603ced8061c">
+          <AttributeID>Leaver Logic</AttributeID>
+          <Name>Leaver</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="925b5e63-8b79-433f-a7b1-6cc9d4f14c62">
           <AttributeID>Locationidud</AttributeID>
           <Name>Office</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="68b07a87-9d2f-4d1b-81d1-bc510e82ee9f">
-          <AttributeID>Display Name</AttributeID>
-          <Name>Display Name</Name>
+        <AttributeRelationship dwd:design-time-name="04377aaf-0f51-43d8-95fe-2ba1291d3c28">
+          <AttributeID>Jobtitle</AttributeID>
+          <Name>Job Title</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7c07e955-f6ab-407b-a134-bdb7cdd36573">
+          <AttributeID>Name</AttributeID>
+          <Name>Name_</Name>
         </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
@@ -194,182 +206,155 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="2b99d6fa-2b54-4e6f-9894-d80f8be7fdf3">
-      <ID>Fed Code</ID>
-      <Name>Fed Code</Name>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="a44b9d18-16be-4490-9e93-2eea3be413cf">
-          <DataType>WChar</DataType>
-          <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="c5044d64-153b-443c-8bc8-978c0f11e77d">
-            <TableID>dbo_dim_fed_hierarchy_history</TableID>
-            <ColumnID>fed_code</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <OrderBy>Key</OrderBy>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
-    <Attribute dwd:design-time-name="a6437309-61f6-41fb-9b68-d150ac5b8eaa">
-      <ID>Jobtitle</ID>
-      <Name>Job Title</Name>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="03133a4a-b900-4a8d-bb8c-dc57d6f09c57">
-          <DataType>WChar</DataType>
-          <DataSize>100</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="5a20bbcf-518f-43bc-940e-0f4084af9ae3">
-            <TableID>dbo_dim_fed_hierarchy_history</TableID>
-            <ColumnID>jobtitle</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <OrderBy>Key</OrderBy>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
-    <Attribute dwd:design-time-name="8f3303fd-2b05-446b-b7f7-93f665fdbd36">
+    <Attribute dwd:design-time-name="778d1ae4-dd52-4faa-8bfc-954728d8b35c">
       <ID>Display Name</ID>
       <Name>Display Name</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="b0219907-1e3a-42c8-9e4c-6aa58f0a4f9d">
+        <KeyColumn dwd:design-time-name="3f10f34f-971a-41c3-90d7-c78f6b3cea8e">
           <DataType>WChar</DataType>
           <DataSize>100</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="7575b020-52e8-4478-bcc2-cf1baa189bf3">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="70ee624e-0e82-450e-8e47-a29914c58982">
             <TableID>dbo_dim_fed_hierarchy_history</TableID>
             <ColumnID>display_name</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
-      <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="10e067eb-9ad3-4ba3-b70e-1d83bf07a8a7">
-          <AttributeID>Team</AttributeID>
-          <Name>Team</Name>
-        </AttributeRelationship>
-      </AttributeRelationships>
-      <OrderBy>Key</OrderBy>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="16289487-fdd2-495c-8591-5b30475519f4">
-      <ID>Name</ID>
-      <Name>Name</Name>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="47fa0e42-e127-4fe7-a98e-9896a2ac0b65">
-          <DataType>WChar</DataType>
-          <DataSize>100</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="c5c9993e-30fa-4332-9b8d-f8921103867e">
-            <TableID>dbo_dim_fed_hierarchy_history</TableID>
-            <ColumnID>name</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <OrderBy>Key</OrderBy>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
-    <Attribute dwd:design-time-name="dfb8fef1-d84d-4cb8-9a08-e5a6ae7d0374">
-      <ID>Division</ID>
+    <Attribute dwd:design-time-name="95ea031e-630a-42d8-b61c-a4b23f51346b">
+      <ID>Hierarchylevel2hist</ID>
       <Name>Division</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="298eda00-7c22-4566-9486-835c12941bc5">
+        <KeyColumn dwd:design-time-name="ba7806cf-d7f1-4e5f-82c2-bbe5989d08a0">
           <DataType>WChar</DataType>
           <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="9c3d2d16-90fb-48c6-be9b-004066890709">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6bf301e1-ebc7-4363-a734-a3d7260261e2">
             <TableID>dbo_dim_fed_hierarchy_history</TableID>
             <ColumnID>hierarchylevel2hist</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
-      <OrderBy>Key</OrderBy>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="fbec797d-eafb-4948-a775-fff6d81c5f57">
-      <ID>Department</ID>
+    <Attribute dwd:design-time-name="a7b66305-ba38-4b49-a3a2-dbe09240be5b">
+      <ID>Hierarchylevel3hist</ID>
       <Name>Department</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="45edfa9c-419c-4a9a-8d9d-f30562f1702a">
+        <KeyColumn dwd:design-time-name="86e735c1-e7f4-474c-a498-812d47f8dca1">
           <DataType>WChar</DataType>
           <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="b8d81a77-e5e8-4e2d-97d5-2b22c7f578b6">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e810ff9c-5034-4891-a5b3-2f23acd4b5a8">
             <TableID>dbo_dim_fed_hierarchy_history</TableID>
             <ColumnID>hierarchylevel3hist</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
-      <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="96a33123-f14f-4f43-b6f2-0be2ea4d58d6">
-          <AttributeID>Division</AttributeID>
-          <Name>Division</Name>
-        </AttributeRelationship>
-      </AttributeRelationships>
-      <OrderBy>Key</OrderBy>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="394fe2dd-d090-4061-9d3d-97e003c71539">
-      <ID>Team</ID>
+    <Attribute dwd:design-time-name="4a5f7b76-27b9-428e-aa49-2dd776c207d7">
+      <ID>Hierarchylevel4hist</ID>
       <Name>Team</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="b3684faf-61d9-4cd0-a17a-f2dce0656aac">
+        <KeyColumn dwd:design-time-name="26c71ae2-bb4a-4d8a-a056-dfa87f7cf9ce">
           <DataType>WChar</DataType>
           <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="0e3ec456-b415-4590-8f9c-706c75666f03">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2e51abcb-5ccb-4495-8205-d773cc3d3a9a">
             <TableID>dbo_dim_fed_hierarchy_history</TableID>
             <ColumnID>hierarchylevel4hist</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
-      <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="400a1ad4-1b2a-4290-99e2-dd744d7c3c40">
-          <AttributeID>Department</AttributeID>
-          <Name>Department</Name>
-        </AttributeRelationship>
-      </AttributeRelationships>
-      <OrderBy>Key</OrderBy>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="c74b9e19-c5a8-4330-94dc-13627aac896e">
+    <Attribute dwd:design-time-name="107ce3cf-aff2-49fd-b741-f55c0663c978">
+      <ID>Leaver Logic</ID>
+      <Name>Leaver</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="69f7ead7-cdff-4717-879d-467fccba3fa9">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f13efbcc-fce1-403e-9c6d-d77d43a32f03">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>LeaverLogic</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ca5c9b9f-2b48-4155-9af4-69bb7e9c623a">
       <ID>Locationidud</ID>
       <Name>Office</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="5b33f9e7-9197-42fd-b304-23dabf228572">
+        <KeyColumn dwd:design-time-name="df76e8ed-89e6-4cc6-b5a7-96c6d3454487">
           <DataType>WChar</DataType>
           <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="04d41b35-191d-49a2-b470-a56ca16feb3f">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bd9ae2d1-1d73-464d-8c03-ec3a7c913c67">
             <TableID>dbo_dim_employee</TableID>
             <ColumnID>locationidud</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
-      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5323b82b-48f2-4b27-88be-6a77368ffd3e">
+      <ID>Jobtitle</ID>
+      <Name>Job Title</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b7480a84-2585-4c5f-9d2d-dfd9e885189e">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1fae751d-805c-4d9f-af12-7cc787e56395">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>jobtitle</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a0acf104-6a81-46db-9126-17519a292954">
+      <ID>Name</ID>
+      <Name>Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f1d88a76-51be-47a9-80ca-18fbe14903d3">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="639070de-fff1-49bf-8de2-e29758b7b9e0">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
   </Attributes>
   <Hierarchies>
-    <Hierarchy dwd:design-time-name="d96affbd-07fc-4a13-a1c5-7d9c8f01356a">
+    <Hierarchy dwd:design-time-name="2b33136a-0961-4305-a948-c64ba2c1b736">
       <ID>Hierarchy</ID>
       <Name>Hierarchy</Name>
       <Levels>
-        <Level dwd:design-time-name="e3fec251-9bb1-4544-b955-d7c253d80555">
-          <ID>Division</ID>
+        <Level dwd:design-time-name="6f37ce26-3382-42ec-891c-f9a566401496">
+          <ID>Hierarchylevel2hist</ID>
           <Name>Division</Name>
-          <SourceAttributeID>Division</SourceAttributeID>
+          <SourceAttributeID>Hierarchylevel2hist</SourceAttributeID>
         </Level>
-        <Level dwd:design-time-name="ac9e2704-7320-4ca7-b76c-c64a489c21aa">
-          <ID>Department</ID>
+        <Level dwd:design-time-name="c27ea296-64a3-4743-954f-9f85627c3c08">
+          <ID>Hierarchylevel3hist</ID>
           <Name>Department</Name>
-          <SourceAttributeID>Department</SourceAttributeID>
+          <SourceAttributeID>Hierarchylevel3hist</SourceAttributeID>
         </Level>
-        <Level dwd:design-time-name="ccb42986-67e5-48cb-b41f-f7cbf124c418">
-          <ID>Team</ID>
+        <Level dwd:design-time-name="cceb4555-0651-430e-8f6e-c21736073648">
+          <ID>Hierarchylevel4hist</ID>
           <Name>Team</Name>
-          <SourceAttributeID>Team</SourceAttributeID>
+          <SourceAttributeID>Hierarchylevel4hist</SourceAttributeID>
         </Level>
-        <Level dwd:design-time-name="fb9e2a06-a464-40db-9ed0-e6d41cc5831e">
+        <Level dwd:design-time-name="2a1ce80d-3933-421e-bf8e-c712d829a374">
           <ID>Display Name</ID>
           <Name>Display Name</Name>
           <SourceAttributeID>Display Name</SourceAttributeID>
