@@ -1219,7 +1219,7 @@
       <Measures>
         <Measure dwd:design-time-name="e75269f3-024a-460e-8347-7a7523f5b6d5">
           <ID>Bill Total</ID>
-          <Name>Bill Total</Name>
+          <Name>BillTotal</Name>
           <Source dwd:design-time-name="328392c2-bdbe-4b78-9f20-ad8c8d431791">
             <DataType>Double</DataType>
             <Source xsi:type="ColumnBinding" dwd:design-time-name="b7a6f3b9-99df-40fc-bd68-d579f49abfd2">
@@ -1227,12 +1227,11 @@
               <ColumnID>bill_total</ColumnID>
             </Source>
           </Source>
-          <Visible>false</Visible>
           <FormatString>$#,##0;-$#,##0</FormatString>
         </Measure>
         <Measure dwd:design-time-name="210e4260-5149-4ded-a206-5e5f0199843a">
           <ID>Fees Total</ID>
-          <Name>Fees Total</Name>
+          <Name>FeesTotal</Name>
           <Source dwd:design-time-name="91ac173f-b236-4a4b-b397-9eea34321d7f">
             <DataType>Double</DataType>
             <Source xsi:type="ColumnBinding" dwd:design-time-name="1ccdb448-bd9c-458f-b750-bb572ad58ca8">
@@ -1245,7 +1244,7 @@
         </Measure>
         <Measure dwd:design-time-name="790ee7a2-2ad0-48d1-8281-651b9d4ef13c">
           <ID>Paid Disbursements</ID>
-          <Name>Paid Disbursements</Name>
+          <Name>PaidDisbursements</Name>
           <Source dwd:design-time-name="6a1f965d-2f00-44c0-874d-f8c4a4f490de">
             <DataType>Double</DataType>
             <Source xsi:type="ColumnBinding" dwd:design-time-name="31f8abc9-85ca-463e-9a4e-ad1f82561703">
@@ -1253,12 +1252,11 @@
               <ColumnID>paid_disbursements</ColumnID>
             </Source>
           </Source>
-          <Visible>false</Visible>
           <FormatString>$#,##0;-$#,##0</FormatString>
         </Measure>
         <Measure dwd:design-time-name="79e421d0-8a54-4024-8ab5-a3800c29d72f">
           <ID>Unpaid Disbursements</ID>
-          <Name>Unpaid Disbursements</Name>
+          <Name>UnpaidDisbursements</Name>
           <Source dwd:design-time-name="3187aaa2-b319-4d40-bf48-308025815021">
             <DataType>Double</DataType>
             <Source xsi:type="ColumnBinding" dwd:design-time-name="554755eb-fd81-4d1c-b7b7-1cd3ae45e268">
@@ -1266,12 +1264,11 @@
               <ColumnID>unpaid_disbursements</ColumnID>
             </Source>
           </Source>
-          <Visible>false</Visible>
           <FormatString>$#,##0;-$#,##0</FormatString>
         </Measure>
         <Measure dwd:design-time-name="91362c36-97cd-4950-b598-3fd269f83612">
           <ID>Vat Amount</ID>
-          <Name>Vat Amount</Name>
+          <Name>VatAmount</Name>
           <Source dwd:design-time-name="b5ac206c-a2a7-4f70-82c0-3bdbfd98a495">
             <DataType>Double</DataType>
             <Source xsi:type="ColumnBinding" dwd:design-time-name="8d8b5f1b-8f4d-4059-bff3-e1e47c31589f">
@@ -1279,12 +1276,11 @@
               <ColumnID>vat_amount</ColumnID>
             </Source>
           </Source>
-          <Visible>false</Visible>
           <FormatString>$#,##0;-$#,##0</FormatString>
         </Measure>
         <Measure dwd:design-time-name="335c2290-5055-4e43-a219-a8e05baf8c6d">
           <ID>Amount Paid</ID>
-          <Name>Amount Paid</Name>
+          <Name>AmountPaid</Name>
           <Source dwd:design-time-name="e3d9ae83-613d-4a82-a7a4-637e5ebcc205">
             <DataType>Double</DataType>
             <Source xsi:type="ColumnBinding" dwd:design-time-name="cad1cfeb-16dc-4e1d-b0a9-43dbc89e6c60">
@@ -1292,12 +1288,11 @@
               <ColumnID>amount_paid</ColumnID>
             </Source>
           </Source>
-          <Visible>false</Visible>
           <FormatString>$#,##0;-$#,##0</FormatString>
         </Measure>
         <Measure dwd:design-time-name="db3bcf14-55a8-4892-a2a3-92f7dd7dbc33">
           <ID>Amount Outstanding</ID>
-          <Name>Amount Outstanding</Name>
+          <Name>AmountOutstanding</Name>
           <Source dwd:design-time-name="da9020a9-3a73-4c1d-ad7c-554b879d0f49">
             <DataType>Double</DataType>
             <Source xsi:type="ColumnBinding" dwd:design-time-name="0913c336-7718-4f3b-a283-bfe8fe36bcdb">
@@ -1305,21 +1300,7 @@
               <ColumnID>amount_outstanding</ColumnID>
             </Source>
           </Source>
-          <Visible>false</Visible>
           <FormatString>$#,##0;-$#,##0</FormatString>
-        </Measure>
-        <Measure dwd:design-time-name="89a6684d-9df4-4df1-a04e-32602c63f3f2">
-          <ID>Fact Bill Count</ID>
-          <Name>Fact Bill Count</Name>
-          <AggregateFunction>Count</AggregateFunction>
-          <Source dwd:design-time-name="eb2038ae-4516-48fb-9e56-0f6b14998192">
-            <DataType>Integer</DataType>
-            <DataSize>4</DataSize>
-            <Source xsi:type="RowBinding" dwd:design-time-name="4ce64f94-4343-437b-a2c6-4b01119503c5">
-              <TableID>dbo_fact_bill</TableID>
-            </Source>
-          </Source>
-          <Visible>false</Visible>
         </Measure>
       </Measures>
       <StorageMode>Molap</StorageMode>
@@ -1841,41 +1822,35 @@ The CALCULATE command controls the aggregation of leaf cells in the cube.
 If the CALCULATE command is deleted or modified, the data within the cube is affected.
 You should edit this command only if you manually specify how the cube is aggregated.
 */
-CALCULATE; 
-CREATE MEMBER CURRENTCUBE.[Measures].[Debt]
- AS [Measures].[Outstanding Amount], 
-VISIBLE = 1  ;     
+CALCULATE;      
 CREATE MEMBER CURRENTCUBE.[Measures].[Revenue YTD]
  AS SUM(YTD([Bill Date].[Fiscal Date].CurrentMember), [Measures].[Revenue]), 
 FORMAT_STRING = "Currency", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD Calcs' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';  
-CREATE MEMBER CURRENTCUBE.[Measures].[Calculated Member]
- AS [Measures].[Amount Outstanding], 
-VISIBLE = 1;   
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD Calcs' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';    
 CREATE MEMBER CURRENTCUBE.[Measures].[Revenue v Prior Year]
  AS [Measures].[Revenue]-[Measures].[Revenue Prior Year], 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';   
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';    
 CREATE MEMBER CURRENTCUBE.[Measures].[% Revenue v Prior Year]
  AS ([Measures].[Revenue]-[Measures].[Revenue Prior Year])/[Measures].[Revenue Prior Year], 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';   
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';    
 CREATE MEMBER CURRENTCUBE.[Measures].[% Revenue v Budget]
  AS ([Measures].[Revenue]-[Measures].[Budget Value])/[Measures].[Budget Value], 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';   
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';    
 CREATE MEMBER CURRENTCUBE.[Measures].[Revenue v Budget]
  AS [Measures].[Revenue]-[Measures].[Budget Value], 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';   
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';    
 CREATE MEMBER CURRENTCUBE.[Measures].[Revenue+WIP v Budget]
  AS ([Measures].[Revenue]+[Measures].[Wip Value])-[Measures].[Budget Value], 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';   
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';    
 CREATE MEMBER CURRENTCUBE.[Measures].[% Revenue+WIP v Budget]
  AS [Measures].[Revenue+WIP v Budget]/[Measures].[Budget Value], 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';    
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';     
 CREATE MEMBER CURRENTCUBE.[Measures].[Revenue Prior Year]
  AS SUM(PARALLELPERIOD( [Bill Date].[Fiscal Date].[Fin Year],1,
 [Bill Date].[Fiscal Date].CurrentMember),[Measures].[Revenue]), 
