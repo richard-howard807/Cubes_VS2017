@@ -8,9 +8,9 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="140" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="119504" scrolltop="-3200" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="60" x="35375" y="21034" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="140" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-850" scrolltop="-3058" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="60" x="30568" y="16880" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
-              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+              <ddsxmlobjectstreamwrapper binary="01000000900180380100065461686f6d61" />
             </font>
             <mouseicon>
               <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
@@ -762,7 +762,7 @@
             </layoutobject>
             <shape groupshapeid="0" groupnode="0" />
           </ddscontrol>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" left="0" top="0" logicalid="133" controlid="64" masterid="0" hint1="0" hint2="0" width="5908" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="fact_wip" left="0" top="0" logicalid="133" controlid="64" masterid="0" hint1="0" hint2="0" width="5908" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobjectstreaminitwrapper binary="000c00001417000088130000" />
             </control>
@@ -871,11 +871,11 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
-      <Value>119504</Value>
+      <Value>-850</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>-3200</Value>
+      <Value>-3058</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
@@ -1097,7 +1097,7 @@
         <Attribute dwd:design-time-name="64fac562-cf0f-4f03-8d12-a991290e2420">
           <AttributeID>Fee Earner Code</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="5ee9b91f-e877-4e1c-997a-78e10431c161">
+        <Attribute dwd:design-time-name="37b33c98-77f9-47f5-8a67-c7613f0229bc">
           <AttributeID>Master Client Code</AttributeID>
         </Attribute>
       </Attributes>
@@ -1405,21 +1405,7 @@
           <Materialization>Regular</Materialization>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
         </Dimension>
-        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="0e40e17d-2e86-47ad-a475-a88ebf89240b">
-          <CubeDimensionID>Master Client Details</CubeDimensionID>
-          <Attributes>
-            <Attribute dwd:design-time-name="311da7ae-36a3-4e03-a6d3-1a3b7788787b">
-              <AttributeID>Dim Client Key</AttributeID>
-              <Type>Granularity</Type>
-            </Attribute>
-          </Attributes>
-          <IntermediateCubeDimensionID>Matter Details</IntermediateCubeDimensionID>
-          <IntermediateGranularityAttributeID>Master Client Code</IntermediateGranularityAttributeID>
-          <Materialization>Regular</Materialization>
-          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-        </Dimension>
       </Dimensions>
-      <Partitions />
     </MeasureGroup>
     <MeasureGroup dwd:design-time-name="69b53e19-9187-4da4-a349-8c1101774379">
       <ID>Fact Bill Activity</ID>
@@ -1570,21 +1556,7 @@
           <Materialization>Regular</Materialization>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
         </Dimension>
-        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="e2630eac-82bb-4b1b-8f2b-a7dbf9333333">
-          <CubeDimensionID>Master Client Details</CubeDimensionID>
-          <Attributes>
-            <Attribute dwd:design-time-name="c138ee46-4055-4997-84e3-f91e19541dc4">
-              <AttributeID>Dim Client Key</AttributeID>
-              <Type>Granularity</Type>
-            </Attribute>
-          </Attributes>
-          <IntermediateCubeDimensionID>Matter Details</IntermediateCubeDimensionID>
-          <IntermediateGranularityAttributeID>Master Client Code</IntermediateGranularityAttributeID>
-          <Materialization>Regular</Materialization>
-          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-        </Dimension>
       </Dimensions>
-      <Partitions />
     </MeasureGroup>
     <MeasureGroup dwd:design-time-name="fc80e60c-9db6-4155-b218-1e21656b84c1">
       <ID>Fact Budget Activity</ID>
@@ -1660,7 +1632,6 @@
           </Attributes>
         </Dimension>
       </Dimensions>
-      <Partitions />
     </MeasureGroup>
     <MeasureGroup dwd:design-time-name="4ecab8eb-3ba3-42db-b770-9137c5ebd6f1">
       <ID>Fact Wip</ID>
@@ -1789,21 +1760,7 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="af19cd1c-c59f-4da1-95e8-6c4ea21d510c">
-          <CubeDimensionID>Master Client Details</CubeDimensionID>
-          <Attributes>
-            <Attribute dwd:design-time-name="787458ed-447e-424f-9d28-cc8f14c8bab1">
-              <AttributeID>Dim Client Key</AttributeID>
-              <Type>Granularity</Type>
-            </Attribute>
-          </Attributes>
-          <IntermediateCubeDimensionID>Matter Details</IntermediateCubeDimensionID>
-          <IntermediateGranularityAttributeID>Master Client Code</IntermediateGranularityAttributeID>
-          <Materialization>Regular</Materialization>
-          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-        </Dimension>
       </Dimensions>
-      <Partitions />
     </MeasureGroup>
   </MeasureGroups>
   <Source dwd:design-time-name="42c9f766-a0c9-4a1f-89a2-54c8bd67eb3b">
@@ -1822,35 +1779,39 @@ The CALCULATE command controls the aggregation of leaf cells in the cube.
 If the CALCULATE command is deleted or modified, the data within the cube is affected.
 You should edit this command only if you manually specify how the cube is aggregated.
 */
-CALCULATE;      
+CALCULATE; 
+CREATE MEMBER CURRENTCUBE.[Measures].[Outstanding Amount]
+ AS [Measures].[AmountOutstanding], 
+FORMAT_STRING = "$#,##0;-$#,##0", 
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Bills'  ;       
 CREATE MEMBER CURRENTCUBE.[Measures].[Revenue YTD]
  AS SUM(YTD([Bill Date].[Fiscal Date].CurrentMember), [Measures].[Revenue]), 
-FORMAT_STRING = "Currency", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD Calcs' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';    
+FORMAT_STRING = "$#,##0;-$#,##0", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD Calcs' ,  ASSOCIATED_MEASURE_GROUP = 'Bills'  ;     
 CREATE MEMBER CURRENTCUBE.[Measures].[Revenue v Prior Year]
  AS [Measures].[Revenue]-[Measures].[Revenue Prior Year], 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';    
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';     
 CREATE MEMBER CURRENTCUBE.[Measures].[% Revenue v Prior Year]
  AS ([Measures].[Revenue]-[Measures].[Revenue Prior Year])/[Measures].[Revenue Prior Year], 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';    
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';     
 CREATE MEMBER CURRENTCUBE.[Measures].[% Revenue v Budget]
  AS ([Measures].[Revenue]-[Measures].[Budget Value])/[Measures].[Budget Value], 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';    
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';     
 CREATE MEMBER CURRENTCUBE.[Measures].[Revenue v Budget]
  AS [Measures].[Revenue]-[Measures].[Budget Value], 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';    
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';     
 CREATE MEMBER CURRENTCUBE.[Measures].[Revenue+WIP v Budget]
  AS ([Measures].[Revenue]+[Measures].[Wip Value])-[Measures].[Budget Value], 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';    
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';     
 CREATE MEMBER CURRENTCUBE.[Measures].[% Revenue+WIP v Budget]
  AS [Measures].[Revenue+WIP v Budget]/[Measures].[Budget Value], 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';     
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';      
 CREATE MEMBER CURRENTCUBE.[Measures].[Revenue Prior Year]
  AS SUM(PARALLELPERIOD( [Bill Date].[Fiscal Date].[Fin Year],1,
 [Bill Date].[Fiscal Date].CurrentMember),[Measures].[Revenue]), 
