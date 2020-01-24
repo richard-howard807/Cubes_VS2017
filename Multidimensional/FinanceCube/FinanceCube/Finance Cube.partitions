@@ -82,5 +82,45 @@
         </Partition>
       </Partitions>
     </MeasureGroup>
+    <MeasureGroup>
+      <ID>Fact Bill Billed Time Activity</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="a13914eb-7b61-4fbb-839a-100c488c684b">
+          <ID>Fact Bill Billed Time Activity</ID>
+          <Name>Fact Bill Billed Time Activity</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="e174515b-a38d-4d4e-8ca1-d59ee5d0ab7a">
+            <DataSourceViewID>FinanceDataSource</DataSourceViewID>
+            <TableID>dbo_fact_bill_billed_time_activity</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Fact Billable Time Activity</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="677d07d6-3092-4ade-a7fa-254b333c9da6">
+          <ID>Fact Billable Time Activity</ID>
+          <Name>Fact Billable Time Activity</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="f71c4ef9-9909-4c60-8324-7968a89d0e9f">
+            <DataSourceViewID>FinanceDataSource</DataSourceViewID>
+            <TableID>dbo_fact_billable_time_activity</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
   </MeasureGroups>
 </Cube>
