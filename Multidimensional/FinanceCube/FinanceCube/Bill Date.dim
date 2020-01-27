@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1171" scrolltop="-3254" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="24395" y="21034" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1171" scrolltop="-3254" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="12012" y="21034" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -190,6 +190,18 @@
           <AttributeID>Current Cal Year</AttributeID>
           <Name>Current Cal Year</Name>
         </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c332cd17-1f80-44c8-8b8f-f3307afabebe">
+          <AttributeID>Date Age Group 1</AttributeID>
+          <Name>Date Age Group 1</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="2de3b6db-4507-41ec-8a74-1182eaa6d9ca">
+          <AttributeID>Date Age Group 2</AttributeID>
+          <Name>Date Age Group 2</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="e06773d7-f589-4767-8721-d7a92c73a4f2">
+          <AttributeID>Date Age</AttributeID>
+          <Name>Date Age</Name>
+        </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
       <ValueColumn dwd:design-time-name="6b5f183e-f590-43e4-9f99-d30fba2cd569">
@@ -216,6 +228,14 @@
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <NameColumn dwd:design-time-name="1940b08b-ac44-4683-8544-84754249dc68">
+        <DataType>WChar</DataType>
+        <DataSize>7</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="513f5f2e-6fa6-4ee7-b07b-8a588d18053a">
+          <TableID>dbo_dim_date</TableID>
+          <ColumnID>cal_month_name</ColumnID>
+        </Source>
+      </NameColumn>
       <AttributeRelationships>
         <AttributeRelationship dwd:design-time-name="57b79861-7ad1-4f20-ae6f-4bbc74744e1d">
           <AttributeID>Cal Quarter</AttributeID>
@@ -246,6 +266,14 @@
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <NameColumn dwd:design-time-name="e349d66b-6345-4cc7-928b-86575a8d965e">
+        <DataType>WChar</DataType>
+        <DataSize>7</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="294a51ad-f122-4e02-b6dd-79b0bad93208">
+          <TableID>dbo_dim_date</TableID>
+          <ColumnID>cal_qtr_display</ColumnID>
+        </Source>
+      </NameColumn>
       <AttributeRelationships>
         <AttributeRelationship dwd:design-time-name="bbd5f0d8-5619-425b-9967-2e108d73b43b">
           <AttributeID>Cal Year</AttributeID>
@@ -297,9 +325,10 @@
       </KeyColumns>
       <NameColumn dwd:design-time-name="ba781461-a8bc-41a1-85b1-990777c4ee92">
         <DataType>WChar</DataType>
-        <Source xsi:type="ColumnBinding" dwd:design-time-name="3621f6e3-b3d2-4218-90bb-2a0391ccacc6">
+        <DataSize>7</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="3cd7d15b-9d98-464c-a4cb-abffa223d35c">
           <TableID>dbo_dim_date</TableID>
-          <ColumnID>fin_month</ColumnID>
+          <ColumnID>fin_month_name</ColumnID>
         </Source>
       </NameColumn>
       <AttributeRelationships>
@@ -526,6 +555,56 @@
         </KeyColumn>
       </KeyColumns>
       <AttributeHierarchyDisplayFolder>Filters</AttributeHierarchyDisplayFolder>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="59b18c54-db53-4dc5-82e1-47ba6303cd46">
+      <ID>Date Age Group 1</ID>
+      <Name>Date Age Group 1</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8eabc4cc-d026-4680-a516-fdede20fbd87">
+          <DataType>WChar</DataType>
+          <DataSize>21</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d9f40c30-45f2-4411-bd7a-790ac8ce19fc">
+            <TableID>dbo_dim_date</TableID>
+            <ColumnID>Date_Age_Group_1</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeHierarchyDisplayFolder>Age</AttributeHierarchyDisplayFolder>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e3790cb3-d291-413a-bae4-f7ff72bf2151">
+      <ID>Date Age Group 2</ID>
+      <Name>Date Age Group 2</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d094fc9c-6e84-4438-862e-204ef45f1e12">
+          <DataType>WChar</DataType>
+          <DataSize>21</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="18162b56-a9f6-4240-9930-b8d602ddfced">
+            <TableID>dbo_dim_date</TableID>
+            <ColumnID>Date_Age_Group_2</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeHierarchyDisplayFolder>Age</AttributeHierarchyDisplayFolder>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="44285ba4-57bf-410f-9ac4-3ff295194e6a">
+      <ID>Date Age</ID>
+      <Name>Date Age</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cc136cc2-3246-4a83-ab84-b87436502ae9">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="58be6cb6-53aa-495c-80d6-8910ee40b35c">
+            <TableID>dbo_dim_date</TableID>
+            <ColumnID>DateAge</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeHierarchyDisplayFolder>Age</AttributeHierarchyDisplayFolder>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
