@@ -6,19 +6,55 @@
       <Partitions>
         <Partition dwd:design-time-name="619797a1-789d-426e-9917-da7f9f06fd86">
           <ID>Fact Bill</ID>
-          <Name>Fact Bill</Name>
+          <Name>Fact Bill Current</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="7258d72b-b6e3-4572-a796-aa971509b290">
-            <DataSourceViewID>FinanceDataSource</DataSourceViewID>
-            <TableID>dbo_fact_bill</TableID>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="390cc947-6787-49d5-9795-c4d73c956f05">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT   fact_bill.dim_matter_header_curr_key, fact_bill.dim_client_key, fact_bill.dim_bill_date_key, fact_bill.dim_bill_key, fact_bill.dim_posting_date_key, fact_bill.dim_last_pay_date_key, 
+                         fact_bill.dim_address_key, fact_bill.dim_write_off_codes_key, fact_bill.master_fact_key, fact_bill.source_system_id, fact_bill.client_code, fact_bill.matter_number, fact_bill.bill_number, 
+                         fact_bill.bill_sequence, fact_bill.bill_total, fact_bill.fees_total, fact_bill.paid_disbursements, fact_bill.unpaid_disbursements, fact_bill.admin_charges_total, fact_bill.vat_amount, 
+                         fact_bill.amount_paid, fact_bill.amount_outstanding, fact_bill.fact_bill_key, fact_bill.dss_update_time, fact_bill.dim_bill_debt_narrative_key, 
+                         dim_fed_hierarchy_history.dim_fed_hierarchy_history_key AS matter_owner_history_key
+FROM         fact_bill INNER JOIN
+                         dim_matter_header_current ON dim_matter_header_current.dim_matter_header_curr_key = fact_bill.dim_matter_header_curr_key INNER JOIN
+                         dim_date ON fact_bill.dim_bill_date_key = dim_date.dim_date_key LEFT OUTER JOIN
+                         dim_fed_hierarchy_history ON dim_fed_hierarchy_history.fed_code = dim_matter_header_current.fee_earner_code AND dim_date.calendar_date BETWEEN 
+                         dim_fed_hierarchy_history.dss_start_date AND dim_fed_hierarchy_history.dss_end_date
+WHERE     (fact_bill.dim_bill_date_key &gt;= 20190501)</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
           <EstimatedRows>1836255</EstimatedRows>
+        </Partition>
+        <Partition dwd:design-time-name="e4729c38-9047-42a4-a9bf-04281cf9a7c9">
+          <ID>Fact Bill 1</ID>
+          <Name>Fact Bill Historical</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="e0863e3e-3773-4297-96e2-0c11788c5dc7">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT   fact_bill.dim_matter_header_curr_key, fact_bill.dim_client_key, fact_bill.dim_bill_date_key, fact_bill.dim_bill_key, fact_bill.dim_posting_date_key, fact_bill.dim_last_pay_date_key, 
+                         fact_bill.dim_address_key, fact_bill.dim_write_off_codes_key, fact_bill.master_fact_key, fact_bill.source_system_id, fact_bill.client_code, fact_bill.matter_number, fact_bill.bill_number, 
+                         fact_bill.bill_sequence, fact_bill.bill_total, fact_bill.fees_total, fact_bill.paid_disbursements, fact_bill.unpaid_disbursements, fact_bill.admin_charges_total, fact_bill.vat_amount, 
+                         fact_bill.amount_paid, fact_bill.amount_outstanding, fact_bill.fact_bill_key, fact_bill.dss_update_time, fact_bill.dim_bill_debt_narrative_key, 
+                         dim_fed_hierarchy_history.dim_fed_hierarchy_history_key AS matter_owner_history_key
+FROM         fact_bill INNER JOIN
+                         dim_matter_header_current ON dim_matter_header_current.dim_matter_header_curr_key = fact_bill.dim_matter_header_curr_key INNER JOIN
+                         dim_date ON fact_bill.dim_bill_date_key = dim_date.dim_date_key LEFT OUTER JOIN
+                         dim_fed_hierarchy_history ON dim_fed_hierarchy_history.fed_code = dim_matter_header_current.fee_earner_code AND dim_date.calendar_date BETWEEN 
+                         dim_fed_hierarchy_history.dss_start_date AND dim_fed_hierarchy_history.dss_end_date
+WHERE     (fact_bill.dim_bill_date_key &lt; 20190501)
+and  (fact_bill.dim_bill_date_key &gt;=20100501)</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
         </Partition>
       </Partitions>
     </MeasureGroup>
@@ -27,14 +63,46 @@
       <Partitions>
         <Partition dwd:design-time-name="becdac2b-d61d-4a28-8a0f-377f75d0448e">
           <ID>Fact Bill Activity</ID>
-          <Name>Fact Bill Activity</Name>
+          <Name>Fact Bill Activity Current</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="8f9ea621-42a6-45d1-91b8-9d764522217f">
-            <DataSourceViewID>FinanceDataSource</DataSourceViewID>
-            <TableID>dbo_fact_bill_activity</TableID>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="a53b0c45-5517-4cf1-b8b5-7a3d297f9830">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT   CAST(fact_bill_activity_key AS BIGINT) AS fact_bill_activity_key, dim_client_key, dim_bill_date_key, dim_bill_key, dim_fed_hierarchy_history_key, dim_matter_header_curr_key, 
+                         billed_time, bill_amount
+FROM         fact_bill_activity
+WHERE     (dim_bill_date_key &gt;= 20190501)
+UNION ALL
+SELECT   CAST('999' + CAST(transaction_sequence_number AS VARCHAR(25)) AS bigint) AS EXPR1, dim_client_key, dim_orig_posting_date_key, dim_bill_key, dim_fed_hierarchy_history_key, 
+                         dim_matter_header_curr_key, NULL AS EXPR2, NULL AS EXPR3
+FROM         fact_billable_time_activity
+WHERE     (dim_bill_key = 0) AND (dim_orig_posting_date_key IS NOT NULL) AND (dim_orig_posting_date_key &gt;= 20190501)</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <EstimatedRows>1141527</EstimatedRows>
+        </Partition>
+        <Partition dwd:design-time-name="f3cbf25d-732d-42fb-a028-7e4bc48c0802">
+          <ID>Fact Bill Activity Historical</ID>
+          <Name>Fact Bill Activity Historical</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="7ffe6bc4-cabc-4939-96eb-8bbd2dc988d7">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT   CAST(fact_bill_activity_key AS BIGINT) AS fact_bill_activity_key, dim_client_key, dim_bill_date_key, dim_bill_key, dim_fed_hierarchy_history_key, dim_matter_header_curr_key, 
+                         billed_time, bill_amount
+FROM         fact_bill_activity
+WHERE     (dim_bill_date_key &gt;= 20100501) and   (dim_bill_date_key &lt; 20190501)
+UNION ALL
+SELECT   CAST('999' + CAST(transaction_sequence_number AS VARCHAR(25)) AS bigint) AS EXPR1, dim_client_key, dim_orig_posting_date_key, dim_bill_key, dim_fed_hierarchy_history_key, 
+                         dim_matter_header_curr_key, NULL AS EXPR2, NULL AS EXPR3
+FROM         fact_billable_time_activity
+WHERE     (dim_bill_key = 0) AND (dim_orig_posting_date_key IS NOT NULL) AND (dim_orig_posting_date_key &gt;= 20100501) and   (dim_orig_posting_date_key &lt; 20190501)</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
@@ -47,14 +115,52 @@
       <Partitions>
         <Partition dwd:design-time-name="73bee69f-9fd9-46ef-b4e3-79a34bee96ba">
           <ID>Fact Budget Activity</ID>
-          <Name>Fact Budget Activity</Name>
+          <Name>Fact Budget Current</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="8b53bc94-ab86-457a-b2ec-8dc7eb062f31">
-            <DataSourceViewID>FinanceDataSource</DataSourceViewID>
-            <TableID>dbo_fact_budget_activity</TableID>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="2aae895a-a4d7-4b31-bf02-2348c05647ff">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT   fact_budget_activity.dim_fed_hierarchy_history_key, fact_budget_activity.dim_budget_date_key, fact_budget_activity.budget_date, fact_budget_activity.fed_business_key, 
+                         fact_budget_activity.emp_source_system_id, fact_budget_activity.employee_hierarchy_business_key, fact_budget_activity.budget_source_system_id, fact_budget_activity.fed_code, 
+                         fact_budget_activity.financial_budget_year, fact_budget_activity.financial_budget_month, 
+                         CASE WHEN display_name = 'Budget Balance' THEN team_level_budget_value_balance ELSE fact_budget_activity.fed_level_budget_value END AS budget_value, 
+                         CASE WHEN display_name = 'Budget Balance' THEN team_level_budget_value_hours_balance ELSE fact_budget_activity.fed_level_minute_value END AS budget_mins, 
+                         fact_budget_activity.fed_level_tb_budget_value, fact_budget_activity.team_level_budget_value, fact_budget_activity.practice_area_level_budget_value, 
+                         fact_budget_activity.business_line_level_budget_value, fact_budget_activity.firm_level_budget_value, fact_budget_activity.dss_update_time, fact_budget_activity.dim_gl_date_key, 
+                         fact_budget_activity.team_level_budget_value_hours, fact_budget_activity.team_level_budget_value_balance, fact_budget_activity.team_level_budget_value_hours_balance, 
+                         fact_budget_activity.team_level_budget_value_hours_billed
+FROM         fact_budget_activity INNER JOIN
+                         dim_fed_hierarchy_history ON dim_fed_hierarchy_history.dim_fed_hierarchy_history_key = fact_budget_activity.dim_fed_hierarchy_history_key
+WHERE     (fact_budget_activity.dim_gl_date_key &gt;= 20190501)</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="8bea51c8-963e-4291-b38b-9758a6fb7e06">
+          <ID>Fact Budget Historical</ID>
+          <Name>Fact Budget Historical</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="cf71c012-355a-4979-a503-dcac3477e8b5">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT   fact_budget_activity.dim_fed_hierarchy_history_key, fact_budget_activity.dim_budget_date_key, fact_budget_activity.budget_date, fact_budget_activity.fed_business_key, 
+                         fact_budget_activity.emp_source_system_id, fact_budget_activity.employee_hierarchy_business_key, fact_budget_activity.budget_source_system_id, fact_budget_activity.fed_code, 
+                         fact_budget_activity.financial_budget_year, fact_budget_activity.financial_budget_month, 
+                         CASE WHEN display_name = 'Budget Balance' THEN team_level_budget_value_balance ELSE fact_budget_activity.fed_level_budget_value END AS budget_value, 
+                         CASE WHEN display_name = 'Budget Balance' THEN team_level_budget_value_hours_balance ELSE fact_budget_activity.fed_level_minute_value END AS budget_mins, 
+                         fact_budget_activity.fed_level_tb_budget_value, fact_budget_activity.team_level_budget_value, fact_budget_activity.practice_area_level_budget_value, 
+                         fact_budget_activity.business_line_level_budget_value, fact_budget_activity.firm_level_budget_value, fact_budget_activity.dss_update_time, fact_budget_activity.dim_gl_date_key, 
+                         fact_budget_activity.team_level_budget_value_hours, fact_budget_activity.team_level_budget_value_balance, fact_budget_activity.team_level_budget_value_hours_balance, 
+                         fact_budget_activity.team_level_budget_value_hours_billed
+FROM         fact_budget_activity INNER JOIN
+                         dim_fed_hierarchy_history ON dim_fed_hierarchy_history.dim_fed_hierarchy_history_key = fact_budget_activity.dim_fed_hierarchy_history_key
+WHERE     (fact_budget_activity.dim_gl_date_key &gt;= 20100501)
+and    (fact_budget_activity.dim_gl_date_key &lt; 20190501)</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
@@ -87,14 +193,38 @@
       <Partitions>
         <Partition dwd:design-time-name="a13914eb-7b61-4fbb-839a-100c488c684b">
           <ID>Fact Bill Billed Time Activity</ID>
+          <Name>Fact Bill Billed Time Activity Current</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="dc028a61-9d31-4884-985b-475ccd1f75e6">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT   dim_bill_key, dim_client_key, dim_transaction_date_key, dim_fed_hierarchy_history_key, dim_matter_header_curr_key, dim_all_time_activity_key, dim_gl_date_key, dim_bill_date_key, 
+                         master_fact_key, source_system_id, timebillindex, transaction_sequence_number, time_activity_code, minutes_recorded, hourly_charge_rate, time_charge_value, 
+                         actual_time_recorded_value, chargeable_nonc_nonb, dss_create_time, dss_update_time
+FROM         fact_bill_billed_time_activity
+WHERE     (dim_gl_date_key &gt;= 20190501)</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="815832e7-463f-4e24-b91a-83b145914255">
+          <ID>Fact Bill Billed Time Activity 1</ID>
           <Name>Fact Bill Billed Time Activity</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="e174515b-a38d-4d4e-8ca1-d59ee5d0ab7a">
-            <DataSourceViewID>FinanceDataSource</DataSourceViewID>
-            <TableID>dbo_fact_bill_billed_time_activity</TableID>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="3736e218-1c59-43fd-be71-aed28b9c6b44">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT   dim_bill_key, dim_client_key, dim_transaction_date_key, dim_fed_hierarchy_history_key, dim_matter_header_curr_key, dim_all_time_activity_key, dim_gl_date_key, dim_bill_date_key, 
+                         master_fact_key, source_system_id, timebillindex, transaction_sequence_number, time_activity_code, minutes_recorded, hourly_charge_rate, time_charge_value, 
+                         actual_time_recorded_value, chargeable_nonc_nonb, dss_create_time, dss_update_time
+FROM         fact_bill_billed_time_activity
+WHERE     (dim_gl_date_key &gt;= 20100501)
+and   (dim_gl_date_key &lt; 20190501)</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
@@ -107,14 +237,54 @@
       <Partitions>
         <Partition dwd:design-time-name="677d07d6-3092-4ade-a7fa-254b333c9da6">
           <ID>Fact Billable Time Activity</ID>
-          <Name>Fact Billable Time Activity</Name>
+          <Name>Fact Billable Time Activity Current</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="f71c4ef9-9909-4c60-8324-7968a89d0e9f">
-            <DataSourceViewID>FinanceDataSource</DataSourceViewID>
-            <TableID>dbo_fact_billable_time_activity</TableID>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="8da3ea84-c324-45c2-8003-e794e5fcd3c7">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT   fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, fact_billable_time_activity.dim_transaction_date_key, 
+                         fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.dim_gl_date_key, 
+                         fact_billable_time_activity.dim_billable_time_activity_key, fact_billable_time_activity.dim_billable_time_narratives_key, fact_billable_time_activity.master_fact_key, 
+                         fact_billable_time_activity.source_system_id, fact_billable_time_activity.transaction_sequence_number, fact_billable_time_activity.time_activity_code, 
+                         fact_billable_time_activity.minutes_recorded, fact_billable_time_activity.zero_rate_minutes_recorded, fact_billable_time_activity.hourly_charge_rate, 
+                         fact_billable_time_activity.time_charge_value, fact_billable_time_activity.actual_time_recorded_value, fact_billable_time_activity.fact_billable_time_activity_key, 
+                         fact_billable_time_activity.reporting_exclusions, fact_billable_time_activity.isactive, fact_billable_time_activity.wiphrs, fact_billable_time_activity.wipamt, 
+                         fact_billable_time_activity.dss_update_time, fact_billable_time_activity.dim_posting_date_key, fact_billable_time_activity.dim_orig_gl_date_key, 
+                         fact_billable_time_activity.dim_orig_posting_date_key, fact_billable_time_activity.original_transaction_sequence_number, ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 
+                         0) AS matter_owner_history_key
+FROM         fact_billable_time_activity LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_billable_time_activity.master_fact_key
+WHERE     (fact_billable_time_activity.dim_orig_posting_date_key &gt;= 20190501) AND (fact_billable_time_activity.minutes_recorded &lt;&gt; 0)</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="7a906111-08d8-4746-89a4-5ba8132eb6fb">
+          <ID>Fact Billable Time Activity Historical</ID>
+          <Name>Fact Billable Time Activity Historical</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="f2ad5fad-b643-4c6b-8f5f-5c6761b706b7">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT   fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, fact_billable_time_activity.dim_transaction_date_key, 
+                         fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.dim_gl_date_key, 
+                         fact_billable_time_activity.dim_billable_time_activity_key, fact_billable_time_activity.dim_billable_time_narratives_key, fact_billable_time_activity.master_fact_key, 
+                         fact_billable_time_activity.source_system_id, fact_billable_time_activity.transaction_sequence_number, fact_billable_time_activity.time_activity_code, 
+                         fact_billable_time_activity.minutes_recorded, fact_billable_time_activity.zero_rate_minutes_recorded, fact_billable_time_activity.hourly_charge_rate, 
+                         fact_billable_time_activity.time_charge_value, fact_billable_time_activity.actual_time_recorded_value, fact_billable_time_activity.fact_billable_time_activity_key, 
+                         fact_billable_time_activity.reporting_exclusions, fact_billable_time_activity.isactive, fact_billable_time_activity.wiphrs, fact_billable_time_activity.wipamt, 
+                         fact_billable_time_activity.dss_update_time, fact_billable_time_activity.dim_posting_date_key, fact_billable_time_activity.dim_orig_gl_date_key, 
+                         fact_billable_time_activity.dim_orig_posting_date_key, fact_billable_time_activity.original_transaction_sequence_number, ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 
+                         0) AS matter_owner_history_key
+FROM         fact_billable_time_activity LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_billable_time_activity.master_fact_key
+WHERE     (fact_billable_time_activity.dim_orig_posting_date_key &gt;= 20100501) AND (fact_billable_time_activity.minutes_recorded &lt;&gt; 0)
+and    (fact_billable_time_activity.dim_orig_posting_date_key &lt; 20190501)</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>

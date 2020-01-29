@@ -8,9 +8,9 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="166" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-850" scrolltop="-3058" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="60" x="23566" y="13635" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="166" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-850" scrolltop="-3058" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="60" x="34925" y="13891" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
-              <ddsxmlobjectstreamwrapper binary="01000000900180380100065461686f6d61" />
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
             <mouseicon>
               <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
@@ -1120,7 +1120,7 @@
       <Attributes>
         <Attribute dwd:design-time-name="6ab34d0d-4b03-49aa-9604-65e4858196c7">
           <AttributeID>Dim Bill Key</AttributeID>
-          <AggregationUsage>Full</AggregationUsage>
+          <AggregationUsage>Unrestricted</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="05dc3c79-90ed-44b5-b9cc-781ac39f0625">
           <AttributeID>Outstanding Flag</AttributeID>
@@ -1250,6 +1250,7 @@
       <Attributes>
         <Attribute dwd:design-time-name="c6661bb5-d2dd-4161-8458-7067d358dfee">
           <AttributeID>Dim Fed Hierarchy History Key</AttributeID>
+          <AggregationUsage>Unrestricted</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="179e7a14-06fa-4db8-a61a-61f37a7fb94a">
           <AttributeID>Display Name</AttributeID>
@@ -1289,6 +1290,7 @@
       <Attributes>
         <Attribute dwd:design-time-name="13e8b7d9-2321-4683-8985-7c3e6d101e26">
           <AttributeID>Dim Matter Header Curr Key</AttributeID>
+          <AggregationUsage>Unrestricted</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="336391c1-2093-4f1f-97bd-0c0947c674a5">
           <AttributeID>Matter Number</AttributeID>
@@ -1691,6 +1693,7 @@
         </Measure>
       </Measures>
       <StorageMode>Molap</StorageMode>
+      <EstimatedRows>10419311</EstimatedRows>
       <ProcessingMode>Regular</ProcessingMode>
       <Dimensions>
         <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="03ff9fa1-9eb7-4123-bbc3-9fe25ca39e60">
@@ -1941,9 +1944,11 @@
               <ColumnID>wip_minutes</ColumnID>
             </Source>
           </Source>
+          <FormatString>#,##0;-#,##0</FormatString>
         </Measure>
       </Measures>
       <StorageMode>Molap</StorageMode>
+      <IgnoreUnrelatedDimensions>false</IgnoreUnrelatedDimensions>
       <ProcessingMode>Regular</ProcessingMode>
       <Dimensions>
         <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="1e0b7d67-cff1-422c-9bf7-21aad8fb4bee">
@@ -2044,6 +2049,25 @@
                   <Source xsi:type="ColumnBinding" dwd:design-time-name="f33cb95f-ecd4-45bd-89dd-428badcec32b">
                     <TableID>dbo_fact_wip_daily</TableID>
                     <ColumnID>dim_fed_matter_owner_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="a979cdcf-1b3d-484d-9512-41f0427d6305">
+          <CubeDimensionID>Bill Details</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b5f7d485-03bd-4aa1-a365-f38da5d2818d">
+              <AttributeID>Dim Bill Key</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d375760c-6ab7-46f0-9302-4b751f6e1c2c">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f2a371e4-5125-40c9-9deb-042671b9d3d3">
+                    <TableID>dbo_fact_wip_daily</TableID>
+                    <ColumnID>dim_bill_key</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
@@ -2686,4 +2710,90 @@ VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets'
       </Commands>
     </MdxScript>
   </MdxScripts>
+  <Actions>
+    <Action xsi:type="DrillThroughAction" dwd:design-time-name="add0f5d2-4f6d-429e-bdaf-8fb511ca3b5b">
+      <ID>Drillthrough Action</ID>
+      <Name>Revenue Details</Name>
+      <Caption>Revenue Details By Fee Earner</Caption>
+      <TargetType>Cells</TargetType>
+      <Target>MeasureGroupMeasures("Bills")</Target>
+      <Condition>[Measures].[Revenue] &lt;&gt; 0 or [Measures].[Billed Hours] &lt;&gt; 0</Condition>
+      <Type>DrillThrough</Type>
+      <Default>true</Default>
+      <Columns>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="cd424b87-fcf0-44ad-b611-b2e38293999c">
+          <CubeID>Finance Cube</CubeID>
+          <CubeDimensionID>Bill Details</CubeDimensionID>
+          <AttributeID>Dim Bill Key</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="d555f083-853f-4601-9be9-a5bf037fbfc7">
+          <CubeID>Finance Cube</CubeID>
+          <CubeDimensionID>Client Details</CubeDimensionID>
+          <AttributeID>Client Code</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="3eac1464-1d34-4a72-b3f9-23af042c75c6">
+          <CubeID>Finance Cube</CubeID>
+          <CubeDimensionID>Matter Details</CubeDimensionID>
+          <AttributeID>Dim Matter Header Curr Key</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="7bd29785-29a6-4cf3-bc5b-78b623747d5c">
+          <CubeID>Finance Cube</CubeID>
+          <CubeDimensionID>Matter Details</CubeDimensionID>
+          <AttributeID>Matter Number</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="1427575e-9c84-4768-a63b-16b6c1f4e313">
+          <CubeID>Finance Cube</CubeID>
+          <CubeDimensionID>Matter Details</CubeDimensionID>
+          <AttributeID>Fixed Fee</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="3f1ab326-f4eb-490c-ba7a-d30528a5972d">
+          <CubeID>Finance Cube</CubeID>
+          <CubeDimensionID>Matter Details</CubeDimensionID>
+          <AttributeID>Fee Arrangement</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="a8be2334-d4f9-4e8d-ba07-71be8b7342a6">
+          <CubeID>Finance Cube</CubeID>
+          <CubeDimensionID>Employees</CubeDimensionID>
+          <AttributeID>Display Name</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="3ed1a0e2-b9cf-4768-a0c9-24ebb6a6ea9c">
+          <CubeID>Finance Cube</CubeID>
+          <CubeDimensionID>Employees</CubeDimensionID>
+          <AttributeID>Hierarchylevel4hist</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="a06172f9-6fae-455c-afd0-5b08502a70d3">
+          <CubeID>Finance Cube</CubeID>
+          <CubeDimensionID>Bill Date</CubeDimensionID>
+          <AttributeID>Dim Date Key</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="c6236100-a714-4fa8-850f-eed527cd7cc6">
+          <CubeID>Finance Cube</CubeID>
+          <CubeDimensionID>Bill Date</CubeDimensionID>
+          <AttributeID>Fin Period</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="26498ec9-2f25-49dd-beaa-beadee5fa589">
+          <CubeID>Finance Cube</CubeID>
+          <CubeDimensionID>Bill Date</CubeDimensionID>
+          <AttributeID>Fin Year</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="MeasureBinding" dwd:design-time-name="b8301f55-5ce2-420a-a0eb-3e336164bf8e">
+          <MeasureID>Bill Amount</MeasureID>
+        </Column>
+        <Column xsi:type="MeasureBinding" dwd:design-time-name="acdda9bb-1c95-4eb8-bf3b-f3292e36258b">
+          <MeasureID>Billed Time</MeasureID>
+        </Column>
+      </Columns>
+    </Action>
+  </Actions>
 </Cube>
