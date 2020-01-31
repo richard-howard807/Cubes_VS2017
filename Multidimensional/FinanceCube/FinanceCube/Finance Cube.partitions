@@ -109,6 +109,123 @@ WHERE     (dim_bill_key = 0) AND (dim_orig_posting_date_key IS NOT NULL) AND (di
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
       </Partitions>
+      <AggregationDesigns>
+        <AggregationDesign>
+          <ID>fact_bill_activity</ID>
+          <Name>fact_bill_activity</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <Aggregations>
+            <Aggregation>
+              <ID>QueryLogAgg_0</ID>
+              <Name>QueryLogAgg_0</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Client Details</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Sector</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Sub Sector</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Segment</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Employees</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel2hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>QueryLogAgg_1</ID>
+              <Name>QueryLogAgg_1</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Date Key</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>QueryLogAgg_2</ID>
+              <Name>QueryLogAgg_2</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Date Key</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Date Age Group 2</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Bill Details</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Bill Key</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Client Details</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Client Code</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Employees</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel2hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Matter Details</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Matter Header Curr Key</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Master Client Details</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Client Key</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Employees 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Fed Hierarchy History Key</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+          </Aggregations>
+        </AggregationDesign>
+      </AggregationDesigns>
     </MeasureGroup>
     <MeasureGroup>
       <ID>Fact Budget Activity</ID>
