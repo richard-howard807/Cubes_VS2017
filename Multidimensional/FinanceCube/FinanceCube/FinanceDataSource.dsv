@@ -27,9 +27,9 @@
             <Name>_ALL_TABLES_</Name>
             <DiagramLayout>
               <dds>
-                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="86" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-25942" scrolltop="16531" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="55" x="35454" y="15214" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="86" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="37680" scrolltop="6877" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="55" x="24130" y="14834" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                   <font>
-                    <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+                    <ddsxmlobjectstreamwrapper binary="01000000900180380100065461686f6d61" />
                   </font>
                   <mouseicon>
                     <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
@@ -745,8 +745,8 @@
 </DiagramLayout>
             <ShowRelationshipNames>False</ShowRelationshipNames>
             <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
-            <DiagramViewPortLeft>-25942</DiagramViewPortLeft>
-            <DiagramViewPortTop>16531</DiagramViewPortTop>
+            <DiagramViewPortLeft>37680</DiagramViewPortLeft>
+            <DiagramViewPortTop>6877</DiagramViewPortTop>
             <DiagramBoundingLeft>0</DiagramBoundingLeft>
             <DiagramBoundingTop>0</DiagramBoundingTop>
             <DiagramZoom>55</DiagramZoom>
@@ -1557,10 +1557,10 @@
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="dbo_dim_date" msprop:design-time-name="1d4ca802-7185-4d74-b963-519376b5ab65" msprop:IsLogical="True" msprop:FriendlyName="dim_date" msprop:DbTableName="dim_date" msprop:TableType="View" msprop:QueryDefinition="SELECT   dim_date_key, calendar_date, cal_day_in_week, cal_day_in_week_no, cal_day_in_month, cal_day_in_year, cal_week_in_year, cal_month_no, cal_month, cal_month_name, &#xD;&#xA;                         cal_quarter_no, cal_quarter, cal_year, financial_date, fin_day_in_week, fin_day_in_week_no, fin_day_in_month, fin_day_in_year, fin_week_in_month, fin_week_in_year, fin_month_no, &#xD;&#xA;                         fin_month, fin_month_display, fin_month_name, fin_period, fin_quarter_no, fin_quarter, fin_year, &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; IIF(current_cal_week = 'Lastyear', 'No', current_cal_week) current_cal_week, &#xD;&#xA;                         IIF(current_cal_month = 'Lastyear', 'No', current_cal_month) current_cal_month, &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; current_cal_year, &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; IIF(current_fin_week = 'Lastyear', 'No', current_fin_week) current_fin_week, &#xD;&#xA;                         IIF(current_fin_month = 'Lastyear', 'No', current_fin_month) current_fin_month, &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; current_fin_quarter, &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; current_fin_year,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; &#x9;IIF(calendar_date &gt; GETDATE(), 0, DATEDIFF(D, calendar_date, CAST(GETDATE() AS DATE))) DateAge,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;banding1.daysbanding Date_Age_Group_1,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;banding2.daysbanding Date_Age_Group_2,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;CAST(cal_year AS varchar(4)) +'-Q'+CAST(cal_quarter_no AS varchar(1)) cal_qtr_display&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; -- select *&#xD;&#xA;FROM         dim_date&#xD;&#xA;INNER JOIN dbo.dim_days_banding banding1 ON DATEDIFF(D, calendar_date, CAST(GETDATE() AS DATE)) BETWEEN banding1.startdays AND banding1.enddays AND banding1.banding_category = 'grouping4'&#xD;&#xA;INNER JOIN dbo.dim_days_banding banding2 ON DATEDIFF(D, calendar_date, CAST(GETDATE() AS DATE)) BETWEEN banding2.startdays AND banding2.enddays AND banding2.banding_category = 'grouping3'&#xD;&#xA;WHERE     (fin_year &gt;= '2010') AND (fin_year &lt;=&#xD;&#xA;                             (SELECT   fin_year&#xD;&#xA;                                FROM         dim_date AS dim_date_1&#xD;&#xA;                                WHERE     (calendar_date = CAST(GETDATE() AS DATE))))" msprop:QueryBuilder="SpecificQueryBuilder">
+            <xs:element name="dbo_dim_date" msprop:design-time-name="1d4ca802-7185-4d74-b963-519376b5ab65" msprop:IsLogical="True" msprop:FriendlyName="dim_date" msprop:DbTableName="dim_date" msprop:TableType="View" msprop:QueryDefinition="SELECT dim_date_key, calendar_date, cast(calendar_date as date) date_display, cal_day_in_week, cal_day_in_week_no, cal_day_in_month, cal_day_in_year, cal_week_in_year, cal_month_no, cal_month, cal_month_name, cal_quarter_no, cal_quarter, cal_year, financial_date, fin_day_in_week, fin_day_in_week_no, &#xD;&#xA;             fin_day_in_month, fin_day_in_year, fin_week_in_month, fin_week_in_year, fin_month_no, fin_month, fin_month_display, fin_month_name, fin_period, fin_quarter_no, fin_quarter, fin_year, IIF(current_cal_week = 'Lastyear', 'No', current_cal_week) current_cal_week, &#xD;&#xA;             IIF(current_cal_month = 'Lastyear', 'No', current_cal_month) current_cal_month, current_cal_year, IIF(current_fin_week = 'Lastyear', 'No', current_fin_week) current_fin_week, IIF(current_fin_month = 'Lastyear', 'No', current_fin_month) current_fin_month, current_fin_quarter, &#xD;&#xA;             current_fin_year, IIF(calendar_date &gt; GETDATE(), 0, DATEDIFF(D, calendar_date, CAST(GETDATE() AS DATE))) DateAge, banding1.daysbanding Date_Age_Group_1, banding2.daysbanding Date_Age_Group_2, CAST(cal_year AS varchar(4)) &#xD;&#xA;             + '-Q' + CAST(cal_quarter_no AS varchar(1)) cal_qtr_display&#xD;&#xA;/* select **/ FROM dim_date INNER JOIN&#xD;&#xA;             dbo.dim_days_banding banding1 ON DATEDIFF(D, calendar_date, CAST(GETDATE() AS DATE)) BETWEEN banding1.startdays AND banding1.enddays AND banding1.banding_category = 'grouping4' INNER JOIN&#xD;&#xA;             dbo.dim_days_banding banding2 ON DATEDIFF(D, calendar_date, CAST(GETDATE() AS DATE)) BETWEEN banding2.startdays AND banding2.enddays AND banding2.banding_category = 'grouping3'&#xD;&#xA;WHERE (fin_year &gt;= '2010') AND (fin_year &lt;=&#xD;&#xA;                 (SELECT fin_year&#xD;&#xA;                 FROM    dim_date AS dim_date_1&#xD;&#xA;                 WHERE (calendar_date = CAST(GETDATE() AS DATE))))" msprop:QueryBuilder="SpecificQueryBuilder">
               <xs:complexType>
                 <xs:sequence>
-                  <xs:element name="dim_date_key" msprop:design-time-name="1e5a3609-e0ff-454d-8873-41882b507452" msprop:DbColumnName="dim_date_key" msprop:FriendlyName="dim_date_key" type="xs:int" />
+                  <xs:element name="dim_date_key" msprop:design-time-name="1e5a3609-e0ff-454d-8873-41882b507452" msprop:DbColumnName="dim_date_key" msprop:FriendlyName="dim_date_key" type="xs:int" minOccurs="0" />
                   <xs:element name="calendar_date" msprop:design-time-name="6f377243-5e33-46a9-b0c1-e5a7aae8cbc3" msprop:DbColumnName="calendar_date" msprop:FriendlyName="calendar_date" type="xs:dateTime" minOccurs="0" />
                   <xs:element name="cal_day_in_week" msprop:design-time-name="214f4cf7-595c-42cd-a30c-fb6194d3ced7" msprop:DbColumnName="cal_day_in_week" msprop:FriendlyName="cal_day_in_week" minOccurs="0">
                     <xs:simpleType>
@@ -1701,6 +1701,7 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
+                  <xs:element name="date_display" msprop:DbColumnName="date_display" msprop:design-time-name="caef832e-5e5c-43c2-9dd9-5b3225633c24" type="xs:dateTime" minOccurs="0" />
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
@@ -2143,7 +2144,7 @@
                     </xs:simpleType>
                   </xs:element>
                   <xs:element name="dss_update_time" msprop:design-time-name="19089f49-1940-4db5-8556-9006cadfd0e9" msprop:DbColumnName="dss_update_time" type="xs:dateTime" minOccurs="0" />
-                  <xs:element name="dim_bill_key" msprop:DbColumnName="dim_bill_key" msprop:design-time-name="05603a34-f866-459e-b034-a58e0621807e" type="xs:int" minOccurs="0" />
+                  <xs:element name="dim_bill_key" msprop:design-time-name="05603a34-f866-459e-b034-a58e0621807e" msprop:DbColumnName="dim_bill_key" type="xs:int" minOccurs="0" />
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
