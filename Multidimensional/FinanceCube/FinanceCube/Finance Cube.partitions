@@ -359,7 +359,7 @@ and   (dim_gl_date_key &lt; 20190501)</QueryDefinition>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="8da3ea84-c324-45c2-8003-e794e5fcd3c7">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="1be2cccc-b7d8-44fc-951a-bab62244aca6">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, fact_billable_time_activity.dim_transaction_date_key, 
                          fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.dim_gl_date_key, 
@@ -370,7 +370,7 @@ and   (dim_gl_date_key &lt; 20190501)</QueryDefinition>
                          fact_billable_time_activity.reporting_exclusions, fact_billable_time_activity.isactive, fact_billable_time_activity.wiphrs, fact_billable_time_activity.wipamt, 
                          fact_billable_time_activity.dss_update_time, fact_billable_time_activity.dim_posting_date_key, fact_billable_time_activity.dim_orig_gl_date_key, 
                          fact_billable_time_activity.dim_orig_posting_date_key, fact_billable_time_activity.original_transaction_sequence_number, ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 
-                         0) AS matter_owner_history_key
+                         0) AS matter_owner_history_key, fact_billable_time_activity.minutes_recorded / 60 chargeable_hours
 FROM         fact_billable_time_activity LEFT OUTER JOIN
                          fact_dimension_main ON fact_dimension_main.master_fact_key = fact_billable_time_activity.master_fact_key
 WHERE     (fact_billable_time_activity.dim_orig_posting_date_key &gt;= 20190501) AND (fact_billable_time_activity.minutes_recorded &lt;&gt; 0)</QueryDefinition>
@@ -386,7 +386,7 @@ WHERE     (fact_billable_time_activity.dim_orig_posting_date_key &gt;= 20190501)
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="f2ad5fad-b643-4c6b-8f5f-5c6761b706b7">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="b3372a1e-9ab2-426a-9e00-4f8dc89a0616">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, fact_billable_time_activity.dim_transaction_date_key, 
                          fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.dim_gl_date_key, 
@@ -397,7 +397,7 @@ WHERE     (fact_billable_time_activity.dim_orig_posting_date_key &gt;= 20190501)
                          fact_billable_time_activity.reporting_exclusions, fact_billable_time_activity.isactive, fact_billable_time_activity.wiphrs, fact_billable_time_activity.wipamt, 
                          fact_billable_time_activity.dss_update_time, fact_billable_time_activity.dim_posting_date_key, fact_billable_time_activity.dim_orig_gl_date_key, 
                          fact_billable_time_activity.dim_orig_posting_date_key, fact_billable_time_activity.original_transaction_sequence_number, ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 
-                         0) AS matter_owner_history_key
+                         0) AS matter_owner_history_key, fact_billable_time_activity.minutes_recorded / 60 chargeable_hours
 FROM         fact_billable_time_activity LEFT OUTER JOIN
                          fact_dimension_main ON fact_dimension_main.master_fact_key = fact_billable_time_activity.master_fact_key
 WHERE     (fact_billable_time_activity.dim_orig_posting_date_key &gt;= 20100501) AND (fact_billable_time_activity.minutes_recorded &lt;&gt; 0)
