@@ -31,7 +31,7 @@
             <Name>_ALL_TABLES_</Name>
             <DiagramLayout>
               <dds>
-                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="28" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4451" scrolltop="-5000" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="31671" y="18891" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="28" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4451" scrolltop="-5000" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="35745" y="22357" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                   <font>
                     <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                   </font>
@@ -405,10 +405,10 @@
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="dbo_dim_matter_header_history" msprop:design-time-name="51b0e3ad-2d2d-4c1a-8c1c-89829d8b3d26" msprop:IsLogical="True" msprop:FriendlyName="Matter Current" msprop:DbTableName="Matter Current" msprop:TableType="View" msprop:QueryDefinition="SELECT        dim_matter_header_curr_key AS 'Dim Matter Header Curr Key', dim_instruction_type_key AS 'Dim Instruction Type Key', matter_description AS 'Matter Description', matter_number AS 'Matter Number', &#xD;&#xA;                         final_bill_flag AS 'Final Bill Flag', CASE WHEN datepart(year, date_closed_practice_management) &lt;= 1990 THEN NULL ELSE date_closed_practice_management END AS 'Date Closed', &#xD;&#xA;                         date_opened_practice_management AS 'Date Opened'&#xD;&#xA;FROM            dim_matter_header_current" msprop:QueryBuilder="SpecificQueryBuilder">
+            <xs:element name="dbo_dim_matter_header_history" msprop:design-time-name="51b0e3ad-2d2d-4c1a-8c1c-89829d8b3d26" msprop:IsLogical="True" msprop:FriendlyName="Matter Current" msprop:DbTableName="Matter Current" msprop:TableType="View" msprop:QueryDefinition="SELECT   dim_matter_header_current.dim_matter_header_curr_key AS 'Dim Matter Header Curr Key', dim_matter_header_current.dim_instruction_type_key AS 'Dim Instruction Type Key', &#xD;&#xA;                         dim_matter_header_current.matter_description AS 'Matter Description', dim_matter_header_current.matter_number AS 'Matter Number', &#xD;&#xA;                         dim_matter_header_current.final_bill_flag AS 'Final Bill Flag', CASE WHEN datepart(year, date_closed_practice_management) &lt;= 1990 THEN NULL &#xD;&#xA;                         ELSE date_closed_practice_management END AS 'Date Closed', dim_matter_header_current.date_opened_practice_management AS 'Date Opened', &#xD;&#xA;                         dbo.Proper(dim_detail_finance.output_wip_fee_arrangement) AS fee_arrangement&#xD;&#xA;FROM         dim_matter_header_current LEFT OUTER JOIN&#xD;&#xA;                         dim_detail_finance ON dim_detail_finance.client_code = dim_matter_header_current.client_code AND dim_detail_finance.matter_number = dim_matter_header_current.matter_number" msprop:QueryBuilder="SpecificQueryBuilder">
               <xs:complexType>
                 <xs:sequence>
-                  <xs:element name="Dim_x0020_Matter_x0020_Header_x0020_Curr_x0020_Key" msprop:design-time-name="4a32384c-6bd9-4d68-a2a2-a9f95b302cb4" msprop:DbColumnName="Dim Matter Header Curr Key" type="xs:int" />
+                  <xs:element name="Dim_x0020_Matter_x0020_Header_x0020_Curr_x0020_Key" msprop:design-time-name="4a32384c-6bd9-4d68-a2a2-a9f95b302cb4" msprop:DbColumnName="Dim Matter Header Curr Key" type="xs:int" minOccurs="0" />
                   <xs:element name="Matter_x0020_Description" msprop:design-time-name="cb6b57c8-ea63-4d35-b070-31474ecbfebf" msprop:DbColumnName="Matter Description" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
@@ -433,13 +433,20 @@
                   </xs:element>
                   <xs:element name="Date_x0020_Closed" msprop:design-time-name="9dab6833-fda0-4e2f-8b72-6bca91261759" msprop:DbColumnName="Date Closed" type="xs:dateTime" minOccurs="0" />
                   <xs:element name="Date_x0020_Opened" msprop:design-time-name="135710a3-cabb-4013-b8e8-65b4ee598120" msprop:DbColumnName="Date Opened" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="fee_arrangement" msprop:design-time-name="2ebb59fb-f146-4c54-8b62-a1c86d717325" msprop:DbColumnName="fee_arrangement" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8000" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
             <xs:element name="dbo_dim_instruction_type" msprop:design-time-name="ca13a8b6-4a13-4e9c-9629-0d3e8a8e242e" msprop:IsLogical="True" msprop:FriendlyName="Instruction Type" msprop:DbTableName="Instruction Type" msprop:TableType="View" msprop:QueryDefinition="SELECT        dim_instruction_type_key AS 'Dim Instruction Type Key', instruction_type AS 'Instruction Type'&#xD;&#xA;FROM            dim_instruction_type&#xD;&#xA;WHERE        (dim_instruction_type_key &lt;&gt; 181)" msprop:QueryBuilder="SpecificQueryBuilder">
               <xs:complexType>
                 <xs:sequence>
-                  <xs:element name="Dim_x0020_Instruction_x0020_Type_x0020_Key" msprop:design-time-name="166abb11-ff7c-4935-80e1-a339a1ac22a1" msprop:DbColumnName="Dim Instruction Type Key" type="xs:int" minOccurs="0" />
+                  <xs:element name="Dim_x0020_Instruction_x0020_Type_x0020_Key" msprop:design-time-name="166abb11-ff7c-4935-80e1-a339a1ac22a1" msprop:DbColumnName="Dim Instruction Type Key" type="xs:int" />
                   <xs:element name="Instruction_x0020_Type" msprop:design-time-name="421fbfa7-b0fa-4589-b0fc-5a1d23819bd8" msprop:DbColumnName="Instruction Type" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
