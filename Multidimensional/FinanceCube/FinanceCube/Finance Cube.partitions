@@ -409,5 +409,45 @@ and    (fact_billable_time_activity.dim_orig_posting_date_key &lt; 20190501)</Qu
         </Partition>
       </Partitions>
     </MeasureGroup>
+    <MeasureGroup>
+      <ID>Fact Debt Monthly</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="9a1401b2-cc82-437a-b9cd-f835ed1c7871">
+          <ID>Fact Debt Monthly</ID>
+          <Name>Fact Debt Monthly</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="5b063e66-3864-4994-8589-343f4d4bae30">
+            <DataSourceViewID>FinanceDataSource</DataSourceViewID>
+            <TableID>dbo_fact_debt_monthly</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Fact Disbursements Detail Monthly</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="de1ddaab-59a2-4dd7-9426-1a39c740d806">
+          <ID>Fact Disbursements Detail Monthly</ID>
+          <Name>Fact Disbursements Detail Monthly</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="645a49f5-3962-4ed2-95fe-668fccfb72e0">
+            <DataSourceViewID>FinanceDataSource</DataSourceViewID>
+            <TableID>dbo_fact_disbursements_detail_monthly</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
   </MeasureGroups>
 </Cube>
