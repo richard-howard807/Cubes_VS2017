@@ -290,14 +290,46 @@ and    (fact_budget_activity.dim_gl_date_key &lt; 20190501)</QueryDefinition>
       <Partitions>
         <Partition dwd:design-time-name="4f6b7f08-e73f-4293-8bdb-37c0dc9ab93d">
           <ID>Fact Wip</ID>
-          <Name>Fact Wip</Name>
+          <Name>Fact Wip Current</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="777f1672-9e47-42ee-985d-281a4b1599b8">
-            <DataSourceViewID>FinanceDataSource</DataSourceViewID>
-            <TableID>dbo_fact_wip_daily</TableID>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="5d632d37-549c-49f5-b4f2-9ce189a44b83">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT        fact_wip_monthly.dim_transaction_date_key, fact_wip_monthly.dim_matter_header_history_key, ISNULL(fact_dimension_main.dim_matter_header_curr_key, 0) AS dim_matter_header_current_key, 
+                         fact_wip_monthly.dim_fed_hierarchy_history_key, fact_wip_monthly.dim_days_banding_key, fact_wip_monthly.dim_fed_matter_owner_key, fact_wip_monthly.dim_client_key, fact_wip_monthly.source_system_id, 
+                         fact_wip_monthly.client, fact_wip_monthly.matter, fact_wip_monthly.matter_owner, fact_wip_monthly.fee_earner_code, fact_wip_monthly.wip_minutes, fact_wip_monthly.wip_value, 
+                         fact_wip_monthly.dim_transaction_date_key AS wip_date, 0 AS dim_bill_key
+FROM            fact_wip_monthly LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_wip_monthly.master_fact_key
+WHERE        fact_wip_monthly.dim_transaction_date_key = (SELECT
+MAX(fact_wip_monthly.dim_transaction_date_key)
+FROM fact_wip_monthly)</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="76f6456b-c5d5-4e86-a72b-a0809dfd2dba">
+          <ID>Fact Wip Historical</ID>
+          <Name>Fact Wip Historical</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="55772569-644c-483b-b218-7434325841ae">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT        fact_wip_monthly.dim_transaction_date_key, fact_wip_monthly.dim_matter_header_history_key, ISNULL(fact_dimension_main.dim_matter_header_curr_key, 0) AS dim_matter_header_current_key, 
+                         fact_wip_monthly.dim_fed_hierarchy_history_key, fact_wip_monthly.dim_days_banding_key, fact_wip_monthly.dim_fed_matter_owner_key, fact_wip_monthly.dim_client_key, fact_wip_monthly.source_system_id, 
+                         fact_wip_monthly.client, fact_wip_monthly.matter, fact_wip_monthly.matter_owner, fact_wip_monthly.fee_earner_code, fact_wip_monthly.wip_minutes, fact_wip_monthly.wip_value, 
+                         fact_wip_monthly.dim_transaction_date_key AS wip_date, 0 AS dim_bill_key
+FROM            fact_wip_monthly LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_wip_monthly.master_fact_key
+WHERE        fact_wip_monthly.dim_transaction_date_key &lt; 
+(SELECT
+MAX(fact_wip_monthly.dim_transaction_date_key)
+FROM fact_wip_monthly)</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
@@ -538,14 +570,63 @@ FROM fact_debt_monthly)</QueryDefinition>
       <Partitions>
         <Partition dwd:design-time-name="de1ddaab-59a2-4dd7-9426-1a39c740d806">
           <ID>Fact Disbursements Detail Monthly</ID>
-          <Name>Fact Disbursements Detail Monthly</Name>
+          <Name>Fact Disbursements Detail Monthly Current</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="645a49f5-3962-4ed2-95fe-668fccfb72e0">
-            <DataSourceViewID>FinanceDataSource</DataSourceViewID>
-            <TableID>dbo_fact_disbursements_detail_monthly</TableID>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="bbdda967-8a78-43d5-ad6e-5156b0ab8e3a">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT        fact_disbursements_detail_monthly.dim_transaction_date_key, fact_disbursements_detail_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
+                         fact_disbursements_detail_monthly.dim_fed_hierarchy_history_key, dim_days_banding.dim_days_banding_key, fact_disbursements_detail_monthly.dim_client_key, 
+                         CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' ELSE dim_disbursement_date_key END AS dim_disbursement_date_key, SUM(fact_disbursements_detail_monthly.total_unbilled_disbursements) 
+                         AS total_unbilled_disbursements, fact_disbursements_detail_monthly.dim_bill_key, fact_dimension_main.master_client_code
+FROM            fact_disbursements_detail_monthly INNER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_disbursements_detail_monthly.master_fact_key INNER JOIN
+                         dim_date AS trandate ON trandate.dim_date_key = fact_disbursements_detail_monthly.dim_transaction_date_key INNER JOIN
+                         dim_days_banding ON CASE WHEN dim_transaction_date_key =
+                             (SELECT        MAX(dim_transaction_date_key)
+                               FROM            fact_disbursements_detail_monthly) THEN DATEDIFF(d, workdate, GETDATE()) ELSE DATEDIFF(d, workdate, trandate.calendar_date) END BETWEEN dim_days_banding.startdays AND 
+                         dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+WHERE        (fact_disbursements_detail_monthly.dim_transaction_date_key &gt;= '20180501') AND (fact_disbursements_detail_monthly.dim_bill_key = 0) AND (fact_disbursements_detail_monthly.total_unbilled_disbursements &lt;&gt; 0)
+AND dim_transaction_date_key=(SELECT
+MAX(fact_disbursements_detail_monthly.dim_transaction_date_key)
+FROM fact_disbursements_detail_monthly)
+GROUP BY CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' ELSE dim_disbursement_date_key END, fact_disbursements_detail_monthly.dim_transaction_date_key, 
+                         fact_disbursements_detail_monthly.dim_matter_header_curr_key, fact_disbursements_detail_monthly.dim_fed_hierarchy_history_key, dim_days_banding.dim_days_banding_key, 
+                         fact_disbursements_detail_monthly.dim_client_key, fact_disbursements_detail_monthly.dim_bill_key, fact_dimension_main.master_client_code</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="46768fbf-5a0b-462e-92f1-e4ba59521828">
+          <ID>Fact Disbursements Detail Monthly Historical</ID>
+          <Name>Fact Disbursements Detail Monthly Historical</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="a9d7fd5c-d948-4547-860f-53a9dc8fecc1">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT        fact_disbursements_detail_monthly.dim_transaction_date_key, fact_disbursements_detail_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
+                         fact_disbursements_detail_monthly.dim_fed_hierarchy_history_key, dim_days_banding.dim_days_banding_key, fact_disbursements_detail_monthly.dim_client_key, 
+                         CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' ELSE dim_disbursement_date_key END AS dim_disbursement_date_key, SUM(fact_disbursements_detail_monthly.total_unbilled_disbursements) 
+                         AS total_unbilled_disbursements, fact_disbursements_detail_monthly.dim_bill_key, fact_dimension_main.master_client_code
+FROM            fact_disbursements_detail_monthly INNER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_disbursements_detail_monthly.master_fact_key INNER JOIN
+                         dim_date AS trandate ON trandate.dim_date_key = fact_disbursements_detail_monthly.dim_transaction_date_key INNER JOIN
+                         dim_days_banding ON CASE WHEN dim_transaction_date_key =
+                             (SELECT        MAX(dim_transaction_date_key)
+                               FROM            fact_disbursements_detail_monthly) THEN DATEDIFF(d, workdate, GETDATE()) ELSE DATEDIFF(d, workdate, trandate.calendar_date) END BETWEEN dim_days_banding.startdays AND 
+                         dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+WHERE        (fact_disbursements_detail_monthly.dim_transaction_date_key &gt;= '20180501') AND (fact_disbursements_detail_monthly.dim_bill_key = 0) AND (fact_disbursements_detail_monthly.total_unbilled_disbursements &lt;&gt; 0)
+AND dim_transaction_date_key&lt;(SELECT
+MAX(fact_disbursements_detail_monthly.dim_transaction_date_key)
+FROM fact_disbursements_detail_monthly)
+GROUP BY CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' ELSE dim_disbursement_date_key END, fact_disbursements_detail_monthly.dim_transaction_date_key, 
+                         fact_disbursements_detail_monthly.dim_matter_header_curr_key, fact_disbursements_detail_monthly.dim_fed_hierarchy_history_key, dim_days_banding.dim_days_banding_key, 
+                         fact_disbursements_detail_monthly.dim_client_key, fact_disbursements_detail_monthly.dim_bill_key, fact_dimension_main.master_client_code</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
