@@ -414,20 +414,124 @@ and    (fact_billable_time_activity.dim_orig_posting_date_key &lt; 20190501)</Qu
       <Partitions>
         <Partition dwd:design-time-name="9a1401b2-cc82-437a-b9cd-f835ed1c7871">
           <ID>Fact Debt Monthly</ID>
-          <Name>Fact Debt Monthly</Name>
+          <Name>Fact Debt Monthly Current</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="5b063e66-3864-4994-8589-343f4d4bae30">
-            <DataSourceViewID>FinanceDataSource</DataSourceViewID>
-            <TableID>dbo_fact_debt_monthly</TableID>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="caefd9fa-36cd-43d1-bbde-2371aa154dd9">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT        fact_debt_monthly.dim_transaction_date_key, fact_debt_monthly.dim_mat_head_history_key, fact_debt_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
+                         fact_dimension_main.dim_fed_hierarchy_history_key, fact_debt_monthly.dim_days_banding_key, fact_debt_monthly.dim_fed_matter_owner_key, fact_debt_monthly.dim_client_key, fact_debt_monthly.source_system_id, 
+                         fact_debt_monthly.client_code, fact_debt_monthly.matter_number, fact_debt_monthly.matter_owner, fact_debt_monthly.bill_number, fact_debt_monthly.bill_date, fact_debt_monthly.outstanding_total_bill, 
+                         fact_debt_monthly.outstanding_costs, fact_debt_monthly.age_of_debt, fact_debt_monthly.debt_date, fact_debt_monthly.dim_bill_key, dim_debt_date.dim_date_key AS dim_debt_date_key, 
+                         fact_dimension_main.master_client_code
+FROM            fact_debt_monthly LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_debt_monthly.master_fact_key INNER JOIN
+                         dim_date AS dim_debt_date ON dim_debt_date.calendar_date = fact_debt_monthly.debt_date
+WHERE        fact_debt_monthly.dim_transaction_date_key = 
+(SELECT
+MAX(fact_debt_monthly.dim_transaction_date_key)
+FROM fact_debt_monthly)</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="71132de0-8a64-4409-8d0c-daba9fd6e7e4">
+          <ID>Fact Debt Monthly 1</ID>
+          <Name>Fact Debt Monthly Historical</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="cf3d49be-f3c4-4867-bb04-57525ce17bd3">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT        fact_debt_monthly.dim_transaction_date_key, fact_debt_monthly.dim_mat_head_history_key, fact_debt_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
+                         fact_dimension_main.dim_fed_hierarchy_history_key, fact_debt_monthly.dim_days_banding_key, fact_debt_monthly.dim_fed_matter_owner_key, fact_debt_monthly.dim_client_key, fact_debt_monthly.source_system_id, 
+                         fact_debt_monthly.client_code, fact_debt_monthly.matter_number, fact_debt_monthly.matter_owner, fact_debt_monthly.bill_number, fact_debt_monthly.bill_date, fact_debt_monthly.outstanding_total_bill, 
+                         fact_debt_monthly.outstanding_costs, fact_debt_monthly.age_of_debt, fact_debt_monthly.debt_date, fact_debt_monthly.dim_bill_key, dim_debt_date.dim_date_key AS dim_debt_date_key, 
+                         fact_dimension_main.master_client_code
+FROM            fact_debt_monthly LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_debt_monthly.master_fact_key INNER JOIN
+                         dim_date AS dim_debt_date ON dim_debt_date.calendar_date = fact_debt_monthly.debt_date
+WHERE        fact_debt_monthly.dim_transaction_date_key &lt;
+(SELECT
+MAX(fact_debt_monthly.dim_transaction_date_key)
+FROM fact_debt_monthly)</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
       </Partitions>
+      <AggregationDesigns>
+        <AggregationDesign>
+          <ID>AggregationDesign</ID>
+          <Name>AggregationDesign</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <EstimatedRows>211640</EstimatedRows>
+          <Dimensions>
+            <Dimension>
+              <CubeDimensionID>Bill Details</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Dim Bill Key</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Matter Details</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Dim Matter Header Curr Key</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Client Details</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Client Code</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Bill Date</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Dim Date Key</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Age Banding</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Age Banding</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Employees 1</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Dim Fed Hierarchy History Key</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dibs WIP and Debt Snapshot</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Snapshot Date</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+          </Dimensions>
+        </AggregationDesign>
+      </AggregationDesigns>
     </MeasureGroup>
     <MeasureGroup>
       <ID>Fact Disbursements Detail Monthly</ID>

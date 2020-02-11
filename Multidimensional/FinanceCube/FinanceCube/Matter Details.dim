@@ -8,9 +8,9 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="12" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="59" scrolltop="871" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="80" x="14049" y="16457" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="12" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-101" scrolltop="-1808" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="80" x="10019" y="14605" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
-              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+              <ddsxmlobjectstreamwrapper binary="01000000900180380100065461686f6d61" />
             </font>
             <mouseicon>
               <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
@@ -109,11 +109,11 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
-      <Value>59</Value>
+      <Value>-101</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>871</Value>
+      <Value>-1808</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
@@ -250,6 +250,26 @@
         <AttributeRelationship dwd:design-time-name="761c969e-41ad-439b-a619-341d967408cd">
           <AttributeID>Fixed Fee</AttributeID>
           <Name>Fixed Fee</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c5a24362-568f-4246-bef6-58b69a61a79f">
+          <AttributeID>Present Position</AttributeID>
+          <Name>Present Position</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3bde023f-eade-4f02-bf68-8735633d63ae">
+          <AttributeID>Status</AttributeID>
+          <Name>Status</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="751d42e2-8b3a-4e08-8d09-2fa8694c4067">
+          <AttributeID>Year Closed</AttributeID>
+          <Name>Year Closed</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="fce5b19e-7559-495c-b56a-28dfb75284cc">
+          <AttributeID>Year Opened</AttributeID>
+          <Name>Year Opened</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3bf3b216-b1dd-4caa-8832-cc9936b1a945">
+          <AttributeID>Matter Partner Full Name</AttributeID>
+          <Name>Matter Partner</Name>
         </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
@@ -495,6 +515,84 @@
           <Source xsi:type="ColumnBinding" dwd:design-time-name="825bb30d-04f3-4155-b1b4-48bb4b4acc8e">
             <TableID>dbo_dim_matter_header_current</TableID>
             <ColumnID>fixed_fee</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="413f3f91-6e8b-49c1-aca4-dfb01d954768">
+      <ID>Present Position</ID>
+      <Name>Present Position</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="245285f4-557f-4aa1-afc5-ffdae55a5d7a">
+          <DataType>WChar</DataType>
+          <DataSize>60</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1bc70a4e-19b8-4e11-ab25-08d156208942">
+            <TableID>dbo_dim_matter_header_current</TableID>
+            <ColumnID>present_position</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="cc6a293e-df1d-4c61-85da-a4bac4941e45">
+      <ID>Status</ID>
+      <Name>Status</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3b5cb158-67b0-4a9d-a9df-b2962cb88f78">
+          <DataType>WChar</DataType>
+          <DataSize>6</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="605b5829-64b3-47ef-a7d8-1358b15a02d5">
+            <TableID>dbo_dim_matter_header_current</TableID>
+            <ColumnID>Status</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="73907bcf-9205-4296-9caf-62d1e26b3259">
+      <ID>Year Closed</ID>
+      <Name>Year Closed</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="924bbffd-abea-40ad-a45e-942eb45c67b6">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="43c316a3-ad7c-457c-927c-f0d24b6ee4e0">
+            <TableID>dbo_dim_matter_header_current</TableID>
+            <ColumnID>Year_x0020_Closed</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="fa50afde-670f-495e-9fd2-792e4c5410eb">
+      <ID>Year Opened</ID>
+      <Name>Year Opened</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e39006d0-cb76-4174-bccc-1b0a1ccf4540">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="eebdf25b-563e-4f3f-8207-bc7f21568a56">
+            <TableID>dbo_dim_matter_header_current</TableID>
+            <ColumnID>Year_x0020_Opened</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="74ec99d4-0ad6-4052-8711-05c1eed2bdab">
+      <ID>Matter Partner Full Name</ID>
+      <Name>Matter Partner</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="417d2f41-5ed9-4fb2-ae1c-12de01ed6cd1">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0e7c63a0-2db3-4b10-a8cc-ad9c7e79ec12">
+            <TableID>dbo_dim_matter_header_current</TableID>
+            <ColumnID>matter_partner_full_name</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>

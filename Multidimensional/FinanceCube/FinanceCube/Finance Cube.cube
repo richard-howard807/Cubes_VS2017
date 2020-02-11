@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="216" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-12449" scrolltop="29207" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="60" x="24553" y="19173" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="216" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-850" scrolltop="-3058" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="60" x="19791" y="14605" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900180380100065461686f6d61" />
             </font>
@@ -1092,7 +1092,7 @@
             </layoutobject>
             <shape groupshapeid="0" groupnode="0" />
           </ddscontrol>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" left="0" top="0" logicalid="192" controlid="85" masterid="0" hint1="0" hint2="0" width="5908" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="fact_debt_monthly" left="0" top="0" logicalid="192" controlid="85" masterid="0" hint1="0" hint2="0" width="5908" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobjectstreaminitwrapper binary="000c00001417000088130000" />
             </control>
@@ -1412,7 +1412,7 @@
               <point x="5704" y="5000" />
             </connector>
           </ddscontrol>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" left="0" top="0" logicalid="210" controlid="103" masterid="0" hint1="0" hint2="0" width="5908" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="fact_disbursements_detail_monthly" left="0" top="0" logicalid="210" controlid="103" masterid="0" hint1="0" hint2="0" width="5908" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobjectstreaminitwrapper binary="000c00001417000088130000" />
             </control>
@@ -1511,11 +1511,11 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
-      <Value>-12449</Value>
+      <Value>-850</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>29207</Value>
+      <Value>-3058</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
@@ -1753,6 +1753,21 @@
         </Attribute>
         <Attribute dwd:design-time-name="d98e0010-0a49-430f-8c5f-c06917693c22">
           <AttributeID>Fixed Fee</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2e6455b4-8cbe-4f5d-a82d-d837aede6288">
+          <AttributeID>Present Position</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b7e93bd3-cb55-4c43-b2c2-f09ec665c2f0">
+          <AttributeID>Status</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b5c7c106-a999-440c-acfb-d1c47a229813">
+          <AttributeID>Year Closed</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b6192de7-8310-429f-b48e-0364ad0249ee">
+          <AttributeID>Year Opened</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="886a8f03-d631-4b2e-a264-992a8bae40c5">
+          <AttributeID>Matter Partner Full Name</AttributeID>
         </Attribute>
       </Attributes>
       <Hierarchies>
@@ -2910,9 +2925,11 @@
               <ColumnID>outstanding_total_bill</ColumnID>
             </Source>
           </Source>
+          <Visible>false</Visible>
         </Measure>
       </Measures>
       <StorageMode>Molap</StorageMode>
+      <EstimatedRows>229843</EstimatedRows>
       <ProcessingMode>Regular</ProcessingMode>
       <Dimensions>
         <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="608041c8-7871-4985-a989-d96d09653a7e">
@@ -3067,6 +3084,7 @@
         </Dimension>
       </Dimensions>
       <Partitions />
+      <AggregationDesigns />
     </MeasureGroup>
     <MeasureGroup dwd:design-time-name="a169b695-2553-4d91-8472-31b5925d4368">
       <ID>Fact Disbursements Detail Monthly</ID>
@@ -3086,6 +3104,7 @@
               <ColumnID>total_unbilled_disbursements</ColumnID>
             </Source>
           </Source>
+          <Visible>false</Visible>
         </Measure>
       </Measures>
       <StorageMode>Molap</StorageMode>
