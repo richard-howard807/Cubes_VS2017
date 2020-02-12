@@ -3203,17 +3203,17 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="a13ba2c3-b051-4080-94d9-098c3f208ee2">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="f6492f22-f8a8-4069-83c1-005cfc312255">
           <CubeDimensionID>Bill Date</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="afba1a26-5648-4dc8-a97e-349691da1ed2">
+            <Attribute dwd:design-time-name="d367e32f-4c44-466a-9d61-133d92cdc7ee">
               <AttributeID>Dim Date Key</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="941297eb-2579-4903-adda-d734cd2107e5">
+                <KeyColumn dwd:design-time-name="0a54b6e6-d0cc-45a0-9ee8-85e76bf23df3">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b8ffee61-038d-49d8-9cca-6be3f42ddf93">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="6fe6ddc3-47d6-4fec-a240-e299750cac33">
                     <TableID>dbo_fact_debt_monthly</TableID>
-                    <ColumnID>dim_debt_date_key</ColumnID>
+                    <ColumnID>bill_date_key</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>

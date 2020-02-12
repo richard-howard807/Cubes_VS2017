@@ -1090,16 +1090,17 @@ GROUP BY  fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="a0f3fc16-f1dd-4b2a-a880-5dc702bfd7c6">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="cdaed70d-7fe0-42bf-b1bf-d9e8b8039f81">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT        fact_debt_monthly.dim_transaction_date_key, fact_debt_monthly.dim_mat_head_history_key, fact_debt_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
                          fact_dimension_main.dim_fed_hierarchy_history_key, fact_debt_monthly.dim_days_banding_key, fact_debt_monthly.dim_fed_matter_owner_key, fact_debt_monthly.dim_client_key, fact_debt_monthly.source_system_id, 
                          fact_debt_monthly.client_code, fact_debt_monthly.matter_number, fact_debt_monthly.matter_owner, fact_debt_monthly.bill_number, fact_debt_monthly.bill_date, fact_debt_monthly.outstanding_total_bill, 
                          fact_debt_monthly.outstanding_costs, fact_debt_monthly.age_of_debt, fact_debt_monthly.debt_date, fact_debt_monthly.dim_bill_key, dim_debt_date.dim_date_key AS dim_debt_date_key, 
-                         fact_dimension_main.master_client_code
+                         fact_dimension_main.master_client_code, billdate.dim_date_key bill_date_key
 FROM            fact_debt_monthly LEFT OUTER JOIN
                          fact_dimension_main ON fact_dimension_main.master_fact_key = fact_debt_monthly.master_fact_key INNER JOIN
                          dim_date AS dim_debt_date ON dim_debt_date.calendar_date = CAST (fact_debt_monthly.debt_date AS DATE)
+						 INNER JOIN dbo.dim_date billdate ON billdate.calendar_date = CAST (fact_debt_monthly.bill_date AS DATE)
 WHERE          fact_debt_monthly.dim_transaction_date_key IN (SELECT dim_date_key FROM dim_date WHERE fin_year = 2020)</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
@@ -1113,16 +1114,17 @@ WHERE          fact_debt_monthly.dim_transaction_date_key IN (SELECT dim_date_ke
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="5d73d19d-c2f5-4f85-a10a-24344536d9e7">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="958cba36-da69-4e22-89b0-670e20e46bb3">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT        fact_debt_monthly.dim_transaction_date_key, fact_debt_monthly.dim_mat_head_history_key, fact_debt_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
                          fact_dimension_main.dim_fed_hierarchy_history_key, fact_debt_monthly.dim_days_banding_key, fact_debt_monthly.dim_fed_matter_owner_key, fact_debt_monthly.dim_client_key, fact_debt_monthly.source_system_id, 
                          fact_debt_monthly.client_code, fact_debt_monthly.matter_number, fact_debt_monthly.matter_owner, fact_debt_monthly.bill_number, fact_debt_monthly.bill_date, fact_debt_monthly.outstanding_total_bill, 
                          fact_debt_monthly.outstanding_costs, fact_debt_monthly.age_of_debt, fact_debt_monthly.debt_date, fact_debt_monthly.dim_bill_key, dim_debt_date.dim_date_key AS dim_debt_date_key, 
-                         fact_dimension_main.master_client_code
+                         fact_dimension_main.master_client_code, billdate.dim_date_key bill_date_key
 FROM            fact_debt_monthly LEFT OUTER JOIN
                          fact_dimension_main ON fact_dimension_main.master_fact_key = fact_debt_monthly.master_fact_key INNER JOIN
                          dim_date AS dim_debt_date ON dim_debt_date.calendar_date = CAST (fact_debt_monthly.debt_date AS DATE)
+						 INNER JOIN dbo.dim_date billdate ON billdate.calendar_date = CAST (fact_debt_monthly.bill_date AS DATE)
 WHERE          fact_debt_monthly.dim_transaction_date_key IN (SELECT dim_date_key FROM dim_date WHERE fin_year = 2019)</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
@@ -1136,16 +1138,17 @@ WHERE          fact_debt_monthly.dim_transaction_date_key IN (SELECT dim_date_ke
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="29898799-5b04-4622-9241-51977bf6a3a1">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="cfb31e40-c102-41d1-b1e3-6720f2713ce6">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT        fact_debt_monthly.dim_transaction_date_key, fact_debt_monthly.dim_mat_head_history_key, fact_debt_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
                          fact_dimension_main.dim_fed_hierarchy_history_key, fact_debt_monthly.dim_days_banding_key, fact_debt_monthly.dim_fed_matter_owner_key, fact_debt_monthly.dim_client_key, fact_debt_monthly.source_system_id, 
                          fact_debt_monthly.client_code, fact_debt_monthly.matter_number, fact_debt_monthly.matter_owner, fact_debt_monthly.bill_number, fact_debt_monthly.bill_date, fact_debt_monthly.outstanding_total_bill, 
                          fact_debt_monthly.outstanding_costs, fact_debt_monthly.age_of_debt, fact_debt_monthly.debt_date, fact_debt_monthly.dim_bill_key, dim_debt_date.dim_date_key AS dim_debt_date_key, 
-                         fact_dimension_main.master_client_code
+                         fact_dimension_main.master_client_code, billdate.dim_date_key bill_date_key
 FROM            fact_debt_monthly LEFT OUTER JOIN
                          fact_dimension_main ON fact_dimension_main.master_fact_key = fact_debt_monthly.master_fact_key INNER JOIN
                          dim_date AS dim_debt_date ON dim_debt_date.calendar_date = CAST (fact_debt_monthly.debt_date AS DATE)
+						 INNER JOIN dbo.dim_date billdate ON billdate.calendar_date = CAST (fact_debt_monthly.bill_date AS DATE)
 WHERE          fact_debt_monthly.dim_transaction_date_key IN (SELECT dim_date_key FROM dim_date WHERE fin_year = 2021)</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
@@ -1159,16 +1162,17 @@ WHERE          fact_debt_monthly.dim_transaction_date_key IN (SELECT dim_date_ke
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="8465a8a0-fc5b-443b-a963-d791ade89687">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="8d450df2-9ba6-433e-918d-01de96ed4bba">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT        fact_debt_monthly.dim_transaction_date_key, fact_debt_monthly.dim_mat_head_history_key, fact_debt_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
                          fact_dimension_main.dim_fed_hierarchy_history_key, fact_debt_monthly.dim_days_banding_key, fact_debt_monthly.dim_fed_matter_owner_key, fact_debt_monthly.dim_client_key, fact_debt_monthly.source_system_id, 
                          fact_debt_monthly.client_code, fact_debt_monthly.matter_number, fact_debt_monthly.matter_owner, fact_debt_monthly.bill_number, fact_debt_monthly.bill_date, fact_debt_monthly.outstanding_total_bill, 
                          fact_debt_monthly.outstanding_costs, fact_debt_monthly.age_of_debt, fact_debt_monthly.debt_date, fact_debt_monthly.dim_bill_key, dim_debt_date.dim_date_key AS dim_debt_date_key, 
-                         fact_dimension_main.master_client_code
+                         fact_dimension_main.master_client_code, billdate.dim_date_key bill_date_key
 FROM            fact_debt_monthly LEFT OUTER JOIN
                          fact_dimension_main ON fact_dimension_main.master_fact_key = fact_debt_monthly.master_fact_key INNER JOIN
                          dim_date AS dim_debt_date ON dim_debt_date.calendar_date = CAST (fact_debt_monthly.debt_date AS DATE)
+						 INNER JOIN dbo.dim_date billdate ON billdate.calendar_date = CAST (fact_debt_monthly.bill_date AS DATE)
 WHERE          fact_debt_monthly.dim_transaction_date_key IN (SELECT dim_date_key FROM dim_date WHERE fin_year = 2022)</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
@@ -1182,16 +1186,17 @@ WHERE          fact_debt_monthly.dim_transaction_date_key IN (SELECT dim_date_ke
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="d7c92f5e-04d2-425e-a279-35770671601e">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="024ec46e-6741-4e33-b2ea-71ecf8bc32d4">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT        fact_debt_monthly.dim_transaction_date_key, fact_debt_monthly.dim_mat_head_history_key, fact_debt_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
                          fact_dimension_main.dim_fed_hierarchy_history_key, fact_debt_monthly.dim_days_banding_key, fact_debt_monthly.dim_fed_matter_owner_key, fact_debt_monthly.dim_client_key, fact_debt_monthly.source_system_id, 
                          fact_debt_monthly.client_code, fact_debt_monthly.matter_number, fact_debt_monthly.matter_owner, fact_debt_monthly.bill_number, fact_debt_monthly.bill_date, fact_debt_monthly.outstanding_total_bill, 
                          fact_debt_monthly.outstanding_costs, fact_debt_monthly.age_of_debt, fact_debt_monthly.debt_date, fact_debt_monthly.dim_bill_key, dim_debt_date.dim_date_key AS dim_debt_date_key, 
-                         fact_dimension_main.master_client_code
+                         fact_dimension_main.master_client_code, billdate.dim_date_key bill_date_key
 FROM            fact_debt_monthly LEFT OUTER JOIN
                          fact_dimension_main ON fact_dimension_main.master_fact_key = fact_debt_monthly.master_fact_key INNER JOIN
                          dim_date AS dim_debt_date ON dim_debt_date.calendar_date = CAST (fact_debt_monthly.debt_date AS DATE)
+						 INNER JOIN dbo.dim_date billdate ON billdate.calendar_date = CAST (fact_debt_monthly.bill_date AS DATE)
 WHERE          fact_debt_monthly.dim_transaction_date_key IN (SELECT dim_date_key FROM dim_date WHERE fin_year = 2023)</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
