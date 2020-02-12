@@ -1090,17 +1090,18 @@ GROUP BY  fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="cdaed70d-7fe0-42bf-b1bf-d9e8b8039f81">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="6f9ca9d6-1a40-4de2-84dd-e3ba031d8123">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT        fact_debt_monthly.dim_transaction_date_key, fact_debt_monthly.dim_mat_head_history_key, fact_debt_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
-                         fact_dimension_main.dim_fed_hierarchy_history_key, fact_debt_monthly.dim_days_banding_key, fact_debt_monthly.dim_fed_matter_owner_key, fact_debt_monthly.dim_client_key, fact_debt_monthly.source_system_id, 
-                         fact_debt_monthly.client_code, fact_debt_monthly.matter_number, fact_debt_monthly.matter_owner, fact_debt_monthly.bill_number, fact_debt_monthly.bill_date, fact_debt_monthly.outstanding_total_bill, 
-                         fact_debt_monthly.outstanding_costs, fact_debt_monthly.age_of_debt, fact_debt_monthly.debt_date, fact_debt_monthly.dim_bill_key, dim_debt_date.dim_date_key AS dim_debt_date_key, 
-                         fact_dimension_main.master_client_code, billdate.dim_date_key bill_date_key
-FROM            fact_debt_monthly LEFT OUTER JOIN
+            <QueryDefinition>SELECT   fact_debt_monthly.dim_transaction_date_key, fact_debt_monthly.dim_mat_head_history_key, fact_debt_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
+                         fact_dimension_main.dim_fed_hierarchy_history_key, fact_debt_monthly.dim_days_banding_key, fact_debt_monthly.dim_fed_matter_owner_key, fact_debt_monthly.dim_client_key, 
+                         fact_debt_monthly.source_system_id, fact_debt_monthly.client_code, fact_debt_monthly.matter_number, fact_debt_monthly.matter_owner, fact_debt_monthly.bill_number, 
+                         fact_debt_monthly.bill_date, fact_debt_monthly.outstanding_total_bill, fact_debt_monthly.outstanding_costs, fact_debt_monthly.age_of_debt, fact_debt_monthly.debt_date, 
+                         fact_debt_monthly.dim_bill_key, dim_debt_date.dim_date_key AS dim_debt_date_key, dim_matter_header_current.master_client_code, billdate.dim_date_key AS bill_date_key
+FROM         fact_debt_monthly LEFT OUTER JOIN
                          fact_dimension_main ON fact_dimension_main.master_fact_key = fact_debt_monthly.master_fact_key INNER JOIN
-                         dim_date AS dim_debt_date ON dim_debt_date.calendar_date = CAST (fact_debt_monthly.debt_date AS DATE)
-						 INNER JOIN dbo.dim_date billdate ON billdate.calendar_date = CAST (fact_debt_monthly.bill_date AS DATE)
+						 dbo.dim_matter_header_current ON dim_matter_header_current.dim_matter_header_curr_key = dbo.fact_dimension_main.dim_matter_header_curr_key INNER JOIN
+                         dim_date AS dim_debt_date ON dim_debt_date.calendar_date = CAST(fact_debt_monthly.debt_date AS DATE) INNER JOIN
+                         dim_date AS billdate ON billdate.calendar_date = CAST(CASE WHEN fact_debt_monthly.bill_date &lt; '20100501' THEN '20100501' ELSE fact_debt_monthly.bill_date END AS DATE)
 WHERE          fact_debt_monthly.dim_transaction_date_key IN (SELECT dim_date_key FROM dim_date WHERE fin_year = 2020)</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
@@ -1114,17 +1115,18 @@ WHERE          fact_debt_monthly.dim_transaction_date_key IN (SELECT dim_date_ke
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="958cba36-da69-4e22-89b0-670e20e46bb3">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="6bfaa9f9-cd3e-43d1-9731-670c372268a9">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT        fact_debt_monthly.dim_transaction_date_key, fact_debt_monthly.dim_mat_head_history_key, fact_debt_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
-                         fact_dimension_main.dim_fed_hierarchy_history_key, fact_debt_monthly.dim_days_banding_key, fact_debt_monthly.dim_fed_matter_owner_key, fact_debt_monthly.dim_client_key, fact_debt_monthly.source_system_id, 
-                         fact_debt_monthly.client_code, fact_debt_monthly.matter_number, fact_debt_monthly.matter_owner, fact_debt_monthly.bill_number, fact_debt_monthly.bill_date, fact_debt_monthly.outstanding_total_bill, 
-                         fact_debt_monthly.outstanding_costs, fact_debt_monthly.age_of_debt, fact_debt_monthly.debt_date, fact_debt_monthly.dim_bill_key, dim_debt_date.dim_date_key AS dim_debt_date_key, 
-                         fact_dimension_main.master_client_code, billdate.dim_date_key bill_date_key
-FROM            fact_debt_monthly LEFT OUTER JOIN
-                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_debt_monthly.master_fact_key INNER JOIN
-                         dim_date AS dim_debt_date ON dim_debt_date.calendar_date = CAST (fact_debt_monthly.debt_date AS DATE)
-						 INNER JOIN dbo.dim_date billdate ON billdate.calendar_date = CAST (fact_debt_monthly.bill_date AS DATE)
+            <QueryDefinition>SELECT   fact_debt_monthly.dim_transaction_date_key, fact_debt_monthly.dim_mat_head_history_key, fact_debt_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
+                         fact_dimension_main.dim_fed_hierarchy_history_key, fact_debt_monthly.dim_days_banding_key, fact_debt_monthly.dim_fed_matter_owner_key, fact_debt_monthly.dim_client_key, 
+                         fact_debt_monthly.source_system_id, fact_debt_monthly.client_code, fact_debt_monthly.matter_number, fact_debt_monthly.matter_owner, fact_debt_monthly.bill_number, 
+                         fact_debt_monthly.bill_date, fact_debt_monthly.outstanding_total_bill, fact_debt_monthly.outstanding_costs, fact_debt_monthly.age_of_debt, fact_debt_monthly.debt_date, 
+                         fact_debt_monthly.dim_bill_key, dim_debt_date.dim_date_key AS dim_debt_date_key, ISNULL(dim_client.client_code, 'Unknown') master_client_code, billdate.dim_date_key AS bill_date_key
+FROM         fact_debt_monthly LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_debt_monthly.master_fact_key
+						 LEFT outer JOIN dbo.dim_client ON dim_client.client_code = fact_dimension_main.master_client_code INNER join
+                         dim_date AS dim_debt_date ON dim_debt_date.calendar_date = CAST(fact_debt_monthly.debt_date AS DATE) INNER JOIN
+                         dim_date AS billdate ON billdate.calendar_date = CAST(CASE WHEN fact_debt_monthly.bill_date &lt; '20100501' THEN '20100501' ELSE fact_debt_monthly.bill_date END AS DATE)
 WHERE          fact_debt_monthly.dim_transaction_date_key IN (SELECT dim_date_key FROM dim_date WHERE fin_year = 2019)</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
@@ -1138,17 +1140,18 @@ WHERE          fact_debt_monthly.dim_transaction_date_key IN (SELECT dim_date_ke
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="cfb31e40-c102-41d1-b1e3-6720f2713ce6">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="8490617b-288b-435d-b371-97674e5b0711">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT        fact_debt_monthly.dim_transaction_date_key, fact_debt_monthly.dim_mat_head_history_key, fact_debt_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
-                         fact_dimension_main.dim_fed_hierarchy_history_key, fact_debt_monthly.dim_days_banding_key, fact_debt_monthly.dim_fed_matter_owner_key, fact_debt_monthly.dim_client_key, fact_debt_monthly.source_system_id, 
-                         fact_debt_monthly.client_code, fact_debt_monthly.matter_number, fact_debt_monthly.matter_owner, fact_debt_monthly.bill_number, fact_debt_monthly.bill_date, fact_debt_monthly.outstanding_total_bill, 
-                         fact_debt_monthly.outstanding_costs, fact_debt_monthly.age_of_debt, fact_debt_monthly.debt_date, fact_debt_monthly.dim_bill_key, dim_debt_date.dim_date_key AS dim_debt_date_key, 
-                         fact_dimension_main.master_client_code, billdate.dim_date_key bill_date_key
-FROM            fact_debt_monthly LEFT OUTER JOIN
-                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_debt_monthly.master_fact_key INNER JOIN
-                         dim_date AS dim_debt_date ON dim_debt_date.calendar_date = CAST (fact_debt_monthly.debt_date AS DATE)
-						 INNER JOIN dbo.dim_date billdate ON billdate.calendar_date = CAST (fact_debt_monthly.bill_date AS DATE)
+            <QueryDefinition>SELECT   fact_debt_monthly.dim_transaction_date_key, fact_debt_monthly.dim_mat_head_history_key, fact_debt_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
+                         fact_dimension_main.dim_fed_hierarchy_history_key, fact_debt_monthly.dim_days_banding_key, fact_debt_monthly.dim_fed_matter_owner_key, fact_debt_monthly.dim_client_key, 
+                         fact_debt_monthly.source_system_id, fact_debt_monthly.client_code, fact_debt_monthly.matter_number, fact_debt_monthly.matter_owner, fact_debt_monthly.bill_number, 
+                         fact_debt_monthly.bill_date, fact_debt_monthly.outstanding_total_bill, fact_debt_monthly.outstanding_costs, fact_debt_monthly.age_of_debt, fact_debt_monthly.debt_date, 
+                         fact_debt_monthly.dim_bill_key, dim_debt_date.dim_date_key AS dim_debt_date_key, ISNULL(dim_client.client_code, 'Unknown') master_client_code, billdate.dim_date_key AS bill_date_key
+FROM         fact_debt_monthly LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_debt_monthly.master_fact_key
+						 LEFT outer JOIN dbo.dim_client ON dim_client.client_code = fact_dimension_main.master_client_code INNER join
+                         dim_date AS dim_debt_date ON dim_debt_date.calendar_date = CAST(fact_debt_monthly.debt_date AS DATE) INNER JOIN
+                         dim_date AS billdate ON billdate.calendar_date = CAST(CASE WHEN fact_debt_monthly.bill_date &lt; '20100501' THEN '20100501' ELSE fact_debt_monthly.bill_date END AS DATE)
 WHERE          fact_debt_monthly.dim_transaction_date_key IN (SELECT dim_date_key FROM dim_date WHERE fin_year = 2021)</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
@@ -1162,17 +1165,18 @@ WHERE          fact_debt_monthly.dim_transaction_date_key IN (SELECT dim_date_ke
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="8d450df2-9ba6-433e-918d-01de96ed4bba">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="766511a7-7008-4ec3-b920-14435707195d">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT        fact_debt_monthly.dim_transaction_date_key, fact_debt_monthly.dim_mat_head_history_key, fact_debt_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
-                         fact_dimension_main.dim_fed_hierarchy_history_key, fact_debt_monthly.dim_days_banding_key, fact_debt_monthly.dim_fed_matter_owner_key, fact_debt_monthly.dim_client_key, fact_debt_monthly.source_system_id, 
-                         fact_debt_monthly.client_code, fact_debt_monthly.matter_number, fact_debt_monthly.matter_owner, fact_debt_monthly.bill_number, fact_debt_monthly.bill_date, fact_debt_monthly.outstanding_total_bill, 
-                         fact_debt_monthly.outstanding_costs, fact_debt_monthly.age_of_debt, fact_debt_monthly.debt_date, fact_debt_monthly.dim_bill_key, dim_debt_date.dim_date_key AS dim_debt_date_key, 
-                         fact_dimension_main.master_client_code, billdate.dim_date_key bill_date_key
-FROM            fact_debt_monthly LEFT OUTER JOIN
+            <QueryDefinition>SELECT   fact_debt_monthly.dim_transaction_date_key, fact_debt_monthly.dim_mat_head_history_key, fact_debt_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
+                         fact_dimension_main.dim_fed_hierarchy_history_key, fact_debt_monthly.dim_days_banding_key, fact_debt_monthly.dim_fed_matter_owner_key, fact_debt_monthly.dim_client_key, 
+                         fact_debt_monthly.source_system_id, fact_debt_monthly.client_code, fact_debt_monthly.matter_number, fact_debt_monthly.matter_owner, fact_debt_monthly.bill_number, 
+                         fact_debt_monthly.bill_date, fact_debt_monthly.outstanding_total_bill, fact_debt_monthly.outstanding_costs, fact_debt_monthly.age_of_debt, fact_debt_monthly.debt_date, 
+                         fact_debt_monthly.dim_bill_key, dim_debt_date.dim_date_key AS dim_debt_date_key, dim_matter_header_current.master_client_code, billdate.dim_date_key AS bill_date_key
+FROM         fact_debt_monthly LEFT OUTER JOIN
                          fact_dimension_main ON fact_dimension_main.master_fact_key = fact_debt_monthly.master_fact_key INNER JOIN
-                         dim_date AS dim_debt_date ON dim_debt_date.calendar_date = CAST (fact_debt_monthly.debt_date AS DATE)
-						 INNER JOIN dbo.dim_date billdate ON billdate.calendar_date = CAST (fact_debt_monthly.bill_date AS DATE)
+						 dbo.dim_matter_header_current ON dim_matter_header_current.dim_matter_header_curr_key = dbo.fact_dimension_main.dim_matter_header_curr_key INNER JOIN
+                         dim_date AS dim_debt_date ON dim_debt_date.calendar_date = CAST(fact_debt_monthly.debt_date AS DATE) INNER JOIN
+                         dim_date AS billdate ON billdate.calendar_date = CAST(CASE WHEN fact_debt_monthly.bill_date &lt; '20100501' THEN '20100501' ELSE fact_debt_monthly.bill_date END AS DATE)
 WHERE          fact_debt_monthly.dim_transaction_date_key IN (SELECT dim_date_key FROM dim_date WHERE fin_year = 2022)</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
@@ -1186,17 +1190,18 @@ WHERE          fact_debt_monthly.dim_transaction_date_key IN (SELECT dim_date_ke
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="024ec46e-6741-4e33-b2ea-71ecf8bc32d4">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="7b80b764-5f88-4ad1-9292-fffd8fc83498">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT        fact_debt_monthly.dim_transaction_date_key, fact_debt_monthly.dim_mat_head_history_key, fact_debt_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
-                         fact_dimension_main.dim_fed_hierarchy_history_key, fact_debt_monthly.dim_days_banding_key, fact_debt_monthly.dim_fed_matter_owner_key, fact_debt_monthly.dim_client_key, fact_debt_monthly.source_system_id, 
-                         fact_debt_monthly.client_code, fact_debt_monthly.matter_number, fact_debt_monthly.matter_owner, fact_debt_monthly.bill_number, fact_debt_monthly.bill_date, fact_debt_monthly.outstanding_total_bill, 
-                         fact_debt_monthly.outstanding_costs, fact_debt_monthly.age_of_debt, fact_debt_monthly.debt_date, fact_debt_monthly.dim_bill_key, dim_debt_date.dim_date_key AS dim_debt_date_key, 
-                         fact_dimension_main.master_client_code, billdate.dim_date_key bill_date_key
-FROM            fact_debt_monthly LEFT OUTER JOIN
-                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_debt_monthly.master_fact_key INNER JOIN
-                         dim_date AS dim_debt_date ON dim_debt_date.calendar_date = CAST (fact_debt_monthly.debt_date AS DATE)
-						 INNER JOIN dbo.dim_date billdate ON billdate.calendar_date = CAST (fact_debt_monthly.bill_date AS DATE)
+            <QueryDefinition>SELECT   fact_debt_monthly.dim_transaction_date_key, fact_debt_monthly.dim_mat_head_history_key, fact_debt_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
+                         fact_dimension_main.dim_fed_hierarchy_history_key, fact_debt_monthly.dim_days_banding_key, fact_debt_monthly.dim_fed_matter_owner_key, fact_debt_monthly.dim_client_key, 
+                         fact_debt_monthly.source_system_id, fact_debt_monthly.client_code, fact_debt_monthly.matter_number, fact_debt_monthly.matter_owner, fact_debt_monthly.bill_number, 
+                         fact_debt_monthly.bill_date, fact_debt_monthly.outstanding_total_bill, fact_debt_monthly.outstanding_costs, fact_debt_monthly.age_of_debt, fact_debt_monthly.debt_date, 
+                         fact_debt_monthly.dim_bill_key, dim_debt_date.dim_date_key AS dim_debt_date_key, ISNULL(dim_client.client_code, 'Unknown') master_client_code, billdate.dim_date_key AS bill_date_key
+FROM         fact_debt_monthly LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_debt_monthly.master_fact_key
+						 LEFT outer JOIN dbo.dim_client ON dim_client.client_code = fact_dimension_main.master_client_code INNER join
+                         dim_date AS dim_debt_date ON dim_debt_date.calendar_date = CAST(fact_debt_monthly.debt_date AS DATE) INNER JOIN
+                         dim_date AS billdate ON billdate.calendar_date = CAST(CASE WHEN fact_debt_monthly.bill_date &lt; '20100501' THEN '20100501' ELSE fact_debt_monthly.bill_date END AS DATE)
 WHERE          fact_debt_monthly.dim_transaction_date_key IN (SELECT dim_date_key FROM dim_date WHERE fin_year = 2023)</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
@@ -1282,25 +1287,27 @@ WHERE          fact_debt_monthly.dim_transaction_date_key IN (SELECT dim_date_ke
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="f2a1b61a-d49f-4aaa-8650-fab7818e8b13">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="b1913b0d-5678-4cb0-b9c0-32d429faeb72">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT        fact_disbursements_detail_monthly.dim_transaction_date_key, fact_disbursements_detail_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
+            <QueryDefinition>SELECT   fact_disbursements_detail_monthly.dim_transaction_date_key, fact_disbursements_detail_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
                          fact_disbursements_detail_monthly.dim_fed_hierarchy_history_key, dim_days_banding.dim_days_banding_key, fact_disbursements_detail_monthly.dim_client_key, 
-                         CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' ELSE dim_disbursement_date_key END AS dim_disbursement_date_key, SUM(fact_disbursements_detail_monthly.total_unbilled_disbursements) 
-                         AS total_unbilled_disbursements, fact_disbursements_detail_monthly.dim_bill_key, fact_dimension_main.master_client_code
-FROM            fact_disbursements_detail_monthly INNER JOIN
-                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_disbursements_detail_monthly.master_fact_key INNER JOIN
+                         CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' ELSE dim_disbursement_date_key END AS dim_disbursement_date_key, 
+                         SUM(fact_disbursements_detail_monthly.total_unbilled_disbursements) AS total_unbilled_disbursements, fact_disbursements_detail_monthly.dim_bill_key, 
+                       ISNULL(dim_client.client_code, 'Unknown') master_client_code, fact_dimension_main.dim_fed_hierarchy_history_key AS matter_owner_hist_key
+FROM         fact_disbursements_detail_monthly INNER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_disbursements_detail_monthly.master_fact_key 
+						 left outer JOIN dbo.dim_client ON dim_client.client_code = fact_dimension_main.master_client_code INNER join
                          dim_date AS trandate ON trandate.dim_date_key = fact_disbursements_detail_monthly.dim_transaction_date_key INNER JOIN
                          dim_days_banding ON CASE WHEN dim_transaction_date_key =
-                             (SELECT        MAX(dim_transaction_date_key)
-                               FROM            fact_disbursements_detail_monthly) THEN DATEDIFF(d, workdate, GETDATE()) ELSE DATEDIFF(d, workdate, trandate.calendar_date) END BETWEEN dim_days_banding.startdays AND 
-                         dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+                             (SELECT   MAX(dim_transaction_date_key)
+                                FROM         fact_disbursements_detail_monthly) THEN DATEDIFF(d, workdate, GETDATE()) ELSE DATEDIFF(d, workdate, trandate.calendar_date) END BETWEEN 
+                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
 WHERE   (fact_disbursements_detail_monthly.dim_bill_key = 0) AND (fact_disbursements_detail_monthly.total_unbilled_disbursements &lt;&gt; 0)
 and          fact_disbursements_detail_monthly.dim_transaction_date_key IN (SELECT dim_date_key FROM dim_date WHERE fin_year = 2019)
 
 GROUP BY CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' ELSE dim_disbursement_date_key END, fact_disbursements_detail_monthly.dim_transaction_date_key, 
                          fact_disbursements_detail_monthly.dim_matter_header_curr_key, fact_disbursements_detail_monthly.dim_fed_hierarchy_history_key, dim_days_banding.dim_days_banding_key, 
-                         fact_disbursements_detail_monthly.dim_client_key, fact_disbursements_detail_monthly.dim_bill_key, fact_dimension_main.master_client_code</QueryDefinition>
+                         fact_disbursements_detail_monthly.dim_client_key, fact_disbursements_detail_monthly.dim_bill_key, fact_dimension_main.master_client_code, fact_dimension_main.dim_fed_hierarchy_history_key ,   ISNULL(dim_client.client_code, 'Unknown'), fact_dimension_main.client_code</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
@@ -1313,25 +1320,27 @@ GROUP BY CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' EL
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="6ff8778a-9192-4707-80f0-5652f5e5ebc1">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="7f9b333b-692c-4c18-8afa-b0958dfc0cc9">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT        fact_disbursements_detail_monthly.dim_transaction_date_key, fact_disbursements_detail_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
+            <QueryDefinition>SELECT   fact_disbursements_detail_monthly.dim_transaction_date_key, fact_disbursements_detail_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
                          fact_disbursements_detail_monthly.dim_fed_hierarchy_history_key, dim_days_banding.dim_days_banding_key, fact_disbursements_detail_monthly.dim_client_key, 
-                         CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' ELSE dim_disbursement_date_key END AS dim_disbursement_date_key, SUM(fact_disbursements_detail_monthly.total_unbilled_disbursements) 
-                         AS total_unbilled_disbursements, fact_disbursements_detail_monthly.dim_bill_key, fact_dimension_main.master_client_code
-FROM            fact_disbursements_detail_monthly INNER JOIN
-                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_disbursements_detail_monthly.master_fact_key INNER JOIN
+                         CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' ELSE dim_disbursement_date_key END AS dim_disbursement_date_key, 
+                         SUM(fact_disbursements_detail_monthly.total_unbilled_disbursements) AS total_unbilled_disbursements, fact_disbursements_detail_monthly.dim_bill_key, 
+                       ISNULL(dim_client.client_code, 'Unknown') master_client_code, fact_dimension_main.dim_fed_hierarchy_history_key AS matter_owner_hist_key
+FROM         fact_disbursements_detail_monthly INNER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_disbursements_detail_monthly.master_fact_key 
+						 left outer JOIN dbo.dim_client ON dim_client.client_code = fact_dimension_main.master_client_code INNER join
                          dim_date AS trandate ON trandate.dim_date_key = fact_disbursements_detail_monthly.dim_transaction_date_key INNER JOIN
                          dim_days_banding ON CASE WHEN dim_transaction_date_key =
-                             (SELECT        MAX(dim_transaction_date_key)
-                               FROM            fact_disbursements_detail_monthly) THEN DATEDIFF(d, workdate, GETDATE()) ELSE DATEDIFF(d, workdate, trandate.calendar_date) END BETWEEN dim_days_banding.startdays AND 
-                         dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+                             (SELECT   MAX(dim_transaction_date_key)
+                                FROM         fact_disbursements_detail_monthly) THEN DATEDIFF(d, workdate, GETDATE()) ELSE DATEDIFF(d, workdate, trandate.calendar_date) END BETWEEN 
+                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
 WHERE   (fact_disbursements_detail_monthly.dim_bill_key = 0) AND (fact_disbursements_detail_monthly.total_unbilled_disbursements &lt;&gt; 0)
 and          fact_disbursements_detail_monthly.dim_transaction_date_key IN (SELECT dim_date_key FROM dim_date WHERE fin_year = 2020)
 
 GROUP BY CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' ELSE dim_disbursement_date_key END, fact_disbursements_detail_monthly.dim_transaction_date_key, 
                          fact_disbursements_detail_monthly.dim_matter_header_curr_key, fact_disbursements_detail_monthly.dim_fed_hierarchy_history_key, dim_days_banding.dim_days_banding_key, 
-                         fact_disbursements_detail_monthly.dim_client_key, fact_disbursements_detail_monthly.dim_bill_key, fact_dimension_main.master_client_code</QueryDefinition>
+                         fact_disbursements_detail_monthly.dim_client_key, fact_disbursements_detail_monthly.dim_bill_key, fact_dimension_main.master_client_code, fact_dimension_main.dim_fed_hierarchy_history_key,  ISNULL(dim_client.client_code, 'Unknown'),  fact_dimension_main.client_code</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
@@ -1344,25 +1353,27 @@ GROUP BY CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' EL
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="6233e31d-9910-4d36-bb32-058f9ed708b7">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="aed2e7d6-dc52-467f-9dd1-85011ffa3da3">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT        fact_disbursements_detail_monthly.dim_transaction_date_key, fact_disbursements_detail_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
+            <QueryDefinition>SELECT   fact_disbursements_detail_monthly.dim_transaction_date_key, fact_disbursements_detail_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
                          fact_disbursements_detail_monthly.dim_fed_hierarchy_history_key, dim_days_banding.dim_days_banding_key, fact_disbursements_detail_monthly.dim_client_key, 
-                         CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' ELSE dim_disbursement_date_key END AS dim_disbursement_date_key, SUM(fact_disbursements_detail_monthly.total_unbilled_disbursements) 
-                         AS total_unbilled_disbursements, fact_disbursements_detail_monthly.dim_bill_key, fact_dimension_main.master_client_code
-FROM            fact_disbursements_detail_monthly INNER JOIN
-                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_disbursements_detail_monthly.master_fact_key INNER JOIN
+                         CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' ELSE dim_disbursement_date_key END AS dim_disbursement_date_key, 
+                         SUM(fact_disbursements_detail_monthly.total_unbilled_disbursements) AS total_unbilled_disbursements, fact_disbursements_detail_monthly.dim_bill_key, 
+                       ISNULL(dim_client.client_code, 'Unknown') master_client_code, fact_dimension_main.dim_fed_hierarchy_history_key AS matter_owner_hist_key
+FROM         fact_disbursements_detail_monthly INNER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_disbursements_detail_monthly.master_fact_key 
+						 left outer JOIN dbo.dim_client ON dim_client.client_code = fact_dimension_main.master_client_code INNER join
                          dim_date AS trandate ON trandate.dim_date_key = fact_disbursements_detail_monthly.dim_transaction_date_key INNER JOIN
                          dim_days_banding ON CASE WHEN dim_transaction_date_key =
-                             (SELECT        MAX(dim_transaction_date_key)
-                               FROM            fact_disbursements_detail_monthly) THEN DATEDIFF(d, workdate, GETDATE()) ELSE DATEDIFF(d, workdate, trandate.calendar_date) END BETWEEN dim_days_banding.startdays AND 
-                         dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+                             (SELECT   MAX(dim_transaction_date_key)
+                                FROM         fact_disbursements_detail_monthly) THEN DATEDIFF(d, workdate, GETDATE()) ELSE DATEDIFF(d, workdate, trandate.calendar_date) END BETWEEN 
+                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
 WHERE   (fact_disbursements_detail_monthly.dim_bill_key = 0) AND (fact_disbursements_detail_monthly.total_unbilled_disbursements &lt;&gt; 0)
 and          fact_disbursements_detail_monthly.dim_transaction_date_key IN (SELECT dim_date_key FROM dim_date WHERE fin_year = 2021)
 
 GROUP BY CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' ELSE dim_disbursement_date_key END, fact_disbursements_detail_monthly.dim_transaction_date_key, 
                          fact_disbursements_detail_monthly.dim_matter_header_curr_key, fact_disbursements_detail_monthly.dim_fed_hierarchy_history_key, dim_days_banding.dim_days_banding_key, 
-                         fact_disbursements_detail_monthly.dim_client_key, fact_disbursements_detail_monthly.dim_bill_key, fact_dimension_main.master_client_code</QueryDefinition>
+                         fact_disbursements_detail_monthly.dim_client_key, fact_disbursements_detail_monthly.dim_bill_key, ISNULL(dim_client.client_code, 'Unknown'), fact_dimension_main.dim_fed_hierarchy_history_key, fact_dimension_main.client_code</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
@@ -1375,25 +1386,27 @@ GROUP BY CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' EL
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="080b6994-deaf-44b9-b858-24a8a55b2917">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="d20f056b-3492-40e2-b065-3f16d4abb906">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT        fact_disbursements_detail_monthly.dim_transaction_date_key, fact_disbursements_detail_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
+            <QueryDefinition>SELECT   fact_disbursements_detail_monthly.dim_transaction_date_key, fact_disbursements_detail_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
                          fact_disbursements_detail_monthly.dim_fed_hierarchy_history_key, dim_days_banding.dim_days_banding_key, fact_disbursements_detail_monthly.dim_client_key, 
-                         CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' ELSE dim_disbursement_date_key END AS dim_disbursement_date_key, SUM(fact_disbursements_detail_monthly.total_unbilled_disbursements) 
-                         AS total_unbilled_disbursements, fact_disbursements_detail_monthly.dim_bill_key, fact_dimension_main.master_client_code
-FROM            fact_disbursements_detail_monthly INNER JOIN
-                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_disbursements_detail_monthly.master_fact_key INNER JOIN
+                         CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' ELSE dim_disbursement_date_key END AS dim_disbursement_date_key, 
+                         SUM(fact_disbursements_detail_monthly.total_unbilled_disbursements) AS total_unbilled_disbursements, fact_disbursements_detail_monthly.dim_bill_key, 
+                       ISNULL(dim_client.client_code, 'Unknown') master_client_code, fact_dimension_main.dim_fed_hierarchy_history_key AS matter_owner_hist_key
+FROM         fact_disbursements_detail_monthly INNER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_disbursements_detail_monthly.master_fact_key 
+						 left outer JOIN dbo.dim_client ON dim_client.client_code = fact_dimension_main.master_client_code INNER join
                          dim_date AS trandate ON trandate.dim_date_key = fact_disbursements_detail_monthly.dim_transaction_date_key INNER JOIN
                          dim_days_banding ON CASE WHEN dim_transaction_date_key =
-                             (SELECT        MAX(dim_transaction_date_key)
-                               FROM            fact_disbursements_detail_monthly) THEN DATEDIFF(d, workdate, GETDATE()) ELSE DATEDIFF(d, workdate, trandate.calendar_date) END BETWEEN dim_days_banding.startdays AND 
-                         dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+                             (SELECT   MAX(dim_transaction_date_key)
+                                FROM         fact_disbursements_detail_monthly) THEN DATEDIFF(d, workdate, GETDATE()) ELSE DATEDIFF(d, workdate, trandate.calendar_date) END BETWEEN 
+                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
 WHERE   (fact_disbursements_detail_monthly.dim_bill_key = 0) AND (fact_disbursements_detail_monthly.total_unbilled_disbursements &lt;&gt; 0)
 and          fact_disbursements_detail_monthly.dim_transaction_date_key IN (SELECT dim_date_key FROM dim_date WHERE fin_year = 2022)
 
 GROUP BY CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' ELSE dim_disbursement_date_key END, fact_disbursements_detail_monthly.dim_transaction_date_key, 
                          fact_disbursements_detail_monthly.dim_matter_header_curr_key, fact_disbursements_detail_monthly.dim_fed_hierarchy_history_key, dim_days_banding.dim_days_banding_key, 
-                         fact_disbursements_detail_monthly.dim_client_key, fact_disbursements_detail_monthly.dim_bill_key, fact_dimension_main.master_client_code</QueryDefinition>
+                         fact_disbursements_detail_monthly.dim_client_key, fact_disbursements_detail_monthly.dim_bill_key, fact_dimension_main.master_client_code, fact_dimension_main.dim_fed_hierarchy_history_key, ISNULL(dim_client.client_code, 'Unknown'), fact_dimension_main.client_code</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
@@ -1406,25 +1419,27 @@ GROUP BY CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' EL
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="577f2d55-2a83-4926-bc97-153d2241b85e">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="ea7047b1-20ea-462f-90db-db8af89d6f12">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT        fact_disbursements_detail_monthly.dim_transaction_date_key, fact_disbursements_detail_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
+            <QueryDefinition>SELECT   fact_disbursements_detail_monthly.dim_transaction_date_key, fact_disbursements_detail_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
                          fact_disbursements_detail_monthly.dim_fed_hierarchy_history_key, dim_days_banding.dim_days_banding_key, fact_disbursements_detail_monthly.dim_client_key, 
-                         CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' ELSE dim_disbursement_date_key END AS dim_disbursement_date_key, SUM(fact_disbursements_detail_monthly.total_unbilled_disbursements) 
-                         AS total_unbilled_disbursements, fact_disbursements_detail_monthly.dim_bill_key, fact_dimension_main.master_client_code
-FROM            fact_disbursements_detail_monthly INNER JOIN
-                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_disbursements_detail_monthly.master_fact_key INNER JOIN
+                         CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' ELSE dim_disbursement_date_key END AS dim_disbursement_date_key, 
+                         SUM(fact_disbursements_detail_monthly.total_unbilled_disbursements) AS total_unbilled_disbursements, fact_disbursements_detail_monthly.dim_bill_key, 
+                       ISNULL(dim_client.client_code, 'Unknown') master_client_code, fact_dimension_main.dim_fed_hierarchy_history_key AS matter_owner_hist_key
+FROM         fact_disbursements_detail_monthly INNER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_disbursements_detail_monthly.master_fact_key 
+						 left outer JOIN dbo.dim_client ON dim_client.client_code = fact_dimension_main.master_client_code INNER join
                          dim_date AS trandate ON trandate.dim_date_key = fact_disbursements_detail_monthly.dim_transaction_date_key INNER JOIN
                          dim_days_banding ON CASE WHEN dim_transaction_date_key =
-                             (SELECT        MAX(dim_transaction_date_key)
-                               FROM            fact_disbursements_detail_monthly) THEN DATEDIFF(d, workdate, GETDATE()) ELSE DATEDIFF(d, workdate, trandate.calendar_date) END BETWEEN dim_days_banding.startdays AND 
-                         dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+                             (SELECT   MAX(dim_transaction_date_key)
+                                FROM         fact_disbursements_detail_monthly) THEN DATEDIFF(d, workdate, GETDATE()) ELSE DATEDIFF(d, workdate, trandate.calendar_date) END BETWEEN 
+                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
 WHERE   (fact_disbursements_detail_monthly.dim_bill_key = 0) AND (fact_disbursements_detail_monthly.total_unbilled_disbursements &lt;&gt; 0)
 and          fact_disbursements_detail_monthly.dim_transaction_date_key IN (SELECT dim_date_key FROM dim_date WHERE fin_year = 2023)
 
 GROUP BY CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' ELSE dim_disbursement_date_key END, fact_disbursements_detail_monthly.dim_transaction_date_key, 
                          fact_disbursements_detail_monthly.dim_matter_header_curr_key, fact_disbursements_detail_monthly.dim_fed_hierarchy_history_key, dim_days_banding.dim_days_banding_key, 
-                         fact_disbursements_detail_monthly.dim_client_key, fact_disbursements_detail_monthly.dim_bill_key, fact_dimension_main.master_client_code</QueryDefinition>
+                         fact_disbursements_detail_monthly.dim_client_key, fact_disbursements_detail_monthly.dim_bill_key, fact_dimension_main.master_client_code, fact_dimension_main.dim_fed_hierarchy_history_key, ISNULL(dim_client.client_code, 'Unknown'),   fact_dimension_main.client_code</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>

@@ -1343,26 +1343,6 @@
               <point x="204" y="5000" />
             </connector>
           </ddscontrol>
-          <ddscontrol controlprogid="MSDDS.Polyline" left="5608" top="2750" logicalid="206" controlid="99" masterid="0" hint1="0" hint2="0" width="144949" height="7250" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
-            <control>
-              <ddsxmlobj>
-                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
-              </ddsxmlobj>
-            </control>
-            <layoutobject>
-              <ddsxmlobj>
-                <property name="LogicalObject" value="dataSet.Relations[fact_disbursements_detail_monthly-dim_master_client]" vartype="8" />
-                <property name="Virtual" value="0" vartype="11" />
-                <property name="VisibleAP" value="0" vartype="3" />
-              </ddsxmlobj>
-            </layoutobject>
-            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="68" destid="94" sourceattachpoint="26" destattachpoint="33" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-              <point x="150257" y="9600" />
-              <point x="78083" y="9600" />
-              <point x="78083" y="3050" />
-              <point x="5908" y="3050" />
-            </connector>
-          </ddscontrol>
           <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" left="0" top="0" logicalid="207" controlid="100" masterid="0" hint1="0" hint2="0" width="5908" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobjectstreaminitwrapper binary="000c00001417000088130000" />
@@ -3149,42 +3129,6 @@
           <CubeDimensionID>Fact Bill Activity</CubeDimensionID>
           <MeasureGroupID>Fact Bill Activity</MeasureGroupID>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ae7446b1-78f1-48ff-bc6c-06d8540fedce">
-          <CubeDimensionID>Employees 1</CubeDimensionID>
-          <Attributes>
-            <Attribute dwd:design-time-name="d668b691-1454-496f-a1d0-e43729f1c975">
-              <AttributeID>Dim Fed Hierarchy History Key</AttributeID>
-              <KeyColumns>
-                <KeyColumn dwd:design-time-name="cdc42c89-1559-47fa-b39b-bcc4e2c0370f">
-                  <DataType>Integer</DataType>
-                  <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="78521c30-ab2a-4227-a81c-da12c2ea3865">
-                    <TableID>dbo_fact_debt_monthly</TableID>
-                    <ColumnID>dim_fed_hierarchy_history_key</ColumnID>
-                  </Source>
-                </KeyColumn>
-              </KeyColumns>
-              <Type>Granularity</Type>
-            </Attribute>
-          </Attributes>
-        </Dimension>
-        <Dimension xsi:type="ManyToManyMeasureGroupDimension" dwd:design-time-name="da92eef3-1eec-4607-9e5a-3e969e9feb14">
-          <CubeDimensionID>Employees</CubeDimensionID>
-          <MeasureGroupID>Fact Bill Activity</MeasureGroupID>
-        </Dimension>
-        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="dac743c9-bcf7-4188-ba2a-7736e1c2cbdd">
-          <CubeDimensionID>Master Client Details</CubeDimensionID>
-          <Attributes>
-            <Attribute dwd:design-time-name="9dc1a7da-263c-4de5-a070-77187e976799">
-              <AttributeID>Dim Client Key</AttributeID>
-              <Type>Granularity</Type>
-            </Attribute>
-          </Attributes>
-          <IntermediateCubeDimensionID>Matter Details</IntermediateCubeDimensionID>
-          <IntermediateGranularityAttributeID>Master Client Code</IntermediateGranularityAttributeID>
-          <Materialization>Regular</Materialization>
-          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-        </Dimension>
         <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="1191cce5-c4de-4e5a-a324-58a04e3aef15">
           <CubeDimensionID>Dibs WIP and Debt Snapshot</CubeDimensionID>
           <Attributes>
@@ -3214,6 +3158,48 @@
                   <Source xsi:type="ColumnBinding" dwd:design-time-name="6fe6ddc3-47d6-4fec-a240-e299750cac33">
                     <TableID>dbo_fact_debt_monthly</TableID>
                     <ColumnID>bill_date_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="f194369a-0a69-4ec5-ba18-dcc8e4c63065">
+          <CubeDimensionID>Employees 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="63f5b2ae-b00b-489a-8b98-d11968d5ff86">
+              <AttributeID>Dim Fed Hierarchy History Key</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="5050853c-c01f-45a1-a90e-d3e82ab010e6">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="0f70df0a-8261-48ef-a384-5f01a6ff215a">
+                    <TableID>dbo_fact_debt_monthly</TableID>
+                    <ColumnID>dim_fed_matter_owner_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ManyToManyMeasureGroupDimension" dwd:design-time-name="f6a9dbd6-df52-46d1-aa32-be3072660cf6">
+          <CubeDimensionID>Employees</CubeDimensionID>
+          <MeasureGroupID>Fact Bill Activity</MeasureGroupID>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="427dcecc-da8a-4758-996a-c4146149e570">
+          <CubeDimensionID>Master Client Details</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="723b9040-d2e1-4c2f-9151-8f1e92a2c685">
+              <AttributeID>Dim Client Key</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="1c0956a9-e4f9-46fc-b0a4-3147db86523e">
+                  <DataType>WChar</DataType>
+                  <DataSize>8000</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="61a94564-91fb-46a2-858f-49610ef28f3f">
+                    <TableID>dbo_fact_debt_monthly</TableID>
+                    <ColumnID>master_client_code</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
@@ -3345,42 +3331,6 @@
           <CubeDimensionID>Fact Bill Activity</CubeDimensionID>
           <MeasureGroupID>Fact Bill Activity</MeasureGroupID>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="b52371fb-e43a-4819-9841-967d6dc324b6">
-          <CubeDimensionID>Employees 1</CubeDimensionID>
-          <Attributes>
-            <Attribute dwd:design-time-name="f6a72ed7-4b17-437b-8039-96f4fd54197a">
-              <AttributeID>Dim Fed Hierarchy History Key</AttributeID>
-              <KeyColumns>
-                <KeyColumn dwd:design-time-name="3790d46a-69e8-422d-913d-bdc4facb1c37">
-                  <DataType>Integer</DataType>
-                  <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7a86ea12-aa8c-4e30-9f60-32a2206abc2a">
-                    <TableID>dbo_fact_disbursements_detail_monthly</TableID>
-                    <ColumnID>dim_fed_hierarchy_history_key</ColumnID>
-                  </Source>
-                </KeyColumn>
-              </KeyColumns>
-              <Type>Granularity</Type>
-            </Attribute>
-          </Attributes>
-        </Dimension>
-        <Dimension xsi:type="ManyToManyMeasureGroupDimension" dwd:design-time-name="37132a92-0fcc-4dc0-9b35-0d02ad951db8">
-          <CubeDimensionID>Employees</CubeDimensionID>
-          <MeasureGroupID>Fact Bill Activity</MeasureGroupID>
-        </Dimension>
-        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="42fde012-8c03-4eab-9d7b-780ff017e8c6">
-          <CubeDimensionID>Master Client Details</CubeDimensionID>
-          <Attributes>
-            <Attribute dwd:design-time-name="c81fb3ec-db5e-471e-b439-2e8765b915dc">
-              <AttributeID>Dim Client Key</AttributeID>
-              <Type>Granularity</Type>
-            </Attribute>
-          </Attributes>
-          <IntermediateCubeDimensionID>Matter Details</IntermediateCubeDimensionID>
-          <IntermediateGranularityAttributeID>Master Client Code</IntermediateGranularityAttributeID>
-          <Materialization>Regular</Materialization>
-          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-        </Dimension>
         <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="fb5dd21d-18ef-4b5a-a1cc-ca863a8dda0a">
           <CubeDimensionID>Dibs WIP and Debt Snapshot</CubeDimensionID>
           <Attributes>
@@ -3392,6 +3342,48 @@
                   <Source xsi:type="ColumnBinding" dwd:design-time-name="46fc14a3-6800-4a86-bca9-fd29ffeaaf97">
                     <TableID>dbo_fact_disbursements_detail_monthly</TableID>
                     <ColumnID>dim_transaction_date_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="bc882ab6-4bf6-418d-94bb-5010814a84d5">
+          <CubeDimensionID>Employees 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="486435fa-3804-4522-9274-e8b6e13cfc04">
+              <AttributeID>Dim Fed Hierarchy History Key</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="7e5af105-d229-425d-bfa7-2cac83bae3e4">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="14501bbc-9932-4f6d-a6c9-5dc45760f538">
+                    <TableID>dbo_fact_disbursements_detail_monthly</TableID>
+                    <ColumnID>matter_owner_hist_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ManyToManyMeasureGroupDimension" dwd:design-time-name="9a313fb5-0fdc-4cac-b9a6-67fa22f32bfb">
+          <CubeDimensionID>Employees</CubeDimensionID>
+          <MeasureGroupID>Fact Bill Activity</MeasureGroupID>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="82f289a9-3785-4048-ab33-2796631603b3">
+          <CubeDimensionID>Master Client Details</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="a0e5a8a6-8850-4ddc-82aa-9f8f0dcafd23">
+              <AttributeID>Dim Client Key</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="bf7b31c6-0c24-49c3-8da4-e2d0ed26feb3">
+                  <DataType>WChar</DataType>
+                  <DataSize>8000</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3041a3e9-e06c-41f6-aafb-b39e875c5bd1">
+                    <TableID>dbo_fact_disbursements_detail_monthly</TableID>
+                    <ColumnID>master_client_code</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>

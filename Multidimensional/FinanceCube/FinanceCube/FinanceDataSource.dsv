@@ -27,7 +27,7 @@
             <Name>_ALL_TABLES_</Name>
             <DiagramLayout>
               <dds>
-                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="128" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="25246" scrolltop="35750" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="29607" y="16828" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="128" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="42809" scrolltop="5884" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="29607" y="16828" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                   <font>
                     <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                   </font>
@@ -999,26 +999,6 @@
                     <point x="64867" y="15702" />
                   </connector>
                 </ddscontrol>
-                <ddscontrol controlprogid="MSDDS.Polyline" left="64567" top="17052" logicalid="121" controlid="58" masterid="0" hint1="0" hint2="0" width="3000" height="7052" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
-                  <control>
-                    <ddsxmlobj>
-                      <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
-                    </ddsxmlobj>
-                  </control>
-                  <layoutobject>
-                    <ddsxmlobj>
-                      <property name="LogicalObject" value="dataSet.Relations[fact_disbursements_detail_monthly-dim_master_client]" vartype="8" />
-                      <property name="Virtual" value="0" vartype="11" />
-                      <property name="VisibleAP" value="0" vartype="3" />
-                    </ddsxmlobj>
-                  </layoutobject>
-                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="11" destid="18" sourceattachpoint="30" destattachpoint="27" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                    <point x="67267" y="23704" />
-                    <point x="66067" y="23704" />
-                    <point x="66067" y="17352" />
-                    <point x="64867" y="17352" />
-                  </connector>
-                </ddscontrol>
                 <ddscontrol controlprogid="MSDDS.Polyline" left="19828" top="15952" logicalid="122" controlid="59" masterid="0" hint1="0" hint2="0" width="40100" height="31133" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobj>
@@ -1123,8 +1103,8 @@
 </DiagramLayout>
             <ShowRelationshipNames>False</ShowRelationshipNames>
             <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
-            <DiagramViewPortLeft>25246</DiagramViewPortLeft>
-            <DiagramViewPortTop>35750</DiagramViewPortTop>
+            <DiagramViewPortLeft>42809</DiagramViewPortLeft>
+            <DiagramViewPortTop>5884</DiagramViewPortTop>
             <DiagramBoundingLeft>0</DiagramBoundingLeft>
             <DiagramBoundingTop>0</DiagramBoundingTop>
             <DiagramZoom>75</DiagramZoom>
@@ -2084,11 +2064,10 @@
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="dbo_dim_matter_header_current" msprop:design-time-name="297f7106-14b2-4294-9595-74d03dcf65af" msprop:IsLogical="True" msprop:FriendlyName="dim_matter_header_current" msprop:DbTableName="dim_matter_header_current" msprop:TableType="View" msprop:QueryDefinition="SELECT   dim_matter_header_curr_key, dim_department_key, dim_matter_worktype_key, dim_matter_group_key, dim_matter_header_current.client_code, case_id, &#xD;&#xA;                         dim_matter_header_current.matter_number, CAST(date_closed_practice_management AS DATE) date_closed_practice_management, date_opened_case_management, &#xD;&#xA;                         client_group_code, client_group_name, client_name, dbo.remove_carriage_return(ISNULL(matter_description, N'Unknown')) AS matter_description, &#xD;&#xA;                         CAST(date_opened_practice_management AS DATE) date_opened_practice_management, date_closed_case_management, branch_code, branch_name, matter_partner_code, &#xD;&#xA;                         matter_partner_full_name, ISNULL(fee_earner_code, 0) AS fee_earner_code, matter_owner_full_name, department_code, CAST(CASE WHEN dbo.Proper(output_wip_fee_arrangement) &#xD;&#xA;                         = 'Fixed Fee/Fee Quote/Capped Fee' THEN 1 ELSE 0 END AS BIT) fixed_fee, fixed_fee_amount, delegated, CAST(CASE WHEN ISNULL(reporting_exclusions, 0) &#xD;&#xA;                         = 0 THEN 0 ELSE 1 END AS BIT) AS reporting_exclusions, final_bill_flag, final_bill_date, present_position, IIF(master_client_code IN ('  B15217', ' M15159 ', 'W22228  '), 'Unknown ', &#xD;&#xA;                         CASE WHEN ISNUMERIC(master_client_code) = 1 THEN RIGHT('00000000' + CONVERT(VARCHAR, master_client_code), 8) ELSE CAST(RTRIM(master_client_code) AS VARCHAR(8)) END) &#xD;&#xA;                         AS 'master_client_code', master_matter_number, billing_portal_status, dbo.Proper(output_wip_fee_arrangement) AS fee_arrangement, billing_arrangement, matter_category, &#xD;&#xA;                         billing_arrangement_description, &#xD;&#xA;                         dim_matter_header_current.client_code + '-' + dim_matter_header_current.matter_number + ' - ' + dbo.remove_carriage_return(ISNULL(matter_description, N'Unknown')) AS matter, &#xD;&#xA;                         ISNULL(dim_fed_hierarchy_history.dim_fed_hierarchy_history_key, 0) AS matter_owner_history_key, dim_instruction_type.dim_instruction_type_key, instruction_type, &#xD;&#xA;                         CASE WHEN date_closed_practice_management IS NULL THEN 'Open' ELSE 'Closed' END AS [Status], DATEPART(YEAR, date_closed_practice_management) AS [Year Closed], &#xD;&#xA;                         DATEPART(YEAR, date_opened_practice_management) AS [Year Opened]&#xD;&#xA;/* select count (*)*/ FROM dim_matter_header_current LEFT OUTER JOIN&#xD;&#xA;                         dbo.dim_fed_hierarchy_history ON dim_matter_header_current.fee_earner_code = dim_fed_hierarchy_history.fed_code AND date_opened_case_management BETWEEN &#xD;&#xA;                         dim_fed_hierarchy_history.dss_start_date AND dim_fed_hierarchy_history.dss_end_date INNER JOIN&#xD;&#xA;                         dbo.dim_instruction_type ON dim_instruction_type.dim_instruction_type_key = dim_matter_header_current.dim_instruction_type_key LEFT OUTER JOIN&#xD;&#xA;                         red_dw.dbo.dim_detail_finance ON dim_detail_finance.client_code = dim_matter_header_current.client_code AND &#xD;&#xA;                         dim_detail_finance.matter_number = dim_matter_header_current.matter_number&#xD;&#xA;where  DATEPART(YEAR, ISNULL(date_closed_practice_management,GETDATE())) &gt;= 2000&#xD;&#xA;AND dim_matter_header_curr_key IN (&#xD;&#xA;&#x9;SELECT DISTINCT dim_matter_header_curr_key FROM dbo.fact_bill WHERE dim_bill_date_key &gt;= '20100501' UNION all&#xD;&#xA;&#x9;SELECT DISTINCT dim_matter_header_curr_key FROM dbo.fact_bill_activity WHERE gldate &gt;= '20100501' UNION all&#xD;&#xA;&#x9;SELECT DISTINCT dim_matter_header_curr_key FROM dbo.fact_bill_billed_time_activity WHERE dim_gl_date_key &gt;= '20100501' UNION all&#xD;&#xA;&#x9;SELECT DISTINCT dim_matter_header_curr_key FROM dbo.fact_billable_time_activity WHERE dim_orig_posting_date_key &gt;= '20100501' UNION all&#xD;&#xA;&#x9;SELECT distinct dim_matter_header_curr_key FROM dbo.fact_wip_monthly INNER JOIN dbo.fact_dimension_main ON fact_dimension_main.master_fact_key = fact_wip_monthly.master_fact_key WHERE dim_transaction_date_key &gt; '20180501'&#xD;&#xA;&#x9;)" msprop:QueryBuilder="SpecificQueryBuilder">
+            <xs:element name="dbo_dim_matter_header_current" msprop:design-time-name="297f7106-14b2-4294-9595-74d03dcf65af" msprop:IsLogical="True" msprop:FriendlyName="dim_matter_header_current" msprop:DbTableName="dim_matter_header_current" msprop:TableType="View" msprop:QueryDefinition="SELECT   dim_matter_header_current.dim_matter_header_curr_key, dim_matter_worktype_key, dim_matter_group_key, dim_matter_header_current.client_code, &#xD;&#xA;                         dim_matter_header_current.matter_number, CAST(date_closed_practice_management AS DATE) date_closed_practice_management, date_opened_case_management, &#xD;&#xA;                         client_group_code, client_group_name, client_name, matter_category, /* matter_description,*/ dbo.remove_carriage_return(ISNULL(matter_description, N'Unknown')) &#xD;&#xA;                         AS matter_description, CAST(date_opened_practice_management AS DATE) date_opened_practice_management, date_closed_case_management, matter_partner_code, &#xD;&#xA;                         matter_partner_full_name, ISNULL(fee_earner_code, 0) AS fee_earner_code, matter_owner_full_name, department_code, CAST(CASE WHEN LOWER(output_wip_fee_arrangement) &#xD;&#xA;                         = 'fixed fee/fee quote/capped fee' THEN 1 ELSE 0 END AS BIT) fixed_fee, fixed_fee_amount, delegated, CAST(CASE WHEN ISNULL(reporting_exclusions, 0) = 0 THEN 0 ELSE 1 END AS BIT) &#xD;&#xA;                         AS reporting_exclusions, final_bill_flag, final_bill_date, present_position, IIF(dim_matter_header_current.master_client_code IN ('  B15217', ' M15159 ', 'W22228  '), 'Unknown ', &#xD;&#xA;                         CASE WHEN ISNUMERIC(dim_matter_header_current.master_client_code) = 1 THEN RIGHT('00000000' + CONVERT(VARCHAR, dim_matter_header_current.master_client_code), 8) &#xD;&#xA;                         ELSE CAST(RTRIM(dim_matter_header_current.master_client_code) AS VARCHAR(8)) END) AS 'master_client_code', master_matter_number, dbo.Proper(output_wip_fee_arrangement) &#xD;&#xA;                         AS fee_arrangement, &#xD;&#xA;                         dim_matter_header_current.client_code + '-' + dim_matter_header_current.matter_number + ' - ' + /* dbo.remove_carriage_return(ISNULL(matter_description, N'Unknown')) */ ISNULL(matter_description,&#xD;&#xA;                          N'Unknown') AS matter, ISNULL(dbo.fact_dimension_main.dim_fed_hierarchy_history_key, 0) AS matter_owner_history_key, dim_instruction_type.dim_instruction_type_key, &#xD;&#xA;                         instruction_type, CASE WHEN date_closed_practice_management IS NULL THEN 'Open' ELSE 'Closed' END AS [Status], DATEPART(YEAR, date_closed_practice_management) &#xD;&#xA;                         AS [Year Closed], DATEPART(YEAR, date_opened_practice_management) AS [Year Opened]&#xD;&#xA;FROM         dim_matter_header_current INNER JOIN&#xD;&#xA;                         dbo.fact_dimension_main ON fact_dimension_main.dim_matter_header_curr_key = dim_matter_header_current.dim_matter_header_curr_key INNER JOIN&#xD;&#xA;                         dbo.dim_instruction_type ON dim_instruction_type.dim_instruction_type_key = dim_matter_header_current.dim_instruction_type_key LEFT OUTER JOIN&#xD;&#xA;                         red_dw.dbo.dim_detail_finance ON dim_detail_finance.client_code = dim_matter_header_current.client_code AND &#xD;&#xA;                         dim_detail_finance.matter_number = dim_matter_header_current.matter_number" msprop:QueryBuilder="SpecificQueryBuilder">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="dim_matter_header_curr_key" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="7b0199a0-6805-411b-b5f0-b3f52e31ecc0" msprop:DbColumnName="dim_matter_header_curr_key" msprop:FriendlyName="dim_matter_header_curr_key" type="xs:int" minOccurs="0" />
-                  <xs:element name="dim_department_key" msprop:design-time-name="7c3c7b76-69e7-4046-8148-a5ce9bd7a230" msprop:DbColumnName="dim_department_key" msprop:FriendlyName="dim_department_key" type="xs:int" minOccurs="0" />
                   <xs:element name="dim_matter_worktype_key" msprop:design-time-name="b6b67267-54ab-4df8-b913-82d066d29b52" msprop:DbColumnName="dim_matter_worktype_key" msprop:FriendlyName="dim_matter_worktype_key" type="xs:int" minOccurs="0" />
                   <xs:element name="dim_matter_group_key" msprop:design-time-name="1f7d9a36-1036-47a0-98f6-156286ed11d3" msprop:DbColumnName="dim_matter_group_key" msprop:FriendlyName="dim_matter_group_key" type="xs:int" minOccurs="0" />
                   <xs:element name="client_code" msprop:design-time-name="8664891b-5bd6-4154-9beb-d99e8c7dc74d" msprop:DbColumnName="client_code" msprop:FriendlyName="client_code" minOccurs="0">
@@ -2098,7 +2077,6 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="case_id" msprop:design-time-name="ad834c13-09d2-4403-a1af-04914b21f9ae" msprop:DbColumnName="case_id" msprop:FriendlyName="case_id" type="xs:int" minOccurs="0" />
                   <xs:element name="matter_number" msprop:design-time-name="6de965a3-5d09-4efd-adf4-0a70a1499e5d" msprop:DbColumnName="matter_number" msprop:FriendlyName="matter_number" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
@@ -2132,20 +2110,6 @@
                   <xs:element name="matter_description" msprop:design-time-name="a2c0c009-e0b8-43cb-b157-0dae11fb109f" msprop:DbColumnName="matter_description" msprop:FriendlyName="matter_description" type="xs:string" minOccurs="0" />
                   <xs:element name="date_opened_practice_management" msprop:design-time-name="17165822-81ec-4d6f-bdb0-75d5b27e2959" msprop:DbColumnName="date_opened_practice_management" msprop:FriendlyName="date_opened_practice_management" type="xs:dateTime" minOccurs="0" />
                   <xs:element name="date_closed_case_management" msprop:design-time-name="904a99b3-4267-49f0-84b9-656608812511" msprop:DbColumnName="date_closed_case_management" msprop:FriendlyName="date_closed_case_management" type="xs:dateTime" minOccurs="0" />
-                  <xs:element name="branch_code" msprop:design-time-name="85883e6b-2ae8-4575-bdf8-8973cffcbe3a" msprop:DbColumnName="branch_code" msprop:FriendlyName="branch_code" minOccurs="0">
-                    <xs:simpleType>
-                      <xs:restriction base="xs:string">
-                        <xs:maxLength value="4" />
-                      </xs:restriction>
-                    </xs:simpleType>
-                  </xs:element>
-                  <xs:element name="branch_name" msprop:design-time-name="0101ff29-541b-4402-ab08-9a941d3dc04e" msprop:DbColumnName="branch_name" msprop:FriendlyName="branch_name" minOccurs="0">
-                    <xs:simpleType>
-                      <xs:restriction base="xs:string">
-                        <xs:maxLength value="40" />
-                      </xs:restriction>
-                    </xs:simpleType>
-                  </xs:element>
                   <xs:element name="matter_partner_code" msprop:design-time-name="671a5597-f72b-4264-9c98-f2d56f236cd5" msprop:DbColumnName="matter_partner_code" msprop:FriendlyName="matter_partner_code" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
@@ -2221,13 +2185,6 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="billing_portal_status" msprop:design-time-name="1762e4a4-be13-4895-b9ed-c7cd69173291" msprop:DbColumnName="billing_portal_status" msprop:FriendlyName="billing_portal_status" minOccurs="0">
-                    <xs:simpleType>
-                      <xs:restriction base="xs:string">
-                        <xs:maxLength value="64" />
-                      </xs:restriction>
-                    </xs:simpleType>
-                  </xs:element>
                   <xs:element name="fee_arrangement" msprop:design-time-name="db0cb28a-c302-40c6-be12-4adcb421c1c9" msprop:DbColumnName="fee_arrangement" msprop:FriendlyName="fee_arrangement" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
@@ -2235,28 +2192,13 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="billing_arrangement" msprop:design-time-name="bcca3f0a-aacb-4abe-8628-cf947c526d07" msprop:DbColumnName="billing_arrangement" msprop:FriendlyName="billing_arrangement" minOccurs="0">
+                  <xs:element name="matter" msprop:design-time-name="abb9246f-52a8-4f9e-81dc-9f7a3699e42c" msprop:DbColumnName="matter" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
-                        <xs:maxLength value="16" />
+                        <xs:maxLength value="220" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="matter_category" msprop:design-time-name="74377eb7-cf6c-4612-8860-7be76faecd71" msprop:DbColumnName="matter_category" msprop:FriendlyName="matter_category" minOccurs="0">
-                    <xs:simpleType>
-                      <xs:restriction base="xs:string">
-                        <xs:maxLength value="1000" />
-                      </xs:restriction>
-                    </xs:simpleType>
-                  </xs:element>
-                  <xs:element name="billing_arrangement_description" msprop:design-time-name="af5f6eba-6aa7-41cd-8e9f-d6068e213a6f" msprop:DbColumnName="billing_arrangement_description" msprop:FriendlyName="billing_arrangement_description" minOccurs="0">
-                    <xs:simpleType>
-                      <xs:restriction base="xs:string">
-                        <xs:maxLength value="64" />
-                      </xs:restriction>
-                    </xs:simpleType>
-                  </xs:element>
-                  <xs:element name="matter" msprop:design-time-name="abb9246f-52a8-4f9e-81dc-9f7a3699e42c" msprop:DbColumnName="matter" type="xs:string" minOccurs="0" />
                   <xs:element name="matter_owner_history_key" msprop:design-time-name="62ba1fa8-7c87-450b-912e-127101987ef9" msprop:DbColumnName="matter_owner_history_key" type="xs:int" minOccurs="0" />
                   <xs:element name="instruction_type" msprop:design-time-name="4d4b4779-c664-464d-9639-30317d1a87ba" msprop:DbColumnName="instruction_type" minOccurs="0">
                     <xs:simpleType>
@@ -2274,6 +2216,13 @@
                   </xs:element>
                   <xs:element name="Year_x0020_Closed" msprop:design-time-name="65128830-d96e-4619-8509-5f08a767e2ac" msprop:DbColumnName="Year Closed" type="xs:int" minOccurs="0" />
                   <xs:element name="Year_x0020_Opened" msprop:design-time-name="4f0f5401-b66d-4ca6-ada2-81ae90c05922" msprop:DbColumnName="Year Opened" type="xs:int" minOccurs="0" />
+                  <xs:element name="matter_category" msprop:design-time-name="6fccba08-2d14-4dbf-9fdb-11c2b77f7284" msprop:DbColumnName="matter_category" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1000" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
@@ -2310,7 +2259,7 @@
             <xs:element name="ext_dim_client" msprop:design-time-name="c38de3b3-6937-4eec-9c2b-6108f168c6eb" msprop:IsLogical="True" msprop:FriendlyName="dim_master_client" msprop:DbTableName="dim_master_client" msprop:TableType="View" msprop:QueryDefinition="SELECT        dim_client.dim_client_key, dim_client.source_system_id, REPLACE(REPLACE(REPLACE(ISNULL(dim_client.client_code, ''), CHAR(13), ''), CHAR(10), ''), CHAR(9), '') AS client_code, &#xD;&#xA;                         REPLACE(REPLACE(REPLACE(ISNULL(dim_client.client_name, ''), CHAR(13), ''), CHAR(10), ''), CHAR(9), '') AS client_name, REPLACE(REPLACE(REPLACE(ISNULL(dim_client.client_group_name, ''), CHAR(13), ''), CHAR(10), ''), &#xD;&#xA;                         CHAR(9), '') AS client_group_name, REPLACE(REPLACE(REPLACE(ISNULL(dim_client.client_partner_code, ''), CHAR(13), ''), CHAR(10), ''), CHAR(9), '') AS client_partner_code, &#xD;&#xA;                         REPLACE(REPLACE(REPLACE(ISNULL(dim_client.client_partner_name, ''), CHAR(13), ''), CHAR(10), ''), CHAR(9), '') AS client_partner_name, REPLACE(REPLACE(REPLACE(ISNULL(dim_client.contact_salutation, ''), CHAR(13), ''), &#xD;&#xA;                         CHAR(10), ''), CHAR(9), '') AS contact_salutation, REPLACE(REPLACE(REPLACE(ISNULL(dim_client.contact_name, ''), CHAR(13), ''), CHAR(10), ''), CHAR(9), '') AS contact_name, &#xD;&#xA;                         CASE WHEN REPLACE(REPLACE(REPLACE(ISNULL(dim_client.client_group_name, ''), CHAR(13), ''), CHAR(10), ''), CHAR(9), '') = '' THEN REPLACE(REPLACE(REPLACE(ISNULL(dim_client.client_name, ''), CHAR(13), ''), CHAR(10), &#xD;&#xA;                         ''), CHAR(9), '') ELSE REPLACE(REPLACE(REPLACE(ISNULL(dim_client.client_group_name, ''), CHAR(13), ''), CHAR(10), ''), CHAR(9), '') END AS 'client_group_name_calculated', CASE WHEN client_group_code IS NULL &#xD;&#xA;                         THEN REPLACE(REPLACE(REPLACE(ISNULL(client_code, ''), CHAR(13), ''), CHAR(10), ''), CHAR(9), '') ELSE REPLACE(REPLACE(REPLACE(ISNULL(client_group_code, ''), CHAR(13), ''), CHAR(10), ''), CHAR(9), '') &#xD;&#xA;                         END AS client_group_code_calculated, REPLACE(REPLACE(REPLACE(ISNULL(dim_client.sector, ''), CHAR(13), ''), CHAR(10), ''), CHAR(9), '') AS 'sector', REPLACE(REPLACE(REPLACE(ISNULL(dim_client.segment, ''), CHAR(13), ''), &#xD;&#xA;                         CHAR(10), ''), CHAR(9), '') AS 'segment', REPLACE(REPLACE(REPLACE(ISNULL(dim_client.sub_sector, ''), CHAR(13), ''), CHAR(10), ''), CHAR(9), '') AS 'sub_sector', dim_client.open_date, dim_date.fin_year, &#xD;&#xA;                         REPLACE(REPLACE(REPLACE(ISNULL(dim_client.client_group_partner_name, ''), CHAR(13), ''), CHAR(10), ''), CHAR(9), '') AS client_group_partner_name, &#xD;&#xA;                         CASE WHEN REPLACE(REPLACE(REPLACE(ISNULL(dim_client.client_group_partner_name, ''), CHAR(13), ''), CHAR(10), ''), CHAR(9), '') = '' THEN REPLACE(REPLACE(REPLACE(ISNULL(dim_client.client_partner_name, ''), &#xD;&#xA;                         CHAR(13), ''), CHAR(10), ''), CHAR(9), '') ELSE REPLACE(REPLACE(REPLACE(ISNULL(dim_client.client_group_partner_name, ''), CHAR(13), ''), CHAR(10), ''), CHAR(9), '') END AS client_group_partner_name_calculated, &#xD;&#xA;                         REPLACE(REPLACE(REPLACE(ISNULL(dim_client.generator_status, ''), CHAR(13), ''), CHAR(10), ''), CHAR(9), '') AS generator_status, REPLACE(REPLACE(REPLACE(ISNULL(dim_client.firm_contact_name, ''), CHAR(13), ''), &#xD;&#xA;                         CHAR(10), ''), CHAR(9), '') AS firm_contact_name&#xD;&#xA;FROM            dim_client LEFT OUTER JOIN&#xD;&#xA;                         dim_date ON CAST(dim_date.calendar_date AS DATE) = CAST(dim_client.open_date AS DATE)" msprop:QueryBuilder="SpecificQueryBuilder">
               <xs:complexType>
                 <xs:sequence>
-                  <xs:element name="dim_client_key" msprop:design-time-name="8c87661d-da34-46d0-b35d-398637cf8bb8" msprop:DbColumnName="dim_client_key" msprop:FriendlyName="dim_client_key" type="xs:int" />
+                  <xs:element name="dim_client_key" msprop:design-time-name="8c87661d-da34-46d0-b35d-398637cf8bb8" msprop:DbColumnName="dim_client_key" msprop:FriendlyName="dim_client_key" type="xs:int" minOccurs="0" />
                   <xs:element name="client_partner_code" msprop:design-time-name="33ebf24f-9beb-43d7-af10-f267a6bca69e" msprop:DbColumnName="client_partner_code" msprop:FriendlyName="client_partner_code" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
@@ -2884,7 +2833,7 @@
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="dbo_fact_debt_monthly" msprop:design-time-name="1a797c45-a094-4d5f-b547-7d33fd77a080" msprop:IsLogical="True" msprop:FriendlyName="fact_debt_monthly" msprop:DbTableName="fact_debt_monthly" msprop:TableType="View" msprop:QueryDefinition="SELECT   fact_debt_monthly.dim_transaction_date_key, fact_debt_monthly.dim_mat_head_history_key, fact_debt_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, &#xD;&#xA;                         fact_dimension_main.dim_fed_hierarchy_history_key, fact_debt_monthly.dim_days_banding_key, fact_debt_monthly.dim_fed_matter_owner_key, fact_debt_monthly.dim_client_key, &#xD;&#xA;                         fact_debt_monthly.source_system_id, fact_debt_monthly.client_code, fact_debt_monthly.matter_number, fact_debt_monthly.matter_owner, fact_debt_monthly.bill_number, &#xD;&#xA;                         fact_debt_monthly.bill_date, fact_debt_monthly.outstanding_total_bill, fact_debt_monthly.outstanding_costs, fact_debt_monthly.age_of_debt, fact_debt_monthly.debt_date, &#xD;&#xA;                         fact_debt_monthly.dim_bill_key, dim_debt_date.dim_date_key AS dim_debt_date_key, fact_dimension_main.master_client_code, billdate.dim_date_key AS bill_date_key&#xD;&#xA;FROM         fact_debt_monthly LEFT OUTER JOIN&#xD;&#xA;                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_debt_monthly.master_fact_key INNER JOIN&#xD;&#xA;                         dim_date AS dim_debt_date ON dim_debt_date.calendar_date = CAST(fact_debt_monthly.debt_date AS DATE) INNER JOIN&#xD;&#xA;                         dim_date AS billdate ON billdate.calendar_date = CAST(fact_debt_monthly.bill_date AS DATE)&#xD;&#xA;WHERE     (fact_debt_monthly.dim_transaction_date_key &gt;= '20180501')" msprop:QueryBuilder="SpecificQueryBuilder">
+            <xs:element name="dbo_fact_debt_monthly" msprop:design-time-name="1a797c45-a094-4d5f-b547-7d33fd77a080" msprop:IsLogical="True" msprop:FriendlyName="fact_debt_monthly" msprop:DbTableName="fact_debt_monthly" msprop:TableType="View" msprop:QueryDefinition="SELECT   fact_debt_monthly.dim_transaction_date_key, fact_debt_monthly.dim_mat_head_history_key, fact_debt_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, &#xD;&#xA;                         fact_dimension_main.dim_fed_hierarchy_history_key, fact_debt_monthly.dim_days_banding_key, fact_debt_monthly.dim_fed_matter_owner_key, fact_debt_monthly.dim_client_key, &#xD;&#xA;                         fact_debt_monthly.source_system_id, fact_debt_monthly.client_code, fact_debt_monthly.matter_number, fact_debt_monthly.matter_owner, fact_debt_monthly.bill_number, &#xD;&#xA;                         fact_debt_monthly.bill_date, fact_debt_monthly.outstanding_total_bill, fact_debt_monthly.outstanding_costs, fact_debt_monthly.age_of_debt, fact_debt_monthly.debt_date, &#xD;&#xA;                         fact_debt_monthly.dim_bill_key, dim_debt_date.dim_date_key AS dim_debt_date_key, ISNULL(dim_client.client_code, 'Unknown') AS master_client_code, &#xD;&#xA;                         billdate.dim_date_key AS bill_date_key&#xD;&#xA;FROM         fact_debt_monthly LEFT OUTER JOIN&#xD;&#xA;                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_debt_monthly.master_fact_key LEFT OUTER JOIN&#xD;&#xA;                         dim_client ON dim_client.client_code = fact_dimension_main.master_client_code INNER JOIN&#xD;&#xA;                         dim_date AS dim_debt_date ON dim_debt_date.calendar_date = CAST(fact_debt_monthly.debt_date AS DATE) INNER JOIN&#xD;&#xA;                         dim_date AS billdate ON billdate.calendar_date = CAST(CASE WHEN fact_debt_monthly.bill_date &lt; '20100501' THEN '20100501' ELSE fact_debt_monthly.bill_date END AS DATE)&#xD;&#xA;WHERE     (fact_debt_monthly.dim_transaction_date_key &gt;= '20180501')" msprop:QueryBuilder="SpecificQueryBuilder">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="dim_client_key" msprop:design-time-name="1d0af12a-162c-4f22-a3f9-242b571aeda0" msprop:DbColumnName="dim_client_key" msprop:FriendlyName="dim_client_key" type="xs:int" minOccurs="0" />
@@ -2933,11 +2882,11 @@
                   <xs:element name="master_client_code" msprop:design-time-name="88d32e09-045a-4ad6-b479-4d8a9307f123" msprop:DbColumnName="master_client_code" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
-                        <xs:maxLength value="12" />
+                        <xs:maxLength value="8" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="bill_date_key" msprop:DbColumnName="bill_date_key" msprop:design-time-name="c84965b1-1a0c-4f94-ab85-5a12869d7c2d" type="xs:int" minOccurs="0" />
+                  <xs:element name="bill_date_key" msprop:design-time-name="c84965b1-1a0c-4f94-ab85-5a12869d7c2d" msprop:DbColumnName="bill_date_key" type="xs:int" minOccurs="0" />
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
@@ -2965,7 +2914,7 @@
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="dbo_fact_disbursements_detail_monthly" msprop:design-time-name="2d409bf8-00fd-486a-a1b1-2a744ad7408e" msprop:IsLogical="True" msprop:FriendlyName="fact_disbursements_detail_monthly" msprop:DbTableName="fact_disbursements_detail_monthly" msprop:TableType="View" msprop:QueryDefinition="SELECT        fact_disbursements_detail_monthly.dim_transaction_date_key, fact_disbursements_detail_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, &#xD;&#xA;                         fact_disbursements_detail_monthly.dim_fed_hierarchy_history_key, dim_days_banding.dim_days_banding_key, fact_disbursements_detail_monthly.dim_client_key, &#xD;&#xA;                         CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' ELSE dim_disbursement_date_key END AS dim_disbursement_date_key, SUM(fact_disbursements_detail_monthly.total_unbilled_disbursements) &#xD;&#xA;                         AS total_unbilled_disbursements, fact_disbursements_detail_monthly.dim_bill_key, fact_dimension_main.master_client_code&#xD;&#xA;FROM            fact_disbursements_detail_monthly INNER JOIN&#xD;&#xA;                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_disbursements_detail_monthly.master_fact_key INNER JOIN&#xD;&#xA;                         dim_date AS trandate ON trandate.dim_date_key = fact_disbursements_detail_monthly.dim_transaction_date_key INNER JOIN&#xD;&#xA;                         dim_days_banding ON CASE WHEN dim_transaction_date_key =&#xD;&#xA;                             (SELECT        MAX(dim_transaction_date_key)&#xD;&#xA;                               FROM            fact_disbursements_detail_monthly) THEN DATEDIFF(d, workdate, GETDATE()) ELSE DATEDIFF(d, workdate, trandate.calendar_date) END BETWEEN dim_days_banding.startdays AND &#xD;&#xA;                         dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'&#xD;&#xA;WHERE        (fact_disbursements_detail_monthly.dim_transaction_date_key &gt;= '20180501') AND (fact_disbursements_detail_monthly.dim_bill_key = 0) AND (fact_disbursements_detail_monthly.total_unbilled_disbursements &lt;&gt; 0)&#xD;&#xA;GROUP BY CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' ELSE dim_disbursement_date_key END, fact_disbursements_detail_monthly.dim_transaction_date_key, &#xD;&#xA;                         fact_disbursements_detail_monthly.dim_matter_header_curr_key, fact_disbursements_detail_monthly.dim_fed_hierarchy_history_key, dim_days_banding.dim_days_banding_key, &#xD;&#xA;                         fact_disbursements_detail_monthly.dim_client_key, fact_disbursements_detail_monthly.dim_bill_key, fact_dimension_main.master_client_code" msprop:QueryBuilder="SpecificQueryBuilder">
+            <xs:element name="dbo_fact_disbursements_detail_monthly" msprop:design-time-name="2d409bf8-00fd-486a-a1b1-2a744ad7408e" msprop:IsLogical="True" msprop:FriendlyName="fact_disbursements_detail_monthly" msprop:DbTableName="fact_disbursements_detail_monthly" msprop:TableType="View" msprop:QueryDefinition="SELECT   fact_disbursements_detail_monthly.dim_transaction_date_key, fact_disbursements_detail_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, &#xD;&#xA;                         fact_disbursements_detail_monthly.dim_fed_hierarchy_history_key, dim_days_banding.dim_days_banding_key, fact_disbursements_detail_monthly.dim_client_key, &#xD;&#xA;                         CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' ELSE dim_disbursement_date_key END AS dim_disbursement_date_key, &#xD;&#xA;                         SUM(fact_disbursements_detail_monthly.total_unbilled_disbursements) AS total_unbilled_disbursements, fact_disbursements_detail_monthly.dim_bill_key, &#xD;&#xA;                         ISNULL(dim_client.client_code, 'Unknown') AS master_client_code, fact_dimension_main.dim_fed_hierarchy_history_key AS matter_owner_hist_key&#xD;&#xA;FROM         fact_disbursements_detail_monthly INNER JOIN&#xD;&#xA;                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_disbursements_detail_monthly.master_fact_key LEFT OUTER JOIN&#xD;&#xA;                         dim_client ON dim_client.client_code = fact_dimension_main.master_client_code INNER JOIN&#xD;&#xA;                         dim_date AS trandate ON trandate.dim_date_key = fact_disbursements_detail_monthly.dim_transaction_date_key INNER JOIN&#xD;&#xA;                         dim_days_banding ON CASE WHEN dim_transaction_date_key =&#xD;&#xA;                             (SELECT   MAX(dim_transaction_date_key)&#xD;&#xA;                                FROM         fact_disbursements_detail_monthly) THEN DATEDIFF(d, workdate, GETDATE()) ELSE DATEDIFF(d, workdate, trandate.calendar_date) END BETWEEN &#xD;&#xA;                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'&#xD;&#xA;WHERE     (fact_disbursements_detail_monthly.dim_transaction_date_key &gt;= '20180501') AND (fact_disbursements_detail_monthly.dim_bill_key = 0) AND &#xD;&#xA;                         (fact_disbursements_detail_monthly.total_unbilled_disbursements &lt;&gt; 0)&#xD;&#xA;GROUP BY CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' ELSE dim_disbursement_date_key END, fact_disbursements_detail_monthly.dim_transaction_date_key, &#xD;&#xA;                         fact_disbursements_detail_monthly.dim_matter_header_curr_key, fact_disbursements_detail_monthly.dim_fed_hierarchy_history_key, dim_days_banding.dim_days_banding_key, &#xD;&#xA;                         fact_disbursements_detail_monthly.dim_client_key, fact_disbursements_detail_monthly.dim_bill_key, ISNULL(dim_client.client_code, 'Unknown'), &#xD;&#xA;                         fact_dimension_main.dim_fed_hierarchy_history_key, fact_dimension_main.client_code" msprop:QueryBuilder="SpecificQueryBuilder">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="dim_fed_hierarchy_history_key" msprop:design-time-name="3f16fc05-44ab-4b1b-9431-f3155a76f238" msprop:DbColumnName="dim_fed_hierarchy_history_key" msprop:FriendlyName="dim_fed_hierarchy_history_key" type="xs:int" minOccurs="0" />
@@ -2979,10 +2928,11 @@
                   <xs:element name="master_client_code" msprop:design-time-name="ec2b7131-d07c-45f3-a9ef-ea21da63a549" msprop:DbColumnName="master_client_code" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
-                        <xs:maxLength value="12" />
+                        <xs:maxLength value="8" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
+                  <xs:element name="matter_owner_hist_key" msprop:design-time-name="d3a43a1a-2aa8-48ab-a69f-0fe2898ca381" msprop:DbColumnName="matter_owner_hist_key" type="xs:int" minOccurs="0" />
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
@@ -3107,7 +3057,6 @@
           <msdata:Relationship name="fact_disbursements_detail_monthly-dim_matter_header_current" msdata:parent="dbo_dim_matter_header_current" msdata:child="dbo_fact_disbursements_detail_monthly" msdata:parentkey="dim_matter_header_curr_key" msdata:childkey="dim_matter_header_current_key" msprop:IsLogical="True" msprop:Description="" />
           <msdata:Relationship name="fact_disbursements_detail_monthly-dim_client" msdata:parent="dbo_dim_client" msdata:child="dbo_fact_disbursements_detail_monthly" msdata:parentkey="dim_client_key" msdata:childkey="dim_client_key" msprop:IsLogical="True" msprop:Description="" />
           <msdata:Relationship name="fact_disbursements_detail_monthly-dim_date" msdata:parent="dbo_dim_date" msdata:child="dbo_fact_disbursements_detail_monthly" msdata:parentkey="dim_date_key" msdata:childkey="dim_disbursement_date_key" msprop:IsLogical="True" msprop:Description="" />
-          <msdata:Relationship name="fact_disbursements_detail_monthly-dim_master_client" msdata:parent="ext_dim_client" msdata:child="dbo_fact_disbursements_detail_monthly" msdata:parentkey="client_code" msdata:childkey="master_client_code" msprop:IsLogical="True" msprop:Description="" />
           <msdata:Relationship name="fact_disbursements_detail_monthly-dim_bill" msdata:parent="dbo_dim_bill" msdata:child="dbo_fact_disbursements_detail_monthly" msdata:parentkey="dim_bill_key" msdata:childkey="dim_bill_key" msprop:IsLogical="True" msprop:Description="" />
           <msdata:Relationship name="fact_disbursements_detail_monthly-dim_days_banding" msdata:parent="dbo_dim_days_banding" msdata:child="dbo_fact_disbursements_detail_monthly" msdata:parentkey="dim_days_banding_key" msdata:childkey="dim_days_banding_key" msprop:IsLogical="True" msprop:Description="" />
           <msdata:Relationship name="Dim_x0020_Snapshot-fact_wip" msdata:parent="dbo_fact_wip_daily" msdata:child="Dim_x0020_Snapshot" msdata:parentkey="dim_transaction_date_key" msdata:childkey="dim_transaction_date_key" msprop:IsLogical="True" msprop:Description="" />
