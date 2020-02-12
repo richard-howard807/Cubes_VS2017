@@ -6,24 +6,26 @@
       <Partitions>
         <Partition dwd:design-time-name="619797a1-789d-426e-9917-da7f9f06fd86">
           <ID>Fact Bill</ID>
-          <Name>Fact Bill Current</Name>
+          <Name>Fact Bill Current Year</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="390cc947-6787-49d5-9795-c4d73c956f05">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="c03b5131-e2c8-4c4a-ab31-56c715727008">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_bill.dim_matter_header_curr_key, fact_bill.dim_client_key, fact_bill.dim_bill_date_key, fact_bill.dim_bill_key, fact_bill.dim_posting_date_key, fact_bill.dim_last_pay_date_key, 
                          fact_bill.dim_address_key, fact_bill.dim_write_off_codes_key, fact_bill.master_fact_key, fact_bill.source_system_id, fact_bill.client_code, fact_bill.matter_number, fact_bill.bill_number, 
                          fact_bill.bill_sequence, fact_bill.bill_total, fact_bill.fees_total, fact_bill.paid_disbursements, fact_bill.unpaid_disbursements, fact_bill.admin_charges_total, fact_bill.vat_amount, 
                          fact_bill.amount_paid, fact_bill.amount_outstanding, fact_bill.fact_bill_key, fact_bill.dss_update_time, fact_bill.dim_bill_debt_narrative_key, 
-                         dim_fed_hierarchy_history.dim_fed_hierarchy_history_key AS matter_owner_history_key
+                         dim_fed_hierarchy_history.dim_fed_hierarchy_history_key AS matter_owner_history_key, dim_days_banding_key
 FROM         fact_bill INNER JOIN
                          dim_matter_header_current ON dim_matter_header_current.dim_matter_header_curr_key = fact_bill.dim_matter_header_curr_key INNER JOIN
                          dim_date ON fact_bill.dim_bill_date_key = dim_date.dim_date_key LEFT OUTER JOIN
                          dim_fed_hierarchy_history ON dim_fed_hierarchy_history.fed_code = dim_matter_header_current.fee_earner_code AND dim_date.calendar_date BETWEEN 
                          dim_fed_hierarchy_history.dss_start_date AND dim_fed_hierarchy_history.dss_end_date
-WHERE     (fact_bill.dim_bill_date_key &gt;= 20190501)</QueryDefinition>
+						 INNER join dim_days_banding on DATEDIFF(d, calendar_date, GETDATE()) BETWEEN 
+                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+WHERE   current_fin_year = 'Current'</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
@@ -32,25 +34,153 @@ WHERE     (fact_bill.dim_bill_date_key &gt;= 20190501)</QueryDefinition>
         </Partition>
         <Partition dwd:design-time-name="e4729c38-9047-42a4-a9bf-04281cf9a7c9">
           <ID>Fact Bill 1</ID>
-          <Name>Fact Bill Historical</Name>
+          <Name>Fact Bill 1 and 2 years old</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="e0863e3e-3773-4297-96e2-0c11788c5dc7">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="90dd6254-df96-43f9-a30d-ee20385d2793">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_bill.dim_matter_header_curr_key, fact_bill.dim_client_key, fact_bill.dim_bill_date_key, fact_bill.dim_bill_key, fact_bill.dim_posting_date_key, fact_bill.dim_last_pay_date_key, 
                          fact_bill.dim_address_key, fact_bill.dim_write_off_codes_key, fact_bill.master_fact_key, fact_bill.source_system_id, fact_bill.client_code, fact_bill.matter_number, fact_bill.bill_number, 
                          fact_bill.bill_sequence, fact_bill.bill_total, fact_bill.fees_total, fact_bill.paid_disbursements, fact_bill.unpaid_disbursements, fact_bill.admin_charges_total, fact_bill.vat_amount, 
                          fact_bill.amount_paid, fact_bill.amount_outstanding, fact_bill.fact_bill_key, fact_bill.dss_update_time, fact_bill.dim_bill_debt_narrative_key, 
-                         dim_fed_hierarchy_history.dim_fed_hierarchy_history_key AS matter_owner_history_key
+                         dim_fed_hierarchy_history.dim_fed_hierarchy_history_key AS matter_owner_history_key, dim_days_banding_key
 FROM         fact_bill INNER JOIN
                          dim_matter_header_current ON dim_matter_header_current.dim_matter_header_curr_key = fact_bill.dim_matter_header_curr_key INNER JOIN
                          dim_date ON fact_bill.dim_bill_date_key = dim_date.dim_date_key LEFT OUTER JOIN
                          dim_fed_hierarchy_history ON dim_fed_hierarchy_history.fed_code = dim_matter_header_current.fee_earner_code AND dim_date.calendar_date BETWEEN 
                          dim_fed_hierarchy_history.dss_start_date AND dim_fed_hierarchy_history.dss_end_date
-WHERE     (fact_bill.dim_bill_date_key &lt; 20190501)
-and  (fact_bill.dim_bill_date_key &gt;=20100501)</QueryDefinition>
+						 INNER join dim_days_banding on DATEDIFF(d, calendar_date, GETDATE()) BETWEEN 
+                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+WHERE   fin_year BETWEEN (SELECT DISTINCT fin_year - 2
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current' )  AND   (SELECT DISTINCT fin_year - 1
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current'		)</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="90f1a68c-e0c8-4323-b266-749a0d7af5ac">
+          <ID>Fact Bill 3 and 4 years old</ID>
+          <Name>Fact Bill 3 and 4 years old</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="849e4b59-c69c-4b5b-a4f4-907c80f5cb99">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT   fact_bill.dim_matter_header_curr_key, fact_bill.dim_client_key, fact_bill.dim_bill_date_key, fact_bill.dim_bill_key, fact_bill.dim_posting_date_key, fact_bill.dim_last_pay_date_key, 
+                         fact_bill.dim_address_key, fact_bill.dim_write_off_codes_key, fact_bill.master_fact_key, fact_bill.source_system_id, fact_bill.client_code, fact_bill.matter_number, fact_bill.bill_number, 
+                         fact_bill.bill_sequence, fact_bill.bill_total, fact_bill.fees_total, fact_bill.paid_disbursements, fact_bill.unpaid_disbursements, fact_bill.admin_charges_total, fact_bill.vat_amount, 
+                         fact_bill.amount_paid, fact_bill.amount_outstanding, fact_bill.fact_bill_key, fact_bill.dss_update_time, fact_bill.dim_bill_debt_narrative_key, 
+                         dim_fed_hierarchy_history.dim_fed_hierarchy_history_key AS matter_owner_history_key, dim_days_banding_key
+FROM         fact_bill INNER JOIN
+                         dim_matter_header_current ON dim_matter_header_current.dim_matter_header_curr_key = fact_bill.dim_matter_header_curr_key INNER JOIN
+                         dim_date ON fact_bill.dim_bill_date_key = dim_date.dim_date_key LEFT OUTER JOIN
+                         dim_fed_hierarchy_history ON dim_fed_hierarchy_history.fed_code = dim_matter_header_current.fee_earner_code AND dim_date.calendar_date BETWEEN 
+                         dim_fed_hierarchy_history.dss_start_date AND dim_fed_hierarchy_history.dss_end_date
+						 INNER join dim_days_banding on DATEDIFF(d, calendar_date, GETDATE()) BETWEEN 
+                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+WHERE   fin_year BETWEEN (SELECT DISTINCT fin_year - 4
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current' )  AND   (SELECT DISTINCT fin_year - 3
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current'		)</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="7898e1b0-b840-4f55-bd97-37b7b54a7e41">
+          <ID>Fact Bill 5 and 6 years old</ID>
+          <Name>Fact Bill 5 and 6 years old</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="ffdf276e-578b-48fb-abdf-6e85908a6319">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT   fact_bill.dim_matter_header_curr_key, fact_bill.dim_client_key, fact_bill.dim_bill_date_key, fact_bill.dim_bill_key, fact_bill.dim_posting_date_key, fact_bill.dim_last_pay_date_key, 
+                         fact_bill.dim_address_key, fact_bill.dim_write_off_codes_key, fact_bill.master_fact_key, fact_bill.source_system_id, fact_bill.client_code, fact_bill.matter_number, fact_bill.bill_number, 
+                         fact_bill.bill_sequence, fact_bill.bill_total, fact_bill.fees_total, fact_bill.paid_disbursements, fact_bill.unpaid_disbursements, fact_bill.admin_charges_total, fact_bill.vat_amount, 
+                         fact_bill.amount_paid, fact_bill.amount_outstanding, fact_bill.fact_bill_key, fact_bill.dss_update_time, fact_bill.dim_bill_debt_narrative_key, 
+                         dim_fed_hierarchy_history.dim_fed_hierarchy_history_key AS matter_owner_history_key, dim_days_banding.dim_days_banding_key
+FROM         fact_bill INNER JOIN
+                         dim_matter_header_current ON dim_matter_header_current.dim_matter_header_curr_key = fact_bill.dim_matter_header_curr_key INNER JOIN
+                         dim_date ON fact_bill.dim_bill_date_key = dim_date.dim_date_key LEFT OUTER JOIN
+                         dim_fed_hierarchy_history ON dim_fed_hierarchy_history.fed_code = dim_matter_header_current.fee_earner_code AND dim_date.calendar_date BETWEEN 
+                         dim_fed_hierarchy_history.dss_start_date AND dim_fed_hierarchy_history.dss_end_date INNER JOIN
+                         dim_days_banding ON DATEDIFF(d, calendar_date, GETDATE()) BETWEEN dim_days_banding.startdays AND dim_days_banding.enddays AND 
+                         dim_days_banding.banding_category = 'grouping3'
+WHERE   fin_year BETWEEN (SELECT DISTINCT fin_year - 6
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current' )  AND   (SELECT DISTINCT fin_year - 5
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current'		)</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="fd5643d4-281a-41a9-a06a-aeb4cb5d2eb9">
+          <ID>Fact Bill 7 and 8 years old</ID>
+          <Name>Fact Bill 7 and 8 years old</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="03182c02-57ce-4e81-b82a-f8a4f0d352c6">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT   fact_bill.dim_matter_header_curr_key, fact_bill.dim_client_key, fact_bill.dim_bill_date_key, fact_bill.dim_bill_key, fact_bill.dim_posting_date_key, fact_bill.dim_last_pay_date_key, 
+                         fact_bill.dim_address_key, fact_bill.dim_write_off_codes_key, fact_bill.master_fact_key, fact_bill.source_system_id, fact_bill.client_code, fact_bill.matter_number, fact_bill.bill_number, 
+                         fact_bill.bill_sequence, fact_bill.bill_total, fact_bill.fees_total, fact_bill.paid_disbursements, fact_bill.unpaid_disbursements, fact_bill.admin_charges_total, fact_bill.vat_amount, 
+                         fact_bill.amount_paid, fact_bill.amount_outstanding, fact_bill.fact_bill_key, fact_bill.dss_update_time, fact_bill.dim_bill_debt_narrative_key, 
+                         dim_fed_hierarchy_history.dim_fed_hierarchy_history_key AS matter_owner_history_key, dim_days_banding.dim_days_banding_key
+FROM         fact_bill INNER JOIN
+                         dim_matter_header_current ON dim_matter_header_current.dim_matter_header_curr_key = fact_bill.dim_matter_header_curr_key INNER JOIN
+                         dim_date ON fact_bill.dim_bill_date_key = dim_date.dim_date_key LEFT OUTER JOIN
+                         dim_fed_hierarchy_history ON dim_fed_hierarchy_history.fed_code = dim_matter_header_current.fee_earner_code AND dim_date.calendar_date BETWEEN 
+                         dim_fed_hierarchy_history.dss_start_date AND dim_fed_hierarchy_history.dss_end_date INNER JOIN
+                         dim_days_banding ON DATEDIFF(d, calendar_date, GETDATE()) BETWEEN dim_days_banding.startdays AND dim_days_banding.enddays AND 
+                         dim_days_banding.banding_category = 'grouping3'
+WHERE   fin_year BETWEEN (SELECT DISTINCT fin_year - 8
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current' )  AND   (SELECT DISTINCT fin_year - 7
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current'		)</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="2b5a5869-1442-4aa7-97e9-d18eeaeca6ce">
+          <ID>Fact Bill greater than 8 years old</ID>
+          <Name>Fact Bill greater than 8 years old</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="37e33d92-d7fa-4b15-a726-2cc2b27b118c">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT   fact_bill.dim_matter_header_curr_key, fact_bill.dim_client_key, fact_bill.dim_bill_date_key, fact_bill.dim_bill_key, fact_bill.dim_posting_date_key, fact_bill.dim_last_pay_date_key, 
+                         fact_bill.dim_address_key, fact_bill.dim_write_off_codes_key, fact_bill.master_fact_key, fact_bill.source_system_id, fact_bill.client_code, fact_bill.matter_number, fact_bill.bill_number, 
+                         fact_bill.bill_sequence, fact_bill.bill_total, fact_bill.fees_total, fact_bill.paid_disbursements, fact_bill.unpaid_disbursements, fact_bill.admin_charges_total, fact_bill.vat_amount, 
+                         fact_bill.amount_paid, fact_bill.amount_outstanding, fact_bill.fact_bill_key, fact_bill.dss_update_time, fact_bill.dim_bill_debt_narrative_key, 
+                         dim_fed_hierarchy_history.dim_fed_hierarchy_history_key AS matter_owner_history_key, dim_days_banding.dim_days_banding_key
+FROM         fact_bill INNER JOIN
+                         dim_matter_header_current ON dim_matter_header_current.dim_matter_header_curr_key = fact_bill.dim_matter_header_curr_key INNER JOIN
+                         dim_date ON fact_bill.dim_bill_date_key = dim_date.dim_date_key LEFT OUTER JOIN
+                         dim_fed_hierarchy_history ON dim_fed_hierarchy_history.fed_code = dim_matter_header_current.fee_earner_code AND dim_date.calendar_date BETWEEN 
+                         dim_fed_hierarchy_history.dss_start_date AND dim_fed_hierarchy_history.dss_end_date INNER JOIN
+                         dim_days_banding ON DATEDIFF(d, calendar_date, GETDATE()) BETWEEN dim_days_banding.startdays AND dim_days_banding.enddays AND 
+                         dim_days_banding.banding_category = 'grouping3'
+WHERE   fin_year &lt; (SELECT DISTINCT fin_year - 8
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current' )  
+AND  (fact_bill.dim_bill_date_key &gt;= 20100501)</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
@@ -63,22 +193,30 @@ and  (fact_bill.dim_bill_date_key &gt;=20100501)</QueryDefinition>
       <Partitions>
         <Partition dwd:design-time-name="becdac2b-d61d-4a28-8a0f-377f75d0448e">
           <ID>Fact Bill Activity</ID>
-          <Name>Fact Bill Activity Current</Name>
+          <Name>Fact Bill Activity Current Year</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="a53b0c45-5517-4cf1-b8b5-7a3d297f9830">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="758bdc40-8354-44df-9388-627c1b43ad56">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   CAST(fact_bill_activity_key AS BIGINT) AS fact_bill_activity_key, dim_client_key, dim_bill_date_key, dim_bill_key, dim_fed_hierarchy_history_key, dim_matter_header_curr_key, 
-                         billed_time, bill_amount
+                         billed_time, bill_amount, dim_days_banding_key
 FROM         fact_bill_activity
-WHERE     (dim_bill_date_key &gt;= 20190501)
+INNER join dim_days_banding on DATEDIFF(d, gldate, GETDATE()) BETWEEN 
+                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+WHERE     dim_bill_date_key IN (SELECT dim_date_key FROM dbo.dim_date WHERE current_fin_year = 'Current')
+
 UNION ALL
+
 SELECT   CAST('999' + CAST(transaction_sequence_number AS VARCHAR(25)) AS bigint) AS EXPR1, dim_client_key, dim_orig_posting_date_key, dim_bill_key, dim_fed_hierarchy_history_key, 
-                         dim_matter_header_curr_key, NULL AS EXPR2, NULL AS EXPR3
+                         dim_matter_header_curr_key, NULL AS EXPR2, NULL AS EXPR3, dim_days_banding_key
 FROM         fact_billable_time_activity
-WHERE     (dim_bill_key = 0) AND (dim_orig_posting_date_key IS NOT NULL) AND (dim_orig_posting_date_key &gt;= 20190501)</QueryDefinition>
+INNER join dim_days_banding on DATEDIFF(d,  CAST(CONVERT(CHAR(10), dim_orig_posting_date_key, 120) AS DATE), GETDATE()) BETWEEN 
+                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+WHERE     (dim_bill_key = 0) 
+AND (dim_orig_posting_date_key IS NOT NULL)
+and     dim_orig_posting_date_key IN (SELECT dim_date_key FROM dbo.dim_date WHERE current_fin_year = 'Current')</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
@@ -87,22 +225,192 @@ WHERE     (dim_bill_key = 0) AND (dim_orig_posting_date_key IS NOT NULL) AND (di
         </Partition>
         <Partition dwd:design-time-name="f3cbf25d-732d-42fb-a028-7e4bc48c0802">
           <ID>Fact Bill Activity Historical</ID>
-          <Name>Fact Bill Activity Historical</Name>
+          <Name>Fact Bill Activity 1 and 2 years old</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="7ffe6bc4-cabc-4939-96eb-8bbd2dc988d7">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="ba832895-1060-4bed-aa35-c6da02b3435c">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   CAST(fact_bill_activity_key AS BIGINT) AS fact_bill_activity_key, dim_client_key, dim_bill_date_key, dim_bill_key, dim_fed_hierarchy_history_key, dim_matter_header_curr_key, 
-                         billed_time, bill_amount
+                         billed_time, bill_amount, dim_days_banding_key
 FROM         fact_bill_activity
-WHERE     (dim_bill_date_key &gt;= 20100501) and   (dim_bill_date_key &lt; 20190501)
+INNER join dim_days_banding on DATEDIFF(d, gldate, GETDATE()) BETWEEN 
+                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+WHERE     dim_bill_date_key IN (SELECT dim_date_key FROM dbo.dim_date WHERE fin_year BETWEEN  (SELECT DISTINCT fin_year - 2
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current' )  AND   (SELECT DISTINCT fin_year - 1
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current'		)	)
+
 UNION ALL
+
 SELECT   CAST('999' + CAST(transaction_sequence_number AS VARCHAR(25)) AS bigint) AS EXPR1, dim_client_key, dim_orig_posting_date_key, dim_bill_key, dim_fed_hierarchy_history_key, 
-                         dim_matter_header_curr_key, NULL AS EXPR2, NULL AS EXPR3
+                         dim_matter_header_curr_key, NULL AS EXPR2, NULL AS EXPR3, dim_days_banding_key
 FROM         fact_billable_time_activity
-WHERE     (dim_bill_key = 0) AND (dim_orig_posting_date_key IS NOT NULL) AND (dim_orig_posting_date_key &gt;= 20100501) and   (dim_orig_posting_date_key &lt; 20190501)</QueryDefinition>
+INNER join dim_days_banding on DATEDIFF(d, CAST(CONVERT(CHAR(10), dim_orig_posting_date_key, 120) AS DATE), GETDATE()) BETWEEN 
+                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+WHERE     (dim_bill_key = 0) 
+AND (dim_orig_posting_date_key IS NOT NULL)
+and     dim_orig_posting_date_key IN (SELECT dim_date_key FROM dbo.dim_date WHERE fin_year BETWEEN  (SELECT DISTINCT fin_year - 2
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current' )  AND   (SELECT DISTINCT fin_year - 1
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current'		)	)</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="65057f66-6a1c-41da-aea1-a0943752bf1c">
+          <ID>Fact Bill Activity 3 and 4 years old</ID>
+          <Name>Fact Bill Activity 3 and 4 years old</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="6f137214-5b9f-4cde-98c6-3e50a924a1df">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT   CAST(fact_bill_activity_key AS BIGINT) AS fact_bill_activity_key, dim_client_key, dim_bill_date_key, dim_bill_key, dim_fed_hierarchy_history_key, dim_matter_header_curr_key, 
+                         billed_time, bill_amount, dim_days_banding_key
+FROM         fact_bill_activity
+INNER join dim_days_banding on DATEDIFF(d, gldate, GETDATE()) BETWEEN 
+                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+WHERE     dim_bill_date_key IN (SELECT dim_date_key FROM dbo.dim_date WHERE fin_year BETWEEN  (SELECT DISTINCT fin_year - 4
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current' )  AND   (SELECT DISTINCT fin_year - 3
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current'		)	)
+
+UNION ALL
+
+SELECT   CAST('999' + CAST(transaction_sequence_number AS VARCHAR(25)) AS bigint) AS EXPR1, dim_client_key, dim_orig_posting_date_key, dim_bill_key, dim_fed_hierarchy_history_key, 
+                         dim_matter_header_curr_key, NULL AS EXPR2, NULL AS EXPR3, dim_days_banding_key
+FROM         fact_billable_time_activity
+INNER join dim_days_banding on DATEDIFF(d, CAST(CONVERT(CHAR(10), dim_orig_posting_date_key, 120) AS DATE), GETDATE()) BETWEEN 
+                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+WHERE     (dim_bill_key = 0) 
+AND (dim_orig_posting_date_key IS NOT NULL)
+and     dim_orig_posting_date_key IN (SELECT dim_date_key FROM dbo.dim_date WHERE fin_year BETWEEN  (SELECT DISTINCT fin_year - 4
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current' )  AND   (SELECT DISTINCT fin_year - 3
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current'		)	)</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="671acb96-fdf4-4520-970b-3661d70a5e30">
+          <ID>Fact Bill Activity 5 and 6 years old</ID>
+          <Name>Fact Bill Activity 5 and 6 years old</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="5295f786-1bee-41a7-9778-cafe776835c6">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT   CAST(fact_bill_activity_key AS BIGINT) AS fact_bill_activity_key, dim_client_key, dim_bill_date_key, dim_bill_key, dim_fed_hierarchy_history_key, dim_matter_header_curr_key, 
+                         billed_time, bill_amount, dim_days_banding_key
+FROM         fact_bill_activity
+INNER join dim_days_banding on DATEDIFF(d, gldate, GETDATE()) BETWEEN 
+                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+WHERE     dim_bill_date_key IN (SELECT dim_date_key FROM dbo.dim_date WHERE fin_year BETWEEN  (SELECT DISTINCT fin_year - 6
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current' )  AND   (SELECT DISTINCT fin_year - 5
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current'		)	)
+
+UNION ALL
+
+SELECT   CAST('999' + CAST(transaction_sequence_number AS VARCHAR(25)) AS bigint) AS EXPR1, dim_client_key, dim_orig_posting_date_key, dim_bill_key, dim_fed_hierarchy_history_key, 
+                         dim_matter_header_curr_key, NULL AS EXPR2, NULL AS EXPR3, dim_days_banding_key
+FROM         fact_billable_time_activity
+INNER join dim_days_banding on DATEDIFF(d, CAST(CONVERT(CHAR(10), dim_orig_posting_date_key, 120) AS DATE), GETDATE()) BETWEEN 
+                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+WHERE     (dim_bill_key = 0) 
+AND (dim_orig_posting_date_key IS NOT NULL)
+and     dim_orig_posting_date_key IN (SELECT dim_date_key FROM dbo.dim_date WHERE fin_year BETWEEN  (SELECT DISTINCT fin_year - 6
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current' )  AND   (SELECT DISTINCT fin_year - 5
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current'		)	)</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="a19cd5ad-beb7-4804-ad22-d25136e30e9d">
+          <ID>Fact Bill Activity 7 and 8 years old</ID>
+          <Name>Fact Bill Activity 7 and 8 years old</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="4966853a-0267-4c25-a5f0-b9f571d36caf">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT   CAST(fact_bill_activity_key AS BIGINT) AS fact_bill_activity_key, dim_client_key, dim_bill_date_key, dim_bill_key, dim_fed_hierarchy_history_key, dim_matter_header_curr_key, 
+                         billed_time, bill_amount, dim_days_banding_key
+FROM         fact_bill_activity
+INNER join dim_days_banding on DATEDIFF(d,  gldate, GETDATE()) BETWEEN 
+                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+WHERE     dim_bill_date_key IN (SELECT dim_date_key FROM dbo.dim_date WHERE fin_year BETWEEN  (SELECT DISTINCT fin_year - 8
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current' )  AND   (SELECT DISTINCT fin_year - 7
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current'		)	)
+
+UNION ALL
+
+SELECT   CAST('999' + CAST(transaction_sequence_number AS VARCHAR(25)) AS bigint) AS EXPR1, dim_client_key, dim_orig_posting_date_key, dim_bill_key, dim_fed_hierarchy_history_key, 
+                         dim_matter_header_curr_key, NULL AS EXPR2, NULL AS EXPR3, dim_days_banding_key
+FROM         fact_billable_time_activity
+INNER join dim_days_banding on DATEDIFF(d, CAST(CONVERT(CHAR(10), dim_orig_posting_date_key, 120) AS DATE), GETDATE()) BETWEEN 
+                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+WHERE     (dim_bill_key = 0) 
+AND (dim_orig_posting_date_key IS NOT NULL)
+and     dim_orig_posting_date_key IN (SELECT dim_date_key FROM dbo.dim_date WHERE fin_year BETWEEN  (SELECT DISTINCT fin_year - 8
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current' )  AND   (SELECT DISTINCT fin_year - 7
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current'		)	)</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="744275b8-fd05-42c3-9f58-1c535daf2b87">
+          <ID>Fact Bill Activity great than 8 years old</ID>
+          <Name>Fact Bill Activity great than 8 years old</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="f8c4f65b-0fe9-4cf8-8138-c68fb1dc88f7">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT   CAST(fact_bill_activity_key AS BIGINT) AS fact_bill_activity_key, dim_client_key, dim_bill_date_key, dim_bill_key, dim_fed_hierarchy_history_key, dim_matter_header_curr_key, 
+                         billed_time, bill_amount, dim_days_banding_key
+FROM         fact_bill_activity
+INNER join dim_days_banding on DATEDIFF(d, gldate, GETDATE()) BETWEEN 
+                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+WHERE     dim_bill_date_key IN (SELECT dim_date_key FROM dbo.dim_date WHERE fin_year &lt; (SELECT DISTINCT fin_year - 8
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current' ))
+AND dim_bill_date_key &gt;= '20100501'
+
+UNION ALL
+
+SELECT   CAST('999' + CAST(transaction_sequence_number AS VARCHAR(25)) AS bigint) AS EXPR1, dim_client_key, dim_orig_posting_date_key, dim_bill_key, dim_fed_hierarchy_history_key, 
+                         dim_matter_header_curr_key, NULL AS EXPR2, NULL AS EXPR3, dim_days_banding_key
+FROM         fact_billable_time_activity
+INNER join dim_days_banding on DATEDIFF(d, CAST(CONVERT(CHAR(10), dim_orig_posting_date_key, 120) AS DATE), GETDATE()) BETWEEN 
+                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+WHERE     (dim_bill_key = 0) 
+AND (dim_orig_posting_date_key IS NOT NULL)
+and     dim_orig_posting_date_key In (SELECT dim_date_key FROM dbo.dim_date WHERE fin_year &lt; (SELECT DISTINCT fin_year - 8
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current' ))
+AND dim_orig_posting_date_key &gt;= '20100501'</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
@@ -237,7 +545,7 @@ WHERE     (dim_bill_key = 0) AND (dim_orig_posting_date_key IS NOT NULL) AND (di
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="2aae895a-a4d7-4b31-bf02-2348c05647ff">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="399ccb7a-0fa3-4e2b-ad4d-da29f97cdc66">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_budget_activity.dim_fed_hierarchy_history_key, fact_budget_activity.dim_budget_date_key, fact_budget_activity.budget_date, fact_budget_activity.fed_business_key, 
                          fact_budget_activity.emp_source_system_id, fact_budget_activity.employee_hierarchy_business_key, fact_budget_activity.budget_source_system_id, fact_budget_activity.fed_code, 
@@ -247,9 +555,12 @@ WHERE     (dim_bill_key = 0) AND (dim_orig_posting_date_key IS NOT NULL) AND (di
                          fact_budget_activity.fed_level_tb_budget_value, fact_budget_activity.team_level_budget_value, fact_budget_activity.practice_area_level_budget_value, 
                          fact_budget_activity.business_line_level_budget_value, fact_budget_activity.firm_level_budget_value, fact_budget_activity.dss_update_time, fact_budget_activity.dim_gl_date_key, 
                          fact_budget_activity.team_level_budget_value_hours, fact_budget_activity.team_level_budget_value_balance, fact_budget_activity.team_level_budget_value_hours_balance, 
-                         fact_budget_activity.team_level_budget_value_hours_billed
+                         fact_budget_activity.team_level_budget_value_hours_billed, 
+									 (SELECT min (dim_date_key)	FROM dbo.dim_date WHERE fin_period = (SELECT fin_period FROM dim_date WHERE calendar_date = CAST(GETDATE()-1 AS DATE)) ) Snapshot, dim_days_banding_key
 FROM         fact_budget_activity INNER JOIN
                          dim_fed_hierarchy_history ON dim_fed_hierarchy_history.dim_fed_hierarchy_history_key = fact_budget_activity.dim_fed_hierarchy_history_key
+INNER join dim_days_banding on DATEDIFF(d, CAST(CONVERT(CHAR(10), dim_gl_date_key, 120) AS DATE), GETDATE()) BETWEEN 
+                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
 WHERE     (fact_budget_activity.dim_gl_date_key &gt;= 20190501)</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
@@ -263,7 +574,7 @@ WHERE     (fact_budget_activity.dim_gl_date_key &gt;= 20190501)</QueryDefinition
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="cf71c012-355a-4979-a503-dcac3477e8b5">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="7750e60d-2a05-4e2e-8271-4062cb57711e">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_budget_activity.dim_fed_hierarchy_history_key, fact_budget_activity.dim_budget_date_key, fact_budget_activity.budget_date, fact_budget_activity.fed_business_key, 
                          fact_budget_activity.emp_source_system_id, fact_budget_activity.employee_hierarchy_business_key, fact_budget_activity.budget_source_system_id, fact_budget_activity.fed_code, 
@@ -273,9 +584,12 @@ WHERE     (fact_budget_activity.dim_gl_date_key &gt;= 20190501)</QueryDefinition
                          fact_budget_activity.fed_level_tb_budget_value, fact_budget_activity.team_level_budget_value, fact_budget_activity.practice_area_level_budget_value, 
                          fact_budget_activity.business_line_level_budget_value, fact_budget_activity.firm_level_budget_value, fact_budget_activity.dss_update_time, fact_budget_activity.dim_gl_date_key, 
                          fact_budget_activity.team_level_budget_value_hours, fact_budget_activity.team_level_budget_value_balance, fact_budget_activity.team_level_budget_value_hours_balance, 
-                         fact_budget_activity.team_level_budget_value_hours_billed
+                         fact_budget_activity.team_level_budget_value_hours_billed, 
+									 (SELECT min (dim_date_key)	FROM dbo.dim_date WHERE fin_period = (SELECT fin_period FROM dim_date WHERE calendar_date = CAST(GETDATE()-1 AS DATE)) ) Snapshot, dim_days_banding_key
 FROM         fact_budget_activity INNER JOIN
                          dim_fed_hierarchy_history ON dim_fed_hierarchy_history.dim_fed_hierarchy_history_key = fact_budget_activity.dim_fed_hierarchy_history_key
+INNER join dim_days_banding on DATEDIFF(d, CAST(CONVERT(CHAR(10), dim_gl_date_key, 120) AS DATE), GETDATE()) BETWEEN 
+                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
 WHERE     (fact_budget_activity.dim_gl_date_key &gt;= 20100501)
 and    (fact_budget_activity.dim_gl_date_key &lt; 20190501)</QueryDefinition>
           </Source>
@@ -290,12 +604,12 @@ and    (fact_budget_activity.dim_gl_date_key &lt; 20190501)</QueryDefinition>
       <Partitions>
         <Partition dwd:design-time-name="4f6b7f08-e73f-4293-8bdb-37c0dc9ab93d">
           <ID>Fact Wip</ID>
-          <Name>Fact Wip Current</Name>
+          <Name>Fact Wip 2020</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="89adba07-d638-4a9e-9081-e67a5320674f">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="1d65ae5c-86bf-4a52-bd61-656a145b4b25">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT        fact_wip_monthly.dim_transaction_date_key, fact_wip_monthly.dim_matter_header_history_key, ISNULL(fact_dimension_main.dim_matter_header_curr_key, 0) AS dim_matter_header_current_key, 
                          fact_wip_monthly.dim_fed_hierarchy_history_key, fact_wip_monthly.dim_days_banding_key, fact_wip_monthly.dim_fed_matter_owner_key, fact_wip_monthly.dim_client_key, fact_wip_monthly.source_system_id, 
@@ -303,9 +617,7 @@ and    (fact_budget_activity.dim_gl_date_key &lt; 20190501)</QueryDefinition>
                          fact_wip_monthly.dim_transaction_date_key AS wip_date, 0 AS dim_bill_key
 FROM            fact_wip_monthly LEFT OUTER JOIN
                          fact_dimension_main ON fact_dimension_main.master_fact_key = fact_wip_monthly.master_fact_key
-WHERE        (fact_wip_monthly.dim_transaction_date_key &gt;= '20180501') and  fact_wip_monthly.dim_transaction_date_key = (SELECT
-MAX(fact_wip_monthly.dim_transaction_date_key)
-FROM fact_wip_monthly)</QueryDefinition>
+WHERE       fact_wip_monthly.dim_transaction_date_key IN (SELECT dim_date_key FROM dim_date WHERE fin_year = 2020)</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
@@ -313,12 +625,12 @@ FROM fact_wip_monthly)</QueryDefinition>
         </Partition>
         <Partition dwd:design-time-name="76f6456b-c5d5-4e86-a72b-a0809dfd2dba">
           <ID>Fact Wip Historical</ID>
-          <Name>Fact Wip Historical</Name>
+          <Name>Fact Wip 2019</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="1f445745-8c17-4265-af29-fbcd615b618c">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="ca4bae68-9f08-492f-acc7-a235f6dff5f8">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT        fact_wip_monthly.dim_transaction_date_key, fact_wip_monthly.dim_matter_header_history_key, ISNULL(fact_dimension_main.dim_matter_header_curr_key, 0) AS dim_matter_header_current_key, 
                          fact_wip_monthly.dim_fed_hierarchy_history_key, fact_wip_monthly.dim_days_banding_key, fact_wip_monthly.dim_fed_matter_owner_key, fact_wip_monthly.dim_client_key, fact_wip_monthly.source_system_id, 
@@ -326,10 +638,70 @@ FROM fact_wip_monthly)</QueryDefinition>
                          fact_wip_monthly.dim_transaction_date_key AS wip_date, 0 AS dim_bill_key
 FROM            fact_wip_monthly LEFT OUTER JOIN
                          fact_dimension_main ON fact_dimension_main.master_fact_key = fact_wip_monthly.master_fact_key
-WHERE        (fact_wip_monthly.dim_transaction_date_key &gt;= '20180501') and fact_wip_monthly.dim_transaction_date_key &lt; 
-(SELECT
-MAX(fact_wip_monthly.dim_transaction_date_key)
-FROM fact_wip_monthly)</QueryDefinition>
+WHERE       fact_wip_monthly.dim_transaction_date_key IN (SELECT dim_date_key FROM dim_date WHERE fin_year = 2019)</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="92e81d9f-165b-46fa-bd68-958b78e7cc43">
+          <ID>Fact Wip 2021</ID>
+          <Name>Fact Wip 2021</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="0c99bd88-5f97-4334-ac54-9faab341a73d">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT        fact_wip_monthly.dim_transaction_date_key, fact_wip_monthly.dim_matter_header_history_key, ISNULL(fact_dimension_main.dim_matter_header_curr_key, 0) AS dim_matter_header_current_key, 
+                         fact_wip_monthly.dim_fed_hierarchy_history_key, fact_wip_monthly.dim_days_banding_key, fact_wip_monthly.dim_fed_matter_owner_key, fact_wip_monthly.dim_client_key, fact_wip_monthly.source_system_id, 
+                         fact_wip_monthly.client, fact_wip_monthly.matter, fact_wip_monthly.matter_owner, fact_wip_monthly.fee_earner_code, fact_wip_monthly.wip_minutes, fact_wip_monthly.wip_value, 
+                         fact_wip_monthly.dim_transaction_date_key AS wip_date, 0 AS dim_bill_key
+FROM            fact_wip_monthly LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_wip_monthly.master_fact_key
+WHERE       fact_wip_monthly.dim_transaction_date_key IN (SELECT dim_date_key FROM dim_date WHERE fin_year = 2021)</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="1c598405-bc64-4155-bc14-23958f0ea1b2">
+          <ID>Fact Wip 2022</ID>
+          <Name>Fact Wip 2022</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="b9ee5a62-ee73-46d2-baad-98bd25121a35">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT        fact_wip_monthly.dim_transaction_date_key, fact_wip_monthly.dim_matter_header_history_key, ISNULL(fact_dimension_main.dim_matter_header_curr_key, 0) AS dim_matter_header_current_key, 
+                         fact_wip_monthly.dim_fed_hierarchy_history_key, fact_wip_monthly.dim_days_banding_key, fact_wip_monthly.dim_fed_matter_owner_key, fact_wip_monthly.dim_client_key, fact_wip_monthly.source_system_id, 
+                         fact_wip_monthly.client, fact_wip_monthly.matter, fact_wip_monthly.matter_owner, fact_wip_monthly.fee_earner_code, fact_wip_monthly.wip_minutes, fact_wip_monthly.wip_value, 
+                         fact_wip_monthly.dim_transaction_date_key AS wip_date, 0 AS dim_bill_key
+FROM            fact_wip_monthly LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_wip_monthly.master_fact_key
+WHERE       fact_wip_monthly.dim_transaction_date_key IN (SELECT dim_date_key FROM dim_date WHERE fin_year = 2022)</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="4806c664-10f9-420e-b30c-932996c68d39">
+          <ID>Fact Wip 2023</ID>
+          <Name>Fact Wip 2023</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="af5fd32c-8df7-41ea-8209-dd9a25e00111">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT        fact_wip_monthly.dim_transaction_date_key, fact_wip_monthly.dim_matter_header_history_key, ISNULL(fact_dimension_main.dim_matter_header_curr_key, 0) AS dim_matter_header_current_key, 
+                         fact_wip_monthly.dim_fed_hierarchy_history_key, fact_wip_monthly.dim_days_banding_key, fact_wip_monthly.dim_fed_matter_owner_key, fact_wip_monthly.dim_client_key, fact_wip_monthly.source_system_id, 
+                         fact_wip_monthly.client, fact_wip_monthly.matter, fact_wip_monthly.matter_owner, fact_wip_monthly.fee_earner_code, fact_wip_monthly.wip_minutes, fact_wip_monthly.wip_value, 
+                         fact_wip_monthly.dim_transaction_date_key AS wip_date, 0 AS dim_bill_key
+FROM            fact_wip_monthly LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_wip_monthly.master_fact_key
+WHERE       fact_wip_monthly.dim_transaction_date_key IN (SELECT dim_date_key FROM dim_date WHERE fin_year = 2023)</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
@@ -347,13 +719,18 @@ FROM fact_wip_monthly)</QueryDefinition>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="dc028a61-9d31-4884-985b-475ccd1f75e6">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="56d26ebb-146b-464f-8501-c3ae3128733f">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT   dim_bill_key, dim_client_key, dim_transaction_date_key, dim_fed_hierarchy_history_key, dim_matter_header_curr_key, dim_all_time_activity_key, dim_gl_date_key, dim_bill_date_key, 
-                         master_fact_key, source_system_id, timebillindex, transaction_sequence_number, time_activity_code, minutes_recorded, hourly_charge_rate, time_charge_value, 
-                         actual_time_recorded_value, chargeable_nonc_nonb, dss_create_time, dss_update_time
+            <QueryDefinition>SELECT   dim_bill_key, dim_client_key, dim_transaction_date_key, dim_fed_hierarchy_history_key, dim_matter_header_curr_key, dim_gl_date_key, 
+                         master_fact_key,
+                         dim_days_banding_key,  SUM(minutes_recorded) minutes_recorded
 FROM         fact_bill_billed_time_activity
-WHERE     (dim_gl_date_key &gt;= 20190501)</QueryDefinition>
+INNER JOIN dim_date ON dim_date.dim_date_key = fact_bill_billed_time_activity.dim_gl_date_key
+INNER join dim_days_banding on DATEDIFF(d, CAST(CONVERT(CHAR(10), dim_gl_date_key, 120) AS DATE), GETDATE()) BETWEEN 
+                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+WHERE  current_fin_year = 'Current'
+GROUP BY  dim_bill_key, dim_client_key, dim_transaction_date_key, dim_fed_hierarchy_history_key, dim_matter_header_curr_key, dim_gl_date_key, 
+                         master_fact_key,              dim_days_banding_key</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
@@ -361,19 +738,138 @@ WHERE     (dim_gl_date_key &gt;= 20190501)</QueryDefinition>
         </Partition>
         <Partition dwd:design-time-name="815832e7-463f-4e24-b91a-83b145914255">
           <ID>Fact Bill Billed Time Activity 1</ID>
-          <Name>Fact Bill Billed Time Activity</Name>
+          <Name>Fact Bill Billed Time 1 and 2 years old</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="3736e218-1c59-43fd-be71-aed28b9c6b44">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="ae61d42a-a987-41a9-97bf-11fe35917699">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT   dim_bill_key, dim_client_key, dim_transaction_date_key, dim_fed_hierarchy_history_key, dim_matter_header_curr_key, dim_all_time_activity_key, dim_gl_date_key, dim_bill_date_key, 
-                         master_fact_key, source_system_id, timebillindex, transaction_sequence_number, time_activity_code, minutes_recorded, hourly_charge_rate, time_charge_value, 
-                         actual_time_recorded_value, chargeable_nonc_nonb, dss_create_time, dss_update_time
+            <QueryDefinition>SELECT   dim_bill_key, dim_client_key, dim_transaction_date_key, dim_fed_hierarchy_history_key, dim_matter_header_curr_key, dim_gl_date_key, 
+                         master_fact_key,
+                         dim_days_banding_key,  SUM(minutes_recorded) minutes_recorded
 FROM         fact_bill_billed_time_activity
-WHERE     (dim_gl_date_key &gt;= 20100501)
-and   (dim_gl_date_key &lt; 20190501)</QueryDefinition>
+INNER JOIN dim_date ON dim_date.dim_date_key = fact_bill_billed_time_activity.dim_gl_date_key
+INNER join dim_days_banding on DATEDIFF(d, CAST(CONVERT(CHAR(10), dim_gl_date_key, 120) AS DATE), GETDATE()) BETWEEN 
+                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+WHERE fin_year BETWEEN (SELECT DISTINCT fin_year - 2
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current' )  AND   (SELECT DISTINCT fin_year - 1
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current'		)	
+GROUP BY  dim_bill_key, dim_client_key, dim_transaction_date_key, dim_fed_hierarchy_history_key, dim_matter_header_curr_key, dim_gl_date_key, 
+                         master_fact_key,              dim_days_banding_key</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="e19ee1e8-642a-4c95-a8ae-6a1308dbcd7f">
+          <ID>Fact Bill Billed Time Activity 3 and 4 years old</ID>
+          <Name>Fact Bill Billed Time 3 and 4 years old</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="4eff313d-7267-4038-b177-b2844ea5e02f">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT   dim_bill_key, dim_client_key, dim_transaction_date_key, dim_fed_hierarchy_history_key, dim_matter_header_curr_key, dim_gl_date_key, 
+                         master_fact_key,
+                         dim_days_banding_key,  SUM(minutes_recorded) minutes_recorded
+FROM         fact_bill_billed_time_activity
+INNER JOIN dim_date ON dim_date.dim_date_key = fact_bill_billed_time_activity.dim_gl_date_key
+INNER join dim_days_banding on DATEDIFF(d, CAST(CONVERT(CHAR(10), dim_gl_date_key, 120) AS DATE), GETDATE()) BETWEEN 
+                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+WHERE fin_year BETWEEN (SELECT DISTINCT fin_year - 4
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current' )  AND   (SELECT DISTINCT fin_year - 3
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current'		)	
+GROUP BY  dim_bill_key, dim_client_key, dim_transaction_date_key, dim_fed_hierarchy_history_key, dim_matter_header_curr_key, dim_gl_date_key, 
+                         master_fact_key,              dim_days_banding_key</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="1082a85e-9e3f-4001-a12e-5885bae8f1d4">
+          <ID>Fact Bill Billed Time 5 and 6 years old</ID>
+          <Name>Fact Bill Billed Time 5 and 6 years old</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="6fe2ee3a-0b01-477b-95c7-1b1592275e23">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT   dim_bill_key, dim_client_key, dim_transaction_date_key, dim_fed_hierarchy_history_key, dim_matter_header_curr_key, dim_gl_date_key, 
+                         master_fact_key,
+                         dim_days_banding_key,  SUM(minutes_recorded) minutes_recorded
+FROM         fact_bill_billed_time_activity
+INNER JOIN dim_date ON dim_date.dim_date_key = fact_bill_billed_time_activity.dim_gl_date_key
+INNER join dim_days_banding on DATEDIFF(d,  CAST(CONVERT(CHAR(10), dim_gl_date_key, 120) AS DATE), GETDATE()) BETWEEN 
+                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+WHERE fin_year BETWEEN (SELECT DISTINCT fin_year - 6
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current' )  AND   (SELECT DISTINCT fin_year - 5
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current'		)	
+GROUP BY  dim_bill_key, dim_client_key, dim_transaction_date_key, dim_fed_hierarchy_history_key, dim_matter_header_curr_key, dim_gl_date_key, 
+                         master_fact_key,              dim_days_banding_key</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="17a4a7f1-e0ec-49ea-a510-f2b7436eb7ca">
+          <ID>Fact Bill Billed Time 7 and 8 years old</ID>
+          <Name>Fact Bill Billed Time 7 and 8 years old</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="2acb3048-8281-4954-b712-bf8f77871cc3">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT   dim_bill_key, dim_client_key, dim_transaction_date_key, dim_fed_hierarchy_history_key, dim_matter_header_curr_key, dim_gl_date_key, 
+                         master_fact_key,
+                         dim_days_banding_key,  SUM(minutes_recorded) minutes_recorded
+FROM         fact_bill_billed_time_activity
+INNER JOIN dim_date ON dim_date.dim_date_key = fact_bill_billed_time_activity.dim_gl_date_key
+INNER join dim_days_banding on DATEDIFF(d, CAST(CONVERT(CHAR(10), dim_gl_date_key, 120) AS DATE), GETDATE()) BETWEEN 
+                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+WHERE fin_year BETWEEN (SELECT DISTINCT fin_year - 8
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current' )  AND   (SELECT DISTINCT fin_year - 7
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current'		)	
+GROUP BY  dim_bill_key, dim_client_key, dim_transaction_date_key, dim_fed_hierarchy_history_key, dim_matter_header_curr_key, dim_gl_date_key, 
+                         master_fact_key,              dim_days_banding_key</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="3e739de0-06e0-460e-9a66-574aa441dff1">
+          <ID>Fact Bill Billed Time great than 8 years old</ID>
+          <Name>Fact Bill Billed Time great than 8 years old</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="5e985945-b0ce-44cf-9717-f84f21293c16">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT   dim_bill_key, dim_client_key, dim_transaction_date_key, dim_fed_hierarchy_history_key, dim_matter_header_curr_key, dim_gl_date_key, 
+                         master_fact_key,
+                         dim_days_banding_key,  SUM(minutes_recorded) minutes_recorded
+FROM         fact_bill_billed_time_activity
+INNER JOIN dim_date ON dim_date.dim_date_key = fact_bill_billed_time_activity.dim_gl_date_key
+INNER join dim_days_banding on DATEDIFF(d, CAST(CONVERT(CHAR(10), dim_gl_date_key, 120) AS DATE), GETDATE()) BETWEEN 
+                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+WHERE fin_year &lt; (SELECT DISTINCT fin_year - 8
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current' ) 
+AND  (fact_bill_billed_time_activity.dim_gl_date_key &gt;= 20100501)
+GROUP BY  dim_bill_key, dim_client_key, dim_transaction_date_key, dim_fed_hierarchy_history_key, dim_matter_header_curr_key, dim_gl_date_key, 
+                         master_fact_key,              dim_days_banding_key</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
@@ -391,21 +887,24 @@ and   (dim_gl_date_key &lt; 20190501)</QueryDefinition>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="1be2cccc-b7d8-44fc-951a-bab62244aca6">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="80c9e6dc-8b25-434e-9fcf-6ff0d98d02bc">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT   fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, fact_billable_time_activity.dim_transaction_date_key, 
-                         fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.dim_gl_date_key, 
-                         fact_billable_time_activity.dim_billable_time_activity_key, fact_billable_time_activity.dim_billable_time_narratives_key, fact_billable_time_activity.master_fact_key, 
-                         fact_billable_time_activity.source_system_id, fact_billable_time_activity.transaction_sequence_number, fact_billable_time_activity.time_activity_code, 
-                         fact_billable_time_activity.minutes_recorded, fact_billable_time_activity.zero_rate_minutes_recorded, fact_billable_time_activity.hourly_charge_rate, 
-                         fact_billable_time_activity.time_charge_value, fact_billable_time_activity.actual_time_recorded_value, fact_billable_time_activity.fact_billable_time_activity_key, 
-                         fact_billable_time_activity.reporting_exclusions, fact_billable_time_activity.isactive, fact_billable_time_activity.wiphrs, fact_billable_time_activity.wipamt, 
-                         fact_billable_time_activity.dss_update_time, fact_billable_time_activity.dim_posting_date_key, fact_billable_time_activity.dim_orig_gl_date_key, 
-                         fact_billable_time_activity.dim_orig_posting_date_key, fact_billable_time_activity.original_transaction_sequence_number, ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 
-                         0) AS matter_owner_history_key, fact_billable_time_activity.minutes_recorded / 60 chargeable_hours
+            <QueryDefinition>SELECT   fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, 
+                         fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.master_fact_key,                        
+                         fact_billable_time_activity.dim_orig_posting_date_key,  ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 0) AS matter_owner_history_key, dim_days_banding_key,
+							SUM(minutes_recorded) minutes_recorded, SUM(fact_billable_time_activity.minutes_recorded / 60) AS chargeable_hours
+
 FROM         fact_billable_time_activity LEFT OUTER JOIN
                          fact_dimension_main ON fact_dimension_main.master_fact_key = fact_billable_time_activity.master_fact_key
-WHERE     (fact_billable_time_activity.dim_orig_posting_date_key &gt;= 20190501) AND (fact_billable_time_activity.minutes_recorded &lt;&gt; 0)</QueryDefinition>
+INNER join dim_days_banding on DATEDIFF(d, CAST(CONVERT(CHAR(10), dim_orig_posting_date_key, 120) AS DATE), GETDATE()) BETWEEN 
+                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+INNER JOIN dim_date ON dim_date.dim_date_key = fact_billable_time_activity.dim_orig_posting_date_key
+WHERE (fact_billable_time_activity.minutes_recorded &lt;&gt; 0)
+AND current_fin_year = 'Current'
+
+GROUP BY  fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, 
+                         fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.master_fact_key,                        
+                         fact_billable_time_activity.dim_orig_posting_date_key,  ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 0), dim_days_banding_key</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
@@ -413,27 +912,167 @@ WHERE     (fact_billable_time_activity.dim_orig_posting_date_key &gt;= 20190501)
         </Partition>
         <Partition dwd:design-time-name="7a906111-08d8-4746-89a4-5ba8132eb6fb">
           <ID>Fact Billable Time Activity Historical</ID>
-          <Name>Fact Billable Time Activity Historical</Name>
+          <Name>Fact Billable Time 1 and 2 years old</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="b3372a1e-9ab2-426a-9e00-4f8dc89a0616">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="31b67730-a163-4889-91d7-9abb315d56a1">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT   fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, fact_billable_time_activity.dim_transaction_date_key, 
-                         fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.dim_gl_date_key, 
-                         fact_billable_time_activity.dim_billable_time_activity_key, fact_billable_time_activity.dim_billable_time_narratives_key, fact_billable_time_activity.master_fact_key, 
-                         fact_billable_time_activity.source_system_id, fact_billable_time_activity.transaction_sequence_number, fact_billable_time_activity.time_activity_code, 
-                         fact_billable_time_activity.minutes_recorded, fact_billable_time_activity.zero_rate_minutes_recorded, fact_billable_time_activity.hourly_charge_rate, 
-                         fact_billable_time_activity.time_charge_value, fact_billable_time_activity.actual_time_recorded_value, fact_billable_time_activity.fact_billable_time_activity_key, 
-                         fact_billable_time_activity.reporting_exclusions, fact_billable_time_activity.isactive, fact_billable_time_activity.wiphrs, fact_billable_time_activity.wipamt, 
-                         fact_billable_time_activity.dss_update_time, fact_billable_time_activity.dim_posting_date_key, fact_billable_time_activity.dim_orig_gl_date_key, 
-                         fact_billable_time_activity.dim_orig_posting_date_key, fact_billable_time_activity.original_transaction_sequence_number, ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 
-                         0) AS matter_owner_history_key, fact_billable_time_activity.minutes_recorded / 60 chargeable_hours
+            <QueryDefinition>SELECT   fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, 
+                         fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.master_fact_key,                        
+                         fact_billable_time_activity.dim_orig_posting_date_key,  ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 0) AS matter_owner_history_key, dim_days_banding_key,
+							SUM(minutes_recorded) minutes_recorded, SUM(fact_billable_time_activity.minutes_recorded / 60) AS chargeable_hours
+
 FROM         fact_billable_time_activity LEFT OUTER JOIN
                          fact_dimension_main ON fact_dimension_main.master_fact_key = fact_billable_time_activity.master_fact_key
-WHERE     (fact_billable_time_activity.dim_orig_posting_date_key &gt;= 20100501) AND (fact_billable_time_activity.minutes_recorded &lt;&gt; 0)
-and    (fact_billable_time_activity.dim_orig_posting_date_key &lt; 20190501)</QueryDefinition>
+INNER join dim_days_banding on DATEDIFF(d, CAST(CONVERT(CHAR(10), dim_orig_posting_date_key,120) AS DATE), GETDATE()) BETWEEN 
+                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+INNER JOIN dim_date ON dim_date.dim_date_key = fact_billable_time_activity.dim_orig_posting_date_key
+WHERE (fact_billable_time_activity.minutes_recorded &lt;&gt; 0)
+and fin_year BETWEEN (SELECT DISTINCT fin_year - 2
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current' )  AND   (SELECT DISTINCT fin_year - 1
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current'		)
+
+GROUP BY  fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, 
+                         fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.master_fact_key,                        
+                         fact_billable_time_activity.dim_orig_posting_date_key,  ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 0), dim_days_banding_key</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="419b9c8a-0af0-4b8d-add8-59141c98465b">
+          <ID>Fact Billable Time 2 and 3 years old</ID>
+          <Name>Fact Billable Time 3 and 4 years old</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="d8a023a5-e3f1-4ee2-8631-37004a908ef4">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT   fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, 
+                         fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.master_fact_key,                        
+                         fact_billable_time_activity.dim_orig_posting_date_key,  ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 0) AS matter_owner_history_key, dim_days_banding_key,
+							SUM(minutes_recorded) minutes_recorded, SUM(fact_billable_time_activity.minutes_recorded / 60) AS chargeable_hours
+
+FROM         fact_billable_time_activity LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_billable_time_activity.master_fact_key
+INNER join dim_days_banding on DATEDIFF(d, CAST(CONVERT(CHAR(10), dim_orig_posting_date_key, 120) AS DATE), GETDATE()) BETWEEN 
+                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+INNER JOIN dim_date ON dim_date.dim_date_key = fact_billable_time_activity.dim_orig_posting_date_key
+WHERE (fact_billable_time_activity.minutes_recorded &lt;&gt; 0)
+and fin_year BETWEEN (SELECT DISTINCT fin_year - 4
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current' )  AND   (SELECT DISTINCT fin_year - 3
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current'		)
+
+GROUP BY  fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, 
+                         fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.master_fact_key,                        
+                         fact_billable_time_activity.dim_orig_posting_date_key,  ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 0), dim_days_banding_key</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="e470c5a0-2322-44f6-a574-48ba2f86d57d">
+          <ID>Fact Billable Time 5 and 6 years old</ID>
+          <Name>Fact Billable Time 5 and 6 years old</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="1c5920e5-321d-47f9-bafd-13872b584e74">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT   fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, 
+                         fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.master_fact_key,                        
+                         fact_billable_time_activity.dim_orig_posting_date_key,  ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 0) AS matter_owner_history_key, dim_days_banding_key,
+							SUM(minutes_recorded)minutes_recorded, SUM(fact_billable_time_activity.minutes_recorded / 60) AS chargeable_hours
+
+FROM         fact_billable_time_activity LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_billable_time_activity.master_fact_key
+INNER join dim_days_banding on DATEDIFF(d, CAST(CONVERT(CHAR(10), dim_orig_posting_date_key, 120) AS DATE), GETDATE()) BETWEEN 
+                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+INNER JOIN dim_date ON dim_date.dim_date_key = fact_billable_time_activity.dim_orig_posting_date_key
+WHERE (fact_billable_time_activity.minutes_recorded &lt;&gt; 0)
+and fin_year BETWEEN (SELECT DISTINCT fin_year - 6
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current' )  AND   (SELECT DISTINCT fin_year - 5
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current'		)
+
+GROUP BY  fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, 
+                         fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.master_fact_key,                        
+                         fact_billable_time_activity.dim_orig_posting_date_key,  ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 0), dim_days_banding_key</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="7bb9e41a-0e7d-4b2b-aff0-c40951599884">
+          <ID>Fact Billable Time 7 and 8 years old</ID>
+          <Name>Fact Billable Time 7 and 8 years old</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="abc976c3-13e8-47aa-9ead-0823ec8fbfbd">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT   fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, 
+                         fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.master_fact_key,                        
+                         fact_billable_time_activity.dim_orig_posting_date_key,  ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 0) AS matter_owner_history_key, dim_days_banding_key,
+							SUM(minutes_recorded) minutes_recorded, SUM(fact_billable_time_activity.minutes_recorded / 60) AS chargeable_hours
+
+FROM         fact_billable_time_activity LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_billable_time_activity.master_fact_key
+INNER join dim_days_banding on DATEDIFF(d, CAST(CONVERT(CHAR(10), dim_orig_posting_date_key, 120) AS DATE), GETDATE()) BETWEEN 
+                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+INNER JOIN dim_date ON dim_date.dim_date_key = fact_billable_time_activity.dim_orig_posting_date_key
+WHERE (fact_billable_time_activity.minutes_recorded &lt;&gt; 0)
+and fin_year BETWEEN (SELECT DISTINCT fin_year - 8
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current' )  AND   (SELECT DISTINCT fin_year - 7
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current'		)
+
+GROUP BY  fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, 
+                         fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.master_fact_key,                        
+                         fact_billable_time_activity.dim_orig_posting_date_key,  ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 0), dim_days_banding_key</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="62ae48c5-af3b-4614-96ab-915f5473ea9b">
+          <ID>Fact Billable Time greater than 8 years old</ID>
+          <Name>Fact Billable Time greater than 8 years old</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="5ce772a4-83fd-4137-b4b5-77a6cdc8cb05">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT   fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, 
+                         fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.master_fact_key,                        
+                         fact_billable_time_activity.dim_orig_posting_date_key,  ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 0) AS matter_owner_history_key, dim_days_banding_key,
+							SUM(minutes_recorded) minutes_recorded, SUM(fact_billable_time_activity.minutes_recorded / 60) AS chargeable_hours
+
+FROM         fact_billable_time_activity LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_billable_time_activity.master_fact_key
+INNER join dim_days_banding on DATEDIFF(d, CAST(CONVERT(CHAR(10), dim_orig_posting_date_key, 120) AS DATE), GETDATE()) BETWEEN 
+                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+INNER JOIN dim_date ON dim_date.dim_date_key = fact_billable_time_activity.dim_orig_posting_date_key
+WHERE (fact_billable_time_activity.minutes_recorded &lt;&gt; 0)
+and fin_year &lt; (SELECT DISTINCT fin_year - 8
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current' )  AND (fact_billable_time_activity.dim_orig_posting_date_key &gt;= 20100501)
+
+GROUP BY  fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, 
+                         fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.master_fact_key,                        
+                         fact_billable_time_activity.dim_orig_posting_date_key,  ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 0), dim_days_banding_key</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
@@ -446,12 +1085,12 @@ and    (fact_billable_time_activity.dim_orig_posting_date_key &lt; 20190501)</Qu
       <Partitions>
         <Partition dwd:design-time-name="9a1401b2-cc82-437a-b9cd-f835ed1c7871">
           <ID>Fact Debt Monthly</ID>
-          <Name>Fact Debt Monthly Current</Name>
+          <Name>Fact Debt Monthly 2020</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="ab257c30-d42e-4ef8-ae06-4050b435770f">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="a0f3fc16-f1dd-4b2a-a880-5dc702bfd7c6">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT        fact_debt_monthly.dim_transaction_date_key, fact_debt_monthly.dim_mat_head_history_key, fact_debt_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
                          fact_dimension_main.dim_fed_hierarchy_history_key, fact_debt_monthly.dim_days_banding_key, fact_debt_monthly.dim_fed_matter_owner_key, fact_debt_monthly.dim_client_key, fact_debt_monthly.source_system_id, 
@@ -460,11 +1099,8 @@ and    (fact_billable_time_activity.dim_orig_posting_date_key &lt; 20190501)</Qu
                          fact_dimension_main.master_client_code
 FROM            fact_debt_monthly LEFT OUTER JOIN
                          fact_dimension_main ON fact_dimension_main.master_fact_key = fact_debt_monthly.master_fact_key INNER JOIN
-                         dim_date AS dim_debt_date ON dim_debt_date.calendar_date = fact_debt_monthly.debt_date
-WHERE        (fact_debt_monthly.dim_transaction_date_key &gt;= '20180501') and fact_debt_monthly.dim_transaction_date_key = 
-(SELECT
-MAX(fact_debt_monthly.dim_transaction_date_key)
-FROM fact_debt_monthly)</QueryDefinition>
+                         dim_date AS dim_debt_date ON dim_debt_date.calendar_date = CAST (fact_debt_monthly.debt_date AS DATE)
+WHERE          fact_debt_monthly.dim_transaction_date_key IN (SELECT dim_date_key FROM dim_date WHERE fin_year = 2020)</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
@@ -472,12 +1108,12 @@ FROM fact_debt_monthly)</QueryDefinition>
         </Partition>
         <Partition dwd:design-time-name="71132de0-8a64-4409-8d0c-daba9fd6e7e4">
           <ID>Fact Debt Monthly 1</ID>
-          <Name>Fact Debt Monthly Historical</Name>
+          <Name>Fact Debt Monthly 2019</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="602ee67c-2314-4de3-8a51-c7e551bf9b51">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="5d73d19d-c2f5-4f85-a10a-24344536d9e7">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT        fact_debt_monthly.dim_transaction_date_key, fact_debt_monthly.dim_mat_head_history_key, fact_debt_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
                          fact_dimension_main.dim_fed_hierarchy_history_key, fact_debt_monthly.dim_days_banding_key, fact_debt_monthly.dim_fed_matter_owner_key, fact_debt_monthly.dim_client_key, fact_debt_monthly.source_system_id, 
@@ -486,11 +1122,77 @@ FROM fact_debt_monthly)</QueryDefinition>
                          fact_dimension_main.master_client_code
 FROM            fact_debt_monthly LEFT OUTER JOIN
                          fact_dimension_main ON fact_dimension_main.master_fact_key = fact_debt_monthly.master_fact_key INNER JOIN
-                         dim_date AS dim_debt_date ON dim_debt_date.calendar_date = fact_debt_monthly.debt_date
-WHERE        (fact_debt_monthly.dim_transaction_date_key &gt;= '20180501') and fact_debt_monthly.dim_transaction_date_key &lt;
-(SELECT
-MAX(fact_debt_monthly.dim_transaction_date_key)
-FROM fact_debt_monthly)</QueryDefinition>
+                         dim_date AS dim_debt_date ON dim_debt_date.calendar_date = CAST (fact_debt_monthly.debt_date AS DATE)
+WHERE          fact_debt_monthly.dim_transaction_date_key IN (SELECT dim_date_key FROM dim_date WHERE fin_year = 2019)</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="0151dc09-fab7-45a7-8684-f67fe74ebb93">
+          <ID>Fact Debt Monthly 2021</ID>
+          <Name>Fact Debt Monthly 2021</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="29898799-5b04-4622-9241-51977bf6a3a1">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT        fact_debt_monthly.dim_transaction_date_key, fact_debt_monthly.dim_mat_head_history_key, fact_debt_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
+                         fact_dimension_main.dim_fed_hierarchy_history_key, fact_debt_monthly.dim_days_banding_key, fact_debt_monthly.dim_fed_matter_owner_key, fact_debt_monthly.dim_client_key, fact_debt_monthly.source_system_id, 
+                         fact_debt_monthly.client_code, fact_debt_monthly.matter_number, fact_debt_monthly.matter_owner, fact_debt_monthly.bill_number, fact_debt_monthly.bill_date, fact_debt_monthly.outstanding_total_bill, 
+                         fact_debt_monthly.outstanding_costs, fact_debt_monthly.age_of_debt, fact_debt_monthly.debt_date, fact_debt_monthly.dim_bill_key, dim_debt_date.dim_date_key AS dim_debt_date_key, 
+                         fact_dimension_main.master_client_code
+FROM            fact_debt_monthly LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_debt_monthly.master_fact_key INNER JOIN
+                         dim_date AS dim_debt_date ON dim_debt_date.calendar_date = CAST (fact_debt_monthly.debt_date AS DATE)
+WHERE          fact_debt_monthly.dim_transaction_date_key IN (SELECT dim_date_key FROM dim_date WHERE fin_year = 2021)</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="8f7d2251-2ed6-4771-8425-b2f0397e087a">
+          <ID>Fact Debt Monthly 2022</ID>
+          <Name>Fact Debt Monthly 2022</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="8465a8a0-fc5b-443b-a963-d791ade89687">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT        fact_debt_monthly.dim_transaction_date_key, fact_debt_monthly.dim_mat_head_history_key, fact_debt_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
+                         fact_dimension_main.dim_fed_hierarchy_history_key, fact_debt_monthly.dim_days_banding_key, fact_debt_monthly.dim_fed_matter_owner_key, fact_debt_monthly.dim_client_key, fact_debt_monthly.source_system_id, 
+                         fact_debt_monthly.client_code, fact_debt_monthly.matter_number, fact_debt_monthly.matter_owner, fact_debt_monthly.bill_number, fact_debt_monthly.bill_date, fact_debt_monthly.outstanding_total_bill, 
+                         fact_debt_monthly.outstanding_costs, fact_debt_monthly.age_of_debt, fact_debt_monthly.debt_date, fact_debt_monthly.dim_bill_key, dim_debt_date.dim_date_key AS dim_debt_date_key, 
+                         fact_dimension_main.master_client_code
+FROM            fact_debt_monthly LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_debt_monthly.master_fact_key INNER JOIN
+                         dim_date AS dim_debt_date ON dim_debt_date.calendar_date = CAST (fact_debt_monthly.debt_date AS DATE)
+WHERE          fact_debt_monthly.dim_transaction_date_key IN (SELECT dim_date_key FROM dim_date WHERE fin_year = 2022)</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="1869eac1-13cc-45c0-9968-99c8692d5de7">
+          <ID>Fact Debt Monthly 2023</ID>
+          <Name>Fact Debt Monthly 2023</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="d7c92f5e-04d2-425e-a279-35770671601e">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT        fact_debt_monthly.dim_transaction_date_key, fact_debt_monthly.dim_mat_head_history_key, fact_debt_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
+                         fact_dimension_main.dim_fed_hierarchy_history_key, fact_debt_monthly.dim_days_banding_key, fact_debt_monthly.dim_fed_matter_owner_key, fact_debt_monthly.dim_client_key, fact_debt_monthly.source_system_id, 
+                         fact_debt_monthly.client_code, fact_debt_monthly.matter_number, fact_debt_monthly.matter_owner, fact_debt_monthly.bill_number, fact_debt_monthly.bill_date, fact_debt_monthly.outstanding_total_bill, 
+                         fact_debt_monthly.outstanding_costs, fact_debt_monthly.age_of_debt, fact_debt_monthly.debt_date, fact_debt_monthly.dim_bill_key, dim_debt_date.dim_date_key AS dim_debt_date_key, 
+                         fact_dimension_main.master_client_code
+FROM            fact_debt_monthly LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_debt_monthly.master_fact_key INNER JOIN
+                         dim_date AS dim_debt_date ON dim_debt_date.calendar_date = CAST (fact_debt_monthly.debt_date AS DATE)
+WHERE          fact_debt_monthly.dim_transaction_date_key IN (SELECT dim_date_key FROM dim_date WHERE fin_year = 2023)</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
@@ -570,12 +1272,12 @@ FROM fact_debt_monthly)</QueryDefinition>
       <Partitions>
         <Partition dwd:design-time-name="de1ddaab-59a2-4dd7-9426-1a39c740d806">
           <ID>Fact Disbursements Detail Monthly</ID>
-          <Name>Fact Disbursements Detail Monthly Current</Name>
+          <Name>Fact Disbursements Detail Monthly 2019</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="2c716e28-33a1-42af-9588-5a6711ac8735">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="f2a1b61a-d49f-4aaa-8650-fab7818e8b13">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT        fact_disbursements_detail_monthly.dim_transaction_date_key, fact_disbursements_detail_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
                          fact_disbursements_detail_monthly.dim_fed_hierarchy_history_key, dim_days_banding.dim_days_banding_key, fact_disbursements_detail_monthly.dim_client_key, 
@@ -588,10 +1290,9 @@ FROM            fact_disbursements_detail_monthly INNER JOIN
                              (SELECT        MAX(dim_transaction_date_key)
                                FROM            fact_disbursements_detail_monthly) THEN DATEDIFF(d, workdate, GETDATE()) ELSE DATEDIFF(d, workdate, trandate.calendar_date) END BETWEEN dim_days_banding.startdays AND 
                          dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
-WHERE        (fact_disbursements_detail_monthly.dim_transaction_date_key &gt;= '20180501') AND (fact_disbursements_detail_monthly.dim_bill_key = 0) AND (fact_disbursements_detail_monthly.total_unbilled_disbursements &lt;&gt; 0)
-AND dim_transaction_date_key=(SELECT
-MAX(fact_disbursements_detail_monthly.dim_transaction_date_key)
-FROM fact_disbursements_detail_monthly)
+WHERE   (fact_disbursements_detail_monthly.dim_bill_key = 0) AND (fact_disbursements_detail_monthly.total_unbilled_disbursements &lt;&gt; 0)
+and          fact_disbursements_detail_monthly.dim_transaction_date_key IN (SELECT dim_date_key FROM dim_date WHERE fin_year = 2019)
+
 GROUP BY CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' ELSE dim_disbursement_date_key END, fact_disbursements_detail_monthly.dim_transaction_date_key, 
                          fact_disbursements_detail_monthly.dim_matter_header_curr_key, fact_disbursements_detail_monthly.dim_fed_hierarchy_history_key, dim_days_banding.dim_days_banding_key, 
                          fact_disbursements_detail_monthly.dim_client_key, fact_disbursements_detail_monthly.dim_bill_key, fact_dimension_main.master_client_code</QueryDefinition>
@@ -602,12 +1303,12 @@ GROUP BY CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' EL
         </Partition>
         <Partition dwd:design-time-name="46768fbf-5a0b-462e-92f1-e4ba59521828">
           <ID>Fact Disbursements Detail Monthly Historical</ID>
-          <Name>Fact Disbursements Detail Monthly Historical</Name>
+          <Name>Fact Disbursements Detail Monthly 2020</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="a9d7fd5c-d948-4547-860f-53a9dc8fecc1">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="6ff8778a-9192-4707-80f0-5652f5e5ebc1">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT        fact_disbursements_detail_monthly.dim_transaction_date_key, fact_disbursements_detail_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
                          fact_disbursements_detail_monthly.dim_fed_hierarchy_history_key, dim_days_banding.dim_days_banding_key, fact_disbursements_detail_monthly.dim_client_key, 
@@ -620,10 +1321,102 @@ FROM            fact_disbursements_detail_monthly INNER JOIN
                              (SELECT        MAX(dim_transaction_date_key)
                                FROM            fact_disbursements_detail_monthly) THEN DATEDIFF(d, workdate, GETDATE()) ELSE DATEDIFF(d, workdate, trandate.calendar_date) END BETWEEN dim_days_banding.startdays AND 
                          dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
-WHERE        (fact_disbursements_detail_monthly.dim_transaction_date_key &gt;= '20180501') AND (fact_disbursements_detail_monthly.dim_bill_key = 0) AND (fact_disbursements_detail_monthly.total_unbilled_disbursements &lt;&gt; 0)
-AND dim_transaction_date_key&lt;(SELECT
-MAX(fact_disbursements_detail_monthly.dim_transaction_date_key)
-FROM fact_disbursements_detail_monthly)
+WHERE   (fact_disbursements_detail_monthly.dim_bill_key = 0) AND (fact_disbursements_detail_monthly.total_unbilled_disbursements &lt;&gt; 0)
+and          fact_disbursements_detail_monthly.dim_transaction_date_key IN (SELECT dim_date_key FROM dim_date WHERE fin_year = 2020)
+
+GROUP BY CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' ELSE dim_disbursement_date_key END, fact_disbursements_detail_monthly.dim_transaction_date_key, 
+                         fact_disbursements_detail_monthly.dim_matter_header_curr_key, fact_disbursements_detail_monthly.dim_fed_hierarchy_history_key, dim_days_banding.dim_days_banding_key, 
+                         fact_disbursements_detail_monthly.dim_client_key, fact_disbursements_detail_monthly.dim_bill_key, fact_dimension_main.master_client_code</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="9477f791-fdbd-4b81-9776-f72177063757">
+          <ID>Fact Disbursements Detail Monthly 2021</ID>
+          <Name>Fact Disbursements Detail Monthly 2021</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="6233e31d-9910-4d36-bb32-058f9ed708b7">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT        fact_disbursements_detail_monthly.dim_transaction_date_key, fact_disbursements_detail_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
+                         fact_disbursements_detail_monthly.dim_fed_hierarchy_history_key, dim_days_banding.dim_days_banding_key, fact_disbursements_detail_monthly.dim_client_key, 
+                         CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' ELSE dim_disbursement_date_key END AS dim_disbursement_date_key, SUM(fact_disbursements_detail_monthly.total_unbilled_disbursements) 
+                         AS total_unbilled_disbursements, fact_disbursements_detail_monthly.dim_bill_key, fact_dimension_main.master_client_code
+FROM            fact_disbursements_detail_monthly INNER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_disbursements_detail_monthly.master_fact_key INNER JOIN
+                         dim_date AS trandate ON trandate.dim_date_key = fact_disbursements_detail_monthly.dim_transaction_date_key INNER JOIN
+                         dim_days_banding ON CASE WHEN dim_transaction_date_key =
+                             (SELECT        MAX(dim_transaction_date_key)
+                               FROM            fact_disbursements_detail_monthly) THEN DATEDIFF(d, workdate, GETDATE()) ELSE DATEDIFF(d, workdate, trandate.calendar_date) END BETWEEN dim_days_banding.startdays AND 
+                         dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+WHERE   (fact_disbursements_detail_monthly.dim_bill_key = 0) AND (fact_disbursements_detail_monthly.total_unbilled_disbursements &lt;&gt; 0)
+and          fact_disbursements_detail_monthly.dim_transaction_date_key IN (SELECT dim_date_key FROM dim_date WHERE fin_year = 2021)
+
+GROUP BY CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' ELSE dim_disbursement_date_key END, fact_disbursements_detail_monthly.dim_transaction_date_key, 
+                         fact_disbursements_detail_monthly.dim_matter_header_curr_key, fact_disbursements_detail_monthly.dim_fed_hierarchy_history_key, dim_days_banding.dim_days_banding_key, 
+                         fact_disbursements_detail_monthly.dim_client_key, fact_disbursements_detail_monthly.dim_bill_key, fact_dimension_main.master_client_code</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="c2fd3657-65f6-4aef-9021-72b2bc9e1ab8">
+          <ID>Fact Disbursements Detail Monthly 2022</ID>
+          <Name>Fact Disbursements Detail Monthly 2022</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="080b6994-deaf-44b9-b858-24a8a55b2917">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT        fact_disbursements_detail_monthly.dim_transaction_date_key, fact_disbursements_detail_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
+                         fact_disbursements_detail_monthly.dim_fed_hierarchy_history_key, dim_days_banding.dim_days_banding_key, fact_disbursements_detail_monthly.dim_client_key, 
+                         CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' ELSE dim_disbursement_date_key END AS dim_disbursement_date_key, SUM(fact_disbursements_detail_monthly.total_unbilled_disbursements) 
+                         AS total_unbilled_disbursements, fact_disbursements_detail_monthly.dim_bill_key, fact_dimension_main.master_client_code
+FROM            fact_disbursements_detail_monthly INNER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_disbursements_detail_monthly.master_fact_key INNER JOIN
+                         dim_date AS trandate ON trandate.dim_date_key = fact_disbursements_detail_monthly.dim_transaction_date_key INNER JOIN
+                         dim_days_banding ON CASE WHEN dim_transaction_date_key =
+                             (SELECT        MAX(dim_transaction_date_key)
+                               FROM            fact_disbursements_detail_monthly) THEN DATEDIFF(d, workdate, GETDATE()) ELSE DATEDIFF(d, workdate, trandate.calendar_date) END BETWEEN dim_days_banding.startdays AND 
+                         dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+WHERE   (fact_disbursements_detail_monthly.dim_bill_key = 0) AND (fact_disbursements_detail_monthly.total_unbilled_disbursements &lt;&gt; 0)
+and          fact_disbursements_detail_monthly.dim_transaction_date_key IN (SELECT dim_date_key FROM dim_date WHERE fin_year = 2022)
+
+GROUP BY CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' ELSE dim_disbursement_date_key END, fact_disbursements_detail_monthly.dim_transaction_date_key, 
+                         fact_disbursements_detail_monthly.dim_matter_header_curr_key, fact_disbursements_detail_monthly.dim_fed_hierarchy_history_key, dim_days_banding.dim_days_banding_key, 
+                         fact_disbursements_detail_monthly.dim_client_key, fact_disbursements_detail_monthly.dim_bill_key, fact_dimension_main.master_client_code</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="bb1c2689-16bb-41d8-800b-8019151f0e7b">
+          <ID>Fact Disbursements Detail Monthly 2023</ID>
+          <Name>Fact Disbursements Detail Monthly 2023</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="577f2d55-2a83-4926-bc97-153d2241b85e">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT        fact_disbursements_detail_monthly.dim_transaction_date_key, fact_disbursements_detail_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
+                         fact_disbursements_detail_monthly.dim_fed_hierarchy_history_key, dim_days_banding.dim_days_banding_key, fact_disbursements_detail_monthly.dim_client_key, 
+                         CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' ELSE dim_disbursement_date_key END AS dim_disbursement_date_key, SUM(fact_disbursements_detail_monthly.total_unbilled_disbursements) 
+                         AS total_unbilled_disbursements, fact_disbursements_detail_monthly.dim_bill_key, fact_dimension_main.master_client_code
+FROM            fact_disbursements_detail_monthly INNER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_disbursements_detail_monthly.master_fact_key INNER JOIN
+                         dim_date AS trandate ON trandate.dim_date_key = fact_disbursements_detail_monthly.dim_transaction_date_key INNER JOIN
+                         dim_days_banding ON CASE WHEN dim_transaction_date_key =
+                             (SELECT        MAX(dim_transaction_date_key)
+                               FROM            fact_disbursements_detail_monthly) THEN DATEDIFF(d, workdate, GETDATE()) ELSE DATEDIFF(d, workdate, trandate.calendar_date) END BETWEEN dim_days_banding.startdays AND 
+                         dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+WHERE   (fact_disbursements_detail_monthly.dim_bill_key = 0) AND (fact_disbursements_detail_monthly.total_unbilled_disbursements &lt;&gt; 0)
+and          fact_disbursements_detail_monthly.dim_transaction_date_key IN (SELECT dim_date_key FROM dim_date WHERE fin_year = 2023)
+
 GROUP BY CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' ELSE dim_disbursement_date_key END, fact_disbursements_detail_monthly.dim_transaction_date_key, 
                          fact_disbursements_detail_monthly.dim_matter_header_curr_key, fact_disbursements_detail_monthly.dim_fed_hierarchy_history_key, dim_days_banding.dim_days_banding_key, 
                          fact_disbursements_detail_monthly.dim_client_key, fact_disbursements_detail_monthly.dim_bill_key, fact_dimension_main.master_client_code</QueryDefinition>

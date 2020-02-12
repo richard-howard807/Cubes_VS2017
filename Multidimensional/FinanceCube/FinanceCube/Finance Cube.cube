@@ -8,9 +8,9 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="216" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-850" scrolltop="-3058" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="60" x="24553" y="19173" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="216" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-850" scrolltop="-3058" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="60" x="29078" y="15505" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
-              <ddsxmlobjectstreamwrapper binary="01000000900180380100065461686f6d61" />
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
             <mouseicon>
               <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
@@ -1343,7 +1343,7 @@
               <point x="204" y="5000" />
             </connector>
           </ddscontrol>
-          <ddscontrol controlprogid="MSDDS.Polyline" left="5608" top="3850" logicalid="206" controlid="99" masterid="0" hint1="0" hint2="0" width="144949" height="6150" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="MSDDS.Polyline" left="5608" top="2750" logicalid="206" controlid="99" masterid="0" hint1="0" hint2="0" width="144949" height="7250" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobj>
                 <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -1356,11 +1356,11 @@
                 <property name="VisibleAP" value="0" vartype="3" />
               </ddsxmlobj>
             </layoutobject>
-            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="68" destid="94" sourceattachpoint="26" destattachpoint="37" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="68" destid="94" sourceattachpoint="26" destattachpoint="33" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
               <point x="150257" y="9600" />
               <point x="78083" y="9600" />
-              <point x="78083" y="4150" />
-              <point x="5908" y="4150" />
+              <point x="78083" y="3050" />
+              <point x="5908" y="3050" />
             </connector>
           </ddscontrol>
           <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" left="0" top="0" logicalid="207" controlid="100" masterid="0" hint1="0" hint2="0" width="5908" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
@@ -2130,6 +2130,24 @@
           <Materialization>Regular</Materialization>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
         </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="9dcc7eba-0111-41df-b09b-81d52ca6a59b">
+          <CubeDimensionID>Age Banding</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="6406e0a2-f5da-429a-b5d4-dfccb8b33ade">
+              <AttributeID>Age Banding</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="98af6875-1431-42fc-a323-e2cc1e10f8f5">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="206c0d02-3f45-44d1-8e04-20532e4a6324">
+                    <TableID>dbo_fact_bill</TableID>
+                    <ColumnID>dim_days_banding_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
       </Dimensions>
       <Partitions />
     </MeasureGroup>
@@ -2309,6 +2327,24 @@
           <Materialization>Regular</Materialization>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
         </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="01bebcb3-be66-452f-bc52-e8d9758d73c6">
+          <CubeDimensionID>Age Banding</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1ec26b63-9076-4422-a2d7-9d363b0206d6">
+              <AttributeID>Age Banding</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="aa6e3686-5704-46ef-bbf6-2f57c27bfec3">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9005bd30-4b7a-478c-b344-5dbedaec26cd">
+                    <TableID>dbo_fact_bill_activity</TableID>
+                    <ColumnID>dim_days_banding_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
       </Dimensions>
       <Partitions />
       <AggregationDesigns />
@@ -2348,6 +2384,7 @@
         </Measure>
       </Measures>
       <StorageMode>Molap</StorageMode>
+      <IgnoreUnrelatedDimensions>false</IgnoreUnrelatedDimensions>
       <ProcessingMode>Regular</ProcessingMode>
       <Dimensions>
         <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="2c928bfb-e3d4-4c92-b19f-bc0cbff6702b">
@@ -2379,6 +2416,74 @@
                   <Source xsi:type="ColumnBinding" dwd:design-time-name="d526b6ce-b35d-43e9-ae23-61411bbccbd7">
                     <TableID>dbo_fact_budget_activity</TableID>
                     <ColumnID>dim_gl_date_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="1f38fd3e-1c98-4811-b72a-aa325e2d99f8">
+          <CubeDimensionID>Employees 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="4115d141-5678-4f4c-8180-55e39b9ab50c">
+              <AttributeID>Dim Fed Hierarchy History Key</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="96f59005-b58b-4f50-9112-a54c0ef94040">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ef922f71-6b17-4fd2-b946-1cb5c1c2d412">
+                    <TableID>dbo_fact_budget_activity</TableID>
+                    <ColumnID>dim_fed_hierarchy_history_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ef25fb2b-02c3-4b0d-8d25-934e1ac0cc25">
+          <CubeDimensionID>Age Banding</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="7c10ff8d-5d25-49a2-bbbd-d8c858ce7475">
+              <AttributeID>Age Banding</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="c730217f-a7a8-43e4-a2a6-ebcca8be652a">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1bf05b9b-9ebe-4d62-899b-a0baf2b82ef4">
+                    <TableID>dbo_fact_budget_activity</TableID>
+                    <ColumnID>dim_days_banding_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="82fdb33b-37eb-4e46-85dd-3dfb15731a10">
+          <CubeDimensionID>Dibs WIP and Debt Snapshot</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="e8f7d6bc-834b-4ea1-b7f6-5c21cc93f5a2">
+              <AttributeID>Snapshot Time</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="df5498b4-fa10-4558-8941-1e366ad29760">
+                  <DataType>WChar</DataType>
+                  <DataSize>20</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="15828e4d-f365-4278-886a-ced960a82d5f">
+                    <TableID>dbo_fact_budget_activity</TableID>
+                    <ColumnID>Snapshot</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="4f4498f6-3f65-4c68-995f-36d672c747e4">
+              <AttributeID>Snapshot Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="5c391aa9-0fef-4691-bf2b-515ad8e29cb5">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="29db9d75-a221-46b1-8cd0-9834906c9465">
+                    <TableID>dbo_fact_budget_activity</TableID>
+                    <ColumnID>Snapshot</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
@@ -2423,7 +2528,6 @@
         </Measure>
       </Measures>
       <StorageMode>Molap</StorageMode>
-      <IgnoreUnrelatedDimensions>false</IgnoreUnrelatedDimensions>
       <ProcessingMode>Regular</ProcessingMode>
       <Dimensions>
         <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="1e0b7d67-cff1-422c-9bf7-21aad8fb4bee">
@@ -2736,6 +2840,24 @@
           <Materialization>Regular</Materialization>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
         </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="c35bf70a-bf62-4e57-b426-25f54c63bdb1">
+          <CubeDimensionID>Age Banding</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="07eda491-6704-4922-a611-bf0fe5f33b85">
+              <AttributeID>Age Banding</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="e7146ac0-861a-4feb-b218-79b0281b1030">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a63866a2-a2af-433d-8bdd-d7071de974eb">
+                    <TableID>dbo_fact_bill_billed_time_activity</TableID>
+                    <ColumnID>dim_days_banding_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
       </Dimensions>
       <Partitions />
     </MeasureGroup>
@@ -2896,6 +3018,24 @@
                   <Source xsi:type="ColumnBinding" dwd:design-time-name="9110e993-edea-4e0e-bd8b-f771b4abfee7">
                     <TableID>dbo_fact_billable_time_activity</TableID>
                     <ColumnID>matter_owner_history_key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="cd28a622-a962-4d9c-8c63-25cd3d3fac6e">
+          <CubeDimensionID>Age Banding</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="55bed4eb-7c21-4f4a-9527-443ad1083278">
+              <AttributeID>Age Banding</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="06d20ba6-33b1-4126-859c-8bea32684cc8">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b320ce52-8179-455e-9839-feb9a8013004">
+                    <TableID>dbo_fact_billable_time_activity</TableID>
+                    <ColumnID>dim_days_banding_key</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
@@ -3279,312 +3419,312 @@ The CALCULATE command controls the aggregation of leaf cells in the cube.
 If the CALCULATE command is deleted or modified, the data within the cube is affected.
 You should edit this command only if you manually specify how the cube is aggregated.
 */
-CALCULATE;  
+CALCULATE;   
 CREATE MEMBER CURRENTCUBE.[Measures].[Unbilled Disbursements]
  AS [Measures].[UnbilledDisbursements], 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'WIP';  
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'WIP';   
 CREATE MEMBER CURRENTCUBE.[Measures].[Debt ]
  AS [Measures].[Debt], 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Total Bill' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';          
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Total Bill' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';           
 CREATE MEMBER CURRENTCUBE.[Measures].[Bill Total]
  AS [Measures].[BillTotal], 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Total Bill' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';          
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Total Bill' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';           
 CREATE MEMBER CURRENTCUBE.[Measures].[Disbursement Value]
  AS [Measures].[PaidDisbursements] + [Measures].[UnpaidDisbursements], 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Disbursements' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';          
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Disbursements' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';           
 CREATE MEMBER CURRENTCUBE.[Measures].[Paid Disbursements]
  AS [Measures].[PaidDisbursements], 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Disbursements' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';          
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Disbursements' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';           
 CREATE MEMBER CURRENTCUBE.[Measures].[Unpaid Disbursement]
  AS [Measures].[UnpaidDisbursements], 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Disbursements' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';               
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Disbursements' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                
 CREATE MEMBER CURRENTCUBE.[Measures].[Revenue v Budget %]
  AS ([Measures].[Revenue]-[Measures].[Budget Value])/[Measures].[Budget Value], 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';       
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';        
 CREATE MEMBER CURRENTCUBE.[Measures].[Revenue % of Budget]
  AS iif([Measures].[Budget Value]&gt;0,[Measures].[Revenue]/[Measures].[Budget Value], null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';     
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';      
 CREATE MEMBER CURRENTCUBE.[Measures].[Revenue % of Annual Budget]
  AS iif([Measures].[Annual Budget Value]&gt;0,[Measures].[Revenue]/[Measures].[Annual Budget Value], null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';        
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';         
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Revenue v YTD Budget %]
  AS iif([Measures].[YTD Budget Value]&gt;0,([Measures].[YTD Revenue]-[Measures].[YTD Budget Value])/[Measures].[YTD Budget Value], null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';       
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';        
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Revenue % of YTD Budget]
  AS iif([Measures].[YTD Budget Value]&gt;0,[Measures].[YTD Revenue]/[Measures].[YTD Budget Value], null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';     
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';      
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Revenue % of Annual Budget]
  AS iif([Measures].[Annual Budget Value]&gt;0,[Measures].[YTD Revenue]/[Measures].[Annual Budget Value], null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';               
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                
 CREATE MEMBER CURRENTCUBE.[Measures].[Revenue v Budget]
  AS [Measures].[Revenue]-[Measures].[Budget Value], 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';        
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';         
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Revenue v Budget]
  AS [Measures].[YTD Revenue]-[Measures].[YTD Budget Value], 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';         
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';          
 CREATE MEMBER CURRENTCUBE.[Measures].[Chargeable Hours_calc]
  AS chargeablemins / 60, 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 0 ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';      
+VISIBLE = 0 ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';       
 CREATE MEMBER CURRENTCUBE.[Measures].[Chargeable Hours vs Budget]
  AS [Measures].[Chargeable Hours]-[Measures].[Budget Hours], 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';      
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';       
 CREATE MEMBER CURRENTCUBE.[Measures].[Chargeable Hours vs Budget %]
  AS iif(IsEmpty([Measures].[Budget Hours]), null, ([Measures].[Chargeable Hours]-[Measures].[Budget Hours])/[Measures].[Budget Hours]), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';      
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';       
 CREATE MEMBER CURRENTCUBE.[Measures].[Chargeable Hours % of Budget]
  AS iif([Measures].[Budget Hours] &gt; 0, ([Measures].[Chargeable Hours]/[Measures].[Budget Hours]), null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';     
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';      
 CREATE MEMBER CURRENTCUBE.[Measures].[Chargeable Hours % of Annual Budget]
  AS iif([Measures].[Annual Budget Hours] &gt; 0, ([Measures].[Chargeable Hours]/[Measures].[Annual Budget Hours]), null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';        
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';         
 CREATE MEMBER CURRENTCUBE.[Measures].[Chargeable Hours Prior Year]
  AS SUM(PARALLELPERIOD( [Bill Date].[Fiscal Date].[Fin Year],1,
 [Bill Date].[Fiscal Date].CurrentMember),[Measures].[Chargeable Hours]), 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';        
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';         
 CREATE MEMBER CURRENTCUBE.[Measures].[Chargeable Hours vs Prior Year]
  AS [Measures].[Chargeable Hours]-[Measures].[Chargeable Hours Prior Year], 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';        
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';         
 CREATE MEMBER CURRENTCUBE.[Measures].[Chargeable Hours vs Prior Year %]
  AS iif(IsEmpty([Measures].[Chargeable Hours Prior Year]) or [Measures].[Chargeable Hours Prior Year]=0, null, ([Measures].[Chargeable Hours]-[Measures].[Chargeable Hours Prior Year])/[Measures].[Chargeable Hours Prior Year]), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';        
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';         
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Chargeable Hours]
  AS SUM(YTD([Bill Date].[Fiscal Date].CurrentMember), [Measures].[Chargeable Hours]), 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';      
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';       
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Chargeable Hours vs YTD Budget]
  AS [Measures].[YTD Chargeable Hours]-[Measures].[YTD Budget Hours], 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';      
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';       
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Chargeable Hours vs YTD Budget %]
  AS iif([Measures].[YTD Budget Hours]&gt;0, ([Measures].[YTD Chargeable Hours]-[Measures].[YTD Budget Hours])/[Measures].[YTD Budget Hours],null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';      
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';       
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Chargeable Hours % of YTD Budget]
  AS iif([Measures].[YTD Budget Hours]&gt;0,[Measures].[YTD Chargeable Hours]/[Measures].[YTD Budget Hours], null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';     
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';      
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Chargeable Hours % of Annual Budget]
  AS iif([Measures].[Annual Budget Hours]&gt;0,[Measures].[YTD Chargeable Hours]/[Measures].[Annual Budget Hours], null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';        
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';         
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Chargeable Hours Prior Year]
  AS SUM(PARALLELPERIOD( [Bill Date].[Fiscal Date].[Fin Year],1,
 [Bill Date].[Fiscal Date].CurrentMember),[Measures].[YTD Chargeable Hours]), 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';        
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';         
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Chargeable Hours vs YTD Prior Year]
  AS [Measures].[YTD Chargeable Hours]-[Measures].[YTD Chargeable Hours Prior Year], 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';        
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';         
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Chargeable Hours vs YTD Prior Year %]
  AS iif(IsEmpty([Measures].[YTD Chargeable Hours Prior Year]) or [Measures].[YTD Chargeable Hours Prior Year]=0, null,([Measures].[YTD Chargeable Hours]-[Measures].[YTD Chargeable Hours Prior Year])/[Measures].[YTD Chargeable Hours Prior Year]), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';        
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';         
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Budget Hours]
  AS SUM(YTD([Bill Date].[Fiscal Date].CurrentMember), [Measures].[Budget Hours]), 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';                 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';                  
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Revenue]
  AS SUM(YTD([Bill Date].[Fiscal Date].CurrentMember), [Measures].[Revenue]), 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';        
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';         
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Billed Hours]
  AS SUM(YTD([Bill Date].[Fiscal Date].CurrentMember), [Measures].[Billed Hours]), 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Hours\YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';        
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Hours\YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';         
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Budget Value]
  AS SUM(YTD([Bill Date].[Fiscal Date].CurrentMember), [Measures].[Budget Value]), 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';                
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';                 
 CREATE MEMBER CURRENTCUBE.[Measures].[Revenue Prior Year]
  AS SUM(PARALLELPERIOD( [Bill Date].[Fiscal Date].[Fin Year],1,
 [Bill Date].[Fiscal Date].CurrentMember),[Measures].[Revenue]), 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';        
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';         
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Revenue Prior Year]
  AS SUM(PARALLELPERIOD( [Bill Date].[Fiscal Date].[Fin Year],1,
 [Bill Date].[Fiscal Date].CurrentMember),[Measures].[YTD Revenue]), 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';               
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                
 CREATE MEMBER CURRENTCUBE.[Measures].[Revenue v Prior Year]
  AS [Measures].[Revenue]-[Measures].[Revenue Prior Year], 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';               
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                
 CREATE MEMBER CURRENTCUBE.[Measures].[Revenue v Prior Year %]
  AS iif(IsEmpty([Measures].[Revenue Prior Year]) or [Measures].[Revenue Prior Year]=0,null,([Measures].[Revenue]-[Measures].[Revenue Prior Year])/[Measures].[Revenue Prior Year]), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';        
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';         
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Revenue v YTD Prior Year]
  AS [Measures].[YTD Revenue]-[Measures].[YTD Revenue Prior Year], 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';        
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';         
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Revenue v YTD Prior Year %]
  AS iif(IsEmpty([Measures].[YTD Revenue Prior Year]) or [Measures].[YTD Revenue Prior Year]=0,null,([Measures].[YTD Revenue]-[Measures].[YTD Revenue Prior Year])/[Measures].[YTD Revenue Prior Year]), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';          
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';           
 
 CREATE MEMBER CURRENTCUBE.[Measures].[Billed Hours]
  AS [Measures].[Minutes Recorded] / 60, 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Hours' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';        
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Hours' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';         
 CREATE MEMBER CURRENTCUBE.[Measures].[Billed Hours Prior Year]
  AS SUM(PARALLELPERIOD( [Bill Date].[Fiscal Date].[Fin Year],1,
 [Bill Date].[Fiscal Date].CurrentMember),[Measures].[Billed Hours]), 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Hours\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';        
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Hours\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';         
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Billed Hours Prior Year]
  AS SUM(PARALLELPERIOD( [Bill Date].[Fiscal Date].[Fin Year],1,
 [Bill Date].[Fiscal Date].CurrentMember),[Measures].[YTD Billed Hours]), 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Hours\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';        
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Hours\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';         
 CREATE MEMBER CURRENTCUBE.[Measures].[Billed Hours v Prior Year]
  AS [Measures].[Billed Hours]-[Measures].[Billed Hours Prior Year], 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Hours\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';        
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Hours\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';         
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Billed Hours v YTD Prior Year]
  AS [Measures].[YTD Billed Hours]-[Measures].[YTD Billed Hours Prior Year], 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Hours\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';        
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Hours\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';         
 CREATE MEMBER CURRENTCUBE.[Measures].[Billed Hours v Prior Year %]
  AS iif(IsEmpty([Measures].[Billed Hours Prior Year]) or [Measures].[Billed Hours Prior Year]=0,null,([Measures].[Billed Hours]-[Measures].[Billed Hours Prior Year])/[Measures].[Billed Hours Prior Year]), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Hours\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';        
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Hours\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';         
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Billed Hours v YTD Prior Year %]
  AS iif(IsEmpty([Measures].[YTD Billed Hours Prior Year]) or [Measures].[YTD Billed Hours Prior Year]=0,null,([Measures].[YTD Billed Hours]-[Measures].[YTD Billed Hours Prior Year])/[Measures].[YTD Billed Hours Prior Year]), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Hours\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';               
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Hours\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                
 CREATE MEMBER CURRENTCUBE.[Measures].[Revenue+WIP % of Budget]
  AS iif([Measures].[Budget Value]&gt;0,[Measures].[Revenue+WIP]/[Measures].[Budget Value], null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'WIP';     
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'WIP';      
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD WIP Value]
  AS SUM(YTD([Bill Date].[Fiscal Date].CurrentMember), [Measures].[WIP Value]), 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'WIP';     
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'WIP';      
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Revenue+WIP]
  AS [Measures].[YTD WIP Value] + [Measures].[YTD Revenue], 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'WIP';     
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'WIP';      
 CREATE MEMBER CURRENTCUBE.[Measures].[Revenue+WIP]
  AS [Measures].[WIP Value] + [Measures].[Revenue], 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'WIP';     
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'WIP';      
 CREATE MEMBER CURRENTCUBE.[Measures].[Revenue+WIP % of Annual Budget]
  AS iif([Measures].[Annual Budget Value]&gt;0,[Measures].[Revenue+WIP]/[Measures].[Annual Budget Value], null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'WIP';     
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'WIP';      
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Revenue+WIP % of Annual Budget]
  AS iif([Measures].[Annual Budget Value]&gt;0,[Measures].[YTD Revenue+WIP]/[Measures].[Annual Budget Value], null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'WIP';     
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'WIP';      
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Revenue+WIP % of YTD Budget]
  AS iif([Measures].[YTD Budget Value]&gt;0,[Measures].[YTD Revenue+WIP]/[Measures].[YTD Budget Value], null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'WIP';               
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'WIP';                
 CREATE MEMBER CURRENTCUBE.[Measures].[Revenue+WIP v Budget]
  AS ([Measures].[Revenue]+[Measures].[Wip Value])-[Measures].[Budget Value], 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'WIP';     
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'WIP';      
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Revenue+WIP v YTD Budget]
  AS ([Measures].[YTD Revenue]+[Measures].[YTD Wip Value])-[Measures].[YTD Budget Value], 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'WIP';        
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'WIP';         
 CREATE MEMBER CURRENTCUBE.[Measures].[Recovery Rate]
  AS iif(IsEmpty([Measures].[Billed Hours]) or [Measures].[Billed Hours]=0 ,null,[Measures].[Revenue] / [Measures].[Billed Hours]), 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';        
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';         
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Recovery Rate]
  AS iif(IsEmpty([Measures].[YTD Billed Hours]) or [Measures].[YTD Billed Hours]=0,null,[Measures].[YTD Revenue] / [Measures].[YTD Billed Hours]), 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';       
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';        
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Recovery Rate Prior Year]
  AS SUM(PARALLELPERIOD( [Bill Date].[Fiscal Date].[Fin Year],1,
 [Bill Date].[Fiscal Date].CurrentMember),[YTD Recovery Rate]), 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';       
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';        
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Recovery Rate v YTD Prior Year]
  AS [Measures].[YTD Recovery Rate]-[Measures].[YTD Recovery Rate Prior Year], 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';       
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';        
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Recovery Rate v YTD Prior Year %]
  AS iif(IsEmpty([Measures].[YTD Recovery Rate Prior Year]) or [Measures].[YTD Recovery Rate Prior Year]=0,null,([Measures].[YTD Recovery Rate]-[Measures].[YTD Recovery Rate Prior Year])/[Measures].[YTD Recovery Rate Prior Year]), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';       
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';        
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Recovery Rate v YTD Buget]
  AS [Measures].[YTD Recovery Rate]-[Measures].[YTD Budget Recovery Rate], 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';       
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';        
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Recovery Rate v YTD Budget %]
  AS iif(IsEmpty([Measures].[YTD Budget Recovery Rate]) or [Measures].[YTD Budget Recovery Rate]=0,null,([Measures].[YTD Recovery Rate]-[Measures].[YTD Budget Recovery Rate])/[Measures].[YTD Budget Recovery Rate]), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';       
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';        
 CREATE MEMBER CURRENTCUBE.[Measures].[Recovery Rate Prior Year]
  AS SUM(PARALLELPERIOD( [Bill Date].[Fiscal Date].[Fin Year],1,
 [Bill Date].[Fiscal Date].CurrentMember),[Measures].[Recovery Rate]), 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';       
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';        
 CREATE MEMBER CURRENTCUBE.[Measures].[Recovery Rate v Prior Year]
  AS [Measures].[Recovery Rate]-[Measures].[Recovery Rate Prior Year], 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';       
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';        
 CREATE MEMBER CURRENTCUBE.[Measures].[Recovery Rate v Budget]
  AS [Measures].[Recovery Rate]-[Measures].[Budget Recovery Rate], 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';       
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';        
 CREATE MEMBER CURRENTCUBE.[Measures].[Recovery Rate v Budget %]
  AS iif(IsEmpty([Measures].[YTD Budget Recovery Rate]) or [Measures].[YTD Budget Recovery Rate]=0,null,([Measures].[YTD Recovery Rate]-[Measures].[YTD Budget Recovery Rate])/[Measures].[YTD Budget Recovery Rate]), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';       
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';        
 CREATE MEMBER CURRENTCUBE.[Measures].[Recovery Rate v Prior Year %]
  AS iif(IsEmpty([Measures].[Recovery Rate Prior Year]) or [Measures].[Recovery Rate Prior Year]=0, null, ([Measures].[Recovery Rate]-[Measures].[Recovery Rate Prior Year])/[Measures].[Recovery Rate Prior Year]), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';        
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';         
 CREATE MEMBER CURRENTCUBE.[Measures].[Budget Recovery Rate]
  AS iif([Measures].[Budget Hours]&gt;0,[Measures].[Budget Value] / [Measures].[Budget Hours],null), 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';        
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';         
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Budget Recovery Rate]
  AS iif(IsEmpty([Measures].[YTD Budget Hours]),null,[Measures].[YTD Budget Value] / [Measures].[YTD Budget Hours]), 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';     
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';      
 CREATE MEMBER CURRENTCUBE.[Measures].[Annual Budget Recovery Rate]
  AS iif([Measures].[Annual Budget Hours]&gt;0,[Measures].[Annual Budget Value] / [Measures].[Annual Budget Hours],null), 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';     
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';      
 CREATE MEMBER CURRENTCUBE.[Measures].[Annual Budget Value]
  AS (ANCESTOR([Bill Date].[Fiscal Date].CurrentMember,
           [Bill Date].[Fiscal Date].[Fin Year]),
           (Root([Measures].[Budget Value]))), 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';     
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';      
 CREATE MEMBER CURRENTCUBE.[Measures].[Annual Budget Hours]
  AS (ANCESTOR([Bill Date].[Fiscal Date].CurrentMember,
           [Bill Date].[Fiscal Date].[Fin Year]),
           (Root([Measures].[Budget Hours]))), 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';   
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';    
 CREATE MEMBER CURRENTCUBE.[Measures].[Total VAT]
  AS [Measures].[VatAmount], 
 FORMAT_STRING = "#,##0;-#,##0", 
@@ -3675,6 +3815,111 @@ VISIBLE = 1 ,  DISPLAY_FOLDER = 'Total Bill' ,  ASSOCIATED_MEASURE_GROUP = 'Bill
         </Column>
         <Column xsi:type="MeasureBinding" dwd:design-time-name="acdda9bb-1c95-4eb8-bf3b-f3292e36258b">
           <MeasureID>Billed Time</MeasureID>
+        </Column>
+      </Columns>
+    </Action>
+    <Action xsi:type="DrillThroughAction" dwd:design-time-name="cd68cf41-d865-4009-be27-685c675279a1">
+      <ID>Drillthrough Action 1</ID>
+      <Name>Chargeable Hours Detail</Name>
+      <Caption>Chareable Hours Detail By Fee Earner</Caption>
+      <TargetType>Cells</TargetType>
+      <Target>MeasureGroupMeasures("Chargeable Hours")</Target>
+      <Condition>[Measures].[Chareable Hours] &lt;&gt; 0</Condition>
+      <Type>DrillThrough</Type>
+      <Default>true</Default>
+      <Columns>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="ad7bc99c-e0e5-4f5f-b4a4-e3127a891086">
+          <CubeID>Finance Cube</CubeID>
+          <CubeDimensionID>Employees</CubeDimensionID>
+          <AttributeID>Display Name</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="82032716-6db5-4bcf-85ad-3fe94b575762">
+          <CubeID>Finance Cube</CubeID>
+          <CubeDimensionID>Employees</CubeDimensionID>
+          <AttributeID>Hierarchylevel2hist</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="8932abe4-a75d-4b19-a64c-6dc3bab23464">
+          <CubeID>Finance Cube</CubeID>
+          <CubeDimensionID>Employees</CubeDimensionID>
+          <AttributeID>Hierarchylevel3hist</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="b817b3f4-159b-4939-ab5b-f4e5c7e4a7c9">
+          <CubeID>Finance Cube</CubeID>
+          <CubeDimensionID>Employees</CubeDimensionID>
+          <AttributeID>Hierarchylevel4hist</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="a985bc79-08f9-43bf-8fd6-a7850ded64ad">
+          <CubeID>Finance Cube</CubeID>
+          <CubeDimensionID>Matter Details</CubeDimensionID>
+          <AttributeID>Dim Matter Header Curr Key</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="3fcb7093-db1a-4be8-8806-f5023948d08e">
+          <CubeID>Finance Cube</CubeID>
+          <CubeDimensionID>Matter Details</CubeDimensionID>
+          <AttributeID>Fee Arrangement</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="21f5c106-3068-425f-bbeb-8fe599c97855">
+          <CubeID>Finance Cube</CubeID>
+          <CubeDimensionID>Matter Details</CubeDimensionID>
+          <AttributeID>Dim Instruction Type Key</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="2a466b7c-ccd8-474d-aba7-77bef0779c03">
+          <CubeID>Finance Cube</CubeID>
+          <CubeDimensionID>Matter Details</CubeDimensionID>
+          <AttributeID>Present Position</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="a0ea49a6-8af3-44d2-b9ed-e53643151196">
+          <CubeID>Finance Cube</CubeID>
+          <CubeDimensionID>Client Details</CubeDimensionID>
+          <AttributeID>Client Code</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="06e5476a-2376-4321-a54f-d755d0d2d0d7">
+          <CubeID>Finance Cube</CubeID>
+          <CubeDimensionID>Client Details</CubeDimensionID>
+          <AttributeID>Client Name</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="e59ae0a0-2480-4cbd-b5eb-842872d6413f">
+          <CubeID>Finance Cube</CubeID>
+          <CubeDimensionID>Bill Date</CubeDimensionID>
+          <AttributeID>Dim Date Key</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="41d75067-53a7-483f-ac23-9cf46cf0220b">
+          <CubeID>Finance Cube</CubeID>
+          <CubeDimensionID>Bill Date</CubeDimensionID>
+          <AttributeID>Fin Month</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="42807c55-6507-418c-a43f-6d3c6675af20">
+          <CubeID>Finance Cube</CubeID>
+          <CubeDimensionID>Bill Date</CubeDimensionID>
+          <AttributeID>Fin Period</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="a8e62c06-865f-4086-af2b-4b0c04dae8b2">
+          <CubeID>Finance Cube</CubeID>
+          <CubeDimensionID>Bill Date</CubeDimensionID>
+          <AttributeID>Fin Quarter</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="9ac6284b-7135-4c33-b495-c3d98a918cc4">
+          <CubeID>Finance Cube</CubeID>
+          <CubeDimensionID>Bill Date</CubeDimensionID>
+          <AttributeID>Fin Year</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="MeasureBinding" dwd:design-time-name="cb7051b3-6e4d-4263-b2b0-f1ae4e2e83b2">
+          <MeasureID>Chargeable Hours</MeasureID>
         </Column>
       </Columns>
     </Action>
