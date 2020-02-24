@@ -26,8 +26,2821 @@
             <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="9fdbf522-f99a-41c2-aba5-fdfd8cb2d985" />
           </ProactiveCaching>
           <EstimatedSize>90134589</EstimatedSize>
+          <EstimatedRows>1979354</EstimatedRows>
+          <AggregationDesignID>agg_fact_bill_receipts</AggregationDesignID>
         </Partition>
       </Partitions>
+      <AggregationDesigns>
+        <AggregationDesign>
+          <ID>agg_fact_bill_receipts</ID>
+          <Name>agg_fact_bill_receipts</Name>
+          <CreatedTimestamp>2020-02-24T10:26:02.073333Z</CreatedTimestamp>
+          <LastSchemaUpdate>2020-02-24T10:26:02.073333Z</LastSchemaUpdate>
+          <EstimatedRows>1979354</EstimatedRows>
+          <Dimensions>
+            <Dimension>
+              <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Dim Matter Header Curr Key</AttributeID>
+                  <EstimatedCount>1195646</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Matter Number</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Matter Description</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Date Opened</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Date Closed</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Master Client Code</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Master Matter Number</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Client Partner Name</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Client Name</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dim Bill</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Dim Bill Key</AttributeID>
+                  <EstimatedCount>1331267</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Bill Number</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Has Message Data</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Target Debt 2018</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dim Client</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Dim Client Key</AttributeID>
+                  <EstimatedCount>905193</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Client Code</AttributeID>
+                  <EstimatedCount>905193</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Client Name</AttributeID>
+                  <EstimatedCount>905193</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Client Group Name</AttributeID>
+                  <EstimatedCount>208</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Client Partner Code</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Client Partner Name</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dim Date</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Dim Date Key</AttributeID>
+                  <EstimatedCount>21765</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Fin Period</AttributeID>
+                  <EstimatedCount>716</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Fin Quarter</AttributeID>
+                  <EstimatedCount>240</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Fin Year</AttributeID>
+                  <EstimatedCount>62</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Calendar Date</AttributeID>
+                  <EstimatedCount>21765</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Cal Year</AttributeID>
+                  <EstimatedCount>62</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Cal Quarter</AttributeID>
+                  <EstimatedCount>241</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Cal Period</AttributeID>
+                  <EstimatedCount>724</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Cal Month</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Current Cal Day</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Current Cal Month</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Cal Week In Year</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Cal Day In Week</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Cal Day In Month</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Current Fin Month</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dim Date 1</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Dim Date Key</AttributeID>
+                  <EstimatedCount>21765</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Fin Period</AttributeID>
+                  <EstimatedCount>716</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Fin Quarter</AttributeID>
+                  <EstimatedCount>240</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Fin Year</AttributeID>
+                  <EstimatedCount>62</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Calendar Date</AttributeID>
+                  <EstimatedCount>21765</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Cal Year</AttributeID>
+                  <EstimatedCount>62</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Cal Quarter</AttributeID>
+                  <EstimatedCount>241</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Cal Period</AttributeID>
+                  <EstimatedCount>724</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Cal Month</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Current Cal Day</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Current Cal Month</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Cal Week In Year</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Cal Day In Week</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Cal Day In Month</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Current Fin Month</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Dim Fed Hierarchy History Key</AttributeID>
+                  <EstimatedCount>25716</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Fed Code</AttributeID>
+                  <EstimatedCount>3679</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Display Name</AttributeID>
+                  <EstimatedCount>6720</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Hierarchylevel1hist</AttributeID>
+                  <EstimatedCount>2</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Hierarchylevel2hist</AttributeID>
+                  <EstimatedCount>10</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Hierarchylevel3hist</AttributeID>
+                  <EstimatedCount>90</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Hierarchylevel4hist</AttributeID>
+                  <EstimatedCount>508</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Hierarchylevel5hist</AttributeID>
+                  <EstimatedCount>660</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Hierarchylevel6hist</AttributeID>
+                  <EstimatedCount>660</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Fed Hierarchy Business Key</AttributeID>
+                  <EstimatedCount>4282</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Jobtitle</AttributeID>
+                  <EstimatedCount>316</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+                  <EstimatedCount>2</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Hierarchylevel2hist Pre Francis</AttributeID>
+                  <EstimatedCount>25</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Hierarchylevel3hist Pre Francis</AttributeID>
+                  <EstimatedCount>181</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Hierarchylevel4hist Pre Francis</AttributeID>
+                  <EstimatedCount>969</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Hierarchylevel5hist Pre Francis</AttributeID>
+                  <EstimatedCount>1178</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Display Name 1</AttributeID>
+                  <EstimatedCount>15805</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Name</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Windowsusername</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+          </Dimensions>
+          <Aggregations>
+            <Aggregation>
+              <ID>Aggregation 0</ID>
+              <Name>Aggregation 0</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Period</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel2hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1</ID>
+              <Name>Aggregation 1</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Cal Period</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel2hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 2</ID>
+              <Name>Aggregation 2</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Cal Period</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel2hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 3</ID>
+              <Name>Aggregation 3</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Period</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel2hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 4</ID>
+              <Name>Aggregation 4</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel2hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel5hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 5</ID>
+              <Name>Aggregation 5</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel5hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel2hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 6</ID>
+              <Name>Aggregation 6</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Display Name</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 7</ID>
+              <Name>Aggregation 7</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel3hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 8</ID>
+              <Name>Aggregation 8</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Quarter</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Cal Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 9</ID>
+              <Name>Aggregation 9</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Quarter</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Cal Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation a</ID>
+              <Name>Aggregation a</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Quarter</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation b</ID>
+              <Name>Aggregation b</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Cal Quarter</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation c</ID>
+              <Name>Aggregation c</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Cal Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Cal Quarter</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation d</ID>
+              <Name>Aggregation d</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Year</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Cal Quarter</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation e</ID>
+              <Name>Aggregation e</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Year</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Cal Quarter</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation f</ID>
+              <Name>Aggregation f</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Cal Quarter</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Cal Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 10</ID>
+              <Name>Aggregation 10</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Cal Quarter</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 11</ID>
+              <Name>Aggregation 11</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Client Group Name</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Cal Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 12</ID>
+              <Name>Aggregation 12</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Client Group Name</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 13</ID>
+              <Name>Aggregation 13</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel2hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 14</ID>
+              <Name>Aggregation 14</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Client Group Name</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel3hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 15</ID>
+              <Name>Aggregation 15</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Client Group Name</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel2hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 16</ID>
+              <Name>Aggregation 16</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Client Group Name</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Cal Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 17</ID>
+              <Name>Aggregation 17</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Client Group Name</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 18</ID>
+              <Name>Aggregation 18</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel5hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 19</ID>
+              <Name>Aggregation 19</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Cal Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel5hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1a</ID>
+              <Name>Aggregation 1a</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Cal Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel5hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1b</ID>
+              <Name>Aggregation 1b</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel5hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1c</ID>
+              <Name>Aggregation 1c</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Cal Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel2hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel2hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1d</ID>
+              <Name>Aggregation 1d</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Cal Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel2hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel2hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1e</ID>
+              <Name>Aggregation 1e</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel2hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel2hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1f</ID>
+              <Name>Aggregation 1f</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel2hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel2hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 20</ID>
+              <Name>Aggregation 20</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Quarter</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel3hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 21</ID>
+              <Name>Aggregation 21</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Quarter</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel3hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 22</ID>
+              <Name>Aggregation 22</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Cal Quarter</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel3hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 23</ID>
+              <Name>Aggregation 23</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Cal Quarter</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel3hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 24</ID>
+              <Name>Aggregation 24</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Cal Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Quarter</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 25</ID>
+              <Name>Aggregation 25</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Quarter</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Cal Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 26</ID>
+              <Name>Aggregation 26</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Quarter</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 27</ID>
+              <Name>Aggregation 27</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Cal Quarter</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 28</ID>
+              <Name>Aggregation 28</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Cal Quarter</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 29</ID>
+              <Name>Aggregation 29</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Quarter</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 2a</ID>
+              <Name>Aggregation 2a</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Quarter</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 2b</ID>
+              <Name>Aggregation 2b</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Display Name 1</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 2c</ID>
+              <Name>Aggregation 2c</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel3hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel3hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 2d</ID>
+              <Name>Aggregation 2d</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Quarter</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel3hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 2e</ID>
+              <Name>Aggregation 2e</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Quarter</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel3hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 2f</ID>
+              <Name>Aggregation 2f</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Cal Quarter</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel3hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 30</ID>
+              <Name>Aggregation 30</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Cal Quarter</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel3hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 31</ID>
+              <Name>Aggregation 31</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel3hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 32</ID>
+              <Name>Aggregation 32</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Cal Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Period</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 33</ID>
+              <Name>Aggregation 33</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Period</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 34</ID>
+              <Name>Aggregation 34</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Period</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Cal Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 35</ID>
+              <Name>Aggregation 35</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel5hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 36</ID>
+              <Name>Aggregation 36</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Cal Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel5hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 37</ID>
+              <Name>Aggregation 37</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel5hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 38</ID>
+              <Name>Aggregation 38</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Cal Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel5hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 39</ID>
+              <Name>Aggregation 39</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Year</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Cal Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel2hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 3a</ID>
+              <Name>Aggregation 3a</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Year</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Cal Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel2hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 3b</ID>
+              <Name>Aggregation 3b</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Cal Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Cal Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel2hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 3c</ID>
+              <Name>Aggregation 3c</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Cal Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel2hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 3d</ID>
+              <Name>Aggregation 3d</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel2hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 3e</ID>
+              <Name>Aggregation 3e</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Cal Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Year</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel2hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 3f</ID>
+              <Name>Aggregation 3f</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Client Group Name</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fin Quarter</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 40</ID>
+              <Name>Aggregation 40</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Client Group Name</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Cal Quarter</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel1hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 41</ID>
+              <Name>Aggregation 41</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Client Group Name</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel3hist Pre Francis</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 42</ID>
+              <Name>Aggregation 42</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Client Group Name</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 43</ID>
+              <Name>Aggregation 43</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Matter Header Current</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Bill</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Client</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Date 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fed Hierarchy History</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+          </Aggregations>
+        </AggregationDesign>
+      </AggregationDesigns>
     </MeasureGroup>
     <MeasureGroup>
       <ID>Fact Bill</ID>
@@ -54,6 +2867,7 @@
             <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="7df435ae-baa7-493f-9a3a-e9512334faed" />
           </ProactiveCaching>
           <EstimatedSize>217209400</EstimatedSize>
+          <EstimatedRows>3087390</EstimatedRows>
         </Partition>
       </Partitions>
     </MeasureGroup>
