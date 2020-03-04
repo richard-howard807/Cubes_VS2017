@@ -987,27 +987,31 @@ GROUP BY  dim_bill_key, fact_bill_billed_time_activity.dim_client_key, dim_trans
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="91018dce-01e8-4b1f-bb86-72854439e3e5">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="6d9a961b-5407-41bb-a422-1e0630f6cf27">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, 
                          fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.master_fact_key,                        
                          fact_billable_time_activity.dim_orig_posting_date_key,  ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 0) AS matter_owner_history_key, dim_days_banding_key,
 							SUM(minutes_recorded) minutes_recorded, SUM(fact_billable_time_activity.minutes_recorded / 60) AS chargeable_hours
 							,  ISNULL(dim_client.client_code, 'Unknown') master_client_code
-
+,staff_cost_rate, staff_cost_rate_per_min, other_costs_rate, other_costs_rate_per_min, total_cost_rate, total_cost_rate_per_min			 ,staff_cost_rate * SUM(fact_billable_time_activity.minutes_recorded / 60) chargeable_hours_staff_cost_rate
+			 ,other_costs_rate * SUM(fact_billable_time_activity.minutes_recorded / 60) chargeable_hours_other_cost_rate
+			 ,total_cost_rate * SUM(fact_billable_time_activity.minutes_recorded / 60) chargeable_hours_total_cost_rate
 FROM         fact_billable_time_activity LEFT OUTER JOIN
                          fact_dimension_main ON fact_dimension_main.master_fact_key = fact_billable_time_activity.master_fact_key
 INNER join dim_days_banding on DATEDIFF(d, CAST(CONVERT(CHAR(10), dim_orig_posting_date_key,120) AS DATE), GETDATE()) BETWEEN 
                          dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
 INNER JOIN dim_date ON dim_date.dim_date_key = fact_billable_time_activity.dim_orig_posting_date_key
  LEFT outer JOIN dbo.dim_client ON dim_client.client_code = 
-			CASE WHEN ISNUMERIC(master_client_code) = 1 THEN RIGHT('00000000' + CONVERT(VARCHAR, master_client_code), 8) ELSE CAST(RTRIM(master_client_code) AS VARCHAR(8)) END
+			CASE WHEN ISNUMERIC(master_client_code) = 1 THEN RIGHT('00000000' + CONVERT(VARCHAR, master_client_code), 8) ELSE CAST(RTRIM(master_client_code) AS VARCHAR(8)) END 	LEFT OUTER JOIN dbo.dim_fed_hierarchy_history ON dim_fed_hierarchy_history.dim_fed_hierarchy_history_key = fact_billable_time_activity.dim_fed_hierarchy_history_key	
+	LEFT OUTER JOIN dbo.fact_costs_rates ON fact_costs_rates.dim_employee_key = dim_fed_hierarchy_history.dim_employee_key
+	AND fact_costs_rates.fin_year = dim_date.fin_year AND fact_costs_rates.fin_month_no = dim_date.fin_month_no
 WHERE (fact_billable_time_activity.minutes_recorded &lt;&gt; 0)
 AND current_fin_year = 'Current'
 
 GROUP BY  fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, 
                          fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.master_fact_key,                        
-                         fact_billable_time_activity.dim_orig_posting_date_key,  ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 0), dim_days_banding_key,  ISNULL(dim_client.client_code, 'Unknown')</QueryDefinition>
+                         fact_billable_time_activity.dim_orig_posting_date_key,  ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 0), dim_days_banding_key,  ISNULL(dim_client.client_code, 'Unknown'),staff_cost_rate, staff_cost_rate_per_min, other_costs_rate, other_costs_rate_per_min, total_cost_rate, total_cost_rate_per_min</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
@@ -1020,23 +1024,28 @@ GROUP BY  fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="70d63a86-2774-4a76-b1ac-c828771f1b7b">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="c5c1c86b-253e-4d95-97b4-8941b6bcee9b">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, 
                          fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.master_fact_key,                        
                          fact_billable_time_activity.dim_orig_posting_date_key,  ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 0) AS matter_owner_history_key, dim_days_banding_key,
 							SUM(minutes_recorded) minutes_recorded, SUM(fact_billable_time_activity.minutes_recorded / 60) AS chargeable_hours
 							,  ISNULL(dim_client.client_code, 'Unknown') master_client_code
-
+,staff_cost_rate, staff_cost_rate_per_min, other_costs_rate, other_costs_rate_per_min, total_cost_rate, total_cost_rate_per_min
+			 ,staff_cost_rate * SUM(fact_billable_time_activity.minutes_recorded / 60) chargeable_hours_staff_cost_rate
+			 ,other_costs_rate * SUM(fact_billable_time_activity.minutes_recorded / 60) chargeable_hours_other_cost_rate
+			 ,total_cost_rate * SUM(fact_billable_time_activity.minutes_recorded / 60) chargeable_hours_total_cost_rate
 FROM         fact_billable_time_activity LEFT OUTER JOIN
                          fact_dimension_main ON fact_dimension_main.master_fact_key = fact_billable_time_activity.master_fact_key
 INNER join dim_days_banding on DATEDIFF(d, CAST(CONVERT(CHAR(10), dim_orig_posting_date_key,120) AS DATE), GETDATE()) BETWEEN 
                          dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
 INNER JOIN dim_date ON dim_date.dim_date_key = fact_billable_time_activity.dim_orig_posting_date_key
  LEFT outer JOIN dbo.dim_client ON dim_client.client_code = 
-			CASE WHEN ISNUMERIC(master_client_code) = 1 THEN RIGHT('00000000' + CONVERT(VARCHAR, master_client_code), 8) ELSE CAST(RTRIM(master_client_code) AS VARCHAR(8)) END
+			CASE WHEN ISNUMERIC(master_client_code) = 1 THEN RIGHT('00000000' + CONVERT(VARCHAR, master_client_code), 8) ELSE CAST(RTRIM(master_client_code) AS VARCHAR(8)) END 	LEFT OUTER JOIN dbo.dim_fed_hierarchy_history ON dim_fed_hierarchy_history.dim_fed_hierarchy_history_key = fact_billable_time_activity.dim_fed_hierarchy_history_key	
+	LEFT OUTER JOIN dbo.fact_costs_rates ON fact_costs_rates.dim_employee_key = dim_fed_hierarchy_history.dim_employee_key
+	AND fact_costs_rates.fin_year = dim_date.fin_year AND fact_costs_rates.fin_month_no = dim_date.fin_month_no
 WHERE (fact_billable_time_activity.minutes_recorded &lt;&gt; 0)
-and fin_year BETWEEN (SELECT DISTINCT fin_year - 2
+and dim_date.fin_year BETWEEN (SELECT DISTINCT fin_year - 2
 					FROM dbo.dim_date
 					WHERE current_fin_year = 'Current' )  AND   (SELECT DISTINCT fin_year - 1
 					FROM dbo.dim_date
@@ -1044,7 +1053,7 @@ and fin_year BETWEEN (SELECT DISTINCT fin_year - 2
 
 GROUP BY  fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, 
                          fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.master_fact_key,                        
-                         fact_billable_time_activity.dim_orig_posting_date_key,  ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 0), dim_days_banding_key,  ISNULL(dim_client.client_code, 'Unknown')</QueryDefinition>
+                         fact_billable_time_activity.dim_orig_posting_date_key,  ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 0), dim_days_banding_key,  ISNULL(dim_client.client_code, 'Unknown'),staff_cost_rate, staff_cost_rate_per_min, other_costs_rate, other_costs_rate_per_min, total_cost_rate, total_cost_rate_per_min</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
@@ -1057,23 +1066,28 @@ GROUP BY  fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="ea05337b-1a9d-4575-bce0-0665e400f1c2">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="c1da62e7-2298-446b-9a16-311ac6e1e8a1">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, 
                          fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.master_fact_key,                        
                          fact_billable_time_activity.dim_orig_posting_date_key,  ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 0) AS matter_owner_history_key, dim_days_banding_key,
 							SUM(minutes_recorded) minutes_recorded, SUM(fact_billable_time_activity.minutes_recorded / 60) AS chargeable_hours
 							,  ISNULL(dim_client.client_code, 'Unknown') master_client_code
-
+,staff_cost_rate, staff_cost_rate_per_min, other_costs_rate, other_costs_rate_per_min, total_cost_rate, total_cost_rate_per_min
+			 ,staff_cost_rate * SUM(fact_billable_time_activity.minutes_recorded / 60) chargeable_hours_staff_cost_rate
+			 ,other_costs_rate * SUM(fact_billable_time_activity.minutes_recorded / 60) chargeable_hours_other_cost_rate
+			 ,total_cost_rate * SUM(fact_billable_time_activity.minutes_recorded / 60) chargeable_hours_total_cost_rate
 FROM         fact_billable_time_activity LEFT OUTER JOIN
                          fact_dimension_main ON fact_dimension_main.master_fact_key = fact_billable_time_activity.master_fact_key
 INNER join dim_days_banding on DATEDIFF(d, CAST(CONVERT(CHAR(10), dim_orig_posting_date_key,120) AS DATE), GETDATE()) BETWEEN 
                          dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
 INNER JOIN dim_date ON dim_date.dim_date_key = fact_billable_time_activity.dim_orig_posting_date_key
  LEFT outer JOIN dbo.dim_client ON dim_client.client_code = 
-			CASE WHEN ISNUMERIC(master_client_code) = 1 THEN RIGHT('00000000' + CONVERT(VARCHAR, master_client_code), 8) ELSE CAST(RTRIM(master_client_code) AS VARCHAR(8)) END
+			CASE WHEN ISNUMERIC(master_client_code) = 1 THEN RIGHT('00000000' + CONVERT(VARCHAR, master_client_code), 8) ELSE CAST(RTRIM(master_client_code) AS VARCHAR(8)) END 	LEFT OUTER JOIN dbo.dim_fed_hierarchy_history ON dim_fed_hierarchy_history.dim_fed_hierarchy_history_key = fact_billable_time_activity.dim_fed_hierarchy_history_key	
+	LEFT OUTER JOIN dbo.fact_costs_rates ON fact_costs_rates.dim_employee_key = dim_fed_hierarchy_history.dim_employee_key
+	AND fact_costs_rates.fin_year = dim_date.fin_year AND fact_costs_rates.fin_month_no = dim_date.fin_month_no
 WHERE (fact_billable_time_activity.minutes_recorded &lt;&gt; 0)
-and fin_year BETWEEN (SELECT DISTINCT fin_year - 4
+and dim_date.fin_year BETWEEN (SELECT DISTINCT fin_year - 4
 					FROM dbo.dim_date
 					WHERE current_fin_year = 'Current' )  AND   (SELECT DISTINCT fin_year - 3
 					FROM dbo.dim_date
@@ -1081,7 +1095,7 @@ and fin_year BETWEEN (SELECT DISTINCT fin_year - 4
 
 GROUP BY  fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, 
                          fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.master_fact_key,                        
-                         fact_billable_time_activity.dim_orig_posting_date_key,  ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 0), dim_days_banding_key,  ISNULL(dim_client.client_code, 'Unknown')</QueryDefinition>
+                         fact_billable_time_activity.dim_orig_posting_date_key,  ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 0), dim_days_banding_key,  ISNULL(dim_client.client_code, 'Unknown'),staff_cost_rate, staff_cost_rate_per_min, other_costs_rate, other_costs_rate_per_min, total_cost_rate, total_cost_rate_per_min</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
@@ -1094,23 +1108,28 @@ GROUP BY  fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="b25ece17-894d-4b0a-bf58-ad8ac07c63a9">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="eee0d8cb-57e4-4277-a3cd-6766630a619f">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, 
                          fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.master_fact_key,                        
                          fact_billable_time_activity.dim_orig_posting_date_key,  ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 0) AS matter_owner_history_key, dim_days_banding_key,
 							SUM(minutes_recorded) minutes_recorded, SUM(fact_billable_time_activity.minutes_recorded / 60) AS chargeable_hours
 							,  ISNULL(dim_client.client_code, 'Unknown') master_client_code
-
+			 ,staff_cost_rate * SUM(fact_billable_time_activity.minutes_recorded / 60) chargeable_hours_staff_cost_rate
+			 ,other_costs_rate * SUM(fact_billable_time_activity.minutes_recorded / 60) chargeable_hours_other_cost_rate
+			 ,total_cost_rate * SUM(fact_billable_time_activity.minutes_recorded / 60) chargeable_hours_total_cost_rate
+,staff_cost_rate, staff_cost_rate_per_min, other_costs_rate, other_costs_rate_per_min, total_cost_rate, total_cost_rate_per_min
 FROM         fact_billable_time_activity LEFT OUTER JOIN
                          fact_dimension_main ON fact_dimension_main.master_fact_key = fact_billable_time_activity.master_fact_key
 INNER join dim_days_banding on DATEDIFF(d, CAST(CONVERT(CHAR(10), dim_orig_posting_date_key,120) AS DATE), GETDATE()) BETWEEN 
                          dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
 INNER JOIN dim_date ON dim_date.dim_date_key = fact_billable_time_activity.dim_orig_posting_date_key
  LEFT outer JOIN dbo.dim_client ON dim_client.client_code = 
-			CASE WHEN ISNUMERIC(master_client_code) = 1 THEN RIGHT('00000000' + CONVERT(VARCHAR, master_client_code), 8) ELSE CAST(RTRIM(master_client_code) AS VARCHAR(8)) END
+			CASE WHEN ISNUMERIC(master_client_code) = 1 THEN RIGHT('00000000' + CONVERT(VARCHAR, master_client_code), 8) ELSE CAST(RTRIM(master_client_code) AS VARCHAR(8)) END 	LEFT OUTER JOIN dbo.dim_fed_hierarchy_history ON dim_fed_hierarchy_history.dim_fed_hierarchy_history_key = fact_billable_time_activity.dim_fed_hierarchy_history_key	
+	LEFT OUTER JOIN dbo.fact_costs_rates ON fact_costs_rates.dim_employee_key = dim_fed_hierarchy_history.dim_employee_key
+	AND fact_costs_rates.fin_year = dim_date.fin_year AND fact_costs_rates.fin_month_no = dim_date.fin_month_no
 WHERE (fact_billable_time_activity.minutes_recorded &lt;&gt; 0)
-and fin_year BETWEEN (SELECT DISTINCT fin_year - 6
+and dim_date.fin_year BETWEEN (SELECT DISTINCT fin_year - 6
 					FROM dbo.dim_date
 					WHERE current_fin_year = 'Current' )  AND   (SELECT DISTINCT fin_year - 5
 					FROM dbo.dim_date
@@ -1118,7 +1137,7 @@ and fin_year BETWEEN (SELECT DISTINCT fin_year - 6
 
 GROUP BY  fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, 
                          fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.master_fact_key,                        
-                         fact_billable_time_activity.dim_orig_posting_date_key,  ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 0), dim_days_banding_key,  ISNULL(dim_client.client_code, 'Unknown')</QueryDefinition>
+                         fact_billable_time_activity.dim_orig_posting_date_key,  ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 0), dim_days_banding_key,  ISNULL(dim_client.client_code, 'Unknown'),staff_cost_rate, staff_cost_rate_per_min, other_costs_rate, other_costs_rate_per_min, total_cost_rate, total_cost_rate_per_min</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
@@ -1131,23 +1150,28 @@ GROUP BY  fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="2cb5385d-155c-4465-9d75-19d1c0ce60b9">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="d3656378-d1b2-4c9f-b68c-fc5006e77f4e">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, 
                          fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.master_fact_key,                        
                          fact_billable_time_activity.dim_orig_posting_date_key,  ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 0) AS matter_owner_history_key, dim_days_banding_key,
 							SUM(minutes_recorded) minutes_recorded, SUM(fact_billable_time_activity.minutes_recorded / 60) AS chargeable_hours
 							,  ISNULL(dim_client.client_code, 'Unknown') master_client_code
-
+,staff_cost_rate, staff_cost_rate_per_min, other_costs_rate, other_costs_rate_per_min, total_cost_rate, total_cost_rate_per_min
+			 ,staff_cost_rate * SUM(fact_billable_time_activity.minutes_recorded / 60) chargeable_hours_staff_cost_rate
+			 ,other_costs_rate * SUM(fact_billable_time_activity.minutes_recorded / 60) chargeable_hours_other_cost_rate
+			 ,total_cost_rate * SUM(fact_billable_time_activity.minutes_recorded / 60) chargeable_hours_total_cost_rate
 FROM         fact_billable_time_activity LEFT OUTER JOIN
                          fact_dimension_main ON fact_dimension_main.master_fact_key = fact_billable_time_activity.master_fact_key
 INNER join dim_days_banding on DATEDIFF(d, CAST(CONVERT(CHAR(10), dim_orig_posting_date_key,120) AS DATE), GETDATE()) BETWEEN 
                          dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
 INNER JOIN dim_date ON dim_date.dim_date_key = fact_billable_time_activity.dim_orig_posting_date_key
  LEFT outer JOIN dbo.dim_client ON dim_client.client_code = 
-			CASE WHEN ISNUMERIC(master_client_code) = 1 THEN RIGHT('00000000' + CONVERT(VARCHAR, master_client_code), 8) ELSE CAST(RTRIM(master_client_code) AS VARCHAR(8)) END
+			CASE WHEN ISNUMERIC(master_client_code) = 1 THEN RIGHT('00000000' + CONVERT(VARCHAR, master_client_code), 8) ELSE CAST(RTRIM(master_client_code) AS VARCHAR(8)) END 	LEFT OUTER JOIN dbo.dim_fed_hierarchy_history ON dim_fed_hierarchy_history.dim_fed_hierarchy_history_key = fact_billable_time_activity.dim_fed_hierarchy_history_key	
+	LEFT OUTER JOIN dbo.fact_costs_rates ON fact_costs_rates.dim_employee_key = dim_fed_hierarchy_history.dim_employee_key
+	AND fact_costs_rates.fin_year = dim_date.fin_year AND fact_costs_rates.fin_month_no = dim_date.fin_month_no
 WHERE (fact_billable_time_activity.minutes_recorded &lt;&gt; 0)
-and fin_year BETWEEN (SELECT DISTINCT fin_year - 8
+and dim_date.fin_year BETWEEN (SELECT DISTINCT fin_year - 8
 					FROM dbo.dim_date
 					WHERE current_fin_year = 'Current' )  AND   (SELECT DISTINCT fin_year - 7
 					FROM dbo.dim_date
@@ -1155,7 +1179,7 @@ and fin_year BETWEEN (SELECT DISTINCT fin_year - 8
 
 GROUP BY  fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, 
                          fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.master_fact_key,                        
-                         fact_billable_time_activity.dim_orig_posting_date_key,  ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 0), dim_days_banding_key,  ISNULL(dim_client.client_code, 'Unknown')</QueryDefinition>
+                         fact_billable_time_activity.dim_orig_posting_date_key,  ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 0), dim_days_banding_key,  ISNULL(dim_client.client_code, 'Unknown'),staff_cost_rate, staff_cost_rate_per_min, other_costs_rate, other_costs_rate_per_min, total_cost_rate, total_cost_rate_per_min</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
@@ -1168,29 +1192,34 @@ GROUP BY  fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="42e66e7d-831a-469c-bd7a-755064033f1e">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="a7757f94-f235-4b5e-9a6a-39c790c98f16">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, 
                          fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.master_fact_key,                        
                          fact_billable_time_activity.dim_orig_posting_date_key,  ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 0) AS matter_owner_history_key, dim_days_banding_key,
 							SUM(minutes_recorded) minutes_recorded, SUM(fact_billable_time_activity.minutes_recorded / 60) AS chargeable_hours
 							,  ISNULL(dim_client.client_code, 'Unknown') master_client_code
-
+,staff_cost_rate, staff_cost_rate_per_min, other_costs_rate, other_costs_rate_per_min, total_cost_rate, total_cost_rate_per_min
+			 ,staff_cost_rate * SUM(fact_billable_time_activity.minutes_recorded / 60) chargeable_hours_staff_cost_rate
+			 ,other_costs_rate * SUM(fact_billable_time_activity.minutes_recorded / 60) chargeable_hours_other_cost_rate
+			 ,total_cost_rate * SUM(fact_billable_time_activity.minutes_recorded / 60) chargeable_hours_total_cost_rate
 FROM         fact_billable_time_activity LEFT OUTER JOIN
                          fact_dimension_main ON fact_dimension_main.master_fact_key = fact_billable_time_activity.master_fact_key
 INNER join dim_days_banding on DATEDIFF(d, CAST(CONVERT(CHAR(10), dim_orig_posting_date_key,120) AS DATE), GETDATE()) BETWEEN 
                          dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
 INNER JOIN dim_date ON dim_date.dim_date_key = fact_billable_time_activity.dim_orig_posting_date_key
  LEFT outer JOIN dbo.dim_client ON dim_client.client_code = 
-			CASE WHEN ISNUMERIC(master_client_code) = 1 THEN RIGHT('00000000' + CONVERT(VARCHAR, master_client_code), 8) ELSE CAST(RTRIM(master_client_code) AS VARCHAR(8)) END
+			CASE WHEN ISNUMERIC(master_client_code) = 1 THEN RIGHT('00000000' + CONVERT(VARCHAR, master_client_code), 8) ELSE CAST(RTRIM(master_client_code) AS VARCHAR(8)) END 	LEFT OUTER JOIN dbo.dim_fed_hierarchy_history ON dim_fed_hierarchy_history.dim_fed_hierarchy_history_key = fact_billable_time_activity.dim_fed_hierarchy_history_key	
+	LEFT OUTER JOIN dbo.fact_costs_rates ON fact_costs_rates.dim_employee_key = dim_fed_hierarchy_history.dim_employee_key
+	AND fact_costs_rates.fin_year = dim_date.fin_year AND fact_costs_rates.fin_month_no = dim_date.fin_month_no
 WHERE (fact_billable_time_activity.minutes_recorded &lt;&gt; 0)
-and fin_year &lt; (SELECT DISTINCT fin_year - 8
+and dim_date.fin_year &lt; (SELECT DISTINCT fin_year - 8
 					FROM dbo.dim_date
 					WHERE current_fin_year = 'Current' )  AND (fact_billable_time_activity.dim_orig_posting_date_key &gt;= 20100501)
 
 GROUP BY  fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, 
                          fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.master_fact_key,                        
-                         fact_billable_time_activity.dim_orig_posting_date_key,  ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 0), dim_days_banding_key,  ISNULL(dim_client.client_code, 'Unknown')</QueryDefinition>
+                         fact_billable_time_activity.dim_orig_posting_date_key,  ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key, 0), dim_days_banding_key,  ISNULL(dim_client.client_code, 'Unknown'),staff_cost_rate, staff_cost_rate_per_min, other_costs_rate, other_costs_rate_per_min, total_cost_rate, total_cost_rate_per_min</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
