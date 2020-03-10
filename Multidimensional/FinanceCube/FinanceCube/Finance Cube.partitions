@@ -211,7 +211,7 @@ AND  (fact_bill.dim_bill_date_key &gt;= 20100501)</QueryDefinition>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="ac57f29e-69c5-40a6-ae1e-1bb378110c08">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="310e96c8-1dc4-442a-8a20-5bc67373f9c1">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT CAST(fact_bill_activity.fact_bill_activity_key AS BIGINT) AS fact_bill_activity_key, fact_bill_activity.dim_client_key, fact_bill_activity.dim_bill_date_key, fact_bill_activity.dim_bill_key, fact_bill_activity.dim_fed_hierarchy_history_key, fact_bill_activity.dim_matter_header_curr_key, 
              fact_bill_activity.billed_time, fact_bill_activity.bill_amount, dim_days_banding.dim_days_banding_key, ISNULL(dim_client.client_code, 'Unknown') master_client_code, isnull(fact_dimension_main.dim_fed_hierarchy_history_key,0) matter_owner_hist_key
@@ -250,7 +250,7 @@ and     dim_orig_posting_date_key IN (SELECT dim_date_key FROM dbo.dim_date WHER
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="5e78208a-e125-45d6-8565-961498ff4aa9">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="72695c06-416b-4dd7-994e-5df143533afd">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT CAST(fact_bill_activity.fact_bill_activity_key AS BIGINT) AS fact_bill_activity_key, fact_bill_activity.dim_client_key, fact_bill_activity.dim_bill_date_key, fact_bill_activity.dim_bill_key, fact_bill_activity.dim_fed_hierarchy_history_key, fact_bill_activity.dim_matter_header_curr_key, 
              fact_bill_activity.billed_time, fact_bill_activity.bill_amount, dim_days_banding.dim_days_banding_key, ISNULL(dim_client.client_code, 'Unknown') master_client_code, isnull(fact_dimension_main.dim_fed_hierarchy_history_key,0) matter_owner_hist_key
@@ -296,7 +296,7 @@ and     dim_orig_posting_date_key IN (SELECT dim_date_key FROM dbo.dim_date WHER
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="ff3303fa-0c66-4436-bda0-495a07387bc2">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="613476c0-9030-465d-b452-3f58870be501">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT CAST(fact_bill_activity.fact_bill_activity_key AS BIGINT) AS fact_bill_activity_key, fact_bill_activity.dim_client_key, fact_bill_activity.dim_bill_date_key, fact_bill_activity.dim_bill_key, fact_bill_activity.dim_fed_hierarchy_history_key, fact_bill_activity.dim_matter_header_curr_key, 
              fact_bill_activity.billed_time, fact_bill_activity.bill_amount, dim_days_banding.dim_days_banding_key, ISNULL(dim_client.client_code, 'Unknown') master_client_code, isnull(fact_dimension_main.dim_fed_hierarchy_history_key,0) matter_owner_hist_key
@@ -342,7 +342,7 @@ and     dim_orig_posting_date_key IN (SELECT dim_date_key FROM dbo.dim_date WHER
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="4d0fd39f-3a42-4e29-a26b-c3011ae5fac3">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="f64c247d-5ad4-4a83-ace7-64e2d098805f">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT CAST(fact_bill_activity.fact_bill_activity_key AS BIGINT) AS fact_bill_activity_key, fact_bill_activity.dim_client_key, fact_bill_activity.dim_bill_date_key, fact_bill_activity.dim_bill_key, fact_bill_activity.dim_fed_hierarchy_history_key, fact_bill_activity.dim_matter_header_curr_key, 
              fact_bill_activity.billed_time, fact_bill_activity.bill_amount, dim_days_banding.dim_days_banding_key, ISNULL(dim_client.client_code, 'Unknown') master_client_code, isnull(fact_dimension_main.dim_fed_hierarchy_history_key,0) matter_owner_hist_key
@@ -388,7 +388,7 @@ and     dim_orig_posting_date_key IN (SELECT dim_date_key FROM dbo.dim_date WHER
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="e1a5a108-5325-43ca-ba20-b7d42e8167a6">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="8d4145ab-7648-42d8-8fb5-16d9a1c345b6">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT CAST(fact_bill_activity.fact_bill_activity_key AS BIGINT) AS fact_bill_activity_key, fact_bill_activity.dim_client_key, fact_bill_activity.dim_bill_date_key, fact_bill_activity.dim_bill_key, fact_bill_activity.dim_fed_hierarchy_history_key, fact_bill_activity.dim_matter_header_curr_key, 
              fact_bill_activity.billed_time, fact_bill_activity.bill_amount, dim_days_banding.dim_days_banding_key, ISNULL(dim_client.client_code, 'Unknown') master_client_code, isnull(fact_dimension_main.dim_fed_hierarchy_history_key,0) matter_owner_hist_key
@@ -434,7 +434,7 @@ and     dim_orig_posting_date_key IN (SELECT dim_date_key FROM dbo.dim_date WHER
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="9a95d599-4555-4f24-879d-7a90521284e3">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="1430895e-f24d-4853-88fd-8f07e71841b0">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT CAST(fact_bill_activity.fact_bill_activity_key AS BIGINT) AS fact_bill_activity_key, fact_bill_activity.dim_client_key, fact_bill_activity.dim_bill_date_key, fact_bill_activity.dim_bill_key, fact_bill_activity.dim_fed_hierarchy_history_key, fact_bill_activity.dim_matter_header_curr_key, 
              fact_bill_activity.billed_time, fact_bill_activity.bill_amount, dim_days_banding.dim_days_banding_key, ISNULL(dim_client.client_code, 'Unknown') master_client_code, isnull(fact_dimension_main.dim_fed_hierarchy_history_key,0) matter_owner_hist_key
@@ -1613,6 +1613,395 @@ GROUP BY CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' EL
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
       </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Bills</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="1815796b-37e5-46d5-b759-d38a97ff7962">
+          <ID>Fact Bill Activity</ID>
+          <Name>Fact Bill Activity Current Year</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="542481dd-ab7e-485e-9404-2f89715cb6a8">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT CAST(fact_bill_activity.fact_bill_activity_key AS BIGINT) AS fact_bill_activity_key, fact_bill_activity.dim_client_key, fact_bill_activity.dim_bill_date_key, fact_bill_activity.dim_bill_key, fact_bill_activity.dim_fed_hierarchy_history_key, fact_bill_activity.dim_matter_header_curr_key, 
+             fact_bill_activity.billed_time, fact_bill_activity.bill_amount, dim_days_banding.dim_days_banding_key, ISNULL(dim_client.client_code, 'Unknown') master_client_code, isnull(fact_dimension_main.dim_fed_hierarchy_history_key,0) matter_owner_hist_key
+FROM   fact_bill_activity INNER JOIN
+             dim_days_banding ON DATEDIFF(d, GETDATE(), fact_bill_activity.gldate) BETWEEN dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+	left outer JOIN dbo.fact_dimension_main ON fact_dimension_main.master_fact_key = fact_bill_activity.master_fact_key
+	LEFT outer JOIN dbo.dim_client ON dim_client.client_code = 
+				CASE WHEN ISNUMERIC(master_client_code) = 1 THEN RIGHT('00000000' + CONVERT(VARCHAR, master_client_code), 8) ELSE CAST(RTRIM(master_client_code) AS VARCHAR(8)) END
+WHERE     dim_bill_date_key IN (SELECT dim_date_key FROM dbo.dim_date WHERE current_fin_year = 'Current')
+
+UNION ALL
+
+SELECT CAST('999' + CAST(fact_billable_time_activity.transaction_sequence_number AS VARCHAR(25)) AS bigint) AS EXPR1, fact_billable_time_activity.dim_client_key, fact_billable_time_activity.dim_orig_posting_date_key, fact_billable_time_activity.dim_bill_key, 
+             fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, NULL AS EXPR2, NULL AS EXPR3, dim_days_banding_1.dim_days_banding_key
+			 ,ISNULL(dim_client.client_code, 'Unknown') master_client_code, isnull(fact_dimension_main.dim_fed_hierarchy_history_key,0) matter_owner_hist_key
+FROM   fact_billable_time_activity INNER JOIN
+             dim_days_banding AS dim_days_banding_1 ON DATEDIFF(d, GETDATE(), CAST(CONVERT(CHAR(10), fact_billable_time_activity.dim_orig_posting_date_key, 120) AS DATE)) BETWEEN dim_days_banding_1.startdays AND dim_days_banding_1.enddays AND 
+             dim_days_banding_1.banding_category = 'grouping3'
+	left outer JOIN dbo.fact_dimension_main ON fact_dimension_main.master_fact_key = fact_billable_time_activity.master_fact_key
+	LEFT outer JOIN dbo.dim_client ON dim_client.client_code = 
+						 CASE WHEN ISNUMERIC(master_client_code) = 1 THEN RIGHT('00000000' + CONVERT(VARCHAR, master_client_code), 8) ELSE CAST(RTRIM(master_client_code) AS VARCHAR(8)) END
+	
+WHERE     (dim_bill_key = 0) 
+AND (dim_orig_posting_date_key IS NOT NULL)
+and     dim_orig_posting_date_key IN (SELECT dim_date_key FROM dbo.dim_date WHERE current_fin_year = 'Current')</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <EstimatedRows>1141527</EstimatedRows>
+        </Partition>
+        <Partition dwd:design-time-name="06bd5f32-b0b1-4ee7-9f74-b653420cf02d">
+          <ID>Fact Bill Activity Historical</ID>
+          <Name>Fact Bill Activity 1 and 2 years old</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="ccba1325-f836-4ade-8ee0-2db9137c33bc">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT CAST(fact_bill_activity.fact_bill_activity_key AS BIGINT) AS fact_bill_activity_key, fact_bill_activity.dim_client_key, fact_bill_activity.dim_bill_date_key, fact_bill_activity.dim_bill_key, fact_bill_activity.dim_fed_hierarchy_history_key, fact_bill_activity.dim_matter_header_curr_key, 
+             fact_bill_activity.billed_time, fact_bill_activity.bill_amount, dim_days_banding.dim_days_banding_key, ISNULL(dim_client.client_code, 'Unknown') master_client_code, isnull(fact_dimension_main.dim_fed_hierarchy_history_key,0) matter_owner_hist_key
+FROM   fact_bill_activity INNER JOIN
+             dim_days_banding ON DATEDIFF(d, GETDATE(), fact_bill_activity.gldate) BETWEEN dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+	left outer JOIN dbo.fact_dimension_main ON fact_dimension_main.master_fact_key = fact_bill_activity.master_fact_key
+	LEFT outer JOIN dbo.dim_client ON dim_client.client_code = 
+				CASE WHEN ISNUMERIC(master_client_code) = 1 THEN RIGHT('00000000' + CONVERT(VARCHAR, master_client_code), 8) ELSE CAST(RTRIM(master_client_code) AS VARCHAR(8)) END
+WHERE     dim_bill_date_key IN (SELECT dim_date_key FROM dbo.dim_date WHERE fin_year BETWEEN  (SELECT DISTINCT fin_year - 2
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current' )  AND   (SELECT DISTINCT fin_year - 1
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current'		)	)
+
+UNION ALL
+
+SELECT CAST('999' + CAST(fact_billable_time_activity.transaction_sequence_number AS VARCHAR(25)) AS bigint) AS EXPR1, fact_billable_time_activity.dim_client_key, fact_billable_time_activity.dim_orig_posting_date_key, fact_billable_time_activity.dim_bill_key, 
+             fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, NULL AS EXPR2, NULL AS EXPR3, dim_days_banding_1.dim_days_banding_key
+			 ,ISNULL(dim_client.client_code, 'Unknown') master_client_code, isnull(fact_dimension_main.dim_fed_hierarchy_history_key,0) matter_owner_hist_key
+FROM   fact_billable_time_activity INNER JOIN
+             dim_days_banding AS dim_days_banding_1 ON DATEDIFF(d, GETDATE(), CAST(CONVERT(CHAR(10), fact_billable_time_activity.dim_orig_posting_date_key, 120) AS DATE)) BETWEEN dim_days_banding_1.startdays AND dim_days_banding_1.enddays AND 
+             dim_days_banding_1.banding_category = 'grouping3'
+	left outer JOIN dbo.fact_dimension_main ON fact_dimension_main.master_fact_key = fact_billable_time_activity.master_fact_key
+	LEFT outer JOIN dbo.dim_client ON dim_client.client_code = 
+						 CASE WHEN ISNUMERIC(master_client_code) = 1 THEN RIGHT('00000000' + CONVERT(VARCHAR, master_client_code), 8) ELSE CAST(RTRIM(master_client_code) AS VARCHAR(8)) END
+	
+WHERE     (dim_bill_key = 0) 
+AND (dim_orig_posting_date_key IS NOT NULL)
+and     dim_orig_posting_date_key IN (SELECT dim_date_key FROM dbo.dim_date WHERE fin_year BETWEEN  (SELECT DISTINCT fin_year - 2
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current' )  AND   (SELECT DISTINCT fin_year - 1
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current'		)	)</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="f72f96a7-9b32-4e36-aa41-06ce2596a3ed">
+          <ID>Fact Bill Activity 3 and 4 years old</ID>
+          <Name>Fact Bill Activity 3 and 4 years old</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="e0aae9fb-9577-46ee-8b02-c14b70406ce5">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT CAST(fact_bill_activity.fact_bill_activity_key AS BIGINT) AS fact_bill_activity_key, fact_bill_activity.dim_client_key, fact_bill_activity.dim_bill_date_key, fact_bill_activity.dim_bill_key, fact_bill_activity.dim_fed_hierarchy_history_key, fact_bill_activity.dim_matter_header_curr_key, 
+             fact_bill_activity.billed_time, fact_bill_activity.bill_amount, dim_days_banding.dim_days_banding_key, ISNULL(dim_client.client_code, 'Unknown') master_client_code, isnull(fact_dimension_main.dim_fed_hierarchy_history_key,0) matter_owner_hist_key
+FROM   fact_bill_activity INNER JOIN
+             dim_days_banding ON DATEDIFF(d, GETDATE(), fact_bill_activity.gldate) BETWEEN dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+	left outer JOIN dbo.fact_dimension_main ON fact_dimension_main.master_fact_key = fact_bill_activity.master_fact_key
+	LEFT outer JOIN dbo.dim_client ON dim_client.client_code = 
+				CASE WHEN ISNUMERIC(master_client_code) = 1 THEN RIGHT('00000000' + CONVERT(VARCHAR, master_client_code), 8) ELSE CAST(RTRIM(master_client_code) AS VARCHAR(8)) END
+WHERE     dim_bill_date_key IN (SELECT dim_date_key FROM dbo.dim_date WHERE fin_year BETWEEN  (SELECT DISTINCT fin_year - 4
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current' )  AND   (SELECT DISTINCT fin_year - 3
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current'		)	)
+
+UNION ALL
+
+SELECT CAST('999' + CAST(fact_billable_time_activity.transaction_sequence_number AS VARCHAR(25)) AS bigint) AS EXPR1, fact_billable_time_activity.dim_client_key, fact_billable_time_activity.dim_orig_posting_date_key, fact_billable_time_activity.dim_bill_key, 
+             fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, NULL AS EXPR2, NULL AS EXPR3, dim_days_banding_1.dim_days_banding_key
+			 ,ISNULL(dim_client.client_code, 'Unknown') master_client_code, isnull(fact_dimension_main.dim_fed_hierarchy_history_key,0) matter_owner_hist_key
+FROM   fact_billable_time_activity INNER JOIN
+             dim_days_banding AS dim_days_banding_1 ON DATEDIFF(d, GETDATE(), CAST(CONVERT(CHAR(10), fact_billable_time_activity.dim_orig_posting_date_key, 120) AS DATE)) BETWEEN dim_days_banding_1.startdays AND dim_days_banding_1.enddays AND 
+             dim_days_banding_1.banding_category = 'grouping3'
+	left outer JOIN dbo.fact_dimension_main ON fact_dimension_main.master_fact_key = fact_billable_time_activity.master_fact_key
+	LEFT outer JOIN dbo.dim_client ON dim_client.client_code = 
+						 CASE WHEN ISNUMERIC(master_client_code) = 1 THEN RIGHT('00000000' + CONVERT(VARCHAR, master_client_code), 8) ELSE CAST(RTRIM(master_client_code) AS VARCHAR(8)) END
+	
+WHERE     (dim_bill_key = 0) 
+AND (dim_orig_posting_date_key IS NOT NULL)
+and     dim_orig_posting_date_key IN (SELECT dim_date_key FROM dbo.dim_date WHERE fin_year BETWEEN  (SELECT DISTINCT fin_year - 4
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current' )  AND   (SELECT DISTINCT fin_year - 3
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current'		)	)</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="a645dffc-4df4-412d-b0f0-8dd382be7762">
+          <ID>Fact Bill Activity 5 and 6 years old</ID>
+          <Name>Fact Bill Activity 5 and 6 years old</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="a803963c-4979-484a-b6d3-13f9f7a7f8c9">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT CAST(fact_bill_activity.fact_bill_activity_key AS BIGINT) AS fact_bill_activity_key, fact_bill_activity.dim_client_key, fact_bill_activity.dim_bill_date_key, fact_bill_activity.dim_bill_key, fact_bill_activity.dim_fed_hierarchy_history_key, fact_bill_activity.dim_matter_header_curr_key, 
+             fact_bill_activity.billed_time, fact_bill_activity.bill_amount, dim_days_banding.dim_days_banding_key, ISNULL(dim_client.client_code, 'Unknown') master_client_code, isnull(fact_dimension_main.dim_fed_hierarchy_history_key,0) matter_owner_hist_key
+FROM   fact_bill_activity INNER JOIN
+             dim_days_banding ON DATEDIFF(d, GETDATE(), fact_bill_activity.gldate) BETWEEN dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+	left outer JOIN dbo.fact_dimension_main ON fact_dimension_main.master_fact_key = fact_bill_activity.master_fact_key
+	LEFT outer JOIN dbo.dim_client ON dim_client.client_code = 
+				CASE WHEN ISNUMERIC(master_client_code) = 1 THEN RIGHT('00000000' + CONVERT(VARCHAR, master_client_code), 8) ELSE CAST(RTRIM(master_client_code) AS VARCHAR(8)) END
+WHERE     dim_bill_date_key IN (SELECT dim_date_key FROM dbo.dim_date WHERE fin_year BETWEEN  (SELECT DISTINCT fin_year - 6
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current' )  AND   (SELECT DISTINCT fin_year - 5
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current'		)	)
+
+UNION ALL
+
+SELECT CAST('999' + CAST(fact_billable_time_activity.transaction_sequence_number AS VARCHAR(25)) AS bigint) AS EXPR1, fact_billable_time_activity.dim_client_key, fact_billable_time_activity.dim_orig_posting_date_key, fact_billable_time_activity.dim_bill_key, 
+             fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, NULL AS EXPR2, NULL AS EXPR3, dim_days_banding_1.dim_days_banding_key
+			 ,ISNULL(dim_client.client_code, 'Unknown') master_client_code, isnull(fact_dimension_main.dim_fed_hierarchy_history_key,0) matter_owner_hist_key
+FROM   fact_billable_time_activity INNER JOIN
+             dim_days_banding AS dim_days_banding_1 ON DATEDIFF(d, GETDATE(), CAST(CONVERT(CHAR(10), fact_billable_time_activity.dim_orig_posting_date_key, 120) AS DATE)) BETWEEN dim_days_banding_1.startdays AND dim_days_banding_1.enddays AND 
+             dim_days_banding_1.banding_category = 'grouping3'
+	left outer JOIN dbo.fact_dimension_main ON fact_dimension_main.master_fact_key = fact_billable_time_activity.master_fact_key
+	LEFT outer JOIN dbo.dim_client ON dim_client.client_code = 
+						 CASE WHEN ISNUMERIC(master_client_code) = 1 THEN RIGHT('00000000' + CONVERT(VARCHAR, master_client_code), 8) ELSE CAST(RTRIM(master_client_code) AS VARCHAR(8)) END
+	
+WHERE     (dim_bill_key = 0) 
+AND (dim_orig_posting_date_key IS NOT NULL)
+and     dim_orig_posting_date_key IN (SELECT dim_date_key FROM dbo.dim_date WHERE fin_year BETWEEN  (SELECT DISTINCT fin_year - 6
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current' )  AND   (SELECT DISTINCT fin_year - 5
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current'		)	)</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="457f2bef-8528-40e6-bd7d-ac8d7dfde802">
+          <ID>Fact Bill Activity 7 and 8 years old</ID>
+          <Name>Fact Bill Activity 7 and 8 years old</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="715ac004-26ad-4827-9879-65ff3002c00e">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT CAST(fact_bill_activity.fact_bill_activity_key AS BIGINT) AS fact_bill_activity_key, fact_bill_activity.dim_client_key, fact_bill_activity.dim_bill_date_key, fact_bill_activity.dim_bill_key, fact_bill_activity.dim_fed_hierarchy_history_key, fact_bill_activity.dim_matter_header_curr_key, 
+             fact_bill_activity.billed_time, fact_bill_activity.bill_amount, dim_days_banding.dim_days_banding_key, ISNULL(dim_client.client_code, 'Unknown') master_client_code, isnull(fact_dimension_main.dim_fed_hierarchy_history_key,0) matter_owner_hist_key
+FROM   fact_bill_activity INNER JOIN
+             dim_days_banding ON DATEDIFF(d, GETDATE(), fact_bill_activity.gldate) BETWEEN dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+	left outer JOIN dbo.fact_dimension_main ON fact_dimension_main.master_fact_key = fact_bill_activity.master_fact_key
+	LEFT outer JOIN dbo.dim_client ON dim_client.client_code = 
+				CASE WHEN ISNUMERIC(master_client_code) = 1 THEN RIGHT('00000000' + CONVERT(VARCHAR, master_client_code), 8) ELSE CAST(RTRIM(master_client_code) AS VARCHAR(8)) END
+WHERE     dim_bill_date_key IN (SELECT dim_date_key FROM dbo.dim_date WHERE fin_year BETWEEN  (SELECT DISTINCT fin_year - 8
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current' )  AND   (SELECT DISTINCT fin_year - 7
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current'		)	)
+
+UNION ALL
+
+SELECT CAST('999' + CAST(fact_billable_time_activity.transaction_sequence_number AS VARCHAR(25)) AS bigint) AS EXPR1, fact_billable_time_activity.dim_client_key, fact_billable_time_activity.dim_orig_posting_date_key, fact_billable_time_activity.dim_bill_key, 
+             fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, NULL AS EXPR2, NULL AS EXPR3, dim_days_banding_1.dim_days_banding_key
+			 ,ISNULL(dim_client.client_code, 'Unknown') master_client_code, isnull(fact_dimension_main.dim_fed_hierarchy_history_key,0) matter_owner_hist_key
+FROM   fact_billable_time_activity INNER JOIN
+             dim_days_banding AS dim_days_banding_1 ON DATEDIFF(d, GETDATE(), CAST(CONVERT(CHAR(10), fact_billable_time_activity.dim_orig_posting_date_key, 120) AS DATE)) BETWEEN dim_days_banding_1.startdays AND dim_days_banding_1.enddays AND 
+             dim_days_banding_1.banding_category = 'grouping3'
+	left outer JOIN dbo.fact_dimension_main ON fact_dimension_main.master_fact_key = fact_billable_time_activity.master_fact_key
+	LEFT outer JOIN dbo.dim_client ON dim_client.client_code = 
+						 CASE WHEN ISNUMERIC(master_client_code) = 1 THEN RIGHT('00000000' + CONVERT(VARCHAR, master_client_code), 8) ELSE CAST(RTRIM(master_client_code) AS VARCHAR(8)) END
+	
+WHERE     (dim_bill_key = 0) 
+AND (dim_orig_posting_date_key IS NOT NULL)
+and     dim_orig_posting_date_key IN (SELECT dim_date_key FROM dbo.dim_date WHERE fin_year BETWEEN  (SELECT DISTINCT fin_year - 8
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current' )  AND   (SELECT DISTINCT fin_year - 7
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current'		)	)</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="55218630-0808-4791-84be-efa0f7677e02">
+          <ID>Fact Bill Activity great than 8 years old</ID>
+          <Name>Fact Bill Activity great than 8 years old</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="fec877fe-2c8c-4013-a168-df9c3f146cc8">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT CAST(fact_bill_activity.fact_bill_activity_key AS BIGINT) AS fact_bill_activity_key, fact_bill_activity.dim_client_key, fact_bill_activity.dim_bill_date_key, fact_bill_activity.dim_bill_key, fact_bill_activity.dim_fed_hierarchy_history_key, fact_bill_activity.dim_matter_header_curr_key, 
+             fact_bill_activity.billed_time, fact_bill_activity.bill_amount, dim_days_banding.dim_days_banding_key, ISNULL(dim_client.client_code, 'Unknown') master_client_code, isnull(fact_dimension_main.dim_fed_hierarchy_history_key,0) matter_owner_hist_key
+FROM   fact_bill_activity INNER JOIN
+             dim_days_banding ON DATEDIFF(d, GETDATE(), fact_bill_activity.gldate) BETWEEN dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+	left outer JOIN dbo.fact_dimension_main ON fact_dimension_main.master_fact_key = fact_bill_activity.master_fact_key
+	LEFT outer JOIN dbo.dim_client ON dim_client.client_code = 
+				CASE WHEN ISNUMERIC(master_client_code) = 1 THEN RIGHT('00000000' + CONVERT(VARCHAR, master_client_code), 8) ELSE CAST(RTRIM(master_client_code) AS VARCHAR(8)) END
+WHERE     dim_bill_date_key IN (SELECT dim_date_key FROM dbo.dim_date WHERE fin_year &lt; (SELECT DISTINCT fin_year - 8
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current' ))
+AND dim_bill_date_key &gt;= '20100501'
+
+UNION ALL
+
+SELECT CAST('999' + CAST(fact_billable_time_activity.transaction_sequence_number AS VARCHAR(25)) AS bigint) AS EXPR1, fact_billable_time_activity.dim_client_key, fact_billable_time_activity.dim_orig_posting_date_key, fact_billable_time_activity.dim_bill_key, 
+             fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, NULL AS EXPR2, NULL AS EXPR3, dim_days_banding_1.dim_days_banding_key
+			 ,ISNULL(dim_client.client_code, 'Unknown') master_client_code, isnull(fact_dimension_main.dim_fed_hierarchy_history_key,0) matter_owner_hist_key
+FROM   fact_billable_time_activity INNER JOIN
+             dim_days_banding AS dim_days_banding_1 ON DATEDIFF(d, GETDATE(), CAST(CONVERT(CHAR(10), fact_billable_time_activity.dim_orig_posting_date_key, 120) AS DATE)) BETWEEN dim_days_banding_1.startdays AND dim_days_banding_1.enddays AND 
+             dim_days_banding_1.banding_category = 'grouping3'
+	left outer JOIN dbo.fact_dimension_main ON fact_dimension_main.master_fact_key = fact_billable_time_activity.master_fact_key
+	LEFT outer JOIN dbo.dim_client ON dim_client.client_code = 
+						 CASE WHEN ISNUMERIC(master_client_code) = 1 THEN RIGHT('00000000' + CONVERT(VARCHAR, master_client_code), 8) ELSE CAST(RTRIM(master_client_code) AS VARCHAR(8)) END
+	
+WHERE     (dim_bill_key = 0) 
+AND (dim_orig_posting_date_key IS NOT NULL)
+and     dim_orig_posting_date_key In (SELECT dim_date_key FROM dbo.dim_date WHERE fin_year &lt; (SELECT DISTINCT fin_year - 8
+					FROM dbo.dim_date
+					WHERE current_fin_year = 'Current' ))
+AND dim_orig_posting_date_key &gt;= '20100501'</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+      <AggregationDesigns>
+        <AggregationDesign>
+          <ID>fact_bill_activity</ID>
+          <Name>fact_bill_activity</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <Aggregations>
+            <Aggregation>
+              <ID>QueryLogAgg_0</ID>
+              <Name>QueryLogAgg_0</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Client Details</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Sector</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Sub Sector</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Segment</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Employees</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel2hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>QueryLogAgg_1</ID>
+              <Name>QueryLogAgg_1</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Date Key</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>QueryLogAgg_2</ID>
+              <Name>QueryLogAgg_2</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Bill Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Date Key</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Date Age Group 2</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Bill Details</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Bill Key</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Client Details</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Client Code</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Employees</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Hierarchylevel2hist</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Matter Details</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Matter Header Curr Key</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Master Client Details</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Client Key</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Employees 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Fed Hierarchy History Key</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+          </Aggregations>
+        </AggregationDesign>
+      </AggregationDesigns>
     </MeasureGroup>
   </MeasureGroups>
 </Cube>
