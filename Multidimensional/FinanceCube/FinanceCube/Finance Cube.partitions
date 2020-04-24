@@ -600,7 +600,7 @@ AND dim_orig_posting_date_key &gt;= '20100501'</QueryDefinition>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="399ccb7a-0fa3-4e2b-ad4d-da29f97cdc66">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="6c0e8598-3ce8-4332-8a8b-fc3d7af95d4e">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_budget_activity.dim_fed_hierarchy_history_key, fact_budget_activity.dim_budget_date_key, fact_budget_activity.budget_date, fact_budget_activity.fed_business_key, 
                          fact_budget_activity.emp_source_system_id, fact_budget_activity.employee_hierarchy_business_key, fact_budget_activity.budget_source_system_id, fact_budget_activity.fed_code, 
@@ -610,7 +610,7 @@ AND dim_orig_posting_date_key &gt;= '20100501'</QueryDefinition>
                          fact_budget_activity.fed_level_tb_budget_value, fact_budget_activity.team_level_budget_value, fact_budget_activity.practice_area_level_budget_value, 
                          fact_budget_activity.business_line_level_budget_value, fact_budget_activity.firm_level_budget_value, fact_budget_activity.dss_update_time, fact_budget_activity.dim_gl_date_key, 
                          fact_budget_activity.team_level_budget_value_hours, fact_budget_activity.team_level_budget_value_balance, fact_budget_activity.team_level_budget_value_hours_balance, 
-                         fact_budget_activity.team_level_budget_value_hours_billed, 
+                         fact_budget_activity.team_level_budget_value_hours_billed, contracted_hours_in_month,
 									 (SELECT min (dim_date_key)	FROM dbo.dim_date WHERE fin_period = (SELECT fin_period FROM dim_date WHERE calendar_date = CAST(GETDATE()-1 AS DATE)) ) Snapshot, dim_days_banding_key
 FROM         fact_budget_activity INNER JOIN
                          dim_fed_hierarchy_history ON dim_fed_hierarchy_history.dim_fed_hierarchy_history_key = fact_budget_activity.dim_fed_hierarchy_history_key
@@ -629,7 +629,7 @@ WHERE     (fact_budget_activity.dim_gl_date_key &gt;= 20190501)</QueryDefinition
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="7750e60d-2a05-4e2e-8271-4062cb57711e">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="e8c7b243-721d-4d33-bc02-20df62977c51">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_budget_activity.dim_fed_hierarchy_history_key, fact_budget_activity.dim_budget_date_key, fact_budget_activity.budget_date, fact_budget_activity.fed_business_key, 
                          fact_budget_activity.emp_source_system_id, fact_budget_activity.employee_hierarchy_business_key, fact_budget_activity.budget_source_system_id, fact_budget_activity.fed_code, 
@@ -639,7 +639,7 @@ WHERE     (fact_budget_activity.dim_gl_date_key &gt;= 20190501)</QueryDefinition
                          fact_budget_activity.fed_level_tb_budget_value, fact_budget_activity.team_level_budget_value, fact_budget_activity.practice_area_level_budget_value, 
                          fact_budget_activity.business_line_level_budget_value, fact_budget_activity.firm_level_budget_value, fact_budget_activity.dss_update_time, fact_budget_activity.dim_gl_date_key, 
                          fact_budget_activity.team_level_budget_value_hours, fact_budget_activity.team_level_budget_value_balance, fact_budget_activity.team_level_budget_value_hours_balance, 
-                         fact_budget_activity.team_level_budget_value_hours_billed, 
+                         fact_budget_activity.team_level_budget_value_hours_billed, contracted_hours_in_month,
 									 (SELECT min (dim_date_key)	FROM dbo.dim_date WHERE fin_period = (SELECT fin_period FROM dim_date WHERE calendar_date = CAST(GETDATE()-1 AS DATE)) ) Snapshot, dim_days_banding_key
 FROM         fact_budget_activity INNER JOIN
                          dim_fed_hierarchy_history ON dim_fed_hierarchy_history.dim_fed_hierarchy_history_key = fact_budget_activity.dim_fed_hierarchy_history_key
