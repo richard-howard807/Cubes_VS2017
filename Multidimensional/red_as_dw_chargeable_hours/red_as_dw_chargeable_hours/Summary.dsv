@@ -333,52 +333,52 @@
                     </xs:simpleType>
                   </xs:element>
                   <xs:element name="dss_version" msprop:design-time-name="f950e15b-779c-4cf5-b0a6-56ecf0c38331" msprop:DbColumnName="dss_version" msprop:FriendlyName="dss_version" type="xs:int" minOccurs="0" />
-                  <xs:element name="hierarchynodehistnorm" msprop:DbColumnName="hierarchynodehistnorm" msprop:design-time-name="19d86289-9006-4108-b28f-22dbb6b734e8" type="xs:long" minOccurs="0" />
-                  <xs:element name="hierarchylevel1histnorm" msprop:DbColumnName="hierarchylevel1histnorm" msprop:design-time-name="e30e15fe-0b9a-4670-8ac0-b8be2626654c" minOccurs="0">
+                  <xs:element name="hierarchynodehistnorm" msprop:design-time-name="19d86289-9006-4108-b28f-22dbb6b734e8" msprop:DbColumnName="hierarchynodehistnorm" type="xs:long" minOccurs="0" />
+                  <xs:element name="hierarchylevel1histnorm" msprop:design-time-name="e30e15fe-0b9a-4670-8ac0-b8be2626654c" msprop:DbColumnName="hierarchylevel1histnorm" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="50" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="hierarchylevel2histnorm" msprop:DbColumnName="hierarchylevel2histnorm" msprop:design-time-name="4d767c2b-222e-4201-8b73-b594ba0b858e" minOccurs="0">
+                  <xs:element name="hierarchylevel2histnorm" msprop:design-time-name="4d767c2b-222e-4201-8b73-b594ba0b858e" msprop:DbColumnName="hierarchylevel2histnorm" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="50" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="hierarchylevel3histnorm" msprop:DbColumnName="hierarchylevel3histnorm" msprop:design-time-name="168a19b6-1335-45ca-a972-193faccd5f2a" minOccurs="0">
+                  <xs:element name="hierarchylevel3histnorm" msprop:design-time-name="168a19b6-1335-45ca-a972-193faccd5f2a" msprop:DbColumnName="hierarchylevel3histnorm" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="50" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="hierarchylevel4histnorm" msprop:DbColumnName="hierarchylevel4histnorm" msprop:design-time-name="664d2366-4383-4988-85ae-148df8404b89" minOccurs="0">
+                  <xs:element name="hierarchylevel4histnorm" msprop:design-time-name="664d2366-4383-4988-85ae-148df8404b89" msprop:DbColumnName="hierarchylevel4histnorm" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="50" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="hierarchylevel5histnorm" msprop:DbColumnName="hierarchylevel5histnorm" msprop:design-time-name="61a17ab5-5e1a-4ea8-b824-9ebbc19e4b3d" minOccurs="0">
+                  <xs:element name="hierarchylevel5histnorm" msprop:design-time-name="61a17ab5-5e1a-4ea8-b824-9ebbc19e4b3d" msprop:DbColumnName="hierarchylevel5histnorm" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="50" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="hierarchylevel6histnorm" msprop:DbColumnName="hierarchylevel6histnorm" msprop:design-time-name="220ba79d-8848-4fae-aa9d-c0ea9cb60468" minOccurs="0">
+                  <xs:element name="hierarchylevel6histnorm" msprop:design-time-name="220ba79d-8848-4fae-aa9d-c0ea9cb60468" msprop:DbColumnName="hierarchylevel6histnorm" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="50" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="active_row" msprop:DbColumnName="active_row" msprop:design-time-name="40bcb051-d0fb-434e-ac69-70d7ce3a4c1a" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="fte" msprop:DbColumnName="fte" msprop:design-time-name="3adc77f2-82c2-4aca-bfd0-51b9d44a5590" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="management_role_one" msprop:DbColumnName="management_role_one" msprop:design-time-name="05d9c526-f810-4f76-9883-644601b3a1c3" minOccurs="0">
+                  <xs:element name="active_row" msprop:design-time-name="40bcb051-d0fb-434e-ac69-70d7ce3a4c1a" msprop:DbColumnName="active_row" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="fte" msprop:design-time-name="3adc77f2-82c2-4aca-bfd0-51b9d44a5590" msprop:DbColumnName="fte" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="management_role_one" msprop:design-time-name="05d9c526-f810-4f76-9883-644601b3a1c3" msprop:DbColumnName="management_role_one" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="50" />
@@ -398,20 +398,20 @@
                   <xs:element name="actual_time_recorded_value" msprop:design-time-name="d99780d4-f4ff-4d15-a1ec-b4847b59c30e" msprop:DbColumnName="actual_time_recorded_value" msprop:FriendlyName="actual_time_recorded_value" type="xs:decimal" minOccurs="0" />
                   <xs:element name="fed_level_minute_value" msprop:design-time-name="20681fec-6f06-4d76-8e7a-66728f1e4ff4" msprop:DbColumnName="fed_level_minute_value" msprop:FriendlyName="fed_level_minute_value" type="xs:decimal" minOccurs="0" />
                   <xs:element name="dss_update_time" msprop:design-time-name="cfa6c0d1-4128-412f-be0b-828816886403" msprop:DbColumnName="dss_update_time" msprop:FriendlyName="dss_update_time" type="xs:dateTime" minOccurs="0" />
-                  <xs:element name="dss_create_time" msprop:DbColumnName="dss_create_time" msprop:design-time-name="33afd865-02d1-4989-80ca-e280010e7592" type="xs:dateTime" minOccurs="0" />
-                  <xs:element name="dim_gl_date_key" msprop:DbColumnName="dim_gl_date_key" msprop:design-time-name="8da4ea52-1fc8-4ff0-a0b7-dd65911bd2e8" type="xs:int" minOccurs="0" />
-                  <xs:element name="team_level_budget_value_hours" msprop:DbColumnName="team_level_budget_value_hours" msprop:design-time-name="232de11e-b092-4420-baee-561be920da59" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="hours_recorded" msprop:DbColumnName="hours_recorded" msprop:design-time-name="9a17bf89-a6e0-4063-accc-0dc51ef1ca2f" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="team_level_budget_value_hours_balance" msprop:DbColumnName="team_level_budget_value_hours_balance" msprop:design-time-name="d7163f6e-8e5c-40c1-9bb6-dc78f69386a2" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Target_x0020_Chargeable_x0020_Hours_x0020__x0028_Budget_x0020_Balanced_x0029_" msprop:DbColumnName="Target Chargeable Hours (Budget Balanced)" msprop:design-time-name="857c22c9-0d29-439d-92fd-1a0977c44f95" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="contracted_hours_in_month" msprop:DbColumnName="contracted_hours_in_month" msprop:design-time-name="3d324fc4-0a85-4fe9-b478-7165fd3e74ac" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="dss_create_time" msprop:design-time-name="33afd865-02d1-4989-80ca-e280010e7592" msprop:DbColumnName="dss_create_time" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="dim_gl_date_key" msprop:design-time-name="8da4ea52-1fc8-4ff0-a0b7-dd65911bd2e8" msprop:DbColumnName="dim_gl_date_key" type="xs:int" minOccurs="0" />
+                  <xs:element name="team_level_budget_value_hours" msprop:design-time-name="232de11e-b092-4420-baee-561be920da59" msprop:DbColumnName="team_level_budget_value_hours" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="hours_recorded" msprop:design-time-name="9a17bf89-a6e0-4063-accc-0dc51ef1ca2f" msprop:DbColumnName="hours_recorded" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="team_level_budget_value_hours_balance" msprop:design-time-name="d7163f6e-8e5c-40c1-9bb6-dc78f69386a2" msprop:DbColumnName="team_level_budget_value_hours_balance" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Target_x0020_Chargeable_x0020_Hours_x0020__x0028_Budget_x0020_Balanced_x0029_" msprop:design-time-name="857c22c9-0d29-439d-92fd-1a0977c44f95" msprop:DbColumnName="Target Chargeable Hours (Budget Balanced)" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="contracted_hours_in_month" msprop:design-time-name="3d324fc4-0a85-4fe9-b478-7165fd3e74ac" msprop:DbColumnName="contracted_hours_in_month" type="xs:decimal" minOccurs="0" />
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="dbo_dim_date" msprop:design-time-name="ef3c4fd0-d9ef-4f7a-a812-0a209ee02ba3" msprop:DbTableName="dim_date" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:FriendlyName="dim_date">
+            <xs:element name="dbo_dim_date" msprop:design-time-name="ef3c4fd0-d9ef-4f7a-a812-0a209ee02ba3" msprop:IsLogical="True" msprop:FriendlyName="dim_date" msprop:DbTableName="dim_date" msprop:TableType="View" msprop:QueryDefinition="SELECT dim_date_key, calendar_date, cal_day_in_week, cal_day_in_week_no, cal_day_in_month, cal_day_in_year, cal_week_in_year, cal_month_no, cal_month, cal_month_name, cal_quarter_no, cal_quarter, cal_year, financial_date, fin_day_in_week, fin_day_in_week_no, &#xD;&#xA;             fin_day_in_month, fin_day_in_year, fin_week_in_month, fin_week_in_year, fin_month_no, fin_month, fin_month_display, fin_month_name, fin_period, fin_quarter_no, fin_quarter, fin_year, current_cal_day, current_cal_week, current_cal_month, current_cal_year, current_cal_mtd, &#xD;&#xA;             current_cal_ytd, moving_cal_year, current_fin_day, current_fin_week, current_fin_month, current_fin_quarter, current_fin_year, current_fin_mtd, current_fin_ytd, moving_fin_quarter, moving_fin_year, week_day_flag, week_end_flag, holiday_flag, holiday_desc, trading_day_flag, &#xD;&#xA;             trading_days_in_mth, trading_days_so_far, dss_update_time, audit_date, aud_day_in_week, aud_day_in_week_no, aud_day_in_month, aud_day_in_year, aud_month_no, aud_month, aud_month_display, aud_week_in_year, aud_month_name, aud_period, aud_quarter_no, &#xD;&#xA;             aud_quarter, aud_year, current_aud_day, current_aud_week, current_aud_month, current_aud_quarter, current_aud_year, current_aud_mtd, current_aud_ytd, moving_aud_quarter, moving_aud_year&#xD;&#xA;FROM   dim_date&#xD;&#xA;WHERE (fin_year &gt;= '2010') AND (fin_year &lt;=&#xD;&#xA;                 (SELECT fin_year&#xD;&#xA;                 FROM    dim_date AS dim_date_1&#xD;&#xA;                 WHERE (calendar_date = CAST(GETDATE() AS date))))" msprop:QueryBuilder="SpecificQueryBuilder">
               <xs:complexType>
                 <xs:sequence>
-                  <xs:element name="dim_date_key" msprop:design-time-name="549983c5-d76c-444d-8cbf-fc9e50243712" msprop:DbColumnName="dim_date_key" msprop:FriendlyName="dim_date_key" type="xs:int" />
+                  <xs:element name="dim_date_key" msprop:design-time-name="549983c5-d76c-444d-8cbf-fc9e50243712" msprop:DbColumnName="dim_date_key" msprop:FriendlyName="dim_date_key" type="xs:int" minOccurs="0" />
                   <xs:element name="calendar_date" msprop:design-time-name="da06d3f3-504c-483c-8a7b-4ed2b0e0cece" msprop:DbColumnName="calendar_date" msprop:FriendlyName="calendar_date" type="xs:dateTime" minOccurs="0" />
                   <xs:element name="cal_day_in_week" msprop:design-time-name="07213896-8d40-4f14-ad52-6b060d1b36c7" msprop:DbColumnName="cal_day_in_week" msprop:FriendlyName="cal_day_in_week" minOccurs="0">
                     <xs:simpleType>
@@ -747,7 +747,7 @@
           <xs:selector xpath=".//dbo_dim_fed_hierarchy_history" />
           <xs:field xpath="dim_fed_hierarchy_history_key" />
         </xs:unique>
-        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:unique name="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
           <xs:selector xpath=".//dbo_dim_date" />
           <xs:field xpath="dim_date_key" />
         </xs:unique>
@@ -755,7 +755,7 @@
       <xs:annotation>
         <xs:appinfo>
           <msdata:Relationship name="agg_chargeable_time_monthly_rollup-dim_fed_hierarchy_history" msdata:parent="dbo_dim_fed_hierarchy_history" msdata:child="dbo_agg_chargeable_time_monthly_rollup" msdata:parentkey="dim_fed_hierarchy_history_key" msdata:childkey="dim_fed_hierarchy_history_key" msprop:IsLogical="True" msprop:Description="" />
-          <msdata:Relationship name="fact_agg_billable_time_monthly_rollup-dim_date" msdata:parent="dbo_dim_date" msdata:child="dbo_agg_chargeable_time_monthly_rollup" msdata:parentkey="dim_date_key" msdata:childkey="dim_gl_date_key" msprop:IsLogical="True" msprop:Description="" />
+          <msdata:Relationship name="fact_agg_billable_time_monthly_rollup-dim_date" msdata:parent="dbo_dim_date" msdata:child="dbo_agg_chargeable_time_monthly_rollup" msdata:parentkey="dim_date_key" msdata:childkey="dim_gl_date_key" msprop:Description="" msprop:IsLogical="True" />
         </xs:appinfo>
       </xs:annotation>
     </xs:schema>
