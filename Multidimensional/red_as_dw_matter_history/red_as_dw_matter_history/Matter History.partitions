@@ -588,11 +588,11 @@ where fin_month between 202007 and 202009</QueryDefinition>
           <LastSchemaUpdate>2018-09-24T11:47:15.273333Z</LastSchemaUpdate>
           <LastProcessed>2018-12-16T07:41:24.02Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="a541a157-2cda-4571-bc58-f31b59f649ce">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="7ee3d21d-6932-4705-8a77-5e58c1b7a3f0">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT     *
 FROM            fact_matter_summary
-where fin_month between 202010 and 202012</QueryDefinition>
+where fin_month between 202010 and 202112</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
