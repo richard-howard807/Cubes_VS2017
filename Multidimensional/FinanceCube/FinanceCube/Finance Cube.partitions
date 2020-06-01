@@ -600,22 +600,30 @@ AND dim_orig_posting_date_key &gt;= '20100501'</QueryDefinition>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="6c0e8598-3ce8-4332-8a8b-fc3d7af95d4e">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="33adcc18-cdc6-4639-8cbf-b398416f6c16">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT   fact_budget_activity.dim_fed_hierarchy_history_key, fact_budget_activity.dim_budget_date_key, fact_budget_activity.budget_date, fact_budget_activity.fed_business_key, 
-                         fact_budget_activity.emp_source_system_id, fact_budget_activity.employee_hierarchy_business_key, fact_budget_activity.budget_source_system_id, fact_budget_activity.fed_code, 
-                         fact_budget_activity.financial_budget_year, fact_budget_activity.financial_budget_month, 
-                         CASE WHEN display_name = 'Budget Balance' THEN team_level_budget_value_balance ELSE fact_budget_activity.fed_level_budget_value END AS budget_value, 
-                         CASE WHEN display_name = 'Budget Balance' THEN team_level_budget_value_hours_balance ELSE fact_budget_activity.fed_level_minute_value END AS budget_mins, 
-                         fact_budget_activity.fed_level_tb_budget_value, fact_budget_activity.team_level_budget_value, fact_budget_activity.practice_area_level_budget_value, 
-                         fact_budget_activity.business_line_level_budget_value, fact_budget_activity.firm_level_budget_value, fact_budget_activity.dss_update_time, fact_budget_activity.dim_gl_date_key, 
-                         fact_budget_activity.team_level_budget_value_hours, fact_budget_activity.team_level_budget_value_balance, fact_budget_activity.team_level_budget_value_hours_balance, 
-                         fact_budget_activity.team_level_budget_value_hours_billed, contracted_hours_in_month,
-									 (SELECT min (dim_date_key)	FROM dbo.dim_date WHERE fin_period = (SELECT fin_period FROM dim_date WHERE calendar_date = CAST(GETDATE()-1 AS DATE)) ) Snapshot, dim_days_banding_key
-FROM         fact_budget_activity INNER JOIN
-                         dim_fed_hierarchy_history ON dim_fed_hierarchy_history.dim_fed_hierarchy_history_key = fact_budget_activity.dim_fed_hierarchy_history_key
-INNER join dim_days_banding on DATEDIFF(d, CAST(CONVERT(CHAR(10), dim_gl_date_key, 120) AS DATE), GETDATE()) BETWEEN 
-                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+            <QueryDefinition>SELECT fact_budget_activity.dim_fed_hierarchy_history_key, fact_budget_activity.dim_budget_date_key, fact_budget_activity.budget_date, fact_budget_activity.fed_business_key, fact_budget_activity.emp_source_system_id, fact_budget_activity.employee_hierarchy_business_key, 
+             fact_budget_activity.budget_source_system_id, fact_budget_activity.fed_code, fact_budget_activity.financial_budget_year, fact_budget_activity.financial_budget_month, 
+             CASE WHEN display_name = 'Budget Balance' THEN team_level_budget_value_balance ELSE fact_budget_activity.fed_level_budget_value END AS budget_value, 
+             CASE WHEN display_name = 'Budget Balance' THEN team_level_budget_value_hours_balance ELSE fact_budget_activity.fed_level_minute_value END AS budget_mins, fact_budget_activity.fed_level_tb_budget_value, fact_budget_activity.team_level_budget_value, 
+             fact_budget_activity.practice_area_level_budget_value, fact_budget_activity.business_line_level_budget_value, fact_budget_activity.firm_level_budget_value, fact_budget_activity.dss_update_time, fact_budget_activity.dim_gl_date_key, 
+             fact_budget_activity.team_level_budget_value_hours, fact_budget_activity.team_level_budget_value_balance, fact_budget_activity.team_level_budget_value_hours_balance, fact_budget_activity.team_level_budget_value_hours_billed, 
+             fact_budget_activity.contracted_hours_in_month,
+                 (SELECT MIN(dim_date_key) AS EXPR1
+                 FROM    dim_date
+                 WHERE (fin_period =
+                                  (SELECT fin_period
+                                  FROM    dim_date AS dim_date_1
+                                  WHERE (calendar_date = CAST(GETDATE() - 1 AS DATE))))) AS Snapshot, dim_days_banding.dim_days_banding_key, dim_fed_hierarchy_history.fte, fact_budget_activity.furloughed_days_in_month, working_days.working_days_in_month
+FROM   fact_budget_activity INNER JOIN
+             dim_fed_hierarchy_history ON dim_fed_hierarchy_history.dim_fed_hierarchy_history_key = fact_budget_activity.dim_fed_hierarchy_history_key INNER JOIN
+             dim_days_banding ON DATEDIFF(d, CAST(CONVERT(CHAR(10), fact_budget_activity.dim_gl_date_key, 120) AS DATE), GETDATE()) BETWEEN dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3' LEFT OUTER JOIN
+             fact_employee_days_fte ON fact_employee_days_fte.employeeid = dim_fed_hierarchy_history.employeeid AND fact_employee_days_fte.dim_date_key = fact_budget_activity.dim_budget_date_key INNER JOIN
+                 (SELECT fin_year, fin_month_no, COUNT(dim_date_2.trading_day_flag) AS working_days_in_month
+                 FROM    dim_date AS dim_date_2
+                 WHERE (trading_day_flag = 'Y') AND (holiday_desc IS NULL)
+                 GROUP BY fin_year, fin_month_no) AS working_days ON working_days.fin_year = fact_budget_activity.financial_budget_year AND working_days.fin_month_no = fact_budget_activity.financial_budget_month
+
 WHERE     (fact_budget_activity.dim_gl_date_key &gt;= 20190501)</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
@@ -629,22 +637,30 @@ WHERE     (fact_budget_activity.dim_gl_date_key &gt;= 20190501)</QueryDefinition
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="e8c7b243-721d-4d33-bc02-20df62977c51">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="3ce24900-36cf-409c-90d1-3664b5ea0359">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT   fact_budget_activity.dim_fed_hierarchy_history_key, fact_budget_activity.dim_budget_date_key, fact_budget_activity.budget_date, fact_budget_activity.fed_business_key, 
-                         fact_budget_activity.emp_source_system_id, fact_budget_activity.employee_hierarchy_business_key, fact_budget_activity.budget_source_system_id, fact_budget_activity.fed_code, 
-                         fact_budget_activity.financial_budget_year, fact_budget_activity.financial_budget_month, 
-                         CASE WHEN display_name = 'Budget Balance' THEN team_level_budget_value_balance ELSE fact_budget_activity.fed_level_budget_value END AS budget_value, 
-                         CASE WHEN display_name = 'Budget Balance' THEN team_level_budget_value_hours_balance ELSE fact_budget_activity.fed_level_minute_value END AS budget_mins, 
-                         fact_budget_activity.fed_level_tb_budget_value, fact_budget_activity.team_level_budget_value, fact_budget_activity.practice_area_level_budget_value, 
-                         fact_budget_activity.business_line_level_budget_value, fact_budget_activity.firm_level_budget_value, fact_budget_activity.dss_update_time, fact_budget_activity.dim_gl_date_key, 
-                         fact_budget_activity.team_level_budget_value_hours, fact_budget_activity.team_level_budget_value_balance, fact_budget_activity.team_level_budget_value_hours_balance, 
-                         fact_budget_activity.team_level_budget_value_hours_billed, contracted_hours_in_month,
-									 (SELECT min (dim_date_key)	FROM dbo.dim_date WHERE fin_period = (SELECT fin_period FROM dim_date WHERE calendar_date = CAST(GETDATE()-1 AS DATE)) ) Snapshot, dim_days_banding_key
-FROM         fact_budget_activity INNER JOIN
-                         dim_fed_hierarchy_history ON dim_fed_hierarchy_history.dim_fed_hierarchy_history_key = fact_budget_activity.dim_fed_hierarchy_history_key
-INNER join dim_days_banding on DATEDIFF(d, CAST(CONVERT(CHAR(10), dim_gl_date_key, 120) AS DATE), GETDATE()) BETWEEN 
-                         dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3'
+            <QueryDefinition>SELECT fact_budget_activity.dim_fed_hierarchy_history_key, fact_budget_activity.dim_budget_date_key, fact_budget_activity.budget_date, fact_budget_activity.fed_business_key, fact_budget_activity.emp_source_system_id, fact_budget_activity.employee_hierarchy_business_key, 
+             fact_budget_activity.budget_source_system_id, fact_budget_activity.fed_code, fact_budget_activity.financial_budget_year, fact_budget_activity.financial_budget_month, 
+             CASE WHEN display_name = 'Budget Balance' THEN team_level_budget_value_balance ELSE fact_budget_activity.fed_level_budget_value END AS budget_value, 
+             CASE WHEN display_name = 'Budget Balance' THEN team_level_budget_value_hours_balance ELSE fact_budget_activity.fed_level_minute_value END AS budget_mins, fact_budget_activity.fed_level_tb_budget_value, fact_budget_activity.team_level_budget_value, 
+             fact_budget_activity.practice_area_level_budget_value, fact_budget_activity.business_line_level_budget_value, fact_budget_activity.firm_level_budget_value, fact_budget_activity.dss_update_time, fact_budget_activity.dim_gl_date_key, 
+             fact_budget_activity.team_level_budget_value_hours, fact_budget_activity.team_level_budget_value_balance, fact_budget_activity.team_level_budget_value_hours_balance, fact_budget_activity.team_level_budget_value_hours_billed, 
+             fact_budget_activity.contracted_hours_in_month,
+                 (SELECT MIN(dim_date_key) AS EXPR1
+                 FROM    dim_date
+                 WHERE (fin_period =
+                                  (SELECT fin_period
+                                  FROM    dim_date AS dim_date_1
+                                  WHERE (calendar_date = CAST(GETDATE() - 1 AS DATE))))) AS Snapshot, dim_days_banding.dim_days_banding_key, dim_fed_hierarchy_history.fte, fact_budget_activity.furloughed_days_in_month, working_days.working_days_in_month
+FROM   fact_budget_activity INNER JOIN
+             dim_fed_hierarchy_history ON dim_fed_hierarchy_history.dim_fed_hierarchy_history_key = fact_budget_activity.dim_fed_hierarchy_history_key INNER JOIN
+             dim_days_banding ON DATEDIFF(d, CAST(CONVERT(CHAR(10), fact_budget_activity.dim_gl_date_key, 120) AS DATE), GETDATE()) BETWEEN dim_days_banding.startdays AND dim_days_banding.enddays AND dim_days_banding.banding_category = 'grouping3' LEFT OUTER JOIN
+             fact_employee_days_fte ON fact_employee_days_fte.employeeid = dim_fed_hierarchy_history.employeeid AND fact_employee_days_fte.dim_date_key = fact_budget_activity.dim_budget_date_key INNER JOIN
+                 (SELECT fin_year, fin_month_no, COUNT(dim_date_2.trading_day_flag) AS working_days_in_month
+                 FROM    dim_date AS dim_date_2
+                 WHERE (trading_day_flag = 'Y') AND (holiday_desc IS NULL)
+                 GROUP BY fin_year, fin_month_no) AS working_days ON working_days.fin_year = fact_budget_activity.financial_budget_year AND working_days.fin_month_no = fact_budget_activity.financial_budget_month
+
 WHERE     (fact_budget_activity.dim_gl_date_key &gt;= 20100501)
 and    (fact_budget_activity.dim_gl_date_key &lt; 20190501)</QueryDefinition>
           </Source>
