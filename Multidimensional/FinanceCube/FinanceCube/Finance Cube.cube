@@ -4311,7 +4311,7 @@ CREATE MEMBER CURRENTCUBE.[Measures].[FTE Total]
 FORMAT_STRING = "#,##0.00;-#,##0.00", 
 VISIBLE = 1 ,  DISPLAY_FOLDER = 'FTE' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets'; 
 CREATE MEMBER CURRENTCUBE.[Measures].[FTE Furloughed]
- AS [Measures].[Total] - [Measures].[Report], 
+ AS [Measures].[FTE Total] - [Measures].[FTE Report], 
 FORMAT_STRING = "#,##0.00;-#,##0.00", 
 VISIBLE = 1 ,  DISPLAY_FOLDER = 'FTE' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets'  ;   
 CREATE MEMBER CURRENTCUBE.[Measures].[Revenue per FTE]
