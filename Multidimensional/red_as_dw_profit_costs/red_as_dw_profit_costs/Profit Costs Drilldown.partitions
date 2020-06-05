@@ -3632,5 +3632,25 @@
         </AggregationDesign>
       </AggregationDesigns>
     </MeasureGroup>
+    <MeasureGroup>
+      <ID>Fact Wip</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="011dc143-f864-4122-8f5d-d578562bbac6">
+          <ID>Fact Wip</ID>
+          <Name>Fact Wip</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="1747efec-7c24-4a72-940d-8443121aa730">
+            <DataSourceViewID>Chargeable_Hours</DataSourceViewID>
+            <TableID>dbo_fact_wip</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
   </MeasureGroups>
 </Cube>
