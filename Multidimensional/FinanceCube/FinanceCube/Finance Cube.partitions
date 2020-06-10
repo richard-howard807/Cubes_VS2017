@@ -1630,5 +1630,25 @@ GROUP BY CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' EL
         </Partition>
       </Partitions>
     </MeasureGroup>
+    <MeasureGroup>
+      <ID>Fact Write Off</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="84c958d9-65c8-403e-afe0-cc9809a3cac7">
+          <ID>Fact Write Off</ID>
+          <Name>Fact Write Off</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="7572ddcf-b399-4d60-a365-ced8f40aaf59">
+            <DataSourceViewID>FinanceDataSource</DataSourceViewID>
+            <TableID>dbo_fact_write_off</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
   </MeasureGroups>
 </Cube>
