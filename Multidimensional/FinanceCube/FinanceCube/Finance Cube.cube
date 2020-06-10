@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="383" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="102698" scrolltop="-8150" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="60" x="19923" y="14420" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="383" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="102698" scrolltop="-8150" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="60" x="19923" y="10610" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -4498,7 +4498,7 @@
     </MeasureGroup>
     <MeasureGroup dwd:design-time-name="606e2b17-1c95-4ff6-9deb-ea104300a154">
       <ID>Fact Write Off</ID>
-      <Name>Fact Write Off</Name>
+      <Name>Write Off</Name>
       <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
       <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
       <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
@@ -4514,6 +4514,7 @@
               <ColumnID>bill_amt_wdn</ColumnID>
             </Source>
           </Source>
+          <Visible>false</Visible>
         </Measure>
         <Measure dwd:design-time-name="52147cb4-297d-4816-ba4b-561ae18f13ec">
           <ID>Bill Amt Woff</ID>
@@ -4525,6 +4526,7 @@
               <ColumnID>bill_amt_woff</ColumnID>
             </Source>
           </Source>
+          <Visible>false</Visible>
         </Measure>
         <Measure dwd:design-time-name="d376810c-9114-4954-8cd8-f704052032e6">
           <ID>Bill Hrs Wdn</ID>
@@ -4536,6 +4538,7 @@
               <ColumnID>bill_hrs_wdn</ColumnID>
             </Source>
           </Source>
+          <Visible>false</Visible>
         </Measure>
         <Measure dwd:design-time-name="cebfb851-3194-466c-807a-30b2f24f45b2">
           <ID>Bill Hrs Woff</ID>
@@ -4547,6 +4550,7 @@
               <ColumnID>bill_hrs_woff</ColumnID>
             </Source>
           </Source>
+          <Visible>false</Visible>
         </Measure>
       </Measures>
       <StorageMode>Molap</StorageMode>
@@ -4720,369 +4724,376 @@ The CALCULATE command controls the aggregation of leaf cells in the cube.
 If the CALCULATE command is deleted or modified, the data within the cube is affected.
 You should edit this command only if you manually specify how the cube is aggregated.
 */
-CALCULATE;     
+CALCULATE; 
+CREATE MEMBER CURRENTCUBE.[Measures].[Write Off Amount]
+ AS [Measures].[Write Down Value]+[Measures].[Write Off Value], 
+FORMAT_STRING = "$#,##0;-$#,##0", 
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Write Off'  ; 
+CREATE MEMBER CURRENTCUBE.[Measures].[Write Off Hours ]
+ AS [Measures].[Write Down Hours]+[Measures].[Write Off Hours], 
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Write Off'  ;      
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Utilisation %]
  AS iif([Measures].[YTD Contracted Hours]&gt;0,[Measures].[YTD Chargeable Hours]/[Measures].[YTD Contracted Hours],null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Utilisation (CH over capactity)' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';     
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Utilisation (CH over capactity)' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';      
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Contracted Hours]
  AS SUM(YTD([Bill Date].[Fiscal Date].CurrentMember), [Measures].[Contracted Hours]), 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';    
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';     
 CREATE MEMBER CURRENTCUBE.[Measures].[Anual Contracted Hours]
  AS (ANCESTOR([Bill Date].[Fiscal Date].CurrentMember,
           [Bill Date].[Fiscal Date].[Fin Year]),
           (Root([Measures].[Contracted Hours]))), 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';     
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';      
 CREATE MEMBER CURRENTCUBE.[Measures].[Utilisation %]
  AS iif([Measures].[Contracted Hours]&gt;0,[Measures].[Chargeable Hours]/[Measures].[Contracted Hours],null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Utilisation (CH over capactity)' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';    
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Utilisation (CH over capactity)' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';     
 CREATE MEMBER CURRENTCUBE.[Measures].[Annual Utilisation %]
  AS iif([Measures].[Contracted Hours]&gt;0,[Measures].[Annual Chargeable Hours]/[Measures].[Anual Contracted Hours],null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Utilisation (CH over capactity)' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';     
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Utilisation (CH over capactity)' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';      
 CREATE MEMBER CURRENTCUBE.[Measures].[Prior Year Utilisation %]
  AS iif([Measures].[Contracted Hours Prior Year]&gt;0,[Measures].[Chargeable Hours Prior Year]/[Measures].[Contracted Hours Prior Year],null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Utilisation (CH over capactity)' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';              
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Utilisation (CH over capactity)' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';               
 CREATE MEMBER CURRENTCUBE.[Measures].[Debt ]
  AS [Measures].[Debt], 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Total Bill' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                      
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Total Bill' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                       
 CREATE MEMBER CURRENTCUBE.[Measures].[Bill Total]
  AS [Measures].[BillTotal], 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Total Bill' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                      
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Total Bill' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                       
 CREATE MEMBER CURRENTCUBE.[Measures].[Disbursement Value]
  AS [Measures].[PaidDisbursements] + [Measures].[UnpaidDisbursements], 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Disbursements' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                      
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Disbursements' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                       
 CREATE MEMBER CURRENTCUBE.[Measures].[Paid Disbursements]
  AS [Measures].[PaidDisbursements], 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Disbursements' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';        
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Disbursements' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';         
    
 CREATE MEMBER CURRENTCUBE.[Measures].[Unbilled Disbursements]
  AS [Measures].[UnbilledDisbursements], 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'WIP';                      
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'WIP';                       
 CREATE MEMBER CURRENTCUBE.[Measures].[Unpaid Disbursement]
  AS [Measures].[UnpaidDisbursements], 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Disbursements' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                           
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Disbursements' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                            
 CREATE MEMBER CURRENTCUBE.[Measures].[Revenue v Budget %]
  AS ([Measures].[Revenue]-[Measures].[Budget Value])/[Measures].[Budget Value], 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                   
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                    
 CREATE MEMBER CURRENTCUBE.[Measures].[Revenue % of Budget]
  AS iif([Measures].[Budget Value]&gt;0,[Measures].[Revenue]/[Measures].[Budget Value], null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                  
 CREATE MEMBER CURRENTCUBE.[Measures].[Revenue % of Annual Budget]
  AS iif([Measures].[Annual Budget Value]&gt;0,[Measures].[Revenue]/[Measures].[Annual Budget Value], null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                    
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                     
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Revenue v YTD Budget %]
  AS iif([Measures].[YTD Budget Value]&gt;0,([Measures].[YTD Revenue]-[Measures].[YTD Budget Value])/[Measures].[YTD Budget Value], null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                   
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                    
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Revenue % of YTD Budget]
  AS iif([Measures].[YTD Budget Value]&gt;0,[Measures].[YTD Revenue]/[Measures].[YTD Budget Value], null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                  
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Revenue % of Annual Budget]
  AS iif([Measures].[Annual Budget Value]&gt;0,[Measures].[YTD Revenue]/[Measures].[Annual Budget Value], null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                           
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                            
 CREATE MEMBER CURRENTCUBE.[Measures].[Revenue v Budget]
  AS [Measures].[Revenue]-[Measures].[Budget Value], 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                    
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                     
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Revenue v Budget]
  AS [Measures].[YTD Revenue]-[Measures].[YTD Budget Value], 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                     
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                      
 CREATE MEMBER CURRENTCUBE.[Measures].[Chargeable Hours_calc]
  AS chargeablemins / 60, 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 0 ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';                  
+VISIBLE = 0 ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';                   
 CREATE MEMBER CURRENTCUBE.[Measures].[Chargeable Hours vs Budget]
  AS [Measures].[Chargeable Hours]-[Measures].[Budget Hours], 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';                  
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';                   
 CREATE MEMBER CURRENTCUBE.[Measures].[Chargeable Hours vs Budget %]
  AS iif(IsEmpty([Measures].[Budget Hours]), null, ([Measures].[Chargeable Hours]-[Measures].[Budget Hours])/[Measures].[Budget Hours]), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';                  
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';                   
 CREATE MEMBER CURRENTCUBE.[Measures].[Chargeable Hours % of Budget]
  AS iif([Measures].[Budget Hours] &gt; 0, ([Measures].[Chargeable Hours]/[Measures].[Budget Hours]), null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';                 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';                  
 CREATE MEMBER CURRENTCUBE.[Measures].[Chargeable Hours % of Annual Budget]
  AS iif([Measures].[Annual Budget Hours] &gt; 0, ([Measures].[Chargeable Hours]/[Measures].[Annual Budget Hours]), null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';                    
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';                     
 CREATE MEMBER CURRENTCUBE.[Measures].[Chargeable Hours Prior Year]
  AS SUM(PARALLELPERIOD( [Bill Date].[Fiscal Date].[Fin Year],1,
 [Bill Date].[Fiscal Date].CurrentMember),[Measures].[Chargeable Hours]), 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';     
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';      
 CREATE MEMBER CURRENTCUBE.[Measures].[Contracted Hours Prior Year]
  AS SUM(PARALLELPERIOD( [Bill Date].[Fiscal Date].[Fin Year],1,
 [Bill Date].[Fiscal Date].CurrentMember),[Measures].[Contracted Hours]), 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 0 ,  DISPLAY_FOLDER = 'Utilisation' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';                    
+VISIBLE = 0 ,  DISPLAY_FOLDER = 'Utilisation' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';                     
 CREATE MEMBER CURRENTCUBE.[Measures].[Chargeable Hours vs Prior Year]
  AS [Measures].[Chargeable Hours]-[Measures].[Chargeable Hours Prior Year], 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';                    
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';                     
 CREATE MEMBER CURRENTCUBE.[Measures].[Chargeable Hours vs Prior Year %]
  AS iif(IsEmpty([Measures].[Chargeable Hours Prior Year]) or [Measures].[Chargeable Hours Prior Year]=0, null, ([Measures].[Chargeable Hours]-[Measures].[Chargeable Hours Prior Year])/[Measures].[Chargeable Hours Prior Year]), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';                    
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';                     
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Chargeable Hours]
  AS SUM(YTD([Bill Date].[Fiscal Date].CurrentMember), [Measures].[Chargeable Hours]), 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';                  
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';                   
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Chargeable Hours vs YTD Budget]
  AS [Measures].[YTD Chargeable Hours]-[Measures].[YTD Budget Hours], 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';                  
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';                   
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Chargeable Hours vs YTD Budget %]
  AS iif([Measures].[YTD Budget Hours]&gt;0, ([Measures].[YTD Chargeable Hours]-[Measures].[YTD Budget Hours])/[Measures].[YTD Budget Hours],null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';                  
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';                   
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Chargeable Hours % of YTD Budget]
  AS iif([Measures].[YTD Budget Hours]&gt;0,[Measures].[YTD Chargeable Hours]/[Measures].[YTD Budget Hours], null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';                 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';                  
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Chargeable Hours % of Annual Budget]
  AS iif([Measures].[Annual Budget Hours]&gt;0,[Measures].[YTD Chargeable Hours]/[Measures].[Annual Budget Hours], null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';                    
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';                     
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Chargeable Hours Prior Year]
  AS SUM(PARALLELPERIOD( [Bill Date].[Fiscal Date].[Fin Year],1,
 [Bill Date].[Fiscal Date].CurrentMember),[Measures].[YTD Chargeable Hours]), 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';                    
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';                     
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Chargeable Hours vs YTD Prior Year]
  AS [Measures].[YTD Chargeable Hours]-[Measures].[YTD Chargeable Hours Prior Year], 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';                    
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';                     
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Chargeable Hours vs YTD Prior Year %]
  AS iif(IsEmpty([Measures].[YTD Chargeable Hours Prior Year]) or [Measures].[YTD Chargeable Hours Prior Year]=0, null,([Measures].[YTD Chargeable Hours]-[Measures].[YTD Chargeable Hours Prior Year])/[Measures].[YTD Chargeable Hours Prior Year]), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';                    
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';                     
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Budget Hours]
  AS SUM(YTD([Bill Date].[Fiscal Date].CurrentMember), [Measures].[Budget Hours]), 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';                             
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';                              
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Revenue]
  AS SUM(YTD([Bill Date].[Fiscal Date].CurrentMember), [Measures].[Revenue]), 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                    
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                     
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Billed Hours]
  AS SUM(YTD([Bill Date].[Fiscal Date].CurrentMember), [Measures].[Billed Hours]), 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Hours\YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                    
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Hours\YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                     
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Budget Value]
  AS SUM(YTD([Bill Date].[Fiscal Date].CurrentMember), [Measures].[Budget Value]), 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';                            
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';                             
 CREATE MEMBER CURRENTCUBE.[Measures].[Revenue Prior Year]
  AS SUM(PARALLELPERIOD( [Bill Date].[Fiscal Date].[Fin Year],1,
 [Bill Date].[Fiscal Date].CurrentMember),[Measures].[Revenue]), 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                    
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                     
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Revenue Prior Year]
  AS SUM(PARALLELPERIOD( [Bill Date].[Fiscal Date].[Fin Year],1,
 [Bill Date].[Fiscal Date].CurrentMember),[Measures].[YTD Revenue]), 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                           
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                            
 CREATE MEMBER CURRENTCUBE.[Measures].[Revenue v Prior Year]
  AS [Measures].[Revenue]-[Measures].[Revenue Prior Year], 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                           
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                            
 CREATE MEMBER CURRENTCUBE.[Measures].[Revenue v Prior Year %]
  AS iif(IsEmpty([Measures].[Revenue Prior Year]) or [Measures].[Revenue Prior Year]=0,null,([Measures].[Revenue]-[Measures].[Revenue Prior Year])/[Measures].[Revenue Prior Year]), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                    
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                     
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Revenue v YTD Prior Year]
  AS [Measures].[YTD Revenue]-[Measures].[YTD Revenue Prior Year], 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                    
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                     
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Revenue v YTD Prior Year %]
  AS iif(IsEmpty([Measures].[YTD Revenue Prior Year]) or [Measures].[YTD Revenue Prior Year]=0,null,([Measures].[YTD Revenue]-[Measures].[YTD Revenue Prior Year])/[Measures].[YTD Revenue Prior Year]), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                      
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                       
 
 CREATE MEMBER CURRENTCUBE.[Measures].[Billed Hours]
  AS [Measures].[Minutes Recorded] / 60, 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Hours' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                    
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Hours' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                     
 CREATE MEMBER CURRENTCUBE.[Measures].[Billed Hours Prior Year]
  AS SUM(PARALLELPERIOD( [Bill Date].[Fiscal Date].[Fin Year],1,
 [Bill Date].[Fiscal Date].CurrentMember),[Measures].[Billed Hours]), 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Hours\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                    
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Hours\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                     
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Billed Hours Prior Year]
  AS SUM(PARALLELPERIOD( [Bill Date].[Fiscal Date].[Fin Year],1,
 [Bill Date].[Fiscal Date].CurrentMember),[Measures].[YTD Billed Hours]), 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Hours\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                    
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Hours\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                     
 CREATE MEMBER CURRENTCUBE.[Measures].[Billed Hours v Prior Year]
  AS [Measures].[Billed Hours]-[Measures].[Billed Hours Prior Year], 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Hours\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                    
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Hours\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                     
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Billed Hours v YTD Prior Year]
  AS [Measures].[YTD Billed Hours]-[Measures].[YTD Billed Hours Prior Year], 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Hours\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                    
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Hours\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                     
 CREATE MEMBER CURRENTCUBE.[Measures].[Billed Hours v Prior Year %]
  AS iif(IsEmpty([Measures].[Billed Hours Prior Year]) or [Measures].[Billed Hours Prior Year]=0,null,([Measures].[Billed Hours]-[Measures].[Billed Hours Prior Year])/[Measures].[Billed Hours Prior Year]), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Hours\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                    
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Hours\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                     
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Billed Hours v YTD Prior Year %]
  AS iif(IsEmpty([Measures].[YTD Billed Hours Prior Year]) or [Measures].[YTD Billed Hours Prior Year]=0,null,([Measures].[YTD Billed Hours]-[Measures].[YTD Billed Hours Prior Year])/[Measures].[YTD Billed Hours Prior Year]), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Hours\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                           
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Hours\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                            
 CREATE MEMBER CURRENTCUBE.[Measures].[Revenue+WIP % of Budget]
  AS iif([Measures].[Budget Value]&gt;0,[Measures].[Revenue+WIP]/[Measures].[Budget Value], null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'WIP';                 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'WIP';                  
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD WIP Value]
  AS SUM(YTD([Bill Date].[Fiscal Date].CurrentMember), [Measures].[WIP Value]), 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'WIP';                 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'WIP';                  
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Revenue+WIP]
  AS [Measures].[YTD WIP Value] + [Measures].[YTD Revenue], 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'WIP';                 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'WIP';                  
 CREATE MEMBER CURRENTCUBE.[Measures].[Revenue+WIP]
  AS [Measures].[WIP Value] + [Measures].[Revenue], 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'WIP';                 
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'WIP';                  
 CREATE MEMBER CURRENTCUBE.[Measures].[Revenue+WIP % of Annual Budget]
  AS iif([Measures].[Annual Budget Value]&gt;0,[Measures].[Revenue+WIP]/[Measures].[Annual Budget Value], null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'WIP';                 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'WIP';                  
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Revenue+WIP % of Annual Budget]
  AS iif([Measures].[Annual Budget Value]&gt;0,[Measures].[YTD Revenue+WIP]/[Measures].[Annual Budget Value], null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'WIP';                 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'WIP';                  
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Revenue+WIP % of YTD Budget]
  AS iif([Measures].[YTD Budget Value]&gt;0,[Measures].[YTD Revenue+WIP]/[Measures].[YTD Budget Value], null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'WIP';                           
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'WIP';                            
 CREATE MEMBER CURRENTCUBE.[Measures].[Revenue+WIP v Budget]
  AS ([Measures].[Revenue]+[Measures].[Wip Value])-[Measures].[Budget Value], 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'WIP';                 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Budgets' ,  ASSOCIATED_MEASURE_GROUP = 'WIP';                  
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Revenue+WIP v YTD Budget]
  AS ([Measures].[YTD Revenue]+[Measures].[YTD Wip Value])-[Measures].[YTD Budget Value], 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'WIP';                    
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'WIP';                     
 CREATE MEMBER CURRENTCUBE.[Measures].[Recovery Rate]
  AS iif(IsEmpty([Measures].[Billed Hours]) or [Measures].[Billed Hours]=0 ,null,[Measures].[Revenue] / [Measures].[Billed Hours]), 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                    
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                     
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Recovery Rate]
  AS iif(IsEmpty([Measures].[YTD Billed Hours]) or [Measures].[YTD Billed Hours]=0,null,[Measures].[YTD Revenue] / [Measures].[YTD Billed Hours]), 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                   
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                    
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Recovery Rate Prior Year]
  AS SUM(PARALLELPERIOD( [Bill Date].[Fiscal Date].[Fin Year],1,
 [Bill Date].[Fiscal Date].CurrentMember),[YTD Recovery Rate]), 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                   
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                    
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Recovery Rate v YTD Prior Year]
  AS [Measures].[YTD Recovery Rate]-[Measures].[YTD Recovery Rate Prior Year], 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                   
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                    
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Recovery Rate v YTD Prior Year %]
  AS iif(IsEmpty([Measures].[YTD Recovery Rate Prior Year]) or [Measures].[YTD Recovery Rate Prior Year]=0,null,([Measures].[YTD Recovery Rate]-[Measures].[YTD Recovery Rate Prior Year])/[Measures].[YTD Recovery Rate Prior Year]), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                   
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\YTD\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                    
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Recovery Rate v YTD Buget]
  AS [Measures].[YTD Recovery Rate]-[Measures].[YTD Budget Recovery Rate], 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                   
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                    
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Recovery Rate v YTD Budget %]
  AS iif(IsEmpty([Measures].[YTD Budget Recovery Rate]) or [Measures].[YTD Budget Recovery Rate]=0,null,([Measures].[YTD Recovery Rate]-[Measures].[YTD Budget Recovery Rate])/[Measures].[YTD Budget Recovery Rate]), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                   
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\YTD\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                    
 CREATE MEMBER CURRENTCUBE.[Measures].[Recovery Rate Prior Year]
  AS SUM(PARALLELPERIOD( [Bill Date].[Fiscal Date].[Fin Year],1,
 [Bill Date].[Fiscal Date].CurrentMember),[Measures].[Recovery Rate]), 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                   
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                    
 CREATE MEMBER CURRENTCUBE.[Measures].[Recovery Rate v Prior Year]
  AS [Measures].[Recovery Rate]-[Measures].[Recovery Rate Prior Year], 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                   
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                    
 CREATE MEMBER CURRENTCUBE.[Measures].[Recovery Rate v Budget]
  AS [Measures].[Recovery Rate]-[Measures].[Budget Recovery Rate], 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                   
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                    
 CREATE MEMBER CURRENTCUBE.[Measures].[Recovery Rate v Budget %]
  AS iif(IsEmpty([Measures].[YTD Budget Recovery Rate]) or [Measures].[YTD Budget Recovery Rate]=0,null,([Measures].[YTD Recovery Rate]-[Measures].[YTD Budget Recovery Rate])/[Measures].[YTD Budget Recovery Rate]), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                   
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\Vs Budget' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                    
 CREATE MEMBER CURRENTCUBE.[Measures].[Recovery Rate v Prior Year %]
  AS iif(IsEmpty([Measures].[Recovery Rate Prior Year]) or [Measures].[Recovery Rate Prior Year]=0, null, ([Measures].[Recovery Rate]-[Measures].[Recovery Rate Prior Year])/[Measures].[Recovery Rate Prior Year]), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                    
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Recovery Rate\Prior Year' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';                     
 CREATE MEMBER CURRENTCUBE.[Measures].[Budget Recovery Rate]
  AS iif([Measures].[Budget Hours]&gt;0,[Measures].[Budget Value] / [Measures].[Budget Hours],null), 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';                    
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';                     
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Budget Recovery Rate]
  AS iif(IsEmpty([Measures].[YTD Budget Hours]),null,[Measures].[YTD Budget Value] / [Measures].[YTD Budget Hours]), 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';                 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';                  
 CREATE MEMBER CURRENTCUBE.[Measures].[Annual Budget Recovery Rate]
  AS iif([Measures].[Annual Budget Hours]&gt;0,[Measures].[Annual Budget Value] / [Measures].[Annual Budget Hours],null), 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';                 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';                  
 CREATE MEMBER CURRENTCUBE.[Measures].[Annual Budget Hours]
  AS (ANCESTOR([Bill Date].[Fiscal Date].CurrentMember,
           [Bill Date].[Fiscal Date].[Fin Year]),
           (Root([Measures].[Budget Hours]))), 
 FORMAT_STRING = "#,##0;-#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';                 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';                  
 CREATE MEMBER CURRENTCUBE.[Measures].[Annual Budget Value]
  AS (ANCESTOR([Bill Date].[Fiscal Date].CurrentMember,
           [Bill Date].[Fiscal Date].[Fin Year]),
           (Root([Measures].[Budget Value]))), 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';    
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';     
 CREATE MEMBER CURRENTCUBE.[Measures].[Annual Chargeable Hours]
  AS (ANCESTOR([Bill Date].[Fiscal Date].CurrentMember,
           [Bill Date].[Fiscal Date].[Fin Year]),
           (Root([Measures].[Chargeable Hours]))), 
-VISIBLE = 0 ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';               
+VISIBLE = 0 ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours';                
 CREATE MEMBER CURRENTCUBE.[Measures].[Total VAT]
  AS [Measures].[VatAmount], 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Total Bill' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';   
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Total Bill' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';    
 CREATE MEMBER CURRENTCUBE.[Measures].[FTE Report]
  AS [Measures].[Fte] * (([Measures].[Working Days In Month] - [Measures].[Furloughed Days In Month]) / [Measures].[Working Days In Month]), 
 FORMAT_STRING = "#,##0.00;-#,##0.00", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'FTE' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';  
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'FTE' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';   
 CREATE MEMBER CURRENTCUBE.[Measures].[FTE Total]
  AS iif([Measures].[Working Days In Month] &gt; 0, [Measures].[Fte] * ([Measures].[Working Days In Month] / [Measures].[Working Days In Month]), null), 
 FORMAT_STRING = "#,##0.00;-#,##0.00", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'FTE' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets'; 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'FTE' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';  
 CREATE MEMBER CURRENTCUBE.[Measures].[FTE Furloughed]
  AS [Measures].[FTE Total] - [Measures].[FTE Report], 
 FORMAT_STRING = "#,##0.00;-#,##0.00", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'FTE' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets'  ;   
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'FTE' ,  ASSOCIATED_MEASURE_GROUP = 'Budgets';    
 CREATE MEMBER CURRENTCUBE.[Measures].[Revenue per FTE]
  AS iif([Measures].[FTE Report] &gt; 0,[Measures].[Revenue] / [Measures].[FTE Report], null), 
 FORMAT_STRING = "$#,##0;-$#,##0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';   
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Revenue' ,  ASSOCIATED_MEASURE_GROUP = 'Bills';    
 CREATE MEMBER CURRENTCUBE.[Measures].[Chargeable Hours per FTE]
  AS iif([Measures].[FTE Report] &gt; 0, [Measures].[Chargeable Hours] / [Measures].[FTE Report], null), 
 FORMAT_STRING = "#,##0;-#,##0", 
