@@ -5496,7 +5496,7 @@ FORMAT_STRING = "#,##0;-#,##0",
 VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Billed' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours'  ; 
 CREATE MEMBER CURRENTCUBE.[Measures].[Chargeable Hours Vs Billed Hours %]
  AS iif([Measures].[Billed Hours] &gt; 0, ([Measures].[Chargeable Hours] - [Measures].[Billed Hours]) / [Measures].[Billed Hours], null), 
-FORMAT_STRING = "#,##0;-#,##0", 
+FORMAT_STRING = "Percent", 
 VISIBLE = 1 ,  DISPLAY_FOLDER = 'Vs Billed' ,  ASSOCIATED_MEASURE_GROUP = 'Chargeable Hours'  ; </Text>
         </Command>
       </Commands>
