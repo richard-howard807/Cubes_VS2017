@@ -8,9 +8,9 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="28" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4980" scrolltop="3528" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="20761" y="19173" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="28" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4980" scrolltop="909" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="33232" y="17621" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
-              <ddsxmlobjectstreamwrapper binary="01000000900180380100065461686f6d61" />
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
             <mouseicon>
               <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
@@ -225,7 +225,7 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>3528</Value>
+      <Value>909</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
@@ -324,6 +324,9 @@
         <Attribute dwd:design-time-name="584c860e-8b63-4fa0-b7e0-15b8af55c28d">
           <AttributeID>Dim Matter Worktype Key</AttributeID>
           <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="10a523e9-269f-4382-974a-d68aa4cacfb2">
+          <AttributeID>Current Reporting Exclusions</AttributeID>
         </Attribute>
       </Attributes>
     </Dimension>
@@ -476,6 +479,54 @@
       </Attributes>
       <Hierarchies>
         <Hierarchy dwd:design-time-name="62309c7a-2955-40a9-87ee-520077fb3d97">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="7590872b-ea56-4ddd-9bde-e2d4544b5b78">
+      <ID>Dim Fed Hierarchy History 1</ID>
+      <Name>Dim Fed Hierarchy Orig Matter Owner</Name>
+      <DimensionID>Dim Fed Hierarchy History</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="526ae224-261e-4bb9-add1-0415f50ddbc0">
+          <AttributeID>Dim Fed Hierarchy History Key</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="42614b6d-6726-48fc-ac8b-04379781d658">
+          <AttributeID>Fed Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8b769e75-73ed-4e29-9244-a1acd528932e">
+          <AttributeID>Display Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8bb48a9f-ebb1-4452-99a4-995ef8afb343">
+          <AttributeID>Hierarchylevel1hist</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="26c85be9-917d-464a-b872-161241df7aa8">
+          <AttributeID>Hierarchylevel2hist</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e59ffcda-ce4a-4e09-bcec-ec0e967c809e">
+          <AttributeID>Hierarchylevel3hist</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6a830b9e-1572-4937-b257-662efd9e7b2c">
+          <AttributeID>Hierarchylevel4hist</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bd12e7ad-d8f6-44e3-89e4-baaae1480b9c">
+          <AttributeID>Hierarchylevel5hist</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="11b2d5c5-80fe-47ea-8a1c-dc2e563bed73">
+          <AttributeID>Hierarchylevel6hist</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e4fc41c2-735d-4ca1-849c-7bcb14f974df">
+          <AttributeID>Fed Hierarchy Business Key</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f6fab46a-c5c8-4699-8129-d53d1485bd28">
+          <AttributeID>Jobtitle</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="425ae6f8-d526-4bfb-92f7-92881012b1f2">
+          <AttributeID>Employeeid</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="eec99445-c889-4a82-a7bc-f97ae091c42d">
           <HierarchyID>Hierarchy</HierarchyID>
         </Hierarchy>
       </Hierarchies>
@@ -1491,6 +1542,25 @@
           <IntermediateGranularityAttributeID>Dim Matter Worktype Key</IntermediateGranularityAttributeID>
           <Materialization>Regular</Materialization>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="e423c253-eb38-4ff7-9fbf-1725abdfa12f">
+          <CubeDimensionID>Dim Fed Hierarchy History 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="6cc727e1-17ef-43d0-b5f6-a66ce3d2a3c3">
+              <AttributeID>Dim Fed Hierarchy History Key</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="67f1010d-29c2-4bf7-b295-a6efaed376ae">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d0ddbe97-db3c-49c1-bdd1-00c53bbea261">
+                    <TableID>dbo_fact_matter_summary</TableID>
+                    <ColumnID>dim_fed_hierarchy_history_key_original_matter_owner_dopm</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
         </Dimension>
       </Dimensions>
       <Partitions />

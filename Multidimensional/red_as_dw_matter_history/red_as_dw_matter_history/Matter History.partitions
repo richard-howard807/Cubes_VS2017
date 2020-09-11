@@ -11,11 +11,13 @@
           <LastSchemaUpdate>2018-09-24T11:47:14.773333Z</LastSchemaUpdate>
           <LastProcessed>2018-12-16T07:42:52.146667Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="012e3afa-bc4b-4be3-b820-19f952a8e8a4">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="194f33b4-1eec-4fa2-8d00-cacdcc857c8c">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT     *
-FROM            fact_matter_summary
+            <QueryDefinition>SELECT     fact_matter_summary.*, ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key_original_matter_owner_dopm,0) dim_fed_hierarchy_history_key_original_matter_owner_dopm
 
+FROM            fact_matter_summary
+ LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_matter_summary.master_fact_key
 where 
 fin_month between 201510 and 201512</QueryDefinition>
           </Source>
@@ -45,11 +47,13 @@ fin_month between 201510 and 201512</QueryDefinition>
           </Annotations>
           <LastProcessed>2018-12-16T07:42:46.35Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="0b0eac64-a6f9-4565-9c88-fd9fee03ec9c">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="c20ae76a-e2af-446b-944c-4aff33eb5284">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT      *
-FROM            fact_matter_summary 
+            <QueryDefinition>SELECT       fact_matter_summary.*, ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key_original_matter_owner_dopm,0) dim_fed_hierarchy_history_key_original_matter_owner_dopm
 
+FROM            fact_matter_summary 
+ LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_matter_summary.master_fact_key
 where fin_month between 201601 and 201603</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
@@ -72,10 +76,12 @@ where fin_month between 201601 and 201603</QueryDefinition>
           <LastSchemaUpdate>2018-09-24T11:47:14.85Z</LastSchemaUpdate>
           <LastProcessed>2018-12-16T07:43:48.24Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="20c1d3ef-8f76-4454-84ca-80e34d5bdf96">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="b75c18d5-817a-44c2-8f48-c037b605ae3f">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT       *
-FROM            fact_matter_summary 
+            <QueryDefinition>SELECT      fact_matter_summary.*, ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key_original_matter_owner_dopm,0) dim_fed_hierarchy_history_key_original_matter_owner_dopm
+
+FROM            fact_matter_summary  LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_matter_summary.master_fact_key
 where fin_month between 201604 and 201606</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
@@ -103,10 +109,12 @@ where fin_month between 201604 and 201606</QueryDefinition>
           </Annotations>
           <LastProcessed>2018-12-16T07:43:47.693333Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="641444fb-c11a-44bf-bf2f-26ccb258e690">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="ef9db908-7567-4b3a-ad7c-9fb959ef499c">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT    *
-FROM            fact_matter_summary
+            <QueryDefinition>SELECT     fact_matter_summary.*, ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key_original_matter_owner_dopm,0) dim_fed_hierarchy_history_key_original_matter_owner_dopm
+
+FROM            fact_matter_summary  LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_matter_summary.master_fact_key
 where fin_month between 201607 and 201609</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
@@ -134,10 +142,12 @@ where fin_month between 201607 and 201609</QueryDefinition>
           </Annotations>
           <LastProcessed>2018-12-16T07:42:53.163333Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="0e2dd646-921f-48fb-91c3-03ec22d177ca">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="201f1fc6-4a78-4e74-b9ed-399fccaad23c">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT      *
-FROM            fact_matter_summary 
+            <QueryDefinition>SELECT      fact_matter_summary.*, ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key_original_matter_owner_dopm,0) dim_fed_hierarchy_history_key_original_matter_owner_dopm
+
+FROM            fact_matter_summary  LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_matter_summary.master_fact_key
 where fin_month between 201610 and 201612</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
@@ -165,11 +175,13 @@ where fin_month between 201610 and 201612</QueryDefinition>
           </Annotations>
           <LastProcessed>2018-12-16T07:43:27.693333Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="13d1eb55-f6ac-4cf8-b55b-502f20ec4582">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="153e1f18-769d-4888-b8c4-e57f39243a65">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT      *
-FROM            fact_matter_summary 
+            <QueryDefinition>SELECT      fact_matter_summary.*, ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key_original_matter_owner_dopm,0) dim_fed_hierarchy_history_key_original_matter_owner_dopm
 
+FROM            fact_matter_summary 
+ LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_matter_summary.master_fact_key
 where fin_month between 201701 and 201703</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
@@ -192,10 +204,12 @@ where fin_month between 201701 and 201703</QueryDefinition>
           <LastSchemaUpdate>2018-09-24T11:47:14.973333Z</LastSchemaUpdate>
           <LastProcessed>2018-12-16T07:43:05.413333Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="990c2599-d399-445b-898d-3f31a074c0a4">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="01f65588-c763-4b28-9e81-18fad0a5bf65">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT   *
-FROM            fact_matter_summary 
+            <QueryDefinition>SELECT    fact_matter_summary.*, ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key_original_matter_owner_dopm,0) dim_fed_hierarchy_history_key_original_matter_owner_dopm
+
+FROM            fact_matter_summary  LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_matter_summary.master_fact_key
 where fin_month between 201704 and 201706</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
@@ -223,10 +237,12 @@ where fin_month between 201704 and 201706</QueryDefinition>
           </Annotations>
           <LastProcessed>2018-12-16T07:43:02.24Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="40bc6cb6-ce92-4a27-a6a6-f37dc2c7d8e9">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="481c8ade-c552-4f29-875c-c40775c8db95">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT      *
-FROM            fact_matter_summary 
+            <QueryDefinition>SELECT     fact_matter_summary.*, ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key_original_matter_owner_dopm,0) dim_fed_hierarchy_history_key_original_matter_owner_dopm
+
+FROM            fact_matter_summary  LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_matter_summary.master_fact_key
 where fin_month between 201707 and 201709</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
@@ -254,10 +270,12 @@ where fin_month between 201707 and 201709</QueryDefinition>
           </Annotations>
           <LastProcessed>2018-12-16T07:43:23.133333Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="5df24781-8a57-4417-bbc8-01ccb66f5f46">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="d4b1cd97-83e5-48ca-9848-12499a2ecccd">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT     *
-FROM            fact_matter_summary
+            <QueryDefinition>SELECT      fact_matter_summary.*, ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key_original_matter_owner_dopm,0) dim_fed_hierarchy_history_key_original_matter_owner_dopm
+
+FROM            fact_matter_summary  LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_matter_summary.master_fact_key
 where fin_month between 201710 and 201712</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
@@ -280,10 +298,12 @@ where fin_month between 201710 and 201712</QueryDefinition>
           <LastSchemaUpdate>2018-09-24T11:47:15.083333Z</LastSchemaUpdate>
           <LastProcessed>2018-12-16T07:43:44.07Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="7c212e00-a95d-453b-853d-7aaffbd8ac5f">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="f3ca68be-34fb-4236-8fc7-420b22679665">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT     *
-FROM            fact_matter_summary
+            <QueryDefinition>SELECT   fact_matter_summary.*, ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key_original_matter_owner_dopm,0) dim_fed_hierarchy_history_key_original_matter_owner_dopm
+
+FROM            fact_matter_summary  LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_matter_summary.master_fact_key
 where fin_month between 201801 and 201803</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
@@ -306,10 +326,12 @@ where fin_month between 201801 and 201803</QueryDefinition>
           <LastSchemaUpdate>2018-09-24T11:47:15.116667Z</LastSchemaUpdate>
           <LastProcessed>2018-12-16T07:43:12.773333Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="f8a344f1-36de-44d9-8720-806ad0992028">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="3f77dc77-4d88-40f4-bbb3-b9cf5cd3a848">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT     *
-FROM            fact_matter_summary
+            <QueryDefinition>SELECT   fact_matter_summary.*, ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key_original_matter_owner_dopm,0) dim_fed_hierarchy_history_key_original_matter_owner_dopm
+
+FROM            fact_matter_summary  LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_matter_summary.master_fact_key
 where fin_month between 201804 and 201806</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
@@ -332,10 +354,12 @@ where fin_month between 201804 and 201806</QueryDefinition>
           <LastSchemaUpdate>2018-09-24T11:47:15.146667Z</LastSchemaUpdate>
           <LastProcessed>2018-12-16T07:43:14.006667Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="e7918626-5bfa-409f-868c-c038d08860d6">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="ae670d53-ad0b-4829-b918-e46c2da6f553">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT     *
-FROM            fact_matter_summary
+            <QueryDefinition>SELECT     fact_matter_summary.*, ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key_original_matter_owner_dopm,0) dim_fed_hierarchy_history_key_original_matter_owner_dopm
+
+FROM            fact_matter_summary  LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_matter_summary.master_fact_key
 where fin_month between 201807 and 201809</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
@@ -358,10 +382,12 @@ where fin_month between 201807 and 201809</QueryDefinition>
           <LastSchemaUpdate>2018-09-24T11:47:15.18Z</LastSchemaUpdate>
           <LastProcessed>2018-12-16T07:43:47.07Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="5710e7ce-4db3-4a7f-9607-34396b47cf48">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="140ae4c9-97ba-4141-b4b5-809ca35242eb">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT     *
-FROM            fact_matter_summary
+            <QueryDefinition>SELECT     fact_matter_summary.*, ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key_original_matter_owner_dopm,0) dim_fed_hierarchy_history_key_original_matter_owner_dopm
+
+FROM            fact_matter_summary  LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_matter_summary.master_fact_key
 where fin_month between 201810 and 201812</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
@@ -384,10 +410,12 @@ where fin_month between 201810 and 201812</QueryDefinition>
           <LastSchemaUpdate>2018-09-24T11:47:15.21Z</LastSchemaUpdate>
           <LastProcessed>2018-12-16T07:43:13.786667Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="67421f36-2228-452c-9cbe-37035cbb4c66">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="80eb2028-2ccf-4b3f-9ed2-161c1021e830">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT     *
-FROM            fact_matter_summary
+            <QueryDefinition>SELECT    fact_matter_summary.*, ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key_original_matter_owner_dopm,0) dim_fed_hierarchy_history_key_original_matter_owner_dopm
+
+FROM            fact_matter_summary  LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_matter_summary.master_fact_key
 where fin_month between 201901 and 201903</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
@@ -416,10 +444,12 @@ where fin_month between 201901 and 201903</QueryDefinition>
           </Annotations>
           <LastProcessed>2018-12-16T07:43:51.633333Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="1d30fb7f-dad0-4295-8488-456d03c93a36">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="b57f9307-b7ee-46af-ae8f-3cb1b8b2b039">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT     *
-FROM            fact_matter_summary
+            <QueryDefinition>SELECT    fact_matter_summary.*, ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key_original_matter_owner_dopm,0) dim_fed_hierarchy_history_key_original_matter_owner_dopm
+
+FROM            fact_matter_summary  LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_matter_summary.master_fact_key
 where fin_month between 201904 and 201906</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
@@ -442,10 +472,12 @@ where fin_month between 201904 and 201906</QueryDefinition>
           <LastSchemaUpdate>2018-09-24T11:47:15.24Z</LastSchemaUpdate>
           <LastProcessed>2018-12-16T07:43:43.256667Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="f100faa2-3229-4ba4-9096-b7cb406c8432">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="d17c48c6-f7f4-4af1-a75a-feb2e4831d89">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT     *
-FROM            fact_matter_summary
+            <QueryDefinition>SELECT      fact_matter_summary.*, ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key_original_matter_owner_dopm,0) dim_fed_hierarchy_history_key_original_matter_owner_dopm
+
+FROM            fact_matter_summary  LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_matter_summary.master_fact_key
 where fin_month between 201907 and 201909</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
@@ -474,10 +506,12 @@ where fin_month between 201907 and 201909</QueryDefinition>
           </Annotations>
           <LastProcessed>2018-12-16T07:41:23.973333Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="247dfb88-d01c-4843-a479-e4ea696c9416">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="7e182887-660a-4a78-871e-35bcad8b4f80">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT     *
-FROM            fact_matter_summary
+            <QueryDefinition>SELECT   fact_matter_summary.*, ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key_original_matter_owner_dopm,0) dim_fed_hierarchy_history_key_original_matter_owner_dopm
+
+FROM            fact_matter_summary  LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_matter_summary.master_fact_key
 where fin_month between 201910 and 201912</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
@@ -505,10 +539,12 @@ where fin_month between 201910 and 201912</QueryDefinition>
           </Annotations>
           <LastProcessed>2018-12-16T07:41:23.913333Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="f5951736-22a8-43cd-a598-da987fc6b5e0">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="3872e7fb-c681-4725-8b98-b18732be8f29">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT     *
-FROM            fact_matter_summary
+            <QueryDefinition>SELECT     fact_matter_summary.*, ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key_original_matter_owner_dopm,0) dim_fed_hierarchy_history_key_original_matter_owner_dopm
+
+FROM            fact_matter_summary  LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_matter_summary.master_fact_key
 where fin_month between 202001 and 202003</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
@@ -536,10 +572,12 @@ where fin_month between 202001 and 202003</QueryDefinition>
           </Annotations>
           <LastProcessed>2018-12-16T07:41:23.926667Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="5f72d252-fc8a-4212-a031-71e293e6cf6b">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="9999c5b9-3c0b-4012-805a-8b67b2203711">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT     *
-FROM            fact_matter_summary
+            <QueryDefinition>SELECT    fact_matter_summary.*, ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key_original_matter_owner_dopm,0) dim_fed_hierarchy_history_key_original_matter_owner_dopm
+
+FROM            fact_matter_summary  LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_matter_summary.master_fact_key
 where fin_month between 202004 and 202006</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
@@ -562,10 +600,12 @@ where fin_month between 202004 and 202006</QueryDefinition>
           <LastSchemaUpdate>2018-09-24T11:47:15.273333Z</LastSchemaUpdate>
           <LastProcessed>2018-12-16T07:41:23.786667Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="a27081b5-7740-4ce9-8dbe-5cca291e8443">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="0dd63524-1761-4b37-9460-20828168d797">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT     *
-FROM            fact_matter_summary
+            <QueryDefinition>SELECT    fact_matter_summary.*, ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key_original_matter_owner_dopm,0) dim_fed_hierarchy_history_key_original_matter_owner_dopm
+
+FROM            fact_matter_summary  LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_matter_summary.master_fact_key
 where fin_month between 202007 and 202009</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
@@ -588,10 +628,12 @@ where fin_month between 202007 and 202009</QueryDefinition>
           <LastSchemaUpdate>2018-09-24T11:47:15.273333Z</LastSchemaUpdate>
           <LastProcessed>2018-12-16T07:41:24.02Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="7ee3d21d-6932-4705-8a77-5e58c1b7a3f0">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="fbacb538-1de3-4796-9fb4-2f84de9fc8d6">
             <DataSourceID>Red Dw</DataSourceID>
-            <QueryDefinition>SELECT     *
-FROM            fact_matter_summary
+            <QueryDefinition>SELECT    fact_matter_summary.*, ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key_original_matter_owner_dopm,0) dim_fed_hierarchy_history_key_original_matter_owner_dopm
+
+FROM            fact_matter_summary  LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_matter_summary.master_fact_key
 where fin_month between 202010 and 202112</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
