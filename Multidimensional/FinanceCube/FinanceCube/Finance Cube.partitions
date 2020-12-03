@@ -611,7 +611,7 @@ AND dim_orig_posting_date_key &gt;= '20100501'</QueryDefinition>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="de6e2444-3c42-4f31-a6bc-ebc6e4cd5d1e">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="ce29321f-563e-4f91-9101-a1594decc290">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT *
 from fact_budget_activity_finance_cube
@@ -628,7 +628,7 @@ WHERE     (dim_gl_date_key &gt;= 20190501)</QueryDefinition>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="675d1f0c-a858-47ad-b54a-a24217c7c934">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="164428f3-ba5f-4c47-9604-816ff2ef68ee">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT *
 from fact_budget_activity_finance_cube

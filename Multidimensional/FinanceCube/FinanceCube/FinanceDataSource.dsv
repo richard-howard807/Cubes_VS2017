@@ -27,7 +27,7 @@
             <Name>_ALL_TABLES_</Name>
             <DiagramLayout>
               <dds>
-                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="160" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="35671" scrolltop="66809" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="65" x="36804" y="22357" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="160" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="35779" scrolltop="66626" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="65" x="25797" y="20320" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                   <font>
                     <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                   </font>
@@ -1419,8 +1419,8 @@
 </DiagramLayout>
             <ShowRelationshipNames>False</ShowRelationshipNames>
             <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
-            <DiagramViewPortLeft>35671</DiagramViewPortLeft>
-            <DiagramViewPortTop>66809</DiagramViewPortTop>
+            <DiagramViewPortLeft>35779</DiagramViewPortLeft>
+            <DiagramViewPortTop>66626</DiagramViewPortTop>
             <DiagramBoundingLeft>0</DiagramBoundingLeft>
             <DiagramBoundingTop>0</DiagramBoundingTop>
             <DiagramZoom>65</DiagramZoom>
@@ -2727,7 +2727,7 @@
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="dbo_fact_budget_activity" msprop:design-time-name="29f05f22-c243-4ed4-bdfb-55589f9cfdae" msprop:IsLogical="True" msprop:FriendlyName="fact_budget_activity" msprop:DbTableName="fact_budget_activity" msprop:TableType="View" msprop:QueryDefinition="SELECT   dim_fed_hierarchy_history_key, dim_budget_date_key, budget_date, fed_business_key, emp_source_system_id, employee_hierarchy_business_key, budget_source_system_id, &#xD;&#xA;                         fed_code, financial_budget_year, financial_budget_month, budget_value, budget_mins, fed_level_tb_budget_value, team_level_budget_value, practice_area_level_budget_value, &#xD;&#xA;                         business_line_level_budget_value, firm_level_budget_value, dss_update_time, dim_gl_date_key, team_level_budget_value_hours, team_level_budget_value_balance, &#xD;&#xA;                         team_level_budget_value_hours_balance, team_level_budget_value_hours_billed, contracted_hours_in_month, Snapshot, dim_days_banding_key, furloughed_days_in_month, &#xD;&#xA;                         working_days_in_month, lead_date, days_to_lead_date, percent_split, fte&#xD;&#xA;FROM         fact_budget_activity_finance_cube" msprop:QueryBuilder="SpecificQueryBuilder">
+            <xs:element name="dbo_fact_budget_activity" msprop:design-time-name="29f05f22-c243-4ed4-bdfb-55589f9cfdae" msprop:IsLogical="True" msprop:FriendlyName="fact_budget_activity" msprop:DbTableName="fact_budget_activity" msprop:TableType="View" msprop:QueryDefinition="SELECT   dim_fed_hierarchy_history_key, dim_budget_date_key, budget_date, fed_business_key, emp_source_system_id, employee_hierarchy_business_key, budget_source_system_id, &#xD;&#xA;                         fed_code, financial_budget_year, financial_budget_month, budget_value, budget_mins, fed_level_tb_budget_value, team_level_budget_value, practice_area_level_budget_value, &#xD;&#xA;                         business_line_level_budget_value, firm_level_budget_value, dss_update_time, dim_gl_date_key, team_level_budget_value_hours, team_level_budget_value_balance, &#xD;&#xA;                         team_level_budget_value_hours_balance, team_level_budget_value_hours_billed, contracted_hours_in_month, Snapshot, dim_days_banding_key, furloughed_days_in_month, &#xD;&#xA;                         working_days_in_month, lead_date, days_to_lead_date, percent_split, fte, fte_head_count&#xD;&#xA;FROM         fact_budget_activity_finance_cube" msprop:QueryBuilder="SpecificQueryBuilder">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="dim_fed_hierarchy_history_key" msprop:design-time-name="82205def-1579-487b-9879-fb970eff7d40" msprop:DbColumnName="dim_fed_hierarchy_history_key" msprop:FriendlyName="dim_fed_hierarchy_history_key" type="xs:int" minOccurs="0" />
@@ -2783,9 +2783,10 @@
                   <xs:element name="fte" msprop:design-time-name="c835e8d9-3d47-4fc7-b175-cf8b9a113ab9" msprop:DbColumnName="fte" type="xs:double" minOccurs="0" />
                   <xs:element name="furloughed_days_in_month" msprop:design-time-name="5ece1c67-4e3d-4250-812d-8ea5e7f3c881" msprop:DbColumnName="furloughed_days_in_month" type="xs:int" minOccurs="0" />
                   <xs:element name="working_days_in_month" msprop:design-time-name="ec8ec9d1-dce7-481e-ae3c-026eb71468ce" msprop:DbColumnName="working_days_in_month" type="xs:int" minOccurs="0" />
-                  <xs:element name="lead_date" msprop:DbColumnName="lead_date" msprop:design-time-name="e26de58a-8829-4feb-80bd-a1ee6d61552b" type="xs:dateTime" minOccurs="0" />
-                  <xs:element name="days_to_lead_date" msprop:DbColumnName="days_to_lead_date" msprop:design-time-name="da9c7494-f6ea-4e9b-8a0f-0aa018bb7820" type="xs:int" minOccurs="0" />
-                  <xs:element name="percent_split" msprop:DbColumnName="percent_split" msprop:design-time-name="10269549-1066-40bf-94bb-fc0687be31de" type="xs:double" minOccurs="0" />
+                  <xs:element name="lead_date" msprop:design-time-name="e26de58a-8829-4feb-80bd-a1ee6d61552b" msprop:DbColumnName="lead_date" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="days_to_lead_date" msprop:design-time-name="da9c7494-f6ea-4e9b-8a0f-0aa018bb7820" msprop:DbColumnName="days_to_lead_date" type="xs:int" minOccurs="0" />
+                  <xs:element name="percent_split" msprop:design-time-name="10269549-1066-40bf-94bb-fc0687be31de" msprop:DbColumnName="percent_split" type="xs:double" minOccurs="0" />
+                  <xs:element name="fte_head_count" msprop:DbColumnName="fte_head_count" msprop:design-time-name="16e0d646-df64-4adc-93e5-a533b5d95612" type="xs:decimal" minOccurs="0" />
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
@@ -3441,7 +3442,7 @@
             <xs:element name="dbo_ds_mds_dw_source_system" msprop:design-time-name="2aa657b1-9454-422e-ba82-fac3fcdfd13c" msprop:IsLogical="True" msprop:FriendlyName="ds_mds_dw_source_system" msprop:DbTableName="ds_mds_dw_source_system" msprop:TableType="View" msprop:QueryDefinition="SELECT source_system_id, source_system_name, source_system_description, dss_update_datetime&#xD;&#xA;FROM   ds_mds_dw_source_system&#xD;&#xA;WHERE (source_system_id IN (2, 6, 7, 14))" msprop:QueryBuilder="SpecificQueryBuilder">
               <xs:complexType>
                 <xs:sequence>
-                  <xs:element name="source_system_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="be4e3784-6749-4c58-8025-c76c6038b40d" msprop:DbColumnName="source_system_id" msprop:FriendlyName="source_system_id" type="xs:int" />
+                  <xs:element name="source_system_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="be4e3784-6749-4c58-8025-c76c6038b40d" msprop:DbColumnName="source_system_id" msprop:FriendlyName="source_system_id" type="xs:int" minOccurs="0" />
                   <xs:element name="source_system_name" msprop:design-time-name="64372a9b-0f2d-4b61-986f-0156bd31a242" msprop:DbColumnName="source_system_name" msprop:FriendlyName="source_system_name" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
