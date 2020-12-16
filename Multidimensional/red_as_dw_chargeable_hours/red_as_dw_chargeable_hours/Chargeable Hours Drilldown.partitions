@@ -1,17 +1,17 @@
-﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="1293afb7-3481-4105-a948-c570598f817c" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="99d46d97-68ff-47cc-876a-f79e3b8c3caf" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Chargeable Hours Drilldown</ID>
   <MeasureGroups>
     <MeasureGroup>
       <ID>Fact Chargeable Time Activity</ID>
       <Partitions>
-        <Partition dwd:design-time-name="6c95cbc9-3965-4933-914a-6c43c3bf86cd">
+        <Partition dwd:design-time-name="bc1b9833-ec4d-4705-9f7f-de71b6ca1739">
           <ID>Fact Chargeable Time Activity</ID>
           <Name>Fact Chargeable Time Activity - Pre 2009</Name>
           <CreatedTimestamp>2018-01-31T18:29:12.466667Z</CreatedTimestamp>
           <LastSchemaUpdate>2018-02-07T11:11:12.456667Z</LastSchemaUpdate>
           <LastProcessed>2018-12-20T16:31:48.386667Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="7ff02176-1544-4ffd-9660-c580031f5196">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="2b782d25-0158-4de4-97de-86c77edad606">
             <DataSourceID>Red_dw</DataSourceID>
             <QueryDefinition>select fact_billable_time_activity.[dim_bill_key]
      , fact_billable_time_activity.[dim_transaction_date_key]
@@ -31,30 +31,30 @@
      , fact_billable_time_activity.[dim_client_key]
      , [minutes_recorded] / 60 as [hours_recorded], dim_orig_posting_date_key
 from [dbo].fact_billable_time_activity
-where dim_transaction_date_key &lt; 20090501</QueryDefinition>
+where dim_transaction_date_key &lt; 20090501 	AND ISNULL(finance_reporting_exclusion,'') &lt;&gt; 1</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
-          <ProactiveCaching dwd:design-time-name="3ef436ff-dccc-4946-b6f7-b5aefbd919cd">
+          <ProactiveCaching dwd:design-time-name="7eedb0e0-4d27-46f6-a1ba-c5e97de6f6e2">
             <SilenceInterval>-PT1S</SilenceInterval>
             <Latency>-PT1S</Latency>
             <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
             <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
-            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="d079d170-d949-4098-8bfd-d626c4401764" />
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="9e5c7754-7204-4e7a-91f7-8ea760d4ffa4" />
           </ProactiveCaching>
           <EstimatedSize>384218664</EstimatedSize>
           <EstimatedRows>20000000</EstimatedRows>
           <AggregationDesignID>AggregationDesign</AggregationDesignID>
         </Partition>
-        <Partition dwd:design-time-name="84b7027c-a480-436d-9124-9ad8770644bd">
+        <Partition dwd:design-time-name="c1a4d5c0-e597-49a9-bebc-1d9571b5548d">
           <ID>Fact Chargeable Time Activity 1</ID>
           <Name>Fact Chargeable Time Activity - Post 2009</Name>
           <CreatedTimestamp>2018-01-31T18:29:12.513333Z</CreatedTimestamp>
           <LastSchemaUpdate>2018-02-07T11:11:12.52Z</LastSchemaUpdate>
           <LastProcessed>2018-12-20T16:32:13.386667Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="9f48dcf5-93f0-4557-813c-f9c5b260bd46">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="72d87619-451c-469c-a81c-3aceb001bf05">
             <DataSourceID>Red_dw</DataSourceID>
             <QueryDefinition>select fact_billable_time_activity.[dim_bill_key]
      , fact_billable_time_activity.[dim_transaction_date_key]
@@ -74,17 +74,17 @@ where dim_transaction_date_key &lt; 20090501</QueryDefinition>
      , fact_billable_time_activity.[dim_client_key], dim_orig_posting_date_key
      , [minutes_recorded] / 60 as [hours_recorded]
 from [dbo].fact_billable_time_activity
-		WHERE dim_transaction_date_key &gt;= 20090501</QueryDefinition>
+		WHERE dim_transaction_date_key &gt;= 20090501 	AND ISNULL(finance_reporting_exclusion,'') &lt;&gt; 1</QueryDefinition>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
-          <ProactiveCaching dwd:design-time-name="89c4d2bd-03da-4e77-b7dd-d8a0107b7652">
+          <ProactiveCaching dwd:design-time-name="4d2dca4f-9774-457a-8ae8-403293198218">
             <SilenceInterval>-PT1S</SilenceInterval>
             <Latency>-PT1S</Latency>
             <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
             <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
-            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="1d817cfa-15cd-414a-b2fd-6b67c34357f6" />
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="a266b592-835a-439d-a4fe-efc63b457c2d" />
           </ProactiveCaching>
           <EstimatedSize>701926112</EstimatedSize>
           <EstimatedRows>12000000</EstimatedRows>
