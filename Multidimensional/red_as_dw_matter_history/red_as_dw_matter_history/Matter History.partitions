@@ -649,6 +649,39 @@ where fin_month between 202010 and 202112</QueryDefinition>
           <EstimatedSize>156</EstimatedSize>
           <AggregationDesignID>AggregationDesign 1</AggregationDesignID>
         </Partition>
+        <Partition dwd:design-time-name="f687f63f-4ede-4fbe-88ec-b01be2afb5bc">
+          <ID>Fact Matter Summary 2022</ID>
+          <Name>Fact Matter Summary 2022</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <Annotations>
+            <Annotation>
+              <Name>AggregationPercent</Name>
+              <Value></Value>
+            </Annotation>
+          </Annotations>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="25ec8072-e644-490e-9000-443e86f4665e">
+            <DataSourceID>Red Dw</DataSourceID>
+            <QueryDefinition>SELECT    fact_matter_summary.*, ISNULL(fact_dimension_main.dim_fed_hierarchy_history_key_original_matter_owner_dopm,0) dim_fed_hierarchy_history_key_original_matter_owner_dopm
+
+FROM            fact_matter_summary  LEFT OUTER JOIN
+                         fact_dimension_main ON fact_dimension_main.master_fact_key = fact_matter_summary.master_fact_key
+where fin_month between 202201 and 202212</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="fe6dc677-4145-438e-b186-ce57122863dc">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="bd283dfc-25d9-43c3-b4ff-06b0667fe362" />
+          </ProactiveCaching>
+          <AggregationDesignID>AggregationDesign 1</AggregationDesignID>
+        </Partition>
       </Partitions>
       <AggregationDesigns>
         <AggregationDesign>
