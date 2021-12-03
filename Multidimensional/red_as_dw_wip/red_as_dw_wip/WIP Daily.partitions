@@ -1,10 +1,10 @@
-﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="3d5b6030-e615-4891-ac9e-9838935a3718" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="4858fb59-9d1e-4114-bf37-f10ad9b8e62c" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>WIP Daily</ID>
   <MeasureGroups>
     <MeasureGroup>
       <ID>Fact Wip Daily</ID>
       <Partitions>
-        <Partition dwd:design-time-name="ba6958d2-65ad-431b-9f8c-efdbd7824a09">
+        <Partition dwd:design-time-name="545144a6-b366-4802-9f6f-72c1eda09d37">
           <ID>Fact Wip Daily_current_month</ID>
           <Name>Fact Wip Daily_current_month</Name>
           <CreatedTimestamp>2016-05-24T09:50:22.11Z</CreatedTimestamp>
@@ -16,7 +16,7 @@
           </Annotations>
           <LastProcessed>2018-12-17T02:31:26.32Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="fe70e991-e636-4854-9675-2a12c5801396">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="71e3c4f1-a349-4039-ba04-6fd535e028c9">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   dim_transaction_date_key as 'Dim Transaction Date Key',
 	dim_matter_header_history_key as 'Dim Matter Header History Key',
@@ -39,18 +39,17 @@ and dim_transaction_date_key &lt; replace(cast(getdate() -1 as date), '-', '')
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
-          <ProactiveCaching dwd:design-time-name="a7441cfb-b632-4fe3-bf82-46192a56d7e8">
+          <ProactiveCaching dwd:design-time-name="2a5da239-435f-410d-bd98-effea785c9bb">
             <SilenceInterval>-PT1S</SilenceInterval>
             <Latency>-PT1S</Latency>
             <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
             <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
-            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="9691da5a-441f-4ca8-ae80-4c15b8c5b17e" />
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="a7a89f67-4ed8-4a92-9dae-44fc1c04731d" />
           </ProactiveCaching>
           <EstimatedSize>23590163</EstimatedSize>
           <EstimatedRows>1234814</EstimatedRows>
-          <AggregationDesignID>AggregationDesign</AggregationDesignID>
         </Partition>
-        <Partition dwd:design-time-name="64850cd5-5d12-4b4a-be37-b31ecc705300">
+        <Partition dwd:design-time-name="1c0537e5-3b0f-421a-a876-e228d3f13868">
           <ID>Fact Wip Daily</ID>
           <Name>Fact Wip Daily_2017</Name>
           <CreatedTimestamp>2016-05-17T09:51:42.11Z</CreatedTimestamp>
@@ -62,7 +61,7 @@ and dim_transaction_date_key &lt; replace(cast(getdate() -1 as date), '-', '')
           </Annotations>
           <LastProcessed>2018-12-17T02:33:07.04Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="f2909a76-0b41-4214-8950-463f4917903d">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="416e4475-fea0-425b-afcb-cc9dc46f0f2b">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT    dim_transaction_date_key as 'Dim Transaction Date Key',
 	dim_matter_header_history_key as 'Dim Matter Header History Key',
@@ -81,24 +80,23 @@ FROM            fact_wip_daily
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
           <Slice>[WIP Date].[Financial].[Financial Year].&amp;[2017]</Slice>
-          <ProactiveCaching dwd:design-time-name="456c92a3-186d-4908-83d3-aff85513c2d4">
+          <ProactiveCaching dwd:design-time-name="1afbaf8d-ef8a-4dc8-b069-35dd82ded0bf">
             <SilenceInterval>-PT1S</SilenceInterval>
             <Latency>-PT1S</Latency>
             <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
             <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
-            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="dd8b2d42-6c25-4778-992c-7e0a5991f279" />
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="d3d95397-fe25-4fde-a0e1-4db50729b5de" />
           </ProactiveCaching>
           <EstimatedSize>769257245</EstimatedSize>
-          <AggregationDesignID>AggregationDesign</AggregationDesignID>
         </Partition>
-        <Partition dwd:design-time-name="f63389aa-6605-46ed-a080-9c07ec4d5ac8">
+        <Partition dwd:design-time-name="4788dbf3-78ce-4a48-ad84-bb4bfb8ec6b6">
           <ID>Fact Wip Daily_2018</ID>
           <Name>Fact Wip Daily_2018</Name>
           <CreatedTimestamp>2017-06-01T08:56:05.146667Z</CreatedTimestamp>
           <LastSchemaUpdate>2018-08-01T10:57:22.566667Z</LastSchemaUpdate>
           <LastProcessed>2018-12-17T02:32:32.32Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="09313de3-b6b7-4f99-ade1-09a994a56462">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="120131e9-ec89-45ef-b41c-bbfd1bc2e3c7">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT    dim_transaction_date_key as 'Dim Transaction Date Key',
 	dim_matter_header_history_key as 'Dim Matter Header History Key',
@@ -118,24 +116,23 @@ FROM            fact_wip_daily
           <ProcessingMode>Regular</ProcessingMode>
           <Slice>{[WIP Date].[Financial].[Financial Year].&amp;[2018],
 [WIP Date].[Financial].[Financial Year].&amp;[2019]}</Slice>
-          <ProactiveCaching dwd:design-time-name="b9e76651-e74d-43bf-9079-750fb9e6df18">
+          <ProactiveCaching dwd:design-time-name="7ac86fbd-89eb-4788-bcaa-a370c239d4f6">
             <SilenceInterval>-PT1S</SilenceInterval>
             <Latency>-PT1S</Latency>
             <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
             <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
-            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="0ad0cbfb-b654-494e-896c-fedacc731e93" />
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="a9236fa5-286d-446f-8d43-86daed365082" />
           </ProactiveCaching>
           <EstimatedSize>630149188</EstimatedSize>
-          <AggregationDesignID>AggregationDesign</AggregationDesignID>
         </Partition>
-        <Partition dwd:design-time-name="1fee7bde-f036-46f6-a431-15704df407eb">
+        <Partition dwd:design-time-name="0f890596-16dc-4eb2-ab46-45b3daaf9baf">
           <ID>Fact Wip Daily_2019</ID>
           <Name>Fact Wip Daily_2019</Name>
           <CreatedTimestamp>2018-06-04T11:00:05.316667Z</CreatedTimestamp>
           <LastSchemaUpdate>2018-08-01T10:57:22.6Z</LastSchemaUpdate>
           <LastProcessed>2018-12-17T02:31:55.946667Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="00a0c742-d938-43de-ba6e-ec472d3467af">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="89fe0351-5deb-425e-82b2-f022fa6d55c7">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT    dim_transaction_date_key as 'Dim Transaction Date Key',
 	dim_matter_header_history_key as 'Dim Matter Header History Key',
@@ -153,25 +150,24 @@ FROM            fact_wip_daily
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
-          <ProactiveCaching dwd:design-time-name="f668c9ad-60fa-48b2-8d5c-2825b0bfa790">
+          <ProactiveCaching dwd:design-time-name="ed0e2833-72d8-4577-ba4c-08e3eb2be2dd">
             <SilenceInterval>-PT1S</SilenceInterval>
             <Latency>-PT1S</Latency>
             <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
             <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
-            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="f5fde4c4-719b-407d-9ca3-2eb4f6bf0284" />
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="5f197210-5991-424f-937a-634e9a1d436b" />
           </ProactiveCaching>
           <EstimatedSize>323668000</EstimatedSize>
           <EstimatedRows>46459668</EstimatedRows>
-          <AggregationDesignID>AggregationDesign</AggregationDesignID>
         </Partition>
-        <Partition dwd:design-time-name="29d5e3f8-4a15-4fcb-ab78-0c0cd0cb46e6">
+        <Partition dwd:design-time-name="7bc51178-de0d-4e7f-b5d7-63e32ee74bec">
           <ID>Fact Wip Daily 2020</ID>
           <Name>Fact Wip Daily_2020</Name>
           <CreatedTimestamp>2018-06-04T11:00:05.333333Z</CreatedTimestamp>
           <LastSchemaUpdate>2018-08-01T10:57:22.613333Z</LastSchemaUpdate>
           <LastProcessed>2018-12-17T02:30:13.163333Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="343baa6d-84ba-4704-aec4-b4c8c182ccab">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="6a42ab7f-ce3f-4b56-a738-aba3bef5eabf">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT    dim_transaction_date_key as 'Dim Transaction Date Key',
 	dim_matter_header_history_key as 'Dim Matter Header History Key',
@@ -201,25 +197,24 @@ FROM            fact_wip_daily
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
-          <ProactiveCaching dwd:design-time-name="6766958d-9dde-4ab0-9ec2-5d8916bc2e82">
+          <ProactiveCaching dwd:design-time-name="cc4ffa19-64e7-4d14-87c7-584956a25d70">
             <SilenceInterval>-PT1S</SilenceInterval>
             <Latency>-PT1S</Latency>
             <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
             <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
-            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="28f97aae-e9a2-442f-8f36-84f22b7456a1" />
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="ba4068fd-f9da-4ac9-b2b3-8ff67cce6b58" />
           </ProactiveCaching>
           <EstimatedSize>156</EstimatedSize>
           <EstimatedRows>46459668</EstimatedRows>
-          <AggregationDesignID>AggregationDesign</AggregationDesignID>
         </Partition>
-        <Partition dwd:design-time-name="fe5d8e0e-1b30-49b0-9275-5f40e6d6cb31">
+        <Partition dwd:design-time-name="907e4ea2-d536-4e0d-ba5c-776d5e49c389">
           <ID>Fact Wip Daily_2121</ID>
           <Name>Fact Wip Daily_2021</Name>
           <CreatedTimestamp>2018-06-04T11:00:05.35Z</CreatedTimestamp>
           <LastSchemaUpdate>2018-08-01T10:57:22.63Z</LastSchemaUpdate>
           <LastProcessed>2018-12-17T02:30:13.116667Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="0749033f-9762-4774-830b-35cc821270bd">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="5a843c81-7ad3-4af8-856b-8cc8dea52218">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT    dim_transaction_date_key as 'Dim Transaction Date Key',
 	dim_matter_header_history_key as 'Dim Matter Header History Key',
@@ -248,17 +243,16 @@ and dim_transaction_date_key &lt; iif (
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
-          <ProactiveCaching dwd:design-time-name="a1cc5c9f-3d66-4bcc-aa98-e530a17198a6">
+          <ProactiveCaching dwd:design-time-name="6af750f1-a758-4f56-beb6-2d80d7e1aa12">
             <SilenceInterval>-PT1S</SilenceInterval>
             <Latency>-PT1S</Latency>
             <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
             <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
-            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="f52c78ca-e88e-4e7c-8617-c227755211ab" />
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="39ff0c53-fd6f-4ef1-874a-ee1d530757a1" />
           </ProactiveCaching>
           <EstimatedSize>156</EstimatedSize>
-          <AggregationDesignID>AggregationDesign</AggregationDesignID>
         </Partition>
-        <Partition dwd:design-time-name="3100be97-57a3-4260-a3f0-7e286db7e3b9">
+        <Partition dwd:design-time-name="46bdc723-2fbc-445b-885c-469e4aad57a4">
           <ID>Fact Wip Daily_Yesterday</ID>
           <Name>Fact Wip Daily_Yesterday</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -270,7 +264,7 @@ and dim_transaction_date_key &lt; iif (
           </Annotations>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="1bc27218-4d1f-47b5-9457-61106048b91f">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="17247c44-6057-4a3d-8bb1-559ea8ac7984">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT    dim_transaction_date_key as 'Dim Transaction Date Key',
 	dim_matter_header_history_key as 'Dim Matter Header History Key',
@@ -287,9 +281,8 @@ and wip_value &lt;&gt; 0</QueryDefinition>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
-          <AggregationDesignID>AggregationDesign</AggregationDesignID>
         </Partition>
-        <Partition dwd:design-time-name="0bcfc8fc-87fd-4976-b587-d76647345173">
+        <Partition dwd:design-time-name="99727fe9-3045-4573-aebc-51d9e8cf72e9">
           <ID>Fact WIP Daily_2022</ID>
           <Name>Fact WIP Daily_2022</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -297,12 +290,11 @@ and wip_value &lt;&gt; 0</QueryDefinition>
           <Annotations>
             <Annotation>
               <Name>AggregationPercent</Name>
-              <Value></Value>
             </Annotation>
           </Annotations>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="539b0f59-b4be-4040-88f8-2538d17e8ba4">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="133ce913-b6f1-4d8a-bdc9-be230d1ccae5">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT    dim_transaction_date_key as 'Dim Transaction Date Key',
 	dim_matter_header_history_key as 'Dim Matter Header History Key',
@@ -329,7 +321,6 @@ and dim_transaction_date_key &lt; iif (
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
-          <AggregationDesignID>AggregationDesign</AggregationDesignID>
         </Partition>
       </Partitions>
       <AggregationDesigns>
@@ -1828,6 +1819,26 @@ and dim_transaction_date_key &lt; iif (
           </Aggregations>
         </AggregationDesign>
       </AggregationDesigns>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Date</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="6c180aae-7c4d-49e2-b6d0-d7ff12b6cc93">
+          <ID>Date</ID>
+          <Name>Date</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="c3cd02e8-8965-412e-b60b-6bb7ad83aae7">
+            <DataSourceViewID>WIP Daily</DataSourceViewID>
+            <TableID>dbo_dim_date</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
     </MeasureGroup>
   </MeasureGroups>
 </Cube>
