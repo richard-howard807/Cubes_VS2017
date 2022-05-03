@@ -1,4 +1,4 @@
-﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="dd0ee7aa-4b50-486b-98a1-d3e32f901f23" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="be6e265f-2e43-44c5-9a9d-d99acb470f9a" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Chargeable_Hours</ID>
   <Name>Drilldown</Name>
   <CreatedTimestamp>2015-11-26T15:00:04.643333Z</CreatedTimestamp>
@@ -31,9 +31,9 @@
             <Name>_ALL_TABLES_</Name>
             <DiagramLayout>
               <dds>
-                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="62" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-8262" scrolltop="-3376" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="25488" y="20373" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="62" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-8262" scrolltop="3608" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="37333" y="22357" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                   <font>
-                    <ddsxmlobjectstreamwrapper binary="01000000900180380100065461686f6d61" />
+                    <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                   </font>
                   <mouseicon>
                     <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
@@ -528,7 +528,7 @@
             <ShowRelationshipNames>False</ShowRelationshipNames>
             <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
             <DiagramViewPortLeft>-8262</DiagramViewPortLeft>
-            <DiagramViewPortTop>-3376</DiagramViewPortTop>
+            <DiagramViewPortTop>3608</DiagramViewPortTop>
             <DiagramBoundingLeft>0</DiagramBoundingLeft>
             <DiagramBoundingTop>0</DiagramBoundingTop>
             <DiagramZoom>75</DiagramZoom>
@@ -543,7 +543,7 @@
       <xs:element name="Chargeable_Hours" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="4fd1ba7e-4af2-4489-bab3-b4fd4bfc3b6f">
         <xs:complexType>
           <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element name="dbo_dim_matter_header" msprop:design-time-name="9013efd7-8f6f-4d37-857e-7dc58503021f" msprop:IsLogical="True" msprop:FriendlyName="dim_matter_header_current" msprop:DbTableName="dim_matter_header_current" msprop:TableType="View" msprop:QueryDefinition="SELECT source_system_id, dim_matter_header_curr_key, dim_department_key, dim_matter_worktype_key, dim_matter_group_key, client_code, case_id, matter_number, date_closed_practice_management, date_opened_case_management, dss_update_time, client_group_code, &#xD;&#xA;             client_group_name, client_name, matter_description, date_opened_practice_management, date_closed_case_management, branch_code, branch_name, matter_partner_code, matter_partner_full_name, fee_earner_code, matter_owner_full_name, department_code, fixed_fee, &#xD;&#xA;             fixed_fee_amount, delegated, reporting_exclusions, dim_instruction_type_key, final_bill_flag, final_bill_date, present_position, &#xD;&#xA;&#xD;&#xA;&#x9;&#x9;&#x9; IIF(dim_matter_header_current.master_client_code IN ( '  B15217', ' M15159 ', 'W22228  ' ),&#xD;&#xA;           'Unknown ',&#xD;&#xA;           CASE&#xD;&#xA;               WHEN ISNUMERIC(dim_matter_header_current.master_client_code) = 1 THEN&#xD;&#xA;                   RIGHT('00000000' + CONVERT(VARCHAR, dim_matter_header_current.master_client_code), 8)&#xD;&#xA;               ELSE&#xD;&#xA;                   CAST(RTRIM(dim_matter_header_current.master_client_code) AS VARCHAR(8))&#xD;&#xA;           END) AS 'master_client_code',&#xD;&#xA;&#x9;&#x9;&#x9; &#xD;&#xA;&#x9;&#x9;&#x9; master_matter_number, billing_portal_status, fee_arrangement, billing_arrangement, matter_category, billing_arrangement_description&#xD;&#xA;FROM   dim_matter_header_current" msprop:QueryBuilder="SpecificQueryBuilder">
+            <xs:element name="dbo_dim_matter_header" msprop:design-time-name="9013efd7-8f6f-4d37-857e-7dc58503021f" msprop:IsLogical="True" msprop:FriendlyName="dim_matter_header_current" msprop:DbTableName="dim_matter_header_current" msprop:TableType="View" msprop:QueryDefinition="SELECT   source_system_id, dim_matter_header_curr_key, dim_department_key, dim_matter_worktype_key, dim_matter_group_key, client_code, case_id, matter_number, &#xD;&#xA;                         date_closed_practice_management, date_opened_case_management, dss_update_time, client_group_code, client_group_name, client_name, matter_description, &#xD;&#xA;                         date_opened_practice_management, date_closed_case_management, branch_code, branch_name, matter_partner_code, matter_partner_full_name, fee_earner_code, &#xD;&#xA;                         matter_owner_full_name, department_code, fixed_fee, fixed_fee_amount, delegated, reporting_exclusions, dim_instruction_type_key, final_bill_flag, final_bill_date, present_position, &#xD;&#xA;                         IIF(dim_matter_header_current.master_client_code IN ('  B15217', ' M15159 ', 'W22228  '), 'Unknown ', CASE WHEN ISNUMERIC(dim_matter_header_current.master_client_code) &#xD;&#xA;                         = 1 THEN RIGHT('00000000' + CONVERT(VARCHAR, dim_matter_header_current.master_client_code), 8) ELSE CAST(RTRIM(dim_matter_header_current.master_client_code) &#xD;&#xA;                         AS VARCHAR(8)) END) AS 'master_client_code', master_matter_number, billing_portal_status, fee_arrangement, billing_arrangement, matter_category, &#xD;&#xA;                         billing_arrangement_description&#xD;&#xA;FROM         dim_matter_header_current" msprop:QueryBuilder="SpecificQueryBuilder">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="source_system_id" msprop:design-time-name="b970fa80-f0c7-4593-a83e-1486bfc0a909" msprop:DbColumnName="source_system_id" msprop:FriendlyName="source_system_id" type="xs:int" minOccurs="0" />
@@ -563,7 +563,7 @@
                   </xs:element>
                   <xs:element name="case_id" msprop:design-time-name="ad7805d1-3f52-4070-b8f9-444138bd12b5" msprop:DbColumnName="case_id" msprop:FriendlyName="case_id" type="xs:int" minOccurs="0" />
                   <xs:element name="dss_update_time" msprop:design-time-name="ebdd26d7-9ced-4c51-9d0c-3e6f38f83eae" msprop:DbColumnName="dss_update_time" msprop:FriendlyName="dss_update_time" type="xs:dateTime" minOccurs="0" />
-                  <xs:element name="dim_matter_header_curr_key" msprop:design-time-name="86ee25e6-bbb3-4079-a5b0-6b64deae2b62" msprop:DbColumnName="dim_matter_header_curr_key" type="xs:int" />
+                  <xs:element name="dim_matter_header_curr_key" msprop:design-time-name="86ee25e6-bbb3-4079-a5b0-6b64deae2b62" msprop:DbColumnName="dim_matter_header_curr_key" type="xs:int" minOccurs="0" />
                   <xs:element name="dim_department_key" msprop:design-time-name="3a239580-c95b-4e22-acc2-53cefbea96ab" msprop:DbColumnName="dim_department_key" type="xs:int" minOccurs="0" />
                   <xs:element name="dim_matter_worktype_key" msprop:design-time-name="e50f3fda-2e33-4920-8fe9-0ee9f002fbd4" msprop:DbColumnName="dim_matter_worktype_key" type="xs:int" minOccurs="0" />
                   <xs:element name="dim_matter_group_key" msprop:design-time-name="ceff7386-e2b5-45c1-806d-70640e9fe5ca" msprop:DbColumnName="dim_matter_group_key" type="xs:int" minOccurs="0" />
@@ -593,7 +593,7 @@
                   <xs:element name="matter_description" msprop:design-time-name="5ab07c63-47b2-4dfc-9d94-830804053a79" msprop:DbColumnName="matter_description" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
-                        <xs:maxLength value="200" />
+                        <xs:maxLength value="300" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
@@ -644,7 +644,7 @@
                   <xs:element name="department_code" msprop:design-time-name="4daed31f-08f9-4e53-9aa7-a19cefbc2811" msprop:DbColumnName="department_code" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
-                        <xs:maxLength value="4" />
+                        <xs:maxLength value="20" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
@@ -1046,7 +1046,7 @@
             <xs:element name="dbo_dim_bill" msprop:design-time-name="4cb33231-dbf2-47c8-ab75-9d2724e120ec" msprop:IsLogical="True" msprop:FriendlyName="dim_bill" msprop:DbTableName="dim_bill" msprop:TableType="View" msprop:QueryDefinition="SELECT dim_bill_key, source_system_id, bill_number, bill_sequence, record_type, bill_flag, outstanding_flag, matter_reference, bill_address_id, dss_update_time, adjustment_type, proforma_number, ebilling_bill_sent_to_client_date, bill_reversed, finance_reporting_exclusion&#xD;&#xA;FROM   dim_bill&#xD;&#xA;WHERE (ISNULL(finance_reporting_exclusion, '') &lt;&gt; 1)" msprop:QueryBuilder="SpecificQueryBuilder">
               <xs:complexType>
                 <xs:sequence>
-                  <xs:element name="dim_bill_key" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="4cdcf3ea-9534-4c00-82f8-acf375ff134e" msprop:DbColumnName="dim_bill_key" msprop:FriendlyName="dim_bill_key" type="xs:int" minOccurs="0" />
+                  <xs:element name="dim_bill_key" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="4cdcf3ea-9534-4c00-82f8-acf375ff134e" msprop:DbColumnName="dim_bill_key" msprop:FriendlyName="dim_bill_key" type="xs:int" />
                   <xs:element name="source_system_id" msprop:design-time-name="249c552c-dddf-4a18-9540-6558a362268f" msprop:DbColumnName="source_system_id" msprop:FriendlyName="source_system_id" type="xs:int" minOccurs="0" />
                   <xs:element name="bill_number" msprop:design-time-name="79c8b088-8e6b-4098-9e95-5dea48adcf1f" msprop:DbColumnName="bill_number" msprop:FriendlyName="bill_number" minOccurs="0">
                     <xs:simpleType>
@@ -1096,7 +1096,7 @@
                   <xs:element name="proforma_number" msprop:design-time-name="62ad3cbf-c177-46aa-b6fe-556a766890bf" msprop:DbColumnName="proforma_number" type="xs:int" minOccurs="0" />
                   <xs:element name="ebilling_bill_sent_to_client_date" msprop:design-time-name="8d806b02-e6bb-41c7-8465-00b94b76c48d" msprop:DbColumnName="ebilling_bill_sent_to_client_date" type="xs:dateTime" minOccurs="0" />
                   <xs:element name="bill_reversed" msprop:design-time-name="22774a79-5295-4b79-be1d-d01024d95b19" msprop:DbColumnName="bill_reversed" type="xs:unsignedByte" minOccurs="0" />
-                  <xs:element name="finance_reporting_exclusion" msprop:DbColumnName="finance_reporting_exclusion" msprop:design-time-name="84ce266e-24af-45f8-99c1-ac5aef602f80" type="xs:boolean" minOccurs="0" />
+                  <xs:element name="finance_reporting_exclusion" msprop:design-time-name="84ce266e-24af-45f8-99c1-ac5aef602f80" msprop:DbColumnName="finance_reporting_exclusion" type="xs:boolean" minOccurs="0" />
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
@@ -1320,18 +1320,18 @@
                   <xs:element name="payed_amount" msprop:design-time-name="590dc2d4-b721-46b1-8723-474fd0fa7868" msprop:DbColumnName="payed_amount" msprop:FriendlyName="payed_amount" type="xs:decimal" minOccurs="0" />
                   <xs:element name="dss_update_time" msprop:design-time-name="7b024dde-c13f-4207-971a-9379603098d9" msprop:DbColumnName="dss_update_time" msprop:FriendlyName="dss_update_time" type="xs:dateTime" minOccurs="0" />
                   <xs:element name="dim_matter_header_curr_key" msprop:design-time-name="4b29fa14-8427-49c3-96fa-00feba9a4430" msprop:DbColumnName="dim_matter_header_curr_key" msprop:FriendlyName="dim_matter_header_curr_key" type="xs:int" minOccurs="0" />
-                  <xs:element name="fact_bill_activity_key" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="221466ca-ac0c-4be6-8fb1-7f1b0d76aef6" msprop:DbColumnName="fact_bill_activity_key" msprop:FriendlyName="fact_bill_activity_key" type="xs:int" minOccurs="0" />
+                  <xs:element name="fact_bill_activity_key" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="221466ca-ac0c-4be6-8fb1-7f1b0d76aef6" msprop:DbColumnName="fact_bill_activity_key" msprop:FriendlyName="fact_bill_activity_key" type="xs:int" />
                   <xs:element name="master_fact_key" msprop:design-time-name="96cfc46d-a1bd-42c4-8815-3f2fbca857dd" msprop:DbColumnName="master_fact_key" type="xs:int" minOccurs="0" />
                   <xs:element name="bill_sequence" msprop:design-time-name="ecca7384-a7ec-491e-8df3-7746a4b997f3" msprop:DbColumnName="bill_sequence" type="xs:int" minOccurs="0" />
                   <xs:element name="workdate" msprop:design-time-name="dc2478c8-67ec-4ffe-9fd6-e3e82226ea6e" msprop:DbColumnName="workdate" type="xs:dateTime" minOccurs="0" />
-                  <xs:element name="cr_amount" msprop:DbColumnName="cr_amount" msprop:design-time-name="629c64a3-28fb-40be-a9f3-42330b20c4e6" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="credit_note_count" msprop:DbColumnName="credit_note_count" msprop:design-time-name="e9a2a3cf-a479-411a-97c0-374c8f7d5579" type="xs:int" minOccurs="0" />
-                  <xs:element name="bill_count" msprop:DbColumnName="bill_count" msprop:design-time-name="8aa12763-4290-43df-9f94-e98dd8e50b6f" type="xs:int" minOccurs="0" />
-                  <xs:element name="gldate" msprop:DbColumnName="gldate" msprop:design-time-name="d16ca6f2-a63d-4be5-bfc3-848cb29992db" type="xs:dateTime" minOccurs="0" />
-                  <xs:element name="dim_gl_date_key" msprop:DbColumnName="dim_gl_date_key" msprop:design-time-name="6a17c10d-ec0b-488e-8380-bd7147fdab3d" type="xs:int" minOccurs="0" />
-                  <xs:element name="admin_charge_fee_earner" msprop:DbColumnName="admin_charge_fee_earner" msprop:design-time-name="648d3663-e9d6-456b-aa46-c70ad4fe1e97" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="finance_reporting_exclusion" msprop:DbColumnName="finance_reporting_exclusion" msprop:design-time-name="d4ce0776-449b-47ae-99e6-45e7cca1ef88" type="xs:boolean" minOccurs="0" />
-                  <xs:element name="billed_hours" msprop:DbColumnName="billed_hours" msprop:design-time-name="9975c758-df6a-494b-9ef0-76334d1aaf50" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="cr_amount" msprop:design-time-name="629c64a3-28fb-40be-a9f3-42330b20c4e6" msprop:DbColumnName="cr_amount" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="credit_note_count" msprop:design-time-name="e9a2a3cf-a479-411a-97c0-374c8f7d5579" msprop:DbColumnName="credit_note_count" type="xs:int" minOccurs="0" />
+                  <xs:element name="bill_count" msprop:design-time-name="8aa12763-4290-43df-9f94-e98dd8e50b6f" msprop:DbColumnName="bill_count" type="xs:int" minOccurs="0" />
+                  <xs:element name="gldate" msprop:design-time-name="d16ca6f2-a63d-4be5-bfc3-848cb29992db" msprop:DbColumnName="gldate" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="dim_gl_date_key" msprop:design-time-name="6a17c10d-ec0b-488e-8380-bd7147fdab3d" msprop:DbColumnName="dim_gl_date_key" type="xs:int" minOccurs="0" />
+                  <xs:element name="admin_charge_fee_earner" msprop:design-time-name="648d3663-e9d6-456b-aa46-c70ad4fe1e97" msprop:DbColumnName="admin_charge_fee_earner" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="finance_reporting_exclusion" msprop:design-time-name="d4ce0776-449b-47ae-99e6-45e7cca1ef88" msprop:DbColumnName="finance_reporting_exclusion" type="xs:boolean" minOccurs="0" />
+                  <xs:element name="billed_hours" msprop:design-time-name="9975c758-df6a-494b-9ef0-76334d1aaf50" msprop:DbColumnName="billed_hours" type="xs:decimal" minOccurs="0" />
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
@@ -1752,8 +1752,8 @@
                   <xs:element name="dim_all_time_activity_key" msprop:design-time-name="09e345b3-3b3d-4629-9ea1-297baa06c8cd" msprop:DbColumnName="dim_all_time_activity_key" type="xs:int" minOccurs="0" />
                   <xs:element name="timebillindex" msprop:design-time-name="618160f3-0b7e-43e4-bdfe-2a95821a2272" msprop:DbColumnName="timebillindex" type="xs:int" minOccurs="0" />
                   <xs:element name="dss_create_time" msprop:design-time-name="d14c09ce-609a-4da9-95dd-a058d85f4edd" msprop:DbColumnName="dss_create_time" type="xs:dateTime" minOccurs="0" />
-                  <xs:element name="finance_reporting_exclusion" msprop:DbColumnName="finance_reporting_exclusion" msprop:design-time-name="d1a3d496-1f68-4a05-83eb-09da5b3c2de9" type="xs:boolean" minOccurs="0" />
-                  <xs:element name="billed_hours" msprop:DbColumnName="billed_hours" msprop:design-time-name="1d55fef3-9091-487c-b1c3-5f958d2bd586" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="finance_reporting_exclusion" msprop:design-time-name="d1a3d496-1f68-4a05-83eb-09da5b3c2de9" msprop:DbColumnName="finance_reporting_exclusion" type="xs:boolean" minOccurs="0" />
+                  <xs:element name="billed_hours" msprop:design-time-name="1d55fef3-9091-487c-b1c3-5f958d2bd586" msprop:DbColumnName="billed_hours" type="xs:decimal" minOccurs="0" />
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
@@ -2271,15 +2271,15 @@
         <xs:appinfo>
           <msdata:Relationship name="FK_dbo_dim_client_dbo_fact_bill_activity" msdata:parent="dbo_dim_client" msdata:child="dbo_fact_bill_activity" msdata:parentkey="dim_client_key" msdata:childkey="dim_client_key" msprop:IsLogical="True" />
           <msdata:Relationship name="FK_dbo_dim_matter_header_dbo_fact_bill_activity" msdata:parent="dbo_dim_matter_header" msdata:child="dbo_fact_bill_activity" msdata:parentkey="dim_matter_header_curr_key" msdata:childkey="dim_matter_header_curr_key" msprop:IsLogical="True" />
-          <msdata:Relationship name="fact_bill_activity-dim_fed_hierarchy_history" msdata:parent="dbo_dim_fed_hierarchy_history" msdata:child="dbo_fact_bill_activity" msdata:parentkey="dim_fed_hierarchy_history_key" msdata:childkey="dim_fed_hierarchy_history_key" msprop:Description="" msprop:IsLogical="True" />
-          <msdata:Relationship name="fact_bill_activity-dim_bill" msdata:parent="dbo_dim_bill" msdata:child="dbo_fact_bill_activity" msdata:parentkey="dim_bill_key" msdata:childkey="dim_bill_key" msprop:Description="" msprop:IsLogical="True" />
+          <msdata:Relationship name="fact_bill_activity-dim_fed_hierarchy_history" msdata:parent="dbo_dim_fed_hierarchy_history" msdata:child="dbo_fact_bill_activity" msdata:parentkey="dim_fed_hierarchy_history_key" msdata:childkey="dim_fed_hierarchy_history_key" msprop:IsLogical="True" msprop:Description="" />
+          <msdata:Relationship name="fact_bill_activity-dim_bill" msdata:parent="dbo_dim_bill" msdata:child="dbo_fact_bill_activity" msdata:parentkey="dim_bill_key" msdata:childkey="dim_bill_key" msprop:IsLogical="True" msprop:Description="" />
           <msdata:Relationship name="FK_dbo_dim_matter_header_dbo_fact_bill" msdata:parent="dbo_dim_matter_header" msdata:child="dbo_fact_bill" msdata:parentkey="dim_matter_header_curr_key" msdata:childkey="dim_matter_header_curr_key" msprop:IsLogical="True" />
           <msdata:Relationship name="FK_dbo_dim_client_dbo_fact_bill" msdata:parent="dbo_dim_client" msdata:child="dbo_fact_bill" msdata:parentkey="dim_client_key" msdata:childkey="dim_client_key" msprop:IsLogical="True" />
-          <msdata:Relationship name="fact_bill-dim_bill" msdata:parent="dbo_dim_bill" msdata:child="dbo_fact_bill" msdata:parentkey="dim_bill_key" msdata:childkey="dim_bill_key" msprop:Description="" msprop:IsLogical="True" />
+          <msdata:Relationship name="fact_bill-dim_bill" msdata:parent="dbo_dim_bill" msdata:child="dbo_fact_bill" msdata:parentkey="dim_bill_key" msdata:childkey="dim_bill_key" msprop:IsLogical="True" msprop:Description="" />
           <msdata:Relationship name="FK_dbo_dim_matter_header_dbo_fact_bill_billed_time_activity" msdata:parent="dbo_dim_matter_header" msdata:child="dbo_fact_bill_billed_time_activity" msdata:parentkey="dim_matter_header_curr_key" msdata:childkey="dim_matter_header_curr_key" msprop:IsLogical="True" />
-          <msdata:Relationship name="fact_bill_billed_time_activity-dim_bill" msdata:parent="dbo_dim_bill" msdata:child="dbo_fact_bill_billed_time_activity" msdata:parentkey="dim_bill_key" msdata:childkey="dim_bill_key" msprop:Description="" msprop:IsLogical="True" />
-          <msdata:Relationship name="fact_bill_billed_time_activity-dim_fed_hierarchy_history" msdata:parent="dbo_dim_fed_hierarchy_history" msdata:child="dbo_fact_bill_billed_time_activity" msdata:parentkey="dim_fed_hierarchy_history_key" msdata:childkey="dim_fed_hierarchy_history_key" msprop:Description="" msprop:IsLogical="True" />
-          <msdata:Relationship name="fact_bill_activity-dim_date" msdata:parent="dbo_dim_date" msdata:child="dbo_fact_bill_activity" msdata:parentkey="dim_date_key" msdata:childkey="dim_bill_date_key" msprop:Description="" msprop:IsLogical="True" />
+          <msdata:Relationship name="fact_bill_billed_time_activity-dim_bill" msdata:parent="dbo_dim_bill" msdata:child="dbo_fact_bill_billed_time_activity" msdata:parentkey="dim_bill_key" msdata:childkey="dim_bill_key" msprop:IsLogical="True" msprop:Description="" />
+          <msdata:Relationship name="fact_bill_billed_time_activity-dim_fed_hierarchy_history" msdata:parent="dbo_dim_fed_hierarchy_history" msdata:child="dbo_fact_bill_billed_time_activity" msdata:parentkey="dim_fed_hierarchy_history_key" msdata:childkey="dim_fed_hierarchy_history_key" msprop:IsLogical="True" msprop:Description="" />
+          <msdata:Relationship name="fact_bill_activity-dim_date" msdata:parent="dbo_dim_date" msdata:child="dbo_fact_bill_activity" msdata:parentkey="dim_date_key" msdata:childkey="dim_bill_date_key" msprop:IsLogical="True" msprop:Description="" />
           <msdata:Relationship name="FK_dbo_dim_employee_dbo_dim_fed_hierarchy_history" msdata:parent="dbo_dim_employee" msdata:child="dbo_dim_fed_hierarchy_history" msdata:parentkey="dim_employee_key" msdata:childkey="dim_employee_key" msprop:IsLogical="True" />
           <msdata:Relationship name="dim_matter_header_current-dim_master_client" msdata:parent="dim_master_client" msdata:child="dbo_dim_matter_header" msdata:parentkey="client_code" msdata:childkey="master_client_code" msprop:IsLogical="True" msprop:Description="" />
           <msdata:Relationship name="dim_matter_header_current-dim_matter_worktype" msdata:parent="dbo_dim_matter_worktype" msdata:child="dbo_dim_matter_header" msdata:parentkey="dim_matter_worktype_key" msdata:childkey="dim_matter_worktype_key" msprop:IsLogical="True" msprop:Description="" />
