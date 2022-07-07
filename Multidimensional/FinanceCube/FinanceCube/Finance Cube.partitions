@@ -1,17 +1,17 @@
-﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="9fb1f337-4cc1-4ef2-985a-1c2f3dcf3017" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="e15704b4-db67-418a-b864-914217417d93" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Finance Cube</ID>
   <MeasureGroups>
     <MeasureGroup>
       <ID>Fact Bill</ID>
       <Partitions>
-        <Partition dwd:design-time-name="70926a51-60a4-4a03-82aa-fe797f2b9bf2">
+        <Partition dwd:design-time-name="84de3b8f-0493-476e-a0d2-77f8d82e9b15">
           <ID>Fact Bill</ID>
           <Name>Fact Bill Current Year</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="730efbcf-9bbb-42a6-92bf-1493a0bc8448">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="0d12821e-89ce-4974-92a2-552dc2f349f6">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_bill.dim_matter_header_curr_key, fact_bill.dim_client_key, fact_bill.dim_bill_date_key, fact_bill.dim_bill_key, fact_bill.dim_posting_date_key, fact_bill.dim_last_pay_date_key, 
                          fact_bill.dim_address_key, fact_bill.dim_write_off_codes_key, fact_bill.master_fact_key, fact_bill.source_system_id, fact_bill.client_code, fact_bill.matter_number, fact_bill.bill_number, 
@@ -34,14 +34,14 @@ WHERE   current_fin_year = 'Current' AND ISNULL(finance_reporting_exclusion,'') 
           <ProcessingMode>Regular</ProcessingMode>
           <EstimatedRows>1836255</EstimatedRows>
         </Partition>
-        <Partition dwd:design-time-name="e9c2c789-2019-4a8f-a00d-f689fe4fa950">
+        <Partition dwd:design-time-name="6acd1c0e-d43d-42fc-8fc0-17a515c89a7a">
           <ID>Fact Bill 1</ID>
           <Name>Fact Bill 1 and 2 years old</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="4700020c-76b6-43a9-9257-5450f0d746a9">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="15ecc28b-2323-42cc-93a3-ea499818ab36">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_bill.dim_matter_header_curr_key, fact_bill.dim_client_key, fact_bill.dim_bill_date_key, fact_bill.dim_bill_key, fact_bill.dim_posting_date_key, fact_bill.dim_last_pay_date_key, 
                          fact_bill.dim_address_key, fact_bill.dim_write_off_codes_key, fact_bill.master_fact_key, fact_bill.source_system_id, fact_bill.client_code, fact_bill.matter_number, fact_bill.bill_number, 
@@ -68,14 +68,14 @@ WHERE   fin_year BETWEEN (SELECT DISTINCT fin_year - 2
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="bee2880b-6a8a-4f71-bb8f-2ee8d0bcf5ec">
+        <Partition dwd:design-time-name="f4696f36-e247-4f13-9a82-4edcac743a8d">
           <ID>Fact Bill 3 and 4 years old</ID>
           <Name>Fact Bill 3 and 4 years old</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="25fba1fc-6c8c-44bf-ace2-50e268d12b19">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="9adda51e-8eb7-4a59-8e18-6fc67ed1a398">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_bill.dim_matter_header_curr_key, fact_bill.dim_client_key, fact_bill.dim_bill_date_key, fact_bill.dim_bill_key, fact_bill.dim_posting_date_key, fact_bill.dim_last_pay_date_key, 
                          fact_bill.dim_address_key, fact_bill.dim_write_off_codes_key, fact_bill.master_fact_key, fact_bill.source_system_id, fact_bill.client_code, fact_bill.matter_number, fact_bill.bill_number, 
@@ -101,14 +101,14 @@ WHERE   fin_year BETWEEN (SELECT DISTINCT fin_year - 4
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="0c8941dd-c1dc-4038-852a-62bb962a05dc">
+        <Partition dwd:design-time-name="22d25aa7-440e-4461-90e6-5c3f199a50b7">
           <ID>Fact Bill 5 and 6 years old</ID>
           <Name>Fact Bill 5 and 6 years old</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="486f8d41-dc8a-4b7d-bd9a-f5f457a2df27">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="af50e9d6-9bb5-4144-8cdf-42fcc9ef9d6f">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_bill.dim_matter_header_curr_key, fact_bill.dim_client_key, fact_bill.dim_bill_date_key, fact_bill.dim_bill_key, fact_bill.dim_posting_date_key, fact_bill.dim_last_pay_date_key, 
                          fact_bill.dim_address_key, fact_bill.dim_write_off_codes_key, fact_bill.master_fact_key, fact_bill.source_system_id, fact_bill.client_code, fact_bill.matter_number, fact_bill.bill_number, 
@@ -134,14 +134,14 @@ WHERE   fin_year BETWEEN (SELECT DISTINCT fin_year - 6
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="7bccf393-ddb9-4da4-83da-aa67916425ab">
+        <Partition dwd:design-time-name="1a5af515-6f12-4f63-a4d4-b8eb05ce63c2">
           <ID>Fact Bill 7 and 8 years old</ID>
           <Name>Fact Bill 7 and 8 years old</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="5b8152ac-c562-4ad3-8b7d-bafabde0cf45">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="799c5426-62c9-4630-a0b4-95e095f21b5c">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_bill.dim_matter_header_curr_key, fact_bill.dim_client_key, fact_bill.dim_bill_date_key, fact_bill.dim_bill_key, fact_bill.dim_posting_date_key, fact_bill.dim_last_pay_date_key, 
                          fact_bill.dim_address_key, fact_bill.dim_write_off_codes_key, fact_bill.master_fact_key, fact_bill.source_system_id, fact_bill.client_code, fact_bill.matter_number, fact_bill.bill_number, 
@@ -167,14 +167,14 @@ WHERE   fin_year BETWEEN (SELECT DISTINCT fin_year - 8
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="08efedbb-edd9-4971-8b0e-450a7624741e">
+        <Partition dwd:design-time-name="484d4bf2-e471-41af-8040-58a6dcc4d8f9">
           <ID>Fact Bill greater than 8 years old</ID>
           <Name>Fact Bill greater than 8 years old</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="e85c3038-b41e-48e0-84f0-5c9aecbe9c68">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="837603eb-36a8-4830-afb9-488bd1088d60">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_bill.dim_matter_header_curr_key, fact_bill.dim_client_key, fact_bill.dim_bill_date_key, fact_bill.dim_bill_key, fact_bill.dim_posting_date_key, fact_bill.dim_last_pay_date_key, 
                          fact_bill.dim_address_key, fact_bill.dim_write_off_codes_key, fact_bill.master_fact_key, fact_bill.source_system_id, fact_bill.client_code, fact_bill.matter_number, fact_bill.bill_number, 
@@ -204,14 +204,14 @@ AND  (fact_bill.dim_bill_date_key &gt;= 20100501) AND ISNULL(finance_reporting_e
     <MeasureGroup>
       <ID>Fact Bill Activity</ID>
       <Partitions>
-        <Partition dwd:design-time-name="e6493cfe-d6dc-4bea-9e65-31aacf11b551">
+        <Partition dwd:design-time-name="7fa4926b-0f57-48a4-adcf-338c6d78e292">
           <ID>Fact Bill Activity</ID>
           <Name>Fact Bill Activity Current Year</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="c4ba7c3a-33f4-40ea-904c-5a4f07c0e678">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="f6a1e364-7980-4a36-a9f2-36075e0dd531">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT CAST(fact_bill_activity.fact_bill_activity_key AS BIGINT) AS fact_bill_activity_key, fact_bill_activity.dim_client_key, fact_bill_activity.dim_bill_date_key, fact_bill_activity.dim_bill_key, fact_bill_activity.dim_fed_hierarchy_history_key, fact_bill_activity.dim_matter_header_curr_key, 
              fact_bill_activity.billed_time, fact_bill_activity.bill_amount, dim_days_banding.dim_days_banding_key, ISNULL(dim_client.client_code, 'Unknown') master_client_code, isnull(fact_dimension_main.dim_fed_hierarchy_history_key,0) matter_owner_hist_key, bill_number, fact_bill_activity.source_system_id, fact_bill_activity.bill_amount_vat
@@ -245,14 +245,14 @@ and     dim_orig_posting_date_key IN (SELECT dim_date_key FROM dbo.dim_date WHER
           <ProcessingMode>Regular</ProcessingMode>
           <EstimatedRows>1141527</EstimatedRows>
         </Partition>
-        <Partition dwd:design-time-name="8eaf3616-0612-49e3-ba2f-cd910f4d2a28">
+        <Partition dwd:design-time-name="3576672b-25b4-4d1d-8f96-f86ca98b5774">
           <ID>Fact Bill Activity Historical</ID>
           <Name>Fact Bill Activity 1 and 2 years old</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="b7526657-60ce-4236-95ed-6a5906ea5bf4">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="7db19b67-6cb8-4055-9a91-830d0094a1d1">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT CAST(fact_bill_activity.fact_bill_activity_key AS BIGINT) AS fact_bill_activity_key, fact_bill_activity.dim_client_key, fact_bill_activity.dim_bill_date_key, fact_bill_activity.dim_bill_key, fact_bill_activity.dim_fed_hierarchy_history_key, fact_bill_activity.dim_matter_header_curr_key, 
              fact_bill_activity.billed_time, fact_bill_activity.bill_amount, dim_days_banding.dim_days_banding_key, ISNULL(dim_client.client_code, 'Unknown') master_client_code, isnull(fact_dimension_main.dim_fed_hierarchy_history_key,0) matter_owner_hist_key, bill_number, fact_bill_activity.source_system_id, fact_bill_activity.bill_amount_vat
@@ -293,14 +293,14 @@ and     dim_orig_posting_date_key IN (SELECT dim_date_key FROM dbo.dim_date WHER
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="e3ca8438-3b36-4ce2-bea7-ce0059e7a2e7">
+        <Partition dwd:design-time-name="a21d5f17-32bf-4cfc-898a-0ded75574eac">
           <ID>Fact Bill Activity 3 and 4 years old</ID>
           <Name>Fact Bill Activity 3 and 4 years old</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="c747b0d6-5ec2-49b0-8bc5-3f8227760c04">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="e3435bb2-0df0-4b0b-822d-094040b934a8">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT CAST(fact_bill_activity.fact_bill_activity_key AS BIGINT) AS fact_bill_activity_key, fact_bill_activity.dim_client_key, fact_bill_activity.dim_bill_date_key, fact_bill_activity.dim_bill_key, fact_bill_activity.dim_fed_hierarchy_history_key, fact_bill_activity.dim_matter_header_curr_key, 
              fact_bill_activity.billed_time, fact_bill_activity.bill_amount, dim_days_banding.dim_days_banding_key, ISNULL(dim_client.client_code, 'Unknown') master_client_code, isnull(fact_dimension_main.dim_fed_hierarchy_history_key,0) matter_owner_hist_key, bill_number, fact_bill_activity.source_system_id, fact_bill_activity.bill_amount_vat
@@ -341,14 +341,14 @@ and     dim_orig_posting_date_key IN (SELECT dim_date_key FROM dbo.dim_date WHER
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="f7b51d7f-7498-4256-9624-a1da7b6940cb">
+        <Partition dwd:design-time-name="fe2a6b91-a81f-4d9d-b4a7-243eeb32c024">
           <ID>Fact Bill Activity 5 and 6 years old</ID>
           <Name>Fact Bill Activity 5 and 6 years old</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="0352b5d1-3d03-48e7-a9e2-807f1b444fe6">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="8623fe5f-85f2-4cae-aaec-b3e54c9be81b">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT CAST(fact_bill_activity.fact_bill_activity_key AS BIGINT) AS fact_bill_activity_key, fact_bill_activity.dim_client_key, fact_bill_activity.dim_bill_date_key, fact_bill_activity.dim_bill_key, fact_bill_activity.dim_fed_hierarchy_history_key, fact_bill_activity.dim_matter_header_curr_key, 
              fact_bill_activity.billed_time, fact_bill_activity.bill_amount, dim_days_banding.dim_days_banding_key, ISNULL(dim_client.client_code, 'Unknown') master_client_code, isnull(fact_dimension_main.dim_fed_hierarchy_history_key,0) matter_owner_hist_key, bill_number, fact_bill_activity.source_system_id, fact_bill_activity.bill_amount_vat
@@ -389,14 +389,14 @@ and     dim_orig_posting_date_key IN (SELECT dim_date_key FROM dbo.dim_date WHER
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="5f655690-a821-4212-b01c-cc70611162a2">
+        <Partition dwd:design-time-name="f17d8f29-823e-4289-8a0f-b813687cc70b">
           <ID>Fact Bill Activity 7 and 8 years old</ID>
           <Name>Fact Bill Activity 7 and 8 years old</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="1a2844ac-98b2-418a-bacf-7485dd37f46d">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="0d623b02-29c3-47de-89da-a4cb7ce4af8d">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT CAST(fact_bill_activity.fact_bill_activity_key AS BIGINT) AS fact_bill_activity_key, fact_bill_activity.dim_client_key, fact_bill_activity.dim_bill_date_key, fact_bill_activity.dim_bill_key, fact_bill_activity.dim_fed_hierarchy_history_key, fact_bill_activity.dim_matter_header_curr_key, 
              fact_bill_activity.billed_time, fact_bill_activity.bill_amount, dim_days_banding.dim_days_banding_key, ISNULL(dim_client.client_code, 'Unknown') master_client_code, isnull(fact_dimension_main.dim_fed_hierarchy_history_key,0) matter_owner_hist_key, bill_number, fact_bill_activity.source_system_id, fact_bill_activity.bill_amount_vat
@@ -436,14 +436,14 @@ and     dim_orig_posting_date_key IN (SELECT dim_date_key FROM dbo.dim_date WHER
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="f44f9647-e434-49c2-89fc-3649135a0f8d">
+        <Partition dwd:design-time-name="0067ebbc-f491-4a70-97ac-382d1acaf223">
           <ID>Fact Bill Activity great than 8 years old</ID>
           <Name>Fact Bill Activity great than 8 years old</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="d6a9aabf-8362-4b62-9a1f-52288cce44df">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="60a8c350-202e-466c-be15-699aca607014">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT CAST(fact_bill_activity.fact_bill_activity_key AS BIGINT) AS fact_bill_activity_key, fact_bill_activity.dim_client_key, fact_bill_activity.dim_bill_date_key, fact_bill_activity.dim_bill_key, fact_bill_activity.dim_fed_hierarchy_history_key, fact_bill_activity.dim_matter_header_curr_key, 
              fact_bill_activity.billed_time, fact_bill_activity.bill_amount, dim_days_banding.dim_days_banding_key, ISNULL(dim_client.client_code, 'Unknown') master_client_code, isnull(fact_dimension_main.dim_fed_hierarchy_history_key,0) matter_owner_hist_key, bill_number, fact_bill_activity.source_system_id, fact_bill_activity.bill_amount_vat
@@ -604,14 +604,14 @@ AND dim_orig_posting_date_key &gt;= '20100501' AND ISNULL(finance_reporting_excl
     <MeasureGroup>
       <ID>Fact Budget Activity</ID>
       <Partitions>
-        <Partition dwd:design-time-name="2082c4f4-3fe5-419a-b388-5d71d8f41a46">
+        <Partition dwd:design-time-name="b7f1b569-4f95-4218-9b8c-e8c00bc6677c">
           <ID>Fact Budget Activity</ID>
           <Name>Fact Budget Current</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="35b748ae-65e3-4f3e-96fa-6a6d4b15f20e">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="9db3f0a2-249e-491c-81be-17eba087f380">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT *
 from fact_budget_activity_finance_cube
@@ -621,14 +621,14 @@ WHERE     (dim_gl_date_key &gt;= 20190501)</QueryDefinition>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="6bd4fa83-41ba-4966-b6a6-0efc5e127fc6">
+        <Partition dwd:design-time-name="1bb7ea03-009e-4023-9e9a-8a5d13c647e2">
           <ID>Fact Budget Historical</ID>
           <Name>Fact Budget Historical</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="94b25b2a-dc96-4a13-b1cb-e6f071c66498">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="9835d09c-d8ef-4729-9c22-bc5a579ec965">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT *
 from fact_budget_activity_finance_cube
@@ -645,14 +645,14 @@ WHERE     dim_gl_date_key &gt;= 20100501
     <MeasureGroup>
       <ID>Fact Wip</ID>
       <Partitions>
-        <Partition dwd:design-time-name="a8fa1a77-7922-4b7c-9368-78dcf8ca3e49">
+        <Partition dwd:design-time-name="55475340-67d4-4857-9631-974910a7993c">
           <ID>Fact Wip</ID>
           <Name>Fact Wip 2020</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="0b2111a9-f45c-4345-b44e-822881b1da45">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="6213efd5-8d53-4020-9e62-a8268cae057f">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT        fact_wip_monthly.dim_transaction_date_key, fact_wip_monthly.dim_matter_header_history_key, ISNULL(fact_dimension_main.dim_matter_header_curr_key, 0) AS dim_matter_header_current_key, 
                          fact_wip_monthly.dim_fed_hierarchy_history_key, fact_wip_monthly.dim_days_banding_key, fact_wip_monthly.dim_fed_matter_owner_key, fact_wip_monthly.dim_client_key, fact_wip_monthly.source_system_id, 
@@ -669,14 +669,14 @@ WHERE       fact_wip_monthly.dim_transaction_date_key IN (SELECT dim_date_key FR
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="9a904e2a-7f29-485e-b5b2-4c0d2ad5104d">
+        <Partition dwd:design-time-name="f0f8ffac-7e92-4dd9-8870-deb11d6ad741">
           <ID>Fact Wip Historical</ID>
           <Name>Fact Wip 2019</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="9c6eb78a-1519-4617-8eb4-3a2698e6bccb">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="8bc6df7c-5194-4438-8b5e-7133f4dd7183">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT        fact_wip_monthly.dim_transaction_date_key, fact_wip_monthly.dim_matter_header_history_key, ISNULL(fact_dimension_main.dim_matter_header_curr_key, 0) AS dim_matter_header_current_key, 
                          fact_wip_monthly.dim_fed_hierarchy_history_key, fact_wip_monthly.dim_days_banding_key, fact_wip_monthly.dim_fed_matter_owner_key, fact_wip_monthly.dim_client_key, fact_wip_monthly.source_system_id, 
@@ -693,14 +693,14 @@ WHERE       fact_wip_monthly.dim_transaction_date_key IN (SELECT dim_date_key FR
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="955d7b59-0f25-4b0c-a999-e9dd770ccb12">
+        <Partition dwd:design-time-name="5917b7de-b674-47f9-a8f4-6f2f095c0d3e">
           <ID>Fact Wip 2021</ID>
           <Name>Fact Wip 2021</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="11ce4971-ced0-4b50-8912-392b007f092c">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="098da997-317a-451a-9de4-f36aeed2c8e3">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT        fact_wip_monthly.dim_transaction_date_key, fact_wip_monthly.dim_matter_header_history_key, ISNULL(fact_dimension_main.dim_matter_header_curr_key, 0) AS dim_matter_header_current_key, 
                          fact_wip_monthly.dim_fed_hierarchy_history_key, fact_wip_monthly.dim_days_banding_key, fact_wip_monthly.dim_fed_matter_owner_key, fact_wip_monthly.dim_client_key, fact_wip_monthly.source_system_id, 
@@ -717,14 +717,14 @@ WHERE       fact_wip_monthly.dim_transaction_date_key IN (SELECT dim_date_key FR
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="d289ca72-1f95-4c0e-897a-dba64c89e796">
+        <Partition dwd:design-time-name="f79ad5e2-8be0-4e84-bd78-3f952c96b765">
           <ID>Fact Wip 2022</ID>
           <Name>Fact Wip 2022</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="838a12c6-21b0-467c-bb56-891f96adced9">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="d3f8b132-0d06-460a-9ea6-3cf5e418bb72">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT        fact_wip_monthly.dim_transaction_date_key, fact_wip_monthly.dim_matter_header_history_key, ISNULL(fact_dimension_main.dim_matter_header_curr_key, 0) AS dim_matter_header_current_key, 
                          fact_wip_monthly.dim_fed_hierarchy_history_key, fact_wip_monthly.dim_days_banding_key, fact_wip_monthly.dim_fed_matter_owner_key, fact_wip_monthly.dim_client_key, fact_wip_monthly.source_system_id, 
@@ -741,14 +741,14 @@ WHERE       fact_wip_monthly.dim_transaction_date_key IN (SELECT dim_date_key FR
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="62ddaae0-d471-49b3-a143-91496d657804">
+        <Partition dwd:design-time-name="b4c1ba26-5aa9-4b19-8159-d6326a55d5b9">
           <ID>Fact Wip 2023</ID>
           <Name>Fact Wip 2023</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="505548e8-1c20-41bf-ab6b-cc14dc96ef61">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="8f64b5aa-bd1d-4bd0-bd9e-4caee19b12d9">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT        fact_wip_monthly.dim_transaction_date_key, fact_wip_monthly.dim_matter_header_history_key, ISNULL(fact_dimension_main.dim_matter_header_curr_key, 0) AS dim_matter_header_current_key, 
                          fact_wip_monthly.dim_fed_hierarchy_history_key, fact_wip_monthly.dim_days_banding_key, fact_wip_monthly.dim_fed_matter_owner_key, fact_wip_monthly.dim_client_key, fact_wip_monthly.source_system_id, 
@@ -770,14 +770,14 @@ WHERE       fact_wip_monthly.dim_transaction_date_key IN (SELECT dim_date_key FR
     <MeasureGroup>
       <ID>Fact Bill Billed Time Activity</ID>
       <Partitions>
-        <Partition dwd:design-time-name="f7376ffe-cfda-4007-a610-dfd078e4516c">
+        <Partition dwd:design-time-name="d922c36b-824d-4961-b76a-e0197dfed174">
           <ID>Fact Bill Billed Time Activity</ID>
           <Name>Fact Bill Billed Time Activity Current</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="f5c03cbd-3e63-496f-95d4-cb4537645662">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="fd61ec1c-0433-4d66-8ceb-9e450a131da2">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   dim_bill_key, fact_bill_billed_time_activity.dim_client_key, dim_transaction_date_key, fact_bill_billed_time_activity.dim_fed_hierarchy_history_key, 
 	fact_bill_billed_time_activity.dim_matter_header_curr_key, dim_gl_date_key, 
@@ -799,14 +799,14 @@ GROUP BY  dim_bill_key, fact_bill_billed_time_activity.dim_client_key, dim_trans
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="c24115f9-194d-43f9-9d6d-19f1e0c547d0">
+        <Partition dwd:design-time-name="dfeb5cb6-5f46-45b0-acae-d8ba2db5587d">
           <ID>Fact Bill Billed Time Activity 1</ID>
           <Name>Fact Bill Billed Time 1 and 2 years old</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="fffedacf-2eb0-4395-b998-bf1b310c111f">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="5072dbac-4dd8-4153-80a1-26d177a60c85">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   dim_bill_key, fact_bill_billed_time_activity.dim_client_key, dim_transaction_date_key, fact_bill_billed_time_activity.dim_fed_hierarchy_history_key, 
 	fact_bill_billed_time_activity.dim_matter_header_curr_key, dim_gl_date_key, 
@@ -832,14 +832,14 @@ GROUP BY  dim_bill_key, fact_bill_billed_time_activity.dim_client_key, dim_trans
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="6e3eb2d8-28b7-418e-9fb6-8a4973dada79">
+        <Partition dwd:design-time-name="e793f000-1396-413c-b6ce-7253c92eede5">
           <ID>Fact Bill Billed Time Activity 3 and 4 years old</ID>
           <Name>Fact Bill Billed Time 3 and 4 years old</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="53c216da-f3d3-40f2-8d0c-fb9d537c42f6">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="370da790-0481-42db-9b15-5f6202c69450">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   dim_bill_key, fact_bill_billed_time_activity.dim_client_key, dim_transaction_date_key, fact_bill_billed_time_activity.dim_fed_hierarchy_history_key, 
 	fact_bill_billed_time_activity.dim_matter_header_curr_key, dim_gl_date_key, 
@@ -865,14 +865,14 @@ GROUP BY  dim_bill_key, fact_bill_billed_time_activity.dim_client_key, dim_trans
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="e495e11b-bcdf-455f-a2ea-0d6707c51c30">
+        <Partition dwd:design-time-name="7ed1d39a-1c8b-447a-a726-e36da72db4e6">
           <ID>Fact Bill Billed Time 5 and 6 years old</ID>
           <Name>Fact Bill Billed Time 5 and 6 years old</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="54bf0975-5514-42ca-80c6-742262184839">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="c711f8d9-4c60-4ff2-a424-25856d1ad0d3">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   dim_bill_key, fact_bill_billed_time_activity.dim_client_key, dim_transaction_date_key, fact_bill_billed_time_activity.dim_fed_hierarchy_history_key, 
 	fact_bill_billed_time_activity.dim_matter_header_curr_key, dim_gl_date_key, 
@@ -898,14 +898,14 @@ GROUP BY  dim_bill_key, fact_bill_billed_time_activity.dim_client_key, dim_trans
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="07466fc2-f149-46c2-b3cc-5e20174591e4">
+        <Partition dwd:design-time-name="afe8e0e2-1bea-4c81-a0ad-d1ebc1c0baf5">
           <ID>Fact Bill Billed Time 7 and 8 years old</ID>
           <Name>Fact Bill Billed Time 7 and 8 years old</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="aaa69e35-4bb5-40af-8c82-e53aba0deca3">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="da17157e-ac18-426c-9f9b-e4993d17096f">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   dim_bill_key, fact_bill_billed_time_activity.dim_client_key, dim_transaction_date_key, fact_bill_billed_time_activity.dim_fed_hierarchy_history_key, 
 	fact_bill_billed_time_activity.dim_matter_header_curr_key, dim_gl_date_key, 
@@ -931,14 +931,14 @@ GROUP BY  dim_bill_key, fact_bill_billed_time_activity.dim_client_key, dim_trans
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="2df734d4-387f-46b1-a32d-837b27ebc442">
+        <Partition dwd:design-time-name="8a431c3c-047e-4ff8-8fb9-98a84a7296ac">
           <ID>Fact Bill Billed Time great than 8 years old</ID>
           <Name>Fact Bill Billed Time great than 8 years old</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="64a64285-8330-4e5c-b840-c9e5de46d1e7">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="7c5a4fda-5a21-4e7c-a426-5b8bbdb6bec3">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   dim_bill_key, fact_bill_billed_time_activity.dim_client_key, dim_transaction_date_key, fact_bill_billed_time_activity.dim_fed_hierarchy_history_key, 
 	fact_bill_billed_time_activity.dim_matter_header_curr_key, dim_gl_date_key, 
@@ -968,14 +968,14 @@ GROUP BY  dim_bill_key, fact_bill_billed_time_activity.dim_client_key, dim_trans
     <MeasureGroup>
       <ID>Fact Billable Time Activity</ID>
       <Partitions>
-        <Partition dwd:design-time-name="8f3d6d84-4673-4e56-a89d-0b0d9e3b6a13">
+        <Partition dwd:design-time-name="75a20b29-56b0-424d-a01e-ff2829b53e57">
           <ID>Fact Billable Time Activity</ID>
           <Name>Fact Billable Time Activity Current</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="395f704c-8145-408b-8ed1-fe56d3047c1b">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="85b0e430-8932-45c5-988c-421aa79020d2">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, 
                          fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.master_fact_key,                        
@@ -1031,14 +1031,14 @@ GROUP by coalesce(fact_dimension_main.dim_fed_hierarchy_history_key, matter_owne
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="d35f0c0e-95be-455b-b264-d87675f19b72">
+        <Partition dwd:design-time-name="247e94d3-f98d-49b8-9717-d841532ef951">
           <ID>Fact Billable Time Activity Historical</ID>
           <Name>Fact Billable Time 1 and 2 years old</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="39e6d822-03ff-4b87-9337-77aa7bdf846c">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="183d3199-38ad-4325-9ea6-1011c818efa6">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, 
                          fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.master_fact_key,                        
@@ -1098,14 +1098,14 @@ GROUP by coalesce(fact_dimension_main.dim_fed_hierarchy_history_key, matter_owne
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="3eb2aed6-e98f-4b44-9c12-1a5b0f7f46d9">
+        <Partition dwd:design-time-name="00501e88-75ac-401e-b5f3-ea9e4cb20fa3">
           <ID>Fact Billable Time 2 and 3 years old</ID>
           <Name>Fact Billable Time 3 and 4 years old</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="bc96926a-ab90-4f68-a814-61eef0dabd73">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="9a3386db-ca56-4933-a34a-a0a7d000b4da">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, 
                          fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.master_fact_key,                        
@@ -1165,14 +1165,14 @@ GROUP by coalesce(fact_dimension_main.dim_fed_hierarchy_history_key, matter_owne
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="43eafdca-6343-4b95-9f06-098596ea2921">
+        <Partition dwd:design-time-name="0f72847f-67eb-4779-9f5e-32550ea5de17">
           <ID>Fact Billable Time 5 and 6 years old</ID>
           <Name>Fact Billable Time 5 and 6 years old</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="2a46e990-21b9-4d25-bf73-1af052aaad66">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="89a660ba-6618-47fa-9c80-bb70cd7526c7">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, 
                          fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.master_fact_key,                        
@@ -1232,14 +1232,14 @@ GROUP by coalesce(fact_dimension_main.dim_fed_hierarchy_history_key, matter_owne
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="9bc31a32-24e9-4330-8b88-27674b59b698">
+        <Partition dwd:design-time-name="2ba14aab-fe73-4af9-9246-ea83bf61cccd">
           <ID>Fact Billable Time 7 and 8 years old</ID>
           <Name>Fact Billable Time 7 and 8 years old</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="f5e9caa6-186f-4c79-988d-5ab54d8aaf84">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="fafef59b-62a6-4f40-a838-8b34b5ec9832">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, 
                          fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.master_fact_key,                        
@@ -1299,14 +1299,14 @@ GROUP by coalesce(fact_dimension_main.dim_fed_hierarchy_history_key, matter_owne
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="19f5c553-2822-4cc0-820a-abc711f75345">
+        <Partition dwd:design-time-name="c0c062ee-cc97-4dbd-a097-b9e70ebb5143">
           <ID>Fact Billable Time greater than 8 years old</ID>
           <Name>Fact Billable Time greater than 8 years old</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="ed6964d0-1815-40a7-b092-c76eeffcd7e2">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="ffa59a88-9ae8-4fb8-9ba2-ebcd19e4188a">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_billable_time_activity.dim_bill_key, fact_billable_time_activity.dim_client_key, 
                          fact_billable_time_activity.dim_fed_hierarchy_history_key, fact_billable_time_activity.dim_matter_header_curr_key, fact_billable_time_activity.master_fact_key,                        
@@ -1368,14 +1368,14 @@ GROUP by coalesce(fact_dimension_main.dim_fed_hierarchy_history_key, matter_owne
     <MeasureGroup>
       <ID>Fact Debt Monthly</ID>
       <Partitions>
-        <Partition dwd:design-time-name="c8492fce-d7fd-4771-bb27-1b95abcc0d96">
+        <Partition dwd:design-time-name="7d31ae07-998f-41ec-bf91-72d0af2beb9f">
           <ID>Fact Debt Monthly</ID>
           <Name>Fact Debt Monthly 2020</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="2b0c27de-8ca1-4161-9fe7-2e1d138301e2">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="db576894-c9a4-4226-b804-2e838ae238ec">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_debt_monthly.dim_transaction_date_key, fact_debt_monthly.dim_mat_head_history_key, fact_debt_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
                          fact_dimension_main.dim_fed_hierarchy_history_key, fact_debt_monthly.dim_days_banding_key, fact_debt_monthly.dim_fed_matter_owner_key, fact_debt_monthly.dim_client_key, 
@@ -1395,14 +1395,14 @@ WHERE          fact_debt_monthly.dim_transaction_date_key IN (SELECT dim_date_ke
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="dbb76b3b-ae93-4640-b37e-97b689b2c536">
+        <Partition dwd:design-time-name="efd2595a-f919-4a39-b07f-3d4998ad41cf">
           <ID>Fact Debt Monthly 1</ID>
           <Name>Fact Debt Monthly 2019</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="7032e918-f61d-4a9f-8bb5-8b8a03fed31d">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="532bb30f-ecc5-4e6f-b056-5deffdef4323">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_debt_monthly.dim_transaction_date_key, fact_debt_monthly.dim_mat_head_history_key, fact_debt_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
                          fact_dimension_main.dim_fed_hierarchy_history_key, fact_debt_monthly.dim_days_banding_key, fact_debt_monthly.dim_fed_matter_owner_key, fact_debt_monthly.dim_client_key, 
@@ -1422,14 +1422,14 @@ WHERE          fact_debt_monthly.dim_transaction_date_key IN (SELECT dim_date_ke
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="d814535b-305a-4d94-8133-bff4bc25e776">
+        <Partition dwd:design-time-name="466c5c2d-be98-401e-8405-0573ba4138c2">
           <ID>Fact Debt Monthly 2021</ID>
           <Name>Fact Debt Monthly 2021</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="baa277c7-3eb0-4288-9ac4-ae92543eb0b0">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="e8149794-aca1-4b42-b898-079a2c62003d">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_debt_monthly.dim_transaction_date_key, fact_debt_monthly.dim_mat_head_history_key, fact_debt_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
                          fact_dimension_main.dim_fed_hierarchy_history_key, fact_debt_monthly.dim_days_banding_key, fact_debt_monthly.dim_fed_matter_owner_key, fact_debt_monthly.dim_client_key, 
@@ -1449,14 +1449,14 @@ WHERE          fact_debt_monthly.dim_transaction_date_key IN (SELECT dim_date_ke
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="a5770b61-4dfa-4564-a9bf-b9e5a5b9441b">
+        <Partition dwd:design-time-name="67bc6af2-20b6-4f3d-8025-4a70d70427ea">
           <ID>Fact Debt Monthly 2022</ID>
           <Name>Fact Debt Monthly 2022</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="ebfb8b39-6a94-4ba5-8c58-4c070187d8c3">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="9962a881-4ff3-4c6b-ac37-b845d1dc9acd">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_debt_monthly.dim_transaction_date_key, fact_debt_monthly.dim_mat_head_history_key, fact_debt_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
                          fact_dimension_main.dim_fed_hierarchy_history_key, fact_debt_monthly.dim_days_banding_key, fact_debt_monthly.dim_fed_matter_owner_key, fact_debt_monthly.dim_client_key, 
@@ -1476,14 +1476,14 @@ WHERE          fact_debt_monthly.dim_transaction_date_key IN (SELECT dim_date_ke
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="c8d2acda-dcd2-4a4b-9ada-a9bd5191a12a">
+        <Partition dwd:design-time-name="48263a9c-5aa3-44ff-bccb-e10cb9d6243d">
           <ID>Fact Debt Monthly 2023</ID>
           <Name>Fact Debt Monthly 2023</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="0bce7fb9-b6dd-4616-bcf5-b9d5b31796da">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="8d042913-2e3f-4b19-9b2e-0cca8c1f898e">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_debt_monthly.dim_transaction_date_key, fact_debt_monthly.dim_mat_head_history_key, fact_debt_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
                          fact_dimension_main.dim_fed_hierarchy_history_key, fact_debt_monthly.dim_days_banding_key, fact_debt_monthly.dim_fed_matter_owner_key, fact_debt_monthly.dim_client_key, 
@@ -1575,14 +1575,14 @@ WHERE          fact_debt_monthly.dim_transaction_date_key IN (SELECT dim_date_ke
     <MeasureGroup>
       <ID>Fact Disbursements Detail Monthly</ID>
       <Partitions>
-        <Partition dwd:design-time-name="b72b63c9-da04-41f8-92b3-060ee218a4e0">
+        <Partition dwd:design-time-name="88cb248e-8784-4a9d-a775-0dd96bedfa68">
           <ID>Fact Disbursements Detail Monthly</ID>
           <Name>Fact Disbursements Detail Monthly 2019</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="ef8956f5-5bc2-4c8a-9149-d9eefaedb692">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="8aaafeeb-b081-48c3-b565-cc7547d7afde">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_disbursements_detail_monthly.dim_transaction_date_key, fact_disbursements_detail_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
                          fact_disbursements_detail_monthly.dim_fed_hierarchy_history_key, dim_days_banding.dim_days_banding_key, fact_disbursements_detail_monthly.dim_client_key, 
@@ -1610,14 +1610,14 @@ GROUP BY CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' EL
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="1f067130-1973-41c4-9b8e-019951067f77">
+        <Partition dwd:design-time-name="8625677a-e32e-48e7-bd15-84feac348650">
           <ID>Fact Disbursements Detail Monthly Historical</ID>
           <Name>Fact Disbursements Detail Monthly 2020</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="bdc2e902-16aa-4ba4-a761-9697e0abdf11">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="4670a2d7-781c-45a9-bb97-1e5b6046b8f2">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_disbursements_detail_monthly.dim_transaction_date_key, fact_disbursements_detail_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
                          fact_disbursements_detail_monthly.dim_fed_hierarchy_history_key, dim_days_banding.dim_days_banding_key, fact_disbursements_detail_monthly.dim_client_key, 
@@ -1645,14 +1645,14 @@ GROUP BY CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' EL
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="31bc220d-fddc-4095-9957-c1f8b0e5a094">
+        <Partition dwd:design-time-name="ee92af6e-f48a-4592-b30c-2ea466eb0fe9">
           <ID>Fact Disbursements Detail Monthly 2021</ID>
           <Name>Fact Disbursements Detail Monthly 2021</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="6640c716-66bc-47cd-9769-987a54600d06">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="a8ee3002-cc3a-443b-92d7-0ccd5b840731">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_disbursements_detail_monthly.dim_transaction_date_key, fact_disbursements_detail_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
                          fact_disbursements_detail_monthly.dim_fed_hierarchy_history_key, dim_days_banding.dim_days_banding_key, fact_disbursements_detail_monthly.dim_client_key, 
@@ -1680,14 +1680,14 @@ GROUP BY CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' EL
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="9f877d5d-c6ee-43d9-a060-00d83e529fbf">
+        <Partition dwd:design-time-name="7f7f43c5-0e68-41ba-9ef7-026e13178c65">
           <ID>Fact Disbursements Detail Monthly 2022</ID>
           <Name>Fact Disbursements Detail Monthly 2022</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="3a945265-df53-437f-b7d7-7ee6cf940bc1">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="d29e6f58-e858-4c77-a7f4-465719b9b8d2">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_disbursements_detail_monthly.dim_transaction_date_key, fact_disbursements_detail_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
                          fact_disbursements_detail_monthly.dim_fed_hierarchy_history_key, dim_days_banding.dim_days_banding_key, fact_disbursements_detail_monthly.dim_client_key, 
@@ -1715,14 +1715,14 @@ GROUP BY CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' EL
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="ae61dfbe-e856-44a5-a941-ddd833a2fd20">
+        <Partition dwd:design-time-name="d9fa7f0a-10b9-4094-b574-e1e7c60cc548">
           <ID>Fact Disbursements Detail Monthly 2023</ID>
           <Name>Fact Disbursements Detail Monthly 2023</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="480a0c78-31f5-4228-ac92-f14c78a0a4b1">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="c7eb8443-5a78-428c-bbd2-9d739faab3dc">
             <DataSourceID>Red Dw</DataSourceID>
             <QueryDefinition>SELECT   fact_disbursements_detail_monthly.dim_transaction_date_key, fact_disbursements_detail_monthly.dim_matter_header_curr_key AS dim_matter_header_current_key, 
                          fact_disbursements_detail_monthly.dim_fed_hierarchy_history_key, dim_days_banding.dim_days_banding_key, fact_disbursements_detail_monthly.dim_client_key, 
@@ -1755,14 +1755,14 @@ GROUP BY CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' EL
     <MeasureGroup>
       <ID>Fact Write Off</ID>
       <Partitions>
-        <Partition dwd:design-time-name="041f0c14-f076-407b-8413-d68b58cefe47">
+        <Partition dwd:design-time-name="992c4f37-ea7b-4b91-aaea-bd3e9dcdf662">
           <ID>Fact Write Off</ID>
           <Name>Fact Write Off</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="27dad31b-addc-4421-a129-a618f91ce448">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="ff85d182-f3ec-483a-b4fa-a2cc5cf38e9d">
             <DataSourceViewID>FinanceDataSource</DataSourceViewID>
             <TableID>dbo_fact_write_off</TableID>
           </Source>
@@ -1775,16 +1775,36 @@ GROUP BY CASE WHEN dim_disbursement_date_key &lt;= '20100501' THEN '20100501' EL
     <MeasureGroup>
       <ID>Fact Bill Write Off</ID>
       <Partitions>
-        <Partition dwd:design-time-name="f091e461-e51d-40ad-a720-ded87b4de79c">
+        <Partition dwd:design-time-name="c1440923-172c-4810-8074-46530f6bec01">
           <ID>Fact Bill Write Off</ID>
           <Name>Fact Bill Write Off</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="b0fb2d01-4a2d-44d1-877b-b4467afa1745">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="e96d52c6-4297-449e-ba1c-a5161bb01b53">
             <DataSourceViewID>FinanceDataSource</DataSourceViewID>
             <TableID>dbo_fact_bill_write_off</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Fact Staff Costs</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="4b6fe1a8-eb70-4736-9313-4b41188cdfe2">
+          <ID>Fact Staff Costs</ID>
+          <Name>Fact Staff Costs</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="2b17fd25-6470-4694-88d4-a1ddd4bbf01c">
+            <DataSourceViewID>FinanceDataSource</DataSourceViewID>
+            <TableID>dbo_fact_staff_costs</TableID>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
