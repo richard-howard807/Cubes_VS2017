@@ -1,33 +1,32 @@
-﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="60e82b7c-9b25-425a-aac5-163f042dbaac" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="d94311a5-bd00-4d11-a2e7-9d19c8563eab" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Chargeable Hours</ID>
   <MeasureGroups>
     <MeasureGroup>
       <ID>Agg Chargeable Time Monthly Rollup</ID>
       <Partitions>
-        <Partition dwd:design-time-name="a14bbcb1-51ae-4778-bef2-ee5839f0b2ff">
+        <Partition dwd:design-time-name="c76bf270-99fa-42de-9192-a6e6e386c274">
           <ID>Agg Chargeable Time Monthly Rollup</ID>
           <Name>Agg Chargeable Time Monthly Rollup</Name>
           <CreatedTimestamp>2018-01-31T18:29:12.733333Z</CreatedTimestamp>
           <LastSchemaUpdate>2018-07-12T15:19:33.66Z</LastSchemaUpdate>
           <LastProcessed>2018-12-20T16:29:54.73Z</LastProcessed>
           <State>Processed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="557892bf-66da-4047-8af8-6b489df68cdc">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="e610002f-a0f1-451e-81a5-8cc3d7c4e298">
             <DataSourceViewID>Profit_Costs</DataSourceViewID>
             <TableID>dbo_agg_chargeable_time_monthly_rollup</TableID>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
-          <ProactiveCaching dwd:design-time-name="c54f42e4-1b0b-458e-a21c-ab744b95426f">
+          <ProactiveCaching dwd:design-time-name="b8e89f7b-d68b-46ab-9233-00854e24a2a3">
             <SilenceInterval>-PT1S</SilenceInterval>
             <Latency>-PT1S</Latency>
             <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
             <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
-            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="123ce832-eb77-4e30-9060-6a74b7117611" />
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="12d0b5b4-73a1-4fcf-aff9-622047e76121" />
           </ProactiveCaching>
           <EstimatedSize>8630604</EstimatedSize>
           <EstimatedRows>134928</EstimatedRows>
-          <AggregationDesignID>AggregationDesign</AggregationDesignID>
         </Partition>
       </Partitions>
       <AggregationDesigns>
