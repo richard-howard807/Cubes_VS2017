@@ -767,49 +767,49 @@ The CALCULATE command controls the aggregation of leaf cells in the cube.
 If the CALCULATE command is deleted or modified, the data within the cube is affected.
 You should edit this command only if you manually specify how the cube is aggregated.
 */
-CALCULATE;  
+CALCULATE;   
 CREATE MEMBER CURRENTCUBE.[Measures].[Annual Team Level Utilisation Target Percent]
  AS (ANCESTOR([Dim Date].[Hierarchy].CurrentMember,
            [Dim Date].[Hierarchy].[Fin Year]),
             (Root([Measures].[Team Level Utilisation Target Percent])))/12, 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1; 
+VISIBLE = 1;  
 CREATE MEMBER CURRENTCUBE.[Measures].[Annual FED Level Utilisation Target Percent]
  AS (ANCESTOR([Dim Date].[Hierarchy].CurrentMember,
            [Dim Date].[Hierarchy].[Fin Year]),
-            (Root([Measures].[Fed Level Utilisation Target Percent])))/12, 
+            (Root([Measures].[Fed Level Utilistation Target Percent])))/12, 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1  ;  
+VISIBLE = 1  ;   
 CREATE MEMBER CURRENTCUBE.[Measures].[Annual Department Level Utilisation Target Percent]
  AS (ANCESTOR([Dim Date].[Hierarchy].CurrentMember,
            [Dim Date].[Hierarchy].[Fin Year]),
             (Root([Measures].[Department Level Utilisation Target Percent])))/12, 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1;  
+VISIBLE = 1;   
 CREATE MEMBER CURRENTCUBE.[Measures].[Annual Division Level Utilisation Target Percent]
  AS (ANCESTOR([Dim Date].[Hierarchy].CurrentMember,
            [Dim Date].[Hierarchy].[Fin Year]),
             (Root([Measures].[Division Level Utilisation Target Percent])))/12, 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1;       
+VISIBLE = 1;        
 CREATE MEMBER CURRENTCUBE.[Measures].[Target Chargeable Hours (Budget Balanced)]
  AS [Measures].[TCHBB], 
-VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Agg Chargeable Time Monthly Rollup';     
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Agg Chargeable Time Monthly Rollup';      
 CREATE MEMBER CURRENTCUBE.[Measures].[Budget Balance]
  AS round([Measures].[Budget Balance Orig], 2), 
-VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Agg Chargeable Time Monthly Rollup';       
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Agg Chargeable Time Monthly Rollup';        
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Target Chargeable Hours (Budget Balanced)]
  AS round(sum(
                 YTD([Dim Date].[Hierarchy].CurrentMember),
                 Measures.[Target Chargeable Hours (Budget Balanced)]
    ), 2), 
-VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Agg Chargeable Time Monthly Rollup';       
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Agg Chargeable Time Monthly Rollup';        
 CREATE MEMBER CURRENTCUBE.[Measures].[Annual Target Chargeable Hours (Budget Balanced)]
  AS sum(
                 ([Dim Date].[Fin Year].CurrentMember),
                 Measures.[Target Chargeable Hours (Budget Balanced)]
    ), 
-VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Agg Chargeable Time Monthly Rollup';       
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Agg Chargeable Time Monthly Rollup';        
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Budget Balance]
  AS round(
 sum(
@@ -817,34 +817,34 @@ sum(
                 Measures.[Budget Balance]
    )
 , 2), 
-VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Agg Chargeable Time Monthly Rollup';       
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Agg Chargeable Time Monthly Rollup';        
 CREATE MEMBER CURRENTCUBE.[Measures].[Annual Budget Balance]
  AS sum(
                 ([Dim Date].[Fin Year].CurrentMember),
                 Measures.[Budget Balance]
    ), 
-VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Agg Chargeable Time Monthly Rollup';           
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Agg Chargeable Time Monthly Rollup';            
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Chargeable Hours]
  AS sum(
                 YTD([Dim Date].[Hierarchy].CurrentMember),
                 Measures.[Chargeable Hours]
    ), 
 NON_EMPTY_BEHAVIOR = { [Chargeable Hours] }, 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Chargeable Time Monthly Rollup';           
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Chargeable Time Monthly Rollup';            
 CREATE MEMBER CURRENTCUBE.[Measures].[Annual Average Chargeable Hours]
  AS iif([Measures].[YTD Target Chargeable Hours (Budget Balanced)] = 0, 0, 
 (avg([Measures].[YTD Chargeable Hours]) / avg([Measures].[YTD Target Chargeable Hours (Budget Balanced)])) * 
     avg([Measures].[Annual Target Chargeable Hours (Budget Balanced)])   
 ), 
 FORMAT_STRING = "#,#0.0;-#,#0.0", 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Chargeable Time Monthly Rollup';        
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Annual' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Chargeable Time Monthly Rollup';         
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Percentage of YTD Target Chargeable Hours Achieved]
  AS iif([Measures].[YTD Target Chargeable Hours (Budget Balanced)] = 0, null,
 [Measures].[YTD Chargeable Hours] / [Measures].[YTD Target Chargeable Hours (Budget Balanced)]
 ), 
 FORMAT_STRING = "Percent", 
 NON_EMPTY_BEHAVIOR = { [Target Chargeable Hours] }, 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Chargeable Time Monthly Rollup';           
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Chargeable Time Monthly Rollup';            
 CREATE MEMBER CURRENTCUBE.[Measures].[KPI Chargeable Hours Filter]
  AS +	[Measures].[Chargeable Hours]
 		+	[Measures].[Target Chargeable Hours (Budget Balanced)]
@@ -853,14 +853,14 @@ CREATE MEMBER CURRENTCUBE.[Measures].[KPI Chargeable Hours Filter]
 		+	[Measures].[Annual Average Chargeable Hours]
 		+	[Measures].[Annual Target Chargeable Hours (Budget Balanced)]
         +   [Measures].[YTD Contracted Hours], 
-VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Agg Chargeable Time Monthly Rollup';    
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Agg Chargeable Time Monthly Rollup';     
 CREATE MEMBER CURRENTCUBE.[Measures].[Utilisation %]
  AS iif([Measures].[Contracted Hours]&gt;0,[Measures].[Chargeable Hours]/[Measures].[Contracted Hours],null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Agg Chargeable Time Monthly Rollup';    
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Agg Chargeable Time Monthly Rollup';     
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Contracted Hours]
  AS SUM(YTD([Dim Date].[Hierarchy].CurrentMember), [Measures].[Contracted Hours]), 
-VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Chargeable Time Monthly Rollup';    
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'YTD' ,  ASSOCIATED_MEASURE_GROUP = 'Agg Chargeable Time Monthly Rollup';     
 CREATE MEMBER CURRENTCUBE.[Measures].[YTD Utilisation %]
  AS iif([Measures].[YTD Contracted Hours]&gt;0,[Measures].[YTD Chargeable Hours]/[Measures].[YTD Contracted Hours],null), 
 FORMAT_STRING = "Percent", 
