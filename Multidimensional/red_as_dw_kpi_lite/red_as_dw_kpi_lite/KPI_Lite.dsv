@@ -1,4 +1,4 @@
-﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="41b8dc52-09b2-4173-b233-10d172dca689" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="844ec331-9c00-4961-bbf0-c3a8b3eb4a19" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Red Dw</ID>
   <Name>KPI_Lite</Name>
   <CreatedTimestamp>2018-01-31T18:40:57.696667Z</CreatedTimestamp>
@@ -31,7 +31,7 @@
             <Name>_ALL_TABLES_</Name>
             <DiagramLayout>
               <dds>
-                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="16" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-10369" scrolltop="-2982" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="35454" y="22357" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="19" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-8509" scrolltop="-1406" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="23733" y="14737" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                   <font>
                     <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                   </font>
@@ -44,7 +44,7 @@
                 </layoutmanager>
                 <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="fact_agg_kpi_monthly_rollup" left="0" top="3700" logicalid="8" controlid="1" masterid="0" hint1="0" hint2="0" width="6773" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
-                    <ddsxmlobjectstreaminitwrapper binary="000c0000751a000088130000" />
+                    <ddsxmlobjectstreaminitwrapper binary="000e0000751a000088130000" />
                   </control>
                   <layoutobject>
                     <ddsxmlobj>
@@ -55,7 +55,7 @@
                 </ddscontrol>
                 <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="dim_fed_hierarchy_history" left="9173" top="0" logicalid="9" controlid="2" masterid="0" hint1="0" hint2="0" width="5054" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
-                    <ddsxmlobjectstreaminitwrapper binary="000c0000be13000088130000" />
+                    <ddsxmlobjectstreaminitwrapper binary="000e0000be13000088130000" />
                   </control>
                   <layoutobject>
                     <ddsxmlobj>
@@ -66,7 +66,7 @@
                 </ddscontrol>
                 <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="dim_bill_date" left="1243" top="11100" logicalid="10" controlid="3" masterid="0" hint1="0" hint2="0" width="4286" height="4842" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
-                    <ddsxmlobjectstreaminitwrapper binary="000c0000be100000ea120000" />
+                    <ddsxmlobjectstreaminitwrapper binary="000e0000be100000ea120000" />
                   </control>
                   <layoutobject>
                     <ddsxmlobj>
@@ -77,7 +77,7 @@
                 </ddscontrol>
                 <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="dim_employee" left="9954" top="8246" logicalid="11" controlid="4" masterid="0" hint1="0" hint2="0" width="3598" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
-                    <ddsxmlobjectstreaminitwrapper binary="000c00000e0e000088130000" />
+                    <ddsxmlobjectstreaminitwrapper binary="000e00000e0e000088130000" />
                   </control>
                   <layoutobject>
                     <ddsxmlobj>
@@ -148,8 +148,8 @@
 </DiagramLayout>
             <ShowRelationshipNames>False</ShowRelationshipNames>
             <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
-            <DiagramViewPortLeft>-10369</DiagramViewPortLeft>
-            <DiagramViewPortTop>-2982</DiagramViewPortTop>
+            <DiagramViewPortLeft>-8509</DiagramViewPortLeft>
+            <DiagramViewPortTop>-1406</DiagramViewPortTop>
             <DiagramBoundingLeft>0</DiagramBoundingLeft>
             <DiagramBoundingTop>0</DiagramBoundingTop>
             <DiagramZoom>100</DiagramZoom>
@@ -164,7 +164,7 @@
       <xs:element name="Red_x0020_Dw" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="310ee9a9-02c2-4b69-86a8-8418f762d3d3">
         <xs:complexType>
           <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element name="dbo_agg_kpi_monthly_rollup" msprop:design-time-name="d90dd55e-a28c-4d4b-96c1-35111a3d19b7" msprop:IsLogical="True" msprop:FriendlyName="fact_agg_kpi_monthly_rollup" msprop:DbTableName="fact_agg_kpi_monthly_rollup" msprop:TableType="View" msprop:QueryDefinition="SELECT        r.dim_fed_hierarchy_history_key, r.bill_amount AS ProfitCosts, &#xD;&#xA;                         CASE WHEN fed.display_name = 'Budget Balance' THEN r.team_level_budget_value_balance ELSE r.fed_level_budget_value END AS 'Target Profit Costs (Budget Balanced)', &#xD;&#xA;                         CASE WHEN fed.display_name = 'Budget Balance' THEN r.team_level_budget_value_hours_balance ELSE r.fed_level_minute_value END AS 'Target Chargeable Hours (Budget Balanced)', &#xD;&#xA;                         r.fed_level_minute_value AS 'TargetHours', r.fed_level_tb_budget_value AS 'TimeBilledBudgetValue', r.team_level_budget_value, r.practice_area_level_budget_value, r.business_line_level_budget_value, &#xD;&#xA;                         r.firm_level_budget_value, r.chargeable_minutes_recorded, r.time_charge_value, r.actual_time_recorded_value, r.durationholidaydays, r.durationdays, r.days_year_to_date, r.baseentitlementdays, r.newstarterdays, &#xD;&#xA;                         r.manualadjustmentdays, r.carrydays, r.totalentitlementdays, r.ptproratadays, r.bhproratadays, r.carrylostdays, r.billed_minutes_recorded, r.billed_minutes_recorded / 60 AS 'Billed Hours Recorded', r.non_chargeable_minutes, &#xD;&#xA;                         r.non_chargeable_minutes / 60 AS 'Non Chargeable Hours', r.wip_minutes, r.wip_value, r.dss_update_time, r.zero_rate_minutes_recorded, r.zero_rate_minutes_recorded / 60 AS 'Zero Rate Hours Recorded', &#xD;&#xA;                         r.disbursement_balance, r.open_practice_management, r.closed_practice_management, r.billed_time, r.fed_level_budget_value, r.springboard_minutes_recorded, &#xD;&#xA;                         r.springboard_minutes_recorded / 60 AS 'SpringboardHoursRecorded', r.operational_minutes_recorded, r.operational_minutes_recorded / 60 AS 'OperationalHoursRecorded', r.total_operational_minutes_recorded, &#xD;&#xA;                         r.open_practice_management_month, r.closed_practice_management_month, r.open_practice_management_fin_ytd, r.closed_practice_management_fin_ytd, r.business_line_costs_ytd, r.business_line_budget_costs, &#xD;&#xA;                         r.practice_area_costs_ytd, r.practice_area_budget_costs, r.team_costs_ytd, r.team_budget_costs, r.non_billable_minutes, r.non_billable_minutes / 60 AS 'Non Billable Hours', r.remaining_working_days, &#xD;&#xA;                         r.remaining_fte_working_days, r.billable_minutes_recorded, r.zero_rate_billable_minutes_recorded, r.billable_time_charge_value, r.actual_billable_time_recorded_value, &#xD;&#xA;                         r.billable_minutes_recorded / 60 AS 'billable_hours_recorded', r.zero_rate_billable_minutes_recorded / 60 AS 'zero_rate_billable_hours_recorded', r.wip_over_90_days, r.cr_amount * - 1 AS cr_amount, r.work_amt_woff, &#xD;&#xA;                         r.bill_amt_woff, r.unpaid_bill_balance, r.credit_note_count, r.bill_count, r.write_off_hrs, r.bill_hrs_woff, r.remaining_fte_working_days_year, r.dim_gl_date_key, r.wip_value_matter_owner, r.wip_over_90_days_matter_owner, &#xD;&#xA;                         r.contracted_hours_in_month, r.team_level_budget_value_hours_balance, fact_budget_activity.team_level_utilisation_target_percent, fact_budget_activity.division_level_utilisation_target_percent, &#xD;&#xA;                         fact_budget_activity.department_level_utilisation_target_percent, fact_budget_activity.fed_level_utilistation_target_percent, r.ytd_holidays_taken&#xD;&#xA;FROM            fact_agg_kpi_monthly_rollup AS r LEFT OUTER JOIN&#xD;&#xA;                         dim_fed_hierarchy_history AS fed ON fed.dim_fed_hierarchy_history_key = r.dim_fed_hierarchy_history_key LEFT OUTER JOIN&#xD;&#xA;                         fact_budget_activity ON fact_budget_activity.dim_gl_date_key = r.dim_gl_date_key AND fact_budget_activity.dim_fed_hierarchy_history_key = r.dim_fed_hierarchy_history_key" msprop:QueryBuilder="SpecificQueryBuilder">
+            <xs:element name="dbo_agg_kpi_monthly_rollup" msprop:design-time-name="d90dd55e-a28c-4d4b-96c1-35111a3d19b7" msprop:IsLogical="True" msprop:FriendlyName="fact_agg_kpi_monthly_rollup" msprop:DbTableName="fact_agg_kpi_monthly_rollup" msprop:TableType="View" msprop:QueryDefinition="SELECT        r.dim_fed_hierarchy_history_key, r.bill_amount AS ProfitCosts, &#xD;&#xA;                         CASE WHEN fed.display_name = 'Budget Balance' THEN r.team_level_budget_value_balance ELSE r.fed_level_budget_value END AS 'Target Profit Costs (Budget Balanced)', &#xD;&#xA;                         CASE WHEN fed.display_name = 'Budget Balance' THEN r.team_level_budget_value_hours_balance ELSE r.fed_level_minute_value END AS 'Target Chargeable Hours (Budget Balanced)', &#xD;&#xA;                         r.fed_level_minute_value AS 'TargetHours', r.fed_level_tb_budget_value AS 'TimeBilledBudgetValue', r.team_level_budget_value, r.practice_area_level_budget_value, r.business_line_level_budget_value, &#xD;&#xA;                         r.firm_level_budget_value, r.chargeable_minutes_recorded, r.time_charge_value, r.actual_time_recorded_value, r.durationholidaydays, r.durationdays, r.days_year_to_date, r.baseentitlementdays, r.newstarterdays, &#xD;&#xA;                         r.manualadjustmentdays, r.carrydays, r.totalentitlementdays, r.ptproratadays, r.bhproratadays, r.carrylostdays, r.billed_minutes_recorded, r.billed_minutes_recorded / 60 AS 'Billed Hours Recorded', r.non_chargeable_minutes, &#xD;&#xA;                         r.non_chargeable_minutes / 60 AS 'Non Chargeable Hours', r.wip_minutes, r.wip_value, r.dss_update_time, r.zero_rate_minutes_recorded, r.zero_rate_minutes_recorded / 60 AS 'Zero Rate Hours Recorded', &#xD;&#xA;                         r.disbursement_balance, r.open_practice_management, r.closed_practice_management, r.billed_time, r.fed_level_budget_value, r.springboard_minutes_recorded, &#xD;&#xA;                         r.springboard_minutes_recorded / 60 AS 'SpringboardHoursRecorded', r.operational_minutes_recorded, r.operational_minutes_recorded / 60 AS 'OperationalHoursRecorded', r.total_operational_minutes_recorded, &#xD;&#xA;                         r.open_practice_management_month, r.closed_practice_management_month, r.open_practice_management_fin_ytd, r.closed_practice_management_fin_ytd, r.business_line_costs_ytd, r.business_line_budget_costs, &#xD;&#xA;                         r.practice_area_costs_ytd, r.practice_area_budget_costs, r.team_costs_ytd, r.team_budget_costs, r.non_billable_minutes, r.non_billable_minutes / 60 AS 'Non Billable Hours', r.remaining_working_days, &#xD;&#xA;                         r.remaining_fte_working_days, r.billable_minutes_recorded, r.zero_rate_billable_minutes_recorded, r.billable_time_charge_value, r.actual_billable_time_recorded_value, &#xD;&#xA;                         r.billable_minutes_recorded / 60 AS 'billable_hours_recorded', r.zero_rate_billable_minutes_recorded / 60 AS 'zero_rate_billable_hours_recorded', r.wip_over_90_days, r.cr_amount * - 1 AS cr_amount, r.work_amt_woff, &#xD;&#xA;                         r.bill_amt_woff, r.unpaid_bill_balance, r.credit_note_count, r.bill_count, r.write_off_hrs, r.bill_hrs_woff, r.remaining_fte_working_days_year, r.dim_gl_date_key, r.wip_value_matter_owner, r.wip_over_90_days_matter_owner, &#xD;&#xA;                         r.contracted_hours_in_month, r.team_level_budget_value_hours_balance, fact_budget_activity.team_level_utilisation_target_percent, fact_budget_activity.division_level_utilisation_target_percent, &#xD;&#xA;                         fact_budget_activity.department_level_utilisation_target_percent, fact_budget_activity.fed_level_utilistation_target_percent, r.ytd_holidays_taken, fed.employeeid&#xD;&#xA;FROM            fact_agg_kpi_monthly_rollup AS r LEFT OUTER JOIN&#xD;&#xA;                         dim_fed_hierarchy_history AS fed ON fed.dim_fed_hierarchy_history_key = r.dim_fed_hierarchy_history_key LEFT OUTER JOIN&#xD;&#xA;                         fact_budget_activity ON fact_budget_activity.dim_gl_date_key = r.dim_gl_date_key AND fact_budget_activity.dim_fed_hierarchy_history_key = r.dim_fed_hierarchy_history_key" msprop:QueryBuilder="SpecificQueryBuilder">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="dim_fed_hierarchy_history_key" msprop:design-time-name="8cc32578-ab4c-4d67-b9bf-9e0de3933927" msprop:DbColumnName="dim_fed_hierarchy_history_key" msprop:FriendlyName="dim_fed_hierarchy_history_key" type="xs:int" minOccurs="0" />
@@ -250,13 +250,20 @@
                   <xs:element name="fed_level_utilistation_target_percent" msprop:design-time-name="6489530a-bea5-4c22-9bd9-be9c96bf1110" msprop:DbColumnName="fed_level_utilistation_target_percent" type="xs:double" minOccurs="0" />
                   <xs:element name="Target_x0020_Chargeable_x0020_Hours_x0020__x0028_Budget_x0020_Balanced_x0029_" msprop:design-time-name="481b7dfd-6683-44ef-b740-3916d51b906b" msprop:DbColumnName="Target Chargeable Hours (Budget Balanced)" type="xs:decimal" minOccurs="0" />
                   <xs:element name="ytd_holidays_taken" msprop:design-time-name="7c77750d-b628-4d69-b61f-f7b63006d2b2" msprop:DbColumnName="ytd_holidays_taken" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="employeeid" msprop:design-time-name="99df6b41-869d-4e8a-a965-f22143f52dd8" msprop:DbColumnName="employeeid" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="36" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="dbo_dim_fed_hierarchy_history" msprop:design-time-name="3d21d099-6197-4561-8a0c-ddc3ae283681" msprop:IsLogical="True" msprop:FriendlyName="dim_fed_hierarchy_history" msprop:DbTableName="dim_fed_hierarchy_history" msprop:TableType="View" msprop:QueryDefinition="SELECT        dim_fed_hierarchy_history_key, source_system_id, fed_hierarchy_business_key, fed_code, employeeid, activeud, fed_code_effective_start_date, jobtitle, linemanageridud, linemanagername, reportingbcmidud, &#xD;&#xA;                         ISNULL(reportingbcmname, '') AS reportingbcmname, worksforemployeeid, worksforname, display_name, name, hierarchynodehist, hierarchylevel1hist, hierarchylevel2hist, hierarchylevel3hist, &#xD;&#xA;                         hierarchylevel4hist, hierarchylevel5hist, hierarchylevel6hist, hierarchynode, hierarchylevel1, hierarchylevel2, hierarchylevel3, hierarchylevel4, hierarchylevel5, hierarchylevel6, [level], securitylevel, &#xD;&#xA;                         effective_start_date, warning_flag, dss_update_time, dss_start_date, dss_end_date, dss_current_flag, dss_version, hierarchynodehistnorm, hierarchylevel1histnorm, hierarchylevel2histnorm, &#xD;&#xA;                         hierarchylevel3histnorm, hierarchylevel4histnorm, hierarchylevel5histnorm, hierarchylevel6histnorm, ISNULL(fte, 0) AS 'fte', dim_employee_key, hierarchylevel1hist_pre_francis, hierarchylevel2hist_pre_francis, &#xD;&#xA;                         hierarchylevel3hist_pre_francis, hierarchylevel4hist_pre_francis, hierarchylevel5hist_pre_francis, hierarchylevel6hist_pre_francis, windowsusername, latest_hierarchy_flag, leaver&#xD;&#xA;FROM            dim_fed_hierarchy_history" msprop:QueryBuilder="SpecificQueryBuilder">
+            <xs:element name="dbo_dim_fed_hierarchy_history" msprop:design-time-name="3d21d099-6197-4561-8a0c-ddc3ae283681" msprop:IsLogical="True" msprop:FriendlyName="dim_fed_hierarchy_history" msprop:DbTableName="dim_fed_hierarchy_history" msprop:TableType="View" msprop:QueryDefinition="SELECT        dim_fed_hierarchy_history.dim_fed_hierarchy_history_key, dim_fed_hierarchy_history.source_system_id, dim_fed_hierarchy_history.fed_hierarchy_business_key, dim_fed_hierarchy_history.fed_code, &#xD;&#xA;                         dim_fed_hierarchy_history.employeeid, dim_fed_hierarchy_history.activeud, dim_fed_hierarchy_history.fed_code_effective_start_date, dim_fed_hierarchy_history.jobtitle, dim_fed_hierarchy_history.linemanageridud, &#xD;&#xA;                         dim_fed_hierarchy_history.linemanagername, dim_fed_hierarchy_history.reportingbcmidud, ISNULL(dim_fed_hierarchy_history.reportingbcmname, N'') AS reportingbcmname, dim_fed_hierarchy_history.worksforemployeeid, &#xD;&#xA;                         dim_fed_hierarchy_history.worksforname, dim_fed_hierarchy_history.display_name, dim_fed_hierarchy_history.name, dim_fed_hierarchy_history.hierarchynodehist, dim_fed_hierarchy_history.hierarchylevel1hist, &#xD;&#xA;                         dim_fed_hierarchy_history.hierarchylevel2hist, dim_fed_hierarchy_history.hierarchylevel3hist, dim_fed_hierarchy_history.hierarchylevel4hist, dim_fed_hierarchy_history.hierarchylevel5hist, &#xD;&#xA;                         dim_fed_hierarchy_history.hierarchylevel6hist, dim_fed_hierarchy_history.hierarchynode, dim_fed_hierarchy_history.hierarchylevel1, dim_fed_hierarchy_history.hierarchylevel2, dim_fed_hierarchy_history.hierarchylevel3, &#xD;&#xA;                         dim_fed_hierarchy_history.hierarchylevel4, dim_fed_hierarchy_history.hierarchylevel5, dim_fed_hierarchy_history.hierarchylevel6, dim_fed_hierarchy_history.[level], dim_fed_hierarchy_history.securitylevel, &#xD;&#xA;                         dim_fed_hierarchy_history.effective_start_date, dim_fed_hierarchy_history.warning_flag, dim_fed_hierarchy_history.dss_update_time, dim_fed_hierarchy_history.dss_start_date, dim_fed_hierarchy_history.dss_end_date, &#xD;&#xA;                         dim_fed_hierarchy_history.dss_current_flag, dim_fed_hierarchy_history.dss_version, dim_fed_hierarchy_history.hierarchynodehistnorm, dim_fed_hierarchy_history.hierarchylevel1histnorm, &#xD;&#xA;                         dim_fed_hierarchy_history.hierarchylevel2histnorm, dim_fed_hierarchy_history.hierarchylevel3histnorm, dim_fed_hierarchy_history.hierarchylevel4histnorm, dim_fed_hierarchy_history.hierarchylevel5histnorm, &#xD;&#xA;                         dim_fed_hierarchy_history.hierarchylevel6histnorm, ISNULL(dim_fed_hierarchy_history.fte, 0) AS 'fte', dim_fed_hierarchy_history.dim_employee_key, dim_fed_hierarchy_history.hierarchylevel1hist_pre_francis, &#xD;&#xA;                         dim_fed_hierarchy_history.hierarchylevel2hist_pre_francis, dim_fed_hierarchy_history.hierarchylevel3hist_pre_francis, dim_fed_hierarchy_history.hierarchylevel4hist_pre_francis, &#xD;&#xA;                         dim_fed_hierarchy_history.hierarchylevel5hist_pre_francis, dim_fed_hierarchy_history.hierarchylevel6hist_pre_francis, dim_fed_hierarchy_history.windowsusername, dim_fed_hierarchy_history.latest_hierarchy_flag, &#xD;&#xA;                         dim_fed_hierarchy_history.leaver, ISNULL([current].employeeid, dim_fed_hierarchy_history.employeeid) AS current_employeeid, ISNULL([current].hierarchylevel1hist, dim_fed_hierarchy_history.hierarchylevel1hist) &#xD;&#xA;                         AS current_firm, ISNULL([current].hierarchylevel2hist, dim_fed_hierarchy_history.hierarchylevel2hist) AS current_division, ISNULL([current].hierarchylevel3hist, dim_fed_hierarchy_history.hierarchylevel3hist) &#xD;&#xA;                         AS current_department, ISNULL([current].hierarchylevel4hist, dim_fed_hierarchy_history.hierarchylevel4hist) AS current_team, ISNULL([current].hierarchylevel5hist, dim_fed_hierarchy_history.hierarchylevel5hist) &#xD;&#xA;                         AS current_subteam, ISNULL([current].display_name, dim_fed_hierarchy_history.display_name) AS current_display_name&#xD;&#xA;FROM            dim_fed_hierarchy_history LEFT OUTER JOIN&#xD;&#xA;                             (SELECT        dim_fed_hierarchy_history_1.employeeid, dim_fed_hierarchy_history_1.fed_code, dim_fed_hierarchy_history_1.display_name, dim_fed_hierarchy_history_1.hierarchylevel1hist, &#xD;&#xA;                                                         dim_fed_hierarchy_history_1.hierarchylevel2hist, dim_fed_hierarchy_history_1.hierarchylevel3hist, dim_fed_hierarchy_history_1.hierarchylevel4hist, dim_fed_hierarchy_history_1.hierarchylevel5hist, &#xD;&#xA;                                                         dim_fed_hierarchy_history_1.activeud&#xD;&#xA;                               FROM            dim_fed_hierarchy_history AS dim_fed_hierarchy_history_1 INNER JOIN&#xD;&#xA;                                                         dim_employee ON dim_employee.dim_employee_key = dim_fed_hierarchy_history_1.dim_employee_key&#xD;&#xA;                               WHERE        (dim_fed_hierarchy_history_1.dss_current_flag = 'Y') AND (dim_fed_hierarchy_history_1.dim_fed_hierarchy_history_key &lt;&gt; 0) AND (dim_fed_hierarchy_history_1.activeud = 1) AND &#xD;&#xA;                                                         (dim_fed_hierarchy_history_1.display_name &lt;&gt; 'Budget Balance') AND (ISNULL(dim_employee.deleted_from_cascade, 0) = 0)) AS [current] ON [current].employeeid = dim_fed_hierarchy_history.employeeid AND &#xD;&#xA;                         dim_fed_hierarchy_history.activeud = [current].activeud AND dim_fed_hierarchy_history.fed_code = [current].fed_code" msprop:QueryBuilder="SpecificQueryBuilder">
               <xs:complexType>
                 <xs:sequence>
-                  <xs:element name="dim_fed_hierarchy_history_key" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="65e065d7-1265-4e59-9620-1b832b2bb5c7" msprop:DbColumnName="dim_fed_hierarchy_history_key" msprop:FriendlyName="dim_fed_hierarchy_history_key" type="xs:int" />
+                  <xs:element name="dim_fed_hierarchy_history_key" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="65e065d7-1265-4e59-9620-1b832b2bb5c7" msprop:DbColumnName="dim_fed_hierarchy_history_key" msprop:FriendlyName="dim_fed_hierarchy_history_key" type="xs:int" minOccurs="0" />
                   <xs:element name="source_system_id" msprop:design-time-name="c8943a58-caad-4f1f-970c-ba5f92d64114" msprop:DbColumnName="source_system_id" msprop:FriendlyName="source_system_id" type="xs:int" minOccurs="0" />
                   <xs:element name="fed_hierarchy_business_key" msprop:design-time-name="e520c14a-95f7-4d5f-b8b1-63a3181da0d2" msprop:DbColumnName="fed_hierarchy_business_key" msprop:FriendlyName="fed_hierarchy_business_key" minOccurs="0">
                     <xs:simpleType>
@@ -553,6 +560,55 @@
                     </xs:simpleType>
                   </xs:element>
                   <xs:element name="leaver" msprop:design-time-name="d4cddb1e-f22a-4ece-bc24-dc99f484d161" msprop:DbColumnName="leaver" type="xs:int" minOccurs="0" />
+                  <xs:element name="current_employeeid" msprop:design-time-name="9c230a35-b4b2-4e0e-9b5d-5c1178e15da7" msprop:DbColumnName="current_employeeid" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="36" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="current_division" msprop:design-time-name="4aa18f32-65ac-4a2f-aa7a-e8b4d746a96f" msprop:DbColumnName="current_division" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="current_department" msprop:design-time-name="ec0a9f4c-ff5d-4cf8-b056-36ab22240895" msprop:DbColumnName="current_department" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="current_team" msprop:design-time-name="46a270d5-02b0-42a1-bdf2-40d3a5ddfdb2" msprop:DbColumnName="current_team" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="current_display_name" msprop:design-time-name="8abee323-6d5a-4200-b62c-082597d7a223" msprop:DbColumnName="current_display_name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="current_firm" msprop:DbColumnName="current_firm" msprop:design-time-name="f7b52c82-47e5-4fef-a874-29121de24ecf" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="current_subteam" msprop:DbColumnName="current_subteam" msprop:design-time-name="37aa25a1-6903-49c6-8af2-8771f8405b5e" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
@@ -592,7 +648,7 @@
             <xs:element name="dbo_dim_employee" msprop:design-time-name="dcb30499-3373-43ed-9a02-e674a639e70d" msprop:IsLogical="True" msprop:FriendlyName="dim_employee" msprop:DbTableName="dim_employee" msprop:TableType="View" msprop:QueryDefinition="SELECT        dim_employee_key, payrollid, displayemployeeid, employeeid, sequence, forename, surname, othername, initials, knownas, title, workemail, worksforemail, locationidud, workphone, windowsusername, fed_login, nt_login, &#xD;&#xA;                         levelidud, postid, leaverlastworkdate, admissiondateud, admissiontypeud, photofilename, dss_create_time, dss_update_time, secretaryud, contracttype, jobtitle, classification, rolematrixlevelud, fte, role_responsibility_1, &#xD;&#xA;                         role_responsibility_2, employeestartdate, leftdate, client_segment, client_sector, deleted_from_cascade, client_manager, line_manager_email, not_current_active, previous_firm, main_reason_for_leaving, &#xD;&#xA;                         secondary_reason_for_leaving,  cast (IIF(dim_employee.leftdate IS NOT NULL AND dim_employee.leftdate &lt; GETDATE(), 1, 0)  AS BIT) isleaver&#xD;&#xA;FROM            dim_employee" msprop:QueryBuilder="SpecificQueryBuilder">
               <xs:complexType>
                 <xs:sequence>
-                  <xs:element name="dim_employee_key" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="1cd68df9-d9d9-4b61-8d62-73e292c4a12a" msprop:DbColumnName="dim_employee_key" msprop:FriendlyName="dim_employee_key" type="xs:int" minOccurs="0" />
+                  <xs:element name="dim_employee_key" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="1cd68df9-d9d9-4b61-8d62-73e292c4a12a" msprop:DbColumnName="dim_employee_key" msprop:FriendlyName="dim_employee_key" type="xs:int" />
                   <xs:element name="payrollid" msprop:design-time-name="6624b52d-f38f-4e25-b6e3-5d6ab18b87e8" msprop:DbColumnName="payrollid" msprop:FriendlyName="payrollid" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
@@ -847,11 +903,15 @@
             </xs:element>
           </xs:choice>
         </xs:complexType>
+        <xs:unique name="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_agg_kpi_monthly_rollup" />
+          <xs:field xpath="employeeid" />
+        </xs:unique>
         <xs:unique name="Constraint2" msprop:IsLogical="True" msdata:PrimaryKey="true">
           <xs:selector xpath=".//dbo_dim_fed_hierarchy_history" />
           <xs:field xpath="dim_fed_hierarchy_history_key" />
         </xs:unique>
-        <xs:unique name="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+        <xs:unique name="dbo_dim_bill_date_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
           <xs:selector xpath=".//dbo_dim_bill_date" />
           <xs:field xpath="dim_bill_date_key" />
         </xs:unique>
