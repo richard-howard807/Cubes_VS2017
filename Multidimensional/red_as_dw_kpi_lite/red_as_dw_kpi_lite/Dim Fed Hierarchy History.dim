@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="8" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1796" scrolltop="986" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="8493" y="13414" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="8" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1796" scrolltop="905" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="8308" y="13414" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -82,7 +82,7 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>986</Value>
+      <Value>905</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
@@ -99,7 +99,7 @@
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
       <Value>
-        <DiagramLayout ZoomPercent="100" ViewPortX="200" ViewPortY="0" xmlns="">
+        <DiagramLayout ZoomPercent="100" ViewPortX="202" ViewPortY="0" xmlns="">
           <Shapes NodeWidth="226">
             <Shape Id="Dim Fed Hierarchy History Key" Expanded="true">
               <Attributes>
@@ -115,41 +115,47 @@
               </Attributes>
               <Position x="222" y="20" />
             </Shape>
-            <Shape Id="Current Display Name" Expanded="false">
+            <Shape Id="Current Display Name" Expanded="true">
               <Attributes>
                 <Attribute Id="Current Display Name" />
               </Attributes>
               <Position x="509" y="20" />
             </Shape>
-            <Shape Id="Current Subteam" Expanded="false">
+            <Shape Id="Current Subsubteam" Expanded="false">
+              <Attributes>
+                <Attribute Id="Current Subsubteam" />
+              </Attributes>
+              <Position x="797" y="20" />
+            </Shape>
+            <Shape Id="Current Subteam" Expanded="true">
               <Attributes>
                 <Attribute Id="Current Subteam" />
               </Attributes>
-              <Position x="797" y="20" />
+              <Position x="1084" y="20" />
             </Shape>
             <Shape Id="Current Team" Expanded="false">
               <Attributes>
                 <Attribute Id="Current Team" />
               </Attributes>
-              <Position x="1084" y="20" />
+              <Position x="1372" y="20" />
             </Shape>
             <Shape Id="Current Department" Expanded="false">
               <Attributes>
                 <Attribute Id="Current Department" />
               </Attributes>
-              <Position x="1372" y="20" />
+              <Position x="1659" y="20" />
             </Shape>
             <Shape Id="Current Division" Expanded="false">
               <Attributes>
                 <Attribute Id="Current Division" />
               </Attributes>
-              <Position x="1659" y="20" />
+              <Position x="1947" y="20" />
             </Shape>
             <Shape Id="Current Firm" Expanded="false">
               <Attributes>
                 <Attribute Id="Current Firm" />
               </Attributes>
-              <Position x="1947" y="20" />
+              <Position x="2234" y="20" />
             </Shape>
             <Shape Id="Display Name 1" Expanded="false">
               <Attributes>
@@ -1363,15 +1369,31 @@
       <ID>Current Division</ID>
       <Name>Current Division</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="60cda867-d8c0-4f07-8c3c-fa25ddf42aa3">
+        <KeyColumn dwd:design-time-name="2f7b02e2-682c-445c-b424-d0735d3a0a23">
           <DataType>WChar</DataType>
           <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="8ee92a12-d33f-46a4-bd37-2090432b8f68">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f368d4bb-6db1-4d35-8a0f-497655139abd">
             <TableID>dbo_dim_fed_hierarchy_history</TableID>
             <ColumnID>current_division</ColumnID>
           </Source>
         </KeyColumn>
+        <KeyColumn dwd:design-time-name="84b6d2d7-daf0-45b2-afde-e5f7a371cec7">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a44e5b8c-13ff-4795-89b6-ce178417e299">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>current_firm</ColumnID>
+          </Source>
+        </KeyColumn>
       </KeyColumns>
+      <NameColumn dwd:design-time-name="e158db88-d041-493c-9901-71739de8be89">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="0d34f847-8237-4a08-87b8-aa2eb863db1f">
+          <TableID>dbo_dim_fed_hierarchy_history</TableID>
+          <ColumnID>current_division</ColumnID>
+        </Source>
+      </NameColumn>
       <AttributeRelationships>
         <AttributeRelationship dwd:design-time-name="5c3230d2-3d04-42a3-bb57-493a8d27933c">
           <AttributeID>Current Firm</AttributeID>
@@ -1385,15 +1407,39 @@
       <ID>Current Department</ID>
       <Name>Current Department</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="234d1150-56dd-4e67-bb58-847a9d1a5c38">
+        <KeyColumn dwd:design-time-name="ed7566e7-f368-4d26-97fe-609335a0bb73">
           <DataType>WChar</DataType>
           <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="4e714d72-6ce7-445a-b420-54c466aa7006">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7691a339-2f7f-4867-bbb0-4eb6f76dc29f">
             <TableID>dbo_dim_fed_hierarchy_history</TableID>
             <ColumnID>current_department</ColumnID>
           </Source>
         </KeyColumn>
+        <KeyColumn dwd:design-time-name="33674fc9-adca-459a-9b82-e1496d70ccef">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4c7df1ba-5ee1-4735-b457-a0bc13a1307e">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>current_division</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="6e1f8e7d-3e14-41c9-b51e-83d8707a5417">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5c6e441f-2080-4212-a4db-c6898d617860">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>current_firm</ColumnID>
+          </Source>
+        </KeyColumn>
       </KeyColumns>
+      <NameColumn dwd:design-time-name="b0d87493-e5d1-4f97-94f2-f416364e88b0">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="c10026fa-4969-4851-b7db-77bee95407f2">
+          <TableID>dbo_dim_fed_hierarchy_history</TableID>
+          <ColumnID>current_department</ColumnID>
+        </Source>
+      </NameColumn>
       <AttributeRelationships>
         <AttributeRelationship dwd:design-time-name="3390e4a0-edf4-4b1e-b0c3-afc916ee1b46">
           <AttributeID>Current Division</AttributeID>
@@ -1407,15 +1453,47 @@
       <ID>Current Team</ID>
       <Name>Current Team</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="623e6405-2956-4d49-8a7e-59cf4bc2b6d8">
+        <KeyColumn dwd:design-time-name="15f633e6-8dc5-4488-99b1-5486addf6226">
           <DataType>WChar</DataType>
           <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="18c991af-3478-4b65-ab9d-dd34649f213f">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ee2b1d59-7dad-40ea-a7ad-e4c826e752cb">
             <TableID>dbo_dim_fed_hierarchy_history</TableID>
             <ColumnID>current_team</ColumnID>
           </Source>
         </KeyColumn>
+        <KeyColumn dwd:design-time-name="2af54eeb-1280-41ab-b50c-95599cbabf93">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="26aea6e0-ec1a-4d7e-a2b6-443dc76c2f33">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>current_department</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="47f98957-796f-4195-bb07-7684f8cfdb3c">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="85b5389a-a822-4138-84ee-7b78da5854bf">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>current_division</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="fd31294d-5c3f-4ecc-8963-bb0579ae6af7">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4769661e-73a5-4341-afce-59b4ff003714">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>current_firm</ColumnID>
+          </Source>
+        </KeyColumn>
       </KeyColumns>
+      <NameColumn dwd:design-time-name="872949f6-4486-4178-a712-b54382aaf13c">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="bd120c0b-18a4-4ea2-852d-5b58038a0b82">
+          <TableID>dbo_dim_fed_hierarchy_history</TableID>
+          <ColumnID>current_team</ColumnID>
+        </Source>
+      </NameColumn>
       <AttributeRelationships>
         <AttributeRelationship dwd:design-time-name="04649cbe-3eac-4d94-9d0b-011684d255e8">
           <AttributeID>Current Department</AttributeID>
@@ -1429,19 +1507,76 @@
       <ID>Current Display Name</ID>
       <Name>Current Display Name</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="1bdf2c2a-88a5-4e1b-b8b1-91d967eb0c7b">
+        <KeyColumn dwd:design-time-name="eec540a2-19f2-487e-a3fa-a55ed4483d14">
           <DataType>WChar</DataType>
           <DataSize>100</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="38ef5217-4454-4e94-a3b7-cfc6443209e1">
+          <Collation>Latin1_General_CS_AS</Collation>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f0eee574-e4aa-446d-8fdf-013efa54af4c">
             <TableID>dbo_dim_fed_hierarchy_history</TableID>
             <ColumnID>current_display_name</ColumnID>
           </Source>
         </KeyColumn>
+        <KeyColumn dwd:design-time-name="0b7b74c0-48dc-4a00-ac8e-dfb97c3c150e">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2ddfc103-19e7-4e6d-8c5f-be83210813ce">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>current_subsubteam</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="e3ae33ee-f5bf-4594-b622-65a50fc6c2e3">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1f7faf4f-cf1d-4d06-811c-a33a80f98498">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>current_subteam</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="417f9c78-ac22-4cc1-8951-a6acfa6a4990">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7840abb0-af6f-4458-9dd0-6608fc0158fe">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>current_team</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="f3b49c02-b3f0-4dd9-b744-fa168643fca2">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c8c6a2b6-6d95-41a3-807c-cb1ac77b6f4b">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>current_department</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="7e865fe4-1911-4cea-b650-1a8f91efb668">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b4e7adb2-6b45-49b0-98ba-0ee9405d6079">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>current_division</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="6b01baea-3a3f-44e9-b28a-8b084baf2108">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ef1e434d-a044-462b-9239-7e55a2fd2c96">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>current_firm</ColumnID>
+          </Source>
+        </KeyColumn>
       </KeyColumns>
+      <NameColumn dwd:design-time-name="5ef43259-2625-46da-bc53-0ac20b3eb38f">
+        <DataType>WChar</DataType>
+        <DataSize>100</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="7ee47553-3cba-47f5-af4c-b4b6d5a3fe3e">
+          <TableID>dbo_dim_fed_hierarchy_history</TableID>
+          <ColumnID>current_display_name</ColumnID>
+        </Source>
+      </NameColumn>
       <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="870fc4da-bb26-4fe6-9f0c-bbc7c5afdac3">
-          <AttributeID>Current Subteam</AttributeID>
-          <Name>Current Subteam</Name>
+        <AttributeRelationship dwd:design-time-name="eda5c2c0-61bf-4ae6-a841-ce0fb496ae67">
+          <AttributeID>Current Subsubteam</AttributeID>
+          <Name>Current Subsubteam</Name>
         </AttributeRelationship>
       </AttributeRelationships>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
@@ -1467,19 +1602,129 @@
       <ID>Current Subteam</ID>
       <Name>Current Subteam</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="96d92c90-831c-40e3-a96d-3e006bf5351e">
+        <KeyColumn dwd:design-time-name="e87957ad-6d7c-4dff-944a-8650e79e6b6d">
           <DataType>WChar</DataType>
           <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="d6d62ec8-3434-44e9-9bd6-7060cd6101e6">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="528a30ff-9041-4067-aebd-fc5c418e47d9">
             <TableID>dbo_dim_fed_hierarchy_history</TableID>
             <ColumnID>current_subteam</ColumnID>
           </Source>
         </KeyColumn>
+        <KeyColumn dwd:design-time-name="235fa389-a361-4ded-842c-cdc0c8b3b504">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="dcef0608-b489-46e9-87fe-bfe35fb634d5">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>current_team</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="586991c2-026e-4347-8fe8-5c47c2897c97">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fb8ad89c-934f-439b-9461-71cb73962471">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>current_department</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="7f532f0f-a0bb-4ff1-b587-4c62e123b569">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="88590682-3f66-417d-8075-c1cda8f7d806">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>current_division</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="d8a0679d-ee98-4f9d-b5de-95511143f37b">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7cdbae10-a9a4-4ff3-a48a-5a6ba82ee41e">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>current_firm</ColumnID>
+          </Source>
+        </KeyColumn>
       </KeyColumns>
+      <NameColumn dwd:design-time-name="c168ace5-65f2-4ddd-9d94-cfcde7af8410">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="ae7b94e6-dcc8-4251-b4b8-53001a562912">
+          <TableID>dbo_dim_fed_hierarchy_history</TableID>
+          <ColumnID>current_subteam</ColumnID>
+        </Source>
+      </NameColumn>
       <AttributeRelationships>
         <AttributeRelationship dwd:design-time-name="107fe320-7fe8-44a4-baa7-8cc4fd5ccb32">
           <AttributeID>Current Team</AttributeID>
           <Name>Current Team</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a15fdc0d-5eee-4883-b0a1-8af4453cbe78">
+      <ID>Current Subsubteam</ID>
+      <Name>Current Subsubteam</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="dffdf195-779c-47d3-a2a1-af538558316d">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0026cf42-3913-4dee-a936-4a7c23a6d1fc">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>current_subsubteam</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="3e9397e7-2878-411f-8105-0e0a2f0a5ebc">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="45a3c9b3-973c-41b2-8d6f-ad90a9920c9e">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>current_subteam</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="c726d32e-c8d6-4a28-bedb-91f7785dc5d9">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="46534694-e730-40a1-a55e-c63cc66d4e91">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>current_team</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="8869e12d-1b1e-4f3c-be9c-539ab9bbf1dd">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cc081f24-f0b5-4989-be04-41f3ebbbb37a">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>current_department</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="5051be94-bc0b-4bbe-9426-2ff5e7b270bf">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="81733dc3-ac4e-4f1b-b616-fdca9099c2b2">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>current_division</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="b02fc08c-36fb-4e5f-897d-65454c6cd994">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a9ebf5fe-e11d-44ee-97ad-9dcf2ba22db6">
+            <TableID>dbo_dim_fed_hierarchy_history</TableID>
+            <ColumnID>current_firm</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="fa0e6d3f-72ae-4e0a-bfdb-821ddd2b9a3a">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="5a5a4a47-29b3-4a5b-884f-6fc6e83f1714">
+          <TableID>dbo_dim_fed_hierarchy_history</TableID>
+          <ColumnID>current_subsubteam</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="04f492c1-7183-49b2-b4e1-60772517a4c2">
+          <AttributeID>Current Subteam</AttributeID>
+          <Name>Current Subteam</Name>
         </AttributeRelationship>
       </AttributeRelationships>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
